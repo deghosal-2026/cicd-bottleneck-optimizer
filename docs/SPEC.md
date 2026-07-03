@@ -1221,18 +1221,160 @@ rich>=13.0          # for CLI table formatting
 
 | Level | Scope | Tool |
 |---|---|---|
-| Unit | profiler, classifier rules, optimizer cost calc, validator | pytest |
+| Unit | profiler, classifier rules, optimizer cost calc, validator, reporter, cli | pytest |
 | Integration | GitHubClient with mocked API responses | pytest + responses |
-| Graph | LangGraph state transitions, interrupt flow, cycle termination | pytest + LangGraph test utils |
+| Graph | LangGraph state transitions, interrupt flow, cycle termination, resume | pytest + LangGraph test utils |
 | Field study | Run against real repos (read-only), verify report output | manual |
+| Real-life repo | Live API calls against the 3 field study repos | pytest (marked `@pytest.mark.live`, skipped in CI) |
 
-### Key test cases
+### Unit test cases
 
-- `test_profiler.py` — median/p90 computation from mock run data
-- `test_classifier.py` — each bottleneck type detected from mock workflows
-- `test_optimizer.py` — cost estimate matches hardcoded rates
-- `test_validator.py` — valid YAML passes, invalid YAML fails with error
-- `test_graph.py` — interrupt → approve → generate → validate → open_pr path
-- `test_graph.py` — interrupt → edit → re-propose cycle
-- `test_graph.py` — validation retry loop (3 attempts max)
-- `test_field_study.py` — fetch PRs, generate reports, verify file output
+**`test_profiler.py`**
+- median/p90/p99 computation from mock run data
+- failure_rate calculation (0% and 100% edge cases)
+- cache_hit_ratio parsing from mock logs
+- job dependency graph parsing from mock workflow YAML
+- empty runs list returns empty profiles
+- single run returns that run's duration as median
+
+**`test_classifier.py`**
+- missing_cache detected when no `cache:` directive
+- missing_cache not flagged when cache present
+- serial_parallel detected when jobs have no `needs:` and run sequentially
+- redundant_matrix detected with overlapping dimensions
+- redundant_rebuild detected (LLM-mocked) when same artifact in multiple jobs
+- oversized_context detected (LLM-mocked) when no `.dockerignore`
+- severity assignment: high/medium/low based on time wasted
+- rule-based pass runs without LLM
+- LLM pass falls back to cloud when OMLX unavailable (mocked)
+- empty profiles returns empty bottlenecks
+
+**`test_optimizer.py`**
+- cost estimate matches hardcoded rates ($0.008/min runner)
+- cache cost calculation ($0.007/GB-month)
+- risk level assignment: low/medium/high
+- time savings estimation per optimization type
+- simulate_savings sums correctly across optimizations
+- empty bottlenecks returns empty optimizations
+
+**`test_validator.py`**
+- valid GitHub Actions YAML passes
+- invalid YAML syntax fails with error message
+- missing required field (`on:`, `jobs:`) fails
+- `act --list` validation passes valid workflow
+- `act --list` validation fails invalid workflow
+- fallback to PyYAML when `act` not installed (mocked)
+- validation_attempts counter increments on retry
+
+**`test_reporter.py`**
+- report file created at `reports/<repo>/<pr#>-analysis.md`
+- report contains job profiles table
+- report contains bottlenecks table
+- report contains recommendations table
+- report contains summary with total wasted time
+- repo name with slash converted to dash in path
+
+**`test_cli.py`**
+- trade_off_table displays numbered list
+- view evidence mode shows bottleneck details
+- selection mode accepts numbered input
+- proceed prompt accepts y/n
+- prompt_re_analyze_or_recompute returns "reanalyze" or "recompute"
+- summary_table prints formatted table
+- invalid input handling (non-numeric, out of range)
+
+### Integration test cases
+
+**`test_github_client.py`** (mocked API responses)
+- fetch_workflows returns parsed workflow list
+- fetch_workflows handles 404 (repo not found)
+- fetch_runs paginates correctly (2 pages of 30)
+- fetch_runs handles empty runs
+- fetch_jobs returns per-job timing
+- fetch_prs filters by since_days
+- fetch_pr_runs maps PR to CI runs
+- detect_ci_system returns "github_actions" when workflows exist
+- detect_ci_system returns "other" when no workflows
+- create_branch + create_commit + create_pr sequence
+- rate limit 403 triggers exponential backoff retry
+- rate limit 403 after 4 retries raises error
+- token scope check: read-only token detected for field study
+- token scope check: full token detected for optimize mode
+
+### Graph test cases
+
+**`test_graph_optimize.py`**
+- full optimize path: fetch → profile → classify → propose → simulate → interrupt → approve → generate → validate → open_pr
+- interrupt → edit → reanalyze cycle (loops back to propose_optimizations)
+- interrupt → edit → recompute cycle (loops back to simulate_savings)
+- validation retry: generate → validate (invalid) → generate → validate (valid)
+- validation fails 3 times → graph stops with error
+- pre-flight write access check fails → graph stops before fetching
+- field study mode routes to fetch_prs instead of fetch_workflows
+- field study routes to save_report instead of interrupt
+- field study + --review flag shows trade-off table then saves report
+
+**`test_graph_resume.py`**
+- resume from interrupt_for_approval re-displays trade-off table
+- resume preserves prior state (workflows, profiles, bottlenecks)
+- resume with invalid thread_id fails with clear message
+- checkpoint written after each node completes
+- SQLite DB locked → continues without checkpointing (warned)
+
+**`test_graph_llm.py`**
+- OMLX available → classify uses local LLM
+- OMLX down → prompt for cloud → y → uses cloud LLM
+- OMLX down → prompt for cloud → n → fails gracefully
+- generate_yaml uses cloud when keys configured
+- generate_yaml prompts for OMLX when no cloud keys
+- token_usage tracked per model across all LLM calls
+
+### Real-life repo test cases
+
+**`test_live_repos.py`** (`@pytest.mark.live` — requires GITHUB_TOKEN + network)
+
+These tests make real API calls against the 3 field study repos. Skipped by default (`pytest -m live` to run).
+
+**kubernetes/kubernetes:**
+- fetch_workflows returns ≥ 1 workflow
+- detect_ci_system returns "github_actions" (some workflows use Actions)
+- detect_ci_system logs warning for prow-based workflows
+- fetch_runs returns runs with timing data
+- profile_jobs computes median/p90 for at least 1 job
+- classify_bottlenecks finds ≥ 1 bottleneck in workflows with no cache
+- field study: fetch_prs returns ≥ 1 PR updated in last 30 days
+- field study: fetch_pr_runs returns ≥ 1 CI run per PR
+- field study: save_report creates markdown file with correct path
+- field study: report contains real job timings (not empty)
+
+**tensorflow/tensorflow:**
+- fetch_workflows returns ≥ 1 workflow
+- profile_jobs: matrix-heavy workflows show high p90 variance
+- classify_bottlenecks: redundant_matrix detected in matrix-heavy workflows
+- field study: 3 PRs fetched, reports generated
+
+**moby/moby:**
+- fetch_workflows returns ≥ 1 workflow
+- classify_bottlenecks: oversized_context detected if no .dockerignore
+- field study: 3 PRs fetched, reports generated
+- field study: summary table prints with correct repo names
+
+**Cross-repo field study:**
+- `--repos kubernetes/kubernetes,tensorflow/tensorflow,moby/moby --pr-limit 10 --since 30d`
+- 10 reports generated across 3 repos
+- summary table shows all 3 repos with correct PR counts
+- each report file is valid markdown with all sections
+- no PRs opened on any repo (read-only verification)
+- total API calls < 500 (rate limit safe)
+
+### Config validation test cases
+
+**`test_config.py`**
+- valid config loads successfully
+- missing github.token → fail with message
+- missing cost_rates → fail with message
+- OMLX unreachable → warn (not fail)
+- no cloud LLM keys → warn (not fail)
+- `act` not installed → warn (not fail)
+- read-only token accepted for field study mode
+- full token required for optimize mode
