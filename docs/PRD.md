@@ -114,6 +114,29 @@ Scheduled weekly run that detects new bottlenecks since last run. Requires CronJ
 | 2 | Reviewer | PR includes diff + before/after estimates + trade-off rationale |
 | 3 | Reviewer | Merges or requests changes |
 
+### CUJ-5: Real-life field study — analyze PRs from active repos, save locally (v1)
+
+A read-only field study that proves the analyzer works on real data. Analyzes recent PRs from 3 active public repos, records the actual CI/CD bottleneck issues found in those PRs' CI runs, and saves recommendations as local files. No branches, commits, or PRs are created on the target repos.
+
+| Step | Actor | Action |
+|---|---|---|
+| 1 | DevOps engineer | `python main.py --field-study --repos owner1/repo1,owner2/repo2,owner3/repo3 --pr-limit 10 --since 30d` |
+| 2 | Agent | Fetches last 10 PRs from the last 30 days across the 3 repos (read-only GitHub API) |
+| 3 | Agent | For each PR: fetches the CI runs triggered by that PR, profiles job timings, classifies bottlenecks |
+| 4 | Agent | Records real issues found — actual job durations, actual failure rates, actual bottleneck evidence |
+| 5 | Agent | Generates optimization recommendations per PR with quantified estimates |
+| 6 | Agent | Saves recommendations locally as `reports/<repo>/<pr-number>-analysis.md` |
+| 7 | Agent | Prints summary table: repo, PR #, # bottlenecks, total min wasted, top recommendation |
+| 8 | Engineer | Reviews local reports; uses findings to inform own CI optimization work |
+
+**Key constraints:**
+- **Read-only** — no write access needed; works with unauthenticated or `public_repo` scope token
+- **No PRs opened** — recommendations are saved as local markdown files only
+- **Real data** — analyzes actual PR CI runs, not synthetic data
+- **10 PRs across 3 repos** — repos identified in `docs/SPEC.md`
+- **Last 30 days** — only PRs opened/merged in the last month
+- **Local artifacts** — reports saved under `reports/` directory (gitignored)
+
 ---
 
 ## 6. Functional Requirements
@@ -128,6 +151,8 @@ Scheduled weekly run that detects new bottlenecks since last run. Requires CronJ
 | FR-1.4 | Handle GitHub API pagination + rate limiting | P0 |
 | FR-1.5 | Support GitHub GraphQL API for batched timing data at scale | P1 |
 | FR-1.6 | Create a branch + commit + PR on the target repo via GitHub API | P0 |
+| FR-1.7 | Fetch recent PRs (with `--since` filter) and their associated CI runs for field study mode | P0 |
+| FR-1.8 | Detect CI system (GitHub Actions vs prow/Jenkins) and skip repos that don't use Actions with a warning | P0 |
 
 ### FR-2: Profiling
 
@@ -162,7 +187,7 @@ Scheduled weekly run that detects new bottlenecks since last run. Requires CronJ
 
 | ID | Requirement | Priority |
 |---|---|---|
-| FR-5.1 | `interrupt()` presents trade-off table in CLI: optimization, time saved, cost, risk | P0 |
+| FR-5.1 | `interrupt()` presents trade-off table in CLI via plain stdin prompts (numbered list; human types numbers to select/deselect) | P0 |
 | FR-5.2 | Human selects/deselects optimizations via CLI input | P0 |
 | FR-5.3 | Human can edit optimization parameters (e.g., cache key strategy) | P1 |
 | FR-5.4 | Graph re-runs with revised state after human input | P0 |
@@ -186,18 +211,46 @@ Scheduled weekly run that detects new bottlenecks since last run. Requires CronJ
 | FR-7.3 | Print cache cost per optimization | P1 |
 | FR-7.4 | Print PRs opened/merged summary | P2 |
 
+### FR-8: Field Study Mode (CUJ-5)
+
+| ID | Requirement | Priority |
+|---|---|---|
+| FR-8.1 | Accept `--field-study --repos a,b,c --pr-limit 10 --since 30d` flags | P0 |
+| FR-8.2 | Fetch last N PRs from the last 30 days across 3 repos (read-only) | P0 |
+| FR-8.3 | For each PR: fetch associated CI runs, profile job timings, classify bottlenecks | P0 |
+| FR-8.4 | Generate optimization recommendations per PR with quantified estimates | P0 |
+| FR-8.5 | Save recommendations as `reports/<repo>/<pr-number>-analysis.md` (markdown) | P0 |
+| FR-8.6 | Print summary table: repo, PR #, # bottlenecks, total min wasted, top recommendation | P0 |
+| FR-8.7 | No branches, commits, or PRs created — read-only | P0 |
+| FR-8.8 | Work with read-only GitHub token (no `repo` scope required) | P0 |
+
+### FR-9: Cost Estimation
+
+| ID | Requirement | Priority |
+|---|---|---|
+| FR-9.1 | Hardcode GitHub Actions pricing (Linux runner $0.008/min, cache $0.007/GB-month) | P0 |
+| FR-9.2 | Compute estimated cost per optimization from hardcoded rates | P0 |
+
+### FR-10: Session Persistence
+
+| ID | Requirement | Priority |
+|---|---|---|
+| FR-10.1 | Use LangGraph SQLite checkpointer to persist optimization sessions | P0 |
+| FR-10.2 | Resume interrupted analysis from last checkpoint | P1 |
+
 ---
 
 ## 7. Non-Functional Requirements
 
 | ID | Requirement |
 |---|---|
-| NFR-1 | **Performance** — Full analysis of one repo completes in < 2 min (excluding LLM calls) |
+| NFR-1 | **Performance** — Full analysis of one repo completes in < 2 min (excluding LLM calls); analyze top 5 workflows by run frequency, not all |
 | NFR-2 | **Privacy** — Repo contents analyzed with local LLM by default; cloud LLM only for final YAML generation |
 | NFR-3 | **Cost** — Token cost tracked per optimization; local LLM used for >80% of calls |
 | NFR-4 | **Reliability** — GitHub API rate-limit errors are retried with exponential backoff |
 | NFR-5 | **Portability** — Runs in Docker |
 | NFR-6 | **Observability** — Every agent step logged with duration + token count |
+| NFR-7 | **Resumability** — SQLite checkpointer allows resuming interrupted analysis sessions |
 
 ---
 
@@ -205,12 +258,13 @@ Scheduled weekly run that detects new bottlenecks since last run. Requires CronJ
 
 | Metric | Target | Measurement |
 |---|---|---|
-| Repos analyzed | 1 (kubernetes/kubernetes) for v1 | GitHub API call count |
+| Repos analyzed | 1 (kubernetes/kubernetes) for v1 + 10 PRs across 3 repos for field study | GitHub API call count |
 | Bottleneck types classified | ≥ 3 | Classifier output |
 | Time savings proposed | ≥ 20% of total pipeline time | Before/after estimate |
 | PRs opened with valid YAML | 100% pass syntax validation | YAML linter + `act` dry run |
 | Human approval rate | ≥ 50% of proposed optimizations selected | interrupt() selection log |
 | Token cost | < $1 per repo analysis (local LLM default) | Token counter |
+| Field study reports saved | 10 markdown reports (one per PR) | File count in `reports/` |
 | PR merge rate (stretch) | ≥ 30% of opened PRs merged | GitHub PR status |
 
 ---
@@ -218,12 +272,16 @@ Scheduled weekly run that detects new bottlenecks since last run. Requires CronJ
 ## 9. Constraints
 
 - **Public repos only** for v1 (no private repo auth flow)
-- **GitHub Actions only** (no GitLab CI, Jenkins, CircleCI)
+- **GitHub Actions only** (no GitLab CI, Jenkins, CircleCI) — agent detects and skips repos using prow/Jenkins with a warning
+- **Top N workflows by run frequency** — agent analyzes top 5 workflows, not all (configurable via `--workflow-limit`)
 - **Target repo requires write access** — agent pushes branch + opens PR directly on the target repo (not a fork)
+- **Field study is read-only** — works with read-only token (no `repo` scope required, `public_repo` scope or unauthenticated)
 - **Mechanical optimizations only** — no semantic changes (reordering tests, changing build flags)
 - **Human merges** — agent never auto-merges
 - **Local LLM default** — cloud LLM only for final generation or low-confidence reasoning
 - **CLI output only** — no web dashboard in v1
+- **Config file for secrets** — GitHub token + LLM API keys read from `config.yaml` (gitignored)
+- **Hardcoded cost rates** — GitHub Actions pricing hardcoded (Linux runner $0.008/min, cache $0.007/GB-month)
 
 ---
 
@@ -247,11 +305,14 @@ Scheduled weekly run that detects new bottlenecks since last run. Requires CronJ
 |---|---|
 | Agent framework | LangGraph, LangChain |
 | Language | Python 3.11+ |
+| Checkpointer | LangGraph SQLite checkpointer (session persistence) |
+| Config | `config.yaml` (gitignored — holds GitHub token + LLM API keys) |
 | Local LLM | OMLX Qwen3.5-9B-MLX-4bit (OpenAI-compatible API on :8000) |
 | Cloud LLM (optional) | OpenAI gpt-4o-mini, Claude 3.5 Sonnet |
 | Container | Docker |
 | Workflow validation | `act` (local GitHub Actions runner) |
 | Data sources | GitHub REST API, GitHub GraphQL API |
+| Field study reports | `reports/` directory (markdown, gitignored) |
 
 ---
 
@@ -266,6 +327,7 @@ Scheduled weekly run that detects new bottlenecks since last run. Requires CronJ
 | M5 | LangGraph state graph | `graph.py` — full state machine with checkpointing |
 | M6 | Trade-off CLI | CLI table display for the `interrupt()` interaction |
 | M7 | PR generator | `pr_generator.py` — diff + description with estimates |
+| M8 | Field study mode | `field_study.py` — multi-repo PR analysis + local markdown reports |
 
 ---
 
@@ -282,12 +344,13 @@ Scheduled weekly run that detects new bottlenecks since last run. Requires CronJ
 
 ---
 
-## 14. Open Questions
+## 14. Open Questions (all deferred to v2)
 
 - [ ] Should we support GitHub Enterprise repos in v2? (auth flow differs)
 - [ ] Should v2 add Qdrant for cross-repo pattern memory ("this anti-pattern seen in 3 repos")?
 - [ ] Should v2 add a web dashboard (FastAPI) for historical view across multiple runs?
 - [ ] Should v2 add fork-mode PR target for repos without write access?
+- [ ] Should v2 add scheduled/continuous optimization mode (CronJob + diff detection)?
 
 ---
 
