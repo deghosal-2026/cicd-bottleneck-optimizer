@@ -1,0 +1,538 @@
+# WBS — CI/CD Bottleneck Optimizer
+
+| Field | Value |
+|---|---|
+| Project | #33 CI/CD Pipeline Bottleneck Analyzer & Optimizer |
+| Status | Approved |
+| Created | 2026-07-03 |
+| PRD | [docs/PRD.md](./PRD.md) |
+| SPEC | [docs/SPEC.md](./SPEC.md) |
+| Total effort | ~20 days (2–3 weekends) |
+
+---
+
+## Milestone Overview
+
+| Milestone | Scope | Days | Phase | GitHub |
+|---|---|---|---|---|
+| M1 | Foundation — GitHub API client + config + profiling | 4 | v1 | [milestone/1](https://github.com/deghosal-2026/cicd-bottleneck-optimizer/milestone/1) |
+| M2 | Intelligence — bottleneck classification + optimization proposals | 4 | v1 | [milestone/2](https://github.com/deghosal-2026/cicd-bottleneck-optimizer/milestone/2) |
+| M3 | Agent — LangGraph state graph + interrupt + YAML generation | 4 | v1 | [milestone/3](https://github.com/deghosal-2026/cicd-bottleneck-optimizer/milestone/3) |
+| M4 | Delivery — PR generator + CLI UX + validation + Docker | 4 | v1 | [milestone/4](https://github.com/deghosal-2026/cicd-bottleneck-optimizer/milestone/4) |
+| M5 | Field Study — 10 PRs across 3 repos + reports | 4 | v1 | [milestone/5](https://github.com/deghosal-2026/cicd-bottleneck-optimizer/milestone/5) |
+| V2 | Extensions — scheduled mode, Qdrant, web dashboard, fork mode | TBD | v2 | [milestone/6](https://github.com/deghosal-2026/cicd-bottleneck-optimizer/milestone/6) |
+
+---
+
+## M1: Foundation — GitHub API Client + Config + Profiling (4 days)
+
+### M1.1: Project scaffolding (0.5 day) — [#1](https://github.com/deghosal-2026/cicd-bottleneck-optimizer/issues/1)
+
+- [ ] Create `main.py` CLI entry point with argparse
+- [ ] Create `config.yaml.example` template
+- [ ] Create `config.py` — load + validate config on startup
+- [ ] Create `requirements.txt` with pinned dependencies
+- [ ] Create `llm/client.py` — OMLX + cloud LLM client wrapper
+- [ ] Set up `pytest` + `conftest.py` with `--run-live` marker
+
+**Success criteria:**
+- [ ] `python main.py --help` shows all CLI flags (--repo, --field-study, --resume, --review, --pr-limit, --since, --workflow-limit)
+- [ ] `python main.py --repo test/repo --optimize` fails with clear message if config.yaml missing
+- [ ] `pytest` runs with 0 failures (empty test suite passes)
+- [ ] `pytest --run-live` skips live tests with explanation
+
+### M1.2: Config validation (0.5 day) — [#2](https://github.com/deghosal-2026/cicd-bottleneck-optimizer/issues/2)
+
+- [ ] Validate `github.token` present → fail if missing
+- [ ] Validate `cost_rates` present → fail if missing
+- [ ] Check OMLX reachable → warn if not (not fail)
+- [ ] Check cloud LLM keys → warn if not (not fail)
+- [ ] Check `act` installed → warn if not (not fail)
+- [ ] Check token scope: read-only OK for field study, full scope for optimize
+
+**Success criteria:**
+- [ ] Missing token → "GitHub token not set in config.yaml"
+- [ ] OMLX down → warning logged, agent continues
+- [ ] No cloud keys → warning logged, agent continues
+- [ ] Read-only token + --field-study → passes
+- [ ] Read-only token + --optimize → fails with "Token lacks repo scope"
+
+### M1.3: GitHub API client (2 days) — [#3](https://github.com/deghosal-2026/cicd-bottleneck-optimizer/issues/3)
+
+- [ ] `tools/github.py` — `GitHubClient` class with auth header
+- [ ] `fetch_workflows(repo)` → list of workflow YAML files
+- [ ] `fetch_runs(repo, workflow_id, limit=50)` → run records with timing
+- [ ] `fetch_jobs(repo, run_id)` → per-job timing + status
+- [ ] `fetch_prs(repos, limit, since_days)` → recent PRs (field study)
+- [ ] `fetch_pr_runs(repo, pr_number)` → CI runs for a specific PR
+- [ ] `detect_ci_system(repo)` → "github_actions" or "other"
+- [ ] Pagination handling (Link header parsing)
+- [ ] Rate limit 403 → exponential backoff (1s, 2s, 4s, 8s, max 4 retries)
+- [ ] 404 handling → log error, skip, continue
+- [ ] `check_write_access(repo)` → pre-flight for optimize mode
+- [ ] `create_branch(repo, branch_name)` → for PR creation
+- [ ] `create_commit(repo, branch, path, content)` → commit rewritten YAML
+- [ ] `create_pr(repo, head, title, body)` → open PR, return URL
+- [ ] Sequential calls only (no parallelism in v1)
+
+**Success criteria:**
+- [ ] `fetch_workflows("kubernetes/kubernetes")` returns ≥ 1 workflow (live test)
+- [ ] Pagination handles repos with > 30 workflows
+- [ ] Rate limit retry works (mocked 403 → 200 on retry)
+- [ ] 404 on missing repo → logged, no crash
+- [ ] `detect_ci_system` returns "github_actions" for repos with .github/workflows/
+- [ ] `detect_ci_system` returns "other" for repos without
+- [ ] Pre-flight write access check: no push permission → fail before fetching
+- [ ] All API calls are sequential (no async)
+
+### M1.4: Workflow parser + profiler (1 day) — [#4](https://github.com/deghosal-2026/cicd-bottleneck-optimizer/issues/4)
+
+- [ ] `lib/profiler.py` — `parse_job_graph(workflow)` → job dependency graph
+- [ ] `profile(runs, workflows)` → `JobProfile[]` with median, p90, p99, failure_rate
+- [ ] `estimate_cache_hit_ratio(run)` → float or None from log parsing
+- [ ] Handle empty runs → empty profiles
+- [ ] Handle single run → median = p90 = p99 = that duration
+- [ ] `nodes/fetch.py` — fetch_workflows + fetch_runs + fetch_prs + fetch_pr_runs graph nodes
+- [ ] `nodes/profile.py` — profile_jobs graph node
+
+**Success criteria:**
+- [ ] median from 5 runs = 3rd sorted value
+- [ ] failure_rate: 3 fail / 10 total = 0.3
+- [ ] failure_rate: 0 fail = 0.0, 10 fail = 1.0
+- [ ] Empty runs → empty profiles, no crash
+- [ ] Job with `needs: [build]` → dependency recorded
+- [ ] Job with matrix → matrix dimensions captured
+- [ ] Cache hit ratio parsed from mock logs
+
+---
+
+## M2: Intelligence — Classification + Optimization Proposals (4 days)
+
+### M2.1: Rule-based classifier (1 day) — [#5](https://github.com/deghosal-2026/cicd-bottleneck-optimizer/issues/5)
+
+- [ ] `lib/classifier.py` — `classify(profiles, workflows)` → `Bottleneck[]`
+- [ ] Rule: missing_cache — no `cache:` directive in job
+- [ ] Rule: serial_parallel — jobs with no `needs:` running sequentially
+- [ ] Rule: redundant_matrix — overlapping matrix dimensions
+- [ ] Severity assignment: > 10 min wasted = high, 3–10 min = medium, < 3 min = low
+- [ ] Evidence field populated with real timing data
+- [ ] `nodes/classify.py` — classify_bottlenecks graph node
+
+**Success criteria:**
+- [ ] Job with no cache → missing_cache bottleneck with evidence
+- [ ] Job with `cache: pip` → no missing_cache
+- [ ] 2 jobs no `needs:` → serial_parallel flagged
+- [ ] Job with `needs: [build]` → not flagged as serial_parallel
+- [ ] Job wasting 15 min → severity = high
+- [ ] Job wasting 5 min → severity = medium
+- [ ] Job wasting 1 min → severity = low
+- [ ] Clean workflow → 0 bottlenecks
+- [ ] Rule-based pass runs without any LLM configured
+
+### M2.2: LLM-assisted classifier (1 day) — [#6](https://github.com/deghosal-2026/cicd-bottleneck-optimizer/issues/6)
+
+- [ ] LLM prompt for redundant_rebuild detection
+- [ ] LLM prompt for oversized_context detection
+- [ ] Parse LLM output into `Bottleneck` TypedDict
+- [ ] Merge rule-based + LLM results (no duplicates)
+- [ ] OMLX down → prompt user "Use cloud LLM? (y/n)"
+- [ ] OMLX down + y → use cloud gpt-4o-mini
+- [ ] OMLX down + n → fail with message
+- [ ] Track token usage per model
+
+**Success criteria:**
+- [ ] Same artifact in 2 jobs → LLM flags redundant_rebuild
+- [ ] No .dockerignore → LLM flags oversized_context
+- [ ] LLM output parsed into structured Bottleneck with all fields
+- [ ] Rule + LLM results merged, no duplicate (same job, same type)
+- [ ] OMLX down → prompt appears → y → cloud used → tokens tracked
+- [ ] OMLX down → prompt → n → clear error message
+
+### M2.3: Optimization proposer (1 day) — [#8](https://github.com/deghosal-2026/cicd-bottleneck-optimizer/issues/8)
+
+- [ ] `lib/optimizer.py` — `propose(bottlenecks, profiles)` → `Optimization[]`
+- [ ] Each optimization: id, description, time_saved, cost, risk, yaml_diff_hint
+- [ ] Cost calc: runner $0.008/min, cache $0.007/GB-month (hardcoded)
+- [ ] Risk: add_cache=low, parallelize=medium, reduce_matrix=high, split_job=high
+- [ ] `simulate(optimizations)` → total saved min across selected
+- [ ] `nodes/optimize.py` — propose_optimizations + simulate_savings graph nodes
+- [ ] LLM generates candidate optimizations from bottleneck + profile context
+
+**Success criteria:**
+- [ ] Each bottleneck → ≥ 1 optimization with all fields populated
+- [ ] 5 min on runner → $0.04 cost
+- [ ] 2 GB cache 1 month → $0.014 cost
+- [ ] Add cache → risk = low
+- [ ] Parallelize → risk = medium
+- [ ] Reduce matrix → risk = high
+- [ ] 3 optimizations (5, 3, 2 min) → simulate = 10 min
+- [ ] 0 optimizations → simulate = 0 min
+- [ ] Optimization IDs are unique
+
+### M2.4: Classifier + optimizer tests (1 day) — [#12](https://github.com/deghosal-2026/cicd-bottleneck-optimizer/issues/12)
+
+- [ ] `tests/unit/test_classifier.py` — all rule-based + LLM scenarios
+- [ ] `tests/unit/test_optimizer.py` — cost, risk, simulate scenarios
+- [ ] Mocked LLM responses for LLM-dependent tests
+- [ ] Edge cases: empty inputs, single bottleneck, all bottleneck types
+
+**Success criteria:**
+- [ ] `pytest tests/unit/test_classifier.py` passes
+- [ ] `pytest tests/unit/test_optimizer.py` passes
+- [ ] All 5 bottleneck types have a test case
+- [ ] Cost calculation tests match hardcoded rates exactly
+- [ ] Mocked LLM returns structured output → parsed correctly
+
+---
+
+## M3: Agent — LangGraph State Graph + Interrupt + YAML Generation (4 days)
+
+### M3.1: State schema + graph skeleton (1 day) — [#9](https://github.com/deghosal-2026/cicd-bottleneck-optimizer/issues/9)
+
+- [ ] `state.py` — `AgentState` TypedDict with all fields
+- [ ] `graph.py` — `build_graph()` function
+- [ ] Mode-based entry routing: optimize → fetch_workflows, field_study → fetch_prs
+- [ ] Linear edges: fetch → profile → classify → propose → simulate
+- [ ] SQLite checkpointer setup (`checkpoints/agent.db`)
+- [ ] `--resume <thread_id>` flag support
+
+**Success criteria:**
+- [ ] `build_graph()` returns a compiled graph with checkpointer
+- [ ] Optimize mode routes to fetch_workflows node
+- [ ] Field study mode routes to fetch_prs node
+- [ ] State schema has all fields from SPEC section 3
+- [ ] `--resume <thread_id>` loads state from checkpoint
+- [ ] Invalid thread_id → clear error message
+
+### M3.2: Interrupt node + CLI interaction (1 day) — [#10](https://github.com/deghosal-2026/cicd-bottleneck-optimizer/issues/10)
+
+- [ ] `lib/cli.py` — `trade_off_table(optimizations, bottlenecks)`
+- [ ] Display numbered table: #, optimization, job, saved, cost, risk
+- [ ] View evidence mode: enter # → show full bottleneck evidence → return
+- [ ] Selection mode: type 's' → enter numbers → proceed y/n
+- [ ] `prompt_re_analyze_or_recompute()` → "reanalyze" or "recompute"
+- [ ] `nodes/pr.py` — interrupt_for_approval node (wraps cli.py)
+- [ ] Edge routing: approve → generate_yaml, reanalyze → propose, recompute → simulate
+
+**Success criteria:**
+- [ ] Table displays all optimizations with correct columns
+- [ ] Enter 1 → shows evidence for bottleneck #1 → returns to table
+- [ ] Type 's' → selection prompt appears
+- [ ] Enter "1 3" → optimizations 1 and 3 selected
+- [ ] "Proceed? y" → human_approved = True
+- [ ] "Proceed? n" → re_analyze_or_recompute prompt appears
+- [ ] "1" → route to propose_optimizations (reanalyze)
+- [ ] "2" → route to simulate_savings (recompute)
+- [ ] Invalid input (non-numeric, out of range) → re-prompt
+
+### M3.3: YAML generation + validation (1 day) — [#11](https://github.com/deghosal-2026/cicd-bottleneck-optimizer/issues/11)
+
+- [ ] `lib/generator.py` — `rewrite(workflows, selected, optimizations)` → YAML string
+- [ ] Cloud LLM (Claude/gpt-4o-mini) for generation
+- [ ] No cloud keys → prompt "Use OMLX local? (y/n)"
+- [ ] `lib/validator.py` — `validate(yaml)` → (bool, error_msg)
+- [ ] Primary: `act --list` dry-run
+- [ ] Fallback: PyYAML + custom schema (on, jobs, steps)
+- [ ] `nodes/generate.py` — generate_yaml + validate_syntax nodes
+- [ ] Validation retry: invalid → loop back to generate (max 3)
+- [ ] 3 failures → stop with error
+
+**Success criteria:**
+- [ ] Generated YAML is syntactically valid (PyYAML parses it)
+- [ ] `act --list` passes on valid generated workflow
+- [ ] Invalid YAML → validate returns (False, error_msg)
+- [ ] Retry counter increments on each failure
+- [ ] 3 failures → graph stops, error logged
+- [ ] No cloud keys → prompt → y → OMLX generates YAML
+- [ ] No cloud keys → prompt → n → fail with message
+
+### M3.4: Graph integration tests (1 day) — [#13](https://github.com/deghosal-2026/cicd-bottleneck-optimizer/issues/13)
+
+- [ ] `tests/graph/test_graph_optimize.py` — full optimize path
+- [ ] `tests/graph/test_graph_resume.py` — resume from checkpoint
+- [ ] `tests/graph/test_graph_llm.py` — LLM routing + fallback
+- [ ] Mocked LLM + mocked GitHub API
+- [ ] Test: interrupt → approve → generate → validate → open_pr
+- [ ] Test: interrupt → edit → reanalyze cycle
+- [ ] Test: interrupt → edit → recompute cycle
+- [ ] Test: validation retry (3 attempts)
+- [ ] Test: resume preserves state
+
+**Success criteria:**
+- [ ] Full optimize path completes end-to-end (mocked)
+- [ ] Reanalyze cycle loops back to propose_optimizations
+- [ ] Recompute cycle loops back to simulate_savings
+- [ ] Validation retry stops after 3 failures
+- [ ] Resume re-displays trade-off table with prior state
+- [ ] OMLX down → prompt → cloud fallback works in graph
+- [ ] Token usage tracked across all LLM calls in state
+
+---
+
+## M4: Delivery — PR Generator + CLI UX + Validation + Docker (4 days)
+
+### M4.1: PR generator (1 day) — [#7](https://github.com/deghosal-2026/cicd-bottleneck-optimizer/issues/7)
+
+- [ ] `nodes/pr.py` — open_pr node
+- [ ] Create branch: `ci-optimizer/<slug>-<id>` (slug from primary optimization, kebab-case, ≤ 40 chars)
+- [ ] Commit rewritten YAML to branch
+- [ ] Open PR with structured markdown body:
+  - [ ] Summary section
+  - [ ] Bottlenecks Found table
+  - [ ] Optimizations Applied table
+  - [ ] Before/After table
+  - [ ] Trade-offs section
+  - [ ] Validation status
+  - [ ] Footer with repo link
+- [ ] Return pr_url in state
+
+**Success criteria:**
+- [ ] Branch name format: `ci-optimizer/<slug>-<id>`
+- [ ] PR body has all 7 sections
+- [ ] Before/After table shows real median times
+- [ ] Trade-offs section includes cost/month estimate
+- [ ] Validation status shows act/PyYAML result
+- [ ] PR URL returned and printed to CLI
+
+### M4.2: CLI output + logging (1 day) — [#14](https://github.com/deghosal-2026/cicd-bottleneck-optimizer/issues/14)
+
+- [ ] `lib/cli.py` — `summary_table(reports)` for field study
+- [ ] Progress output during fetch/profile/classify (stderr)
+- [ ] JSON lines logging to `logs/run-<timestamp>.jsonl`
+- [ ] Each log entry: ts, node, duration_ms, tokens, level, message
+- [ ] Human-readable logs to stderr
+- [ ] `--review` flag for field study mode (shows trade-off table per PR, read-only)
+
+**Success criteria:**
+- [ ] Field study summary table shows repo, PR #, bottlenecks, min wasted, top rec
+- [ ] Progress messages appear during long operations (fetch, profile)
+- [ ] JSON log file created with one entry per node execution
+- [ ] JSON entries have all required fields
+- [ ] `--review` flag shows trade-off table without opening PR
+- [ ] `--review` + 'q' → moves to next PR
+
+### M4.3: Docker + packaging (1 day) — [#15](https://github.com/deghosal-2026/cicd-bottleneck-optimizer/issues/15)
+
+- [ ] `Dockerfile` — Python 3.11 slim, install deps, copy app
+- [ ] `.dockerignore` — exclude .git, tests, reports, checkpoints, logs
+- [ ] `requirements.txt` finalized with pinned versions
+- [ ] Docker entrypoint: `python main.py $@`
+- [ ] Config mounted as volume: `-v ./config.yaml:/app/config.yaml`
+- [ ] Reports volume: `-v ./reports:/app/reports`
+
+**Success criteria:**
+- [ ] `docker build -t cicd-bottleneck-optimizer .` succeeds
+- [ ] `docker run -v ./config.yaml:/app/config.yaml cicd-bottleneck-optimizer --repo test/repo --optimize` runs
+- [ ] Image size < 500MB
+- [ ] Reports written to mounted volume
+- [ ] Config read from mounted volume
+
+### M4.4: Integration tests + README (1 day) — [#17](https://github.com/deghosal-2026/cicd-bottleneck-optimizer/issues/17)
+
+- [ ] `tests/integration/test_github_client.py` — all mocked API scenarios
+- [ ] `README.md` updated with real usage examples
+- [ ] `config.yaml.example` finalized
+- [ ] Integration test: create_branch → create_commit → create_pr sequence (mocked)
+- [ ] Integration test: rate limit retry (mocked 403)
+- [ ] Integration test: pagination (mocked Link header)
+
+**Success criteria:**
+- [ ] `pytest tests/integration/` passes
+- [ ] Mocked PR creation sequence returns a pr_url
+- [ ] Rate limit retry works with mocked responses
+- [ ] Pagination handles 2 pages of 30
+- [ ] README has quick start, config setup, and both mode examples
+- [ ] `config.yaml.example` has all fields with comments
+
+---
+
+## M5: Field Study — 10 PRs Across 3 Repos + Reports (4 days)
+
+### M5.1: Field study graph nodes (1 day) — [#16](https://github.com/deghosal-2026/cicd-bottleneck-optimizer/issues/16)
+
+- [ ] `nodes/fetch.py` — fetch_prs + fetch_pr_runs nodes
+- [ ] `nodes/pr.py` — save_report + print_summary nodes
+- [ ] `lib/reporter.py` — `save_report(repo, pr_number, bottlenecks, optimizations)` → markdown
+- [ ] Report path: `reports/<repo-slash-to-dash>/<pr#>-analysis.md`
+- [ ] Report sections: header, job profiles table, bottlenecks table, recommendations table, summary
+- [ ] Field study routing: fetch_prs → fetch_pr_runs → profile → classify → propose → save_report → print_summary
+- [ ] `--review` flag: insert trade_off_table before save_report
+
+**Success criteria:**
+- [ ] `reports/kubernetes-kubernetes/12453-analysis.md` created with all sections
+- [ ] Repo name slash → dash in directory path
+- [ ] Report has job profiles with real durations
+- [ ] Report has bottlenecks with evidence
+- [ ] Report has recommendations with time/cost
+- [ ] Report has summary with total wasted time
+- [ ] `--review` shows trade-off table, then saves report
+
+### M5.2: Live tests against kubernetes/kubernetes (1 day) — [#18](https://github.com/deghosal-2026/cicd-bottleneck-optimizer/issues/18)
+
+- [ ] `tests/live/test_live_repos.py` — kubernetes scenarios
+- [ ] Test: fetch_workflows returns ≥ 1 workflow
+- [ ] Test: detect_ci_system returns "github_actions" (some workflows)
+- [ ] Test: detect_ci_system logs warning for prow workflows
+- [ ] Test: fetch_prs returns ≥ 4 PRs in last 30 days
+- [ ] Test: fetch_pr_runs returns ≥ 1 CI run per PR
+- [ ] Test: profile_jobs computes median/p90 for ≥ 1 job
+- [ ] Test: classify finds ≥ 1 missing_cache bottleneck
+- [ ] Test: save_report creates markdown with real data
+
+**Success criteria:**
+- [ ] `pytest tests/live/test_live_repos.py -k kubernetes --run-live` passes
+- [ ] ≥ 4 PRs fetched from kubernetes/kubernetes in last 30 days
+- [ ] ≥ 1 real bottleneck found (missing_cache expected)
+- [ ] Report file created with non-empty tables
+- [ ] No PRs opened on kubernetes/kubernetes (read-only verified)
+
+### M5.3: Live tests against tensorflow/tensorflow + moby/moby (1 day) — [#19](https://github.com/deghosal-2026/cicd-bottleneck-optimizer/issues/19)
+
+- [ ] tensorflow scenarios: fetch workflows, matrix-heavy profiling, redundant_matrix detection
+- [ ] tensorflow: ≥ 3 PRs fetched, reports generated
+- [ ] moby scenarios: fetch workflows, oversized_context detection
+- [ ] moby: ≥ 3 PRs fetched, reports generated
+- [ ] Cross-repo: 10 total reports, summary table prints all 3 repos
+
+**Success criteria:**
+- [ ] `pytest tests/live/test_live_repos.py --run-live` passes for all 3 repos
+- [ ] tensorflow: redundant_matrix detected in matrix-heavy workflows
+- [ ] moby: oversized_context detected if no .dockerignore
+- [ ] 10 total markdown reports generated
+- [ ] Summary table shows all 3 repos with correct PR counts
+- [ ] Total API calls < 500 (rate limit safe)
+- [ ] No PRs opened on any repo
+
+### M5.4: End-to-end field study run + documentation (1 day) — [#20](https://github.com/deghosal-2026/cicd-bottleneck-optimizer/issues/20)
+
+- [ ] Full run: `python main.py --field-study --repos kubernetes/kubernetes,tensorflow/tensorflow,moby/moby --pr-limit 10 --since 30d`
+- [ ] Verify 10 reports in `reports/` directory
+- [ ] Verify summary table output
+- [ ] Run with `--review` flag, verify trade-off tables appear
+- [ ] Run optimize mode against own test repo (write access), verify PR opened
+- [ ] Update README with field study results
+- [ ] Update vault project file: status → complete, date-complete set
+
+**Success criteria:**
+- [ ] Full field study run completes without errors
+- [ ] 10 markdown reports exist under `reports/`
+- [ ] Each report has all 4 sections (profiles, bottlenecks, recommendations, summary)
+- [ ] `--review` flag shows interactive trade-off table per PR
+- [ ] Optimize mode opens a real PR on a test repo
+- [ ] README has field study section with example output
+- [ ] Vault project status = complete
+
+---
+
+## V2: Extensions (deferred — not in 6-month plan scope)
+
+### V2.1: Scheduled/continuous optimization (CUJ-3)
+
+- [ ] CronJob deployment manifest for kind cluster
+- [ ] State persistence: last-run timestamp per repo
+- [ ] Diff detection: compare bottlenecks since last run
+- [ ] Delta-only proposals: skip unchanged workflows
+- [ ] `--schedule` flag with cron expression
+
+**Success criteria:**
+- [ ] CronJob runs weekly, detects new bottlenecks
+- [ ] Only delta optimizations proposed (not full re-analysis)
+- [ ] State persisted across runs
+
+### V2.2: Qdrant cross-repo pattern memory
+
+- [ ] Embed workflow patterns into Qdrant
+- [ ] Retrieve similar patterns across repos
+- [ ] "This anti-pattern seen in 3 repos" insights
+- [ ] Pattern-based optimization suggestions
+
+**Success criteria:**
+- [ ] Workflow patterns stored as embeddings
+- [ ] Cross-repo pattern matches returned
+- [ ] Insights included in reports
+
+### V2.3: Web dashboard (FastAPI)
+
+- [ ] FastAPI app serving historical view
+- [ ] Before/after times across multiple runs
+- [ ] Cumulative monthly savings
+- [ ] PRs opened/merged tracker
+- [ ] Cache cost breakdown
+
+**Success criteria:**
+- [ ] Dashboard shows data from multiple field study runs
+- [ ] Charts render savings over time
+- [ ] Filter by repo
+
+### V2.4: Fork-mode PR target
+
+- [ ] Fork target repo automatically
+- [ ] Push branch to fork
+- [ ] Open PR from fork → upstream
+- [ ] Works on repos without write access
+
+**Success criteria:**
+- [ ] Fork created automatically if no write access
+- [ ] PR opened from fork to upstream
+- [ ] Works on kubernetes/kubernetes (no write access needed)
+
+### V2.5: GitHub Enterprise support
+
+- [ ] Enterprise auth flow (different token endpoint)
+- [ ] On-prem GitHub API base URL config
+- [ ] Private repo support with privacy review
+
+**Success criteria:**
+- [ ] Enterprise token auth works
+- [ ] Private repos analyzed with local LLM only (privacy)
+- [ ] No repo contents sent to cloud LLM
+
+---
+
+## Dependency Chain
+
+```
+M1 (Foundation)
+  ├─ M1.1 scaffolding
+  ├─ M1.2 config validation
+  ├─ M1.3 GitHub API client ← requires M1.1
+  └─ M1.4 profiler ← requires M1.3
+
+M2 (Intelligence) ← requires M1
+  ├─ M2.1 rule-based classifier ← requires M1.4
+  ├─ M2.2 LLM classifier ← requires M2.1
+  ├─ M2.3 optimizer ← requires M2.1
+  └─ M2.4 tests ← requires M2.1–M2.3
+
+M3 (Agent) ← requires M2
+  ├─ M3.1 state + graph ← requires M2
+  ├─ M3.2 interrupt + CLI ← requires M3.1
+  ├─ M3.3 YAML gen + validation ← requires M3.1
+  └─ M3.4 graph tests ← requires M3.1–M3.3
+
+M4 (Delivery) ← requires M3
+  ├─ M4.1 PR generator ← requires M3.3
+  ├─ M4.2 CLI + logging ← requires M3.2
+  ├─ M4.3 Docker ← requires M4.1
+  └─ M4.4 integration tests + README ← requires M4.1–M4.3
+
+M5 (Field Study) ← requires M4
+  ├─ M5.1 field study nodes ← requires M3.1
+  ├─ M5.2 kubernetes live tests ← requires M5.1
+  ├─ M5.3 tensorflow + moby tests ← requires M5.1
+  └─ M5.4 end-to-end + docs ← requires M5.1–M5.3
+```
+
+---
+
+## Effort Summary
+
+| Milestone | Days | Weekends |
+|---|---|---|
+| M1: Foundation | 4 | 1.5 |
+| M2: Intelligence | 4 | 1.5 |
+| M3: Agent | 4 | 1.5 |
+| M4: Delivery | 4 | 1.5 |
+| M5: Field Study | 4 | 1.5 |
+| **v1 Total** | **20** | **7–8 weekends** |
+| V2: Extensions | TBD | post-6-month-plan |
