@@ -15,12 +15,60 @@ import json
 import os
 import sys
 import time
+import traceback
 
 sys.path.insert(0, os.path.dirname(os.path.dirname(os.path.abspath(__file__))))
 from lib.profiler import parse_job_graph
 from lib.classifier import classify
 from lib.optimizer import propose, simulate
-from llm.client import LLMClient
+
+
+class GroqClient:
+    """Groq free API client (OpenAI-compatible, 800+ tok/s)."""
+    def __init__(self, model: str, token: str):
+        from openai import OpenAI
+        self.client = OpenAI(base_url="https://api.groq.com/openai/v1", api_key=token)
+        self.model = model
+
+    def call_local(self, prompt: str, system: str | None = None, **kwargs) -> str:
+        messages = []
+        if system:
+            messages.append({"role": "system", "content": system})
+        messages.append({"role": "user", "content": prompt})
+        resp = self.client.chat.completions.create(model=self.model, messages=messages, max_tokens=512)
+        return resp.choices[0].message.content or ""
+
+
+class HFClient:
+    """Hugging Face Inference API client."""
+    def __init__(self, model: str, token: str):
+        from huggingface_hub import InferenceClient
+        self.client = InferenceClient(model=model, token=token)
+        self.model = model
+
+    def call_local(self, prompt: str, system: str | None = None, **kwargs) -> str:
+        messages = []
+        if system:
+            messages.append({"role": "system", "content": system})
+        messages.append({"role": "user", "content": prompt})
+        resp = self.client.chat_completion(messages=messages, max_tokens=512)
+        return resp.choices[0].message.content or ""
+
+
+class OMLXClient:
+    """OMLX local client."""
+    def __init__(self, model: str):
+        from llm.client import LLMClient
+        self.client = LLMClient({
+            "llm": {"local": {
+                "base_url": "http://127.0.0.1:8000/v1",
+                "api_key": "omlx-test",
+                "model": model,
+            }}
+        })
+
+    def call_local(self, prompt: str, system: str | None = None, **kwargs) -> str:
+        return self.client.call_local(prompt, system, **kwargs)
 
 
 def parse_args():
@@ -30,6 +78,13 @@ def parse_args():
     p.add_argument("--max", type=int, default=0, help="Max PRs to process (0=all)")
     p.add_argument("--no-llm", action="store_true", help="Rules only, no LLM")
     p.add_argument("--resume", action="store_true", help="Skip already-analyzed PRs")
+    p.add_argument("--hf", action="store_true", help="Use Hugging Face Inference API")
+    p.add_argument("--hf-model", default="Qwen/Qwen2.5-Coder-7B-Instruct", help="HF model ID")
+    p.add_argument("--hf-token", default="", help="HF token (or HF_TOKEN env var)")
+    p.add_argument("--groq", action="store_true", help="Use Groq free API (800+ tok/s)")
+    p.add_argument("--groq-model", default="llama-3.3-70b-versatile", help="Groq model")
+    p.add_argument("--groq-token", default="", help="Groq API key (or GROQ_API_KEY env)")
+    p.add_argument("--omlx-model", default="Qwen3.5-9B-MLX-4bit", help="OMLX model name")
     return p.parse_args()
 
 
@@ -120,15 +175,34 @@ def write_report(path: str, pr: dict, repo_label: str, profiles: list, bottlenec
 def main():
     args = parse_args()
 
-    llm = None if args.no_llm else LLMClient({
-        "llm": {
-            "local": {
-                "base_url": "http://127.0.0.1:8000/v1",
-                "api_key": "omlx-test",
-                "model": "DeepSeek-Coder-V2-Lite-Instruct-4bit-mlx",
-            }
-        }
-    })
+    llm = None
+    llm_label = "disabled"
+    if not args.no_llm:
+        if args.groq:
+            token = args.groq_token or os.environ.get("GROQ_API_KEY", "")
+            if not token:
+                print("Error: Groq API key required.")
+                print("  1. Sign up at https://console.groq.com (free, no credit card)")
+                print("  2. Create an API key")
+                print("  3. export GROQ_API_KEY='gsk_...'")
+                sys.exit(1)
+            llm = GroqClient(args.groq_model, token)
+            llm_label = f"Groq:{args.groq_model}"
+        elif args.hf:
+            token = args.hf_token or os.environ.get("HF_TOKEN", "")
+            if not token:
+                token_path = os.path.expanduser("~/.cache/huggingface/token")
+                if os.path.exists(token_path):
+                    with open(token_path) as f:
+                        token = f.read().strip()
+            if not token:
+                print("Error: HF token required. Run: huggingface-cli login")
+                sys.exit(1)
+            llm = HFClient(args.hf_model, token)
+            llm_label = f"HF:{args.hf_model}"
+        else:
+            llm = OMLXClient(args.omlx_model)
+            llm_label = f"OMLX:{args.omlx_model}"
 
     pr_files = sorted(glob.glob(os.path.join(args.data, "*", "prs", "*.json")))
     if args.max > 0:
@@ -136,50 +210,63 @@ def main():
 
     skipped = 0
     processed = 0
+    errors = 0
     total_b = 0
     total_s = 0
     start = time.time()
 
     print(f"Dataset: {len(pr_files)} PRs")
-    print(f"LLM:     {'DeepSeek-Coder (local)' if llm else 'disabled'}")
+    print(f"LLM:     {args.model if llm else 'disabled'}")
     print(f"Resume:  {'yes' if args.resume else 'no'}")
     print(f"Output:  {args.out}/")
     print()
+    sys.stdout.flush()
 
     for i, path in enumerate(pr_files):
-        with open(path) as f:
-            pr = json.load(f)
+        try:
+            with open(path) as f:
+                pr = json.load(f)
 
-        repo = path.split("/prs/")[0].split("/")[-1].replace("-", "/")
+            repo = path.split("/prs/")[0].split("/")[-1].replace("-", "/")
 
-        if args.resume and report_exists(args.out, repo, pr["pr_number"]):
-            skipped += 1
+            if args.resume and report_exists(args.out, repo, pr["pr_number"]):
+                skipped += 1
+                continue
+
+            wfs = parse_workflows(pr, path)
+            profs = parse_profiles(pr)
+
+            if not profs or not any(w["jobs"] for w in wfs):
+                print(f"  [{i+1}/{len(pr_files)}] {repo} PR #{pr['pr_number']} — no data, skipped")
+                sys.stdout.flush()
+                skipped += 1
+                continue
+
+            print(f"  [{i+1}/{len(pr_files)}] {repo:<25s} PR #{pr['pr_number']:<6d} analyzing...", end="", flush=True)
+
+            bott = classify(profs, wfs, llm_client=llm)
+            opts = propose(bott, profs, llm_client=llm)
+            saved = simulate(opts)
+
+            rpath = report_path(args.out, repo, pr["pr_number"])
+            write_report(rpath, pr, repo, profs, bott, opts)
+
+            processed += 1
+            total_b += len(bott)
+            total_s += saved
+
+            print(f" {len(bott)} bottlenecks, {saved}m saved")
+            sys.stdout.flush()
+
+        except Exception as e:
+            errors += 1
+            print(f" ERROR: {e}")
+            sys.stdout.flush()
             continue
-
-        wfs = parse_workflows(pr, path)
-        profs = parse_profiles(pr)
-
-        if not profs or not any(w["jobs"] for w in wfs):
-            print(f"  [{i+1}/{len(pr_files)}] {repo} PR #{pr['pr_number']} — no data, skipped")
-            skipped += 1
-            continue
-
-        bott = classify(profs, wfs, llm_client=llm)
-        opts = propose(bott, profs, llm_client=llm)
-        saved = simulate(opts)
-
-        rpath = report_path(args.out, repo, pr["pr_number"])
-        write_report(rpath, pr, repo, profs, bott, opts)
-
-        processed += 1
-        total_b += len(bott)
-        total_s += saved
-
-        print(f"  [{i+1}/{len(pr_files)}] {repo:<25s} PR #{pr['pr_number']:<6d} {len(bott)} bottlenecks, {saved}m saved")
 
     elapsed = int(time.time() - start)
     print()
-    print(f"Done. {processed} analyzed, {skipped} skipped, {elapsed}s")
+    print(f"Done. {processed} analyzed, {skipped} skipped, {errors} errors, {elapsed}s")
     print(f"Total: {total_b} bottlenecks, {total_s}m saved")
     print(f"Reports: {args.out}/")
 

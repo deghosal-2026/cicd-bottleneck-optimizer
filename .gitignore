@@ -28,7 +28,7 @@ htmlcov/
 .env
 *.log
 qdrant_data/
-reports/
+# reports/ (removed — analysis reports are version-controlled)
 config.yaml
 checkpoints/
 *.sqlite
