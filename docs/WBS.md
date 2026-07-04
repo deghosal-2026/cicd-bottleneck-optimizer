@@ -15,7 +15,8 @@
 
 | Milestone | Scope | Days | Phase | GitHub |
 |---|---|---|---|---|
-| M1 | Foundation — GitHub API client + config + profiling | 4 | v1 | [milestone/1](https://github.com/deghosal-2026/cicd-bottleneck-optimizer/milestone/1) |
+| M1 | Foundation — GitHub API client + config + profiling | 4 | v1 | ✅ DONE |
+| M1.5 | Dataset — bulk download PRs + CI data from 10 public repos | 2 | v1 | [issues/21-23] |
 | M2 | Intelligence — bottleneck classification + optimization proposals | 4 | v1 | [milestone/2](https://github.com/deghosal-2026/cicd-bottleneck-optimizer/milestone/2) |
 | M3 | Agent — LangGraph state graph + interrupt + YAML generation | 4 | v1 | [milestone/3](https://github.com/deghosal-2026/cicd-bottleneck-optimizer/milestone/3) |
 | M4 | Delivery — PR generator + CLI UX + validation + Docker | 4 | v1 | [milestone/4](https://github.com/deghosal-2026/cicd-bottleneck-optimizer/milestone/4) |
@@ -26,83 +27,141 @@
 
 ## M1: Foundation — GitHub API Client + Config + Profiling (4 days)
 
-### M1.1: Project scaffolding (0.5 day) — [#1](https://github.com/deghosal-2026/cicd-bottleneck-optimizer/issues/1)
+### M1.1: Project scaffolding (0.5 day) — [#1](https://github.com/deghosal-2026/cicd-bottleneck-optimizer/issues/1) ✅ CLOSED
 
-- [ ] Create `main.py` CLI entry point with argparse
-- [ ] Create `config.yaml.example` template
-- [ ] Create `config.py` — load + validate config on startup
-- [ ] Create `requirements.txt` with pinned dependencies
-- [ ] Create `llm/client.py` — OMLX + cloud LLM client wrapper
-- [ ] Set up `pytest` + `conftest.py` with `--run-live` marker
-
-**Success criteria:**
-- [ ] `python main.py --help` shows all CLI flags (--repo, --field-study, --resume, --review, --pr-limit, --since, --workflow-limit)
-- [ ] `python main.py --repo test/repo --optimize` fails with clear message if config.yaml missing
-- [ ] `pytest` runs with 0 failures (empty test suite passes)
-- [ ] `pytest --run-live` skips live tests with explanation
-
-### M1.2: Config validation (0.5 day) — [#2](https://github.com/deghosal-2026/cicd-bottleneck-optimizer/issues/2)
-
-- [ ] Validate `github.token` present → fail if missing
-- [ ] Validate `cost_rates` present → fail if missing
-- [ ] Check OMLX reachable → warn if not (not fail)
-- [ ] Check cloud LLM keys → warn if not (not fail)
-- [ ] Check `act` installed → warn if not (not fail)
-- [ ] Check token scope: read-only OK for field study, full scope for optimize
+- [x] Create `main.py` CLI entry point with argparse
+- [x] Create `config.yaml.example` template
+- [x] Create `config.py` — load + validate config on startup
+- [x] Create `requirements.txt` with pinned dependencies
+- [x] Create `llm/client.py` — OMLX + cloud LLM client wrapper
+- [x] Set up `pytest` + `conftest.py` with `--run-live` marker
 
 **Success criteria:**
-- [ ] Missing token → "GitHub token not set in config.yaml"
-- [ ] OMLX down → warning logged, agent continues
-- [ ] No cloud keys → warning logged, agent continues
-- [ ] Read-only token + --field-study → passes
-- [ ] Read-only token + --optimize → fails with "Token lacks repo scope"
+- [x] `python main.py --help` shows all CLI flags (--repo, --field-study, --resume, --review, --pr-limit, --since, --workflow-limit)
+- [x] `python main.py --repo test/repo --optimize` fails with clear message if config.yaml missing
+- [x] `pytest` runs with 0 failures (empty test suite passes)
+- [x] `pytest --run-live` skips live tests with explanation
 
-### M1.3: GitHub API client (2 days) — [#3](https://github.com/deghosal-2026/cicd-bottleneck-optimizer/issues/3)
+### M1.2: Config validation (0.5 day) — [#2](https://github.com/deghosal-2026/cicd-bottleneck-optimizer/issues/2) ✅ CLOSED
 
-- [ ] `tools/github.py` — `GitHubClient` class with auth header
-- [ ] `fetch_workflows(repo)` → list of workflow YAML files
-- [ ] `fetch_runs(repo, workflow_id, limit=50)` → run records with timing
-- [ ] `fetch_jobs(repo, run_id)` → per-job timing + status
-- [ ] `fetch_prs(repos, limit, since_days)` → recent PRs (field study)
-- [ ] `fetch_pr_runs(repo, pr_number)` → CI runs for a specific PR
-- [ ] `detect_ci_system(repo)` → "github_actions" or "other"
-- [ ] Pagination handling (Link header parsing)
-- [ ] Rate limit 403 → exponential backoff (1s, 2s, 4s, 8s, max 4 retries)
-- [ ] 404 handling → log error, skip, continue
-- [ ] `check_write_access(repo)` → pre-flight for optimize mode
-- [ ] `create_branch(repo, branch_name)` → for PR creation
-- [ ] `create_commit(repo, branch, path, content)` → commit rewritten YAML
-- [ ] `create_pr(repo, head, title, body)` → open PR, return URL
-- [ ] Sequential calls only (no parallelism in v1)
+- [x] Validate `github.token` present → fail if missing
+- [x] Validate `cost_rates` present → fail if missing
+- [x] Check OMLX reachable → warn if not (not fail)
+- [x] Check cloud LLM keys → warn if not (not fail)
+- [x] Check `act` installed → warn if not (not fail)
+- [x] Check token scope: read-only OK for field study, full scope for optimize
 
 **Success criteria:**
-- [ ] `fetch_workflows("kubernetes/kubernetes")` returns ≥ 1 workflow (live test)
-- [ ] Pagination handles repos with > 30 workflows
-- [ ] Rate limit retry works (mocked 403 → 200 on retry)
+- [x] Missing token → "GitHub token not set in config.yaml"
+- [x] OMLX down → warning logged, agent continues
+- [x] No cloud keys → warning logged, agent continues
+- [x] Read-only token + --field-study → passes
+- [x] Read-only token + --optimize → fails with "Token lacks repo scope"
+
+### M1.3: GitHub API client (2 days) — [#3](https://github.com/deghosal-2026/cicd-bottleneck-optimizer/issues/3) ✅ CLOSED
+
+- [x] `tools/github.py` — `GitHubClient` class with auth header
+- [x] `fetch_workflows(repo)` → list of workflow YAML files
+- [x] `fetch_runs(repo, workflow_id, limit=50)` → run records with timing
+- [x] `fetch_jobs(repo, run_id)` → per-job timing + status
+- [x] `fetch_prs(repos, limit, since_days)` → recent PRs (field study)
+- [x] `fetch_pr_runs(repo, pr_number)` → CI runs for a specific PR
+- [x] `detect_ci_system(repo)` → "github_actions" or "other"
+- [x] Pagination handling (Link header parsing)
+- [x] Rate limit 403 → exponential backoff (1s, 2s, 4s, 8s, max 4 retries)
+- [x] 404 handling → log error, skip, continue
+- [x] `check_write_access(repo)` → pre-flight for optimize mode
+- [x] `create_branch(repo, branch_name)` → for PR creation
+- [x] `create_commit(repo, branch, path, content)` → commit rewritten YAML
+- [x] `create_pr(repo, head, title, body)` → open PR, return URL
+- [x] Sequential calls only (no parallelism in v1)
+
+**Success criteria:**
+- [ ] `fetch_workflows("kubernetes/kubernetes")` returns ≥ 1 workflow (live test — requires --run-live)
+- [ ] Pagination handles repos with > 30 workflows (needs integration test)
+- [ ] Rate limit retry works (mocked 403 → 200 on retry, needs integration test)
 - [ ] 404 on missing repo → logged, no crash
 - [ ] `detect_ci_system` returns "github_actions" for repos with .github/workflows/
 - [ ] `detect_ci_system` returns "other" for repos without
 - [ ] Pre-flight write access check: no push permission → fail before fetching
-- [ ] All API calls are sequential (no async)
+- [x] All API calls are sequential (no async)
 
-### M1.4: Workflow parser + profiler (1 day) — [#4](https://github.com/deghosal-2026/cicd-bottleneck-optimizer/issues/4)
+### M1.4: Workflow parser + profiler (1 day) — [#4](https://github.com/deghosal-2026/cicd-bottleneck-optimizer/issues/4) ✅ CLOSED
 
-- [ ] `lib/profiler.py` — `parse_job_graph(workflow)` → job dependency graph
-- [ ] `profile(runs, workflows)` → `JobProfile[]` with median, p90, p99, failure_rate
-- [ ] `estimate_cache_hit_ratio(run)` → float or None from log parsing
-- [ ] Handle empty runs → empty profiles
-- [ ] Handle single run → median = p90 = p99 = that duration
-- [ ] `nodes/fetch.py` — fetch_workflows + fetch_runs + fetch_prs + fetch_pr_runs graph nodes
-- [ ] `nodes/profile.py` — profile_jobs graph node
+- [x] `lib/profiler.py` — `parse_job_graph(workflow)` → job dependency graph
+- [x] `profile(runs, workflows)` → `JobProfile[]` with median, p90, p99, failure_rate
+- [x] `estimate_cache_hit_ratio(run)` → float or None from log parsing
+- [x] Handle empty runs → empty profiles
+- [x] Handle single run → median = p90 = p99 = that duration
+- [x] `nodes/fetch.py` — fetch_workflows + fetch_runs + fetch_prs + fetch_pr_runs graph nodes
+- [x] `nodes/profile.py` — profile_jobs graph node
 
 **Success criteria:**
-- [ ] median from 5 runs = 3rd sorted value
-- [ ] failure_rate: 3 fail / 10 total = 0.3
-- [ ] failure_rate: 0 fail = 0.0, 10 fail = 1.0
-- [ ] Empty runs → empty profiles, no crash
-- [ ] Job with `needs: [build]` → dependency recorded
-- [ ] Job with matrix → matrix dimensions captured
-- [ ] Cache hit ratio parsed from mock logs
+- [x] median from 5 runs = 3rd sorted value
+- [x] failure_rate: 3 fail / 10 total = 0.3
+- [x] failure_rate: 0 fail = 0.0, 10 fail = 1.0
+- [x] Empty runs → empty profiles, no crash
+- [x] Job with `needs: [build]` → dependency recorded
+- [x] Job with matrix → matrix dimensions captured
+- [x] Cache hit ratio parsed from mock logs
+
+---
+
+## M1.5: Dataset — Bulk Download PRs + CI Data (2 days)
+
+### M1.5: Dataset download script (1 day) — [#21](https://github.com/deghosal-2026/cicd-bottleneck-optimizer/issues/21) ✅ CLOSED
+
+- [x] `tools/download_dataset.py` — script to bulk fetch PRs + CI data from N repos
+- [x] Read repos list from `repos.txt` (one per line, `owner/repo` format)
+- [x] For each repo: fetch N PRs within D days via GitHub API
+- [x] For each PR: fetch CI runs + per-job timing + workflow YAML files
+- [x] Save per PR as `data/<repo-slash-to-dash>/prs/<pr-number>.json`
+- [x] Unique workflow YAMLs deduplicated by SHA256 hash under `data/<repo>/workflows/<hash>.yml`
+- [x] JSON schema: PR metadata, CI runs (jobs, durations, statuses), workflow references
+- [x] Rate limiting: 2s delay between repos, exponential backoff on 403
+- [x] Progress output: repo name, PR count, API calls made
+- [x] `repos.txt` with 10 target repos created
+
+**Success criteria:**
+- [x] `python tools/download_dataset.py --repos-file repos.txt --pr-limit 50 --since 60 --output-dir data` runs without errors
+- [x] Each repo directory created under `data/`
+- [x] Each PR saved as individual JSON file with all CI run data
+- [x] Rate limit handled gracefully (backoff)
+- [x] Non-Actions repos detected and skipped with warning
+
+### M1.6: Run dataset download (0.5 day) — [#22](https://github.com/deghosal-2026/cicd-bottleneck-optimizer/issues/22)
+
+- [ ] Execute downloader: `python tools/download_dataset.py --repos-file repos.txt --pr-limit 50 --since 60`
+- [ ] Verify all 10 repos processed
+- [ ] Verify 50 PRs fetched per repo (or fewer if less exist)
+- [ ] Verify each PR JSON has CI run data (jobs, timings)
+- [ ] Track total API calls made
+- [ ] Record any repos with non-Actions CI that were skipped
+
+**Success criteria:**
+- [ ] 10 repo directories under `data/`
+- [ ] Total ~500 PR JSON files saved
+- [ ] Each PR file has valid JSON with non-empty fields
+- [ ] No API rate limit failures
+- [ ] Total API calls < 1000
+- [ ] Any skipped repos documented
+
+### M1.7: Verify dataset + commit to repo (0.5 day) — [#23](https://github.com/deghosal-2026/cicd-bottleneck-optimizer/issues/23)
+
+- [ ] Verify data integrity: all JSON files parse correctly
+- [ ] Stats summary: total repos, total PRs, total CI runs, date range
+- [ ] Check individual file sizes are < 100MB each
+- [ ] Check total dataset size is < 500MB
+- [ ] Update `.gitignore` to NOT ignore `data/` directory
+- [ ] Commit dataset to repo with descriptive message
+- [ ] Update README with dataset section (repos, PR count, date range)
+
+**Success criteria:**
+- [ ] All JSON files valid (parsed without errors)
+- [ ] No single file > 100MB
+- [ ] Total dataset < 500MB
+- [ ] Datasets committed to repo
+- [ ] Stats summary printed and recorded
 
 ---
 

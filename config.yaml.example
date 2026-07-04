@@ -1,0 +1,41 @@
+# CI/CD Bottleneck Optimizer — Configuration
+#
+# Copy this file to config.yaml and fill in your values.
+# config.yaml is gitignored — secrets stay local.
+
+github:
+  # Personal Access Token with repo scope (optimize mode) or public_repo scope (field study/audit)
+  token: ""  # Required
+
+cost_rates:
+  # GitHub Actions Linux runner cost per minute (USD)
+  runner_per_min: 0.008
+  # GitHub Actions cache cost per GB per month (USD)
+  cache_per_gb_month: 0.007
+
+llm:
+  # Local LLM (OMLX) — runs at http://127.0.0.1:8000/v1 by default
+  local:
+    base_url: "http://127.0.0.1:8000/v1"
+    api_key: "omlx-test"
+    model: "Qwen3.5-9B-MLX-4bit"
+
+  # Cloud LLM — optional. Used for final YAML generation if configured.
+  cloud:
+    # OpenAI
+    openai_api_key: ""        # Optional
+    openai_model: "gpt-4o-mini"
+
+    # Anthropic
+    anthropic_api_key: ""     # Optional
+    anthropic_model: "claude-sonnet-4-20250514"
+
+defaults:
+  # Number of recent runs to fetch per workflow
+  run_limit: 50
+  # Maximum workflows to analyze (top N by run frequency)
+  workflow_limit: 5
+  # Field study: PR limit per repo
+  pr_limit: 10
+  # Field study: lookback window in days
+  since_days: 30

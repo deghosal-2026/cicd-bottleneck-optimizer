@@ -1,0 +1,12 @@
+# Target repos for dataset download (M1.5)
+# One owner/repo per line, lines starting with # are ignored.
+kubernetes/kubernetes
+tensorflow/tensorflow
+moby/moby
+vercel/next.js
+microsoft/vscode
+angular/angular
+facebook/react-native
+apache/spark
+elastic/elasticsearch
+hashicorp/terraform
