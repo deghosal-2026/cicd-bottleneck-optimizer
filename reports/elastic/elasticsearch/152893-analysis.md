@@ -25,7 +25,7 @@
 
 | Opt | Job | Saved | Cost | Risk |
 |---|---|---|---|---|
-| Implement caching for the validation stage to avoi | validation | 1m | $0.01 | low |
-| Implement caching for the build stage to avoid re- | build | 1m | $0.01 | low |
+| Add cache directive to 'validation' to avoid re-do | validation | 1m | $0.01 | low |
+| Add cache directive to 'build' to avoid re-downloa | build | 1m | $0.01 | low |
 
 **Total savings: 2 min/run**

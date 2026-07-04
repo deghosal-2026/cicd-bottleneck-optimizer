@@ -119,10 +119,7 @@ def main():
         print(f"  ● Found {len(prs)} PRs in last {args.since}d")
         random.shuffle(prs)
 
-        print(f"  ● Fetching workflow files...")
-        workflow_files = _fetch_workflow_files(client, repo, workflows_dir, {})
-        total_api_calls += workflow_files["api_calls"]
-        print(f"    {len(workflow_files['files'])} unique workflows cached")
+        wf_cache: dict[int, dict] = {}
 
         for i, pr in enumerate(prs):
             pr_number = pr.get("number")
@@ -143,6 +140,23 @@ def main():
                 print("-", end="", flush=True)
                 continue
 
+            # Fetch workflow files for the workflows that actually ran
+            wf_ids = set()
+            for run in ci_runs["runs"]:
+                wf_id = run.get("workflow_id")
+                if wf_id:
+                    wf_ids.add(wf_id)
+
+            pr_workflows = []
+            for wf_id in wf_ids:
+                if wf_id not in wf_cache:
+                    wf_info = _fetch_single_workflow(client, repo, wf_id, workflows_dir)
+                    total_api_calls += wf_info["api_calls"]
+                    wf_cache[wf_id] = wf_info["entry"]
+                entry = wf_cache[wf_id]
+                if entry is not None:
+                    pr_workflows.append(entry)
+
             print("+", end="", flush=True)
 
             pr_data = {
@@ -156,7 +170,7 @@ def main():
                 "head_sha": head_sha,
                 "labels": [l.get("name", "") for l in pr.get("labels", [])],
                 "ci_runs": ci_runs["runs"],
-                "workflows": workflow_files["files"],
+                "workflows": pr_workflows,
             }
 
             pr_file = os.path.join(prs_dir, f"{pr_number}.json")
@@ -273,6 +287,22 @@ def _fetch_workflow_files(
         result["files"].append(entry)
 
     return result
+
+
+def _fetch_single_workflow(client: GitHubClient, repo: str, wf_id: int, workflows_dir: str) -> dict:
+    try:
+        import json as _json
+        data = client._request("GET", f"/repos/{repo}/actions/workflows/{wf_id}")
+        if not data:
+            return {"api_calls": 1, "entry": None}
+        filename = data.get("path", "").replace(".github/workflows/", "")
+        content = client.fetch_workflow_file(repo, wf_id)
+        if content is None:
+            return {"api_calls": 1, "entry": None}
+        entry = store_workflow(workflows_dir, filename, content)
+        return {"api_calls": 2, "entry": entry}
+    except Exception:
+        return {"api_calls": 1, "entry": None}
 
 
 def _compute_duration(job: dict) -> int:

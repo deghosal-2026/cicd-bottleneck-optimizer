@@ -18,14 +18,16 @@
 
 | Type | Job | Severity | Source |
 |---|---|---|---|
+| oversized_context | validation | low | LLM |
 | missing_cache | validation | low | Rule |
-| missing_cache | build | low | Rule |
+| oversized_context | build | low | LLM |
 
 ## Recommendations
 
 | Opt | Job | Saved | Cost | Risk |
 |---|---|---|---|---|
-| Implement caching for the validation stage to avoi | validation | 1m | $0.01 | low |
-| Implement caching for the build stage to avoid rer | build | 1m | $0.01 | low |
+| Add .dockerignore to 'validation' to exclude unnec | validation | 1m | $0.01 | low |
+| Add cache directive to 'validation' to avoid re-do | validation | 1m | $0.01 | low |
+| Add .dockerignore to 'build' to exclude unnecessar | build | 1m | $0.01 | low |
 
-**Total savings: 2 min/run**
+**Total savings: 3 min/run**

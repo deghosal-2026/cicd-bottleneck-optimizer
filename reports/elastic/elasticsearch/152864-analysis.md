@@ -25,7 +25,7 @@
 
 | Opt | Job | Saved | Cost | Risk |
 |---|---|---|---|---|
-| Implement caching for validation steps to skip red | validation | 1m | $0.01 | low |
-| Enable caching for the build process to reuse depe | build | 1m | $0.01 | low |
+| Add cache directive to 'validation' to avoid re-do | validation | 1m | $0.01 | low |
+| Add cache directive to 'build' to avoid re-downloa | build | 1m | $0.01 | low |
 
 **Total savings: 2 min/run**

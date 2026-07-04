@@ -25,7 +25,7 @@
 
 | Opt | Job | Saved | Cost | Risk |
 |---|---|---|---|---|
-| Implement a cache for dependencies in the validati | validation | 1m | $0.01 | low |
-| Implement a cache for build artifacts in the build | build | 1m | $0.01 | low |
+| Add cache directive to 'validation' to avoid re-do | validation | 1m | $0.01 | low |
+| Add cache directive to 'build' to avoid re-downloa | build | 1m | $0.01 | low |
 
 **Total savings: 2 min/run**

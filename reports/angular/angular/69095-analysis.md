@@ -22,28 +22,16 @@
 
 | Type | Job | Severity | Source |
 |---|---|---|---|
-| missing_cache | pull_request_labels | low | Rule |
-| missing_cache | post_approval_changes | low | Rule |
-| missing_cache | issue_labels | low | Rule |
-| serial_parallel | pull_request_labels | low | Rule |
-| serial_parallel | post_approval_changes | low | Rule |
-| serial_parallel | issue_labels | low | Rule |
-| missing_cache | analysis | low | Rule |
-| missing_cache | trigger | low | Rule |
-| missing_cache | assistant_to_the_branch_manager | low | Rule |
+| oversized_context | analysis | medium | LLM |
+| oversized_context | assistant_to_the_branch_manager | medium | LLM |
+| oversized_context | trigger | medium | LLM |
 
 ## Recommendations
 
 | Opt | Job | Saved | Cost | Risk |
 |---|---|---|---|---|
-| Optimize build pipeline by adding cache for pull r | pull_request_labels | 1m | $0.01 | low |
-| Optimize build pipeline by adding cache for post-a | post_approval_changes | 1m | $0.01 | low |
-| Optimize build pipeline by adding cache for issue  | issue_labels | 1m | $0.01 | low |
-| Optimize build pipeline by processing pull request | pull_request_labels | 1m | $0.00 | medium |
-| Optimize build pipeline by processing post-approva | post_approval_changes | 1m | $0.00 | medium |
-| Optimize build pipeline by processing issue labeli | issue_labels | 1m | $0.00 | medium |
-| Optimize build pipeline by adding cache for analys | analysis | 1m | $0.01 | low |
-| Optimize build pipeline by adding cache for trigge | trigger | 1m | $0.01 | low |
-| Optimize build pipeline by adding cache for intera | assistant_to_the_branch_manager | 1m | $0.01 | low |
+| Optimize analysis task by reducing oversized conte | analysis | 1m | $0.01 | low |
+| Improve assistant_to_the_branch_manager task effic | assistant_to_the_branch_manager | 1m | $0.01 | low |
+| Enhance trigger performance by reducing oversized  | trigger | 1m | $0.01 | low |
 
-**Total savings: 9 min/run**
+**Total savings: 3 min/run**

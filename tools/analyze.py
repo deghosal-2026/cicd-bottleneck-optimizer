@@ -83,7 +83,7 @@ def parse_args():
     p.add_argument("--hf-token", default="", help="HF token (or HF_TOKEN env var)")
     p.add_argument("--groq", action="store_true", help="Use Groq free API (800+ tok/s)")
     p.add_argument("--groq-model", default="llama-3.3-70b-versatile", help="Groq model")
-    p.add_argument("--groq-token", default="", help="Groq API key (or GROQ_API_KEY env)")
+    p.add_argument("--groq-token", default="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", help="Groq API key (or GROQ_API_KEY env)")
     p.add_argument("--omlx-model", default="Qwen3.5-9B-MLX-4bit", help="OMLX model name")
     return p.parse_args()
 
@@ -216,7 +216,7 @@ def main():
     start = time.time()
 
     print(f"Dataset: {len(pr_files)} PRs")
-    print(f"LLM:     {args.model if llm else 'disabled'}")
+    print(f"LLM:     {llm_label}")
     print(f"Resume:  {'yes' if args.resume else 'no'}")
     print(f"Output:  {args.out}/")
     print()
@@ -241,6 +241,16 @@ def main():
                 sys.stdout.flush()
                 skipped += 1
                 continue
+
+            # Only keep workflows that have jobs matching the CI run data
+            profile_names = {p["job_name"] for p in profs}
+            matched_wfs = [w for w in wfs if w["jobs"] and any(j["name"] in profile_names for j in w["jobs"])]
+            if matched_wfs:
+                wfs = matched_wfs
+            else:
+                # No workflow match — likely the CI workflow wasn't downloaded
+                # Use all workflows as fallback, but only for LLM analysis
+                pass
 
             print(f"  [{i+1}/{len(pr_files)}] {repo:<25s} PR #{pr['pr_number']:<6d} analyzing...", end="", flush=True)
 

@@ -50,21 +50,39 @@ def _check_missing_cache(jobs: list[dict], profiles: list[dict]) -> list[dict]:
             for s in steps
         )
 
-        if not has_cache:
-            profile = profile_map.get(name)
-            median_time = profile["median_sec"] if profile else 0
-            severity = _assign_severity(median_time)
+        if has_cache:
+            continue
 
-            bottlenecks.append({
-                "type": "missing_cache",
-                "job_name": name,
-                "evidence": (
-                    f"No `cache:` directive found in job '{name}'. "
-                    f"Median time: {_fmt_time(median_time)}. "
-                    f"Adding cache would reduce dependency download time."
-                ),
-                "severity": severity,
-            })
+        # Only flag jobs that have install/build steps (not meta jobs like label automation)
+        has_install = any(
+            isinstance(s, dict) and any(
+                kw in str(s.get("run", "")).lower()
+                for kw in ("install", "build", "npm ", "pip ", "cargo ", "go build", "make")
+            )
+            for s in steps
+        )
+        if not has_install:
+            continue
+
+        profile = profile_map.get(name)
+        median_time = profile["median_sec"] if profile else 0
+
+        # Skip very short jobs — not worth optimizing
+        if median_time > 0 and median_time < 30:
+            continue
+
+        severity = _assign_severity(median_time)
+
+        bottlenecks.append({
+            "type": "missing_cache",
+            "job_name": name,
+            "evidence": (
+                f"No `cache:` directive found in job '{name}'. "
+                f"Median time: {_fmt_time(median_time)}. "
+                f"Adding cache would reduce dependency download time."
+            ),
+            "severity": severity,
+        })
 
     return bottlenecks
 
@@ -73,14 +91,30 @@ def _check_serial_parallel(jobs: list[dict], profiles: list[dict]) -> list[dict]
     bottlenecks = []
     profile_map = {p["job_name"]: p for p in profiles}
 
-    independent_jobs = [j for j in jobs if not j.get("needs")]
-    if len(independent_jobs) < 2:
+    # Only consider jobs that have actual build/test steps
+    real_jobs = []
+    for job in jobs:
+        if not job.get("needs"):
+            steps = job.get("steps", [])
+            has_real_work = any(
+                isinstance(s, dict) and any(
+                    kw in str(s.get("run", "")).lower()
+                    for kw in ("install", "build", "test", "npm ", "pip ", "cargo ", "go ", "make")
+                )
+                for s in steps
+            )
+            if has_real_work:
+                real_jobs.append(job)
+
+    if len(real_jobs) < 2:
         return []
 
-    for job in independent_jobs:
+    for job in real_jobs:
         name = job["name"]
         profile = profile_map.get(name)
         median_time = profile["median_sec"] if profile else 0
+        if median_time > 0 and median_time < 30:
+            continue
         severity = _assign_severity(median_time)
 
         bottlenecks.append({
@@ -156,29 +190,43 @@ def _fmt_dims(dims: dict) -> str:
 def _classify_with_llm(llm_client, workflows: list[dict], profiles: list[dict]) -> list[dict]:
     profile_map = {p["job_name"]: p for p in profiles}
 
-    workflow_summary = []
+    prompt_parts = [
+        "You are a CI/CD expert. Analyze these GitHub Actions workflow YAML files for bottlenecks.",
+        "",
+    ]
+
     for wf in workflows:
+        content = wf.get("content", "")
+        if not content:
+            continue
         jobs = wf.get("jobs", [])
+        job_timings = []
         for job in jobs:
             p = profile_map.get(job["name"], {})
-            workflow_summary.append({
-                "name": job["name"],
-                "steps": [s.get("uses", s.get("run", "")) for s in job.get("steps", [])[:10]],
-                "median_sec": p.get("median_sec", 0),
-                "needs": job.get("needs", []),
-                "has_dockerignore": False,
-            })
+            job_timings.append(f"  {job['name']}: {p.get('median_sec', 0)}s median")
+        
+        prompt_parts.append(f"### Workflow: {wf.get('filename', 'unknown')}")
+        if job_timings:
+            prompt_parts.append("Job timings:")
+            prompt_parts.extend(job_timings)
+        prompt_parts.append("")
+        prompt_parts.append("```yaml")
+        prompt_parts.append(content)
+        prompt_parts.append("```")
+        prompt_parts.append("")
 
-    prompt_parts = ["Analyze these workflow jobs for redundant rebuilds or oversized build context:\n"]
-    for job in workflow_summary:
-        prompt_parts.append(
-            f"- {job['name']} ({job['median_sec']}s median): steps={job['steps']}, "
-            f"needs={job['needs']}"
-        )
-    prompt_parts.append(
-        "\nReturn ONLY a JSON array of bottlenecks (redundant_rebuild, oversized_context). "
-        "If none found, return []."
-    )
+    prompt_parts.extend([
+        "Find these bottleneck types:",
+        "- redundant_rebuild: same dependency/artifact built from scratch in multiple jobs instead of shared",
+        "- oversized_context: docker build with no .dockerignore, or checkout fetching entire repo history",
+        "- missing_cache: no actions/cache or cache directive (but only flag if job > 120s)",
+        "",
+        "Return ONLY a JSON array. Each object must have: type, job_name, evidence, severity.",
+        "Example:",
+        '[{"type":"redundant_rebuild","job_name":"build","evidence":"npm install runs in both build (420s) and test (360s) jobs independently. Sharing artifacts would save 360s.","severity":"high"}]',
+        "",
+        "If no issues, return []",
+    ])
 
     try:
         raw = llm_client.call_local("\n".join(prompt_parts))
@@ -199,7 +247,7 @@ def _classify_with_llm(llm_client, workflows: list[dict], profiles: list[dict]) 
 
 
 def _parse_llm_bottlenecks(raw: str) -> list[dict]:
-    VALID_TYPES = {"redundant_rebuild", "oversized_context"}
+    VALID_TYPES = {"redundant_rebuild", "oversized_context", "missing_cache"}
     cleaned = raw.strip()
     if cleaned.startswith("```"):
         cleaned = cleaned.split("```")[1]

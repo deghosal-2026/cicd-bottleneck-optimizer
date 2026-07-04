@@ -18,14 +18,14 @@
 
 | Type | Job | Severity | Source |
 |---|---|---|---|
-| missing_cache | validation | low | Rule |
-| missing_cache | build | low | Rule |
+| oversized_context | validation | low | LLM |
+| oversized_context | build | low | LLM |
 
 ## Recommendations
 
 | Opt | Job | Saved | Cost | Risk |
 |---|---|---|---|---|
-| Implement caching for validation steps to avoid re | validation | 1m | $0.01 | low |
-| Enable caching for build steps to reduce the time  | build | 1m | $0.01 | low |
+| Optimize validation process by reducing oversized  | validation | 1m | $0.01 | low |
+| Optimize build process by reducing oversized conte | build | 1m | $0.01 | low |
 
 **Total savings: 2 min/run**

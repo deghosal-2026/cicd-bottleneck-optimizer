@@ -25,7 +25,7 @@
 
 | Opt | Job | Saved | Cost | Risk |
 |---|---|---|---|---|
-| Implement caching for validation steps to skip dep | validation | 1m | $0.01 | low |
-| Introduce caching for the build process to reuse d | build | 1m | $0.01 | low |
+| Add cache directive to 'validation' to avoid re-do | validation | 1m | $0.01 | low |
+| Add cache directive to 'build' to avoid re-downloa | build | 1m | $0.01 | low |
 
 **Total savings: 2 min/run**

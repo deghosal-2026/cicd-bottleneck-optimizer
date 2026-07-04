@@ -25,7 +25,7 @@
 
 | Opt | Job | Saved | Cost | Risk |
 |---|---|---|---|---|
-| Implement caching for build artifacts to avoid red | validation | 5m | $0.01 | low |
-| Use pipeline artifacts caching to skip dependencie | build | 3m | $0.01 | low |
+| Add cache directive to 'validation' to avoid re-do | validation | 1m | $0.01 | low |
+| Add cache directive to 'build' to avoid re-downloa | build | 1m | $0.01 | low |
 
-**Total savings: 8 min/run**
+**Total savings: 2 min/run**

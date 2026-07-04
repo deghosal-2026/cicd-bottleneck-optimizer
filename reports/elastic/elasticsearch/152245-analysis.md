@@ -18,6 +18,8 @@
 
 | Type | Job | Severity | Source |
 |---|---|---|---|
+| oversized_context | validation | low | LLM |
+| oversized_context | build | low | LLM |
 | missing_cache | validation | low | Rule |
 | missing_cache | build | low | Rule |
 
@@ -25,7 +27,9 @@
 
 | Opt | Job | Saved | Cost | Risk |
 |---|---|---|---|---|
-| Enable caching for the validation step to skip dep | validation | 1m | $0.01 | low |
-| Implement caching for the build step to reuse depe | build | 1m | $0.01 | low |
+| Add .dockerignore to 'validation' to exclude unnec | validation | 1m | $0.01 | low |
+| Add .dockerignore to 'build' to exclude unnecessar | build | 1m | $0.01 | low |
+| Add cache directive to 'validation' to avoid re-do | validation | 1m | $0.01 | low |
+| Add cache directive to 'build' to avoid re-downloa | build | 1m | $0.01 | low |
 
-**Total savings: 2 min/run**
+**Total savings: 4 min/run**

@@ -22,28 +22,16 @@
 
 | Type | Job | Severity | Source |
 |---|---|---|---|
-| missing_cache | pull_request_labels | low | Rule |
-| missing_cache | post_approval_changes | low | Rule |
-| missing_cache | issue_labels | low | Rule |
-| serial_parallel | pull_request_labels | low | Rule |
-| serial_parallel | post_approval_changes | low | Rule |
-| serial_parallel | issue_labels | low | Rule |
-| missing_cache | analysis | low | Rule |
-| missing_cache | trigger | low | Rule |
-| missing_cache | assistant_to_the_branch_manager | low | Rule |
+| oversized_context | analysis | low | LLM |
+| oversized_context | assistant_to_the_branch_manager | low | LLM |
+| oversized_context | trigger | low | LLM |
 
 ## Recommendations
 
 | Opt | Job | Saved | Cost | Risk |
 |---|---|---|---|---|
-| Optimize pull request labeling pipeline by adding  | pull_request_labels | 1m | $0.01 | low |
-| Optimize post-approval changes pipeline by adding  | post_approval_changes | 1m | $0.01 | low |
-| Optimize issue labeling pipeline by adding cache t | issue_labels | 1m | $0.01 | low |
-| Optimize pull request labeling pipeline by using s | pull_request_labels | 1m | $0.00 | medium |
-| Optimize post-approval changes pipeline by using s | post_approval_changes | 1m | $0.00 | medium |
-| Optimize issue labeling pipeline by using serial_p | issue_labels | 1m | $0.00 | medium |
-| Optimize code analysis pipeline by adding cache to | analysis | 1m | $0.01 | low |
-| Optimize CI trigger pipeline by adding cache to re | trigger | 1m | $0.01 | low |
-| Optimize assistant to the branch manager pipeline  | assistant_to_the_branch_manager | 1m | $0.01 | low |
+| Add .dockerignore to 'analysis' to exclude unneces | analysis | 1m | $0.01 | low |
+| Add .dockerignore to 'assistant_to_the_branch_mana | assistant_to_the_branch_manager | 1m | $0.01 | low |
+| Add .dockerignore to 'trigger' to exclude unnecess | trigger | 1m | $0.01 | low |
 
-**Total savings: 9 min/run**
+**Total savings: 3 min/run**

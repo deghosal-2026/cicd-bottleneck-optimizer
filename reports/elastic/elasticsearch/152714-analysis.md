@@ -18,14 +18,16 @@
 
 | Type | Job | Severity | Source |
 |---|---|---|---|
-| missing_cache | validation | low | Rule |
 | missing_cache | build | low | Rule |
+| oversized_context | validation | low | LLM |
+| oversized_context | build | low | LLM |
 
 ## Recommendations
 
 | Opt | Job | Saved | Cost | Risk |
 |---|---|---|---|---|
-| Add cache directive to 'validation' to avoid re-do | validation | 1m | $0.01 | low |
 | Add cache directive to 'build' to avoid re-downloa | build | 1m | $0.01 | low |
+| Add .dockerignore to 'validation' to exclude unnec | validation | 1m | $0.01 | low |
+| Add .dockerignore to 'build' to exclude unnecessar | build | 1m | $0.01 | low |
 
-**Total savings: 2 min/run**
+**Total savings: 3 min/run**
