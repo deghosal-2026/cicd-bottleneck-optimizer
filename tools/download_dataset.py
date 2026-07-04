@@ -67,15 +67,18 @@ def main():
         sys.exit(1)
 
     client = GitHubClient(token)
-    since_date = datetime.now(timezone.utc) - timedelta(days=args.since)
     repos = _load_repos(args.repos_file)
     random.shuffle(repos)
+
+    random_offset = random.randint(5, args.since)
+    since_date = datetime.now(timezone.utc) - timedelta(days=random_offset)
     start_time = time.time()
 
     print(f"Dataset downloader")
     print(f"  Repos: {len(repos)}")
     print(f"  PR limit per repo: {args.pr_limit}")
-    print(f"  Since: {args.since} days ({since_date.date()})")
+    print(f"  Since: {args.since} days")
+    print(f"  Randomized start: {since_date.date()} (last {random_offset}d)")
     print(f"  Output: {args.output_dir}/")
     print(f"  Delay between repos: {args.delay}s")
     print()
