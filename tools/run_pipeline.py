@@ -1,13 +1,13 @@
 #!/usr/bin/env python3
 """
-Run the full optimize pipeline on cached PRs from the last 7 days.
+Run the full optimize pipeline on cached PRs.
 Reads from data/, saves results to output/. No live API calls to public repos.
 
 Usage:
-  python3 tools/run_pipeline.py
-  python3 tools/run_pipeline.py --max 10
-  python3 tools/run_pipeline.py --no-llm
-  python3 tools/run_pipeline.py --since 30
+  python3 tools/run_pipeline.py --groq                    # Groq LLM (fast, free)
+  python3 tools/run_pipeline.py --groq --max 10           # first 10 PRs
+  python3 tools/run_pipeline.py --no-llm                  # rules only
+  python3 tools/run_pipeline.py --since 90                # last 90 days
 """
 
 import argparse
@@ -29,26 +29,51 @@ from llm.client import LLMClient
 import config as cfg
 
 
+class GroqClient:
+    """Groq free API client (800+ tok/s)."""
+    def __init__(self, model: str, token: str):
+        from openai import OpenAI
+        self.client = OpenAI(base_url="https://api.groq.com/openai/v1", api_key=token)
+        self.model = model
+
+    def call_local(self, prompt: str, system: str | None = None, **kwargs) -> str:
+        messages = []
+        if system:
+            messages.append({"role": "system", "content": system})
+        messages.append({"role": "user", "content": prompt})
+        resp = self.client.chat.completions.create(model=self.model, messages=messages, max_tokens=1024)
+        return resp.choices[0].message.content or ""
+
+
 def parse_args():
     p = argparse.ArgumentParser(description="Run pipeline on cached PRs")
     p.add_argument("--data", default="data", help="Dataset directory")
     p.add_argument("--output", default="output", help="Output directory")
-    p.add_argument("--since", type=int, default=7, help="Days to filter (default: 7)")
+    p.add_argument("--since", type=int, default=90, help="Days to filter (default: 90)")
     p.add_argument("--max", type=int, default=0, help="Max PRs to process")
     p.add_argument("--no-llm", action="store_true", help="Rules only")
+    p.add_argument("--groq", action="store_true", help="Use Groq free API")
+    p.add_argument("--groq-model", default="llama-3.3-70b-versatile", help="Groq model")
+    p.add_argument("--groq-token", default="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", help="Groq API key")
     p.add_argument("--config", help="Path to config.yaml")
     return p.parse_args()
 
 
 def main():
     args = parse_args()
-    c = cfg.load_config(args.config)
+    c = cfg.load_config(args.config, validate=False) if os.path.exists("config.yaml") else {}
 
     llm_client = None
+    llm_label = "disabled"
     if not args.no_llm:
-        llm_cfg = c.get("llm", {})
-        if llm_cfg and llm_cfg.get("local"):
-            llm_client = LLMClient(c)
+        if args.groq:
+            llm_client = GroqClient(args.groq_model, args.groq_token)
+            llm_label = f"Groq:{args.groq_model}"
+        else:
+            llm_cfg = c.get("llm", {}) if c else {}
+            if llm_cfg and llm_cfg.get("local"):
+                llm_client = LLMClient(c)
+                llm_label = f"OMLX:{llm_cfg['local'].get('model', '?')}"
 
     cutoff = datetime.now(timezone.utc) - timedelta(days=args.since)
     pr_files = sorted(glob.glob(os.path.join(args.data, "*", "prs", "*.json")))
@@ -71,7 +96,7 @@ def main():
     errors = 0
 
     print(f"Cached PRs: {len(filtered)} (last {args.since}d)")
-    print(f"LLM:        {'enabled' if llm_client else 'disabled'}")
+    print(f"LLM:        {llm_label}")
     print(f"Output:     {args.output}/")
     print()
 
@@ -112,7 +137,7 @@ def main():
                     wf["jobs"] = parse_job_graph(wf)
                 wfs.append(wf)
 
-            if not profs or not any(w["jobs"] for w in wfs):
+            if not profs:
                 continue
 
             # Classify + propose

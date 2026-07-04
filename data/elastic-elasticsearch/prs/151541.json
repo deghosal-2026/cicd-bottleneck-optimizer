@@ -4,9 +4,9 @@
   "state": "open",
   "author": "elastic-renovate-prod[bot]",
   "created_at": "2026-06-17T15:23:46Z",
-  "updated_at": "2026-07-03T18:46:22Z",
+  "updated_at": "2026-07-04T07:07:56Z",
   "merged_at": null,
-  "head_sha": "532d6301d5fcea8c76db725b23ef882fc6cce627",
+  "head_sha": "049ff1e6ce4b046158737d8d6586c0b2ff452a0f",
   "labels": [
     ">non-issue",
     ":Delivery/Build",
@@ -17,51 +17,47 @@
   ],
   "ci_runs": [
     {
-      "run_id": 28678225895,
+      "run_id": 28698649065,
       "workflow_id": 146525436,
       "workflow_name": "docs-build",
       "status": "success",
-      "head_sha": "532d6301d5fcea8c76db725b23ef882fc6cce627",
-      "created_at": "2026-07-03T18:46:15Z",
-      "updated_at": "2026-07-03T18:46:36Z",
-      "run_started_at": "2026-07-03T18:46:15Z",
+      "head_sha": "049ff1e6ce4b046158737d8d6586c0b2ff452a0f",
+      "created_at": "2026-07-04T07:07:44Z",
+      "updated_at": "2026-07-04T07:08:06Z",
+      "run_started_at": "2026-07-04T07:07:44Z",
       "jobs": [
-        {
-          "name": "build / check",
-          "status": "success",
-          "started_at": "2026-07-03T18:46:18Z",
-          "completed_at": "2026-07-03T18:46:25Z",
-          "duration_sec": 7
-        },
         {
           "name": "build / match",
           "status": "success",
-          "started_at": "2026-07-03T18:46:18Z",
-          "completed_at": "2026-07-03T18:46:23Z",
-          "duration_sec": 5
+          "started_at": "2026-07-04T07:07:46Z",
+          "completed_at": "2026-07-04T07:07:58Z",
+          "duration_sec": 12
         },
         {
-          "name": "build / build",
+          "name": "build / check",
           "status": "success",
-          "started_at": "2026-07-03T18:46:27Z",
-          "completed_at": "2026-07-03T18:46:35Z",
+          "started_at": "2026-07-04T07:07:48Z",
+          "completed_at": "2026-07-04T07:07:56Z",
           "duration_sec": 8
         },
         {
           "name": "build / vale",
           "status": "skipped",
-          "started_at": "2026-07-03T18:46:26Z",
-          "completed_at": "2026-07-03T18:46:25Z",
-          "duration_sec": -1
+          "started_at": "2026-07-04T07:07:56Z",
+          "completed_at": "2026-07-04T07:07:56Z",
+          "duration_sec": 0
+        },
+        {
+          "name": "build / build",
+          "status": "success",
+          "started_at": "2026-07-04T07:08:00Z",
+          "completed_at": "2026-07-04T07:08:05Z",
+          "duration_sec": 5
         }
       ]
     }
   ],
   "workflows": [
-    {
-      "filename": "gradle-wrapper-validation.yml",
-      "hash": "04526945275c07b7ec8481281931aa653deceed193cbbf514b23cd8d634fae78"
-    },
     {
       "filename": "docs-build.yml",
       "hash": "6772ac2baa16f9669594b6ea59ebfc2a9e1a6b14f3550571e4faacaf2d397023"

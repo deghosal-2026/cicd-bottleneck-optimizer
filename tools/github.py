@@ -40,7 +40,6 @@ class GitHubClient:
                     backoff *= 2
                     continue
                 if e.code == 404:
-                    logger.warning("404 on %s — skipping", url)
                     return None
                 if e.code == 422:
                     logger.warning("422 on %s — %s", url, e.read().decode())

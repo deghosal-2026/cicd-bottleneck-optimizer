@@ -126,24 +126,44 @@
   ],
   "workflows": [
     {
-      "filename": ".dco.yml",
-      "hash": "dea4b82ced9a768e825d38c022001e448d052703020b8345ce1752af0665f479"
+      "filename": "validate-milestone.yml",
+      "hash": "b4badf62221b932be195a429b7425841efc9234a9292d154ec630ce035c49fbc"
     },
     {
-      "filename": ".test-unit.yml",
-      "hash": "64ea4ac26a2df4f48f55a6cfdef04ec69994f18e0dce69c1d98792ecbf66679b"
+      "filename": "bin-image.yml",
+      "hash": "89ef4c9b5daec3f3d5a5f136f4a1d09bc0b1bcad021cefd89e68f9e7a1dc04a2"
     },
     {
-      "filename": ".test.yml",
-      "hash": "698dd2de1d8e32af05925d489ceb376de42b9db0f6a9f271c0e2f1c83e849f57"
+      "filename": "buildkit.yml",
+      "hash": "5c1805f188bd97fad6937a6e8d4e1144cbb2468aab23924339ee01fd93f51875"
     },
     {
-      "filename": ".vm.yml",
-      "hash": "fa079150844d5674b2c95776f852977d6cb1a8faeb202fd94a8b63451445a5ed"
+      "filename": "test.yml",
+      "hash": "63cd3c4663b13ced31f4c8d7f81d4a90b18b3c33b7db2292f03f30b4724e3f62"
     },
     {
-      "filename": ".windows.yml",
-      "hash": "b3cb6d7e301a89297e6b10d87af74beee4996445f851b4fb2d44cdb54c8924f6"
+      "filename": "vm.yml",
+      "hash": "e47883700ea23c4b392f7bd653bcc49547da99507a77a87a316fddc349b3606a"
+    },
+    {
+      "filename": "zizmor.yml",
+      "hash": "a5a9dda8facc28620d742f23f1dee7b566b116d4f96bd38018fa7d58181fc4d9"
+    },
+    {
+      "filename": "codeql.yml",
+      "hash": "79efd33bdea2734d6cf8a937339b30794a4968257d9505af35d321daf8977f50"
+    },
+    {
+      "filename": "validate-pr.yml",
+      "hash": "c183b4985e921522240a3d88f3842ade05e139ff8dd687f843b136b6681289a7"
+    },
+    {
+      "filename": "windows-2025.yml",
+      "hash": "0107d1254594822e86e1da0eda02851c8242ffbaaf11893a3c7cdf244300ed35"
+    },
+    {
+      "filename": "ci.yml",
+      "hash": "ef844f6daf8a29c4ec6fc13d2e7d326f9d5b8efe53316775a031ddf57ed0aa9e"
     }
   ]
 }

@@ -56,10 +56,6 @@
   ],
   "workflows": [
     {
-      "filename": "gradle-wrapper-validation.yml",
-      "hash": "04526945275c07b7ec8481281931aa653deceed193cbbf514b23cd8d634fae78"
-    },
-    {
       "filename": "docs-build.yml",
       "hash": "6772ac2baa16f9669594b6ea59ebfc2a9e1a6b14f3550571e4faacaf2d397023"
     }

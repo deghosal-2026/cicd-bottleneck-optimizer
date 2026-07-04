@@ -1,0 +1,232 @@
+{
+  "pr_number": 52996,
+  "title": "daemon: Fix container stuck in running state on exit event",
+  "state": "open",
+  "author": "vvoland",
+  "created_at": "2026-07-01T18:58:32Z",
+  "updated_at": "2026-07-01T19:23:51Z",
+  "merged_at": null,
+  "head_sha": "9625a44e8fac8543693f4b84f50b346a610f3bd4",
+  "labels": [
+    "impact/changelog",
+    "area/daemon",
+    "kind/bugfix"
+  ],
+  "ci_runs": [
+    {
+      "run_id": 28542180798,
+      "workflow_id": 260262819,
+      "workflow_name": "validate-milestone",
+      "status": "success",
+      "head_sha": "9625a44e8fac8543693f4b84f50b346a610f3bd4",
+      "created_at": "2026-07-01T19:23:53Z",
+      "updated_at": "2026-07-01T19:24:00Z",
+      "run_started_at": "2026-07-01T19:23:53Z",
+      "jobs": [
+        {
+          "name": "validate-milestone",
+          "status": "success",
+          "started_at": "2026-07-01T19:23:56Z",
+          "completed_at": "2026-07-01T19:24:00Z",
+          "duration_sec": 4
+        }
+      ]
+    },
+    {
+      "run_id": 28542179419,
+      "workflow_id": 86900533,
+      "workflow_name": "validate-pr",
+      "status": "success",
+      "head_sha": "9625a44e8fac8543693f4b84f50b346a610f3bd4",
+      "created_at": "2026-07-01T19:23:52Z",
+      "updated_at": "2026-07-01T19:24:25Z",
+      "run_started_at": "2026-07-01T19:23:52Z",
+      "jobs": []
+    },
+    {
+      "run_id": 28542175229,
+      "workflow_id": 86900533,
+      "workflow_name": "validate-pr",
+      "status": "cancelled",
+      "head_sha": "9625a44e8fac8543693f4b84f50b346a610f3bd4",
+      "created_at": "2026-07-01T19:23:47Z",
+      "updated_at": "2026-07-01T19:23:56Z",
+      "run_started_at": "2026-07-01T19:23:47Z",
+      "jobs": []
+    },
+    {
+      "run_id": 28540855048,
+      "workflow_id": 260262819,
+      "workflow_name": "validate-milestone",
+      "status": "failure",
+      "head_sha": "9625a44e8fac8543693f4b84f50b346a610f3bd4",
+      "created_at": "2026-07-01T19:00:11Z",
+      "updated_at": "2026-07-01T19:00:18Z",
+      "run_started_at": "2026-07-01T19:00:11Z",
+      "jobs": []
+    },
+    {
+      "run_id": 28540854664,
+      "workflow_id": 86900533,
+      "workflow_name": "validate-pr",
+      "status": "failure",
+      "head_sha": "9625a44e8fac8543693f4b84f50b346a610f3bd4",
+      "created_at": "2026-07-01T19:00:11Z",
+      "updated_at": "2026-07-01T19:00:42Z",
+      "run_started_at": "2026-07-01T19:00:11Z",
+      "jobs": []
+    },
+    {
+      "run_id": 28540768114,
+      "workflow_id": 260262819,
+      "workflow_name": "validate-milestone",
+      "status": "failure",
+      "head_sha": "9625a44e8fac8543693f4b84f50b346a610f3bd4",
+      "created_at": "2026-07-01T18:58:37Z",
+      "updated_at": "2026-07-01T18:58:47Z",
+      "run_started_at": "2026-07-01T18:58:37Z",
+      "jobs": []
+    },
+    {
+      "run_id": 28540768090,
+      "workflow_id": 86900533,
+      "workflow_name": "validate-pr",
+      "status": "success",
+      "head_sha": "9625a44e8fac8543693f4b84f50b346a610f3bd4",
+      "created_at": "2026-07-01T18:58:37Z",
+      "updated_at": "2026-07-01T18:59:06Z",
+      "run_started_at": "2026-07-01T18:58:37Z",
+      "jobs": []
+    },
+    {
+      "run_id": 28540768510,
+      "workflow_id": 261203439,
+      "workflow_name": "zizmor",
+      "status": "success",
+      "head_sha": "9625a44e8fac8543693f4b84f50b346a610f3bd4",
+      "created_at": "2026-07-01T18:58:37Z",
+      "updated_at": "2026-07-01T18:59:08Z",
+      "run_started_at": "2026-07-01T18:58:37Z",
+      "jobs": []
+    },
+    {
+      "run_id": 28540768303,
+      "workflow_id": 168088309,
+      "workflow_name": "windows-2025",
+      "status": "failure",
+      "head_sha": "9625a44e8fac8543693f4b84f50b346a610f3bd4",
+      "created_at": "2026-07-01T18:58:37Z",
+      "updated_at": "2026-07-01T20:06:10Z",
+      "run_started_at": "2026-07-01T18:58:37Z",
+      "jobs": []
+    },
+    {
+      "run_id": 28540768298,
+      "workflow_id": 26704268,
+      "workflow_name": "test",
+      "status": "success",
+      "head_sha": "9625a44e8fac8543693f4b84f50b346a610f3bd4",
+      "created_at": "2026-07-01T18:58:37Z",
+      "updated_at": "2026-07-01T20:23:59Z",
+      "run_started_at": "2026-07-01T19:56:13Z",
+      "jobs": []
+    },
+    {
+      "run_id": 28540768290,
+      "workflow_id": 21805183,
+      "workflow_name": "ci",
+      "status": "success",
+      "head_sha": "9625a44e8fac8543693f4b84f50b346a610f3bd4",
+      "created_at": "2026-07-01T18:58:37Z",
+      "updated_at": "2026-07-01T19:03:45Z",
+      "run_started_at": "2026-07-01T18:58:37Z",
+      "jobs": []
+    },
+    {
+      "run_id": 28540768411,
+      "workflow_id": 44461128,
+      "workflow_name": "bin-image",
+      "status": "success",
+      "head_sha": "9625a44e8fac8543693f4b84f50b346a610f3bd4",
+      "created_at": "2026-07-01T18:58:37Z",
+      "updated_at": "2026-07-01T19:04:29Z",
+      "run_started_at": "2026-07-01T18:58:37Z",
+      "jobs": []
+    },
+    {
+      "run_id": 28540768164,
+      "workflow_id": 81499888,
+      "workflow_name": "codeql",
+      "status": "success",
+      "head_sha": "9625a44e8fac8543693f4b84f50b346a610f3bd4",
+      "created_at": "2026-07-01T18:58:37Z",
+      "updated_at": "2026-07-01T19:04:46Z",
+      "run_started_at": "2026-07-01T18:58:37Z",
+      "jobs": []
+    },
+    {
+      "run_id": 28540768258,
+      "workflow_id": 187772110,
+      "workflow_name": "vm",
+      "status": "success",
+      "head_sha": "9625a44e8fac8543693f4b84f50b346a610f3bd4",
+      "created_at": "2026-07-01T18:58:37Z",
+      "updated_at": "2026-07-01T19:20:58Z",
+      "run_started_at": "2026-07-01T18:58:37Z",
+      "jobs": []
+    },
+    {
+      "run_id": 28540768235,
+      "workflow_id": 33573227,
+      "workflow_name": "buildkit",
+      "status": "failure",
+      "head_sha": "9625a44e8fac8543693f4b84f50b346a610f3bd4",
+      "created_at": "2026-07-01T18:58:37Z",
+      "updated_at": "2026-07-01T19:53:53Z",
+      "run_started_at": "2026-07-01T18:58:37Z",
+      "jobs": []
+    }
+  ],
+  "workflows": [
+    {
+      "filename": "validate-milestone.yml",
+      "hash": "b4badf62221b932be195a429b7425841efc9234a9292d154ec630ce035c49fbc"
+    },
+    {
+      "filename": "bin-image.yml",
+      "hash": "89ef4c9b5daec3f3d5a5f136f4a1d09bc0b1bcad021cefd89e68f9e7a1dc04a2"
+    },
+    {
+      "filename": "buildkit.yml",
+      "hash": "5c1805f188bd97fad6937a6e8d4e1144cbb2468aab23924339ee01fd93f51875"
+    },
+    {
+      "filename": "test.yml",
+      "hash": "63cd3c4663b13ced31f4c8d7f81d4a90b18b3c33b7db2292f03f30b4724e3f62"
+    },
+    {
+      "filename": "vm.yml",
+      "hash": "e47883700ea23c4b392f7bd653bcc49547da99507a77a87a316fddc349b3606a"
+    },
+    {
+      "filename": "zizmor.yml",
+      "hash": "a5a9dda8facc28620d742f23f1dee7b566b116d4f96bd38018fa7d58181fc4d9"
+    },
+    {
+      "filename": "codeql.yml",
+      "hash": "79efd33bdea2734d6cf8a937339b30794a4968257d9505af35d321daf8977f50"
+    },
+    {
+      "filename": "windows-2025.yml",
+      "hash": "0107d1254594822e86e1da0eda02851c8242ffbaaf11893a3c7cdf244300ed35"
+    },
+    {
+      "filename": "validate-pr.yml",
+      "hash": "c183b4985e921522240a3d88f3842ade05e139ff8dd687f843b136b6681289a7"
+    },
+    {
+      "filename": "ci.yml",
+      "hash": "ef844f6daf8a29c4ec6fc13d2e7d326f9d5b8efe53316775a031ddf57ed0aa9e"
+    }
+  ]
+}

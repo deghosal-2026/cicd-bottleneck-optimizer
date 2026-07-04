@@ -89,20 +89,12 @@
   ],
   "workflows": [
     {
-      "filename": "dev-infra.yml",
-      "hash": "0324771d031f8d4ca9a1c3b675ee31b460a5d25e756b8cbe712977c3d5173c0b"
+      "filename": "pr.yml",
+      "hash": "aa6c8507495a93ae3d4c5baf2224bb59dd28cf9c2cc9675091b2b5b1f5528c31"
     },
     {
-      "filename": "scorecard.yml",
-      "hash": "05d1e6029bf61cfeb3512feee84d44a15e8444be71aa06e7903f2c4a577a8911"
-    },
-    {
-      "filename": "google-internal-tests.yml",
-      "hash": "3a68e85f2e757c7b86ccc8adb0aa9a246cdf914829328a50896622a7ae4ef5d8"
-    },
-    {
-      "filename": "assistant-to-the-branch-manager.yml",
-      "hash": "1111a82e3a71313e17d32a3fd2e2bd3514e36ea9187c49976754dd6b3e587b2d"
+      "filename": "adev-preview-build.yml",
+      "hash": "b912444be153fcc97cbe8f158e00d99ad4a236bd3f15edead42fed4baea699b3"
     }
   ]
 }

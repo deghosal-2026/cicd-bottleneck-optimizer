@@ -248,20 +248,12 @@
   ],
   "workflows": [
     {
-      "filename": "needs-attention.yml",
-      "hash": "65a4a6cc5fcc5896e78ea357cfe209eec2845f173e8bd642ae2d343bfc66deba"
+      "filename": "validate-cxx-api-snapshots.yml",
+      "hash": "befd5832f45d85dfc8a3b8c67237c698bfccb36a0c6cc9e639413e5243985ab9"
     },
     {
-      "filename": "on-issue-labeled.yml",
-      "hash": "7673645f1d0ba0da4c9c7d4f714f8376b8a20f1d6e553304c01769e627efc3d6"
-    },
-    {
-      "filename": "stale-bot.yml",
-      "hash": "1f4dfbb4734e1d14d7263a05e04d3b3c096e1210783c61bf98c57a5d86cd79f2"
-    },
-    {
-      "filename": "autorebase.yml",
-      "hash": "617b8a9799890a1d5010ff20bc08c4064fbffe3d3be0a1049ada31ccd0fc0a61"
+      "filename": "test-all.yml",
+      "hash": "da4b8a1debe2a819455eb0a1fa9cab22db2bb7fcac217418c8b17fb18efc8e4a"
     }
   ]
 }

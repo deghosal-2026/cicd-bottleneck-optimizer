@@ -23,16 +23,60 @@ def classify(profiles: list[dict], workflows: list[dict], llm_client=None) -> li
 
     for wf in workflows:
         jobs = wf.get("jobs", [])
-        if not jobs:
-            continue
+        if jobs:
+            bottlenecks.extend(_check_missing_cache(jobs, profiles))
+            bottlenecks.extend(_check_serial_parallel(jobs, profiles))
+            bottlenecks.extend(_check_redundant_matrix(jobs, profiles))
 
-        bottlenecks.extend(_check_missing_cache(jobs, profiles))
-        bottlenecks.extend(_check_serial_parallel(jobs, profiles))
-        bottlenecks.extend(_check_redundant_matrix(jobs, profiles))
+    if not bottlenecks:
+        bottlenecks.extend(_check_profiles_only(profiles))
 
     if llm_client is not None:
         llm_bottlenecks = _classify_with_llm(llm_client, workflows, profiles)
         bottlenecks = _merge_bottlenecks(bottlenecks, llm_bottlenecks)
+
+    return bottlenecks
+
+
+def _check_profiles_only(profiles: list[dict]) -> list[dict]:
+    bottlenecks = []
+    BUILD_KEYWORDS = ("build", "test", "lint", "deploy", "compile", "bundle", "package")
+    seen = set()
+
+    for p in profiles:
+        name = p["job_name"].lower()
+        median = p.get("median_sec", 0)
+
+        if median < 30:
+            continue
+
+        if any(kw in name for kw in BUILD_KEYWORDS):
+            key = ("missing_cache", p["job_name"])
+            if key not in seen:
+                seen.add(key)
+                bottlenecks.append({
+                    "type": "missing_cache",
+                    "job_name": p["job_name"],
+                    "evidence": f"Job '{p['job_name']}' ({median}s median) builds dependencies but has no cache directive.",
+                    "severity": _assign_severity(median),
+                })
+
+    # Check for independent jobs that could run in parallel
+    build_jobs = [p for p in profiles if any(kw in p["job_name"].lower() for kw in BUILD_KEYWORDS)]
+    if len(build_jobs) >= 2:
+        for p in build_jobs:
+            median = p.get("median_sec", 0)
+            if median < 30:
+                continue
+            key = ("serial_parallel", p["job_name"])
+            if key not in seen:
+                seen.add(key)
+                bottlenecks.append({
+                    "type": "serial_parallel",
+                    "job_name": p["job_name"],
+                    "evidence": f"Job '{p['job_name']}' ({median}s median) may run sequentially with other independent jobs.",
+                    "severity": _assign_severity(median),
+                })
 
     return bottlenecks
 

@@ -47,12 +47,12 @@
   ],
   "workflows": [
     {
-      "filename": "gradle-wrapper-validation.yml",
-      "hash": "04526945275c07b7ec8481281931aa653deceed193cbbf514b23cd8d634fae78"
-    },
-    {
       "filename": "docs-build.yml",
       "hash": "6772ac2baa16f9669594b6ea59ebfc2a9e1a6b14f3550571e4faacaf2d397023"
+    },
+    {
+      "filename": "check-esql-generated-headers.yml",
+      "hash": "041ef4548040d89d8aaadc4f851874f565b8eaeadfa32c8c8059810913c5da29"
     }
   ]
 }

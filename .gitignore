@@ -36,3 +36,4 @@ checkpoints/
 
 # Dataset cache (TODO: remove after M1.6 commit)
 
+output/

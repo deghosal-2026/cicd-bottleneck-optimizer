@@ -1,0 +1,118 @@
+{
+  "pr_number": 318789,
+  "title": "Restore editor.quickSuggestions.other default to 'on'",
+  "state": "closed",
+  "author": "dmitrivMS",
+  "created_at": "2026-05-28T16:25:39Z",
+  "updated_at": "2026-07-04T06:29:09Z",
+  "merged_at": "2026-05-28T16:51:01Z",
+  "head_sha": "7b350ce377891c6057a8b2a3c3675b012558565c",
+  "labels": [
+    "snippets",
+    "suggest",
+    "editor-input-IME",
+    "release-cherry-pick"
+  ],
+  "ci_runs": [
+    {
+      "run_id": 26587634243,
+      "workflow_id": 38332752,
+      "workflow_name": "Telemetry",
+      "status": "success",
+      "head_sha": "7b350ce377891c6057a8b2a3c3675b012558565c",
+      "created_at": "2026-05-28T16:25:45Z",
+      "updated_at": "2026-05-28T16:26:21Z",
+      "run_started_at": "2026-05-28T16:25:45Z",
+      "jobs": [
+        {
+          "name": "Check metadata",
+          "status": "success",
+          "started_at": "2026-05-28T16:25:51Z",
+          "completed_at": "2026-05-28T16:26:20Z",
+          "duration_sec": 29
+        }
+      ]
+    },
+    {
+      "run_id": 26587634199,
+      "workflow_id": 21497327,
+      "workflow_name": "Monaco Editor checks",
+      "status": "success",
+      "head_sha": "7b350ce377891c6057a8b2a3c3675b012558565c",
+      "created_at": "2026-05-28T16:25:45Z",
+      "updated_at": "2026-05-28T16:30:20Z",
+      "run_started_at": "2026-05-28T16:25:45Z",
+      "jobs": []
+    },
+    {
+      "run_id": 26587634086,
+      "workflow_id": 273167221,
+      "workflow_name": "Component Fixtures",
+      "status": "success",
+      "head_sha": "7b350ce377891c6057a8b2a3c3675b012558565c",
+      "created_at": "2026-05-28T16:25:45Z",
+      "updated_at": "2026-05-28T16:30:56Z",
+      "run_started_at": "2026-05-28T16:25:45Z",
+      "jobs": []
+    },
+    {
+      "run_id": 26587634201,
+      "workflow_id": 258342321,
+      "workflow_name": "chat-lib tests",
+      "status": "success",
+      "head_sha": "7b350ce377891c6057a8b2a3c3675b012558565c",
+      "created_at": "2026-05-28T16:25:45Z",
+      "updated_at": "2026-05-28T16:33:58Z",
+      "run_started_at": "2026-05-28T16:25:45Z",
+      "jobs": []
+    },
+    {
+      "run_id": 26587634240,
+      "workflow_id": 211787236,
+      "workflow_name": "Prevent engineering system changes in PRs",
+      "status": "success",
+      "head_sha": "7b350ce377891c6057a8b2a3c3675b012558565c",
+      "created_at": "2026-05-28T16:25:45Z",
+      "updated_at": "2026-05-28T16:25:57Z",
+      "run_started_at": "2026-05-28T16:25:45Z",
+      "jobs": []
+    },
+    {
+      "run_id": 26587634430,
+      "workflow_id": 4196599,
+      "workflow_name": "Code OSS",
+      "status": "success",
+      "head_sha": "7b350ce377891c6057a8b2a3c3675b012558565c",
+      "created_at": "2026-05-28T16:25:45Z",
+      "updated_at": "2026-05-28T16:50:59Z",
+      "run_started_at": "2026-05-28T16:25:45Z",
+      "jobs": []
+    }
+  ],
+  "workflows": [
+    {
+      "filename": "no-engineering-system-changes.yml",
+      "hash": "33e892418cdb547da42a337e92ae6a34dc328de4cda6d5fbe49b89c0b17739b4"
+    },
+    {
+      "filename": "monaco-editor.yml",
+      "hash": "02e5f951a8bc0193f3239d64b65c547aebcf6427849f35a8e7b9500b4eeb10f9"
+    },
+    {
+      "filename": "telemetry.yml",
+      "hash": "e6f2b09e424014aca3936a7304887e26ec1a007eb7e2ecf85efd918d13339882"
+    },
+    {
+      "filename": "chat-lib-package.yml",
+      "hash": "f4aa7969357b0f3a89da442e45b5084e2dd676d0f55791dc6c026d3b5c6ede49"
+    },
+    {
+      "filename": "component-fixtures.yml",
+      "hash": "73d41d7dff4eb33fc2fabcae9e29348961f1f79e445ca7ec039462b78bd8265f"
+    },
+    {
+      "filename": "pr.yml",
+      "hash": "0625dff11585a35e1ad0cf2b3cbea2cb72e521039dfd406eaa8de1ec75492115"
+    }
+  ]
+}

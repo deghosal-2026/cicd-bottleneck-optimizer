@@ -1,0 +1,168 @@
+{
+  "pr_number": 52986,
+  "title": "fix(mounts): preserve trailing slash for Windows UNC root paths",
+  "state": "open",
+  "author": "HarshalPatel1972",
+  "created_at": "2026-06-30T14:33:17Z",
+  "updated_at": "2026-06-30T17:55:21Z",
+  "merged_at": null,
+  "head_sha": "c42ec023ba0ec48e0bb0f8cf3ae22e0dc66607c2",
+  "labels": [
+    "area/volumes",
+    "area/daemon"
+  ],
+  "ci_runs": [
+    {
+      "run_id": 28452319398,
+      "workflow_id": 261203439,
+      "workflow_name": "zizmor",
+      "status": "action_required",
+      "head_sha": "c42ec023ba0ec48e0bb0f8cf3ae22e0dc66607c2",
+      "created_at": "2026-06-30T14:33:22Z",
+      "updated_at": "2026-06-30T14:33:22Z",
+      "run_started_at": "2026-06-30T14:33:22Z",
+      "jobs": []
+    },
+    {
+      "run_id": 28452319733,
+      "workflow_id": 44461128,
+      "workflow_name": "bin-image",
+      "status": "action_required",
+      "head_sha": "c42ec023ba0ec48e0bb0f8cf3ae22e0dc66607c2",
+      "created_at": "2026-06-30T14:33:22Z",
+      "updated_at": "2026-06-30T14:33:22Z",
+      "run_started_at": "2026-06-30T14:33:22Z",
+      "jobs": []
+    },
+    {
+      "run_id": 28452318967,
+      "workflow_id": 81499888,
+      "workflow_name": "codeql",
+      "status": "action_required",
+      "head_sha": "c42ec023ba0ec48e0bb0f8cf3ae22e0dc66607c2",
+      "created_at": "2026-06-30T14:33:21Z",
+      "updated_at": "2026-06-30T14:33:21Z",
+      "run_started_at": "2026-06-30T14:33:21Z",
+      "jobs": []
+    },
+    {
+      "run_id": 28452318924,
+      "workflow_id": 86900533,
+      "workflow_name": "validate-pr",
+      "status": "action_required",
+      "head_sha": "c42ec023ba0ec48e0bb0f8cf3ae22e0dc66607c2",
+      "created_at": "2026-06-30T14:33:21Z",
+      "updated_at": "2026-06-30T14:33:21Z",
+      "run_started_at": "2026-06-30T14:33:21Z",
+      "jobs": []
+    },
+    {
+      "run_id": 28452319155,
+      "workflow_id": 26704268,
+      "workflow_name": "test",
+      "status": "action_required",
+      "head_sha": "c42ec023ba0ec48e0bb0f8cf3ae22e0dc66607c2",
+      "created_at": "2026-06-30T14:33:21Z",
+      "updated_at": "2026-06-30T14:33:21Z",
+      "run_started_at": "2026-06-30T14:33:21Z",
+      "jobs": []
+    },
+    {
+      "run_id": 28452319191,
+      "workflow_id": 33573227,
+      "workflow_name": "buildkit",
+      "status": "action_required",
+      "head_sha": "c42ec023ba0ec48e0bb0f8cf3ae22e0dc66607c2",
+      "created_at": "2026-06-30T14:33:21Z",
+      "updated_at": "2026-06-30T14:33:21Z",
+      "run_started_at": "2026-06-30T14:33:21Z",
+      "jobs": []
+    },
+    {
+      "run_id": 28452319180,
+      "workflow_id": 260262819,
+      "workflow_name": "validate-milestone",
+      "status": "action_required",
+      "head_sha": "c42ec023ba0ec48e0bb0f8cf3ae22e0dc66607c2",
+      "created_at": "2026-06-30T14:33:21Z",
+      "updated_at": "2026-06-30T14:33:21Z",
+      "run_started_at": "2026-06-30T14:33:21Z",
+      "jobs": []
+    },
+    {
+      "run_id": 28452319206,
+      "workflow_id": 21805183,
+      "workflow_name": "ci",
+      "status": "action_required",
+      "head_sha": "c42ec023ba0ec48e0bb0f8cf3ae22e0dc66607c2",
+      "created_at": "2026-06-30T14:33:21Z",
+      "updated_at": "2026-06-30T14:33:21Z",
+      "run_started_at": "2026-06-30T14:33:21Z",
+      "jobs": []
+    },
+    {
+      "run_id": 28452319208,
+      "workflow_id": 187772110,
+      "workflow_name": "vm",
+      "status": "action_required",
+      "head_sha": "c42ec023ba0ec48e0bb0f8cf3ae22e0dc66607c2",
+      "created_at": "2026-06-30T14:33:21Z",
+      "updated_at": "2026-06-30T14:33:21Z",
+      "run_started_at": "2026-06-30T14:33:21Z",
+      "jobs": []
+    },
+    {
+      "run_id": 28452319286,
+      "workflow_id": 168088309,
+      "workflow_name": "windows-2025",
+      "status": "action_required",
+      "head_sha": "c42ec023ba0ec48e0bb0f8cf3ae22e0dc66607c2",
+      "created_at": "2026-06-30T14:33:21Z",
+      "updated_at": "2026-06-30T14:33:21Z",
+      "run_started_at": "2026-06-30T14:33:21Z",
+      "jobs": []
+    }
+  ],
+  "workflows": [
+    {
+      "filename": "validate-milestone.yml",
+      "hash": "b4badf62221b932be195a429b7425841efc9234a9292d154ec630ce035c49fbc"
+    },
+    {
+      "filename": "bin-image.yml",
+      "hash": "89ef4c9b5daec3f3d5a5f136f4a1d09bc0b1bcad021cefd89e68f9e7a1dc04a2"
+    },
+    {
+      "filename": "buildkit.yml",
+      "hash": "5c1805f188bd97fad6937a6e8d4e1144cbb2468aab23924339ee01fd93f51875"
+    },
+    {
+      "filename": "test.yml",
+      "hash": "63cd3c4663b13ced31f4c8d7f81d4a90b18b3c33b7db2292f03f30b4724e3f62"
+    },
+    {
+      "filename": "vm.yml",
+      "hash": "e47883700ea23c4b392f7bd653bcc49547da99507a77a87a316fddc349b3606a"
+    },
+    {
+      "filename": "zizmor.yml",
+      "hash": "a5a9dda8facc28620d742f23f1dee7b566b116d4f96bd38018fa7d58181fc4d9"
+    },
+    {
+      "filename": "codeql.yml",
+      "hash": "79efd33bdea2734d6cf8a937339b30794a4968257d9505af35d321daf8977f50"
+    },
+    {
+      "filename": "validate-pr.yml",
+      "hash": "c183b4985e921522240a3d88f3842ade05e139ff8dd687f843b136b6681289a7"
+    },
+    {
+      "filename": "windows-2025.yml",
+      "hash": "0107d1254594822e86e1da0eda02851c8242ffbaaf11893a3c7cdf244300ed35"
+    },
+    {
+      "filename": "ci.yml",
+      "hash": "ef844f6daf8a29c4ec6fc13d2e7d326f9d5b8efe53316775a031ddf57ed0aa9e"
+    }
+  ]
+}

@@ -1,0 +1,113 @@
+{
+  "pr_number": 324288,
+  "title": "Fix managed-settings model key and make enabledPlugins additive",
+  "state": "open",
+  "author": "joshspicer",
+  "created_at": "2026-07-04T06:27:53Z",
+  "updated_at": "2026-07-04T06:32:23Z",
+  "merged_at": null,
+  "head_sha": "48323485c8031ddf671e88a2ac5bdd9f629862cd",
+  "labels": [],
+  "ci_runs": [
+    {
+      "run_id": 28697706668,
+      "workflow_id": 211787236,
+      "workflow_name": "Prevent engineering system changes in PRs",
+      "status": "success",
+      "head_sha": "48323485c8031ddf671e88a2ac5bdd9f629862cd",
+      "created_at": "2026-07-04T06:27:56Z",
+      "updated_at": "2026-07-04T06:28:04Z",
+      "run_started_at": "2026-07-04T06:27:56Z",
+      "jobs": [
+        {
+          "name": "Prevent engineering system changes in PRs",
+          "status": "success",
+          "started_at": "2026-07-04T06:28:00Z",
+          "completed_at": "2026-07-04T06:28:04Z",
+          "duration_sec": 4
+        }
+      ]
+    },
+    {
+      "run_id": 28697706667,
+      "workflow_id": 38332752,
+      "workflow_name": "Telemetry",
+      "status": "success",
+      "head_sha": "48323485c8031ddf671e88a2ac5bdd9f629862cd",
+      "created_at": "2026-07-04T06:27:56Z",
+      "updated_at": "2026-07-04T06:28:28Z",
+      "run_started_at": "2026-07-04T06:27:56Z",
+      "jobs": []
+    },
+    {
+      "run_id": 28697706669,
+      "workflow_id": 258342321,
+      "workflow_name": "chat-lib tests",
+      "status": "success",
+      "head_sha": "48323485c8031ddf671e88a2ac5bdd9f629862cd",
+      "created_at": "2026-07-04T06:27:56Z",
+      "updated_at": "2026-07-04T06:31:21Z",
+      "run_started_at": "2026-07-04T06:27:56Z",
+      "jobs": []
+    },
+    {
+      "run_id": 28697706689,
+      "workflow_id": 21497327,
+      "workflow_name": "Monaco Editor checks",
+      "status": "success",
+      "head_sha": "48323485c8031ddf671e88a2ac5bdd9f629862cd",
+      "created_at": "2026-07-04T06:27:56Z",
+      "updated_at": "2026-07-04T06:32:21Z",
+      "run_started_at": "2026-07-04T06:27:56Z",
+      "jobs": []
+    },
+    {
+      "run_id": 28697706690,
+      "workflow_id": 273167221,
+      "workflow_name": "Component Fixtures",
+      "status": "success",
+      "head_sha": "48323485c8031ddf671e88a2ac5bdd9f629862cd",
+      "created_at": "2026-07-04T06:27:56Z",
+      "updated_at": "2026-07-04T06:33:28Z",
+      "run_started_at": "2026-07-04T06:27:56Z",
+      "jobs": []
+    },
+    {
+      "run_id": 28697706721,
+      "workflow_id": 4196599,
+      "workflow_name": "Code OSS",
+      "status": "failure",
+      "head_sha": "48323485c8031ddf671e88a2ac5bdd9f629862cd",
+      "created_at": "2026-07-04T06:27:56Z",
+      "updated_at": "2026-07-04T06:41:59Z",
+      "run_started_at": "2026-07-04T06:27:56Z",
+      "jobs": []
+    }
+  ],
+  "workflows": [
+    {
+      "filename": "no-engineering-system-changes.yml",
+      "hash": "33e892418cdb547da42a337e92ae6a34dc328de4cda6d5fbe49b89c0b17739b4"
+    },
+    {
+      "filename": "monaco-editor.yml",
+      "hash": "02e5f951a8bc0193f3239d64b65c547aebcf6427849f35a8e7b9500b4eeb10f9"
+    },
+    {
+      "filename": "telemetry.yml",
+      "hash": "e6f2b09e424014aca3936a7304887e26ec1a007eb7e2ecf85efd918d13339882"
+    },
+    {
+      "filename": "chat-lib-package.yml",
+      "hash": "f4aa7969357b0f3a89da442e45b5084e2dd676d0f55791dc6c026d3b5c6ede49"
+    },
+    {
+      "filename": "component-fixtures.yml",
+      "hash": "73d41d7dff4eb33fc2fabcae9e29348961f1f79e445ca7ec039462b78bd8265f"
+    },
+    {
+      "filename": "pr.yml",
+      "hash": "0625dff11585a35e1ad0cf2b3cbea2cb72e521039dfd406eaa8de1ec75492115"
+    }
+  ]
+}

@@ -1,0 +1,390 @@
+{
+  "pr_number": 52724,
+  "title": "daemon/containerd: push down reference and dangling filters to containerd store",
+  "state": "open",
+  "author": "notandruu",
+  "created_at": "2026-05-29T10:26:59Z",
+  "updated_at": "2026-06-29T17:07:06Z",
+  "merged_at": null,
+  "head_sha": "1d21db4b302ce2dcc9d4fa5736645452de821659",
+  "labels": [
+    "area/daemon",
+    "containerd-integration"
+  ],
+  "ci_runs": [
+    {
+      "run_id": 26732132308,
+      "workflow_id": 33573227,
+      "workflow_name": "buildkit",
+      "status": "success",
+      "head_sha": "1d21db4b302ce2dcc9d4fa5736645452de821659",
+      "created_at": "2026-06-01T02:33:48Z",
+      "updated_at": "2026-06-29T11:01:05Z",
+      "run_started_at": "2026-06-29T10:29:26Z",
+      "jobs": [
+        {
+          "name": "validate-dco / run",
+          "status": "success",
+          "started_at": "2026-06-29T10:29:31Z",
+          "completed_at": "2026-06-29T10:30:05Z",
+          "duration_sec": 34
+        },
+        {
+          "name": "build-windows",
+          "status": "success",
+          "started_at": "2026-06-29T10:30:09Z",
+          "completed_at": "2026-06-29T10:42:56Z",
+          "duration_sec": 767
+        },
+        {
+          "name": "build-linux",
+          "status": "success",
+          "started_at": "2026-06-29T10:30:08Z",
+          "completed_at": "2026-06-29T10:33:13Z",
+          "duration_sec": 185
+        },
+        {
+          "name": "test-linux (dockerd, solver, integration)",
+          "status": "success",
+          "started_at": "2026-06-29T10:33:16Z",
+          "completed_at": "2026-06-29T10:43:27Z",
+          "duration_sec": 611
+        },
+        {
+          "name": "test-linux (dockerd, frontend, integration)",
+          "status": "success",
+          "started_at": "2026-06-29T10:33:16Z",
+          "completed_at": "2026-06-29T10:43:34Z",
+          "duration_sec": 618
+        },
+        {
+          "name": "test-linux (dockerd-containerd, cmd/buildctl, integration)",
+          "status": "success",
+          "started_at": "2026-06-29T10:33:16Z",
+          "completed_at": "2026-06-29T10:43:50Z",
+          "duration_sec": 634
+        },
+        {
+          "name": "test-linux (dockerd-containerd, frontend/dockerfile, integration)",
+          "status": "success",
+          "started_at": "2026-06-29T10:33:16Z",
+          "completed_at": "2026-06-29T11:00:37Z",
+          "duration_sec": 1641
+        },
+        {
+          "name": "test-linux (dockerd, cmd/buildctl, integration)",
+          "status": "success",
+          "started_at": "2026-06-29T10:33:16Z",
+          "completed_at": "2026-06-29T10:44:24Z",
+          "duration_sec": 668
+        },
+        {
+          "name": "test-linux (dockerd, client, integration)",
+          "status": "success",
+          "started_at": "2026-06-29T10:33:16Z",
+          "completed_at": "2026-06-29T10:52:14Z",
+          "duration_sec": 1138
+        },
+        {
+          "name": "test-linux (dockerd-containerd, solver, integration)",
+          "status": "success",
+          "started_at": "2026-06-29T10:33:16Z",
+          "completed_at": "2026-06-29T10:43:39Z",
+          "duration_sec": 623
+        },
+        {
+          "name": "test-linux (dockerd, frontend/dockerfile, integration)",
+          "status": "success",
+          "started_at": "2026-06-29T10:33:16Z",
+          "completed_at": "2026-06-29T10:58:57Z",
+          "duration_sec": 1541
+        },
+        {
+          "name": "test-linux (dockerd-containerd, client, integration)",
+          "status": "success",
+          "started_at": "2026-06-29T10:33:16Z",
+          "completed_at": "2026-06-29T10:54:11Z",
+          "duration_sec": 1255
+        },
+        {
+          "name": "test-linux (dockerd-containerd, frontend, integration)",
+          "status": "success",
+          "started_at": "2026-06-29T10:33:17Z",
+          "completed_at": "2026-06-29T10:44:05Z",
+          "duration_sec": 648
+        },
+        {
+          "name": "test-windows (dockerd-containerd, ./client#4-4)",
+          "status": "success",
+          "started_at": "2026-06-29T10:43:00Z",
+          "completed_at": "2026-06-29T10:48:21Z",
+          "duration_sec": 321
+        },
+        {
+          "name": "test-windows (dockerd-containerd, ./client#1-4)",
+          "status": "success",
+          "started_at": "2026-06-29T10:42:59Z",
+          "completed_at": "2026-06-29T10:56:48Z",
+          "duration_sec": 829
+        },
+        {
+          "name": "test-windows (dockerd-containerd, ./frontend)",
+          "status": "success",
+          "started_at": "2026-06-29T10:43:00Z",
+          "completed_at": "2026-06-29T10:44:49Z",
+          "duration_sec": 109
+        },
+        {
+          "name": "test-windows (dockerd-containerd, ./client#2-4)",
+          "status": "success",
+          "started_at": "2026-06-29T10:43:00Z",
+          "completed_at": "2026-06-29T10:59:16Z",
+          "duration_sec": 976
+        },
+        {
+          "name": "test-windows (dockerd-containerd, ./frontend/dockerfile#2-12)",
+          "status": "success",
+          "started_at": "2026-06-29T10:43:00Z",
+          "completed_at": "2026-06-29T11:00:44Z",
+          "duration_sec": 1064
+        },
+        {
+          "name": "test-windows (dockerd-containerd, ./frontend/dockerfile#1-12)",
+          "status": "success",
+          "started_at": "2026-06-29T10:42:59Z",
+          "completed_at": "2026-06-29T10:51:52Z",
+          "duration_sec": 533
+        },
+        {
+          "name": "test-windows (dockerd-containerd, ./client#3-4)",
+          "status": "success",
+          "started_at": "2026-06-29T10:43:00Z",
+          "completed_at": "2026-06-29T10:52:41Z",
+          "duration_sec": 581
+        },
+        {
+          "name": "test-windows (dockerd-containerd, ./cmd/buildctl)",
+          "status": "success",
+          "started_at": "2026-06-29T10:43:00Z",
+          "completed_at": "2026-06-29T10:45:00Z",
+          "duration_sec": 120
+        },
+        {
+          "name": "test-windows (dockerd-containerd, ./frontend/dockerfile#4-12)",
+          "status": "success",
+          "started_at": "2026-06-29T10:43:00Z",
+          "completed_at": "2026-06-29T11:01:04Z",
+          "duration_sec": 1084
+        },
+        {
+          "name": "test-windows (dockerd-containerd, ./frontend/dockerfile#5-12)",
+          "status": "success",
+          "started_at": "2026-06-29T10:43:01Z",
+          "completed_at": "2026-06-29T10:55:31Z",
+          "duration_sec": 750
+        },
+        {
+          "name": "test-windows (dockerd-containerd, ./frontend/dockerfile#12-12)",
+          "status": "success",
+          "started_at": "2026-06-29T10:43:00Z",
+          "completed_at": "2026-06-29T10:50:14Z",
+          "duration_sec": 434
+        },
+        {
+          "name": "test-windows (dockerd-containerd, ./frontend/dockerfile#10-12)",
+          "status": "success",
+          "started_at": "2026-06-29T10:43:00Z",
+          "completed_at": "2026-06-29T10:56:13Z",
+          "duration_sec": 793
+        },
+        {
+          "name": "test-windows (dockerd-containerd, ./frontend/dockerfile#9-12)",
+          "status": "success",
+          "started_at": "2026-06-29T10:43:00Z",
+          "completed_at": "2026-06-29T10:53:35Z",
+          "duration_sec": 635
+        },
+        {
+          "name": "test-windows (dockerd-containerd, ./frontend/dockerfile#11-12)",
+          "status": "success",
+          "started_at": "2026-06-29T10:42:59Z",
+          "completed_at": "2026-06-29T10:48:05Z",
+          "duration_sec": 306
+        },
+        {
+          "name": "test-windows (dockerd-containerd, ./frontend/dockerfile#6-12)",
+          "status": "success",
+          "started_at": "2026-06-29T10:43:01Z",
+          "completed_at": "2026-06-29T10:56:19Z",
+          "duration_sec": 798
+        },
+        {
+          "name": "test-windows (dockerd-containerd, ./frontend/dockerfile#3-12)",
+          "status": "success",
+          "started_at": "2026-06-29T10:43:00Z",
+          "completed_at": "2026-06-29T10:56:29Z",
+          "duration_sec": 809
+        },
+        {
+          "name": "test-windows (dockerd-containerd, ./frontend/dockerfile#8-12)",
+          "status": "success",
+          "started_at": "2026-06-29T10:43:00Z",
+          "completed_at": "2026-06-29T10:53:57Z",
+          "duration_sec": 657
+        }
+      ]
+    },
+    {
+      "run_id": 26732132330,
+      "workflow_id": 26704268,
+      "workflow_name": "test",
+      "status": "failure",
+      "head_sha": "1d21db4b302ce2dcc9d4fa5736645452de821659",
+      "created_at": "2026-06-01T02:33:48Z",
+      "updated_at": "2026-06-29T11:07:12Z",
+      "run_started_at": "2026-06-29T10:29:26Z",
+      "jobs": []
+    },
+    {
+      "run_id": 26732132312,
+      "workflow_id": 187772110,
+      "workflow_name": "vm",
+      "status": "success",
+      "head_sha": "1d21db4b302ce2dcc9d4fa5736645452de821659",
+      "created_at": "2026-06-01T02:33:48Z",
+      "updated_at": "2026-06-29T10:52:21Z",
+      "run_started_at": "2026-06-29T10:29:26Z",
+      "jobs": []
+    },
+    {
+      "run_id": 26732132287,
+      "workflow_id": 168088309,
+      "workflow_name": "windows-2025",
+      "status": "failure",
+      "head_sha": "1d21db4b302ce2dcc9d4fa5736645452de821659",
+      "created_at": "2026-06-01T02:33:48Z",
+      "updated_at": "2026-06-29T11:31:32Z",
+      "run_started_at": "2026-06-29T10:29:26Z",
+      "jobs": []
+    },
+    {
+      "run_id": 26732132364,
+      "workflow_id": 261203439,
+      "workflow_name": "zizmor",
+      "status": "success",
+      "head_sha": "1d21db4b302ce2dcc9d4fa5736645452de821659",
+      "created_at": "2026-06-01T02:33:48Z",
+      "updated_at": "2026-06-29T10:29:52Z",
+      "run_started_at": "2026-06-29T10:29:27Z",
+      "jobs": []
+    },
+    {
+      "run_id": 26732132285,
+      "workflow_id": 86900533,
+      "workflow_name": "validate-pr",
+      "status": "success",
+      "head_sha": "1d21db4b302ce2dcc9d4fa5736645452de821659",
+      "created_at": "2026-06-01T02:33:48Z",
+      "updated_at": "2026-06-29T10:29:35Z",
+      "run_started_at": "2026-06-29T10:29:26Z",
+      "jobs": []
+    },
+    {
+      "run_id": 26732132263,
+      "workflow_id": 260262819,
+      "workflow_name": "validate-milestone",
+      "status": "failure",
+      "head_sha": "1d21db4b302ce2dcc9d4fa5736645452de821659",
+      "created_at": "2026-06-01T02:33:48Z",
+      "updated_at": "2026-06-29T10:29:37Z",
+      "run_started_at": "2026-06-29T10:29:26Z",
+      "jobs": []
+    },
+    {
+      "run_id": 26732132300,
+      "workflow_id": 138643531,
+      "workflow_name": "arm64",
+      "status": "failure",
+      "head_sha": "1d21db4b302ce2dcc9d4fa5736645452de821659",
+      "created_at": "2026-06-01T02:33:48Z",
+      "updated_at": "2026-06-29T10:30:39Z",
+      "run_started_at": "2026-06-29T10:29:26Z",
+      "jobs": []
+    },
+    {
+      "run_id": 26732132316,
+      "workflow_id": 21805183,
+      "workflow_name": "ci",
+      "status": "success",
+      "head_sha": "1d21db4b302ce2dcc9d4fa5736645452de821659",
+      "created_at": "2026-06-01T02:33:48Z",
+      "updated_at": "2026-06-29T10:34:43Z",
+      "run_started_at": "2026-06-29T10:29:26Z",
+      "jobs": []
+    },
+    {
+      "run_id": 26732132264,
+      "workflow_id": 81499888,
+      "workflow_name": "codeql",
+      "status": "success",
+      "head_sha": "1d21db4b302ce2dcc9d4fa5736645452de821659",
+      "created_at": "2026-06-01T02:33:48Z",
+      "updated_at": "2026-06-29T10:35:53Z",
+      "run_started_at": "2026-06-29T10:29:25Z",
+      "jobs": []
+    },
+    {
+      "run_id": 26732132424,
+      "workflow_id": 44461128,
+      "workflow_name": "bin-image",
+      "status": "success",
+      "head_sha": "1d21db4b302ce2dcc9d4fa5736645452de821659",
+      "created_at": "2026-06-01T02:33:48Z",
+      "updated_at": "2026-06-29T10:36:13Z",
+      "run_started_at": "2026-06-29T10:29:27Z",
+      "jobs": []
+    }
+  ],
+  "workflows": [
+    {
+      "filename": "validate-milestone.yml",
+      "hash": "b4badf62221b932be195a429b7425841efc9234a9292d154ec630ce035c49fbc"
+    },
+    {
+      "filename": "bin-image.yml",
+      "hash": "89ef4c9b5daec3f3d5a5f136f4a1d09bc0b1bcad021cefd89e68f9e7a1dc04a2"
+    },
+    {
+      "filename": "buildkit.yml",
+      "hash": "5c1805f188bd97fad6937a6e8d4e1144cbb2468aab23924339ee01fd93f51875"
+    },
+    {
+      "filename": "test.yml",
+      "hash": "63cd3c4663b13ced31f4c8d7f81d4a90b18b3c33b7db2292f03f30b4724e3f62"
+    },
+    {
+      "filename": "vm.yml",
+      "hash": "e47883700ea23c4b392f7bd653bcc49547da99507a77a87a316fddc349b3606a"
+    },
+    {
+      "filename": "zizmor.yml",
+      "hash": "a5a9dda8facc28620d742f23f1dee7b566b116d4f96bd38018fa7d58181fc4d9"
+    },
+    {
+      "filename": "codeql.yml",
+      "hash": "79efd33bdea2734d6cf8a937339b30794a4968257d9505af35d321daf8977f50"
+    },
+    {
+      "filename": "windows-2025.yml",
+      "hash": "0107d1254594822e86e1da0eda02851c8242ffbaaf11893a3c7cdf244300ed35"
+    },
+    {
+      "filename": "validate-pr.yml",
+      "hash": "c183b4985e921522240a3d88f3842ade05e139ff8dd687f843b136b6681289a7"
+    },
+    {
+      "filename": "ci.yml",
+      "hash": "ef844f6daf8a29c4ec6fc13d2e7d326f9d5b8efe53316775a031ddf57ed0aa9e"
+    }
+  ]
+}

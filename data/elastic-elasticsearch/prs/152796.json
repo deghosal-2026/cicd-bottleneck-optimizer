@@ -1,0 +1,64 @@
+{
+  "pr_number": 152796,
+  "title": "[Inference API] Set region policy headers to EIS inference requests",
+  "state": "open",
+  "author": "dimitris-athanasiou",
+  "created_at": "2026-07-02T17:58:09Z",
+  "updated_at": "2026-07-04T07:03:47Z",
+  "merged_at": null,
+  "head_sha": "999884a1c34ae5be5b82b16501bc343acc70a71f",
+  "labels": [
+    ">non-issue",
+    ":SearchOrg/Inference",
+    "Team:Search - Inference",
+    "v9.5.0"
+  ],
+  "ci_runs": [
+    {
+      "run_id": 28665471933,
+      "workflow_id": 146525436,
+      "workflow_name": "docs-build",
+      "status": "success",
+      "head_sha": "999884a1c34ae5be5b82b16501bc343acc70a71f",
+      "created_at": "2026-07-03T14:02:27Z",
+      "updated_at": "2026-07-03T14:02:45Z",
+      "run_started_at": "2026-07-03T14:02:27Z",
+      "jobs": [
+        {
+          "name": "build / check",
+          "status": "success",
+          "started_at": "2026-07-03T14:02:29Z",
+          "completed_at": "2026-07-03T14:02:35Z",
+          "duration_sec": 6
+        },
+        {
+          "name": "build / match",
+          "status": "success",
+          "started_at": "2026-07-03T14:02:29Z",
+          "completed_at": "2026-07-03T14:02:35Z",
+          "duration_sec": 6
+        },
+        {
+          "name": "build / vale",
+          "status": "skipped",
+          "started_at": "2026-07-03T14:02:35Z",
+          "completed_at": "2026-07-03T14:02:35Z",
+          "duration_sec": 0
+        },
+        {
+          "name": "build / build",
+          "status": "success",
+          "started_at": "2026-07-03T14:02:38Z",
+          "completed_at": "2026-07-03T14:02:43Z",
+          "duration_sec": 5
+        }
+      ]
+    }
+  ],
+  "workflows": [
+    {
+      "filename": "docs-build.yml",
+      "hash": "6772ac2baa16f9669594b6ea59ebfc2a9e1a6b14f3550571e4faacaf2d397023"
+    }
+  ]
+}
