@@ -18,7 +18,7 @@ llm:
   local:
     base_url: "http://127.0.0.1:8000/v1"
     api_key: "omlx-test"
-    model: "Qwen3.5-9B-MLX-4bit"
+    model: "DeepSeek-Coder-V2-Lite-Instruct-4bit-mlx"
 
   # Cloud LLM — optional. Used for final YAML generation if configured.
   cloud:

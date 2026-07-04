@@ -288,12 +288,12 @@ A read-only field study that proves the analyzer works on real data. Analyzes re
 ## 10. LLM Strategy
 
 | Tier | Model | Use | Why |
-|---|---|---|---|
-| Local (free) | OMLX Qwen3.5-9B-MLX-4bit | YAML parsing, bottleneck classification, pattern matching, trade-off descriptions, PR description drafting | Code/YAML analysis is its strength; no data leaves laptop; single model keeps it simple |
-| Cloud (API) | OpenAI gpt-4o-mini | Complex optimization reasoning (parallelization strategies, cache key design) | When local model confidence is low; cheap enough for batch |
+|---|---|---|---|---|
+| Local (free) | OMLX DeepSeek-Coder-V2-Lite-Instruct-4bit-mlx | YAML parsing, bottleneck classification (rules + LLM), pattern matching, optimization proposals | Best structured JSON output for code tasks; no data leaves laptop |
+| Cloud (API) | OpenAI gpt-4o-mini | Fallback when local LLM unavailable; complex optimization reasoning | Cheap, fast, reliable structured output |
 | Cloud (API) | Claude 3.5 Sonnet | Final YAML generation + validation | Strong at structured output; use for the final PR artifact |
 
-**Strategy:** Default to Qwen3.5-9B-MLX-4bit (local) for all analysis passes. Escalate to cloud only for final YAML generation and low-confidence reasoning. Track token cost per optimization.
+**Strategy:** Default to DeepSeek-Coder-V2-Lite-4bit-mlx (local) for all analysis passes. Escalate to cloud only for final YAML generation and low-confidence reasoning. Track token cost per optimization.
 
 **OMLX endpoint:** `http://127.0.0.1:8000/v1` with API key `omlx-test` (see [[training/omlx-tuning.md]] for tuning details).
 

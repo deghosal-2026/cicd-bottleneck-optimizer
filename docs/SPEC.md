@@ -346,13 +346,14 @@ User: python main.py --resume <thread_id>
 │                      LLM Call Decision Tree                         │
 │                                                                     │
 │  classify_bottlenecks                                               │
-│    ├─ OMLX available? ── YES ──▶ OMLX Qwen3.5-9B (local, free)     │
+│    ├─ OMLX available? ── YES ──▶ OMLX DeepSeek-Coder-V2-Lite-4bit │
+│    │                      (best for structured code output)         │
 │    └─ NO ──▶ prompt: "OMLX down. Use cloud? (y/n)"                 │
 │               ├─ y ──▶ Cloud gpt-4o-mini                            │
-│               └─ n ──▶ FAIL (cannot classify without LLM)          │
+│               └─ n ──▶ LLM classification skipped (rules only)     │
 │                                                                     │
 │  propose_optimizations                                              │
-│    ├─ OMLX available? ── YES ──▶ OMLX Qwen3.5-9B (local, free)     │
+│    ├─ OMLX available? ── YES ──▶ OMLX DeepSeek-Coder-V2-Lite-4bit │
 │    └─ NO ──▶ prompt: "OMLX down. Use cloud? (y/n)"                 │
 │               ├─ y ──▶ Cloud gpt-4o-mini                            │
 │               └─ n ──▶ FAIL (cannot propose without LLM)           │
@@ -360,7 +361,7 @@ User: python main.py --resume <thread_id>
 │  generate_yaml                                                      │
 │    ├─ Cloud keys configured? ── YES ──▶ Cloud (Claude/gpt-4o-mini) │
 │    └─ NO ──▶ prompt: "No cloud keys. Use OMLX local? (y/n)"        │
-│               ├─ y ──▶ OMLX Qwen3.5-9B                              │
+│               ├─ y ──▶ OMLX DeepSeek-Coder-V2-Lite-4bit             │
 │               └─ n ──▶ FAIL (cannot generate without LLM)          │
 │                                                                     │
 │  simulate_savings, validate_syntax, all other nodes                 │
