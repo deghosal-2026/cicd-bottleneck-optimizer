@@ -1,8 +1,11 @@
+import hashlib
 import json
 from typing import Any
 
 RUNNER_COST_PER_MIN = 0.008
 CACHE_COST_PER_GB_MONTH = 0.007
+
+_LLM_CACHE: dict[str, list[dict]] = {}
 
 CLASSIFY_LLM_PROMPT = """You are a CI/CD workflow analyzer. Identify bottlenecks.
 
@@ -31,7 +34,7 @@ def classify(profiles: list[dict], workflows: list[dict], llm_client=None) -> li
     if not bottlenecks:
         bottlenecks.extend(_check_profiles_only(profiles))
 
-    if llm_client is not None:
+    if llm_client is not None and not bottlenecks:
         llm_bottlenecks = _classify_with_llm(llm_client, workflows, profiles)
         bottlenecks = _merge_bottlenecks(bottlenecks, llm_bottlenecks)
 
@@ -58,23 +61,6 @@ def _check_profiles_only(profiles: list[dict]) -> list[dict]:
                     "type": "missing_cache",
                     "job_name": p["job_name"],
                     "evidence": f"Job '{p['job_name']}' ({median}s median) builds dependencies but has no cache directive.",
-                    "severity": _assign_severity(median),
-                })
-
-    # Check for independent jobs that could run in parallel
-    build_jobs = [p for p in profiles if any(kw in p["job_name"].lower() for kw in BUILD_KEYWORDS)]
-    if len(build_jobs) >= 2:
-        for p in build_jobs:
-            median = p.get("median_sec", 0)
-            if median < 30:
-                continue
-            key = ("serial_parallel", p["job_name"])
-            if key not in seen:
-                seen.add(key)
-                bottlenecks.append({
-                    "type": "serial_parallel",
-                    "job_name": p["job_name"],
-                    "evidence": f"Job '{p['job_name']}' ({median}s median) may run sequentially with other independent jobs.",
                     "severity": _assign_severity(median),
                 })
 
@@ -135,25 +121,24 @@ def _check_serial_parallel(jobs: list[dict], profiles: list[dict]) -> list[dict]
     bottlenecks = []
     profile_map = {p["job_name"]: p for p in profiles}
 
-    # Only consider jobs that have actual build/test steps
-    real_jobs = []
+    # Flag jobs that HAVE needs: dependencies — they run sequentially after deps.
+    # In GitHub Actions, jobs without needs: already run in parallel.
     for job in jobs:
-        if not job.get("needs"):
-            steps = job.get("steps", [])
-            has_real_work = any(
-                isinstance(s, dict) and any(
-                    kw in str(s.get("run", "")).lower()
-                    for kw in ("install", "build", "test", "npm ", "pip ", "cargo ", "go ", "make")
-                )
-                for s in steps
+        needs = job.get("needs")
+        if not needs:
+            continue
+
+        steps = job.get("steps", [])
+        has_real_work = any(
+            isinstance(s, dict) and any(
+                kw in str(s.get("run", "")).lower()
+                for kw in ("install", "build", "test", "npm ", "pip ", "cargo ", "go ", "make")
             )
-            if has_real_work:
-                real_jobs.append(job)
+            for s in steps
+        )
+        if not has_real_work:
+            continue
 
-    if len(real_jobs) < 2:
-        return []
-
-    for job in real_jobs:
         name = job["name"]
         profile = profile_map.get(name)
         median_time = profile["median_sec"] if profile else 0
@@ -161,14 +146,14 @@ def _check_serial_parallel(jobs: list[dict], profiles: list[dict]) -> list[dict]
             continue
         severity = _assign_severity(median_time)
 
+        deps = needs if isinstance(needs, list) else [needs]
         bottlenecks.append({
             "type": "serial_parallel",
             "job_name": name,
             "evidence": (
-                f"Job '{name}' has no dependencies (`needs:`) but runs "
-                f"sequentially with other independent jobs. "
+                f"Job '{name}' depends on {deps} via `needs:` and waits for them to complete. "
                 f"Median time: {_fmt_time(median_time)}. "
-                f"Moving to parallel would reduce wall-clock time."
+                f"If this job doesn't use their outputs, removing `needs:` would let it run in parallel."
             ),
             "severity": severity,
         })
@@ -234,6 +219,11 @@ def _fmt_dims(dims: dict) -> str:
 def _classify_with_llm(llm_client, workflows: list[dict], profiles: list[dict]) -> list[dict]:
     profile_map = {p["job_name"]: p for p in profiles}
 
+    cache_key = _workflow_cache_key(workflows)
+    if cache_key in _LLM_CACHE:
+        print(f"    → LLM classify: cache hit ({len(workflows)} workflow(s))", flush=True)
+        return _LLM_CACHE[cache_key]
+
     prompt_parts = [
         "You are a CI/CD expert. Analyze these GitHub Actions workflow YAML files for bottlenecks.",
         "",
@@ -272,6 +262,7 @@ def _classify_with_llm(llm_client, workflows: list[dict], profiles: list[dict]) 
         "If no issues, return []",
     ])
 
+    print(f"    → LLM classify ({len(workflows)} workflow(s))...", flush=True)
     try:
         raw = llm_client.call_local("\n".join(prompt_parts))
     except ConnectionError:
@@ -287,7 +278,20 @@ def _classify_with_llm(llm_client, workflows: list[dict], profiles: list[dict]) 
             print("LLM classification skipped.")
             return []
 
-    return _parse_llm_bottlenecks(raw)
+    bottlenecks = _parse_llm_bottlenecks(raw)
+    if cache_key:
+        _LLM_CACHE[cache_key] = bottlenecks
+    return bottlenecks
+
+
+def _workflow_cache_key(workflows: list[dict]) -> str:
+    h = hashlib.sha256()
+    for wf in workflows:
+        content = wf.get("content", "")
+        if content:
+            h.update(content.encode())
+            h.update(b"\x00")
+    return h.hexdigest()[:16] if h.digest() != b"\x00" * 32 else ""
 
 
 def _parse_llm_bottlenecks(raw: str) -> list[dict]:

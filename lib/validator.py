@@ -24,6 +24,8 @@ def validate(yaml_content: str) -> tuple[bool, str]:
     for name, job in jobs.items():
         if not isinstance(job, dict):
             return False, f"Job '{name}' must be a mapping"
+        if "uses" in job:
+            continue
         if "steps" not in job:
             return False, f"Job '{name}' missing 'steps'"
         if not isinstance(job["steps"], list):

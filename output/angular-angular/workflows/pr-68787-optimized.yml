@@ -1,4 +1,4 @@
-# CI/CD Bottleneck Optimizer: added cache to lint, added cache to devtools, added cache to test, added cache to integration-tests, added cache to adev, added cache to vscode-ng-language-service, added cache to zone-js, parallelized lint, parallelized devtools, parallelized test, parallelized integration-tests, parallelized adev, parallelized vscode-ng-language-service, parallelized zone-js, added cache to adev-build, added cache to devtools, adev, vscode-ng-language-service
+# CI/CD Bottleneck Optimizer: added cache to lint, added cache to devtools, added cache to test, added cache to integration-tests, added cache to adev, added cache to vscode-ng-language-service, added cache to zone-js, cache suggested for adev-build (manual review)
 name: Pull Request
 
 on:
@@ -19,6 +19,15 @@ jobs:
   lint:
     runs-on: ubuntu-latest
     steps:
+      - name: Cache dependencies
+        uses: actions/cache@v4
+        with:
+          path: |
+            ~/.npm
+            ~/.cache/pip
+          key: ${{ runner.os }}-deps-${{ hashFiles('**/package-lock.json', '**/requirements.txt') }}
+          restore-keys: |
+            ${{ runner.os }}-deps-
       - name: Initialize environment
         uses: angular/dev-infra/github-actions/npm/checkout-and-setup-node@442c2fcbf06a321b5196b4c5fc70e78a49242958
       - name: Install node modules
@@ -47,6 +56,15 @@ jobs:
   devtools:
     runs-on: ubuntu-latest
     steps:
+      - name: Cache dependencies
+        uses: actions/cache@v4
+        with:
+          path: |
+            ~/.npm
+            ~/.cache/pip
+          key: ${{ runner.os }}-deps-${{ hashFiles('**/package-lock.json', '**/requirements.txt') }}
+          restore-keys: |
+            ${{ runner.os }}-deps-
       - name: Initialize environment
         uses: angular/dev-infra/github-actions/npm/checkout-and-setup-node@442c2fcbf06a321b5196b4c5fc70e78a49242958
         with:
@@ -73,6 +91,15 @@ jobs:
   test:
     runs-on: ubuntu-latest
     steps:
+      - name: Cache dependencies
+        uses: actions/cache@v4
+        with:
+          path: |
+            ~/.npm
+            ~/.cache/pip
+          key: ${{ runner.os }}-deps-${{ hashFiles('**/package-lock.json', '**/requirements.txt') }}
+          restore-keys: |
+            ${{ runner.os }}-deps-
       - name: Initialize environment
         uses: angular/dev-infra/github-actions/npm/checkout-and-setup-node@442c2fcbf06a321b5196b4c5fc70e78a49242958
       - name: Setup Bazel
@@ -97,6 +124,15 @@ jobs:
   integration-tests:
     runs-on: ubuntu-latest
     steps:
+      - name: Cache dependencies
+        uses: actions/cache@v4
+        with:
+          path: |
+            ~/.npm
+            ~/.cache/pip
+          key: ${{ runner.os }}-deps-${{ hashFiles('**/package-lock.json', '**/requirements.txt') }}
+          restore-keys: |
+            ${{ runner.os }}-deps-
       - name: Initialize environment
         uses: angular/dev-infra/github-actions/npm/checkout-and-setup-node@442c2fcbf06a321b5196b4c5fc70e78a49242958
       - name: Setup Bazel
@@ -112,6 +148,15 @@ jobs:
     runs-on:
       labels: ubuntu-latest
     steps:
+      - name: Cache dependencies
+        uses: actions/cache@v4
+        with:
+          path: |
+            ~/.npm
+            ~/.cache/pip
+          key: ${{ runner.os }}-deps-${{ hashFiles('**/package-lock.json', '**/requirements.txt') }}
+          restore-keys: |
+            ${{ runner.os }}-deps-
       - name: Initialize environment
         uses: angular/dev-infra/github-actions/npm/checkout-and-setup-node@442c2fcbf06a321b5196b4c5fc70e78a49242958
       - name: Setup Bazel
@@ -129,6 +174,15 @@ jobs:
     runs-on:
       labels: ubuntu-latest
     steps:
+      - name: Cache dependencies
+        uses: actions/cache@v4
+        with:
+          path: |
+            ~/.npm
+            ~/.cache/pip
+          key: ${{ runner.os }}-deps-${{ hashFiles('**/package-lock.json', '**/requirements.txt') }}
+          restore-keys: |
+            ${{ runner.os }}-deps-
       - name: Initialize environment
         uses: angular/dev-infra/github-actions/npm/checkout-and-setup-node@442c2fcbf06a321b5196b4c5fc70e78a49242958
       - name: Setup Bazel
@@ -144,6 +198,15 @@ jobs:
     runs-on:
       labels: ubuntu-latest
     steps:
+      - name: Cache dependencies
+        uses: actions/cache@v4
+        with:
+          path: |
+            ~/.npm
+            ~/.cache/pip
+          key: ${{ runner.os }}-deps-${{ hashFiles('**/package-lock.json', '**/requirements.txt') }}
+          restore-keys: |
+            ${{ runner.os }}-deps-
       - name: Initialize environment
         uses: angular/dev-infra/github-actions/npm/checkout-and-setup-node@442c2fcbf06a321b5196b4c5fc70e78a49242958
       - name: Setup Bazel

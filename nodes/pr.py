@@ -105,20 +105,27 @@ def _make_pr_body(repo: str, optimizations: list[dict], bottlenecks: list[dict],
 
         lines += ["### Optimizations Applied", "", "| Description | Job | Saved | Cost/Run | Risk |", "|---|---|---|---|---|"]
         for o in optimizations:
-            lines.append(f"| {o['description'][:60]} | {o['job_name']} | {o['estimated_time_saved_min']}m | ${o['estimated_cost_per_run']:.2f} | {o['risk_level']} |")
+            lines.append(f"| {o['description'][:120]} | {o['job_name']} | {o['estimated_time_saved_min']}m | ${o['estimated_cost_per_run']:.2f} | {o['risk_level']} |")
         lines.append("")
 
         if profiles:
-            lines += ["### Before/After Timing", "", "| Job | Before | After (estimated) | Savings |", "|---|---|---|---|"]
+            opt_bases = {_base_name(o["job_name"]) for o in optimizations}
+            seen_bases: dict[str, dict] = {}
             for p in profiles:
-                before = f"{p['median_sec']}s"
-                # Find matching optimization to estimate savings
-                matching = [o for o in optimizations if o['job_name'] == p['job_name']]
-                saved_sec = sum(o['estimated_time_saved_min'] * 60 for o in matching) if matching else 0
-                after = f"{max(p['median_sec'] - saved_sec, 0)}s"
-                savings = f"{p['median_sec'] - max(p['median_sec'] - saved_sec, 0)}s"
-                lines.append(f"| {p['job_name']} | {before} | {after} | {savings} |")
-            lines.append("")
+                base = _base_name(p["job_name"])
+                if base not in seen_bases or p["median_sec"] > seen_bases[base]["median_sec"]:
+                    seen_bases[base] = p
+
+            matched = [(base, p) for base, p in seen_bases.items() if base in opt_bases]
+            if matched:
+                lines += ["### Before/After Timing", "", "| Job | Before | After (estimated) | Savings |", "|---|---|---|---|"]
+                for base, p in matched:
+                    before_sec = p["median_sec"]
+                    matching = [o for o in optimizations if _base_name(o["job_name"]) == base]
+                    saved_sec = min(sum(o["estimated_time_saved_min"] * 60 for o in matching), before_sec) if matching else 0
+                    after_sec = max(before_sec - saved_sec, 0)
+                    lines.append(f"| {p['job_name']} | {before_sec}s | {after_sec}s | {saved_sec}s |")
+                lines.append("")
 
         lines += [
             "### Trade-offs",
@@ -151,3 +158,9 @@ def _max_risk(optimizations: list[dict]) -> str:
     if "medium" in risks:
         return "medium"
     return "low"
+
+
+def _base_name(job_name: str) -> str:
+    name = job_name.split(" / ")[0].strip()
+    name = name.split(" (")[0].strip()
+    return name

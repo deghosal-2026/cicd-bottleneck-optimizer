@@ -1,0 +1,29 @@
+# CI/CD Bottleneck Optimizer: cache suggested for lint (manual review), cache suggested for test_ios_rntester_dynamic_frameworks (Release) (manual review), cache suggested for build_android (manual review), cache suggested for test_ios_rntester_dynamic_frameworks (Debug) (manual review), cache suggested for prebuild_apple_dependencies / Prepare workspace (manual review), cache suggested for prebuild_apple_dependencies / Build Apple Slice (Release, xros-simulator) (manual review), cache suggested for prebuild_apple_dependencies / Build Apple Slice (Release, mac-catalyst) (manual review), cache suggested for prebuild_apple_dependencies / Prepare XCFramework (Release) (manual review), cache suggested for prebuild_apple_dependencies / Prepare XCFramework (Debug) (manual review), cache suggested for build_fantom_runner (manual review), cache suggested for build_js_types (manual review), cache suggested for test_js (22.13.0) (manual review), cache suggested for test_js (24) (manual review)
+name: Issue Needs Attention
+# This workflow is triggered on issue comments.
+on:
+  issue_comment:
+    types: [created]
+
+permissions:
+  contents: read
+
+jobs:
+  applyNeedsAttentionLabel:
+    permissions:
+      contents: read # for actions/checkout to fetch code
+      issues: write # for react-native-community/needs-attention to label issues
+    name: Apply Needs Attention Label
+    runs-on: ubuntu-latest
+    if: github.repository == 'react/react-native'
+    steps:
+      - uses: actions/checkout@v6
+      - name: Apply Needs Attention Label
+        uses: react-native-community/needs-attention@v2.0.0
+        with:
+          repo-token: ${{ secrets.GITHUB_TOKEN }}
+          response-required-label: 'Needs: Author Feedback'
+          needs-attention-label: 'Needs: Attention'
+        id: needs-attention
+      - name: Result
+        run: echo '${{ steps.needs-attention.outputs.result }}'

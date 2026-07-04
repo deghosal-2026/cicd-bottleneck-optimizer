@@ -4,10 +4,13 @@ Run the full optimize pipeline on cached PRs.
 Reads from data/, saves results to output/. No live API calls to public repos.
 
 Usage:
-  python3 tools/run_pipeline.py --groq                    # Groq LLM (fast, free)
-  python3 tools/run_pipeline.py --groq --max 10           # first 10 PRs
-  python3 tools/run_pipeline.py --no-llm                  # rules only
-  python3 tools/run_pipeline.py --since 90                # last 90 days
+  python3 tools/run_pipeline.py --zen                      # Zen paid model (deepseek-v4-flash)
+  python3 tools/run_pipeline.py --zen --zen-model big-pickle # stealth free model
+  python3 tools/run_pipeline.py --groq                      # Groq LLM (fast, free)
+  python3 tools/run_pipeline.py --groq --max 10             # first 10 PRs
+  python3 tools/run_pipeline.py --groq --resume             # skip already-analyzed PRs
+  python3 tools/run_pipeline.py --no-llm                    # rules only
+  python3 tools/run_pipeline.py --since 90                  # last 90 days
 """
 
 import argparse
@@ -45,6 +48,22 @@ class GroqClient:
         return resp.choices[0].message.content or ""
 
 
+class ZenClient:
+    """OpenCode Zen API client (free + paid models)."""
+    def __init__(self, model: str, token: str):
+        from openai import OpenAI
+        self.client = OpenAI(base_url="https://opencode.ai/zen/v1", api_key=token)
+        self.model = model
+
+    def call_local(self, prompt: str, system: str | None = None, **kwargs) -> str:
+        messages = []
+        if system:
+            messages.append({"role": "system", "content": system})
+        messages.append({"role": "user", "content": prompt})
+        resp = self.client.chat.completions.create(model=self.model, messages=messages, max_tokens=1024)
+        return resp.choices[0].message.content or ""
+
+
 def parse_args():
     p = argparse.ArgumentParser(description="Run pipeline on cached PRs")
     p.add_argument("--data", default="data", help="Dataset directory")
@@ -55,9 +74,35 @@ def parse_args():
     p.add_argument("--groq", action="store_true", help="Use Groq free API")
     p.add_argument("--groq-model", default="llama-3.3-70b-versatile", help="Groq model")
     p.add_argument("--groq-token", default="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", help="Groq API key")
+    p.add_argument("--zen", action="store_true", help="Use OpenCode Zen API")
+    p.add_argument("--zen-model", default="deepseek-v4-flash", help="Zen model (paid: deepseek-v4-flash; free: deepseek-v4-flash-free, big-pickle, mimo-v2.5-free)")
+    p.add_argument("--zen-token", default="", help="Zen API key (reads from auth.json if empty)")
+    p.add_argument("--resume", action="store_true", help="Skip already-analyzed PRs")
     p.add_argument("--config", help="Path to config.yaml")
     return p.parse_args()
 
+
+def report_dir(out_dir: str, repo_dir: str) -> str:
+    return os.path.join(out_dir, os.path.basename(repo_dir))
+
+def report_path(out_dir: str, repo_dir: str, pr_number: int) -> str:
+    return os.path.join(report_dir(out_dir, repo_dir), f"PR-{pr_number}.md")
+
+def report_exists(out_dir: str, repo_dir: str, pr_number: int) -> bool:
+    return os.path.exists(report_path(out_dir, repo_dir, pr_number))
+
+
+def _load_zen_token() -> str:
+    """Load Zen API key from opencode auth.json."""
+    auth_path = os.path.expanduser("~/.local/share/opencode/auth.json")
+    if not os.path.exists(auth_path):
+        return ""
+    try:
+        with open(auth_path) as f:
+            auth = json.load(f)
+        return auth.get("opencode", {}).get("key", "")
+    except (json.JSONDecodeError, KeyError, TypeError):
+        return ""
 
 def main():
     args = parse_args()
@@ -69,6 +114,15 @@ def main():
         if args.groq:
             llm_client = GroqClient(args.groq_model, args.groq_token)
             llm_label = f"Groq:{args.groq_model}"
+        elif args.zen:
+            token = args.zen_token
+            if not token:
+                token = _load_zen_token()
+            if not token:
+                print("ERROR: No Zen API key found. Run with --zen-token <key> or add to auth.json")
+                sys.exit(1)
+            llm_client = ZenClient(args.zen_model, token)
+            llm_label = f"Zen:{args.zen_model}"
         else:
             llm_cfg = c.get("llm", {}) if c else {}
             if llm_cfg and llm_cfg.get("local"):
@@ -106,8 +160,12 @@ def main():
                 pr = json.load(f)
 
             repo_dir = os.path.dirname(os.path.dirname(path))
-            repo_label = os.path.basename(repo_dir).replace("-", "/")
+            repo_label = os.path.basename(repo_dir).replace("-", "/", 1)
             pr_num = pr["pr_number"]
+
+            if args.resume and report_exists(args.output, repo_dir, pr_num):
+                proc += 1
+                continue
 
             # Parse profiles from CI runs
             profs = []
@@ -123,8 +181,7 @@ def main():
                             "cache_hit_ratio": None,
                         })
 
-            # Parse workflow YAML files matching CI runs
-            wf_ids = {run.get("workflow_id") for run in pr.get("ci_runs", []) if run.get("workflow_id")}
+            # Parse workflow YAML files
             wfs = []
             for wf_ref in pr.get("workflows", []):
                 wf_path = os.path.join(repo_dir, "workflows", f'{wf_ref["hash"]}.yml')
@@ -139,6 +196,9 @@ def main():
 
             if not profs:
                 continue
+
+            llm_tag = "LLM on" if llm_client else "rules only"
+            print(f"  [{i+1}/{len(filtered)}] {repo_label:<25s} PR #{pr_num:<6d} analyzing {len(profs)} jobs ({llm_tag})...", flush=True)
 
             # Classify + propose
             bottlenecks = classify(profs, wfs, llm_client=llm_client)
@@ -168,7 +228,7 @@ def main():
                 f.write(f"# {title}\n\n{body}")
 
             proc += 1
-            print(f"  [{i+1}/{len(filtered)}] {repo_label:<25s} PR #{pr_num:<6d} {len(bottlenecks)} bottlenecks, {total_saved}m saved")
+            print(f"    ✓ {len(bottlenecks)} bottlenecks, {len(optimizations)} optimizations, {total_saved}m saved", flush=True)
 
         except Exception as e:
             errors += 1
