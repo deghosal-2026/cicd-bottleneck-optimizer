@@ -6,6 +6,7 @@ from nodes.profile import profile_jobs_node
 from nodes.classify import classify_bottlenecks_node
 from nodes.optimize import propose_optimizations_node, simulate_savings_node
 from nodes.pr import interrupt_node
+from nodes.generate import generate_yaml_node, validate_syntax_node
 from llm.client import LLMClient
 from tools.github import GitHubClient
 import config as cfg
@@ -47,8 +48,8 @@ def build_graph(config_path: str | None = None):
     graph.add_node("propose_optimizations", with_llm(propose_optimizations_node))
     graph.add_node("simulate_savings", simulate_savings_node)
     graph.add_node("interrupt_for_approval", interrupt_node)
-    graph.add_node("generate_yaml", lambda s: {**s, "rewritten_yaml": ""})
-    graph.add_node("validate_syntax", lambda s: {**s, "validation_attempts": s.get("validation_attempts", 0) + 1})
+    graph.add_node("generate_yaml", generate_yaml_node)
+    graph.add_node("validate_syntax", validate_syntax_node)
     graph.add_node("open_pr", lambda s: {**s, "pr_url": "https://github.com/fake/pr"})
 
     graph.set_conditional_entry_point(route_by_mode, {

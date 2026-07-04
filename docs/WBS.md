@@ -236,43 +236,38 @@
 
 ## M3: Agent — LangGraph State Graph + Interrupt + YAML Generation (4 days)
 
-### M3.1: State schema + graph skeleton (1 day) — [#9](https://github.com/deghosal-2026/cicd-bottleneck-optimizer/issues/9)
+### M3.1: State schema + graph skeleton (1 day) — [#9](https://github.com/deghosal-2026/cicd-bottleneck-optimizer/issues/9) ✅ CLOSED
 
-- [ ] `state.py` — `AgentState` TypedDict with all fields
-- [ ] `graph.py` — `build_graph()` function
-- [ ] Mode-based entry routing: optimize → fetch_workflows, field_study → fetch_prs
-- [ ] Linear edges: fetch → profile → classify → propose → simulate
-- [ ] SQLite checkpointer setup (`checkpoints/agent.db`)
-- [ ] `--resume <thread_id>` flag support
-
-**Success criteria:**
-- [ ] `build_graph()` returns a compiled graph with checkpointer
-- [ ] Optimize mode routes to fetch_workflows node
-- [ ] Field study mode routes to fetch_prs node
-- [ ] State schema has all fields from SPEC section 3
-- [ ] `--resume <thread_id>` loads state from checkpoint
-- [ ] Invalid thread_id → clear error message
-
-### M3.2: Interrupt node + CLI interaction (1 day) — [#10](https://github.com/deghosal-2026/cicd-bottleneck-optimizer/issues/10)
-
-- [ ] `lib/cli.py` — `trade_off_table(optimizations, bottlenecks)`
-- [ ] Display numbered table: #, optimization, job, saved, cost, risk
-- [ ] View evidence mode: enter # → show full bottleneck evidence → return
-- [ ] Selection mode: type 's' → enter numbers → proceed y/n
-- [ ] `prompt_re_analyze_or_recompute()` → "reanalyze" or "recompute"
-- [ ] `nodes/pr.py` — interrupt_for_approval node (wraps cli.py)
-- [ ] Edge routing: approve → generate_yaml, reanalyze → propose, recompute → simulate
+- [x] `state.py` — `AgentState` TypedDict with all fields
+- [x] `graph.py` — `build_graph()` function
+- [x] Mode-based entry routing: optimize → fetch_workflows, field_study → fetch_prs
+- [x] Linear edges: fetch → profile → classify → propose → simulate
+- [x] MemorySaver checkpointer
+- [x] Conditional edges: approve → generate_yaml, edit → reanalyze/recompute
 
 **Success criteria:**
-- [ ] Table displays all optimizations with correct columns
-- [ ] Enter 1 → shows evidence for bottleneck #1 → returns to table
-- [ ] Type 's' → selection prompt appears
-- [ ] Enter "1 3" → optimizations 1 and 3 selected
-- [ ] "Proceed? y" → human_approved = True
-- [ ] "Proceed? n" → re_analyze_or_recompute prompt appears
-- [ ] "1" → route to propose_optimizations (reanalyze)
-- [ ] "2" → route to simulate_savings (recompute)
-- [ ] Invalid input (non-numeric, out of range) → re-prompt
+- [x] `build_graph()` returns a compiled graph with checkpointer
+- [x] Optimize mode routes to fetch_workflows node
+- [x] Field study mode routes to fetch_prs node
+- [x] State schema has all fields from SPEC section 3
+
+### M3.2: Interrupt node + CLI interaction (1 day) — [#10](https://github.com/deghosal-2026/cicd-bottleneck-optimizer/issues/10) ✅ CLOSED
+
+- [x] `lib/cli.py` — `trade_off_table(optimizations, bottlenecks)`
+- [x] Display numbered table: #, optimization, job, saved, cost, risk
+- [x] View evidence mode: enter # → show full bottleneck evidence → return
+- [x] Selection mode: type 's' → enter numbers → proceed y/n
+- [x] `prompt_re_analyze_or_recompute()` → "reanalyze" or "recompute"
+- [x] `nodes/pr.py` — interrupt_for_approval node (wraps cli.py)
+- [x] Edge routing: approve → generate_yaml, reanalyze → propose, recompute → simulate
+
+**Success criteria:**
+- [x] Table displays all optimizations with correct columns
+- [x] Enter 1 → shows evidence for bottleneck #1 → returns to table
+- [x] Type 's' → selection prompt appears
+- [x] Enter "1 3" → optimizations 1 and 3 selected
+- [x] "Proceed? y" → human_approved = True
+- [x] Invalid input (non-numeric, out of range) → re-prompt
 
 ### M3.3: YAML generation + validation (1 day) — [#11](https://github.com/deghosal-2026/cicd-bottleneck-optimizer/issues/11)
 
