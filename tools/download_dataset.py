@@ -6,6 +6,7 @@ import sys
 import time
 from datetime import datetime, timezone, timedelta
 
+sys.path.insert(0, os.path.dirname(os.path.dirname(os.path.abspath(__file__))))
 from tools.github import GitHubClient
 
 
@@ -67,6 +68,7 @@ def main():
     client = GitHubClient(token)
     since_date = datetime.now(timezone.utc) - timedelta(days=args.since)
     repos = _load_repos(args.repos_file)
+    start_time = time.time()
 
     print(f"Dataset downloader")
     print(f"  Repos: {len(repos)}")
@@ -81,31 +83,35 @@ def main():
     skipped_no_ci = 0
     skipped_non_actions = 0
 
-    for repo in repos:
+    for repo_idx, repo in enumerate(repos):
         repo_label = repo.replace("/", "-")
+        repo_api_start = total_api_calls
+        elapsed = int(time.time() - start_time)
         print(f"\n{'='*60}")
-        print(f"  {repo}")
+        print(f"  [{repo_idx+1}/{len(repos)}] {repo}  (elapsed: {elapsed}s, API calls: {total_api_calls})")
         print(f"{'='*60}")
 
+        print(f"  ● Checking CI system...")
         ci_system = client.detect_ci_system(repo)
         total_api_calls += 1
 
         if ci_system != "github_actions":
-            print(f"  ⚠ Skipping — {ci_system} CI detected (not GitHub Actions)")
+            print(f"  ✗ Skipping — not GitHub Actions (detected: {ci_system})")
             skipped_non_actions += 1
             continue
 
         prs_dir, workflows_dir = ensure_dirs(args.output_dir, repo)
         repo_prs = 0
 
+        print(f"  ● Fetching PR list...")
         try:
             prs = client.fetch_prs([repo], args.pr_limit, args.since)
             total_api_calls += 1
         except Exception as e:
-            print(f"  ❌ Failed to fetch PRs: {e}")
+            print(f"  ✗ Failed to fetch PRs: {e}")
             continue
 
-        print(f"  Fetched {len(prs)} PRs (last {args.since}d)")
+        print(f"  ● Found {len(prs)} PRs in last {args.since}d")
 
         repo_workflow_cache: dict[str, dict] = {}
 
@@ -119,12 +125,16 @@ def main():
             if not head_sha:
                 continue
 
+            print(f"  [{i+1}/{len(prs)}] PR #{pr_number} — fetching CI runs...", end="", flush=True)
             ci_runs = _fetch_ci_runs(client, repo, head_sha, pr_number)
             total_api_calls += ci_runs["api_calls"]
 
             if not ci_runs["runs"]:
                 skipped_no_ci += 1
+                print(f" no CI runs, skipped")
                 continue
+
+            print(f" {len(ci_runs['runs'])} runs, fetching workflows...", end="", flush=True)
 
             workflows = _fetch_workflow_files(client, repo, workflows_dir, repo_workflow_cache)
             total_api_calls += workflows["api_calls"]
@@ -148,16 +158,19 @@ def main():
                 json.dump(pr_data, f, indent=2)
 
             repo_prs += 1
-            _print_progress(i + 1, len(prs), pr_number, pr_title, ci_runs)
+            job_count = sum(len(r.get("jobs", [])) for r in ci_runs["runs"])
+            print(f" saved ({job_count} jobs)")
 
-        print(f"  ✅ {repo_label}: {repo_prs} PRs saved")
+        repo_api_calls = total_api_calls - repo_api_start
         total_prs += repo_prs
+        print(f"  ✓ Repo done: {repo_prs} PRs saved, {len(prs) - repo_prs} skipped (no CI)")
+        print(f"    API calls: {repo_api_calls}")
 
-        if repos.index(repo) < len(repos) - 1:
-            print(f"  Waiting {args.delay}s before next repo...")
+        if repo_idx < len(repos) - 1:
+            print(f"  ○ Waiting {args.delay}s before next repo...")
             time.sleep(args.delay)
 
-    _print_summary(total_prs, total_api_calls, skipped_no_ci, skipped_non_actions, repos)
+    _print_summary(total_prs, total_api_calls, skipped_no_ci, skipped_non_actions, repos, start_time)
 
 
 def _fetch_ci_runs(client: GitHubClient, repo: str, head_sha: str, pr_number: int) -> dict:
@@ -266,18 +279,13 @@ def _load_repos(path: str) -> list[str]:
     return repos or REPOS
 
 
-def _print_progress(idx: int, total: int, pr_number: int, title: str, ci_runs: dict) -> None:
-    run_count = len(ci_runs["runs"])
-    job_count = sum(len(r.get("jobs", [])) for r in ci_runs["runs"])
-    short_title = (title[:50] + "...") if len(title) > 50 else title
-    print(f"  [{idx:2d}/{total}] PR #{pr_number} | {run_count} runs, {job_count} jobs | {short_title}")
-
-
-def _print_summary(total_prs: int, api_calls: int, skipped_no_ci: int, skipped_non_actions: int, repos: list) -> None:
+def _print_summary(total_prs: int, api_calls: int, skipped_no_ci: int, skipped_non_actions: int, repos: list, start_time: float) -> None:
+    elapsed = int(time.time() - start_time)
     print(f"\n{'='*60}")
-    print(f"  DATASET DOWNLOAD COMPLETE")
+    print(f"  DOWNLOAD COMPLETE")
     print(f"{'='*60}")
-    print(f"  Repos processed: {len(repos)}")
+    print(f"  Duration:        {elapsed}s")
+    print(f"  Repos processed: {len(repos) - skipped_non_actions}/{len(repos)}")
     print(f"  PRs saved:       {total_prs}")
     print(f"  Skipped (no CI): {skipped_no_ci}")
     print(f"  Skipped (other): {skipped_non_actions}")

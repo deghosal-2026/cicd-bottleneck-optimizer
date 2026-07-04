@@ -146,10 +146,10 @@ class GitHubClient:
         return data.get("workflow_runs", [])
 
     def detect_ci_system(self, repo: str) -> str:
-        data = self._request("GET", f"/repos/{repo}/contents/.github/workflows")
-        if data is None:
-            return "other"
-        return "github_actions"
+        data = self._request("GET", f"/repos/{repo}/actions/workflows?per_page=1")
+        if data and data.get("total_count", 0) > 0:
+            return "github_actions"
+        return "other"
 
     def check_write_access(self, repo: str) -> bool:
         try:
