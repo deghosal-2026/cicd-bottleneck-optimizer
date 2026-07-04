@@ -119,7 +119,10 @@ def main():
         print(f"  ● Found {len(prs)} PRs in last {args.since}d")
         random.shuffle(prs)
 
-        repo_workflow_cache: dict[str, dict] = {}
+        print(f"  ● Fetching workflow files...")
+        workflow_files = _fetch_workflow_files(client, repo, workflows_dir, {})
+        total_api_calls += workflow_files["api_calls"]
+        print(f"    {len(workflow_files['files'])} unique workflows cached")
 
         for i, pr in enumerate(prs):
             pr_number = pr.get("number")
@@ -131,19 +134,16 @@ def main():
             if not head_sha:
                 continue
 
-            print(f"  [{i+1}/{len(prs)}] PR #{pr_number} — fetching CI runs...", end="", flush=True)
+            print(".", end="", flush=True)
             ci_runs = _fetch_ci_runs(client, repo, head_sha, pr_number)
             total_api_calls += ci_runs["api_calls"]
 
             if not ci_runs["runs"]:
                 skipped_no_ci += 1
-                print(f" no CI runs, skipped")
+                print("-", end="", flush=True)
                 continue
 
-            print(f" {len(ci_runs['runs'])} runs, fetching workflows...", end="", flush=True)
-
-            workflows = _fetch_workflow_files(client, repo, workflows_dir, repo_workflow_cache)
-            total_api_calls += workflows["api_calls"]
+            print("+", end="", flush=True)
 
             pr_data = {
                 "pr_number": pr_number,
@@ -156,7 +156,7 @@ def main():
                 "head_sha": head_sha,
                 "labels": [l.get("name", "") for l in pr.get("labels", [])],
                 "ci_runs": ci_runs["runs"],
-                "workflows": workflows["files"],
+                "workflows": workflow_files["files"],
             }
 
             pr_file = os.path.join(prs_dir, f"{pr_number}.json")
@@ -164,17 +164,15 @@ def main():
                 json.dump(pr_data, f, indent=2)
 
             repo_prs += 1
-            job_count = sum(len(r.get("jobs", [])) for r in ci_runs["runs"])
-            print(f" saved ({job_count} jobs)")
 
         repo_api_calls = total_api_calls - repo_api_start
         total_prs += repo_prs
-        print(f"  ✓ Repo done: {repo_prs} PRs saved, {len(prs) - repo_prs} skipped (no CI)")
-        print(f"    API calls: {repo_api_calls}")
+        print(f"\n  ✓ {repo}: {repo_prs} saved, {len(prs) - repo_prs} skipped, {repo_api_calls} API calls")
 
         if repo_idx < len(repos) - 1:
-            print(f"  ○ Waiting {args.delay}s before next repo...")
-            time.sleep(args.delay)
+            short_wait = min(args.delay, 0.5)
+            if short_wait > 0:
+                time.sleep(short_wait)
 
     _print_summary(total_prs, total_api_calls, skipped_no_ci, skipped_non_actions, repos, start_time)
 
@@ -187,16 +185,33 @@ def _fetch_ci_runs(client: GitHubClient, repo: str, head_sha: str, pr_number: in
     except Exception:
         return result
 
+    latest_run = runs[0] if runs else None
+
     for run in runs:
         run_id = run.get("id")
         if not run_id:
             continue
 
-        try:
-            jobs = client.fetch_jobs(repo, run_id)
-            result["api_calls"] += 1
-        except Exception:
-            jobs = []
+        jobs = []
+        if run is latest_run:
+            try:
+                jobs = client.fetch_jobs(repo, run_id)
+                result["api_calls"] += 1
+            except Exception:
+                jobs = []
+        else:
+            result["runs"].append({
+                "run_id": run_id,
+                "workflow_id": run.get("workflow_id", 0),
+                "workflow_name": run.get("name", ""),
+                "status": run.get("conclusion", run.get("status", "unknown")),
+                "head_sha": run.get("head_sha", ""),
+                "created_at": run.get("created_at", ""),
+                "updated_at": run.get("updated_at", ""),
+                "run_started_at": run.get("run_started_at", ""),
+                "jobs": [],
+            })
+            continue
 
         normalized_jobs = []
         for job in jobs:
