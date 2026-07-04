@@ -1,0 +1,92 @@
+{
+  "pr_number": 38673,
+  "title": "Prepare for 1.16.0-alpha20260603 release",
+  "state": "closed",
+  "author": "hc-github-team-tf-core",
+  "created_at": "2026-06-03T12:15:56Z",
+  "updated_at": "2026-07-04T02:43:27Z",
+  "merged_at": "2026-06-03T12:24:49Z",
+  "head_sha": "d8bbaa5d0d3ee7efc237527a88c51850fc4106c5",
+  "labels": [
+    "skip-changelog-check"
+  ],
+  "ci_runs": [
+    {
+      "run_id": 26884104276,
+      "workflow_id": 179246365,
+      "workflow_name": "Backport Assistant Runner",
+      "status": "success",
+      "head_sha": "d8bbaa5d0d3ee7efc237527a88c51850fc4106c5",
+      "created_at": "2026-06-03T12:16:02Z",
+      "updated_at": "2026-06-03T12:16:12Z",
+      "run_started_at": "2026-06-03T12:16:02Z",
+      "jobs": [
+        {
+          "name": "backport",
+          "status": "success",
+          "started_at": "2026-06-03T12:16:06Z",
+          "completed_at": "2026-06-03T12:16:11Z",
+          "duration_sec": 5
+        }
+      ]
+    },
+    {
+      "run_id": 26884104304,
+      "workflow_id": 278786541,
+      "workflow_name": "Changelog Validation",
+      "status": "skipped",
+      "head_sha": "d8bbaa5d0d3ee7efc237527a88c51850fc4106c5",
+      "created_at": "2026-06-03T12:16:02Z",
+      "updated_at": "2026-06-03T12:16:03Z",
+      "run_started_at": "2026-06-03T12:16:02Z",
+      "jobs": []
+    },
+    {
+      "run_id": 26884103803,
+      "workflow_id": 278786541,
+      "workflow_name": "Changelog Validation",
+      "status": "success",
+      "head_sha": "d8bbaa5d0d3ee7efc237527a88c51850fc4106c5",
+      "created_at": "2026-06-03T12:16:01Z",
+      "updated_at": "2026-06-03T12:16:14Z",
+      "run_started_at": "2026-06-03T12:16:01Z",
+      "jobs": []
+    },
+    {
+      "run_id": 26884103730,
+      "workflow_id": 126957301,
+      "workflow_name": "equivalence-test-diff",
+      "status": "success",
+      "head_sha": "d8bbaa5d0d3ee7efc237527a88c51850fc4106c5",
+      "created_at": "2026-06-03T12:16:01Z",
+      "updated_at": "2026-06-03T12:18:27Z",
+      "run_started_at": "2026-06-03T12:16:01Z",
+      "jobs": []
+    },
+    {
+      "run_id": 26884103715,
+      "workflow_id": 23102955,
+      "workflow_name": "Quick Checks",
+      "status": "success",
+      "head_sha": "d8bbaa5d0d3ee7efc237527a88c51850fc4106c5",
+      "created_at": "2026-06-03T12:16:01Z",
+      "updated_at": "2026-06-03T12:22:23Z",
+      "run_started_at": "2026-06-03T12:16:01Z",
+      "jobs": []
+    }
+  ],
+  "workflows": [
+    {
+      "filename": "issue-comment-created.yml",
+      "hash": "7b39410b950b1b04577cd7d04201e9ce01aaeca7e6daf5af2dbe7286e23ef08e"
+    },
+    {
+      "filename": "lock.yml",
+      "hash": "7606d6b818ae4ff47b39930380d804b9a904124f7dffe6d9bfbba7e715c2f183"
+    },
+    {
+      "filename": "build.yml",
+      "hash": "192267d1041a111b5fb0a96d698602ec33bd95faf16bffb870abd3b3593bfd6c"
+    }
+  ]
+}

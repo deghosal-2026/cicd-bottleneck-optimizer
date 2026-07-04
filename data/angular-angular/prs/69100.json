@@ -1,0 +1,87 @@
+{
+  "pr_number": 69100,
+  "title": "refactor(devtools): Prevent cross-tab privilege escalation",
+  "state": "closed",
+  "author": "JeanMeche",
+  "created_at": "2026-06-02T20:46:34Z",
+  "updated_at": "2026-07-04T00:32:35Z",
+  "merged_at": "2026-06-03T22:47:35Z",
+  "head_sha": "d24b0f7a50414b2dbc2afff65b31ac4d4ba0cfec",
+  "labels": [
+    "action: merge",
+    "target: patch",
+    "area: devtools"
+  ],
+  "ci_runs": [
+    {
+      "run_id": 26909255094,
+      "workflow_id": 81905725,
+      "workflow_name": "Build adev for preview deployment",
+      "status": "skipped",
+      "head_sha": "d24b0f7a50414b2dbc2afff65b31ac4d4ba0cfec",
+      "created_at": "2026-06-03T19:53:28Z",
+      "updated_at": "2026-06-03T19:53:29Z",
+      "run_started_at": "2026-06-03T19:53:28Z",
+      "jobs": [
+        {
+          "name": "adev-build",
+          "status": "skipped",
+          "started_at": "2026-06-03T19:53:29Z",
+          "completed_at": "2026-06-03T19:53:29Z",
+          "duration_sec": 0
+        }
+      ]
+    },
+    {
+      "run_id": 26909253216,
+      "workflow_id": 81905725,
+      "workflow_name": "Build adev for preview deployment",
+      "status": "skipped",
+      "head_sha": "d24b0f7a50414b2dbc2afff65b31ac4d4ba0cfec",
+      "created_at": "2026-06-03T19:53:25Z",
+      "updated_at": "2026-06-03T19:53:26Z",
+      "run_started_at": "2026-06-03T19:53:25Z",
+      "jobs": []
+    },
+    {
+      "run_id": 26897904520,
+      "workflow_id": 81905725,
+      "workflow_name": "Build adev for preview deployment",
+      "status": "skipped",
+      "head_sha": "d24b0f7a50414b2dbc2afff65b31ac4d4ba0cfec",
+      "created_at": "2026-06-03T16:18:30Z",
+      "updated_at": "2026-06-03T16:18:32Z",
+      "run_started_at": "2026-06-03T16:18:30Z",
+      "jobs": []
+    },
+    {
+      "run_id": 26897902926,
+      "workflow_id": 98951684,
+      "workflow_name": "Pull Request",
+      "status": "success",
+      "head_sha": "d24b0f7a50414b2dbc2afff65b31ac4d4ba0cfec",
+      "created_at": "2026-06-03T16:18:28Z",
+      "updated_at": "2026-06-03T16:28:22Z",
+      "run_started_at": "2026-06-03T16:18:28Z",
+      "jobs": []
+    }
+  ],
+  "workflows": [
+    {
+      "filename": "dev-infra.yml",
+      "hash": "0324771d031f8d4ca9a1c3b675ee31b460a5d25e756b8cbe712977c3d5173c0b"
+    },
+    {
+      "filename": "scorecard.yml",
+      "hash": "05d1e6029bf61cfeb3512feee84d44a15e8444be71aa06e7903f2c4a577a8911"
+    },
+    {
+      "filename": "google-internal-tests.yml",
+      "hash": "3a68e85f2e757c7b86ccc8adb0aa9a246cdf914829328a50896622a7ae4ef5d8"
+    },
+    {
+      "filename": "assistant-to-the-branch-manager.yml",
+      "hash": "1111a82e3a71313e17d32a3fd2e2bd3514e36ea9187c49976754dd6b3e587b2d"
+    }
+  ]
+}

@@ -98,12 +98,19 @@ class GitHubClient:
         return data.get("workflows", [])
 
     def fetch_workflow_file(self, repo: str, workflow_id: int) -> str | None:
+        import urllib.error
+
         path = f"/repos/{repo}/actions/workflows/{workflow_id}"
         data = self._request("GET", path)
         if not data:
             return None
         file_path = data.get("path", "")
-        contents = self._request("GET", f"/repos/{repo}/contents/{file_path}")
+        if not file_path.endswith(".yml") and not file_path.endswith(".yaml"):
+            return None
+        try:
+            contents = self._request("GET", f"/repos/{repo}/contents/{file_path}")
+        except urllib.error.HTTPError:
+            return None
         if not contents:
             return None
         import base64
@@ -128,8 +135,10 @@ class GitHubClient:
         cutoff = datetime.datetime.now(datetime.timezone.utc) - datetime.timedelta(days=since_days)
 
         for repo in repos:
-            prs = self._paginate(f"/repos/{repo}/pulls?state=all&sort=updated&direction=desc&per_page={limit}")
-            filtered = [pr for pr in prs if pr.get("updated_at") and self._parse_iso(pr["updated_at"]) >= cutoff]
+            data = self._request("GET", f"/repos/{repo}/pulls?state=all&sort=updated&direction=desc&per_page={limit}")
+            if not data or not isinstance(data, list):
+                continue
+            filtered = [pr for pr in data if pr.get("updated_at") and self._parse_iso(pr["updated_at"]) >= cutoff]
             all_prs.extend(filtered[:limit])
         return all_prs
 
