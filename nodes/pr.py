@@ -20,6 +20,8 @@ def interrupt_node(state: dict) -> dict:
 
 
 def open_pr_node(state: dict, client: GitHubClient) -> dict:
+    import os
+
     repo = state.get("repo_url", "")
     rewritten = state.get("rewritten_yaml", "")
     optimizations = state.get("optimizations", [])
@@ -29,35 +31,37 @@ def open_pr_node(state: dict, client: GitHubClient) -> dict:
     workflows = state.get("workflows", [])
 
     if not rewritten or not repo:
-        return {**state, "pr_url": None, "errors": state.get("errors", []) + ["No YAML to commit"]}
+        return {**state, "pr_url": None, "errors": state.get("errors", []) + ["No YAML to generate"]}
 
     selected = [o for o in optimizations if o["id"] in selected_ids]
     slug = _make_slug(selected)
-    branch = f"ci-optimizer/{slug}-{uuid.uuid4().hex[:6]}"
+    repo_dir = repo.replace("/", "-")
+    output_base = os.path.join("output", repo_dir)
 
     workflow_path = workflows[0].get("filename", "workflow.yml") if workflows else "workflow.yml"
     if not workflow_path.endswith(".yml"):
         workflow_path += ".yml"
 
-    try:
-        client.create_branch(repo, branch)
-        client.create_commit(repo, branch, f".github/workflows/{workflow_path}", rewritten)
-    except Exception as e:
-        return {**state, "pr_url": None, "errors": state.get("errors", []) + [f"Failed to create branch/commit: {e}"]}
+    os.makedirs(os.path.join(output_base, "workflows"), exist_ok=True)
 
+    # Save rewritten YAML
+    yaml_path = os.path.join(output_base, "workflows", f"optimized-{workflow_path}")
+    with open(yaml_path, "w") as f:
+        f.write(rewritten)
+
+    # Save PR body
     title = _make_title(selected)
-    body = _make_pr_body(repo, selected, bottlenecks, profiles, rewritten, branch)
+    body = _make_pr_body(repo, selected, bottlenecks, profiles, rewritten, slug)
+    pr_path = os.path.join(output_base, "PR.md")
+    with open(pr_path, "w") as f:
+        f.write(f"# {title}\n\n{body}")
 
-    try:
-        pr_url = client.create_pr(repo, branch, title, body)
-    except Exception as e:
-        return {**state, "pr_url": None, "errors": state.get("errors", []) + [f"Failed to create PR: {e}"]}
-
-    print(f"  PR opened: {pr_url}")
+    print(f"  Saved: {yaml_path}")
+    print(f"  Saved: {pr_path}")
 
     return {
-        "pr_url": pr_url,
-        "rewritten_yaml_path": f".github/workflows/{workflow_path}",
+        "pr_url": None,
+        "rewritten_yaml_path": yaml_path,
         "errors": state.get("errors", []),
     }
 
