@@ -19,6 +19,9 @@ poetry.lock
 # macOS
 .DS_Store
 
+# Runtime logs
+logs/
+
 # Testing
 .coverage
 htmlcov/

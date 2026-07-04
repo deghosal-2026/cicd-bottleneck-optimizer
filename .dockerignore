@@ -1,0 +1,15 @@
+.git/
+.gitignore
+.venv/
+__pycache__/
+*.pyc
+.DS_Store
+.pytest_cache/
+checkpoints/
+config.yaml
+data/
+logs/
+output/
+tests/
+docs/
+*.md

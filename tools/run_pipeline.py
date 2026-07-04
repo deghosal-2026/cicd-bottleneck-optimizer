@@ -11,6 +11,7 @@ Usage:
   python3 tools/run_pipeline.py --groq --resume             # skip already-analyzed PRs
   python3 tools/run_pipeline.py --no-llm                    # rules only
   python3 tools/run_pipeline.py --since 90                  # last 90 days
+  python3 tools/run_pipeline.py --review                    # interactive review per PR
 """
 
 import argparse
@@ -27,6 +28,7 @@ from lib.classifier import classify
 from lib.optimizer import propose, simulate
 from lib.generator import rewrite
 from lib.validator import validate
+from lib.cli import LogWriter, _fmt_time, trade_off_table
 from nodes.pr import _make_title, _make_pr_body
 from llm.client import LLMClient
 import config as cfg
@@ -78,6 +80,7 @@ def parse_args():
     p.add_argument("--zen-model", default="deepseek-v4-flash", help="Zen model (paid: deepseek-v4-flash; free: deepseek-v4-flash-free, big-pickle, mimo-v2.5-free)")
     p.add_argument("--zen-token", default="", help="Zen API key (reads from auth.json if empty)")
     p.add_argument("--resume", action="store_true", help="Skip already-analyzed PRs")
+    p.add_argument("--review", action="store_true", help="Interactive review: show trade-off table per PR, skip save")
     p.add_argument("--config", help="Path to config.yaml")
     return p.parse_args()
 
@@ -146,13 +149,18 @@ def main():
     if args.max > 0:
         filtered = filtered[: args.max]
 
+    log = LogWriter()
+    log.write("pipeline", "INFO", f"Start: {llm_label}, since={args.since}d, max={args.max or 'unlimited'}")
+
     proc = 0
     errors = 0
 
-    print(f"Cached PRs: {len(filtered)} (last {args.since}d)")
-    print(f"LLM:        {llm_label}")
-    print(f"Output:     {args.output}/")
-    print()
+    print(f"Cached PRs: {len(filtered)} (last {args.since}d)", file=sys.stderr)
+    print(f"LLM:        {llm_label}", file=sys.stderr)
+    print(f"Output:     {args.output}/", file=sys.stderr)
+    if args.review:
+        print(f"Review:     interactive", file=sys.stderr)
+    print(file=sys.stderr)
 
     for i, path in enumerate(filtered):
         try:
@@ -198,20 +206,51 @@ def main():
                 continue
 
             llm_tag = "LLM on" if llm_client else "rules only"
-            print(f"  [{i+1}/{len(filtered)}] {repo_label:<25s} PR #{pr_num:<6d} analyzing {len(profs)} jobs ({llm_tag})...", flush=True)
+            print(f"  [{i+1}/{len(filtered)}] {repo_label:<25s} PR #{pr_num:<6d} analyzing {len(profs)} jobs ({llm_tag})...", file=sys.stderr, flush=True)
+            t_start = time.time()
 
             # Classify + propose
             bottlenecks = classify(profs, wfs, llm_client=llm_client)
+            t_classify = time.time()
+            log.write("classify", "INFO", f"{repo_label} PR #{pr_num}: {len(bottlenecks)} bottlenecks", duration_ms=int((t_classify - t_start) * 1000))
+
             optimizations = propose(bottlenecks, profs, llm_client=llm_client)
+            t_propose = time.time()
+            log.write("propose", "INFO", f"{repo_label} PR #{pr_num}: {len(optimizations)} optimizations", duration_ms=int((t_propose - t_classify) * 1000))
+
             total_saved = simulate(optimizations)
+            log.write("simulate", "INFO", f"{repo_label} PR #{pr_num}: {total_saved}m saved", duration_ms=0, tokens=0)
 
             if not optimizations:
+                print(f"    No optimizations found", file=sys.stderr, flush=True)
+                continue
+
+            # --review: interactive trade-off table, skip save
+            if args.review:
+                print(f"\n  ── Reviewing {repo_label} PR #{pr_num} ──", file=sys.stderr)
+                selected_ids, approved = trade_off_table(optimizations, bottlenecks)
+                if not approved:
+                    print(f"    Skipped (not approved)\n", file=sys.stderr)
+                    log.write("review", "SKIP", f"{repo_label} PR #{pr_num}: not approved")
+                    continue
+                # Filter to selected optimizations only
+                optimizations = [o for o in optimizations if o.get("id") in selected_ids]
+                if not optimizations:
+                    print(f"    No optimizations selected\n", file=sys.stderr)
+                    continue
+                log.write("review", "INFO", f"{repo_label} PR #{pr_num}: approved {len(optimizations)} optimizations")
+                total_saved = simulate(optimizations)
+                print(f"    Approved: {len(optimizations)} optimizations, {total_saved}m saved\n", file=sys.stderr)
+                # Skip YAML generation and saving in review mode
+                proc += 1
                 continue
 
             # Generate YAML
             selected_ids = [o["id"] for o in optimizations]
             rewritten = rewrite(wfs, selected_ids, optimizations)
             is_valid, _ = validate(rewritten)
+
+            log.write("generate", "INFO", f"{repo_label} PR #{pr_num}: YAML valid={is_valid}", duration_ms=0)
 
             # Save locally
             out_dir = os.path.join(args.output, os.path.basename(repo_dir))
@@ -227,15 +266,21 @@ def main():
             with open(pr_path, "w") as f:
                 f.write(f"# {title}\n\n{body}")
 
+            log.write("save", "INFO", f"{repo_label} PR #{pr_num}: report saved to {pr_path}")
+
             proc += 1
-            print(f"    ✓ {len(bottlenecks)} bottlenecks, {len(optimizations)} optimizations, {total_saved}m saved", flush=True)
+            print(f"    ✓ {len(bottlenecks)} bottlenecks, {len(optimizations)} optimizations, {total_saved}m saved", file=sys.stderr, flush=True)
 
         except Exception as e:
             errors += 1
-            print(f"  [{i+1}/{len(filtered)}] ERROR: {e}")
+            log.write("pipeline", "ERROR", f"{path}: {e}")
+            print(f"  [{i+1}/{len(filtered)}] ERROR: {e}", file=sys.stderr)
 
-    print(f"\nDone. {proc} PRs processed, {errors} errors")
-    print(f"Output: {args.output}/")
+    log.write("pipeline", "INFO", f"Done: {proc} PRs processed, {errors} errors")
+    log.close()
+    print(f"\nDone. {proc} PRs processed, {errors} errors", file=sys.stderr)
+    print(f"Output:   {args.output}/", file=sys.stderr)
+    print(f"Log:      {log.path}", file=sys.stderr)
 
 
 if __name__ == "__main__":

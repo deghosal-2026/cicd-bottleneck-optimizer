@@ -1,4 +1,51 @@
-"""CLI interaction for human-in-the-loop: trade-off table, evidence view, selection."""
+"""CLI interaction: trade-off table, evidence view, JSON logging, summary tables."""
+
+import json
+import os
+import sys
+from datetime import datetime
+
+
+class LogWriter:
+    """JSON lines logger to logs/run-<timestamp>.jsonl.
+
+    Each entry: ts, node, duration_ms, tokens, level, message.
+    """
+
+    def __init__(self, log_dir: str = "logs"):
+        os.makedirs(log_dir, exist_ok=True)
+        ts = datetime.now().strftime("%Y%m%d_%H%M%S")
+        self.path = os.path.join(log_dir, f"run-{ts}.jsonl")
+        self._fh = open(self.path, "w")
+        self._write({"ts": datetime.now().isoformat(), "node": "__init__", "level": "INFO", "message": f"Log started: {self.path}"})
+
+    def write(self, node: str, level: str, message: str, duration_ms: int = 0, tokens: int = 0):
+        self._write({
+            "ts": datetime.now().isoformat(),
+            "node": node,
+            "duration_ms": duration_ms,
+            "tokens": tokens,
+            "level": level,
+            "message": message,
+        })
+
+    def _write(self, entry: dict):
+        self._fh.write(json.dumps(entry) + "\n")
+        self._fh.flush()
+
+    def close(self):
+        self._fh.close()
+
+
+def _fmt_time(minutes: int | float) -> str:
+    """Format minutes as human-readable time string."""
+    m = int(round(minutes))
+    if m < 1:
+        return "<1m"
+    h, rem = divmod(m, 60)
+    if h > 0:
+        return f"{h}h {rem}m"
+    return f"{m}m"
 
 
 def trade_off_table(optimizations: list[dict], bottlenecks: list[dict]) -> tuple[list[str], bool]:
@@ -129,11 +176,12 @@ def prompt_re_analyze_or_recompute() -> str:
 
 
 def summary_table(results: list[dict]) -> None:
-    """Print field study summary table."""
-    print()
-    print(f"{'Repo':<30s} {'PR #':<8s} {'Bottlenecks':<12s} {'Min Wasted':<12s} {'Top Rec'}")
-    print("-" * 80)
+    """Print field study summary table to stderr."""
+    print(file=sys.stderr)
+    wasted_hdr = "Wasted"
+    print(f"{'Repo':<30s} {'PR #':<8s} {'Bottlenecks':<12s} {wasted_hdr:<12s} {'Top Rec'}", file=sys.stderr)
+    print("-" * 80, file=sys.stderr)
     for r in sorted(results, key=lambda x: -x.get("total_wasted", 0)):
         print(f"{r.get('repo', ''):<30s} {r.get('pr_number', 0):<8d} "
-              f"{r.get('bottleneck_count', 0):<12d} {r.get('total_wasted', 0):<12d} "
-              f"{str(r.get('top_rec', ''))[:25]}")
+              f"{r.get('bottleneck_count', 0):<12d} {_fmt_time(r.get('total_wasted', 0)):<12s} "
+              f"{str(r.get('top_rec', ''))[:25]}", file=sys.stderr)
