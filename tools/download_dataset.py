@@ -2,6 +2,7 @@ import argparse
 import hashlib
 import json
 import os
+import random
 import sys
 import time
 from datetime import datetime, timezone, timedelta
@@ -68,6 +69,7 @@ def main():
     client = GitHubClient(token)
     since_date = datetime.now(timezone.utc) - timedelta(days=args.since)
     repos = _load_repos(args.repos_file)
+    random.shuffle(repos)
     start_time = time.time()
 
     print(f"Dataset downloader")
@@ -112,6 +114,7 @@ def main():
             continue
 
         print(f"  ● Found {len(prs)} PRs in last {args.since}d")
+        random.shuffle(prs)
 
         repo_workflow_cache: dict[str, dict] = {}
 
