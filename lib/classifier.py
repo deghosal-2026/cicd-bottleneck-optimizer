@@ -105,7 +105,7 @@ def _check_redundant_matrix(jobs: list[dict], profiles: list[dict]) -> list[dict
     for job in jobs:
         name = job["name"]
         matrix = job.get("matrix")
-        if not matrix:
+        if not matrix or not isinstance(matrix, dict):
             continue
 
         dimensions = {k: v for k, v in matrix.items() if isinstance(v, list)}
@@ -220,7 +220,8 @@ def _parse_llm_bottlenecks(raw: str) -> list[dict]:
         if not isinstance(item, dict):
             continue
         btype = item.get("type", "")
-        if btype not in VALID_TYPES:
+        job_name = item.get("job_name", "")
+        if btype not in VALID_TYPES or not job_name:
             continue
         item.setdefault("severity", "medium")
         item.setdefault("evidence", "Identified by LLM analysis.")

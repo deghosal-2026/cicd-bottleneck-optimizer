@@ -197,26 +197,26 @@
 - [x] OMLX down → prompt appears → y → cloud used → tokens tracked
 - [x] OMLX down → prompt → n → clear error message
 
-### M2.3: Optimization proposer (1 day) — [#8](https://github.com/deghosal-2026/cicd-bottleneck-optimizer/issues/8)
+### M2.3: Optimization proposer (1 day) — [#8](https://github.com/deghosal-2026/cicd-bottleneck-optimizer/issues/8) ✅ CLOSED
 
-- [ ] `lib/optimizer.py` — `propose(bottlenecks, profiles)` → `Optimization[]`
-- [ ] Each optimization: id, description, time_saved, cost, risk, yaml_diff_hint
-- [ ] Cost calc: runner $0.008/min, cache $0.007/GB-month (hardcoded)
-- [ ] Risk: add_cache=low, parallelize=medium, reduce_matrix=high, split_job=high
-- [ ] `simulate(optimizations)` → total saved min across selected
-- [ ] `nodes/optimize.py` — propose_optimizations + simulate_savings graph nodes
-- [ ] LLM generates candidate optimizations from bottleneck + profile context
+- [x] `lib/optimizer.py` — `propose(bottlenecks, profiles)` → `Optimization[]`
+- [x] Each optimization: id, description, time_saved, cost, risk, yaml_diff_hint
+- [x] Cost calc: runner $0.008/min, cache $0.007/GB-month (hardcoded)
+- [x] Risk: add_cache=low, parallelize=medium, reduce_matrix=high, split_job=high
+- [x] `simulate(optimizations)` → total saved min across selected
+- [x] `nodes/optimize.py` — propose_optimizations + simulate_savings graph nodes
+- [x] LLM enhancement (DeepSeek-Coder) refines descriptions, time estimates, risk
 
 **Success criteria:**
-- [ ] Each bottleneck → ≥ 1 optimization with all fields populated
-- [ ] 5 min on runner → $0.04 cost
-- [ ] 2 GB cache 1 month → $0.014 cost
-- [ ] Add cache → risk = low
-- [ ] Parallelize → risk = medium
-- [ ] Reduce matrix → risk = high
-- [ ] 3 optimizations (5, 3, 2 min) → simulate = 10 min
-- [ ] 0 optimizations → simulate = 0 min
-- [ ] Optimization IDs are unique
+- [x] Each bottleneck → ≥ 1 optimization with all fields populated
+- [x] 5 min on runner → $0.04 cost
+- [x] 2 GB cache 1 month → $0.014 cost
+- [x] Add cache → risk = low
+- [x] Parallelize → risk = medium
+- [x] Reduce matrix → risk = high
+- [x] 3 optimizations (5, 3, 2 min) → simulate = 10 min
+- [x] 0 optimizations → simulate = 0 min
+- [x] Optimization IDs are unique (uuid-based)
 
 ### M2.4: Classifier + optimizer tests (1 day) — [#12](https://github.com/deghosal-2026/cicd-bottleneck-optimizer/issues/12)
 
