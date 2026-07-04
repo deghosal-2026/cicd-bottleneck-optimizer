@@ -1,0 +1,70 @@
+{
+  "pr_number": 38779,
+  "title": "Cleanup after 1.15.7 release",
+  "state": "closed",
+  "author": "hc-github-team-tf-core",
+  "created_at": "2026-06-24T16:43:51Z",
+  "updated_at": "2026-06-24T17:34:15Z",
+  "merged_at": "2026-06-24T17:34:12Z",
+  "head_sha": "356b298cc6055cacc709416a3880213631cf9bb4",
+  "labels": [
+    "skip-changelog-check"
+  ],
+  "ci_runs": [
+    {
+      "run_id": 28114505685,
+      "workflow_id": 179246365,
+      "workflow_name": "Backport Assistant Runner",
+      "status": "success",
+      "head_sha": "356b298cc6055cacc709416a3880213631cf9bb4",
+      "created_at": "2026-06-24T16:43:56Z",
+      "updated_at": "2026-06-24T16:44:07Z",
+      "run_started_at": "2026-06-24T16:43:56Z",
+      "jobs": [
+        {
+          "name": "backport",
+          "status": "success",
+          "started_at": "2026-06-24T16:44:00Z",
+          "completed_at": "2026-06-24T16:44:07Z",
+          "duration_sec": 7
+        }
+      ]
+    },
+    {
+      "run_id": 28114505605,
+      "workflow_id": 126957301,
+      "workflow_name": "equivalence-test-diff",
+      "status": "success",
+      "head_sha": "356b298cc6055cacc709416a3880213631cf9bb4",
+      "created_at": "2026-06-24T16:43:56Z",
+      "updated_at": "2026-06-24T16:46:06Z",
+      "run_started_at": "2026-06-24T16:43:56Z",
+      "jobs": []
+    },
+    {
+      "run_id": 28114505548,
+      "workflow_id": 23102955,
+      "workflow_name": "Quick Checks",
+      "status": "success",
+      "head_sha": "356b298cc6055cacc709416a3880213631cf9bb4",
+      "created_at": "2026-06-24T16:43:56Z",
+      "updated_at": "2026-06-24T16:48:34Z",
+      "run_started_at": "2026-06-24T16:43:56Z",
+      "jobs": []
+    }
+  ],
+  "workflows": [
+    {
+      "filename": "issue-comment-created.yml",
+      "hash": "7b39410b950b1b04577cd7d04201e9ce01aaeca7e6daf5af2dbe7286e23ef08e"
+    },
+    {
+      "filename": "lock.yml",
+      "hash": "7606d6b818ae4ff47b39930380d804b9a904124f7dffe6d9bfbba7e715c2f183"
+    },
+    {
+      "filename": "build.yml",
+      "hash": "192267d1041a111b5fb0a96d698602ec33bd95faf16bffb870abd3b3593bfd6c"
+    }
+  ]
+}

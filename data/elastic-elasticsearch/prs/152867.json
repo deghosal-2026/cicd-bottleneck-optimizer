@@ -1,0 +1,70 @@
+{
+  "pr_number": 152867,
+  "title": "ESQL: Solves NoSuchElementException in ViewUnionAll analyzer retries",
+  "state": "closed",
+  "author": "ncordon",
+  "created_at": "2026-07-03T12:17:21Z",
+  "updated_at": "2026-07-03T17:59:50Z",
+  "merged_at": "2026-07-03T15:04:37Z",
+  "head_sha": "510a99b2142baf4d44d45ffc4849958441bf32f1",
+  "labels": [
+    ">bug",
+    "Team:Analytics",
+    "auto-backport",
+    ":Analytics/ES|QL",
+    "v9.5.0",
+    "v9.4.4"
+  ],
+  "ci_runs": [
+    {
+      "run_id": 28662843183,
+      "workflow_id": 146525436,
+      "workflow_name": "docs-build",
+      "status": "success",
+      "head_sha": "510a99b2142baf4d44d45ffc4849958441bf32f1",
+      "created_at": "2026-07-03T13:12:40Z",
+      "updated_at": "2026-07-03T13:12:58Z",
+      "run_started_at": "2026-07-03T13:12:40Z",
+      "jobs": [
+        {
+          "name": "build / check",
+          "status": "success",
+          "started_at": "2026-07-03T13:12:42Z",
+          "completed_at": "2026-07-03T13:12:48Z",
+          "duration_sec": 6
+        },
+        {
+          "name": "build / match",
+          "status": "success",
+          "started_at": "2026-07-03T13:12:42Z",
+          "completed_at": "2026-07-03T13:12:47Z",
+          "duration_sec": 5
+        },
+        {
+          "name": "build / build",
+          "status": "success",
+          "started_at": "2026-07-03T13:12:50Z",
+          "completed_at": "2026-07-03T13:12:57Z",
+          "duration_sec": 7
+        },
+        {
+          "name": "build / vale",
+          "status": "skipped",
+          "started_at": "2026-07-03T13:12:48Z",
+          "completed_at": "2026-07-03T13:12:48Z",
+          "duration_sec": 0
+        }
+      ]
+    }
+  ],
+  "workflows": [
+    {
+      "filename": "gradle-wrapper-validation.yml",
+      "hash": "04526945275c07b7ec8481281931aa653deceed193cbbf514b23cd8d634fae78"
+    },
+    {
+      "filename": "docs-build.yml",
+      "hash": "6772ac2baa16f9669594b6ea59ebfc2a9e1a6b14f3550571e4faacaf2d397023"
+    }
+  ]
+}

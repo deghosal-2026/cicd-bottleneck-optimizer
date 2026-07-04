@@ -1,0 +1,68 @@
+{
+  "pr_number": 38594,
+  "title": "fix: Block commands from using an invalid workspace name.",
+  "state": "closed",
+  "author": "SarahFrench",
+  "created_at": "2026-05-15T10:06:17Z",
+  "updated_at": "2026-06-27T02:44:00Z",
+  "merged_at": "2026-05-27T13:16:03Z",
+  "head_sha": "7e9e8274ecf8a6a7d2ffc9ebe73ad6497ce525d3",
+  "labels": [],
+  "ci_runs": [
+    {
+      "run_id": 26508522708,
+      "workflow_id": 278786541,
+      "workflow_name": "Changelog Validation",
+      "status": "success",
+      "head_sha": "7e9e8274ecf8a6a7d2ffc9ebe73ad6497ce525d3",
+      "created_at": "2026-05-27T11:30:53Z",
+      "updated_at": "2026-05-27T11:31:05Z",
+      "run_started_at": "2026-05-27T11:30:53Z",
+      "jobs": [
+        {
+          "name": "Validate Changelog",
+          "status": "success",
+          "started_at": "2026-05-27T11:30:57Z",
+          "completed_at": "2026-05-27T11:31:04Z",
+          "duration_sec": 7
+        }
+      ]
+    },
+    {
+      "run_id": 26508522781,
+      "workflow_id": 126957301,
+      "workflow_name": "equivalence-test-diff",
+      "status": "success",
+      "head_sha": "7e9e8274ecf8a6a7d2ffc9ebe73ad6497ce525d3",
+      "created_at": "2026-05-27T11:30:53Z",
+      "updated_at": "2026-05-27T11:33:04Z",
+      "run_started_at": "2026-05-27T11:30:53Z",
+      "jobs": []
+    },
+    {
+      "run_id": 26508522804,
+      "workflow_id": 23102955,
+      "workflow_name": "Quick Checks",
+      "status": "success",
+      "head_sha": "7e9e8274ecf8a6a7d2ffc9ebe73ad6497ce525d3",
+      "created_at": "2026-05-27T11:30:53Z",
+      "updated_at": "2026-05-27T11:36:42Z",
+      "run_started_at": "2026-05-27T11:30:53Z",
+      "jobs": []
+    }
+  ],
+  "workflows": [
+    {
+      "filename": "issue-comment-created.yml",
+      "hash": "7b39410b950b1b04577cd7d04201e9ce01aaeca7e6daf5af2dbe7286e23ef08e"
+    },
+    {
+      "filename": "lock.yml",
+      "hash": "7606d6b818ae4ff47b39930380d804b9a904124f7dffe6d9bfbba7e715c2f183"
+    },
+    {
+      "filename": "build.yml",
+      "hash": "192267d1041a111b5fb0a96d698602ec33bd95faf16bffb870abd3b3593bfd6c"
+    }
+  ]
+}

@@ -1,0 +1,64 @@
+{
+  "pr_number": 57430,
+  "title": "Fix CQS signal modernize-use-designated-initializers in xplat/yoga/yoga/algorithm",
+  "state": "closed",
+  "author": "meta-codesync[bot]",
+  "created_at": "2026-07-03T15:00:52Z",
+  "updated_at": "2026-07-03T16:53:21Z",
+  "merged_at": null,
+  "head_sha": "50b1e837139f58d2ad3e0cb7aa76b7dc836521df",
+  "labels": [
+    "CLA Signed",
+    "meta-exported"
+  ],
+  "ci_runs": [
+    {
+      "run_id": 28668487549,
+      "workflow_id": 244203896,
+      "workflow_name": "Validate C++ API Snapshots",
+      "status": "success",
+      "head_sha": "50b1e837139f58d2ad3e0cb7aa76b7dc836521df",
+      "created_at": "2026-07-03T15:00:55Z",
+      "updated_at": "2026-07-03T15:03:56Z",
+      "run_started_at": "2026-07-03T15:00:55Z",
+      "jobs": [
+        {
+          "name": "validate_cxx_api_snapshots",
+          "status": "success",
+          "started_at": "2026-07-03T15:01:00Z",
+          "completed_at": "2026-07-03T15:03:55Z",
+          "duration_sec": 175
+        }
+      ]
+    },
+    {
+      "run_id": 28668487662,
+      "workflow_id": 85394709,
+      "workflow_name": "Test All",
+      "status": "success",
+      "head_sha": "50b1e837139f58d2ad3e0cb7aa76b7dc836521df",
+      "created_at": "2026-07-03T15:00:55Z",
+      "updated_at": "2026-07-03T16:50:26Z",
+      "run_started_at": "2026-07-03T15:00:55Z",
+      "jobs": []
+    }
+  ],
+  "workflows": [
+    {
+      "filename": "needs-attention.yml",
+      "hash": "65a4a6cc5fcc5896e78ea357cfe209eec2845f173e8bd642ae2d343bfc66deba"
+    },
+    {
+      "filename": "on-issue-labeled.yml",
+      "hash": "7673645f1d0ba0da4c9c7d4f714f8376b8a20f1d6e553304c01769e627efc3d6"
+    },
+    {
+      "filename": "stale-bot.yml",
+      "hash": "1f4dfbb4734e1d14d7263a05e04d3b3c096e1210783c61bf98c57a5d86cd79f2"
+    },
+    {
+      "filename": "autorebase.yml",
+      "hash": "617b8a9799890a1d5010ff20bc08c4064fbffe3d3be0a1049ada31ccd0fc0a61"
+    }
+  ]
+}

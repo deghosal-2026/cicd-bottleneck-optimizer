@@ -1,0 +1,68 @@
+{
+  "pr_number": 152450,
+  "title": "ES|QL|DS: Push heavy aggregates (incl. filtered) through UnionAll",
+  "state": "open",
+  "author": "julian-elastic",
+  "created_at": "2026-06-29T19:06:02Z",
+  "updated_at": "2026-07-03T23:54:26Z",
+  "merged_at": null,
+  "head_sha": "75c2ab6472df9988b8b8021df61cd2996ebd156f",
+  "labels": [
+    ">enhancement",
+    "Team:Analytics",
+    ":Analytics/ES|QL",
+    "v9.5.0"
+  ],
+  "ci_runs": [
+    {
+      "run_id": 28688433896,
+      "workflow_id": 146525436,
+      "workflow_name": "docs-build",
+      "status": "success",
+      "head_sha": "75c2ab6472df9988b8b8021df61cd2996ebd156f",
+      "created_at": "2026-07-03T23:54:30Z",
+      "updated_at": "2026-07-03T23:54:46Z",
+      "run_started_at": "2026-07-03T23:54:30Z",
+      "jobs": [
+        {
+          "name": "build / match",
+          "status": "success",
+          "started_at": "2026-07-03T23:54:33Z",
+          "completed_at": "2026-07-03T23:54:38Z",
+          "duration_sec": 5
+        },
+        {
+          "name": "build / check",
+          "status": "success",
+          "started_at": "2026-07-03T23:54:33Z",
+          "completed_at": "2026-07-03T23:54:39Z",
+          "duration_sec": 6
+        },
+        {
+          "name": "build / build",
+          "status": "success",
+          "started_at": "2026-07-03T23:54:41Z",
+          "completed_at": "2026-07-03T23:54:45Z",
+          "duration_sec": 4
+        },
+        {
+          "name": "build / vale",
+          "status": "skipped",
+          "started_at": "2026-07-03T23:54:39Z",
+          "completed_at": "2026-07-03T23:54:39Z",
+          "duration_sec": 0
+        }
+      ]
+    }
+  ],
+  "workflows": [
+    {
+      "filename": "gradle-wrapper-validation.yml",
+      "hash": "04526945275c07b7ec8481281931aa653deceed193cbbf514b23cd8d634fae78"
+    },
+    {
+      "filename": "docs-build.yml",
+      "hash": "6772ac2baa16f9669594b6ea59ebfc2a9e1a6b14f3550571e4faacaf2d397023"
+    }
+  ]
+}

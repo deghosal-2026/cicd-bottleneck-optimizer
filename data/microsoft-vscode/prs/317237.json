@@ -1,0 +1,111 @@
+{
+  "pr_number": 317237,
+  "title": "feat: add per-model capability overrides for advanced configuration",
+  "state": "closed",
+  "author": "bhavyaus",
+  "created_at": "2026-05-19T03:55:26Z",
+  "updated_at": "2026-07-03T23:40:39Z",
+  "merged_at": "2026-05-19T05:59:59Z",
+  "head_sha": "342a29eb4f2d12b4f4ed536e79c4fd4969534001",
+  "labels": [],
+  "ci_runs": [
+    {
+      "run_id": 26077079067,
+      "workflow_id": 258342321,
+      "workflow_name": "chat-lib tests",
+      "status": "success",
+      "head_sha": "342a29eb4f2d12b4f4ed536e79c4fd4969534001",
+      "created_at": "2026-05-19T04:55:14Z",
+      "updated_at": "2026-05-19T04:59:24Z",
+      "run_started_at": "2026-05-19T04:55:14Z",
+      "jobs": [
+        {
+          "name": "chat-lib tests (macos-latest)",
+          "status": "success",
+          "started_at": "2026-05-19T04:55:24Z",
+          "completed_at": "2026-05-19T04:57:06Z",
+          "duration_sec": 102
+        },
+        {
+          "name": "chat-lib tests (windows-latest)",
+          "status": "success",
+          "started_at": "2026-05-19T04:55:24Z",
+          "completed_at": "2026-05-19T04:59:23Z",
+          "duration_sec": 239
+        },
+        {
+          "name": "chat-lib tests (ubuntu-latest)",
+          "status": "success",
+          "started_at": "2026-05-19T04:55:25Z",
+          "completed_at": "2026-05-19T04:57:52Z",
+          "duration_sec": 147
+        }
+      ]
+    },
+    {
+      "run_id": 26077079052,
+      "workflow_id": 21497327,
+      "workflow_name": "Monaco Editor checks",
+      "status": "success",
+      "head_sha": "342a29eb4f2d12b4f4ed536e79c4fd4969534001",
+      "created_at": "2026-05-19T04:55:14Z",
+      "updated_at": "2026-05-19T05:00:04Z",
+      "run_started_at": "2026-05-19T04:55:14Z",
+      "jobs": []
+    },
+    {
+      "run_id": 26077079048,
+      "workflow_id": 273167221,
+      "workflow_name": "Component Fixtures",
+      "status": "success",
+      "head_sha": "342a29eb4f2d12b4f4ed536e79c4fd4969534001",
+      "created_at": "2026-05-19T04:55:14Z",
+      "updated_at": "2026-05-19T05:00:08Z",
+      "run_started_at": "2026-05-19T04:55:14Z",
+      "jobs": []
+    },
+    {
+      "run_id": 26077079105,
+      "workflow_id": 4196599,
+      "workflow_name": "Code OSS",
+      "status": "success",
+      "head_sha": "342a29eb4f2d12b4f4ed536e79c4fd4969534001",
+      "created_at": "2026-05-19T04:55:14Z",
+      "updated_at": "2026-05-19T05:14:26Z",
+      "run_started_at": "2026-05-19T04:55:14Z",
+      "jobs": []
+    },
+    {
+      "run_id": 26077079091,
+      "workflow_id": 211787236,
+      "workflow_name": "Prevent engineering system changes in PRs",
+      "status": "success",
+      "head_sha": "342a29eb4f2d12b4f4ed536e79c4fd4969534001",
+      "created_at": "2026-05-19T04:55:14Z",
+      "updated_at": "2026-05-19T04:55:32Z",
+      "run_started_at": "2026-05-19T04:55:14Z",
+      "jobs": []
+    },
+    {
+      "run_id": 26077079047,
+      "workflow_id": 38332752,
+      "workflow_name": "Telemetry",
+      "status": "success",
+      "head_sha": "342a29eb4f2d12b4f4ed536e79c4fd4969534001",
+      "created_at": "2026-05-19T04:55:14Z",
+      "updated_at": "2026-05-19T04:55:52Z",
+      "run_started_at": "2026-05-19T04:55:14Z",
+      "jobs": []
+    }
+  ],
+  "workflows": [
+    {
+      "filename": "pr.yml",
+      "hash": "0625dff11585a35e1ad0cf2b3cbea2cb72e521039dfd406eaa8de1ec75492115"
+    },
+    {
+      "filename": "monaco-editor.yml",
+      "hash": "02e5f951a8bc0193f3239d64b65c547aebcf6427849f35a8e7b9500b4eeb10f9"
+    }
+  ]
+}

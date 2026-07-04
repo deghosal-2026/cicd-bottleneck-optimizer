@@ -1,0 +1,70 @@
+{
+  "pr_number": 152376,
+  "title": "[ES|QL] Take where in subquery out of snapshot",
+  "state": "closed",
+  "author": "fang-xing-esql",
+  "created_at": "2026-06-28T03:12:20Z",
+  "updated_at": "2026-07-04T01:29:29Z",
+  "merged_at": "2026-07-04T01:29:28Z",
+  "head_sha": "6fd56f70ee8b8d983a337b0b4da26ec742dbb474",
+  "labels": [
+    ">non-issue",
+    "Team:Analytics",
+    "test-release",
+    ":Analytics/ES|QL",
+    "ES|QL-ui",
+    "v9.5.0"
+  ],
+  "ci_runs": [
+    {
+      "run_id": 28686340199,
+      "workflow_id": 146525436,
+      "workflow_name": "docs-build",
+      "status": "success",
+      "head_sha": "6fd56f70ee8b8d983a337b0b4da26ec742dbb474",
+      "created_at": "2026-07-03T22:39:06Z",
+      "updated_at": "2026-07-03T22:39:22Z",
+      "run_started_at": "2026-07-03T22:39:06Z",
+      "jobs": [
+        {
+          "name": "build / check",
+          "status": "success",
+          "started_at": "2026-07-03T22:39:08Z",
+          "completed_at": "2026-07-03T22:39:14Z",
+          "duration_sec": 6
+        },
+        {
+          "name": "build / match",
+          "status": "success",
+          "started_at": "2026-07-03T22:39:08Z",
+          "completed_at": "2026-07-03T22:39:12Z",
+          "duration_sec": 4
+        },
+        {
+          "name": "build / build",
+          "status": "success",
+          "started_at": "2026-07-03T22:39:16Z",
+          "completed_at": "2026-07-03T22:39:21Z",
+          "duration_sec": 5
+        },
+        {
+          "name": "build / vale",
+          "status": "skipped",
+          "started_at": "2026-07-03T22:39:15Z",
+          "completed_at": "2026-07-03T22:39:14Z",
+          "duration_sec": -1
+        }
+      ]
+    }
+  ],
+  "workflows": [
+    {
+      "filename": "gradle-wrapper-validation.yml",
+      "hash": "04526945275c07b7ec8481281931aa653deceed193cbbf514b23cd8d634fae78"
+    },
+    {
+      "filename": "docs-build.yml",
+      "hash": "6772ac2baa16f9669594b6ea59ebfc2a9e1a6b14f3550571e4faacaf2d397023"
+    }
+  ]
+}

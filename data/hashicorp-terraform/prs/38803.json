@@ -1,0 +1,70 @@
+{
+  "pr_number": 38803,
+  "title": "Refactor the `version` command to use the `arguments` package",
+  "state": "open",
+  "author": "SarahFrench",
+  "created_at": "2026-06-30T11:52:48Z",
+  "updated_at": "2026-07-01T22:00:27Z",
+  "merged_at": null,
+  "head_sha": "147617d47daf559997f8dca51fbea8b2abee1175",
+  "labels": [
+    "no-changelog-needed"
+  ],
+  "ci_runs": [
+    {
+      "run_id": 28550564009,
+      "workflow_id": 278786541,
+      "workflow_name": "Changelog Validation",
+      "status": "success",
+      "head_sha": "147617d47daf559997f8dca51fbea8b2abee1175",
+      "created_at": "2026-07-01T22:00:30Z",
+      "updated_at": "2026-07-01T22:00:39Z",
+      "run_started_at": "2026-07-01T22:00:30Z",
+      "jobs": [
+        {
+          "name": "Validate Changelog",
+          "status": "success",
+          "started_at": "2026-07-01T22:00:33Z",
+          "completed_at": "2026-07-01T22:00:38Z",
+          "duration_sec": 5
+        }
+      ]
+    },
+    {
+      "run_id": 28550563929,
+      "workflow_id": 126957301,
+      "workflow_name": "equivalence-test-diff",
+      "status": "success",
+      "head_sha": "147617d47daf559997f8dca51fbea8b2abee1175",
+      "created_at": "2026-07-01T22:00:30Z",
+      "updated_at": "2026-07-01T22:02:34Z",
+      "run_started_at": "2026-07-01T22:00:30Z",
+      "jobs": []
+    },
+    {
+      "run_id": 28550564070,
+      "workflow_id": 23102955,
+      "workflow_name": "Quick Checks",
+      "status": "success",
+      "head_sha": "147617d47daf559997f8dca51fbea8b2abee1175",
+      "created_at": "2026-07-01T22:00:30Z",
+      "updated_at": "2026-07-01T22:07:04Z",
+      "run_started_at": "2026-07-01T22:00:30Z",
+      "jobs": []
+    }
+  ],
+  "workflows": [
+    {
+      "filename": "issue-comment-created.yml",
+      "hash": "7b39410b950b1b04577cd7d04201e9ce01aaeca7e6daf5af2dbe7286e23ef08e"
+    },
+    {
+      "filename": "lock.yml",
+      "hash": "7606d6b818ae4ff47b39930380d804b9a904124f7dffe6d9bfbba7e715c2f183"
+    },
+    {
+      "filename": "build.yml",
+      "hash": "192267d1041a111b5fb0a96d698602ec33bd95faf16bffb870abd3b3593bfd6c"
+    }
+  ]
+}

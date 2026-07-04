@@ -1,0 +1,51 @@
+{
+  "pr_number": 38807,
+  "title": "Disallow -target when applying a saved plan file",
+  "state": "closed",
+  "author": "SillyZir",
+  "created_at": "2026-07-01T02:43:56Z",
+  "updated_at": "2026-07-01T18:28:36Z",
+  "merged_at": null,
+  "head_sha": "11bcd5c1bd0feec26563973810ab5adfb0cc1be0",
+  "labels": [
+    "bug"
+  ],
+  "ci_runs": [
+    {
+      "run_id": 28535728657,
+      "workflow_id": 179246365,
+      "workflow_name": "Backport Assistant Runner",
+      "status": "action_required",
+      "head_sha": "11bcd5c1bd0feec26563973810ab5adfb0cc1be0",
+      "created_at": "2026-07-01T17:27:46Z",
+      "updated_at": "2026-07-01T17:27:46Z",
+      "run_started_at": "2026-07-01T17:27:46Z",
+      "jobs": []
+    },
+    {
+      "run_id": 28535728719,
+      "workflow_id": 278786541,
+      "workflow_name": "Changelog Validation",
+      "status": "action_required",
+      "head_sha": "11bcd5c1bd0feec26563973810ab5adfb0cc1be0",
+      "created_at": "2026-07-01T17:27:46Z",
+      "updated_at": "2026-07-01T17:27:46Z",
+      "run_started_at": "2026-07-01T17:27:46Z",
+      "jobs": []
+    }
+  ],
+  "workflows": [
+    {
+      "filename": "issue-comment-created.yml",
+      "hash": "7b39410b950b1b04577cd7d04201e9ce01aaeca7e6daf5af2dbe7286e23ef08e"
+    },
+    {
+      "filename": "lock.yml",
+      "hash": "7606d6b818ae4ff47b39930380d804b9a904124f7dffe6d9bfbba7e715c2f183"
+    },
+    {
+      "filename": "build.yml",
+      "hash": "192267d1041a111b5fb0a96d698602ec33bd95faf16bffb870abd3b3593bfd6c"
+    }
+  ]
+}

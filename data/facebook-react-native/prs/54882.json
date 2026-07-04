@@ -1,0 +1,259 @@
+{
+  "pr_number": 54882,
+  "title": "Remove ViewAtIndex and manageChildren API from legacy architecture",
+  "state": "closed",
+  "author": "mdvacca",
+  "created_at": "2025-12-13T00:58:40Z",
+  "updated_at": "2026-07-03T15:46:24Z",
+  "merged_at": null,
+  "head_sha": "04004f189f98226d439cebf553e68912d07bc2cb",
+  "labels": [
+    "CLA Signed",
+    "p: Facebook",
+    "Partner",
+    "fb-exported",
+    "meta-exported"
+  ],
+  "ci_runs": [
+    {
+      "run_id": 20668483625,
+      "workflow_id": 85394709,
+      "workflow_name": "Test All",
+      "status": "failure",
+      "head_sha": "04004f189f98226d439cebf553e68912d07bc2cb",
+      "created_at": "2026-01-02T23:06:20Z",
+      "updated_at": "2026-01-03T01:27:33Z",
+      "run_started_at": "2026-01-02T23:06:20Z",
+      "jobs": [
+        {
+          "name": "set_release_type",
+          "status": "success",
+          "started_at": "2026-01-02T23:06:23Z",
+          "completed_at": "2026-01-02T23:06:26Z",
+          "duration_sec": 3
+        },
+        {
+          "name": "lint",
+          "status": "success",
+          "started_at": "2026-01-02T23:06:23Z",
+          "completed_at": "2026-01-02T23:09:16Z",
+          "duration_sec": 173
+        },
+        {
+          "name": "test_ios_rntester_dynamic_frameworks (Debug)",
+          "status": "success",
+          "started_at": "2026-01-02T23:06:24Z",
+          "completed_at": "2026-01-02T23:35:28Z",
+          "duration_sec": 1744
+        },
+        {
+          "name": "test_js (20.19.4)",
+          "status": "success",
+          "started_at": "2026-01-02T23:06:23Z",
+          "completed_at": "2026-01-02T23:10:03Z",
+          "duration_sec": 220
+        },
+        {
+          "name": "test_js (24)",
+          "status": "success",
+          "started_at": "2026-01-02T23:06:23Z",
+          "completed_at": "2026-01-02T23:09:55Z",
+          "duration_sec": 212
+        },
+        {
+          "name": "test_js (22)",
+          "status": "success",
+          "started_at": "2026-01-02T23:06:23Z",
+          "completed_at": "2026-01-02T23:10:08Z",
+          "duration_sec": 225
+        },
+        {
+          "name": "prebuild_apple_dependencies / Prepare workspace",
+          "status": "success",
+          "started_at": "2026-01-02T23:06:24Z",
+          "completed_at": "2026-01-02T23:06:56Z",
+          "duration_sec": 32
+        },
+        {
+          "name": "test_ios_rntester_dynamic_frameworks (Release)",
+          "status": "failure",
+          "started_at": "2026-01-02T23:06:24Z",
+          "completed_at": "2026-01-02T23:12:07Z",
+          "duration_sec": 343
+        },
+        {
+          "name": "build_android",
+          "status": "success",
+          "started_at": "2026-01-02T23:06:28Z",
+          "completed_at": "2026-01-02T23:17:35Z",
+          "duration_sec": 667
+        },
+        {
+          "name": "run_fantom_tests",
+          "status": "failure",
+          "started_at": "2026-01-02T23:06:29Z",
+          "completed_at": "2026-01-02T23:17:23Z",
+          "duration_sec": 654
+        },
+        {
+          "name": "prebuild_apple_dependencies / Build Apple Slice (Debug, macos)",
+          "status": "success",
+          "started_at": "2026-01-02T23:06:59Z",
+          "completed_at": "2026-01-02T23:07:20Z",
+          "duration_sec": 21
+        },
+        {
+          "name": "prebuild_apple_dependencies / Build Apple Slice (Debug, ios-simulator)",
+          "status": "success",
+          "started_at": "2026-01-02T23:06:59Z",
+          "completed_at": "2026-01-02T23:07:20Z",
+          "duration_sec": 21
+        },
+        {
+          "name": "prebuild_apple_dependencies / Build Apple Slice (Debug, tvos)",
+          "status": "success",
+          "started_at": "2026-01-02T23:06:59Z",
+          "completed_at": "2026-01-02T23:07:18Z",
+          "duration_sec": 19
+        },
+        {
+          "name": "prebuild_apple_dependencies / Build Apple Slice (Debug, tvos-simulator)",
+          "status": "success",
+          "started_at": "2026-01-02T23:06:59Z",
+          "completed_at": "2026-01-02T23:07:22Z",
+          "duration_sec": 23
+        },
+        {
+          "name": "prebuild_apple_dependencies / Build Apple Slice (Debug, mac-catalyst)",
+          "status": "success",
+          "started_at": "2026-01-02T23:06:59Z",
+          "completed_at": "2026-01-02T23:07:22Z",
+          "duration_sec": 23
+        },
+        {
+          "name": "prebuild_apple_dependencies / Build Apple Slice (Release, ios-simulator)",
+          "status": "success",
+          "started_at": "2026-01-02T23:06:59Z",
+          "completed_at": "2026-01-02T23:07:22Z",
+          "duration_sec": 23
+        },
+        {
+          "name": "prebuild_apple_dependencies / Build Apple Slice (Release, macos)",
+          "status": "success",
+          "started_at": "2026-01-02T23:07:00Z",
+          "completed_at": "2026-01-02T23:07:27Z",
+          "duration_sec": 27
+        },
+        {
+          "name": "prebuild_apple_dependencies / Build Apple Slice (Debug, xros-simulator)",
+          "status": "success",
+          "started_at": "2026-01-02T23:06:59Z",
+          "completed_at": "2026-01-02T23:07:20Z",
+          "duration_sec": 21
+        },
+        {
+          "name": "prebuild_apple_dependencies / Build Apple Slice (Release, tvos)",
+          "status": "success",
+          "started_at": "2026-01-02T23:06:59Z",
+          "completed_at": "2026-01-02T23:07:21Z",
+          "duration_sec": 22
+        },
+        {
+          "name": "prebuild_apple_dependencies / Build Apple Slice (Release, mac-catalyst)",
+          "status": "success",
+          "started_at": "2026-01-02T23:06:59Z",
+          "completed_at": "2026-01-02T23:07:28Z",
+          "duration_sec": 29
+        },
+        {
+          "name": "prebuild_apple_dependencies / Build Apple Slice (Release, xros)",
+          "status": "success",
+          "started_at": "2026-01-02T23:06:59Z",
+          "completed_at": "2026-01-02T23:07:22Z",
+          "duration_sec": 23
+        },
+        {
+          "name": "prebuild_apple_dependencies / Build Apple Slice (Release, ios)",
+          "status": "success",
+          "started_at": "2026-01-02T23:06:59Z",
+          "completed_at": "2026-01-02T23:07:20Z",
+          "duration_sec": 21
+        },
+        {
+          "name": "prebuild_apple_dependencies / Build Apple Slice (Release, tvos-simulator)",
+          "status": "success",
+          "started_at": "2026-01-02T23:06:59Z",
+          "completed_at": "2026-01-02T23:07:23Z",
+          "duration_sec": 24
+        },
+        {
+          "name": "prebuild_apple_dependencies / Build Apple Slice (Debug, ios)",
+          "status": "success",
+          "started_at": "2026-01-02T23:06:59Z",
+          "completed_at": "2026-01-02T23:07:23Z",
+          "duration_sec": 24
+        },
+        {
+          "name": "prebuild_apple_dependencies / Build Apple Slice (Release, xros-simulator)",
+          "status": "success",
+          "started_at": "2026-01-02T23:06:59Z",
+          "completed_at": "2026-01-02T23:07:20Z",
+          "duration_sec": 21
+        },
+        {
+          "name": "prebuild_apple_dependencies / Build Apple Slice (Debug, xros)",
+          "status": "success",
+          "started_at": "2026-01-02T23:06:59Z",
+          "completed_at": "2026-01-02T23:07:19Z",
+          "duration_sec": 20
+        },
+        {
+          "name": "prebuild_apple_dependencies / Prepare XCFramework (Debug)",
+          "status": "success",
+          "started_at": "2026-01-02T23:07:32Z",
+          "completed_at": "2026-01-02T23:10:11Z",
+          "duration_sec": 159
+        },
+        {
+          "name": "prebuild_apple_dependencies / Prepare XCFramework (Release)",
+          "status": "success",
+          "started_at": "2026-01-02T23:07:31Z",
+          "completed_at": "2026-01-02T23:09:14Z",
+          "duration_sec": 103
+        },
+        {
+          "name": "prebuild_react_native_core / build-rn-slice (Release, ios-simulator)",
+          "status": "success",
+          "started_at": "2026-01-02T23:10:15Z",
+          "completed_at": "2026-01-02T23:30:51Z",
+          "duration_sec": 1236
+        },
+        {
+          "name": "prebuild_react_native_core / build-rn-slice (Release, ios)",
+          "status": "success",
+          "started_at": "2026-01-02T23:10:13Z",
+          "completed_at": "2026-01-02T23:24:20Z",
+          "duration_sec": 847
+        }
+      ]
+    }
+  ],
+  "workflows": [
+    {
+      "filename": "needs-attention.yml",
+      "hash": "65a4a6cc5fcc5896e78ea357cfe209eec2845f173e8bd642ae2d343bfc66deba"
+    },
+    {
+      "filename": "on-issue-labeled.yml",
+      "hash": "7673645f1d0ba0da4c9c7d4f714f8376b8a20f1d6e553304c01769e627efc3d6"
+    },
+    {
+      "filename": "stale-bot.yml",
+      "hash": "1f4dfbb4734e1d14d7263a05e04d3b3c096e1210783c61bf98c57a5d86cd79f2"
+    },
+    {
+      "filename": "autorebase.yml",
+      "hash": "617b8a9799890a1d5010ff20bc08c4064fbffe3d3be0a1049ada31ccd0fc0a61"
+    }
+  ]
+}

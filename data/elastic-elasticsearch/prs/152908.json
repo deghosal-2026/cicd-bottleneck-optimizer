@@ -1,0 +1,68 @@
+{
+  "pr_number": 152908,
+  "title": "Unmute term vectors resharding tests",
+  "state": "open",
+  "author": "lkts",
+  "created_at": "2026-07-03T21:39:09Z",
+  "updated_at": "2026-07-03T21:39:55Z",
+  "merged_at": null,
+  "head_sha": "d6c6aab88b93ca05c7654a4e7f9240cd8abdae63",
+  "labels": [
+    ">test",
+    ":Distributed/Distributed",
+    "Team:Distributed",
+    "v9.5.0"
+  ],
+  "ci_runs": [
+    {
+      "run_id": 28684476066,
+      "workflow_id": 146525436,
+      "workflow_name": "docs-build",
+      "status": "success",
+      "head_sha": "d6c6aab88b93ca05c7654a4e7f9240cd8abdae63",
+      "created_at": "2026-07-03T21:39:15Z",
+      "updated_at": "2026-07-03T21:39:37Z",
+      "run_started_at": "2026-07-03T21:39:15Z",
+      "jobs": [
+        {
+          "name": "build / match",
+          "status": "success",
+          "started_at": "2026-07-03T21:39:19Z",
+          "completed_at": "2026-07-03T21:39:27Z",
+          "duration_sec": 8
+        },
+        {
+          "name": "build / check",
+          "status": "success",
+          "started_at": "2026-07-03T21:39:20Z",
+          "completed_at": "2026-07-03T21:39:27Z",
+          "duration_sec": 7
+        },
+        {
+          "name": "build / build",
+          "status": "success",
+          "started_at": "2026-07-03T21:39:29Z",
+          "completed_at": "2026-07-03T21:39:36Z",
+          "duration_sec": 7
+        },
+        {
+          "name": "build / vale",
+          "status": "skipped",
+          "started_at": "2026-07-03T21:39:28Z",
+          "completed_at": "2026-07-03T21:39:28Z",
+          "duration_sec": 0
+        }
+      ]
+    }
+  ],
+  "workflows": [
+    {
+      "filename": "gradle-wrapper-validation.yml",
+      "hash": "04526945275c07b7ec8481281931aa653deceed193cbbf514b23cd8d634fae78"
+    },
+    {
+      "filename": "docs-build.yml",
+      "hash": "6772ac2baa16f9669594b6ea59ebfc2a9e1a6b14f3550571e4faacaf2d397023"
+    }
+  ]
+}

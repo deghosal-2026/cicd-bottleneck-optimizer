@@ -1,0 +1,97 @@
+{
+  "pr_number": 317251,
+  "title": "agentHost: adopt channel-based AHP wire model",
+  "state": "closed",
+  "author": "connor4312",
+  "created_at": "2026-05-19T06:13:45Z",
+  "updated_at": "2026-07-03T23:40:39Z",
+  "merged_at": "2026-05-19T17:28:05Z",
+  "head_sha": "fb5c650111ec21e92602048ee298cf2f428e2507",
+  "labels": [],
+  "ci_runs": [
+    {
+      "run_id": 26112130707,
+      "workflow_id": 38332752,
+      "workflow_name": "Telemetry",
+      "status": "success",
+      "head_sha": "fb5c650111ec21e92602048ee298cf2f428e2507",
+      "created_at": "2026-05-19T16:54:49Z",
+      "updated_at": "2026-05-19T17:01:04Z",
+      "run_started_at": "2026-05-19T16:54:49Z",
+      "jobs": [
+        {
+          "name": "Check metadata",
+          "status": "success",
+          "started_at": "2026-05-19T17:00:37Z",
+          "completed_at": "2026-05-19T17:01:03Z",
+          "duration_sec": 26
+        }
+      ]
+    },
+    {
+      "run_id": 26112130786,
+      "workflow_id": 211787236,
+      "workflow_name": "Prevent engineering system changes in PRs",
+      "status": "success",
+      "head_sha": "fb5c650111ec21e92602048ee298cf2f428e2507",
+      "created_at": "2026-05-19T16:54:49Z",
+      "updated_at": "2026-05-19T17:00:45Z",
+      "run_started_at": "2026-05-19T16:54:49Z",
+      "jobs": []
+    },
+    {
+      "run_id": 26112130714,
+      "workflow_id": 273167221,
+      "workflow_name": "Component Fixtures",
+      "status": "success",
+      "head_sha": "fb5c650111ec21e92602048ee298cf2f428e2507",
+      "created_at": "2026-05-19T16:54:49Z",
+      "updated_at": "2026-05-19T17:01:59Z",
+      "run_started_at": "2026-05-19T16:54:49Z",
+      "jobs": []
+    },
+    {
+      "run_id": 26112130710,
+      "workflow_id": 258342321,
+      "workflow_name": "chat-lib tests",
+      "status": "success",
+      "head_sha": "fb5c650111ec21e92602048ee298cf2f428e2507",
+      "created_at": "2026-05-19T16:54:49Z",
+      "updated_at": "2026-05-19T17:03:32Z",
+      "run_started_at": "2026-05-19T16:54:49Z",
+      "jobs": []
+    },
+    {
+      "run_id": 26112130860,
+      "workflow_id": 21497327,
+      "workflow_name": "Monaco Editor checks",
+      "status": "success",
+      "head_sha": "fb5c650111ec21e92602048ee298cf2f428e2507",
+      "created_at": "2026-05-19T16:54:49Z",
+      "updated_at": "2026-05-19T17:03:25Z",
+      "run_started_at": "2026-05-19T16:54:49Z",
+      "jobs": []
+    },
+    {
+      "run_id": 26112130708,
+      "workflow_id": 4196599,
+      "workflow_name": "Code OSS",
+      "status": "success",
+      "head_sha": "fb5c650111ec21e92602048ee298cf2f428e2507",
+      "created_at": "2026-05-19T16:54:49Z",
+      "updated_at": "2026-05-19T17:28:01Z",
+      "run_started_at": "2026-05-19T17:18:22Z",
+      "jobs": []
+    }
+  ],
+  "workflows": [
+    {
+      "filename": "pr.yml",
+      "hash": "0625dff11585a35e1ad0cf2b3cbea2cb72e521039dfd406eaa8de1ec75492115"
+    },
+    {
+      "filename": "monaco-editor.yml",
+      "hash": "02e5f951a8bc0193f3239d64b65c547aebcf6427849f35a8e7b9500b4eeb10f9"
+    }
+  ]
+}

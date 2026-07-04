@@ -1,0 +1,98 @@
+{
+  "pr_number": 38815,
+  "title": "PSS: Move state store provider download-related logic away from `init` and into reusable methods on `Meta`",
+  "state": "open",
+  "author": "SarahFrench",
+  "created_at": "2026-07-01T15:52:32Z",
+  "updated_at": "2026-07-02T09:43:10Z",
+  "merged_at": null,
+  "head_sha": "6932a7e501fbe0fc8dc96e8cd10baed2cd7ac30e",
+  "labels": [
+    "no-changelog-needed"
+  ],
+  "ci_runs": [
+    {
+      "run_id": 28580571746,
+      "workflow_id": 23102955,
+      "workflow_name": "Quick Checks",
+      "status": "success",
+      "head_sha": "6932a7e501fbe0fc8dc96e8cd10baed2cd7ac30e",
+      "created_at": "2026-07-02T09:41:12Z",
+      "updated_at": "2026-07-02T09:47:34Z",
+      "run_started_at": "2026-07-02T09:41:12Z",
+      "jobs": [
+        {
+          "name": "End-to-end Tests",
+          "status": "success",
+          "started_at": "2026-07-02T09:41:16Z",
+          "completed_at": "2026-07-02T09:43:13Z",
+          "duration_sec": 117
+        },
+        {
+          "name": "Code Consistency Checks",
+          "status": "success",
+          "started_at": "2026-07-02T09:41:15Z",
+          "completed_at": "2026-07-02T09:47:33Z",
+          "duration_sec": 378
+        },
+        {
+          "name": "Race Tests",
+          "status": "success",
+          "started_at": "2026-07-02T09:41:15Z",
+          "completed_at": "2026-07-02T09:46:52Z",
+          "duration_sec": 337
+        },
+        {
+          "name": "Automated defect checks",
+          "status": "success",
+          "started_at": "2026-07-02T09:41:16Z",
+          "completed_at": "2026-07-02T09:45:18Z",
+          "duration_sec": 242
+        },
+        {
+          "name": "Unit Tests",
+          "status": "success",
+          "started_at": "2026-07-02T09:41:15Z",
+          "completed_at": "2026-07-02T09:46:11Z",
+          "duration_sec": 296
+        }
+      ]
+    },
+    {
+      "run_id": 28580571727,
+      "workflow_id": 278786541,
+      "workflow_name": "Changelog Validation",
+      "status": "success",
+      "head_sha": "6932a7e501fbe0fc8dc96e8cd10baed2cd7ac30e",
+      "created_at": "2026-07-02T09:41:12Z",
+      "updated_at": "2026-07-02T09:41:24Z",
+      "run_started_at": "2026-07-02T09:41:12Z",
+      "jobs": []
+    },
+    {
+      "run_id": 28580571750,
+      "workflow_id": 126957301,
+      "workflow_name": "equivalence-test-diff",
+      "status": "success",
+      "head_sha": "6932a7e501fbe0fc8dc96e8cd10baed2cd7ac30e",
+      "created_at": "2026-07-02T09:41:12Z",
+      "updated_at": "2026-07-02T09:43:51Z",
+      "run_started_at": "2026-07-02T09:41:12Z",
+      "jobs": []
+    }
+  ],
+  "workflows": [
+    {
+      "filename": "issue-comment-created.yml",
+      "hash": "7b39410b950b1b04577cd7d04201e9ce01aaeca7e6daf5af2dbe7286e23ef08e"
+    },
+    {
+      "filename": "lock.yml",
+      "hash": "7606d6b818ae4ff47b39930380d804b9a904124f7dffe6d9bfbba7e715c2f183"
+    },
+    {
+      "filename": "build.yml",
+      "hash": "192267d1041a111b5fb0a96d698602ec33bd95faf16bffb870abd3b3593bfd6c"
+    }
+  ]
+}

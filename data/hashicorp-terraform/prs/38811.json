@@ -1,0 +1,70 @@
+{
+  "pr_number": 38811,
+  "title": "Refactor how we use `cli.Ui` in main.go, add new test helper `testUiWrapped` so integration tests use `cli.Ui` the same way as the overall CLI",
+  "state": "open",
+  "author": "SarahFrench",
+  "created_at": "2026-07-01T10:29:20Z",
+  "updated_at": "2026-07-01T11:12:06Z",
+  "merged_at": null,
+  "head_sha": "923a4270127e788f1c4b918092f2a000cccf2c1f",
+  "labels": [
+    "no-changelog-needed"
+  ],
+  "ci_runs": [
+    {
+      "run_id": 28512175126,
+      "workflow_id": 278786541,
+      "workflow_name": "Changelog Validation",
+      "status": "success",
+      "head_sha": "923a4270127e788f1c4b918092f2a000cccf2c1f",
+      "created_at": "2026-07-01T10:50:34Z",
+      "updated_at": "2026-07-01T10:50:46Z",
+      "run_started_at": "2026-07-01T10:50:34Z",
+      "jobs": [
+        {
+          "name": "Validate Changelog",
+          "status": "success",
+          "started_at": "2026-07-01T10:50:38Z",
+          "completed_at": "2026-07-01T10:50:45Z",
+          "duration_sec": 7
+        }
+      ]
+    },
+    {
+      "run_id": 28512175112,
+      "workflow_id": 126957301,
+      "workflow_name": "equivalence-test-diff",
+      "status": "success",
+      "head_sha": "923a4270127e788f1c4b918092f2a000cccf2c1f",
+      "created_at": "2026-07-01T10:50:34Z",
+      "updated_at": "2026-07-01T10:52:43Z",
+      "run_started_at": "2026-07-01T10:50:34Z",
+      "jobs": []
+    },
+    {
+      "run_id": 28512175128,
+      "workflow_id": 23102955,
+      "workflow_name": "Quick Checks",
+      "status": "success",
+      "head_sha": "923a4270127e788f1c4b918092f2a000cccf2c1f",
+      "created_at": "2026-07-01T10:50:34Z",
+      "updated_at": "2026-07-01T10:56:16Z",
+      "run_started_at": "2026-07-01T10:50:34Z",
+      "jobs": []
+    }
+  ],
+  "workflows": [
+    {
+      "filename": "issue-comment-created.yml",
+      "hash": "7b39410b950b1b04577cd7d04201e9ce01aaeca7e6daf5af2dbe7286e23ef08e"
+    },
+    {
+      "filename": "lock.yml",
+      "hash": "7606d6b818ae4ff47b39930380d804b9a904124f7dffe6d9bfbba7e715c2f183"
+    },
+    {
+      "filename": "build.yml",
+      "hash": "192267d1041a111b5fb0a96d698602ec33bd95faf16bffb870abd3b3593bfd6c"
+    }
+  ]
+}

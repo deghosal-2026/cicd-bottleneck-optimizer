@@ -1,0 +1,70 @@
+{
+  "pr_number": 152893,
+  "title": "Skip spawning ML controller when ML is disabled",
+  "state": "open",
+  "author": "bpintea",
+  "created_at": "2026-07-03T15:58:26Z",
+  "updated_at": "2026-07-03T18:41:20Z",
+  "merged_at": null,
+  "head_sha": "20da4124a2b736307c093520f607906303191330",
+  "labels": [
+    ">non-issue",
+    ":Core/Infra/Plugins",
+    ":ml",
+    "Team:Core/Infra",
+    "Team:ML",
+    "v9.5.0"
+  ],
+  "ci_runs": [
+    {
+      "run_id": 28678035245,
+      "workflow_id": 146525436,
+      "workflow_name": "docs-build",
+      "status": "success",
+      "head_sha": "20da4124a2b736307c093520f607906303191330",
+      "created_at": "2026-07-03T18:41:24Z",
+      "updated_at": "2026-07-03T18:41:42Z",
+      "run_started_at": "2026-07-03T18:41:24Z",
+      "jobs": [
+        {
+          "name": "build / match",
+          "status": "success",
+          "started_at": "2026-07-03T18:41:27Z",
+          "completed_at": "2026-07-03T18:41:34Z",
+          "duration_sec": 7
+        },
+        {
+          "name": "build / check",
+          "status": "success",
+          "started_at": "2026-07-03T18:41:27Z",
+          "completed_at": "2026-07-03T18:41:31Z",
+          "duration_sec": 4
+        },
+        {
+          "name": "build / vale",
+          "status": "skipped",
+          "started_at": "2026-07-03T18:41:32Z",
+          "completed_at": "2026-07-03T18:41:31Z",
+          "duration_sec": -1
+        },
+        {
+          "name": "build / build",
+          "status": "success",
+          "started_at": "2026-07-03T18:41:36Z",
+          "completed_at": "2026-07-03T18:41:41Z",
+          "duration_sec": 5
+        }
+      ]
+    }
+  ],
+  "workflows": [
+    {
+      "filename": "gradle-wrapper-validation.yml",
+      "hash": "04526945275c07b7ec8481281931aa653deceed193cbbf514b23cd8d634fae78"
+    },
+    {
+      "filename": "docs-build.yml",
+      "hash": "6772ac2baa16f9669594b6ea59ebfc2a9e1a6b14f3550571e4faacaf2d397023"
+    }
+  ]
+}

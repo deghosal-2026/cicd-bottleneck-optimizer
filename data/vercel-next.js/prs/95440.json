@@ -1,0 +1,271 @@
+{
+  "pr_number": 95440,
+  "title": "evals: fix false-negative regex checks with the agentic LLM judge",
+  "state": "open",
+  "author": "gaojude",
+  "created_at": "2026-07-02T23:58:28Z",
+  "updated_at": "2026-07-03T17:42:57Z",
+  "merged_at": null,
+  "head_sha": "196310b849a5659923b1ebe61d191357603647ba",
+  "labels": [],
+  "ci_runs": [
+    {
+      "run_id": 28666397149,
+      "workflow_id": 57419851,
+      "workflow_name": "build-and-test",
+      "status": "success",
+      "head_sha": "196310b849a5659923b1ebe61d191357603647ba",
+      "created_at": "2026-07-03T14:20:13Z",
+      "updated_at": "2026-07-03T14:46:04Z",
+      "run_started_at": "2026-07-03T14:20:13Z",
+      "jobs": [
+        {
+          "name": "Upload PR CI metadata",
+          "status": "success",
+          "started_at": "2026-07-03T14:20:16Z",
+          "completed_at": "2026-07-03T14:20:22Z",
+          "duration_sec": 6
+        },
+        {
+          "name": "Determine changes",
+          "status": "success",
+          "started_at": "2026-07-03T14:20:16Z",
+          "completed_at": "2026-07-03T14:20:29Z",
+          "duration_sec": 13
+        },
+        {
+          "name": "validate-docs-links",
+          "status": "success",
+          "started_at": "2026-07-03T14:20:17Z",
+          "completed_at": "2026-07-03T14:20:34Z",
+          "duration_sec": 17
+        },
+        {
+          "name": "build-next / build",
+          "status": "success",
+          "started_at": "2026-07-03T14:20:17Z",
+          "completed_at": "2026-07-03T14:22:02Z",
+          "duration_sec": 105
+        },
+        {
+          "name": "optimize-ci / PR Stack Optimizer",
+          "status": "success",
+          "started_at": "2026-07-03T14:20:16Z",
+          "completed_at": "2026-07-03T14:20:19Z",
+          "duration_sec": 3
+        },
+        {
+          "name": "fetch test timings",
+          "status": "success",
+          "started_at": "2026-07-03T14:20:36Z",
+          "completed_at": "2026-07-03T14:21:28Z",
+          "duration_sec": 52
+        },
+        {
+          "name": "build-native / build",
+          "status": "success",
+          "started_at": "2026-07-03T14:21:03Z",
+          "completed_at": "2026-07-03T14:21:49Z",
+          "duration_sec": 46
+        },
+        {
+          "name": "test devlow package / build",
+          "status": "success",
+          "started_at": "2026-07-03T14:20:31Z",
+          "completed_at": "2026-07-03T14:22:19Z",
+          "duration_sec": 108
+        },
+        {
+          "name": "build-native-x64 / build",
+          "status": "success",
+          "started_at": "2026-07-03T14:20:32Z",
+          "completed_at": "2026-07-03T14:21:28Z",
+          "duration_sec": 56
+        },
+        {
+          "name": "build-native-windows / build",
+          "status": "success",
+          "started_at": "2026-07-03T14:20:41Z",
+          "completed_at": "2026-07-03T14:22:19Z",
+          "duration_sec": 98
+        },
+        {
+          "name": "ast-grep lint",
+          "status": "success",
+          "started_at": "2026-07-03T14:22:05Z",
+          "completed_at": "2026-07-03T14:22:19Z",
+          "duration_sec": 14
+        },
+        {
+          "name": "rustdoc check / build",
+          "status": "success",
+          "started_at": "2026-07-03T14:22:55Z",
+          "completed_at": "2026-07-03T14:25:27Z",
+          "duration_sec": 152
+        },
+        {
+          "name": "test cargo unit / build",
+          "status": "success",
+          "started_at": "2026-07-03T14:22:05Z",
+          "completed_at": "2026-07-03T14:33:20Z",
+          "duration_sec": 675
+        },
+        {
+          "name": "lint / build",
+          "status": "success",
+          "started_at": "2026-07-03T14:23:35Z",
+          "completed_at": "2026-07-03T14:27:08Z",
+          "duration_sec": 213
+        },
+        {
+          "name": "rust check / build",
+          "status": "success",
+          "started_at": "2026-07-03T14:23:33Z",
+          "completed_at": "2026-07-03T14:24:26Z",
+          "duration_sec": 53
+        },
+        {
+          "name": "types and precompiled / build",
+          "status": "success",
+          "started_at": "2026-07-03T14:23:39Z",
+          "completed_at": "2026-07-03T14:25:52Z",
+          "duration_sec": 133
+        },
+        {
+          "name": "test rspack dev",
+          "status": "skipped",
+          "started_at": "2026-07-03T14:22:03Z",
+          "completed_at": "2026-07-03T14:22:02Z",
+          "duration_sec": -1
+        },
+        {
+          "name": "Run devlow benchmarks",
+          "status": "skipped",
+          "started_at": "2026-07-03T14:22:03Z",
+          "completed_at": "2026-07-03T14:22:02Z",
+          "duration_sec": -1
+        },
+        {
+          "name": "test next-swc wasi",
+          "status": "skipped",
+          "started_at": "2026-07-03T14:22:03Z",
+          "completed_at": "2026-07-03T14:22:02Z",
+          "duration_sec": -1
+        },
+        {
+          "name": "test next-swc wasm / build",
+          "status": "success",
+          "started_at": "2026-07-03T14:23:35Z",
+          "completed_at": "2026-07-03T14:26:23Z",
+          "duration_sec": 168
+        },
+        {
+          "name": "test firefox and safari / build",
+          "status": "success",
+          "started_at": "2026-07-03T14:22:05Z",
+          "completed_at": "2026-07-03T14:27:15Z",
+          "duration_sec": 310
+        },
+        {
+          "name": "test turbopack dev (4/7) / build",
+          "status": "success",
+          "started_at": "2026-07-03T14:22:56Z",
+          "completed_at": "2026-07-03T14:31:14Z",
+          "duration_sec": 498
+        },
+        {
+          "name": "test cargo benches / Test",
+          "status": "success",
+          "started_at": "2026-07-03T14:22:05Z",
+          "completed_at": "2026-07-03T14:30:10Z",
+          "duration_sec": 485
+        },
+        {
+          "name": "test turbopack dev (1/7) / build",
+          "status": "success",
+          "started_at": "2026-07-03T14:23:29Z",
+          "completed_at": "2026-07-03T14:32:23Z",
+          "duration_sec": 534
+        },
+        {
+          "name": "test turbopack dev (6/7) / build",
+          "status": "success",
+          "started_at": "2026-07-03T14:22:05Z",
+          "completed_at": "2026-07-03T14:38:51Z",
+          "duration_sec": 1006
+        },
+        {
+          "name": "test turbopack dev (7/7) / build",
+          "status": "success",
+          "started_at": "2026-07-03T14:22:05Z",
+          "completed_at": "2026-07-03T14:33:02Z",
+          "duration_sec": 657
+        },
+        {
+          "name": "test turbopack dev (3/7) / build",
+          "status": "success",
+          "started_at": "2026-07-03T14:23:35Z",
+          "completed_at": "2026-07-03T14:36:28Z",
+          "duration_sec": 773
+        },
+        {
+          "name": "test turbopack dev (2/7) / build",
+          "status": "success",
+          "started_at": "2026-07-03T14:23:40Z",
+          "completed_at": "2026-07-03T14:33:02Z",
+          "duration_sec": 562
+        },
+        {
+          "name": "test turbopack dev (5/7) / build",
+          "status": "success",
+          "started_at": "2026-07-03T14:22:05Z",
+          "completed_at": "2026-07-03T14:31:47Z",
+          "duration_sec": 582
+        },
+        {
+          "name": "test rspack production",
+          "status": "skipped",
+          "started_at": "2026-07-03T14:22:03Z",
+          "completed_at": "2026-07-03T14:22:02Z",
+          "duration_sec": -1
+        }
+      ]
+    },
+    {
+      "run_id": 28666397032,
+      "workflow_id": 444921,
+      "workflow_name": "Generate Stats",
+      "status": "success",
+      "head_sha": "196310b849a5659923b1ebe61d191357603647ba",
+      "created_at": "2026-07-03T14:20:13Z",
+      "updated_at": "2026-07-03T15:42:04Z",
+      "run_started_at": "2026-07-03T15:17:19Z",
+      "jobs": []
+    },
+    {
+      "run_id": 28666396922,
+      "workflow_id": 58813578,
+      "workflow_name": "build-and-deploy",
+      "status": "skipped",
+      "head_sha": "196310b849a5659923b1ebe61d191357603647ba",
+      "created_at": "2026-07-03T14:20:13Z",
+      "updated_at": "2026-07-03T14:20:14Z",
+      "run_started_at": "2026-07-03T14:20:13Z",
+      "jobs": []
+    }
+  ],
+  "workflows": [
+    {
+      "filename": "pull_request_stats.yml",
+      "hash": "2cbf0f3f1b19b2213025cdbf6027bb260c81220bf5b101b04a524f4568d57cb4"
+    },
+    {
+      "filename": "issue_lock.yml",
+      "hash": "a697561851464408497a633bc3f52faa705e0d430b53ae08bd2cd34ffe1e2611"
+    },
+    {
+      "filename": "issue_stale.yml",
+      "hash": "fd4bb34b8cc108b67a44ea1ca74f418f789158c423e58c926f6ed72aa711d3b5"
+    }
+  ]
+}

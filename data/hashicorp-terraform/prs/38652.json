@@ -1,0 +1,70 @@
+{
+  "pr_number": 38652,
+  "title": "Prepare for 1.15.5 release",
+  "state": "closed",
+  "author": "hc-github-team-tf-core",
+  "created_at": "2026-05-27T12:22:41Z",
+  "updated_at": "2026-06-27T02:44:06Z",
+  "merged_at": "2026-05-27T12:28:31Z",
+  "head_sha": "20d9e3603657e1b1182cbe1ee74dce1b9c142b31",
+  "labels": [
+    "skip-changelog-check"
+  ],
+  "ci_runs": [
+    {
+      "run_id": 26510825362,
+      "workflow_id": 179246365,
+      "workflow_name": "Backport Assistant Runner",
+      "status": "success",
+      "head_sha": "20d9e3603657e1b1182cbe1ee74dce1b9c142b31",
+      "created_at": "2026-05-27T12:22:48Z",
+      "updated_at": "2026-05-27T12:22:59Z",
+      "run_started_at": "2026-05-27T12:22:48Z",
+      "jobs": [
+        {
+          "name": "backport",
+          "status": "success",
+          "started_at": "2026-05-27T12:22:52Z",
+          "completed_at": "2026-05-27T12:22:57Z",
+          "duration_sec": 5
+        }
+      ]
+    },
+    {
+      "run_id": 26510825444,
+      "workflow_id": 126957301,
+      "workflow_name": "equivalence-test-diff",
+      "status": "success",
+      "head_sha": "20d9e3603657e1b1182cbe1ee74dce1b9c142b31",
+      "created_at": "2026-05-27T12:22:48Z",
+      "updated_at": "2026-05-27T12:25:19Z",
+      "run_started_at": "2026-05-27T12:22:48Z",
+      "jobs": []
+    },
+    {
+      "run_id": 26510825494,
+      "workflow_id": 23102955,
+      "workflow_name": "Quick Checks",
+      "status": "success",
+      "head_sha": "20d9e3603657e1b1182cbe1ee74dce1b9c142b31",
+      "created_at": "2026-05-27T12:22:48Z",
+      "updated_at": "2026-05-27T12:28:06Z",
+      "run_started_at": "2026-05-27T12:22:48Z",
+      "jobs": []
+    }
+  ],
+  "workflows": [
+    {
+      "filename": "issue-comment-created.yml",
+      "hash": "7b39410b950b1b04577cd7d04201e9ce01aaeca7e6daf5af2dbe7286e23ef08e"
+    },
+    {
+      "filename": "lock.yml",
+      "hash": "7606d6b818ae4ff47b39930380d804b9a904124f7dffe6d9bfbba7e715c2f183"
+    },
+    {
+      "filename": "build.yml",
+      "hash": "192267d1041a111b5fb0a96d698602ec33bd95faf16bffb870abd3b3593bfd6c"
+    }
+  ]
+}

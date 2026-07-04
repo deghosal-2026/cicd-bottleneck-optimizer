@@ -1,0 +1,68 @@
+{
+  "pr_number": 152907,
+  "title": "Fix resharding tests following a change to retry start split requests on the target shard",
+  "state": "open",
+  "author": "lkts",
+  "created_at": "2026-07-03T21:35:07Z",
+  "updated_at": "2026-07-03T21:35:31Z",
+  "merged_at": null,
+  "head_sha": "cd5bbe4af8f508a608f7c5297f27e28e8624047f",
+  "labels": [
+    ">test",
+    ":Distributed/Distributed",
+    "Team:Distributed",
+    "v9.5.0"
+  ],
+  "ci_runs": [
+    {
+      "run_id": 28684349775,
+      "workflow_id": 146525436,
+      "workflow_name": "docs-build",
+      "status": "success",
+      "head_sha": "cd5bbe4af8f508a608f7c5297f27e28e8624047f",
+      "created_at": "2026-07-03T21:35:13Z",
+      "updated_at": "2026-07-03T21:35:33Z",
+      "run_started_at": "2026-07-03T21:35:13Z",
+      "jobs": [
+        {
+          "name": "build / check",
+          "status": "success",
+          "started_at": "2026-07-03T21:35:17Z",
+          "completed_at": "2026-07-03T21:35:24Z",
+          "duration_sec": 7
+        },
+        {
+          "name": "build / match",
+          "status": "success",
+          "started_at": "2026-07-03T21:35:15Z",
+          "completed_at": "2026-07-03T21:35:20Z",
+          "duration_sec": 5
+        },
+        {
+          "name": "build / build",
+          "status": "success",
+          "started_at": "2026-07-03T21:35:27Z",
+          "completed_at": "2026-07-03T21:35:32Z",
+          "duration_sec": 5
+        },
+        {
+          "name": "build / vale",
+          "status": "skipped",
+          "started_at": "2026-07-03T21:35:25Z",
+          "completed_at": "2026-07-03T21:35:25Z",
+          "duration_sec": 0
+        }
+      ]
+    }
+  ],
+  "workflows": [
+    {
+      "filename": "gradle-wrapper-validation.yml",
+      "hash": "04526945275c07b7ec8481281931aa653deceed193cbbf514b23cd8d634fae78"
+    },
+    {
+      "filename": "docs-build.yml",
+      "hash": "6772ac2baa16f9669594b6ea59ebfc2a9e1a6b14f3550571e4faacaf2d397023"
+    }
+  ]
+}

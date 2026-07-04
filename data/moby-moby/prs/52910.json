@@ -1,0 +1,182 @@
+{
+  "pr_number": 52910,
+  "title": "Fix duplicated word in dispatchers_windows comment",
+  "state": "closed",
+  "author": "s3onghyun",
+  "created_at": "2026-06-18T08:38:17Z",
+  "updated_at": "2026-07-02T09:36:43Z",
+  "merged_at": "2026-07-02T09:36:42Z",
+  "head_sha": "132bc5767b66616b7b6150748f065092a0d7eb19",
+  "labels": [
+    "area/builder",
+    "platform/windows",
+    "status/2-code-review",
+    "area/daemon",
+    "area/builder/classic-builder",
+    "ci/validate-only"
+  ],
+  "ci_runs": [
+    {
+      "run_id": 28573432469,
+      "workflow_id": 260262819,
+      "workflow_name": "validate-milestone",
+      "status": "success",
+      "head_sha": "132bc5767b66616b7b6150748f065092a0d7eb19",
+      "created_at": "2026-07-02T07:34:37Z",
+      "updated_at": "2026-07-02T07:35:05Z",
+      "run_started_at": "2026-07-02T07:34:55Z",
+      "jobs": [
+        {
+          "name": "validate-milestone",
+          "status": "success",
+          "started_at": "2026-07-02T07:35:00Z",
+          "completed_at": "2026-07-02T07:35:03Z",
+          "duration_sec": 3
+        }
+      ]
+    },
+    {
+      "run_id": 28573421839,
+      "workflow_id": 86900533,
+      "workflow_name": "validate-pr",
+      "status": "success",
+      "head_sha": "132bc5767b66616b7b6150748f065092a0d7eb19",
+      "created_at": "2026-07-02T07:34:25Z",
+      "updated_at": "2026-07-02T07:35:21Z",
+      "run_started_at": "2026-07-02T07:34:55Z",
+      "jobs": []
+    },
+    {
+      "run_id": 27749458970,
+      "workflow_id": 261203439,
+      "workflow_name": "zizmor",
+      "status": "success",
+      "head_sha": "132bc5767b66616b7b6150748f065092a0d7eb19",
+      "created_at": "2026-06-18T09:17:14Z",
+      "updated_at": "2026-06-25T20:53:50Z",
+      "run_started_at": "2026-06-25T20:53:26Z",
+      "jobs": []
+    },
+    {
+      "run_id": 27749458848,
+      "workflow_id": 187772110,
+      "workflow_name": "vm",
+      "status": "success",
+      "head_sha": "132bc5767b66616b7b6150748f065092a0d7eb19",
+      "created_at": "2026-06-18T09:17:14Z",
+      "updated_at": "2026-06-25T20:53:59Z",
+      "run_started_at": "2026-06-25T20:53:25Z",
+      "jobs": []
+    },
+    {
+      "run_id": 27749458896,
+      "workflow_id": 44461128,
+      "workflow_name": "bin-image",
+      "status": "success",
+      "head_sha": "132bc5767b66616b7b6150748f065092a0d7eb19",
+      "created_at": "2026-06-18T09:17:14Z",
+      "updated_at": "2026-06-25T20:53:59Z",
+      "run_started_at": "2026-06-25T20:53:25Z",
+      "jobs": []
+    },
+    {
+      "run_id": 27749458607,
+      "workflow_id": 86900533,
+      "workflow_name": "validate-pr",
+      "status": "success",
+      "head_sha": "132bc5767b66616b7b6150748f065092a0d7eb19",
+      "created_at": "2026-06-18T09:17:13Z",
+      "updated_at": "2026-06-25T20:53:51Z",
+      "run_started_at": "2026-06-25T20:53:25Z",
+      "jobs": []
+    },
+    {
+      "run_id": 27749458759,
+      "workflow_id": 168088309,
+      "workflow_name": "windows-2025",
+      "status": "success",
+      "head_sha": "132bc5767b66616b7b6150748f065092a0d7eb19",
+      "created_at": "2026-06-18T09:17:13Z",
+      "updated_at": "2026-06-25T20:53:59Z",
+      "run_started_at": "2026-06-25T20:53:25Z",
+      "jobs": []
+    },
+    {
+      "run_id": 27749458689,
+      "workflow_id": 33573227,
+      "workflow_name": "buildkit",
+      "status": "success",
+      "head_sha": "132bc5767b66616b7b6150748f065092a0d7eb19",
+      "created_at": "2026-06-18T09:17:13Z",
+      "updated_at": "2026-06-25T20:53:55Z",
+      "run_started_at": "2026-06-25T20:53:25Z",
+      "jobs": []
+    },
+    {
+      "run_id": 27749458551,
+      "workflow_id": 260262819,
+      "workflow_name": "validate-milestone",
+      "status": "failure",
+      "head_sha": "132bc5767b66616b7b6150748f065092a0d7eb19",
+      "created_at": "2026-06-18T09:17:13Z",
+      "updated_at": "2026-06-25T20:53:35Z",
+      "run_started_at": "2026-06-25T20:53:25Z",
+      "jobs": []
+    },
+    {
+      "run_id": 27749458729,
+      "workflow_id": 21805183,
+      "workflow_name": "ci",
+      "status": "success",
+      "head_sha": "132bc5767b66616b7b6150748f065092a0d7eb19",
+      "created_at": "2026-06-18T09:17:13Z",
+      "updated_at": "2026-06-25T20:57:21Z",
+      "run_started_at": "2026-06-25T20:53:25Z",
+      "jobs": []
+    },
+    {
+      "run_id": 27749458711,
+      "workflow_id": 81499888,
+      "workflow_name": "codeql",
+      "status": "success",
+      "head_sha": "132bc5767b66616b7b6150748f065092a0d7eb19",
+      "created_at": "2026-06-18T09:17:13Z",
+      "updated_at": "2026-06-25T21:00:05Z",
+      "run_started_at": "2026-06-25T20:53:25Z",
+      "jobs": []
+    },
+    {
+      "run_id": 27749458705,
+      "workflow_id": 26704268,
+      "workflow_name": "test",
+      "status": "success",
+      "head_sha": "132bc5767b66616b7b6150748f065092a0d7eb19",
+      "created_at": "2026-06-18T09:17:13Z",
+      "updated_at": "2026-06-25T21:02:54Z",
+      "run_started_at": "2026-06-25T20:53:25Z",
+      "jobs": []
+    }
+  ],
+  "workflows": [
+    {
+      "filename": ".dco.yml",
+      "hash": "dea4b82ced9a768e825d38c022001e448d052703020b8345ce1752af0665f479"
+    },
+    {
+      "filename": ".test-unit.yml",
+      "hash": "64ea4ac26a2df4f48f55a6cfdef04ec69994f18e0dce69c1d98792ecbf66679b"
+    },
+    {
+      "filename": ".test.yml",
+      "hash": "698dd2de1d8e32af05925d489ceb376de42b9db0f6a9f271c0e2f1c83e849f57"
+    },
+    {
+      "filename": ".vm.yml",
+      "hash": "fa079150844d5674b2c95776f852977d6cb1a8faeb202fd94a8b63451445a5ed"
+    },
+    {
+      "filename": ".windows.yml",
+      "hash": "b3cb6d7e301a89297e6b10d87af74beee4996445f851b4fb2d44cdb54c8924f6"
+    }
+  ]
+}

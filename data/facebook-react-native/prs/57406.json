@@ -1,0 +1,268 @@
+{
+  "pr_number": 57406,
+  "title": "Fix debugOptimized DevSettingsActivity manifest",
+  "state": "closed",
+  "author": "Phecda",
+  "created_at": "2026-07-02T05:43:27Z",
+  "updated_at": "2026-07-02T14:58:52Z",
+  "merged_at": null,
+  "head_sha": "2ac576c1c41fc4c666e64f239490b2dd44204e48",
+  "labels": [
+    "CLA Signed",
+    "Merged",
+    "Shared with Meta"
+  ],
+  "ci_runs": [
+    {
+      "run_id": 28583778100,
+      "workflow_id": 85394709,
+      "workflow_name": "Test All",
+      "status": "success",
+      "head_sha": "2ac576c1c41fc4c666e64f239490b2dd44204e48",
+      "created_at": "2026-07-02T10:38:04Z",
+      "updated_at": "2026-07-02T11:19:43Z",
+      "run_started_at": "2026-07-02T10:38:04Z",
+      "jobs": [
+        {
+          "name": "set_release_type",
+          "status": "success",
+          "started_at": "2026-07-02T10:38:10Z",
+          "completed_at": "2026-07-02T10:38:13Z",
+          "duration_sec": 3
+        },
+        {
+          "name": "lint",
+          "status": "success",
+          "started_at": "2026-07-02T10:38:10Z",
+          "completed_at": "2026-07-02T10:40:27Z",
+          "duration_sec": 137
+        },
+        {
+          "name": "check_code_changes",
+          "status": "success",
+          "started_at": "2026-07-02T10:38:09Z",
+          "completed_at": "2026-07-02T10:38:17Z",
+          "duration_sec": 8
+        },
+        {
+          "name": "build_android",
+          "status": "success",
+          "started_at": "2026-07-02T10:38:40Z",
+          "completed_at": "2026-07-02T10:50:19Z",
+          "duration_sec": 699
+        },
+        {
+          "name": "test_ios_rntester_dynamic_frameworks",
+          "status": "skipped",
+          "started_at": "2026-07-02T10:38:17Z",
+          "completed_at": "2026-07-02T10:38:17Z",
+          "duration_sec": 0
+        },
+        {
+          "name": "build_debugger_shell",
+          "status": "skipped",
+          "started_at": "2026-07-02T10:38:17Z",
+          "completed_at": "2026-07-02T10:38:17Z",
+          "duration_sec": 0
+        },
+        {
+          "name": "prebuild_apple_dependencies",
+          "status": "skipped",
+          "started_at": "2026-07-02T10:38:17Z",
+          "completed_at": "2026-07-02T10:38:17Z",
+          "duration_sec": 0
+        },
+        {
+          "name": "prebuild_react_native_core",
+          "status": "skipped",
+          "started_at": "2026-07-02T10:38:17Z",
+          "completed_at": "2026-07-02T10:38:17Z",
+          "duration_sec": 0
+        },
+        {
+          "name": "test_ios_helloworld_with_ruby_3_2_0",
+          "status": "skipped",
+          "started_at": "2026-07-02T10:38:17Z",
+          "completed_at": "2026-07-02T10:38:17Z",
+          "duration_sec": 0
+        },
+        {
+          "name": "test_ios_rntester",
+          "status": "skipped",
+          "started_at": "2026-07-02T10:38:18Z",
+          "completed_at": "2026-07-02T10:38:17Z",
+          "duration_sec": -1
+        },
+        {
+          "name": "test_e2e_ios_rntester",
+          "status": "skipped",
+          "started_at": "2026-07-02T10:38:18Z",
+          "completed_at": "2026-07-02T10:38:17Z",
+          "duration_sec": -1
+        },
+        {
+          "name": "test_ios_rntester_ruby_3_2_0",
+          "status": "skipped",
+          "started_at": "2026-07-02T10:38:18Z",
+          "completed_at": "2026-07-02T10:38:17Z",
+          "duration_sec": -1
+        },
+        {
+          "name": "test_ios_helloworld",
+          "status": "skipped",
+          "started_at": "2026-07-02T10:38:18Z",
+          "completed_at": "2026-07-02T10:38:17Z",
+          "duration_sec": -1
+        },
+        {
+          "name": "test_e2e_ios_rntester_retry_2",
+          "status": "skipped",
+          "started_at": "2026-07-02T10:38:18Z",
+          "completed_at": "2026-07-02T10:38:17Z",
+          "duration_sec": -1
+        },
+        {
+          "name": "test_e2e_ios_rntester_retry_1",
+          "status": "skipped",
+          "started_at": "2026-07-02T10:38:18Z",
+          "completed_at": "2026-07-02T10:38:17Z",
+          "duration_sec": -1
+        },
+        {
+          "name": "build_fantom_runner",
+          "status": "success",
+          "started_at": "2026-07-02T10:40:31Z",
+          "completed_at": "2026-07-02T10:48:23Z",
+          "duration_sec": 472
+        },
+        {
+          "name": "test_js (24)",
+          "status": "success",
+          "started_at": "2026-07-02T10:40:30Z",
+          "completed_at": "2026-07-02T10:43:54Z",
+          "duration_sec": 204
+        },
+        {
+          "name": "test_js (22.13.0)",
+          "status": "success",
+          "started_at": "2026-07-02T10:40:30Z",
+          "completed_at": "2026-07-02T10:44:04Z",
+          "duration_sec": 214
+        },
+        {
+          "name": "build_js_types",
+          "status": "success",
+          "started_at": "2026-07-02T10:40:30Z",
+          "completed_at": "2026-07-02T10:41:34Z",
+          "duration_sec": 64
+        },
+        {
+          "name": "run_fantom_tests / test",
+          "status": "success",
+          "started_at": "2026-07-02T10:48:29Z",
+          "completed_at": "2026-07-02T10:52:26Z",
+          "duration_sec": 237
+        },
+        {
+          "name": "build_npm_package",
+          "status": "success",
+          "started_at": "2026-07-02T10:50:44Z",
+          "completed_at": "2026-07-02T10:52:54Z",
+          "duration_sec": 130
+        },
+        {
+          "name": "test_e2e_android_rntester / test (release)",
+          "status": "success",
+          "started_at": "2026-07-02T10:50:25Z",
+          "completed_at": "2026-07-02T10:59:40Z",
+          "duration_sec": 555
+        },
+        {
+          "name": "test_e2e_android_rntester / test (debug)",
+          "status": "success",
+          "started_at": "2026-07-02T10:50:25Z",
+          "completed_at": "2026-07-02T11:09:16Z",
+          "duration_sec": 1131
+        },
+        {
+          "name": "run_fantom_tests / report",
+          "status": "success",
+          "started_at": "2026-07-02T10:52:29Z",
+          "completed_at": "2026-07-02T10:52:32Z",
+          "duration_sec": 3
+        },
+        {
+          "name": "run_fantom_tests_retry_1",
+          "status": "skipped",
+          "started_at": "2026-07-02T10:52:33Z",
+          "completed_at": "2026-07-02T10:52:32Z",
+          "duration_sec": -1
+        },
+        {
+          "name": "run_fantom_tests_retry_2",
+          "status": "skipped",
+          "started_at": "2026-07-02T10:52:33Z",
+          "completed_at": "2026-07-02T10:52:32Z",
+          "duration_sec": -1
+        },
+        {
+          "name": "test_android_helloworld (Debug)",
+          "status": "success",
+          "started_at": "2026-07-02T10:52:57Z",
+          "completed_at": "2026-07-02T10:58:17Z",
+          "duration_sec": 320
+        },
+        {
+          "name": "test_android_helloworld (Release)",
+          "status": "success",
+          "started_at": "2026-07-02T10:52:57Z",
+          "completed_at": "2026-07-02T10:58:53Z",
+          "duration_sec": 356
+        },
+        {
+          "name": "test_e2e_android_templateapp / test (release)",
+          "status": "success",
+          "started_at": "2026-07-02T10:53:13Z",
+          "completed_at": "2026-07-02T11:01:13Z",
+          "duration_sec": 480
+        },
+        {
+          "name": "test_e2e_android_templateapp / test (debug)",
+          "status": "success",
+          "started_at": "2026-07-02T10:52:57Z",
+          "completed_at": "2026-07-02T11:00:46Z",
+          "duration_sec": 469
+        }
+      ]
+    },
+    {
+      "run_id": 28583777906,
+      "workflow_id": 244203896,
+      "workflow_name": "Validate C++ API Snapshots",
+      "status": "success",
+      "head_sha": "2ac576c1c41fc4c666e64f239490b2dd44204e48",
+      "created_at": "2026-07-02T10:38:04Z",
+      "updated_at": "2026-07-02T10:41:23Z",
+      "run_started_at": "2026-07-02T10:38:04Z",
+      "jobs": []
+    }
+  ],
+  "workflows": [
+    {
+      "filename": "needs-attention.yml",
+      "hash": "65a4a6cc5fcc5896e78ea357cfe209eec2845f173e8bd642ae2d343bfc66deba"
+    },
+    {
+      "filename": "on-issue-labeled.yml",
+      "hash": "7673645f1d0ba0da4c9c7d4f714f8376b8a20f1d6e553304c01769e627efc3d6"
+    },
+    {
+      "filename": "stale-bot.yml",
+      "hash": "1f4dfbb4734e1d14d7263a05e04d3b3c096e1210783c61bf98c57a5d86cd79f2"
+    },
+    {
+      "filename": "autorebase.yml",
+      "hash": "617b8a9799890a1d5010ff20bc08c4064fbffe3d3be0a1049ada31ccd0fc0a61"
+    }
+  ]
+}

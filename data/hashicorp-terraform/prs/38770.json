@@ -1,0 +1,92 @@
+{
+  "pr_number": 38770,
+  "title": "Fix submodule variable validation during init",
+  "state": "closed",
+  "author": "dbanck",
+  "created_at": "2026-06-24T09:45:41Z",
+  "updated_at": "2026-06-24T10:34:52Z",
+  "merged_at": "2026-06-24T10:34:50Z",
+  "head_sha": "f19448858b1b92bbc8fa05bda2865e76b5769536",
+  "labels": [
+    "1.15-backport"
+  ],
+  "ci_runs": [
+    {
+      "run_id": 28089833167,
+      "workflow_id": 278786541,
+      "workflow_name": "Changelog Validation",
+      "status": "success",
+      "head_sha": "f19448858b1b92bbc8fa05bda2865e76b5769536",
+      "created_at": "2026-06-24T09:45:47Z",
+      "updated_at": "2026-06-24T09:45:56Z",
+      "run_started_at": "2026-06-24T09:45:47Z",
+      "jobs": [
+        {
+          "name": "Validate Changelog",
+          "status": "success",
+          "started_at": "2026-06-24T09:45:50Z",
+          "completed_at": "2026-06-24T09:45:55Z",
+          "duration_sec": 5
+        }
+      ]
+    },
+    {
+      "run_id": 28089833168,
+      "workflow_id": 179246365,
+      "workflow_name": "Backport Assistant Runner",
+      "status": "success",
+      "head_sha": "f19448858b1b92bbc8fa05bda2865e76b5769536",
+      "created_at": "2026-06-24T09:45:47Z",
+      "updated_at": "2026-06-24T09:46:04Z",
+      "run_started_at": "2026-06-24T09:45:47Z",
+      "jobs": []
+    },
+    {
+      "run_id": 28089832521,
+      "workflow_id": 278786541,
+      "workflow_name": "Changelog Validation",
+      "status": "success",
+      "head_sha": "f19448858b1b92bbc8fa05bda2865e76b5769536",
+      "created_at": "2026-06-24T09:45:46Z",
+      "updated_at": "2026-06-24T09:45:57Z",
+      "run_started_at": "2026-06-24T09:45:46Z",
+      "jobs": []
+    },
+    {
+      "run_id": 28089832542,
+      "workflow_id": 126957301,
+      "workflow_name": "equivalence-test-diff",
+      "status": "success",
+      "head_sha": "f19448858b1b92bbc8fa05bda2865e76b5769536",
+      "created_at": "2026-06-24T09:45:46Z",
+      "updated_at": "2026-06-24T09:48:02Z",
+      "run_started_at": "2026-06-24T09:45:46Z",
+      "jobs": []
+    },
+    {
+      "run_id": 28089832485,
+      "workflow_id": 23102955,
+      "workflow_name": "Quick Checks",
+      "status": "success",
+      "head_sha": "f19448858b1b92bbc8fa05bda2865e76b5769536",
+      "created_at": "2026-06-24T09:45:46Z",
+      "updated_at": "2026-06-24T09:51:32Z",
+      "run_started_at": "2026-06-24T09:45:46Z",
+      "jobs": []
+    }
+  ],
+  "workflows": [
+    {
+      "filename": "issue-comment-created.yml",
+      "hash": "7b39410b950b1b04577cd7d04201e9ce01aaeca7e6daf5af2dbe7286e23ef08e"
+    },
+    {
+      "filename": "lock.yml",
+      "hash": "7606d6b818ae4ff47b39930380d804b9a904124f7dffe6d9bfbba7e715c2f183"
+    },
+    {
+      "filename": "build.yml",
+      "hash": "192267d1041a111b5fb0a96d698602ec33bd95faf16bffb870abd3b3593bfd6c"
+    }
+  ]
+}

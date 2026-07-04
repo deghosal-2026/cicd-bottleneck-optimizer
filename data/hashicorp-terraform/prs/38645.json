@@ -1,0 +1,57 @@
+{
+  "pr_number": 38645,
+  "title": "Backport of Check for configuration errors before installing modules into v1.15",
+  "state": "closed",
+  "author": "github-actions[bot]",
+  "created_at": "2026-05-26T13:15:25Z",
+  "updated_at": "2026-06-26T02:44:22Z",
+  "merged_at": "2026-05-26T13:27:13Z",
+  "head_sha": "4ecb47bab971533cc8794f7e4cf5a71a6dd9c2d7",
+  "labels": [],
+  "ci_runs": [
+    {
+      "run_id": 26450253096,
+      "workflow_id": 126957301,
+      "workflow_name": "equivalence-test-diff",
+      "status": "success",
+      "head_sha": "4ecb47bab971533cc8794f7e4cf5a71a6dd9c2d7",
+      "created_at": "2026-05-26T13:15:45Z",
+      "updated_at": "2026-05-26T13:17:59Z",
+      "run_started_at": "2026-05-26T13:15:45Z",
+      "jobs": [
+        {
+          "name": "Equivalence Test Diff",
+          "status": "success",
+          "started_at": "2026-05-26T13:15:50Z",
+          "completed_at": "2026-05-26T13:17:58Z",
+          "duration_sec": 128
+        }
+      ]
+    },
+    {
+      "run_id": 26450253093,
+      "workflow_id": 23102955,
+      "workflow_name": "Quick Checks",
+      "status": "success",
+      "head_sha": "4ecb47bab971533cc8794f7e4cf5a71a6dd9c2d7",
+      "created_at": "2026-05-26T13:15:45Z",
+      "updated_at": "2026-05-26T13:21:51Z",
+      "run_started_at": "2026-05-26T13:15:45Z",
+      "jobs": []
+    }
+  ],
+  "workflows": [
+    {
+      "filename": "issue-comment-created.yml",
+      "hash": "7b39410b950b1b04577cd7d04201e9ce01aaeca7e6daf5af2dbe7286e23ef08e"
+    },
+    {
+      "filename": "lock.yml",
+      "hash": "7606d6b818ae4ff47b39930380d804b9a904124f7dffe6d9bfbba7e715c2f183"
+    },
+    {
+      "filename": "build.yml",
+      "hash": "192267d1041a111b5fb0a96d698602ec33bd95faf16bffb870abd3b3593bfd6c"
+    }
+  ]
+}

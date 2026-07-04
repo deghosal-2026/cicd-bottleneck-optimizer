@@ -1,0 +1,69 @@
+{
+  "pr_number": 152383,
+  "title": "ESQL: Fix ClassCastException for narrow time windows",
+  "state": "open",
+  "author": "sidosera",
+  "created_at": "2026-06-28T13:04:26Z",
+  "updated_at": "2026-07-04T05:39:54Z",
+  "merged_at": null,
+  "head_sha": "2defac39454c728e16a3f451897d2d678ef251c2",
+  "labels": [
+    ">bug",
+    "Team:StorageEngine",
+    ":StorageEngine/ES|QL",
+    ":StorageEngine/PromQL",
+    "v9.5.0"
+  ],
+  "ci_runs": [
+    {
+      "run_id": 28616231035,
+      "workflow_id": 146525436,
+      "workflow_name": "docs-build",
+      "status": "success",
+      "head_sha": "2defac39454c728e16a3f451897d2d678ef251c2",
+      "created_at": "2026-07-02T19:29:20Z",
+      "updated_at": "2026-07-02T19:29:43Z",
+      "run_started_at": "2026-07-02T19:29:20Z",
+      "jobs": [
+        {
+          "name": "build / match",
+          "status": "success",
+          "started_at": "2026-07-02T19:29:24Z",
+          "completed_at": "2026-07-02T19:29:32Z",
+          "duration_sec": 8
+        },
+        {
+          "name": "build / check",
+          "status": "success",
+          "started_at": "2026-07-02T19:29:22Z",
+          "completed_at": "2026-07-02T19:29:28Z",
+          "duration_sec": 6
+        },
+        {
+          "name": "build / vale",
+          "status": "skipped",
+          "started_at": "2026-07-02T19:29:28Z",
+          "completed_at": "2026-07-02T19:29:28Z",
+          "duration_sec": 0
+        },
+        {
+          "name": "build / build",
+          "status": "success",
+          "started_at": "2026-07-02T19:29:34Z",
+          "completed_at": "2026-07-02T19:29:42Z",
+          "duration_sec": 8
+        }
+      ]
+    }
+  ],
+  "workflows": [
+    {
+      "filename": "gradle-wrapper-validation.yml",
+      "hash": "04526945275c07b7ec8481281931aa653deceed193cbbf514b23cd8d634fae78"
+    },
+    {
+      "filename": "docs-build.yml",
+      "hash": "6772ac2baa16f9669594b6ea59ebfc2a9e1a6b14f3550571e4faacaf2d397023"
+    }
+  ]
+}

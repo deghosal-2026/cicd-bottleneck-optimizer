@@ -1,0 +1,126 @@
+{
+  "pr_number": 95387,
+  "title": "Update font data",
+  "state": "closed",
+  "author": "vercel-release-bot",
+  "created_at": "2026-07-02T00:41:14Z",
+  "updated_at": "2026-07-03T14:53:31Z",
+  "merged_at": null,
+  "head_sha": "998d11cfb322a8749ae04a799b73c0e24cbf4a1b",
+  "labels": [
+    "run-react-18-tests"
+  ],
+  "ci_runs": [
+    {
+      "run_id": 28557380692,
+      "workflow_id": 58813578,
+      "workflow_name": "build-and-deploy",
+      "status": "skipped",
+      "head_sha": "998d11cfb322a8749ae04a799b73c0e24cbf4a1b",
+      "created_at": "2026-07-02T00:41:17Z",
+      "updated_at": "2026-07-02T00:41:18Z",
+      "run_started_at": "2026-07-02T00:41:17Z",
+      "jobs": [
+        {
+          "name": "deploy-target",
+          "status": "skipped",
+          "started_at": "2026-07-02T00:41:17Z",
+          "completed_at": "2026-07-02T00:41:17Z",
+          "duration_sec": 0
+        },
+        {
+          "name": "build-wasm",
+          "status": "skipped",
+          "started_at": "2026-07-02T00:41:17Z",
+          "completed_at": "2026-07-02T00:41:17Z",
+          "duration_sec": 0
+        },
+        {
+          "name": "generate-native-matrix",
+          "status": "skipped",
+          "started_at": "2026-07-02T00:41:17Z",
+          "completed_at": "2026-07-02T00:41:17Z",
+          "duration_sec": 0
+        },
+        {
+          "name": "build",
+          "status": "skipped",
+          "started_at": "2026-07-02T00:41:17Z",
+          "completed_at": "2026-07-02T00:41:17Z",
+          "duration_sec": 0
+        },
+        {
+          "name": "Prepare preview tarball",
+          "status": "skipped",
+          "started_at": "2026-07-02T00:41:17Z",
+          "completed_at": "2026-07-02T00:41:17Z",
+          "duration_sec": 0
+        },
+        {
+          "name": "Upload Turbopack Bytesize metrics to Datadog",
+          "status": "skipped",
+          "started_at": "2026-07-02T00:41:18Z",
+          "completed_at": "2026-07-02T00:41:17Z",
+          "duration_sec": -1
+        },
+        {
+          "name": "stable - ${{ matrix.target }} - node@20",
+          "status": "skipped",
+          "started_at": "2026-07-02T00:41:18Z",
+          "completed_at": "2026-07-02T00:41:17Z",
+          "duration_sec": -1
+        },
+        {
+          "name": "thank you, build",
+          "status": "skipped",
+          "started_at": "2026-07-02T00:41:18Z",
+          "completed_at": "2026-07-02T00:41:17Z",
+          "duration_sec": -1
+        },
+        {
+          "name": "Potentially publish release",
+          "status": "skipped",
+          "started_at": "2026-07-02T00:41:18Z",
+          "completed_at": "2026-07-02T00:41:17Z",
+          "duration_sec": -1
+        }
+      ]
+    },
+    {
+      "run_id": 28557380774,
+      "workflow_id": 57419851,
+      "workflow_name": "build-and-test",
+      "status": "failure",
+      "head_sha": "998d11cfb322a8749ae04a799b73c0e24cbf4a1b",
+      "created_at": "2026-07-02T00:41:17Z",
+      "updated_at": "2026-07-02T01:09:23Z",
+      "run_started_at": "2026-07-02T00:41:17Z",
+      "jobs": []
+    },
+    {
+      "run_id": 28557380796,
+      "workflow_id": 444921,
+      "workflow_name": "Generate Stats",
+      "status": "cancelled",
+      "head_sha": "998d11cfb322a8749ae04a799b73c0e24cbf4a1b",
+      "created_at": "2026-07-02T00:41:17Z",
+      "updated_at": "2026-07-02T01:09:47Z",
+      "run_started_at": "2026-07-02T00:41:17Z",
+      "jobs": []
+    }
+  ],
+  "workflows": [
+    {
+      "filename": "pull_request_stats.yml",
+      "hash": "2cbf0f3f1b19b2213025cdbf6027bb260c81220bf5b101b04a524f4568d57cb4"
+    },
+    {
+      "filename": "issue_lock.yml",
+      "hash": "a697561851464408497a633bc3f52faa705e0d430b53ae08bd2cd34ffe1e2611"
+    },
+    {
+      "filename": "issue_stale.yml",
+      "hash": "fd4bb34b8cc108b67a44ea1ca74f418f789158c423e58c926f6ed72aa711d3b5"
+    }
+  ]
+}

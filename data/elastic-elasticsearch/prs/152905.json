@@ -1,0 +1,69 @@
+{
+  "pr_number": 152905,
+  "title": "Fix GPU codec issues from Lucene 10.5 upgrade",
+  "state": "open",
+  "author": "mayya-sharipova",
+  "created_at": "2026-07-03T20:15:46Z",
+  "updated_at": "2026-07-03T20:57:32Z",
+  "merged_at": null,
+  "head_sha": "f0cf14d8ee1e1a6efb38e426b3cabd9d60daeb88",
+  "labels": [
+    ">bug",
+    ":Search Relevance/Vectors",
+    "Team:Search Relevance",
+    "test-gpu",
+    "v9.5.0"
+  ],
+  "ci_runs": [
+    {
+      "run_id": 28682050244,
+      "workflow_id": 146525436,
+      "workflow_name": "docs-build",
+      "status": "success",
+      "head_sha": "f0cf14d8ee1e1a6efb38e426b3cabd9d60daeb88",
+      "created_at": "2026-07-03T20:28:47Z",
+      "updated_at": "2026-07-03T20:29:06Z",
+      "run_started_at": "2026-07-03T20:28:47Z",
+      "jobs": [
+        {
+          "name": "build / match",
+          "status": "success",
+          "started_at": "2026-07-03T20:28:50Z",
+          "completed_at": "2026-07-03T20:28:56Z",
+          "duration_sec": 6
+        },
+        {
+          "name": "build / check",
+          "status": "success",
+          "started_at": "2026-07-03T20:28:49Z",
+          "completed_at": "2026-07-03T20:28:54Z",
+          "duration_sec": 5
+        },
+        {
+          "name": "build / vale",
+          "status": "skipped",
+          "started_at": "2026-07-03T20:28:55Z",
+          "completed_at": "2026-07-03T20:28:54Z",
+          "duration_sec": -1
+        },
+        {
+          "name": "build / build",
+          "status": "success",
+          "started_at": "2026-07-03T20:28:58Z",
+          "completed_at": "2026-07-03T20:29:05Z",
+          "duration_sec": 7
+        }
+      ]
+    }
+  ],
+  "workflows": [
+    {
+      "filename": "gradle-wrapper-validation.yml",
+      "hash": "04526945275c07b7ec8481281931aa653deceed193cbbf514b23cd8d634fae78"
+    },
+    {
+      "filename": "docs-build.yml",
+      "hash": "6772ac2baa16f9669594b6ea59ebfc2a9e1a6b14f3550571e4faacaf2d397023"
+    }
+  ]
+}

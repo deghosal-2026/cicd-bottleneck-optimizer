@@ -1,0 +1,68 @@
+{
+  "pr_number": 152831,
+  "title": "Relax index balance metrics ",
+  "state": "open",
+  "author": "mhl-b",
+  "created_at": "2026-07-03T06:56:47Z",
+  "updated_at": "2026-07-04T01:26:45Z",
+  "merged_at": null,
+  "head_sha": "5177995f1def05f7a167ddd85883a8ab199ddd99",
+  "labels": [
+    ">non-issue",
+    ":Distributed/Allocation",
+    "Team:Distributed",
+    "v9.5.0"
+  ],
+  "ci_runs": [
+    {
+      "run_id": 28677303065,
+      "workflow_id": 146525436,
+      "workflow_name": "docs-build",
+      "status": "success",
+      "head_sha": "5177995f1def05f7a167ddd85883a8ab199ddd99",
+      "created_at": "2026-07-03T18:22:44Z",
+      "updated_at": "2026-07-03T18:23:01Z",
+      "run_started_at": "2026-07-03T18:22:44Z",
+      "jobs": [
+        {
+          "name": "build / match",
+          "status": "success",
+          "started_at": "2026-07-03T18:22:46Z",
+          "completed_at": "2026-07-03T18:22:55Z",
+          "duration_sec": 9
+        },
+        {
+          "name": "build / check",
+          "status": "success",
+          "started_at": "2026-07-03T18:22:46Z",
+          "completed_at": "2026-07-03T18:22:54Z",
+          "duration_sec": 8
+        },
+        {
+          "name": "build / build",
+          "status": "success",
+          "started_at": "2026-07-03T18:22:57Z",
+          "completed_at": "2026-07-03T18:23:01Z",
+          "duration_sec": 4
+        },
+        {
+          "name": "build / vale",
+          "status": "skipped",
+          "started_at": "2026-07-03T18:22:55Z",
+          "completed_at": "2026-07-03T18:22:54Z",
+          "duration_sec": -1
+        }
+      ]
+    }
+  ],
+  "workflows": [
+    {
+      "filename": "gradle-wrapper-validation.yml",
+      "hash": "04526945275c07b7ec8481281931aa653deceed193cbbf514b23cd8d634fae78"
+    },
+    {
+      "filename": "docs-build.yml",
+      "hash": "6772ac2baa16f9669594b6ea59ebfc2a9e1a6b14f3550571e4faacaf2d397023"
+    }
+  ]
+}

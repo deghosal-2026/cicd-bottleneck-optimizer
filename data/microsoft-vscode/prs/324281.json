@@ -1,0 +1,97 @@
+{
+  "pr_number": 324281,
+  "title": "Use local icon treatment for Agent Host Copilot",
+  "state": "open",
+  "author": "roblourens",
+  "created_at": "2026-07-04T03:48:03Z",
+  "updated_at": "2026-07-04T05:23:05Z",
+  "merged_at": null,
+  "head_sha": "068adf02797fbacee125c7f42e4bba1aaf91ff5c",
+  "labels": [],
+  "ci_runs": [
+    {
+      "run_id": 28693987193,
+      "workflow_id": 211787236,
+      "workflow_name": "Prevent engineering system changes in PRs",
+      "status": "success",
+      "head_sha": "068adf02797fbacee125c7f42e4bba1aaf91ff5c",
+      "created_at": "2026-07-04T03:48:07Z",
+      "updated_at": "2026-07-04T03:48:17Z",
+      "run_started_at": "2026-07-04T03:48:07Z",
+      "jobs": [
+        {
+          "name": "Prevent engineering system changes in PRs",
+          "status": "success",
+          "started_at": "2026-07-04T03:48:13Z",
+          "completed_at": "2026-07-04T03:48:16Z",
+          "duration_sec": 3
+        }
+      ]
+    },
+    {
+      "run_id": 28693987208,
+      "workflow_id": 38332752,
+      "workflow_name": "Telemetry",
+      "status": "success",
+      "head_sha": "068adf02797fbacee125c7f42e4bba1aaf91ff5c",
+      "created_at": "2026-07-04T03:48:07Z",
+      "updated_at": "2026-07-04T03:48:45Z",
+      "run_started_at": "2026-07-04T03:48:07Z",
+      "jobs": []
+    },
+    {
+      "run_id": 28693987214,
+      "workflow_id": 258342321,
+      "workflow_name": "chat-lib tests",
+      "status": "success",
+      "head_sha": "068adf02797fbacee125c7f42e4bba1aaf91ff5c",
+      "created_at": "2026-07-04T03:48:07Z",
+      "updated_at": "2026-07-04T03:51:26Z",
+      "run_started_at": "2026-07-04T03:48:07Z",
+      "jobs": []
+    },
+    {
+      "run_id": 28693987191,
+      "workflow_id": 21497327,
+      "workflow_name": "Monaco Editor checks",
+      "status": "success",
+      "head_sha": "068adf02797fbacee125c7f42e4bba1aaf91ff5c",
+      "created_at": "2026-07-04T03:48:07Z",
+      "updated_at": "2026-07-04T03:52:47Z",
+      "run_started_at": "2026-07-04T03:48:07Z",
+      "jobs": []
+    },
+    {
+      "run_id": 28693987200,
+      "workflow_id": 273167221,
+      "workflow_name": "Component Fixtures",
+      "status": "success",
+      "head_sha": "068adf02797fbacee125c7f42e4bba1aaf91ff5c",
+      "created_at": "2026-07-04T03:48:07Z",
+      "updated_at": "2026-07-04T03:53:52Z",
+      "run_started_at": "2026-07-04T03:48:07Z",
+      "jobs": []
+    },
+    {
+      "run_id": 28693987261,
+      "workflow_id": 4196599,
+      "workflow_name": "Code OSS",
+      "status": "success",
+      "head_sha": "068adf02797fbacee125c7f42e4bba1aaf91ff5c",
+      "created_at": "2026-07-04T03:48:07Z",
+      "updated_at": "2026-07-04T04:02:03Z",
+      "run_started_at": "2026-07-04T03:48:07Z",
+      "jobs": []
+    }
+  ],
+  "workflows": [
+    {
+      "filename": "pr.yml",
+      "hash": "0625dff11585a35e1ad0cf2b3cbea2cb72e521039dfd406eaa8de1ec75492115"
+    },
+    {
+      "filename": "monaco-editor.yml",
+      "hash": "02e5f951a8bc0193f3239d64b65c547aebcf6427849f35a8e7b9500b4eeb10f9"
+    }
+  ]
+}

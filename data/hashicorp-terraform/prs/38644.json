@@ -1,0 +1,103 @@
+{
+  "pr_number": 38644,
+  "title": "Actions are now deferrable",
+  "state": "closed",
+  "author": "jbardin",
+  "created_at": "2026-05-26T13:12:32Z",
+  "updated_at": "2026-06-28T02:44:25Z",
+  "merged_at": "2026-05-28T14:44:55Z",
+  "head_sha": "408674da68d98fce7a1fbd131373507e6f186976",
+  "labels": [
+    "no-changelog-needed"
+  ],
+  "ci_runs": [
+    {
+      "run_id": 26484922039,
+      "workflow_id": 278786541,
+      "workflow_name": "Changelog Validation",
+      "status": "success",
+      "head_sha": "408674da68d98fce7a1fbd131373507e6f186976",
+      "created_at": "2026-05-27T01:20:02Z",
+      "updated_at": "2026-05-27T01:20:13Z",
+      "run_started_at": "2026-05-27T01:20:02Z",
+      "jobs": [
+        {
+          "name": "Validate Changelog",
+          "status": "success",
+          "started_at": "2026-05-27T01:20:07Z",
+          "completed_at": "2026-05-27T01:20:11Z",
+          "duration_sec": 4
+        }
+      ]
+    },
+    {
+      "run_id": 26484922020,
+      "workflow_id": 126957301,
+      "workflow_name": "equivalence-test-diff",
+      "status": "success",
+      "head_sha": "408674da68d98fce7a1fbd131373507e6f186976",
+      "created_at": "2026-05-27T01:20:02Z",
+      "updated_at": "2026-05-27T01:22:08Z",
+      "run_started_at": "2026-05-27T01:20:02Z",
+      "jobs": []
+    },
+    {
+      "run_id": 26484922061,
+      "workflow_id": 23102955,
+      "workflow_name": "Quick Checks",
+      "status": "success",
+      "head_sha": "408674da68d98fce7a1fbd131373507e6f186976",
+      "created_at": "2026-05-27T01:20:02Z",
+      "updated_at": "2026-05-27T01:26:37Z",
+      "run_started_at": "2026-05-27T01:20:02Z",
+      "jobs": []
+    },
+    {
+      "run_id": 26484239542,
+      "workflow_id": 278786541,
+      "workflow_name": "Changelog Validation",
+      "status": "success",
+      "head_sha": "408674da68d98fce7a1fbd131373507e6f186976",
+      "created_at": "2026-05-27T00:59:29Z",
+      "updated_at": "2026-05-27T00:59:39Z",
+      "run_started_at": "2026-05-27T00:59:29Z",
+      "jobs": []
+    },
+    {
+      "run_id": 26484239519,
+      "workflow_id": 126957301,
+      "workflow_name": "equivalence-test-diff",
+      "status": "success",
+      "head_sha": "408674da68d98fce7a1fbd131373507e6f186976",
+      "created_at": "2026-05-27T00:59:29Z",
+      "updated_at": "2026-05-27T01:01:45Z",
+      "run_started_at": "2026-05-27T00:59:29Z",
+      "jobs": []
+    },
+    {
+      "run_id": 26484239518,
+      "workflow_id": 23102955,
+      "workflow_name": "Quick Checks",
+      "status": "success",
+      "head_sha": "408674da68d98fce7a1fbd131373507e6f186976",
+      "created_at": "2026-05-27T00:59:29Z",
+      "updated_at": "2026-05-27T01:05:33Z",
+      "run_started_at": "2026-05-27T00:59:29Z",
+      "jobs": []
+    }
+  ],
+  "workflows": [
+    {
+      "filename": "issue-comment-created.yml",
+      "hash": "7b39410b950b1b04577cd7d04201e9ce01aaeca7e6daf5af2dbe7286e23ef08e"
+    },
+    {
+      "filename": "lock.yml",
+      "hash": "7606d6b818ae4ff47b39930380d804b9a904124f7dffe6d9bfbba7e715c2f183"
+    },
+    {
+      "filename": "build.yml",
+      "hash": "192267d1041a111b5fb0a96d698602ec33bd95faf16bffb870abd3b3593bfd6c"
+    }
+  ]
+}

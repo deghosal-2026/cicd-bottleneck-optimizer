@@ -1,0 +1,147 @@
+{
+  "pr_number": 120911,
+  "title": "Fix return_attention_scores docstring typo in Attention layers",
+  "state": "open",
+  "author": "Venkat6871",
+  "created_at": "2026-06-11T09:43:45Z",
+  "updated_at": "2026-07-03T19:34:36Z",
+  "merged_at": null,
+  "head_sha": "9687f6086f428343a21b59732c9220cdb3be3dc1",
+  "labels": [
+    "ready to pull",
+    "size:XS",
+    "prtype:bugfix",
+    "python"
+  ],
+  "ci_runs": [
+    {
+      "run_id": 28680044158,
+      "workflow_id": 276590501,
+      "workflow_name": "Gemini PR Review",
+      "status": "skipped",
+      "head_sha": "9687f6086f428343a21b59732c9220cdb3be3dc1",
+      "created_at": "2026-07-03T19:33:59Z",
+      "updated_at": "2026-07-03T19:34:00Z",
+      "run_started_at": "2026-07-03T19:33:59Z",
+      "jobs": [
+        {
+          "name": "gemini-review",
+          "status": "skipped",
+          "started_at": "2026-07-03T19:34:07Z",
+          "completed_at": "2026-07-03T19:33:59Z",
+          "duration_sec": -8
+        }
+      ]
+    },
+    {
+      "run_id": 28081346468,
+      "workflow_id": 276590501,
+      "workflow_name": "Gemini PR Review",
+      "status": "skipped",
+      "head_sha": "9687f6086f428343a21b59732c9220cdb3be3dc1",
+      "created_at": "2026-06-24T07:04:20Z",
+      "updated_at": "2026-06-24T07:04:22Z",
+      "run_started_at": "2026-06-24T07:04:20Z",
+      "jobs": []
+    },
+    {
+      "run_id": 27397440835,
+      "workflow_id": 276590501,
+      "workflow_name": "Gemini PR Review",
+      "status": "skipped",
+      "head_sha": "9687f6086f428343a21b59732c9220cdb3be3dc1",
+      "created_at": "2026-06-12T05:52:04Z",
+      "updated_at": "2026-06-12T05:52:05Z",
+      "run_started_at": "2026-06-12T05:52:04Z",
+      "jobs": []
+    },
+    {
+      "run_id": 27397441281,
+      "workflow_id": 276590501,
+      "workflow_name": "Gemini PR Review",
+      "status": "skipped",
+      "head_sha": "9687f6086f428343a21b59732c9220cdb3be3dc1",
+      "created_at": "2026-06-12T05:52:04Z",
+      "updated_at": "2026-06-12T05:52:05Z",
+      "run_started_at": "2026-06-12T05:52:04Z",
+      "jobs": []
+    },
+    {
+      "run_id": 27397435975,
+      "workflow_id": 276590501,
+      "workflow_name": "Gemini PR Review",
+      "status": "skipped",
+      "head_sha": "9687f6086f428343a21b59732c9220cdb3be3dc1",
+      "created_at": "2026-06-12T05:51:56Z",
+      "updated_at": "2026-06-12T05:51:57Z",
+      "run_started_at": "2026-06-12T05:51:56Z",
+      "jobs": []
+    },
+    {
+      "run_id": 27397428882,
+      "workflow_id": 276590501,
+      "workflow_name": "Gemini PR Review",
+      "status": "skipped",
+      "head_sha": "9687f6086f428343a21b59732c9220cdb3be3dc1",
+      "created_at": "2026-06-12T05:51:44Z",
+      "updated_at": "2026-06-12T05:51:45Z",
+      "run_started_at": "2026-06-12T05:51:44Z",
+      "jobs": []
+    },
+    {
+      "run_id": 27338187661,
+      "workflow_id": 276590501,
+      "workflow_name": "Gemini PR Review",
+      "status": "skipped",
+      "head_sha": "9687f6086f428343a21b59732c9220cdb3be3dc1",
+      "created_at": "2026-06-11T09:43:53Z",
+      "updated_at": "2026-06-11T09:43:54Z",
+      "run_started_at": "2026-06-11T09:43:53Z",
+      "jobs": []
+    },
+    {
+      "run_id": 27338187092,
+      "workflow_id": 10066984,
+      "workflow_name": "PyLint",
+      "status": "success",
+      "head_sha": "9687f6086f428343a21b59732c9220cdb3be3dc1",
+      "created_at": "2026-06-11T09:43:52Z",
+      "updated_at": "2026-06-11T09:44:36Z",
+      "run_started_at": "2026-06-11T09:43:52Z",
+      "jobs": []
+    },
+    {
+      "run_id": 27338187289,
+      "workflow_id": 248743471,
+      "workflow_name": "CI",
+      "status": "success",
+      "head_sha": "9687f6086f428343a21b59732c9220cdb3be3dc1",
+      "created_at": "2026-06-11T09:43:52Z",
+      "updated_at": "2026-06-11T10:00:44Z",
+      "run_started_at": "2026-06-11T09:43:52Z",
+      "jobs": []
+    }
+  ],
+  "workflows": [
+    {
+      "filename": "update-nightly.yml",
+      "hash": "05e2e1c09977e5fd7562b494032571695f02592e883ef959d2e7a72d14356529"
+    },
+    {
+      "filename": "pylint-presubmit.yml",
+      "hash": "138eee26e716354ce54596ce96004db1c5406aff3467a1389feb5dc51fc16abc"
+    },
+    {
+      "filename": "issue-on-pr-rollback.yml",
+      "hash": "5a33aa6ed9fa2234004803a5be33a4e9804ccbff8e031a442ff064af0d809584"
+    },
+    {
+      "filename": "scorecards-analysis.yml",
+      "hash": "ef2eb9d0011f9be06b1dc6334a1bf4e3bdc52fe799bd5f3166de2bc93b02e651"
+    },
+    {
+      "filename": "cffconvert.yml",
+      "hash": "f49386b15b0e8f242217fba21e4ba80c9f50e9d1cb97f60c30180e8710a8a0a7"
+    }
+  ]
+}

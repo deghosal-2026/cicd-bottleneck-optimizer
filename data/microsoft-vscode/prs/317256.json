@@ -1,0 +1,97 @@
+{
+  "pr_number": 317256,
+  "title": "feat: implement per-turn changeset recompute logic and associated tests",
+  "state": "closed",
+  "author": "DonJayamanne",
+  "created_at": "2026-05-19T06:38:28Z",
+  "updated_at": "2026-07-03T23:40:39Z",
+  "merged_at": "2026-05-19T11:48:03Z",
+  "head_sha": "3ac4fa99641e3c17f92675e99965955c913048a1",
+  "labels": [],
+  "ci_runs": [
+    {
+      "run_id": 26091245761,
+      "workflow_id": 211787236,
+      "workflow_name": "Prevent engineering system changes in PRs",
+      "status": "success",
+      "head_sha": "3ac4fa99641e3c17f92675e99965955c913048a1",
+      "created_at": "2026-05-19T10:24:08Z",
+      "updated_at": "2026-05-19T10:27:43Z",
+      "run_started_at": "2026-05-19T10:24:08Z",
+      "jobs": [
+        {
+          "name": "Prevent engineering system changes in PRs",
+          "status": "success",
+          "started_at": "2026-05-19T10:27:37Z",
+          "completed_at": "2026-05-19T10:27:43Z",
+          "duration_sec": 6
+        }
+      ]
+    },
+    {
+      "run_id": 26091245658,
+      "workflow_id": 38332752,
+      "workflow_name": "Telemetry",
+      "status": "success",
+      "head_sha": "3ac4fa99641e3c17f92675e99965955c913048a1",
+      "created_at": "2026-05-19T10:24:08Z",
+      "updated_at": "2026-05-19T10:28:04Z",
+      "run_started_at": "2026-05-19T10:24:08Z",
+      "jobs": []
+    },
+    {
+      "run_id": 26091245723,
+      "workflow_id": 258342321,
+      "workflow_name": "chat-lib tests",
+      "status": "success",
+      "head_sha": "3ac4fa99641e3c17f92675e99965955c913048a1",
+      "created_at": "2026-05-19T10:24:08Z",
+      "updated_at": "2026-05-19T10:30:27Z",
+      "run_started_at": "2026-05-19T10:24:08Z",
+      "jobs": []
+    },
+    {
+      "run_id": 26091245661,
+      "workflow_id": 273167221,
+      "workflow_name": "Component Fixtures",
+      "status": "success",
+      "head_sha": "3ac4fa99641e3c17f92675e99965955c913048a1",
+      "created_at": "2026-05-19T10:24:08Z",
+      "updated_at": "2026-05-19T10:34:37Z",
+      "run_started_at": "2026-05-19T10:24:08Z",
+      "jobs": []
+    },
+    {
+      "run_id": 26091245874,
+      "workflow_id": 21497327,
+      "workflow_name": "Monaco Editor checks",
+      "status": "success",
+      "head_sha": "3ac4fa99641e3c17f92675e99965955c913048a1",
+      "created_at": "2026-05-19T10:24:08Z",
+      "updated_at": "2026-05-19T10:38:34Z",
+      "run_started_at": "2026-05-19T10:24:08Z",
+      "jobs": []
+    },
+    {
+      "run_id": 26091245670,
+      "workflow_id": 4196599,
+      "workflow_name": "Code OSS",
+      "status": "success",
+      "head_sha": "3ac4fa99641e3c17f92675e99965955c913048a1",
+      "created_at": "2026-05-19T10:24:08Z",
+      "updated_at": "2026-05-19T10:44:32Z",
+      "run_started_at": "2026-05-19T10:24:08Z",
+      "jobs": []
+    }
+  ],
+  "workflows": [
+    {
+      "filename": "pr.yml",
+      "hash": "0625dff11585a35e1ad0cf2b3cbea2cb72e521039dfd406eaa8de1ec75492115"
+    },
+    {
+      "filename": "monaco-editor.yml",
+      "hash": "02e5f951a8bc0193f3239d64b65c547aebcf6427849f35a8e7b9500b4eeb10f9"
+    }
+  ]
+}

@@ -1,0 +1,76 @@
+{
+  "pr_number": 69056,
+  "title": "docs: fix `min/max` form template examples",
+  "state": "closed",
+  "author": "michael-small",
+  "created_at": "2026-06-01T17:20:54Z",
+  "updated_at": "2026-07-03T16:55:29Z",
+  "merged_at": "2026-06-02T09:23:02Z",
+  "head_sha": "585a4c57b052e602aaaffe43231a40981b873558",
+  "labels": [
+    "action: merge",
+    "target: patch",
+    "area: docs"
+  ],
+  "ci_runs": [
+    {
+      "run_id": 26774659844,
+      "workflow_id": 81905725,
+      "workflow_name": "Build adev for preview deployment",
+      "status": "skipped",
+      "head_sha": "585a4c57b052e602aaaffe43231a40981b873558",
+      "created_at": "2026-06-01T18:42:41Z",
+      "updated_at": "2026-06-01T20:14:21Z",
+      "run_started_at": "2026-06-01T20:14:17Z",
+      "jobs": [
+        {
+          "name": "adev-build",
+          "status": "skipped",
+          "started_at": "2026-06-01T20:14:21Z",
+          "completed_at": "2026-06-01T20:14:21Z",
+          "duration_sec": 0
+        }
+      ]
+    },
+    {
+      "run_id": 26772277576,
+      "workflow_id": 98951684,
+      "workflow_name": "Pull Request",
+      "status": "success",
+      "head_sha": "585a4c57b052e602aaaffe43231a40981b873558",
+      "created_at": "2026-06-01T17:56:22Z",
+      "updated_at": "2026-06-01T18:54:32Z",
+      "run_started_at": "2026-06-01T18:42:24Z",
+      "jobs": []
+    },
+    {
+      "run_id": 26772277264,
+      "workflow_id": 81905725,
+      "workflow_name": "Build adev for preview deployment",
+      "status": "skipped",
+      "head_sha": "585a4c57b052e602aaaffe43231a40981b873558",
+      "created_at": "2026-06-01T17:56:22Z",
+      "updated_at": "2026-06-01T18:42:33Z",
+      "run_started_at": "2026-06-01T18:42:23Z",
+      "jobs": []
+    }
+  ],
+  "workflows": [
+    {
+      "filename": "dev-infra.yml",
+      "hash": "0324771d031f8d4ca9a1c3b675ee31b460a5d25e756b8cbe712977c3d5173c0b"
+    },
+    {
+      "filename": "scorecard.yml",
+      "hash": "05d1e6029bf61cfeb3512feee84d44a15e8444be71aa06e7903f2c4a577a8911"
+    },
+    {
+      "filename": "google-internal-tests.yml",
+      "hash": "3a68e85f2e757c7b86ccc8adb0aa9a246cdf914829328a50896622a7ae4ef5d8"
+    },
+    {
+      "filename": "assistant-to-the-branch-manager.yml",
+      "hash": "1111a82e3a71313e17d32a3fd2e2bd3514e36ea9187c49976754dd6b3e587b2d"
+    }
+  ]
+}

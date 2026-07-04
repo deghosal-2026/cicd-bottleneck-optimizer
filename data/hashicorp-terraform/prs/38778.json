@@ -1,0 +1,101 @@
+{
+  "pr_number": 38778,
+  "title": "suppress deprecation messages from child module outputs when whole resource is output ",
+  "state": "closed",
+  "author": "mildwonkey",
+  "created_at": "2026-06-24T15:48:13Z",
+  "updated_at": "2026-06-25T12:06:56Z",
+  "merged_at": "2026-06-25T12:06:54Z",
+  "head_sha": "af8b2cbc7c993445af2f585f71caf73aafbd5b2f",
+  "labels": [],
+  "ci_runs": [
+    {
+      "run_id": 28116544067,
+      "workflow_id": 126957301,
+      "workflow_name": "equivalence-test-diff",
+      "status": "success",
+      "head_sha": "af8b2cbc7c993445af2f585f71caf73aafbd5b2f",
+      "created_at": "2026-06-24T17:18:18Z",
+      "updated_at": "2026-06-24T17:20:29Z",
+      "run_started_at": "2026-06-24T17:18:18Z",
+      "jobs": [
+        {
+          "name": "Equivalence Test Diff",
+          "status": "success",
+          "started_at": "2026-06-24T17:18:23Z",
+          "completed_at": "2026-06-24T17:20:28Z",
+          "duration_sec": 125
+        }
+      ]
+    },
+    {
+      "run_id": 28116543991,
+      "workflow_id": 278786541,
+      "workflow_name": "Changelog Validation",
+      "status": "success",
+      "head_sha": "af8b2cbc7c993445af2f585f71caf73aafbd5b2f",
+      "created_at": "2026-06-24T17:18:18Z",
+      "updated_at": "2026-06-24T17:18:29Z",
+      "run_started_at": "2026-06-24T17:18:18Z",
+      "jobs": []
+    },
+    {
+      "run_id": 28116544010,
+      "workflow_id": 23102955,
+      "workflow_name": "Quick Checks",
+      "status": "success",
+      "head_sha": "af8b2cbc7c993445af2f585f71caf73aafbd5b2f",
+      "created_at": "2026-06-24T17:18:18Z",
+      "updated_at": "2026-06-24T17:23:57Z",
+      "run_started_at": "2026-06-24T17:18:18Z",
+      "jobs": []
+    },
+    {
+      "run_id": 28115931072,
+      "workflow_id": 23102955,
+      "workflow_name": "Quick Checks",
+      "status": "success",
+      "head_sha": "af8b2cbc7c993445af2f585f71caf73aafbd5b2f",
+      "created_at": "2026-06-24T17:07:56Z",
+      "updated_at": "2026-06-24T17:13:58Z",
+      "run_started_at": "2026-06-24T17:07:56Z",
+      "jobs": []
+    },
+    {
+      "run_id": 28115931046,
+      "workflow_id": 278786541,
+      "workflow_name": "Changelog Validation",
+      "status": "success",
+      "head_sha": "af8b2cbc7c993445af2f585f71caf73aafbd5b2f",
+      "created_at": "2026-06-24T17:07:56Z",
+      "updated_at": "2026-06-24T17:08:08Z",
+      "run_started_at": "2026-06-24T17:07:56Z",
+      "jobs": []
+    },
+    {
+      "run_id": 28115931069,
+      "workflow_id": 126957301,
+      "workflow_name": "equivalence-test-diff",
+      "status": "success",
+      "head_sha": "af8b2cbc7c993445af2f585f71caf73aafbd5b2f",
+      "created_at": "2026-06-24T17:07:56Z",
+      "updated_at": "2026-06-24T17:10:15Z",
+      "run_started_at": "2026-06-24T17:07:56Z",
+      "jobs": []
+    }
+  ],
+  "workflows": [
+    {
+      "filename": "issue-comment-created.yml",
+      "hash": "7b39410b950b1b04577cd7d04201e9ce01aaeca7e6daf5af2dbe7286e23ef08e"
+    },
+    {
+      "filename": "lock.yml",
+      "hash": "7606d6b818ae4ff47b39930380d804b9a904124f7dffe6d9bfbba7e715c2f183"
+    },
+    {
+      "filename": "build.yml",
+      "hash": "192267d1041a111b5fb0a96d698602ec33bd95faf16bffb870abd3b3593bfd6c"
+    }
+  ]
+}

@@ -1,0 +1,97 @@
+{
+  "pr_number": 317303,
+  "title": "Update @vscode/codicons to version 0.0.46-11",
+  "state": "closed",
+  "author": "mrleemurray",
+  "created_at": "2026-05-19T13:30:53Z",
+  "updated_at": "2026-07-03T23:40:39Z",
+  "merged_at": "2026-05-19T14:24:55Z",
+  "head_sha": "9da58264aedf8997d38de712490e789c08ac4e50",
+  "labels": [],
+  "ci_runs": [
+    {
+      "run_id": 26100489135,
+      "workflow_id": 38332752,
+      "workflow_name": "Telemetry",
+      "status": "success",
+      "head_sha": "9da58264aedf8997d38de712490e789c08ac4e50",
+      "created_at": "2026-05-19T13:31:00Z",
+      "updated_at": "2026-05-19T13:37:08Z",
+      "run_started_at": "2026-05-19T13:31:00Z",
+      "jobs": [
+        {
+          "name": "Check metadata",
+          "status": "success",
+          "started_at": "2026-05-19T13:36:41Z",
+          "completed_at": "2026-05-19T13:37:06Z",
+          "duration_sec": 25
+        }
+      ]
+    },
+    {
+      "run_id": 26100489053,
+      "workflow_id": 211787236,
+      "workflow_name": "Prevent engineering system changes in PRs",
+      "status": "success",
+      "head_sha": "9da58264aedf8997d38de712490e789c08ac4e50",
+      "created_at": "2026-05-19T13:31:00Z",
+      "updated_at": "2026-05-19T13:39:01Z",
+      "run_started_at": "2026-05-19T13:31:00Z",
+      "jobs": []
+    },
+    {
+      "run_id": 26100489238,
+      "workflow_id": 4196599,
+      "workflow_name": "Code OSS",
+      "status": "success",
+      "head_sha": "9da58264aedf8997d38de712490e789c08ac4e50",
+      "created_at": "2026-05-19T13:31:00Z",
+      "updated_at": "2026-05-19T13:58:44Z",
+      "run_started_at": "2026-05-19T13:31:00Z",
+      "jobs": []
+    },
+    {
+      "run_id": 26100489043,
+      "workflow_id": 258342321,
+      "workflow_name": "chat-lib tests",
+      "status": "success",
+      "head_sha": "9da58264aedf8997d38de712490e789c08ac4e50",
+      "created_at": "2026-05-19T13:31:00Z",
+      "updated_at": "2026-05-19T13:44:53Z",
+      "run_started_at": "2026-05-19T13:31:00Z",
+      "jobs": []
+    },
+    {
+      "run_id": 26100489178,
+      "workflow_id": 273167221,
+      "workflow_name": "Component Fixtures",
+      "status": "success",
+      "head_sha": "9da58264aedf8997d38de712490e789c08ac4e50",
+      "created_at": "2026-05-19T13:31:00Z",
+      "updated_at": "2026-05-19T13:46:08Z",
+      "run_started_at": "2026-05-19T13:31:00Z",
+      "jobs": []
+    },
+    {
+      "run_id": 26100489138,
+      "workflow_id": 21497327,
+      "workflow_name": "Monaco Editor checks",
+      "status": "success",
+      "head_sha": "9da58264aedf8997d38de712490e789c08ac4e50",
+      "created_at": "2026-05-19T13:31:00Z",
+      "updated_at": "2026-05-19T13:49:21Z",
+      "run_started_at": "2026-05-19T13:31:00Z",
+      "jobs": []
+    }
+  ],
+  "workflows": [
+    {
+      "filename": "pr.yml",
+      "hash": "0625dff11585a35e1ad0cf2b3cbea2cb72e521039dfd406eaa8de1ec75492115"
+    },
+    {
+      "filename": "monaco-editor.yml",
+      "hash": "02e5f951a8bc0193f3239d64b65c547aebcf6427849f35a8e7b9500b4eeb10f9"
+    }
+  ]
+}

@@ -1,0 +1,98 @@
+{
+  "pr_number": 38781,
+  "title": "policy: Update policy callback server functions to handle deferred resources and data sources",
+  "state": "closed",
+  "author": "austinvalle",
+  "created_at": "2026-06-24T20:49:00Z",
+  "updated_at": "2026-06-26T19:13:38Z",
+  "merged_at": "2026-06-26T19:13:36Z",
+  "head_sha": "dfaf84e69e86ab6800b9069748e89fc4c3e1f0f8",
+  "labels": [
+    "skip-changelog-check"
+  ],
+  "ci_runs": [
+    {
+      "run_id": 28128669874,
+      "workflow_id": 23102955,
+      "workflow_name": "Quick Checks",
+      "status": "success",
+      "head_sha": "dfaf84e69e86ab6800b9069748e89fc4c3e1f0f8",
+      "created_at": "2026-06-24T20:49:14Z",
+      "updated_at": "2026-06-24T20:55:04Z",
+      "run_started_at": "2026-06-24T20:49:14Z",
+      "jobs": [
+        {
+          "name": "Unit Tests",
+          "status": "success",
+          "started_at": "2026-06-24T20:49:21Z",
+          "completed_at": "2026-06-24T20:54:10Z",
+          "duration_sec": 289
+        },
+        {
+          "name": "End-to-end Tests",
+          "status": "success",
+          "started_at": "2026-06-24T20:49:21Z",
+          "completed_at": "2026-06-24T20:51:21Z",
+          "duration_sec": 120
+        },
+        {
+          "name": "Race Tests",
+          "status": "success",
+          "started_at": "2026-06-24T20:49:21Z",
+          "completed_at": "2026-06-24T20:55:03Z",
+          "duration_sec": 342
+        },
+        {
+          "name": "Code Consistency Checks",
+          "status": "success",
+          "started_at": "2026-06-24T20:49:21Z",
+          "completed_at": "2026-06-24T20:54:02Z",
+          "duration_sec": 281
+        },
+        {
+          "name": "Automated defect checks",
+          "status": "success",
+          "started_at": "2026-06-24T20:49:22Z",
+          "completed_at": "2026-06-24T20:52:30Z",
+          "duration_sec": 188
+        }
+      ]
+    },
+    {
+      "run_id": 28128669932,
+      "workflow_id": 278786541,
+      "workflow_name": "Changelog Validation",
+      "status": "skipped",
+      "head_sha": "dfaf84e69e86ab6800b9069748e89fc4c3e1f0f8",
+      "created_at": "2026-06-24T20:49:14Z",
+      "updated_at": "2026-06-24T20:49:21Z",
+      "run_started_at": "2026-06-24T20:49:14Z",
+      "jobs": []
+    },
+    {
+      "run_id": 28128669873,
+      "workflow_id": 126957301,
+      "workflow_name": "equivalence-test-diff",
+      "status": "success",
+      "head_sha": "dfaf84e69e86ab6800b9069748e89fc4c3e1f0f8",
+      "created_at": "2026-06-24T20:49:14Z",
+      "updated_at": "2026-06-24T20:51:24Z",
+      "run_started_at": "2026-06-24T20:49:14Z",
+      "jobs": []
+    }
+  ],
+  "workflows": [
+    {
+      "filename": "issue-comment-created.yml",
+      "hash": "7b39410b950b1b04577cd7d04201e9ce01aaeca7e6daf5af2dbe7286e23ef08e"
+    },
+    {
+      "filename": "lock.yml",
+      "hash": "7606d6b818ae4ff47b39930380d804b9a904124f7dffe6d9bfbba7e715c2f183"
+    },
+    {
+      "filename": "build.yml",
+      "hash": "192267d1041a111b5fb0a96d698602ec33bd95faf16bffb870abd3b3593bfd6c"
+    }
+  ]
+}

@@ -1,0 +1,97 @@
+{
+  "pr_number": 317407,
+  "title": "Sanity test: enrich agent-mode timeout error with stream diagnostics",
+  "state": "closed",
+  "author": "bryanchen-d",
+  "created_at": "2026-05-19T22:20:50Z",
+  "updated_at": "2026-07-03T23:40:38Z",
+  "merged_at": "2026-05-19T22:51:55Z",
+  "head_sha": "5aea585bcaedd8891c733172323baa474e876e12",
+  "labels": [],
+  "ci_runs": [
+    {
+      "run_id": 26129202380,
+      "workflow_id": 273167221,
+      "workflow_name": "Component Fixtures",
+      "status": "success",
+      "head_sha": "5aea585bcaedd8891c733172323baa474e876e12",
+      "created_at": "2026-05-19T22:29:33Z",
+      "updated_at": "2026-05-19T22:41:58Z",
+      "run_started_at": "2026-05-19T22:29:33Z",
+      "jobs": [
+        {
+          "name": "Screenshots & Tests",
+          "status": "success",
+          "started_at": "2026-05-19T22:37:18Z",
+          "completed_at": "2026-05-19T22:41:57Z",
+          "duration_sec": 279
+        }
+      ]
+    },
+    {
+      "run_id": 26129202386,
+      "workflow_id": 21497327,
+      "workflow_name": "Monaco Editor checks",
+      "status": "success",
+      "head_sha": "5aea585bcaedd8891c733172323baa474e876e12",
+      "created_at": "2026-05-19T22:29:33Z",
+      "updated_at": "2026-05-19T22:35:45Z",
+      "run_started_at": "2026-05-19T22:29:33Z",
+      "jobs": []
+    },
+    {
+      "run_id": 26129202383,
+      "workflow_id": 211787236,
+      "workflow_name": "Prevent engineering system changes in PRs",
+      "status": "success",
+      "head_sha": "5aea585bcaedd8891c733172323baa474e876e12",
+      "created_at": "2026-05-19T22:29:33Z",
+      "updated_at": "2026-05-19T22:37:25Z",
+      "run_started_at": "2026-05-19T22:29:33Z",
+      "jobs": []
+    },
+    {
+      "run_id": 26129202384,
+      "workflow_id": 38332752,
+      "workflow_name": "Telemetry",
+      "status": "success",
+      "head_sha": "5aea585bcaedd8891c733172323baa474e876e12",
+      "created_at": "2026-05-19T22:29:33Z",
+      "updated_at": "2026-05-19T22:37:47Z",
+      "run_started_at": "2026-05-19T22:29:33Z",
+      "jobs": []
+    },
+    {
+      "run_id": 26129202381,
+      "workflow_id": 258342321,
+      "workflow_name": "chat-lib tests",
+      "status": "success",
+      "head_sha": "5aea585bcaedd8891c733172323baa474e876e12",
+      "created_at": "2026-05-19T22:29:33Z",
+      "updated_at": "2026-05-19T22:39:57Z",
+      "run_started_at": "2026-05-19T22:29:33Z",
+      "jobs": []
+    },
+    {
+      "run_id": 26129202382,
+      "workflow_id": 4196599,
+      "workflow_name": "Code OSS",
+      "status": "success",
+      "head_sha": "5aea585bcaedd8891c733172323baa474e876e12",
+      "created_at": "2026-05-19T22:29:33Z",
+      "updated_at": "2026-05-19T22:51:53Z",
+      "run_started_at": "2026-05-19T22:29:33Z",
+      "jobs": []
+    }
+  ],
+  "workflows": [
+    {
+      "filename": "pr.yml",
+      "hash": "0625dff11585a35e1ad0cf2b3cbea2cb72e521039dfd406eaa8de1ec75492115"
+    },
+    {
+      "filename": "monaco-editor.yml",
+      "hash": "02e5f951a8bc0193f3239d64b65c547aebcf6427849f35a8e7b9500b4eeb10f9"
+    }
+  ]
+}

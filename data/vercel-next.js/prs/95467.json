@@ -1,0 +1,271 @@
+{
+  "pr_number": 95467,
+  "title": "Make the agent-rules block verifiable and self-upgrading",
+  "state": "open",
+  "author": "gaojude",
+  "created_at": "2026-07-03T18:52:02Z",
+  "updated_at": "2026-07-04T00:08:43Z",
+  "merged_at": null,
+  "head_sha": "3739cd533fe102aedbb604d05aee3cd89ca0ffb8",
+  "labels": [],
+  "ci_runs": [
+    {
+      "run_id": 28688051357,
+      "workflow_id": 57419851,
+      "workflow_name": "build-and-test",
+      "status": "failure",
+      "head_sha": "3739cd533fe102aedbb604d05aee3cd89ca0ffb8",
+      "created_at": "2026-07-03T23:39:30Z",
+      "updated_at": "2026-07-04T00:08:20Z",
+      "run_started_at": "2026-07-03T23:39:30Z",
+      "jobs": [
+        {
+          "name": "build-next / build",
+          "status": "success",
+          "started_at": "2026-07-03T23:40:42Z",
+          "completed_at": "2026-07-03T23:42:20Z",
+          "duration_sec": 98
+        },
+        {
+          "name": "Upload PR CI metadata",
+          "status": "success",
+          "started_at": "2026-07-03T23:40:05Z",
+          "completed_at": "2026-07-03T23:40:08Z",
+          "duration_sec": 3
+        },
+        {
+          "name": "Determine changes",
+          "status": "success",
+          "started_at": "2026-07-03T23:40:05Z",
+          "completed_at": "2026-07-03T23:40:15Z",
+          "duration_sec": 10
+        },
+        {
+          "name": "validate-docs-links",
+          "status": "success",
+          "started_at": "2026-07-03T23:40:05Z",
+          "completed_at": "2026-07-03T23:40:25Z",
+          "duration_sec": 20
+        },
+        {
+          "name": "optimize-ci / PR Stack Optimizer",
+          "status": "success",
+          "started_at": "2026-07-03T23:40:06Z",
+          "completed_at": "2026-07-03T23:40:09Z",
+          "duration_sec": 3
+        },
+        {
+          "name": "fetch test timings",
+          "status": "success",
+          "started_at": "2026-07-03T23:40:18Z",
+          "completed_at": "2026-07-03T23:41:05Z",
+          "duration_sec": 47
+        },
+        {
+          "name": "build-native-windows / build",
+          "status": "success",
+          "started_at": "2026-07-03T23:41:06Z",
+          "completed_at": "2026-07-03T23:42:39Z",
+          "duration_sec": 93
+        },
+        {
+          "name": "test devlow package / build",
+          "status": "success",
+          "started_at": "2026-07-03T23:40:43Z",
+          "completed_at": "2026-07-03T23:43:02Z",
+          "duration_sec": 139
+        },
+        {
+          "name": "build-native-x64 / build",
+          "status": "success",
+          "started_at": "2026-07-03T23:40:18Z",
+          "completed_at": "2026-07-03T23:41:21Z",
+          "duration_sec": 63
+        },
+        {
+          "name": "build-native / build",
+          "status": "success",
+          "started_at": "2026-07-03T23:41:05Z",
+          "completed_at": "2026-07-03T23:42:05Z",
+          "duration_sec": 60
+        },
+        {
+          "name": "ast-grep lint",
+          "status": "success",
+          "started_at": "2026-07-03T23:42:22Z",
+          "completed_at": "2026-07-03T23:42:36Z",
+          "duration_sec": 14
+        },
+        {
+          "name": "test cargo unit / build",
+          "status": "success",
+          "started_at": "2026-07-03T23:42:23Z",
+          "completed_at": "2026-07-03T23:51:32Z",
+          "duration_sec": 549
+        },
+        {
+          "name": "lint / build",
+          "status": "success",
+          "started_at": "2026-07-03T23:42:23Z",
+          "completed_at": "2026-07-03T23:46:48Z",
+          "duration_sec": 265
+        },
+        {
+          "name": "test cargo benches / Test",
+          "status": "success",
+          "started_at": "2026-07-03T23:42:23Z",
+          "completed_at": "2026-07-03T23:50:23Z",
+          "duration_sec": 480
+        },
+        {
+          "name": "rustdoc check / build",
+          "status": "success",
+          "started_at": "2026-07-03T23:42:23Z",
+          "completed_at": "2026-07-03T23:45:14Z",
+          "duration_sec": 171
+        },
+        {
+          "name": "rust check / build",
+          "status": "success",
+          "started_at": "2026-07-03T23:42:23Z",
+          "completed_at": "2026-07-03T23:43:30Z",
+          "duration_sec": 67
+        },
+        {
+          "name": "types and precompiled / build",
+          "status": "success",
+          "started_at": "2026-07-03T23:42:23Z",
+          "completed_at": "2026-07-03T23:44:26Z",
+          "duration_sec": 123
+        },
+        {
+          "name": "test firefox and safari / build",
+          "status": "success",
+          "started_at": "2026-07-03T23:42:23Z",
+          "completed_at": "2026-07-03T23:48:58Z",
+          "duration_sec": 395
+        },
+        {
+          "name": "test next-swc wasm / build",
+          "status": "success",
+          "started_at": "2026-07-03T23:42:23Z",
+          "completed_at": "2026-07-03T23:45:09Z",
+          "duration_sec": 166
+        },
+        {
+          "name": "test rspack dev",
+          "status": "skipped",
+          "started_at": "2026-07-03T23:42:20Z",
+          "completed_at": "2026-07-03T23:42:20Z",
+          "duration_sec": 0
+        },
+        {
+          "name": "Run devlow benchmarks",
+          "status": "skipped",
+          "started_at": "2026-07-03T23:42:20Z",
+          "completed_at": "2026-07-03T23:42:20Z",
+          "duration_sec": 0
+        },
+        {
+          "name": "test next-swc wasi",
+          "status": "skipped",
+          "started_at": "2026-07-03T23:42:21Z",
+          "completed_at": "2026-07-03T23:42:20Z",
+          "duration_sec": -1
+        },
+        {
+          "name": "test rspack production",
+          "status": "skipped",
+          "started_at": "2026-07-03T23:42:21Z",
+          "completed_at": "2026-07-03T23:42:20Z",
+          "duration_sec": -1
+        },
+        {
+          "name": "test unit (20) / build",
+          "status": "success",
+          "started_at": "2026-07-03T23:42:23Z",
+          "completed_at": "2026-07-03T23:44:12Z",
+          "duration_sec": 109
+        },
+        {
+          "name": "Test new and changed tests for flakes (prod) (1/5) / build",
+          "status": "success",
+          "started_at": "2026-07-03T23:42:23Z",
+          "completed_at": "2026-07-03T23:43:20Z",
+          "duration_sec": 57
+        },
+        {
+          "name": "test unit (22) / build",
+          "status": "success",
+          "started_at": "2026-07-03T23:42:24Z",
+          "completed_at": "2026-07-03T23:44:02Z",
+          "duration_sec": 98
+        },
+        {
+          "name": "Test new and changed tests for flakes (prod) (3/5) / build",
+          "status": "success",
+          "started_at": "2026-07-03T23:42:23Z",
+          "completed_at": "2026-07-03T23:43:44Z",
+          "duration_sec": 81
+        },
+        {
+          "name": "Test new and changed tests for flakes (prod) (4/5) / build",
+          "status": "success",
+          "started_at": "2026-07-03T23:42:22Z",
+          "completed_at": "2026-07-03T23:43:13Z",
+          "duration_sec": 51
+        },
+        {
+          "name": "Test new and changed tests for flakes (prod) (5/5) / build",
+          "status": "success",
+          "started_at": "2026-07-03T23:42:23Z",
+          "completed_at": "2026-07-03T23:43:35Z",
+          "duration_sec": 72
+        },
+        {
+          "name": "test turbopack production (1/7) / build",
+          "status": "failure",
+          "started_at": "2026-07-03T23:42:23Z",
+          "completed_at": "2026-07-03T23:58:17Z",
+          "duration_sec": 954
+        }
+      ]
+    },
+    {
+      "run_id": 28688051324,
+      "workflow_id": 58813578,
+      "workflow_name": "build-and-deploy",
+      "status": "skipped",
+      "head_sha": "3739cd533fe102aedbb604d05aee3cd89ca0ffb8",
+      "created_at": "2026-07-03T23:39:30Z",
+      "updated_at": "2026-07-03T23:39:32Z",
+      "run_started_at": "2026-07-03T23:39:30Z",
+      "jobs": []
+    },
+    {
+      "run_id": 28688051340,
+      "workflow_id": 444921,
+      "workflow_name": "Generate Stats",
+      "status": "failure",
+      "head_sha": "3739cd533fe102aedbb604d05aee3cd89ca0ffb8",
+      "created_at": "2026-07-03T23:39:30Z",
+      "updated_at": "2026-07-03T23:46:27Z",
+      "run_started_at": "2026-07-03T23:39:30Z",
+      "jobs": []
+    }
+  ],
+  "workflows": [
+    {
+      "filename": "pull_request_stats.yml",
+      "hash": "2cbf0f3f1b19b2213025cdbf6027bb260c81220bf5b101b04a524f4568d57cb4"
+    },
+    {
+      "filename": "issue_lock.yml",
+      "hash": "a697561851464408497a633bc3f52faa705e0d430b53ae08bd2cd34ffe1e2611"
+    },
+    {
+      "filename": "issue_stale.yml",
+      "hash": "fd4bb34b8cc108b67a44ea1ca74f418f789158c423e58c926f6ed72aa711d3b5"
+    }
+  ]
+}

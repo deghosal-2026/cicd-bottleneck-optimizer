@@ -1,0 +1,204 @@
+{
+  "pr_number": 38810,
+  "title": "build(deps): bump actions/setup-go from 6.4.0 to 6.5.0 in the github-actions-backward-compatible group",
+  "state": "closed",
+  "author": "dependabot[bot]",
+  "created_at": "2026-07-01T08:17:34Z",
+  "updated_at": "2026-07-02T05:46:09Z",
+  "merged_at": "2026-07-02T05:46:06Z",
+  "head_sha": "9a98409318dd6864b0e1be342b1644a5c1c8c610",
+  "labels": [
+    "build",
+    "dependencies",
+    "security"
+  ],
+  "ci_runs": [
+    {
+      "run_id": 28503633999,
+      "workflow_id": 278786541,
+      "workflow_name": "Changelog Validation",
+      "status": "success",
+      "head_sha": "9a98409318dd6864b0e1be342b1644a5c1c8c610",
+      "created_at": "2026-07-01T08:17:40Z",
+      "updated_at": "2026-07-01T08:17:49Z",
+      "run_started_at": "2026-07-01T08:17:40Z",
+      "jobs": [
+        {
+          "name": "Validate Changelog",
+          "status": "success",
+          "started_at": "2026-07-01T08:17:43Z",
+          "completed_at": "2026-07-01T08:17:48Z",
+          "duration_sec": 5
+        }
+      ]
+    },
+    {
+      "run_id": 28503634045,
+      "workflow_id": 126957301,
+      "workflow_name": "equivalence-test-diff",
+      "status": "success",
+      "head_sha": "9a98409318dd6864b0e1be342b1644a5c1c8c610",
+      "created_at": "2026-07-01T08:17:40Z",
+      "updated_at": "2026-07-01T08:19:47Z",
+      "run_started_at": "2026-07-01T08:17:40Z",
+      "jobs": []
+    },
+    {
+      "run_id": 28503634028,
+      "workflow_id": 23102955,
+      "workflow_name": "Quick Checks",
+      "status": "success",
+      "head_sha": "9a98409318dd6864b0e1be342b1644a5c1c8c610",
+      "created_at": "2026-07-01T08:17:40Z",
+      "updated_at": "2026-07-01T08:23:22Z",
+      "run_started_at": "2026-07-01T08:17:40Z",
+      "jobs": []
+    },
+    {
+      "run_id": 28503633124,
+      "workflow_id": 179246365,
+      "workflow_name": "Backport Assistant Runner",
+      "status": "success",
+      "head_sha": "9a98409318dd6864b0e1be342b1644a5c1c8c610",
+      "created_at": "2026-07-01T08:17:39Z",
+      "updated_at": "2026-07-01T08:17:48Z",
+      "run_started_at": "2026-07-01T08:17:39Z",
+      "jobs": []
+    },
+    {
+      "run_id": 28503633133,
+      "workflow_id": 278786541,
+      "workflow_name": "Changelog Validation",
+      "status": "success",
+      "head_sha": "9a98409318dd6864b0e1be342b1644a5c1c8c610",
+      "created_at": "2026-07-01T08:17:39Z",
+      "updated_at": "2026-07-01T08:17:48Z",
+      "run_started_at": "2026-07-01T08:17:39Z",
+      "jobs": []
+    },
+    {
+      "run_id": 28503633364,
+      "workflow_id": 179246365,
+      "workflow_name": "Backport Assistant Runner",
+      "status": "success",
+      "head_sha": "9a98409318dd6864b0e1be342b1644a5c1c8c610",
+      "created_at": "2026-07-01T08:17:39Z",
+      "updated_at": "2026-07-01T08:17:47Z",
+      "run_started_at": "2026-07-01T08:17:39Z",
+      "jobs": []
+    },
+    {
+      "run_id": 28503633389,
+      "workflow_id": 179246365,
+      "workflow_name": "Backport Assistant Runner",
+      "status": "success",
+      "head_sha": "9a98409318dd6864b0e1be342b1644a5c1c8c610",
+      "created_at": "2026-07-01T08:17:39Z",
+      "updated_at": "2026-07-01T08:17:48Z",
+      "run_started_at": "2026-07-01T08:17:39Z",
+      "jobs": []
+    },
+    {
+      "run_id": 28503633460,
+      "workflow_id": 179246365,
+      "workflow_name": "Backport Assistant Runner",
+      "status": "success",
+      "head_sha": "9a98409318dd6864b0e1be342b1644a5c1c8c610",
+      "created_at": "2026-07-01T08:17:39Z",
+      "updated_at": "2026-07-01T08:17:48Z",
+      "run_started_at": "2026-07-01T08:17:39Z",
+      "jobs": []
+    },
+    {
+      "run_id": 28503633367,
+      "workflow_id": 278786541,
+      "workflow_name": "Changelog Validation",
+      "status": "success",
+      "head_sha": "9a98409318dd6864b0e1be342b1644a5c1c8c610",
+      "created_at": "2026-07-01T08:17:39Z",
+      "updated_at": "2026-07-01T08:17:48Z",
+      "run_started_at": "2026-07-01T08:17:39Z",
+      "jobs": []
+    },
+    {
+      "run_id": 28503633436,
+      "workflow_id": 278786541,
+      "workflow_name": "Changelog Validation",
+      "status": "success",
+      "head_sha": "9a98409318dd6864b0e1be342b1644a5c1c8c610",
+      "created_at": "2026-07-01T08:17:39Z",
+      "updated_at": "2026-07-01T08:17:48Z",
+      "run_started_at": "2026-07-01T08:17:39Z",
+      "jobs": []
+    },
+    {
+      "run_id": 28503633164,
+      "workflow_id": 179246365,
+      "workflow_name": "Backport Assistant Runner",
+      "status": "success",
+      "head_sha": "9a98409318dd6864b0e1be342b1644a5c1c8c610",
+      "created_at": "2026-07-01T08:17:39Z",
+      "updated_at": "2026-07-01T08:17:47Z",
+      "run_started_at": "2026-07-01T08:17:39Z",
+      "jobs": []
+    },
+    {
+      "run_id": 28503633382,
+      "workflow_id": 278786541,
+      "workflow_name": "Changelog Validation",
+      "status": "success",
+      "head_sha": "9a98409318dd6864b0e1be342b1644a5c1c8c610",
+      "created_at": "2026-07-01T08:17:39Z",
+      "updated_at": "2026-07-01T08:17:49Z",
+      "run_started_at": "2026-07-01T08:17:39Z",
+      "jobs": []
+    },
+    {
+      "run_id": 28503633345,
+      "workflow_id": 179246365,
+      "workflow_name": "Backport Assistant Runner",
+      "status": "success",
+      "head_sha": "9a98409318dd6864b0e1be342b1644a5c1c8c610",
+      "created_at": "2026-07-01T08:17:39Z",
+      "updated_at": "2026-07-01T08:17:49Z",
+      "run_started_at": "2026-07-01T08:17:39Z",
+      "jobs": []
+    },
+    {
+      "run_id": 28503633182,
+      "workflow_id": 278786541,
+      "workflow_name": "Changelog Validation",
+      "status": "success",
+      "head_sha": "9a98409318dd6864b0e1be342b1644a5c1c8c610",
+      "created_at": "2026-07-01T08:17:39Z",
+      "updated_at": "2026-07-01T08:17:50Z",
+      "run_started_at": "2026-07-01T08:17:39Z",
+      "jobs": []
+    },
+    {
+      "run_id": 28503633408,
+      "workflow_id": 278786541,
+      "workflow_name": "Changelog Validation",
+      "status": "success",
+      "head_sha": "9a98409318dd6864b0e1be342b1644a5c1c8c610",
+      "created_at": "2026-07-01T08:17:39Z",
+      "updated_at": "2026-07-01T08:17:50Z",
+      "run_started_at": "2026-07-01T08:17:39Z",
+      "jobs": []
+    }
+  ],
+  "workflows": [
+    {
+      "filename": "issue-comment-created.yml",
+      "hash": "7b39410b950b1b04577cd7d04201e9ce01aaeca7e6daf5af2dbe7286e23ef08e"
+    },
+    {
+      "filename": "lock.yml",
+      "hash": "7606d6b818ae4ff47b39930380d804b9a904124f7dffe6d9bfbba7e715c2f183"
+    },
+    {
+      "filename": "build.yml",
+      "hash": "192267d1041a111b5fb0a96d698602ec33bd95faf16bffb870abd3b3593bfd6c"
+    }
+  ]
+}

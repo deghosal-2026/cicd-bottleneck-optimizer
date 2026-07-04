@@ -1,0 +1,68 @@
+{
+  "pr_number": 38783,
+  "title": "fix(search): policy client constructor signature from upstream changes",
+  "state": "closed",
+  "author": "mjyocca",
+  "created_at": "2026-06-25T16:41:42Z",
+  "updated_at": "2026-06-26T17:17:45Z",
+  "merged_at": "2026-06-26T17:17:42Z",
+  "head_sha": "50ff3eefaf0093e10da4514c1c89bb67341c291c",
+  "labels": [],
+  "ci_runs": [
+    {
+      "run_id": 28185797428,
+      "workflow_id": 278786541,
+      "workflow_name": "Changelog Validation",
+      "status": "success",
+      "head_sha": "50ff3eefaf0093e10da4514c1c89bb67341c291c",
+      "created_at": "2026-06-25T16:41:48Z",
+      "updated_at": "2026-06-25T16:42:02Z",
+      "run_started_at": "2026-06-25T16:41:48Z",
+      "jobs": [
+        {
+          "name": "Validate Changelog",
+          "status": "success",
+          "started_at": "2026-06-25T16:41:54Z",
+          "completed_at": "2026-06-25T16:42:01Z",
+          "duration_sec": 7
+        }
+      ]
+    },
+    {
+      "run_id": 28185797419,
+      "workflow_id": 126957301,
+      "workflow_name": "equivalence-test-diff",
+      "status": "success",
+      "head_sha": "50ff3eefaf0093e10da4514c1c89bb67341c291c",
+      "created_at": "2026-06-25T16:41:48Z",
+      "updated_at": "2026-06-25T16:44:25Z",
+      "run_started_at": "2026-06-25T16:41:48Z",
+      "jobs": []
+    },
+    {
+      "run_id": 28185797425,
+      "workflow_id": 23102955,
+      "workflow_name": "Quick Checks",
+      "status": "failure",
+      "head_sha": "50ff3eefaf0093e10da4514c1c89bb67341c291c",
+      "created_at": "2026-06-25T16:41:48Z",
+      "updated_at": "2026-06-25T16:47:29Z",
+      "run_started_at": "2026-06-25T16:41:48Z",
+      "jobs": []
+    }
+  ],
+  "workflows": [
+    {
+      "filename": "issue-comment-created.yml",
+      "hash": "7b39410b950b1b04577cd7d04201e9ce01aaeca7e6daf5af2dbe7286e23ef08e"
+    },
+    {
+      "filename": "lock.yml",
+      "hash": "7606d6b818ae4ff47b39930380d804b9a904124f7dffe6d9bfbba7e715c2f183"
+    },
+    {
+      "filename": "build.yml",
+      "hash": "192267d1041a111b5fb0a96d698602ec33bd95faf16bffb870abd3b3593bfd6c"
+    }
+  ]
+}

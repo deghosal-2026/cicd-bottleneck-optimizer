@@ -1,0 +1,68 @@
+{
+  "pr_number": 152679,
+  "title": "Deflake FUSE multivalued-group warning tests",
+  "state": "closed",
+  "author": "lefteris-z",
+  "created_at": "2026-07-01T15:01:11Z",
+  "updated_at": "2026-07-03T18:24:35Z",
+  "merged_at": "2026-07-03T18:24:34Z",
+  "head_sha": "2aa5fb897ea0d255a515c09e1f42e5c0189620d0",
+  "labels": [
+    ">test",
+    "Team:Search Relevance",
+    ":Search Relevance/Search",
+    "v9.5.0"
+  ],
+  "ci_runs": [
+    {
+      "run_id": 28672913302,
+      "workflow_id": 146525436,
+      "workflow_name": "docs-build",
+      "status": "success",
+      "head_sha": "2aa5fb897ea0d255a515c09e1f42e5c0189620d0",
+      "created_at": "2026-07-03T16:34:42Z",
+      "updated_at": "2026-07-03T16:35:00Z",
+      "run_started_at": "2026-07-03T16:34:42Z",
+      "jobs": [
+        {
+          "name": "build / check",
+          "status": "success",
+          "started_at": "2026-07-03T16:34:45Z",
+          "completed_at": "2026-07-03T16:34:53Z",
+          "duration_sec": 8
+        },
+        {
+          "name": "build / match",
+          "status": "success",
+          "started_at": "2026-07-03T16:34:44Z",
+          "completed_at": "2026-07-03T16:34:50Z",
+          "duration_sec": 6
+        },
+        {
+          "name": "build / build",
+          "status": "success",
+          "started_at": "2026-07-03T16:34:55Z",
+          "completed_at": "2026-07-03T16:34:59Z",
+          "duration_sec": 4
+        },
+        {
+          "name": "build / vale",
+          "status": "skipped",
+          "started_at": "2026-07-03T16:34:54Z",
+          "completed_at": "2026-07-03T16:34:53Z",
+          "duration_sec": -1
+        }
+      ]
+    }
+  ],
+  "workflows": [
+    {
+      "filename": "gradle-wrapper-validation.yml",
+      "hash": "04526945275c07b7ec8481281931aa653deceed193cbbf514b23cd8d634fae78"
+    },
+    {
+      "filename": "docs-build.yml",
+      "hash": "6772ac2baa16f9669594b6ea59ebfc2a9e1a6b14f3550571e4faacaf2d397023"
+    }
+  ]
+}

@@ -1,0 +1,289 @@
+{
+  "pr_number": 52727,
+  "title": "Add Docker Agent PR reviewer workflow",
+  "state": "closed",
+  "author": "vvoland",
+  "created_at": "2026-05-29T14:33:33Z",
+  "updated_at": "2026-07-03T14:48:24Z",
+  "merged_at": "2026-07-03T14:48:24Z",
+  "head_sha": "ac82b186fe65989dbcbabd4282ccf1c35426cb09",
+  "labels": [
+    "area/ci",
+    "ci/validate-only"
+  ],
+  "ci_runs": [
+    {
+      "run_id": 28514711395,
+      "workflow_id": 26704268,
+      "workflow_name": "test",
+      "status": "success",
+      "head_sha": "ac82b186fe65989dbcbabd4282ccf1c35426cb09",
+      "created_at": "2026-07-01T11:37:44Z",
+      "updated_at": "2026-07-01T11:45:31Z",
+      "run_started_at": "2026-07-01T11:37:44Z",
+      "jobs": [
+        {
+          "name": "validate-dco / run",
+          "status": "success",
+          "started_at": "2026-07-01T11:37:47Z",
+          "completed_at": "2026-07-01T11:38:15Z",
+          "duration_sec": 28
+        },
+        {
+          "name": "validate-prepare",
+          "status": "success",
+          "started_at": "2026-07-01T11:38:18Z",
+          "completed_at": "2026-07-01T11:38:28Z",
+          "duration_sec": 10
+        },
+        {
+          "name": "validate (api-swagger)",
+          "status": "success",
+          "started_at": "2026-07-01T11:38:18Z",
+          "completed_at": "2026-07-01T11:39:28Z",
+          "duration_sec": 70
+        },
+        {
+          "name": "build-dev (arm64)",
+          "status": "success",
+          "started_at": "2026-07-01T11:38:22Z",
+          "completed_at": "2026-07-01T11:39:43Z",
+          "duration_sec": 81
+        },
+        {
+          "name": "build-dev (arm64, systemd)",
+          "status": "success",
+          "started_at": "2026-07-01T11:38:21Z",
+          "completed_at": "2026-07-01T11:39:48Z",
+          "duration_sec": 87
+        },
+        {
+          "name": "build-dev (amd64)",
+          "status": "success",
+          "started_at": "2026-07-01T11:38:18Z",
+          "completed_at": "2026-07-01T11:39:24Z",
+          "duration_sec": 66
+        },
+        {
+          "name": "build-dev (amd64, systemd)",
+          "status": "success",
+          "started_at": "2026-07-01T11:38:18Z",
+          "completed_at": "2026-07-01T11:39:45Z",
+          "duration_sec": 87
+        },
+        {
+          "name": "build-dev (arm64, firewalld)",
+          "status": "success",
+          "started_at": "2026-07-01T11:38:21Z",
+          "completed_at": "2026-07-01T11:39:49Z",
+          "duration_sec": 88
+        },
+        {
+          "name": "build-dev (amd64, firewalld)",
+          "status": "success",
+          "started_at": "2026-07-01T11:38:18Z",
+          "completed_at": "2026-07-01T11:39:59Z",
+          "duration_sec": 101
+        },
+        {
+          "name": "smoke-prepare",
+          "status": "skipped",
+          "started_at": "2026-07-01T11:38:15Z",
+          "completed_at": "2026-07-01T11:38:15Z",
+          "duration_sec": 0
+        },
+        {
+          "name": "smoke",
+          "status": "skipped",
+          "started_at": "2026-07-01T11:38:15Z",
+          "completed_at": "2026-07-01T11:38:15Z",
+          "duration_sec": 0
+        },
+        {
+          "name": "validate (deprecate-integration-cli)",
+          "status": "success",
+          "started_at": "2026-07-01T11:40:02Z",
+          "completed_at": "2026-07-01T11:41:13Z",
+          "duration_sec": 71
+        },
+        {
+          "name": "validate (pkg-imports)",
+          "status": "success",
+          "started_at": "2026-07-01T11:40:01Z",
+          "completed_at": "2026-07-01T11:40:53Z",
+          "duration_sec": 52
+        },
+        {
+          "name": "validate (module-replace)",
+          "status": "success",
+          "started_at": "2026-07-01T11:40:02Z",
+          "completed_at": "2026-07-01T11:41:06Z",
+          "duration_sec": 64
+        },
+        {
+          "name": "validate (golangci-lint)",
+          "status": "success",
+          "started_at": "2026-07-01T11:40:02Z",
+          "completed_at": "2026-07-01T11:45:29Z",
+          "duration_sec": 327
+        },
+        {
+          "name": "validate (shfmt)",
+          "status": "success",
+          "started_at": "2026-07-01T11:40:01Z",
+          "completed_at": "2026-07-01T11:40:50Z",
+          "duration_sec": 49
+        },
+        {
+          "name": "validate (generate-files)",
+          "status": "success",
+          "started_at": "2026-07-01T11:40:03Z",
+          "completed_at": "2026-07-01T11:41:36Z",
+          "duration_sec": 93
+        },
+        {
+          "name": "validate (vendor)",
+          "status": "success",
+          "started_at": "2026-07-01T11:40:01Z",
+          "completed_at": "2026-07-01T11:41:18Z",
+          "duration_sec": 77
+        },
+        {
+          "name": "test (${{ matrix.arch }}, ${{ matrix.storage }})",
+          "status": "skipped",
+          "started_at": "2026-07-01T11:39:59Z",
+          "completed_at": "2026-07-01T11:39:59Z",
+          "duration_sec": 0
+        },
+        {
+          "name": "test-unit",
+          "status": "skipped",
+          "started_at": "2026-07-01T11:39:59Z",
+          "completed_at": "2026-07-01T11:39:59Z",
+          "duration_sec": 0
+        }
+      ]
+    },
+    {
+      "run_id": 28514711394,
+      "workflow_id": 21805183,
+      "workflow_name": "ci",
+      "status": "success",
+      "head_sha": "ac82b186fe65989dbcbabd4282ccf1c35426cb09",
+      "created_at": "2026-07-01T11:37:44Z",
+      "updated_at": "2026-07-01T11:41:29Z",
+      "run_started_at": "2026-07-01T11:37:44Z",
+      "jobs": []
+    },
+    {
+      "run_id": 28514711366,
+      "workflow_id": 81499888,
+      "workflow_name": "codeql",
+      "status": "success",
+      "head_sha": "ac82b186fe65989dbcbabd4282ccf1c35426cb09",
+      "created_at": "2026-07-01T11:37:44Z",
+      "updated_at": "2026-07-01T11:43:51Z",
+      "run_started_at": "2026-07-01T11:37:44Z",
+      "jobs": []
+    },
+    {
+      "run_id": 28514711223,
+      "workflow_id": 260262819,
+      "workflow_name": "validate-milestone",
+      "status": "success",
+      "head_sha": "ac82b186fe65989dbcbabd4282ccf1c35426cb09",
+      "created_at": "2026-07-01T11:37:44Z",
+      "updated_at": "2026-07-01T11:37:51Z",
+      "run_started_at": "2026-07-01T11:37:44Z",
+      "jobs": []
+    },
+    {
+      "run_id": 28514711594,
+      "workflow_id": 261203439,
+      "workflow_name": "zizmor",
+      "status": "success",
+      "head_sha": "ac82b186fe65989dbcbabd4282ccf1c35426cb09",
+      "created_at": "2026-07-01T11:37:44Z",
+      "updated_at": "2026-07-01T11:38:08Z",
+      "run_started_at": "2026-07-01T11:37:44Z",
+      "jobs": []
+    },
+    {
+      "run_id": 28514711344,
+      "workflow_id": 86900533,
+      "workflow_name": "validate-pr",
+      "status": "success",
+      "head_sha": "ac82b186fe65989dbcbabd4282ccf1c35426cb09",
+      "created_at": "2026-07-01T11:37:44Z",
+      "updated_at": "2026-07-01T11:38:08Z",
+      "run_started_at": "2026-07-01T11:37:44Z",
+      "jobs": []
+    },
+    {
+      "run_id": 28514711422,
+      "workflow_id": 187772110,
+      "workflow_name": "vm",
+      "status": "success",
+      "head_sha": "ac82b186fe65989dbcbabd4282ccf1c35426cb09",
+      "created_at": "2026-07-01T11:37:44Z",
+      "updated_at": "2026-07-01T11:38:13Z",
+      "run_started_at": "2026-07-01T11:37:44Z",
+      "jobs": []
+    },
+    {
+      "run_id": 28514711449,
+      "workflow_id": 33573227,
+      "workflow_name": "buildkit",
+      "status": "success",
+      "head_sha": "ac82b186fe65989dbcbabd4282ccf1c35426cb09",
+      "created_at": "2026-07-01T11:37:44Z",
+      "updated_at": "2026-07-01T11:38:15Z",
+      "run_started_at": "2026-07-01T11:37:44Z",
+      "jobs": []
+    },
+    {
+      "run_id": 28514711580,
+      "workflow_id": 44461128,
+      "workflow_name": "bin-image",
+      "status": "success",
+      "head_sha": "ac82b186fe65989dbcbabd4282ccf1c35426cb09",
+      "created_at": "2026-07-01T11:37:44Z",
+      "updated_at": "2026-07-01T11:38:16Z",
+      "run_started_at": "2026-07-01T11:37:44Z",
+      "jobs": []
+    },
+    {
+      "run_id": 28514711424,
+      "workflow_id": 168088309,
+      "workflow_name": "windows-2025",
+      "status": "success",
+      "head_sha": "ac82b186fe65989dbcbabd4282ccf1c35426cb09",
+      "created_at": "2026-07-01T11:37:44Z",
+      "updated_at": "2026-07-01T11:38:16Z",
+      "run_started_at": "2026-07-01T11:37:44Z",
+      "jobs": []
+    }
+  ],
+  "workflows": [
+    {
+      "filename": ".dco.yml",
+      "hash": "dea4b82ced9a768e825d38c022001e448d052703020b8345ce1752af0665f479"
+    },
+    {
+      "filename": ".test-unit.yml",
+      "hash": "64ea4ac26a2df4f48f55a6cfdef04ec69994f18e0dce69c1d98792ecbf66679b"
+    },
+    {
+      "filename": ".test.yml",
+      "hash": "698dd2de1d8e32af05925d489ceb376de42b9db0f6a9f271c0e2f1c83e849f57"
+    },
+    {
+      "filename": ".vm.yml",
+      "hash": "fa079150844d5674b2c95776f852977d6cb1a8faeb202fd94a8b63451445a5ed"
+    },
+    {
+      "filename": ".windows.yml",
+      "hash": "b3cb6d7e301a89297e6b10d87af74beee4996445f851b4fb2d44cdb54c8924f6"
+    }
+  ]
+}

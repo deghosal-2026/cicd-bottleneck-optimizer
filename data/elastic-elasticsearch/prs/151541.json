@@ -1,0 +1,70 @@
+{
+  "pr_number": 151541,
+  "title": "Update Gradle wrapper 9.7.x to v9.7.0-milestone-2 (main)",
+  "state": "open",
+  "author": "elastic-renovate-prod[bot]",
+  "created_at": "2026-06-17T15:23:46Z",
+  "updated_at": "2026-07-03T18:46:22Z",
+  "merged_at": null,
+  "head_sha": "532d6301d5fcea8c76db725b23ef882fc6cce627",
+  "labels": [
+    ">non-issue",
+    ":Delivery/Build",
+    "Team:Delivery",
+    "auto-backport",
+    "serverless-linked",
+    "v9.5.0"
+  ],
+  "ci_runs": [
+    {
+      "run_id": 28678225895,
+      "workflow_id": 146525436,
+      "workflow_name": "docs-build",
+      "status": "success",
+      "head_sha": "532d6301d5fcea8c76db725b23ef882fc6cce627",
+      "created_at": "2026-07-03T18:46:15Z",
+      "updated_at": "2026-07-03T18:46:36Z",
+      "run_started_at": "2026-07-03T18:46:15Z",
+      "jobs": [
+        {
+          "name": "build / check",
+          "status": "success",
+          "started_at": "2026-07-03T18:46:18Z",
+          "completed_at": "2026-07-03T18:46:25Z",
+          "duration_sec": 7
+        },
+        {
+          "name": "build / match",
+          "status": "success",
+          "started_at": "2026-07-03T18:46:18Z",
+          "completed_at": "2026-07-03T18:46:23Z",
+          "duration_sec": 5
+        },
+        {
+          "name": "build / build",
+          "status": "success",
+          "started_at": "2026-07-03T18:46:27Z",
+          "completed_at": "2026-07-03T18:46:35Z",
+          "duration_sec": 8
+        },
+        {
+          "name": "build / vale",
+          "status": "skipped",
+          "started_at": "2026-07-03T18:46:26Z",
+          "completed_at": "2026-07-03T18:46:25Z",
+          "duration_sec": -1
+        }
+      ]
+    }
+  ],
+  "workflows": [
+    {
+      "filename": "gradle-wrapper-validation.yml",
+      "hash": "04526945275c07b7ec8481281931aa653deceed193cbbf514b23cd8d634fae78"
+    },
+    {
+      "filename": "docs-build.yml",
+      "hash": "6772ac2baa16f9669594b6ea59ebfc2a9e1a6b14f3550571e4faacaf2d397023"
+    }
+  ]
+}

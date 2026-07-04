@@ -1,0 +1,65 @@
+{
+  "pr_number": 152823,
+  "title": "ES|QL|DS Fix wrong results for split CSV with quoted multi-line fields",
+  "state": "open",
+  "author": "julian-elastic",
+  "created_at": "2026-07-03T02:49:11Z",
+  "updated_at": "2026-07-04T00:38:13Z",
+  "merged_at": null,
+  "head_sha": "b11440910c4a6a231dd13428c7bc58ea40a09148",
+  "labels": [
+    "v9.5.0"
+  ],
+  "ci_runs": [
+    {
+      "run_id": 28689526493,
+      "workflow_id": 146525436,
+      "workflow_name": "docs-build",
+      "status": "success",
+      "head_sha": "b11440910c4a6a231dd13428c7bc58ea40a09148",
+      "created_at": "2026-07-04T00:38:18Z",
+      "updated_at": "2026-07-04T00:38:40Z",
+      "run_started_at": "2026-07-04T00:38:18Z",
+      "jobs": [
+        {
+          "name": "build / check",
+          "status": "success",
+          "started_at": "2026-07-04T00:38:22Z",
+          "completed_at": "2026-07-04T00:38:29Z",
+          "duration_sec": 7
+        },
+        {
+          "name": "build / match",
+          "status": "success",
+          "started_at": "2026-07-04T00:38:20Z",
+          "completed_at": "2026-07-04T00:38:29Z",
+          "duration_sec": 9
+        },
+        {
+          "name": "build / build",
+          "status": "success",
+          "started_at": "2026-07-04T00:38:32Z",
+          "completed_at": "2026-07-04T00:38:39Z",
+          "duration_sec": 7
+        },
+        {
+          "name": "build / vale",
+          "status": "skipped",
+          "started_at": "2026-07-04T00:38:30Z",
+          "completed_at": "2026-07-04T00:38:29Z",
+          "duration_sec": -1
+        }
+      ]
+    }
+  ],
+  "workflows": [
+    {
+      "filename": "gradle-wrapper-validation.yml",
+      "hash": "04526945275c07b7ec8481281931aa653deceed193cbbf514b23cd8d634fae78"
+    },
+    {
+      "filename": "docs-build.yml",
+      "hash": "6772ac2baa16f9669594b6ea59ebfc2a9e1a6b14f3550571e4faacaf2d397023"
+    }
+  ]
+}

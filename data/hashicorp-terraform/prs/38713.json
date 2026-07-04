@@ -1,0 +1,70 @@
+{
+  "pr_number": 38713,
+  "title": "Remove the legacy sources resolution path",
+  "state": "open",
+  "author": "matejrisek",
+  "created_at": "2026-06-11T10:02:34Z",
+  "updated_at": "2026-07-03T12:07:23Z",
+  "merged_at": null,
+  "head_sha": "3215e8e1aadabcb9cddd92a43a0d866804aba06a",
+  "labels": [
+    "no-changelog-needed"
+  ],
+  "ci_runs": [
+    {
+      "run_id": 28032906293,
+      "workflow_id": 278786541,
+      "workflow_name": "Changelog Validation",
+      "status": "success",
+      "head_sha": "3215e8e1aadabcb9cddd92a43a0d866804aba06a",
+      "created_at": "2026-06-23T14:17:12Z",
+      "updated_at": "2026-06-23T14:17:56Z",
+      "run_started_at": "2026-06-23T14:17:12Z",
+      "jobs": [
+        {
+          "name": "Validate Changelog",
+          "status": "success",
+          "started_at": "2026-06-23T14:17:50Z",
+          "completed_at": "2026-06-23T14:17:56Z",
+          "duration_sec": 6
+        }
+      ]
+    },
+    {
+      "run_id": 28032906351,
+      "workflow_id": 126957301,
+      "workflow_name": "equivalence-test-diff",
+      "status": "success",
+      "head_sha": "3215e8e1aadabcb9cddd92a43a0d866804aba06a",
+      "created_at": "2026-06-23T14:17:12Z",
+      "updated_at": "2026-06-23T14:20:21Z",
+      "run_started_at": "2026-06-23T14:17:12Z",
+      "jobs": []
+    },
+    {
+      "run_id": 28032906540,
+      "workflow_id": 23102955,
+      "workflow_name": "Quick Checks",
+      "status": "success",
+      "head_sha": "3215e8e1aadabcb9cddd92a43a0d866804aba06a",
+      "created_at": "2026-06-23T14:17:12Z",
+      "updated_at": "2026-06-23T14:24:21Z",
+      "run_started_at": "2026-06-23T14:17:12Z",
+      "jobs": []
+    }
+  ],
+  "workflows": [
+    {
+      "filename": "issue-comment-created.yml",
+      "hash": "7b39410b950b1b04577cd7d04201e9ce01aaeca7e6daf5af2dbe7286e23ef08e"
+    },
+    {
+      "filename": "lock.yml",
+      "hash": "7606d6b818ae4ff47b39930380d804b9a904124f7dffe6d9bfbba7e715c2f183"
+    },
+    {
+      "filename": "build.yml",
+      "hash": "192267d1041a111b5fb0a96d698602ec33bd95faf16bffb870abd3b3593bfd6c"
+    }
+  ]
+}

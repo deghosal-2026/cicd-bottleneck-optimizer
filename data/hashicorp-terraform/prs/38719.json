@@ -1,0 +1,96 @@
+{
+  "pr_number": 38719,
+  "title": "add Mermaid graph format to terraform graph command",
+  "state": "closed",
+  "author": "kmoe",
+  "created_at": "2026-06-12T10:39:24Z",
+  "updated_at": "2026-07-03T14:29:26Z",
+  "merged_at": "2026-07-03T14:29:24Z",
+  "head_sha": "ff144faaefb660ffce77bdbb32a5850c80a6ca60",
+  "labels": [],
+  "ci_runs": [
+    {
+      "run_id": 28364811584,
+      "workflow_id": 23102955,
+      "workflow_name": "Quick Checks",
+      "status": "success",
+      "head_sha": "ff144faaefb660ffce77bdbb32a5850c80a6ca60",
+      "created_at": "2026-06-29T10:14:28Z",
+      "updated_at": "2026-06-29T10:20:07Z",
+      "run_started_at": "2026-06-29T10:14:28Z",
+      "jobs": [
+        {
+          "name": "Race Tests",
+          "status": "success",
+          "started_at": "2026-06-29T10:14:31Z",
+          "completed_at": "2026-06-29T10:20:07Z",
+          "duration_sec": 336
+        },
+        {
+          "name": "Code Consistency Checks",
+          "status": "success",
+          "started_at": "2026-06-29T10:14:33Z",
+          "completed_at": "2026-06-29T10:19:27Z",
+          "duration_sec": 294
+        },
+        {
+          "name": "Unit Tests",
+          "status": "success",
+          "started_at": "2026-06-29T10:14:31Z",
+          "completed_at": "2026-06-29T10:19:31Z",
+          "duration_sec": 300
+        },
+        {
+          "name": "Automated defect checks",
+          "status": "success",
+          "started_at": "2026-06-29T10:14:32Z",
+          "completed_at": "2026-06-29T10:17:49Z",
+          "duration_sec": 197
+        },
+        {
+          "name": "End-to-end Tests",
+          "status": "success",
+          "started_at": "2026-06-29T10:14:31Z",
+          "completed_at": "2026-06-29T10:16:32Z",
+          "duration_sec": 121
+        }
+      ]
+    },
+    {
+      "run_id": 28364811565,
+      "workflow_id": 278786541,
+      "workflow_name": "Changelog Validation",
+      "status": "success",
+      "head_sha": "ff144faaefb660ffce77bdbb32a5850c80a6ca60",
+      "created_at": "2026-06-29T10:14:28Z",
+      "updated_at": "2026-06-29T10:14:37Z",
+      "run_started_at": "2026-06-29T10:14:28Z",
+      "jobs": []
+    },
+    {
+      "run_id": 28364811595,
+      "workflow_id": 126957301,
+      "workflow_name": "equivalence-test-diff",
+      "status": "success",
+      "head_sha": "ff144faaefb660ffce77bdbb32a5850c80a6ca60",
+      "created_at": "2026-06-29T10:14:28Z",
+      "updated_at": "2026-06-29T10:16:40Z",
+      "run_started_at": "2026-06-29T10:14:28Z",
+      "jobs": []
+    }
+  ],
+  "workflows": [
+    {
+      "filename": "issue-comment-created.yml",
+      "hash": "7b39410b950b1b04577cd7d04201e9ce01aaeca7e6daf5af2dbe7286e23ef08e"
+    },
+    {
+      "filename": "lock.yml",
+      "hash": "7606d6b818ae4ff47b39930380d804b9a904124f7dffe6d9bfbba7e715c2f183"
+    },
+    {
+      "filename": "build.yml",
+      "hash": "192267d1041a111b5fb0a96d698602ec33bd95faf16bffb870abd3b3593bfd6c"
+    }
+  ]
+}

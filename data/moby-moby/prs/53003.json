@@ -1,0 +1,179 @@
+{
+  "pr_number": 53003,
+  "title": "libnetwork: improve DNS shuffle entropy with UnixNano and standard Sh\u2026",
+  "state": "open",
+  "author": "SABITHSAHEB",
+  "created_at": "2026-07-03T10:10:54Z",
+  "updated_at": "2026-07-03T12:29:18Z",
+  "merged_at": null,
+  "head_sha": "1b0102c75d0e180bedec87ab5875c6283bcb22c8",
+  "labels": [
+    "kind/enhancement",
+    "area/networking",
+    "area/daemon"
+  ],
+  "ci_runs": [
+    {
+      "run_id": 28660602070,
+      "workflow_id": 260262819,
+      "workflow_name": "validate-milestone",
+      "status": "success",
+      "head_sha": "1b0102c75d0e180bedec87ab5875c6283bcb22c8",
+      "created_at": "2026-07-03T12:29:21Z",
+      "updated_at": "2026-07-03T12:29:31Z",
+      "run_started_at": "2026-07-03T12:29:23Z",
+      "jobs": [
+        {
+          "name": "validate-milestone",
+          "status": "success",
+          "started_at": "2026-07-03T12:29:27Z",
+          "completed_at": "2026-07-03T12:29:30Z",
+          "duration_sec": 3
+        }
+      ]
+    },
+    {
+      "run_id": 28660599762,
+      "workflow_id": 86900533,
+      "workflow_name": "validate-pr",
+      "status": "success",
+      "head_sha": "1b0102c75d0e180bedec87ab5875c6283bcb22c8",
+      "created_at": "2026-07-03T12:29:18Z",
+      "updated_at": "2026-07-03T12:29:53Z",
+      "run_started_at": "2026-07-03T12:29:23Z",
+      "jobs": []
+    },
+    {
+      "run_id": 28654066776,
+      "workflow_id": 168088309,
+      "workflow_name": "windows-2025",
+      "status": "success",
+      "head_sha": "1b0102c75d0e180bedec87ab5875c6283bcb22c8",
+      "created_at": "2026-07-03T10:16:17Z",
+      "updated_at": "2026-07-03T13:33:20Z",
+      "run_started_at": "2026-07-03T12:29:06Z",
+      "jobs": []
+    },
+    {
+      "run_id": 28654066861,
+      "workflow_id": 33573227,
+      "workflow_name": "buildkit",
+      "status": "success",
+      "head_sha": "1b0102c75d0e180bedec87ab5875c6283bcb22c8",
+      "created_at": "2026-07-03T10:16:17Z",
+      "updated_at": "2026-07-03T14:03:40Z",
+      "run_started_at": "2026-07-03T13:51:07Z",
+      "jobs": []
+    },
+    {
+      "run_id": 28654066859,
+      "workflow_id": 26704268,
+      "workflow_name": "test",
+      "status": "success",
+      "head_sha": "1b0102c75d0e180bedec87ab5875c6283bcb22c8",
+      "created_at": "2026-07-03T10:16:17Z",
+      "updated_at": "2026-07-03T13:02:38Z",
+      "run_started_at": "2026-07-03T12:29:07Z",
+      "jobs": []
+    },
+    {
+      "run_id": 28654066814,
+      "workflow_id": 187772110,
+      "workflow_name": "vm",
+      "status": "success",
+      "head_sha": "1b0102c75d0e180bedec87ab5875c6283bcb22c8",
+      "created_at": "2026-07-03T10:16:17Z",
+      "updated_at": "2026-07-03T12:51:36Z",
+      "run_started_at": "2026-07-03T12:29:07Z",
+      "jobs": []
+    },
+    {
+      "run_id": 28654066992,
+      "workflow_id": 44461128,
+      "workflow_name": "bin-image",
+      "status": "success",
+      "head_sha": "1b0102c75d0e180bedec87ab5875c6283bcb22c8",
+      "created_at": "2026-07-03T10:16:17Z",
+      "updated_at": "2026-07-03T12:34:11Z",
+      "run_started_at": "2026-07-03T12:29:07Z",
+      "jobs": []
+    },
+    {
+      "run_id": 28654066843,
+      "workflow_id": 21805183,
+      "workflow_name": "ci",
+      "status": "success",
+      "head_sha": "1b0102c75d0e180bedec87ab5875c6283bcb22c8",
+      "created_at": "2026-07-03T10:16:17Z",
+      "updated_at": "2026-07-03T12:34:36Z",
+      "run_started_at": "2026-07-03T12:29:07Z",
+      "jobs": []
+    },
+    {
+      "run_id": 28654066706,
+      "workflow_id": 81499888,
+      "workflow_name": "codeql",
+      "status": "success",
+      "head_sha": "1b0102c75d0e180bedec87ab5875c6283bcb22c8",
+      "created_at": "2026-07-03T10:16:17Z",
+      "updated_at": "2026-07-03T12:35:34Z",
+      "run_started_at": "2026-07-03T12:29:06Z",
+      "jobs": []
+    },
+    {
+      "run_id": 28654066764,
+      "workflow_id": 260262819,
+      "workflow_name": "validate-milestone",
+      "status": "failure",
+      "head_sha": "1b0102c75d0e180bedec87ab5875c6283bcb22c8",
+      "created_at": "2026-07-03T10:16:17Z",
+      "updated_at": "2026-07-03T12:29:18Z",
+      "run_started_at": "2026-07-03T12:29:06Z",
+      "jobs": []
+    },
+    {
+      "run_id": 28654066666,
+      "workflow_id": 86900533,
+      "workflow_name": "validate-pr",
+      "status": "cancelled",
+      "head_sha": "1b0102c75d0e180bedec87ab5875c6283bcb22c8",
+      "created_at": "2026-07-03T10:16:17Z",
+      "updated_at": "2026-07-03T12:29:27Z",
+      "run_started_at": "2026-07-03T12:29:06Z",
+      "jobs": []
+    },
+    {
+      "run_id": 28654067082,
+      "workflow_id": 261203439,
+      "workflow_name": "zizmor",
+      "status": "success",
+      "head_sha": "1b0102c75d0e180bedec87ab5875c6283bcb22c8",
+      "created_at": "2026-07-03T10:16:17Z",
+      "updated_at": "2026-07-03T12:29:35Z",
+      "run_started_at": "2026-07-03T12:29:07Z",
+      "jobs": []
+    }
+  ],
+  "workflows": [
+    {
+      "filename": ".dco.yml",
+      "hash": "dea4b82ced9a768e825d38c022001e448d052703020b8345ce1752af0665f479"
+    },
+    {
+      "filename": ".test-unit.yml",
+      "hash": "64ea4ac26a2df4f48f55a6cfdef04ec69994f18e0dce69c1d98792ecbf66679b"
+    },
+    {
+      "filename": ".test.yml",
+      "hash": "698dd2de1d8e32af05925d489ceb376de42b9db0f6a9f271c0e2f1c83e849f57"
+    },
+    {
+      "filename": ".vm.yml",
+      "hash": "fa079150844d5674b2c95776f852977d6cb1a8faeb202fd94a8b63451445a5ed"
+    },
+    {
+      "filename": ".windows.yml",
+      "hash": "b3cb6d7e301a89297e6b10d87af74beee4996445f851b4fb2d44cdb54c8924f6"
+    }
+  ]
+}

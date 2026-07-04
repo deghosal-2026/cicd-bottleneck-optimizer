@@ -1,0 +1,67 @@
+{
+  "pr_number": 152903,
+  "title": "Fix testSearchShardShouldRecoverWhenWarmingFailsOnGetConnection",
+  "state": "open",
+  "author": "samxbr",
+  "created_at": "2026-07-03T18:51:36Z",
+  "updated_at": "2026-07-03T21:08:42Z",
+  "merged_at": null,
+  "head_sha": "ed0546abaab44b57053dfdde57b0e9ead41c1920",
+  "labels": [
+    ">test",
+    ":Distributed/Engine",
+    "Team:Distributed"
+  ],
+  "ci_runs": [
+    {
+      "run_id": 28678481457,
+      "workflow_id": 146525436,
+      "workflow_name": "docs-build",
+      "status": "success",
+      "head_sha": "ed0546abaab44b57053dfdde57b0e9ead41c1920",
+      "created_at": "2026-07-03T18:52:57Z",
+      "updated_at": "2026-07-03T18:53:18Z",
+      "run_started_at": "2026-07-03T18:52:57Z",
+      "jobs": [
+        {
+          "name": "build / match",
+          "status": "success",
+          "started_at": "2026-07-03T18:53:00Z",
+          "completed_at": "2026-07-03T18:53:05Z",
+          "duration_sec": 5
+        },
+        {
+          "name": "build / check",
+          "status": "success",
+          "started_at": "2026-07-03T18:53:00Z",
+          "completed_at": "2026-07-03T18:53:07Z",
+          "duration_sec": 7
+        },
+        {
+          "name": "build / build",
+          "status": "success",
+          "started_at": "2026-07-03T18:53:09Z",
+          "completed_at": "2026-07-03T18:53:17Z",
+          "duration_sec": 8
+        },
+        {
+          "name": "build / vale",
+          "status": "skipped",
+          "started_at": "2026-07-03T18:53:08Z",
+          "completed_at": "2026-07-03T18:53:07Z",
+          "duration_sec": -1
+        }
+      ]
+    }
+  ],
+  "workflows": [
+    {
+      "filename": "gradle-wrapper-validation.yml",
+      "hash": "04526945275c07b7ec8481281931aa653deceed193cbbf514b23cd8d634fae78"
+    },
+    {
+      "filename": "docs-build.yml",
+      "hash": "6772ac2baa16f9669594b6ea59ebfc2a9e1a6b14f3550571e4faacaf2d397023"
+    }
+  ]
+}

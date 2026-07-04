@@ -1,0 +1,97 @@
+{
+  "pr_number": 317271,
+  "title": "Focus input on widget click outside textarea and action bar",
+  "state": "closed",
+  "author": "benibenj",
+  "created_at": "2026-05-19T08:17:04Z",
+  "updated_at": "2026-07-03T23:40:39Z",
+  "merged_at": "2026-05-19T08:38:20Z",
+  "head_sha": "a13c47fc141918e0b3e681431d1e749683a914ca",
+  "labels": [],
+  "ci_runs": [
+    {
+      "run_id": 26085068002,
+      "workflow_id": 211787236,
+      "workflow_name": "Prevent engineering system changes in PRs",
+      "status": "success",
+      "head_sha": "a13c47fc141918e0b3e681431d1e749683a914ca",
+      "created_at": "2026-05-19T08:17:09Z",
+      "updated_at": "2026-05-19T08:19:54Z",
+      "run_started_at": "2026-05-19T08:17:09Z",
+      "jobs": [
+        {
+          "name": "Prevent engineering system changes in PRs",
+          "status": "success",
+          "started_at": "2026-05-19T08:19:49Z",
+          "completed_at": "2026-05-19T08:19:53Z",
+          "duration_sec": 4
+        }
+      ]
+    },
+    {
+      "run_id": 26085068070,
+      "workflow_id": 38332752,
+      "workflow_name": "Telemetry",
+      "status": "success",
+      "head_sha": "a13c47fc141918e0b3e681431d1e749683a914ca",
+      "created_at": "2026-05-19T08:17:09Z",
+      "updated_at": "2026-05-19T08:20:17Z",
+      "run_started_at": "2026-05-19T08:17:09Z",
+      "jobs": []
+    },
+    {
+      "run_id": 26085068054,
+      "workflow_id": 258342321,
+      "workflow_name": "chat-lib tests",
+      "status": "success",
+      "head_sha": "a13c47fc141918e0b3e681431d1e749683a914ca",
+      "created_at": "2026-05-19T08:17:09Z",
+      "updated_at": "2026-05-19T08:23:00Z",
+      "run_started_at": "2026-05-19T08:17:09Z",
+      "jobs": []
+    },
+    {
+      "run_id": 26085068017,
+      "workflow_id": 4196599,
+      "workflow_name": "Code OSS",
+      "status": "success",
+      "head_sha": "a13c47fc141918e0b3e681431d1e749683a914ca",
+      "created_at": "2026-05-19T08:17:09Z",
+      "updated_at": "2026-05-19T08:38:17Z",
+      "run_started_at": "2026-05-19T08:17:09Z",
+      "jobs": []
+    },
+    {
+      "run_id": 26085067985,
+      "workflow_id": 21497327,
+      "workflow_name": "Monaco Editor checks",
+      "status": "success",
+      "head_sha": "a13c47fc141918e0b3e681431d1e749683a914ca",
+      "created_at": "2026-05-19T08:17:09Z",
+      "updated_at": "2026-05-19T08:24:16Z",
+      "run_started_at": "2026-05-19T08:17:09Z",
+      "jobs": []
+    },
+    {
+      "run_id": 26085067956,
+      "workflow_id": 273167221,
+      "workflow_name": "Component Fixtures",
+      "status": "success",
+      "head_sha": "a13c47fc141918e0b3e681431d1e749683a914ca",
+      "created_at": "2026-05-19T08:17:09Z",
+      "updated_at": "2026-05-19T08:25:14Z",
+      "run_started_at": "2026-05-19T08:17:09Z",
+      "jobs": []
+    }
+  ],
+  "workflows": [
+    {
+      "filename": "pr.yml",
+      "hash": "0625dff11585a35e1ad0cf2b3cbea2cb72e521039dfd406eaa8de1ec75492115"
+    },
+    {
+      "filename": "monaco-editor.yml",
+      "hash": "02e5f951a8bc0193f3239d64b65c547aebcf6427849f35a8e7b9500b4eeb10f9"
+    }
+  ]
+}

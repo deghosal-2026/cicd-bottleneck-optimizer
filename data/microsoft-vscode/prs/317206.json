@@ -1,0 +1,97 @@
+{
+  "pr_number": 317206,
+  "title": "Cloud Agent: Tasks API experimental setting and backend",
+  "state": "closed",
+  "author": "osortega",
+  "created_at": "2026-05-18T23:33:35Z",
+  "updated_at": "2026-07-03T23:40:39Z",
+  "merged_at": "2026-05-19T20:42:27Z",
+  "head_sha": "6bc19d5010609ead8d041a2758efdfbf91188842",
+  "labels": [],
+  "ci_runs": [
+    {
+      "run_id": 26120344875,
+      "workflow_id": 38332752,
+      "workflow_name": "Telemetry",
+      "status": "success",
+      "head_sha": "6bc19d5010609ead8d041a2758efdfbf91188842",
+      "created_at": "2026-05-19T19:31:02Z",
+      "updated_at": "2026-05-19T19:33:11Z",
+      "run_started_at": "2026-05-19T19:31:02Z",
+      "jobs": [
+        {
+          "name": "Check metadata",
+          "status": "success",
+          "started_at": "2026-05-19T19:32:44Z",
+          "completed_at": "2026-05-19T19:33:11Z",
+          "duration_sec": 27
+        }
+      ]
+    },
+    {
+      "run_id": 26120344881,
+      "workflow_id": 211787236,
+      "workflow_name": "Prevent engineering system changes in PRs",
+      "status": "success",
+      "head_sha": "6bc19d5010609ead8d041a2758efdfbf91188842",
+      "created_at": "2026-05-19T19:31:02Z",
+      "updated_at": "2026-05-19T19:32:53Z",
+      "run_started_at": "2026-05-19T19:31:02Z",
+      "jobs": []
+    },
+    {
+      "run_id": 26120344871,
+      "workflow_id": 21497327,
+      "workflow_name": "Monaco Editor checks",
+      "status": "success",
+      "head_sha": "6bc19d5010609ead8d041a2758efdfbf91188842",
+      "created_at": "2026-05-19T19:31:02Z",
+      "updated_at": "2026-05-19T19:37:26Z",
+      "run_started_at": "2026-05-19T19:31:02Z",
+      "jobs": []
+    },
+    {
+      "run_id": 26120344879,
+      "workflow_id": 273167221,
+      "workflow_name": "Component Fixtures",
+      "status": "success",
+      "head_sha": "6bc19d5010609ead8d041a2758efdfbf91188842",
+      "created_at": "2026-05-19T19:31:02Z",
+      "updated_at": "2026-05-19T19:37:52Z",
+      "run_started_at": "2026-05-19T19:31:02Z",
+      "jobs": []
+    },
+    {
+      "run_id": 26120344872,
+      "workflow_id": 258342321,
+      "workflow_name": "chat-lib tests",
+      "status": "success",
+      "head_sha": "6bc19d5010609ead8d041a2758efdfbf91188842",
+      "created_at": "2026-05-19T19:31:02Z",
+      "updated_at": "2026-05-19T19:39:25Z",
+      "run_started_at": "2026-05-19T19:31:02Z",
+      "jobs": []
+    },
+    {
+      "run_id": 26120344878,
+      "workflow_id": 4196599,
+      "workflow_name": "Code OSS",
+      "status": "success",
+      "head_sha": "6bc19d5010609ead8d041a2758efdfbf91188842",
+      "created_at": "2026-05-19T19:31:02Z",
+      "updated_at": "2026-05-19T19:49:25Z",
+      "run_started_at": "2026-05-19T19:31:02Z",
+      "jobs": []
+    }
+  ],
+  "workflows": [
+    {
+      "filename": "pr.yml",
+      "hash": "0625dff11585a35e1ad0cf2b3cbea2cb72e521039dfd406eaa8de1ec75492115"
+    },
+    {
+      "filename": "monaco-editor.yml",
+      "hash": "02e5f951a8bc0193f3239d64b65c547aebcf6427849f35a8e7b9500b4eeb10f9"
+    }
+  ]
+}

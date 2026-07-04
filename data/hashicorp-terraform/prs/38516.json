@@ -1,0 +1,70 @@
+{
+  "pr_number": 38516,
+  "title": "Wire policy evaluation into Terraform core runtime",
+  "state": "closed",
+  "author": "dsa0x",
+  "created_at": "2026-05-04T14:16:52Z",
+  "updated_at": "2026-07-03T02:43:28Z",
+  "merged_at": "2026-06-01T10:58:35Z",
+  "head_sha": "dd98328d019dc8e7376f412b3998fd2408571932",
+  "labels": [
+    "no-changelog-needed"
+  ],
+  "ci_runs": [
+    {
+      "run_id": 26741771899,
+      "workflow_id": 278786541,
+      "workflow_name": "Changelog Validation",
+      "status": "success",
+      "head_sha": "dd98328d019dc8e7376f412b3998fd2408571932",
+      "created_at": "2026-06-01T07:40:48Z",
+      "updated_at": "2026-06-01T07:40:59Z",
+      "run_started_at": "2026-06-01T07:40:48Z",
+      "jobs": [
+        {
+          "name": "Validate Changelog",
+          "status": "success",
+          "started_at": "2026-06-01T07:40:51Z",
+          "completed_at": "2026-06-01T07:40:58Z",
+          "duration_sec": 7
+        }
+      ]
+    },
+    {
+      "run_id": 26741771894,
+      "workflow_id": 126957301,
+      "workflow_name": "equivalence-test-diff",
+      "status": "success",
+      "head_sha": "dd98328d019dc8e7376f412b3998fd2408571932",
+      "created_at": "2026-06-01T07:40:48Z",
+      "updated_at": "2026-06-01T07:42:51Z",
+      "run_started_at": "2026-06-01T07:40:48Z",
+      "jobs": []
+    },
+    {
+      "run_id": 26741771884,
+      "workflow_id": 23102955,
+      "workflow_name": "Quick Checks",
+      "status": "success",
+      "head_sha": "dd98328d019dc8e7376f412b3998fd2408571932",
+      "created_at": "2026-06-01T07:40:48Z",
+      "updated_at": "2026-06-01T07:47:09Z",
+      "run_started_at": "2026-06-01T07:40:48Z",
+      "jobs": []
+    }
+  ],
+  "workflows": [
+    {
+      "filename": "issue-comment-created.yml",
+      "hash": "7b39410b950b1b04577cd7d04201e9ce01aaeca7e6daf5af2dbe7286e23ef08e"
+    },
+    {
+      "filename": "lock.yml",
+      "hash": "7606d6b818ae4ff47b39930380d804b9a904124f7dffe6d9bfbba7e715c2f183"
+    },
+    {
+      "filename": "build.yml",
+      "hash": "192267d1041a111b5fb0a96d698602ec33bd95faf16bffb870abd3b3593bfd6c"
+    }
+  ]
+}

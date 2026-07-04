@@ -1,0 +1,98 @@
+{
+  "pr_number": 38821,
+  "title": "policy: Add entitlement to stacks usage of the policy client",
+  "state": "open",
+  "author": "austinvalle",
+  "created_at": "2026-07-02T17:17:48Z",
+  "updated_at": "2026-07-02T17:28:08Z",
+  "merged_at": null,
+  "head_sha": "d924b8ee2d7e60115d89786f4751303bb289a779",
+  "labels": [
+    "skip-changelog-check"
+  ],
+  "ci_runs": [
+    {
+      "run_id": 28609168530,
+      "workflow_id": 23102955,
+      "workflow_name": "Quick Checks",
+      "status": "success",
+      "head_sha": "d924b8ee2d7e60115d89786f4751303bb289a779",
+      "created_at": "2026-07-02T17:28:13Z",
+      "updated_at": "2026-07-02T17:40:21Z",
+      "run_started_at": "2026-07-02T17:35:16Z",
+      "jobs": [
+        {
+          "name": "Unit Tests",
+          "status": "success",
+          "started_at": "2026-07-02T17:35:21Z",
+          "completed_at": "2026-07-02T17:40:20Z",
+          "duration_sec": 299
+        },
+        {
+          "name": "Race Tests",
+          "status": "success",
+          "started_at": "2026-07-02T17:28:17Z",
+          "completed_at": "2026-07-02T17:34:02Z",
+          "duration_sec": 345
+        },
+        {
+          "name": "Code Consistency Checks",
+          "status": "success",
+          "started_at": "2026-07-02T17:28:19Z",
+          "completed_at": "2026-07-02T17:34:58Z",
+          "duration_sec": 399
+        },
+        {
+          "name": "End-to-end Tests",
+          "status": "success",
+          "started_at": "2026-07-02T17:28:18Z",
+          "completed_at": "2026-07-02T17:30:12Z",
+          "duration_sec": 114
+        },
+        {
+          "name": "Automated defect checks",
+          "status": "success",
+          "started_at": "2026-07-02T17:28:23Z",
+          "completed_at": "2026-07-02T17:32:56Z",
+          "duration_sec": 273
+        }
+      ]
+    },
+    {
+      "run_id": 28609168519,
+      "workflow_id": 278786541,
+      "workflow_name": "Changelog Validation",
+      "status": "skipped",
+      "head_sha": "d924b8ee2d7e60115d89786f4751303bb289a779",
+      "created_at": "2026-07-02T17:28:13Z",
+      "updated_at": "2026-07-02T17:28:22Z",
+      "run_started_at": "2026-07-02T17:28:13Z",
+      "jobs": []
+    },
+    {
+      "run_id": 28609168491,
+      "workflow_id": 126957301,
+      "workflow_name": "equivalence-test-diff",
+      "status": "success",
+      "head_sha": "d924b8ee2d7e60115d89786f4751303bb289a779",
+      "created_at": "2026-07-02T17:28:13Z",
+      "updated_at": "2026-07-02T17:30:25Z",
+      "run_started_at": "2026-07-02T17:28:13Z",
+      "jobs": []
+    }
+  ],
+  "workflows": [
+    {
+      "filename": "issue-comment-created.yml",
+      "hash": "7b39410b950b1b04577cd7d04201e9ce01aaeca7e6daf5af2dbe7286e23ef08e"
+    },
+    {
+      "filename": "lock.yml",
+      "hash": "7606d6b818ae4ff47b39930380d804b9a904124f7dffe6d9bfbba7e715c2f183"
+    },
+    {
+      "filename": "build.yml",
+      "hash": "192267d1041a111b5fb0a96d698602ec33bd95faf16bffb870abd3b3593bfd6c"
+    }
+  ]
+}

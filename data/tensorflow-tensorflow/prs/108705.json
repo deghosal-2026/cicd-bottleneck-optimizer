@@ -1,0 +1,63 @@
+{
+  "pr_number": 108705,
+  "title": "Fix segfault in ImmutableConst with large shape dimensions",
+  "state": "open",
+  "author": "ssam18",
+  "created_at": "2026-01-23T02:37:32Z",
+  "updated_at": "2026-07-03T16:27:08Z",
+  "merged_at": null,
+  "head_sha": "206d7b63b196858460be173f92235ce238e11e66",
+  "labels": [
+    "stat:awaiting response",
+    "awaiting review",
+    "size:M",
+    "prtype:bugfix",
+    "comp:core"
+  ],
+  "ci_runs": [
+    {
+      "run_id": 28672588156,
+      "workflow_id": 287144969,
+      "workflow_name": "License Check",
+      "status": "action_required",
+      "head_sha": "206d7b63b196858460be173f92235ce238e11e66",
+      "created_at": "2026-07-03T16:27:13Z",
+      "updated_at": "2026-07-03T16:27:13Z",
+      "run_started_at": "2026-07-03T16:27:13Z",
+      "jobs": []
+    },
+    {
+      "run_id": 28672588221,
+      "workflow_id": 248743471,
+      "workflow_name": "CI",
+      "status": "action_required",
+      "head_sha": "206d7b63b196858460be173f92235ce238e11e66",
+      "created_at": "2026-07-03T16:27:13Z",
+      "updated_at": "2026-07-03T16:27:13Z",
+      "run_started_at": "2026-07-03T16:27:13Z",
+      "jobs": []
+    }
+  ],
+  "workflows": [
+    {
+      "filename": "update-nightly.yml",
+      "hash": "05e2e1c09977e5fd7562b494032571695f02592e883ef959d2e7a72d14356529"
+    },
+    {
+      "filename": "pylint-presubmit.yml",
+      "hash": "138eee26e716354ce54596ce96004db1c5406aff3467a1389feb5dc51fc16abc"
+    },
+    {
+      "filename": "issue-on-pr-rollback.yml",
+      "hash": "5a33aa6ed9fa2234004803a5be33a4e9804ccbff8e031a442ff064af0d809584"
+    },
+    {
+      "filename": "scorecards-analysis.yml",
+      "hash": "ef2eb9d0011f9be06b1dc6334a1bf4e3bdc52fe799bd5f3166de2bc93b02e651"
+    },
+    {
+      "filename": "cffconvert.yml",
+      "hash": "f49386b15b0e8f242217fba21e4ba80c9f50e9d1cb97f60c30180e8710a8a0a7"
+    }
+  ]
+}

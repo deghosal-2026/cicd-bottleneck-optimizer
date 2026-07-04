@@ -1,0 +1,68 @@
+{
+  "pr_number": 152805,
+  "title": "Add blob cache lock-acquisition metric",
+  "state": "closed",
+  "author": "szybia",
+  "created_at": "2026-07-02T19:56:45Z",
+  "updated_at": "2026-07-03T19:27:16Z",
+  "merged_at": "2026-07-03T19:27:16Z",
+  "head_sha": "e182c95129e4c282c40e94d3ad9d72b2fb8b33e5",
+  "labels": [
+    ">non-issue",
+    ":Distributed/Distributed",
+    "Team:Distributed",
+    "v9.5.0"
+  ],
+  "ci_runs": [
+    {
+      "run_id": 28675500412,
+      "workflow_id": 146525436,
+      "workflow_name": "docs-build",
+      "status": "success",
+      "head_sha": "e182c95129e4c282c40e94d3ad9d72b2fb8b33e5",
+      "created_at": "2026-07-03T17:37:26Z",
+      "updated_at": "2026-07-03T17:37:48Z",
+      "run_started_at": "2026-07-03T17:37:26Z",
+      "jobs": [
+        {
+          "name": "build / check",
+          "status": "success",
+          "started_at": "2026-07-03T17:37:29Z",
+          "completed_at": "2026-07-03T17:37:38Z",
+          "duration_sec": 9
+        },
+        {
+          "name": "build / match",
+          "status": "success",
+          "started_at": "2026-07-03T17:37:28Z",
+          "completed_at": "2026-07-03T17:37:32Z",
+          "duration_sec": 4
+        },
+        {
+          "name": "build / build",
+          "status": "success",
+          "started_at": "2026-07-03T17:37:40Z",
+          "completed_at": "2026-07-03T17:37:48Z",
+          "duration_sec": 8
+        },
+        {
+          "name": "build / vale",
+          "status": "skipped",
+          "started_at": "2026-07-03T17:37:38Z",
+          "completed_at": "2026-07-03T17:37:38Z",
+          "duration_sec": 0
+        }
+      ]
+    }
+  ],
+  "workflows": [
+    {
+      "filename": "gradle-wrapper-validation.yml",
+      "hash": "04526945275c07b7ec8481281931aa653deceed193cbbf514b23cd8d634fae78"
+    },
+    {
+      "filename": "docs-build.yml",
+      "hash": "6772ac2baa16f9669594b6ea59ebfc2a9e1a6b14f3550571e4faacaf2d397023"
+    }
+  ]
+}

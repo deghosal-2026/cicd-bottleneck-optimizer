@@ -1,0 +1,79 @@
+{
+  "pr_number": 38773,
+  "title": "Backport of Fix submodule variable validation during init into v1.15",
+  "state": "closed",
+  "author": "github-actions[bot]",
+  "created_at": "2026-06-24T10:35:24Z",
+  "updated_at": "2026-06-24T10:45:38Z",
+  "merged_at": "2026-06-24T10:45:36Z",
+  "head_sha": "a6b9a5f5d6b2b3269d50341c848e02021c51d482",
+  "labels": [],
+  "ci_runs": [
+    {
+      "run_id": 28092636710,
+      "workflow_id": 126957301,
+      "workflow_name": "equivalence-test-diff",
+      "status": "success",
+      "head_sha": "a6b9a5f5d6b2b3269d50341c848e02021c51d482",
+      "created_at": "2026-06-24T10:38:12Z",
+      "updated_at": "2026-06-24T10:42:34Z",
+      "run_started_at": "2026-06-24T10:38:12Z",
+      "jobs": [
+        {
+          "name": "Equivalence Test Diff",
+          "status": "success",
+          "started_at": "2026-06-24T10:38:16Z",
+          "completed_at": "2026-06-24T10:42:33Z",
+          "duration_sec": 257
+        }
+      ]
+    },
+    {
+      "run_id": 28092636752,
+      "workflow_id": 23102955,
+      "workflow_name": "Quick Checks",
+      "status": "success",
+      "head_sha": "a6b9a5f5d6b2b3269d50341c848e02021c51d482",
+      "created_at": "2026-06-24T10:38:12Z",
+      "updated_at": "2026-06-24T10:45:33Z",
+      "run_started_at": "2026-06-24T10:38:12Z",
+      "jobs": []
+    },
+    {
+      "run_id": 28092498728,
+      "workflow_id": 126957301,
+      "workflow_name": "equivalence-test-diff",
+      "status": "success",
+      "head_sha": "a6b9a5f5d6b2b3269d50341c848e02021c51d482",
+      "created_at": "2026-06-24T10:35:29Z",
+      "updated_at": "2026-06-24T10:42:40Z",
+      "run_started_at": "2026-06-24T10:38:13Z",
+      "jobs": []
+    },
+    {
+      "run_id": 28092498748,
+      "workflow_id": 23102955,
+      "workflow_name": "Quick Checks",
+      "status": "success",
+      "head_sha": "a6b9a5f5d6b2b3269d50341c848e02021c51d482",
+      "created_at": "2026-06-24T10:35:29Z",
+      "updated_at": "2026-06-24T10:45:15Z",
+      "run_started_at": "2026-06-24T10:38:13Z",
+      "jobs": []
+    }
+  ],
+  "workflows": [
+    {
+      "filename": "issue-comment-created.yml",
+      "hash": "7b39410b950b1b04577cd7d04201e9ce01aaeca7e6daf5af2dbe7286e23ef08e"
+    },
+    {
+      "filename": "lock.yml",
+      "hash": "7606d6b818ae4ff47b39930380d804b9a904124f7dffe6d9bfbba7e715c2f183"
+    },
+    {
+      "filename": "build.yml",
+      "hash": "192267d1041a111b5fb0a96d698602ec33bd95faf16bffb870abd3b3593bfd6c"
+    }
+  ]
+}

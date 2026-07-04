@@ -1,0 +1,98 @@
+{
+  "pr_number": 38654,
+  "title": "Action and condition eval before apply",
+  "state": "closed",
+  "author": "jbardin",
+  "created_at": "2026-05-28T00:26:49Z",
+  "updated_at": "2026-06-28T02:44:19Z",
+  "merged_at": "2026-05-28T16:08:00Z",
+  "head_sha": "58a7dfbeebe3281c5ce528c57812888b7c9fdc00",
+  "labels": [
+    "no-changelog-needed"
+  ],
+  "ci_runs": [
+    {
+      "run_id": 26585821526,
+      "workflow_id": 23102955,
+      "workflow_name": "Quick Checks",
+      "status": "success",
+      "head_sha": "58a7dfbeebe3281c5ce528c57812888b7c9fdc00",
+      "created_at": "2026-05-28T15:52:22Z",
+      "updated_at": "2026-05-28T15:58:47Z",
+      "run_started_at": "2026-05-28T15:52:22Z",
+      "jobs": [
+        {
+          "name": "Race Tests",
+          "status": "success",
+          "started_at": "2026-05-28T15:52:28Z",
+          "completed_at": "2026-05-28T15:57:44Z",
+          "duration_sec": 316
+        },
+        {
+          "name": "Automated defect checks",
+          "status": "success",
+          "started_at": "2026-05-28T15:52:27Z",
+          "completed_at": "2026-05-28T15:57:08Z",
+          "duration_sec": 281
+        },
+        {
+          "name": "End-to-end Tests",
+          "status": "success",
+          "started_at": "2026-05-28T15:52:28Z",
+          "completed_at": "2026-05-28T15:55:59Z",
+          "duration_sec": 211
+        },
+        {
+          "name": "Code Consistency Checks",
+          "status": "success",
+          "started_at": "2026-05-28T15:52:27Z",
+          "completed_at": "2026-05-28T15:58:43Z",
+          "duration_sec": 376
+        },
+        {
+          "name": "Unit Tests",
+          "status": null,
+          "started_at": "2026-05-28T15:52:27Z",
+          "completed_at": null,
+          "duration_sec": 0
+        }
+      ]
+    },
+    {
+      "run_id": 26585821705,
+      "workflow_id": 278786541,
+      "workflow_name": "Changelog Validation",
+      "status": "success",
+      "head_sha": "58a7dfbeebe3281c5ce528c57812888b7c9fdc00",
+      "created_at": "2026-05-28T15:52:22Z",
+      "updated_at": "2026-05-28T15:52:34Z",
+      "run_started_at": "2026-05-28T15:52:22Z",
+      "jobs": []
+    },
+    {
+      "run_id": 26585821478,
+      "workflow_id": 126957301,
+      "workflow_name": "equivalence-test-diff",
+      "status": "success",
+      "head_sha": "58a7dfbeebe3281c5ce528c57812888b7c9fdc00",
+      "created_at": "2026-05-28T15:52:22Z",
+      "updated_at": "2026-05-28T15:54:40Z",
+      "run_started_at": "2026-05-28T15:52:22Z",
+      "jobs": []
+    }
+  ],
+  "workflows": [
+    {
+      "filename": "issue-comment-created.yml",
+      "hash": "7b39410b950b1b04577cd7d04201e9ce01aaeca7e6daf5af2dbe7286e23ef08e"
+    },
+    {
+      "filename": "lock.yml",
+      "hash": "7606d6b818ae4ff47b39930380d804b9a904124f7dffe6d9bfbba7e715c2f183"
+    },
+    {
+      "filename": "build.yml",
+      "hash": "192267d1041a111b5fb0a96d698602ec33bd95faf16bffb870abd3b3593bfd6c"
+    }
+  ]
+}

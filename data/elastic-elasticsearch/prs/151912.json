@@ -1,0 +1,70 @@
+{
+  "pr_number": 151912,
+  "title": "PromQL query logging",
+  "state": "open",
+  "author": "smalyshev",
+  "created_at": "2026-06-22T20:10:32Z",
+  "updated_at": "2026-07-03T19:03:47Z",
+  "merged_at": null,
+  "head_sha": "08968ff1f82f8abcfad29f56f468c4ecda3b449b",
+  "labels": [
+    ">enhancement",
+    ":Core/Infra/Logging",
+    "Team:Core/Infra",
+    "Team:StorageEngine",
+    ":StorageEngine/PromQL",
+    "v9.5.0"
+  ],
+  "ci_runs": [
+    {
+      "run_id": 28678871073,
+      "workflow_id": 146525436,
+      "workflow_name": "docs-build",
+      "status": "success",
+      "head_sha": "08968ff1f82f8abcfad29f56f468c4ecda3b449b",
+      "created_at": "2026-07-03T19:02:57Z",
+      "updated_at": "2026-07-03T19:03:23Z",
+      "run_started_at": "2026-07-03T19:02:57Z",
+      "jobs": [
+        {
+          "name": "build / check",
+          "status": "success",
+          "started_at": "2026-07-03T19:03:01Z",
+          "completed_at": "2026-07-03T19:03:06Z",
+          "duration_sec": 5
+        },
+        {
+          "name": "build / match",
+          "status": "success",
+          "started_at": "2026-07-03T19:03:00Z",
+          "completed_at": "2026-07-03T19:03:12Z",
+          "duration_sec": 12
+        },
+        {
+          "name": "build / vale",
+          "status": "skipped",
+          "started_at": "2026-07-03T19:03:07Z",
+          "completed_at": "2026-07-03T19:03:06Z",
+          "duration_sec": -1
+        },
+        {
+          "name": "build / build",
+          "status": "success",
+          "started_at": "2026-07-03T19:03:16Z",
+          "completed_at": "2026-07-03T19:03:23Z",
+          "duration_sec": 7
+        }
+      ]
+    }
+  ],
+  "workflows": [
+    {
+      "filename": "gradle-wrapper-validation.yml",
+      "hash": "04526945275c07b7ec8481281931aa653deceed193cbbf514b23cd8d634fae78"
+    },
+    {
+      "filename": "docs-build.yml",
+      "hash": "6772ac2baa16f9669594b6ea59ebfc2a9e1a6b14f3550571e4faacaf2d397023"
+    }
+  ]
+}

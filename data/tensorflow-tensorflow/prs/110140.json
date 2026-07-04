@@ -1,0 +1,68 @@
+{
+  "pr_number": 110140,
+  "title": "docs: improve docstrings with runnable examples and fix TFLite docs",
+  "state": "open",
+  "author": "M-H-Jishan",
+  "created_at": "2026-02-11T07:42:20Z",
+  "updated_at": "2026-07-03T18:01:50Z",
+  "merged_at": null,
+  "head_sha": "d3d242a7aa5d7046d32a6f1b1cbdbe3a4820637f",
+  "labels": [
+    "awaiting review",
+    "size:M"
+  ],
+  "ci_runs": [
+    {
+      "run_id": 28365380006,
+      "workflow_id": 276590501,
+      "workflow_name": "Gemini PR Review",
+      "status": "skipped",
+      "head_sha": "d3d242a7aa5d7046d32a6f1b1cbdbe3a4820637f",
+      "created_at": "2026-06-29T10:25:20Z",
+      "updated_at": "2026-06-29T10:30:05Z",
+      "run_started_at": "2026-06-29T10:30:03Z",
+      "jobs": [
+        {
+          "name": "gemini-review",
+          "status": "skipped",
+          "started_at": "2026-06-29T10:30:12Z",
+          "completed_at": "2026-06-29T10:30:05Z",
+          "duration_sec": -7
+        }
+      ]
+    },
+    {
+      "run_id": 21896699721,
+      "workflow_id": 10066984,
+      "workflow_name": "PyLint",
+      "status": "success",
+      "head_sha": "d3d242a7aa5d7046d32a6f1b1cbdbe3a4820637f",
+      "created_at": "2026-02-11T07:42:25Z",
+      "updated_at": "2026-02-11T10:36:29Z",
+      "run_started_at": "2026-02-11T10:35:50Z",
+      "jobs": []
+    }
+  ],
+  "workflows": [
+    {
+      "filename": "update-nightly.yml",
+      "hash": "05e2e1c09977e5fd7562b494032571695f02592e883ef959d2e7a72d14356529"
+    },
+    {
+      "filename": "pylint-presubmit.yml",
+      "hash": "138eee26e716354ce54596ce96004db1c5406aff3467a1389feb5dc51fc16abc"
+    },
+    {
+      "filename": "issue-on-pr-rollback.yml",
+      "hash": "5a33aa6ed9fa2234004803a5be33a4e9804ccbff8e031a442ff064af0d809584"
+    },
+    {
+      "filename": "scorecards-analysis.yml",
+      "hash": "ef2eb9d0011f9be06b1dc6334a1bf4e3bdc52fe799bd5f3166de2bc93b02e651"
+    },
+    {
+      "filename": "cffconvert.yml",
+      "hash": "f49386b15b0e8f242217fba21e4ba80c9f50e9d1cb97f60c30180e8710a8a0a7"
+    }
+  ]
+}

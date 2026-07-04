@@ -1,0 +1,101 @@
+{
+  "pr_number": 38656,
+  "title": "feat: Add warnings to the `init` command if unmanaged providers will influence provider installation",
+  "state": "closed",
+  "author": "SarahFrench",
+  "created_at": "2026-05-28T16:14:38Z",
+  "updated_at": "2026-06-29T02:44:26Z",
+  "merged_at": "2026-05-29T12:34:45Z",
+  "head_sha": "e231148b1cb0a88d09fcab906969bfd2ce21495f",
+  "labels": [],
+  "ci_runs": [
+    {
+      "run_id": 26587909943,
+      "workflow_id": 278786541,
+      "workflow_name": "Changelog Validation",
+      "status": "success",
+      "head_sha": "e231148b1cb0a88d09fcab906969bfd2ce21495f",
+      "created_at": "2026-05-28T16:30:46Z",
+      "updated_at": "2026-05-28T16:30:59Z",
+      "run_started_at": "2026-05-28T16:30:46Z",
+      "jobs": [
+        {
+          "name": "Validate Changelog",
+          "status": "success",
+          "started_at": "2026-05-28T16:30:51Z",
+          "completed_at": "2026-05-28T16:30:59Z",
+          "duration_sec": 8
+        }
+      ]
+    },
+    {
+      "run_id": 26587909727,
+      "workflow_id": 126957301,
+      "workflow_name": "equivalence-test-diff",
+      "status": "success",
+      "head_sha": "e231148b1cb0a88d09fcab906969bfd2ce21495f",
+      "created_at": "2026-05-28T16:30:46Z",
+      "updated_at": "2026-05-28T16:32:48Z",
+      "run_started_at": "2026-05-28T16:30:46Z",
+      "jobs": []
+    },
+    {
+      "run_id": 26587909808,
+      "workflow_id": 23102955,
+      "workflow_name": "Quick Checks",
+      "status": "success",
+      "head_sha": "e231148b1cb0a88d09fcab906969bfd2ce21495f",
+      "created_at": "2026-05-28T16:30:46Z",
+      "updated_at": "2026-05-28T16:36:53Z",
+      "run_started_at": "2026-05-28T16:30:46Z",
+      "jobs": []
+    },
+    {
+      "run_id": 26587887233,
+      "workflow_id": 278786541,
+      "workflow_name": "Changelog Validation",
+      "status": "success",
+      "head_sha": "e231148b1cb0a88d09fcab906969bfd2ce21495f",
+      "created_at": "2026-05-28T16:30:22Z",
+      "updated_at": "2026-05-28T16:30:33Z",
+      "run_started_at": "2026-05-28T16:30:22Z",
+      "jobs": []
+    },
+    {
+      "run_id": 26587887100,
+      "workflow_id": 126957301,
+      "workflow_name": "equivalence-test-diff",
+      "status": "success",
+      "head_sha": "e231148b1cb0a88d09fcab906969bfd2ce21495f",
+      "created_at": "2026-05-28T16:30:22Z",
+      "updated_at": "2026-05-28T16:32:25Z",
+      "run_started_at": "2026-05-28T16:30:22Z",
+      "jobs": []
+    },
+    {
+      "run_id": 26587887228,
+      "workflow_id": 23102955,
+      "workflow_name": "Quick Checks",
+      "status": "success",
+      "head_sha": "e231148b1cb0a88d09fcab906969bfd2ce21495f",
+      "created_at": "2026-05-28T16:30:22Z",
+      "updated_at": "2026-05-28T16:36:34Z",
+      "run_started_at": "2026-05-28T16:30:22Z",
+      "jobs": []
+    }
+  ],
+  "workflows": [
+    {
+      "filename": "issue-comment-created.yml",
+      "hash": "7b39410b950b1b04577cd7d04201e9ce01aaeca7e6daf5af2dbe7286e23ef08e"
+    },
+    {
+      "filename": "lock.yml",
+      "hash": "7606d6b818ae4ff47b39930380d804b9a904124f7dffe6d9bfbba7e715c2f183"
+    },
+    {
+      "filename": "build.yml",
+      "hash": "192267d1041a111b5fb0a96d698602ec33bd95faf16bffb870abd3b3593bfd6c"
+    }
+  ]
+}

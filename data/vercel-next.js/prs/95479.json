@@ -1,0 +1,60 @@
+{
+  "pr_number": 95479,
+  "title": "docs: fix Mux Open Graph image wording",
+  "state": "open",
+  "author": "msh01",
+  "created_at": "2026-07-04T03:54:19Z",
+  "updated_at": "2026-07-04T03:54:19Z",
+  "merged_at": null,
+  "head_sha": "2bde656de6ab3b1db0eff2c39a7535437e2f200e",
+  "labels": [],
+  "ci_runs": [
+    {
+      "run_id": 28694126497,
+      "workflow_id": 58813578,
+      "workflow_name": "build-and-deploy",
+      "status": "action_required",
+      "head_sha": "2bde656de6ab3b1db0eff2c39a7535437e2f200e",
+      "created_at": "2026-07-04T03:54:22Z",
+      "updated_at": "2026-07-04T03:54:22Z",
+      "run_started_at": "2026-07-04T03:54:22Z",
+      "jobs": []
+    },
+    {
+      "run_id": 28694126529,
+      "workflow_id": 57419851,
+      "workflow_name": "build-and-test",
+      "status": "action_required",
+      "head_sha": "2bde656de6ab3b1db0eff2c39a7535437e2f200e",
+      "created_at": "2026-07-04T03:54:22Z",
+      "updated_at": "2026-07-04T03:54:22Z",
+      "run_started_at": "2026-07-04T03:54:22Z",
+      "jobs": []
+    },
+    {
+      "run_id": 28694126553,
+      "workflow_id": 444921,
+      "workflow_name": "Generate Stats",
+      "status": "action_required",
+      "head_sha": "2bde656de6ab3b1db0eff2c39a7535437e2f200e",
+      "created_at": "2026-07-04T03:54:22Z",
+      "updated_at": "2026-07-04T03:54:22Z",
+      "run_started_at": "2026-07-04T03:54:22Z",
+      "jobs": []
+    }
+  ],
+  "workflows": [
+    {
+      "filename": "pull_request_stats.yml",
+      "hash": "2cbf0f3f1b19b2213025cdbf6027bb260c81220bf5b101b04a524f4568d57cb4"
+    },
+    {
+      "filename": "issue_lock.yml",
+      "hash": "a697561851464408497a633bc3f52faa705e0d430b53ae08bd2cd34ffe1e2611"
+    },
+    {
+      "filename": "issue_stale.yml",
+      "hash": "fd4bb34b8cc108b67a44ea1ca74f418f789158c423e58c926f6ed72aa711d3b5"
+    }
+  ]
+}

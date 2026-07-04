@@ -1,0 +1,271 @@
+{
+  "pr_number": 95466,
+  "title": "[test] Unflake `cache-components-dev-streaming` test suite",
+  "state": "open",
+  "author": "unstubbable",
+  "created_at": "2026-07-03T17:56:38Z",
+  "updated_at": "2026-07-03T18:51:43Z",
+  "merged_at": null,
+  "head_sha": "db21cfad3412d5b68452faed4814936508b7dac3",
+  "labels": [],
+  "ci_runs": [
+    {
+      "run_id": 28676272529,
+      "workflow_id": 57419851,
+      "workflow_name": "build-and-test",
+      "status": "success",
+      "head_sha": "db21cfad3412d5b68452faed4814936508b7dac3",
+      "created_at": "2026-07-03T17:56:43Z",
+      "updated_at": "2026-07-03T18:20:42Z",
+      "run_started_at": "2026-07-03T17:56:43Z",
+      "jobs": [
+        {
+          "name": "Determine changes",
+          "status": "success",
+          "started_at": "2026-07-03T17:56:47Z",
+          "completed_at": "2026-07-03T17:56:59Z",
+          "duration_sec": 12
+        },
+        {
+          "name": "validate-docs-links",
+          "status": "success",
+          "started_at": "2026-07-03T17:56:45Z",
+          "completed_at": "2026-07-03T17:57:04Z",
+          "duration_sec": 19
+        },
+        {
+          "name": "Upload PR CI metadata",
+          "status": "success",
+          "started_at": "2026-07-03T17:56:46Z",
+          "completed_at": "2026-07-03T17:56:51Z",
+          "duration_sec": 5
+        },
+        {
+          "name": "optimize-ci / PR Stack Optimizer",
+          "status": "success",
+          "started_at": "2026-07-03T17:56:46Z",
+          "completed_at": "2026-07-03T17:56:51Z",
+          "duration_sec": 5
+        },
+        {
+          "name": "build-next / build",
+          "status": "success",
+          "started_at": "2026-07-03T17:56:46Z",
+          "completed_at": "2026-07-03T17:57:22Z",
+          "duration_sec": 36
+        },
+        {
+          "name": "fetch test timings",
+          "status": "success",
+          "started_at": "2026-07-03T17:57:00Z",
+          "completed_at": "2026-07-03T17:57:42Z",
+          "duration_sec": 42
+        },
+        {
+          "name": "build-native-x64 / build",
+          "status": "success",
+          "started_at": "2026-07-03T17:57:01Z",
+          "completed_at": "2026-07-03T17:58:22Z",
+          "duration_sec": 81
+        },
+        {
+          "name": "build-native-windows / build",
+          "status": "success",
+          "started_at": "2026-07-03T17:57:01Z",
+          "completed_at": "2026-07-03T17:58:31Z",
+          "duration_sec": 90
+        },
+        {
+          "name": "build-native / build",
+          "status": "success",
+          "started_at": "2026-07-03T17:57:01Z",
+          "completed_at": "2026-07-03T17:57:49Z",
+          "duration_sec": 48
+        },
+        {
+          "name": "test devlow package / build",
+          "status": "success",
+          "started_at": "2026-07-03T17:57:01Z",
+          "completed_at": "2026-07-03T17:57:53Z",
+          "duration_sec": 52
+        },
+        {
+          "name": "ast-grep lint",
+          "status": "success",
+          "started_at": "2026-07-03T17:57:24Z",
+          "completed_at": "2026-07-03T17:57:40Z",
+          "duration_sec": 16
+        },
+        {
+          "name": "rustdoc check / build",
+          "status": "success",
+          "started_at": "2026-07-03T17:57:25Z",
+          "completed_at": "2026-07-03T18:00:06Z",
+          "duration_sec": 161
+        },
+        {
+          "name": "lint / build",
+          "status": "success",
+          "started_at": "2026-07-03T17:57:25Z",
+          "completed_at": "2026-07-03T18:02:28Z",
+          "duration_sec": 303
+        },
+        {
+          "name": "test next-swc wasm / build",
+          "status": "success",
+          "started_at": "2026-07-03T17:57:25Z",
+          "completed_at": "2026-07-03T18:00:08Z",
+          "duration_sec": 163
+        },
+        {
+          "name": "test cargo unit / build",
+          "status": "success",
+          "started_at": "2026-07-03T17:57:25Z",
+          "completed_at": "2026-07-03T18:06:31Z",
+          "duration_sec": 546
+        },
+        {
+          "name": "rust check / build",
+          "status": "success",
+          "started_at": "2026-07-03T17:57:25Z",
+          "completed_at": "2026-07-03T17:58:13Z",
+          "duration_sec": 48
+        },
+        {
+          "name": "test cargo benches / Test",
+          "status": "success",
+          "started_at": "2026-07-03T17:57:25Z",
+          "completed_at": "2026-07-03T18:05:43Z",
+          "duration_sec": 498
+        },
+        {
+          "name": "test next-swc wasi",
+          "status": "skipped",
+          "started_at": "2026-07-03T17:57:23Z",
+          "completed_at": "2026-07-03T17:57:23Z",
+          "duration_sec": 0
+        },
+        {
+          "name": "types and precompiled / build",
+          "status": "success",
+          "started_at": "2026-07-03T17:57:51Z",
+          "completed_at": "2026-07-03T17:59:34Z",
+          "duration_sec": 103
+        },
+        {
+          "name": "Run devlow benchmarks",
+          "status": "skipped",
+          "started_at": "2026-07-03T17:57:50Z",
+          "completed_at": "2026-07-03T17:57:50Z",
+          "duration_sec": 0
+        },
+        {
+          "name": "test firefox and safari / build",
+          "status": "success",
+          "started_at": "2026-07-03T17:57:52Z",
+          "completed_at": "2026-07-03T18:03:02Z",
+          "duration_sec": 310
+        },
+        {
+          "name": "test turbopack production (4/7) / build",
+          "status": "success",
+          "started_at": "2026-07-03T17:57:52Z",
+          "completed_at": "2026-07-03T18:08:52Z",
+          "duration_sec": 660
+        },
+        {
+          "name": "test turbopack production (5/7) / build",
+          "status": "success",
+          "started_at": "2026-07-03T17:57:52Z",
+          "completed_at": "2026-07-03T18:07:23Z",
+          "duration_sec": 571
+        },
+        {
+          "name": "test turbopack production (6/7) / build",
+          "status": "success",
+          "started_at": "2026-07-03T17:57:52Z",
+          "completed_at": "2026-07-03T18:14:35Z",
+          "duration_sec": 1003
+        },
+        {
+          "name": "test turbopack production (3/7) / build",
+          "status": "success",
+          "started_at": "2026-07-03T17:57:52Z",
+          "completed_at": "2026-07-03T18:07:27Z",
+          "duration_sec": 575
+        },
+        {
+          "name": "test turbopack production (2/7) / build",
+          "status": "success",
+          "started_at": "2026-07-03T17:57:51Z",
+          "completed_at": "2026-07-03T18:09:17Z",
+          "duration_sec": 686
+        },
+        {
+          "name": "test turbopack production (7/7) / build",
+          "status": "success",
+          "started_at": "2026-07-03T17:57:52Z",
+          "completed_at": "2026-07-03T18:17:52Z",
+          "duration_sec": 1200
+        },
+        {
+          "name": "test turbopack dev (2/7) / build",
+          "status": "success",
+          "started_at": "2026-07-03T17:57:52Z",
+          "completed_at": "2026-07-03T18:07:21Z",
+          "duration_sec": 569
+        },
+        {
+          "name": "test rspack dev",
+          "status": "skipped",
+          "started_at": "2026-07-03T17:57:50Z",
+          "completed_at": "2026-07-03T17:57:50Z",
+          "duration_sec": 0
+        },
+        {
+          "name": "test turbopack production (1/7) / build",
+          "status": "success",
+          "started_at": "2026-07-03T17:57:52Z",
+          "completed_at": "2026-07-03T18:08:00Z",
+          "duration_sec": 608
+        }
+      ]
+    },
+    {
+      "run_id": 28676272495,
+      "workflow_id": 444921,
+      "workflow_name": "Generate Stats",
+      "status": "cancelled",
+      "head_sha": "db21cfad3412d5b68452faed4814936508b7dac3",
+      "created_at": "2026-07-03T17:56:43Z",
+      "updated_at": "2026-07-03T18:23:00Z",
+      "run_started_at": "2026-07-03T17:56:43Z",
+      "jobs": []
+    },
+    {
+      "run_id": 28676272411,
+      "workflow_id": 58813578,
+      "workflow_name": "build-and-deploy",
+      "status": "skipped",
+      "head_sha": "db21cfad3412d5b68452faed4814936508b7dac3",
+      "created_at": "2026-07-03T17:56:43Z",
+      "updated_at": "2026-07-03T17:56:44Z",
+      "run_started_at": "2026-07-03T17:56:43Z",
+      "jobs": []
+    }
+  ],
+  "workflows": [
+    {
+      "filename": "pull_request_stats.yml",
+      "hash": "2cbf0f3f1b19b2213025cdbf6027bb260c81220bf5b101b04a524f4568d57cb4"
+    },
+    {
+      "filename": "issue_lock.yml",
+      "hash": "a697561851464408497a633bc3f52faa705e0d430b53ae08bd2cd34ffe1e2611"
+    },
+    {
+      "filename": "issue_stale.yml",
+      "hash": "fd4bb34b8cc108b67a44ea1ca74f418f789158c423e58c926f6ed72aa711d3b5"
+    }
+  ]
+}

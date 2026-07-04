@@ -1,0 +1,68 @@
+{
+  "pr_number": 152708,
+  "title": "Make data-generation test framework index-mode aware for doc_values",
+  "state": "closed",
+  "author": "parkertimmins",
+  "created_at": "2026-07-02T02:20:46Z",
+  "updated_at": "2026-07-03T21:19:49Z",
+  "merged_at": "2026-07-03T21:19:43Z",
+  "head_sha": "cc2eecaa29c400e911b0a554c15f45a5148a3e6c",
+  "labels": [
+    ">test",
+    "Team:StorageEngine",
+    ":StorageEngine/Mapping",
+    "v9.5.0"
+  ],
+  "ci_runs": [
+    {
+      "run_id": 28675744851,
+      "workflow_id": 146525436,
+      "workflow_name": "docs-build",
+      "status": "success",
+      "head_sha": "cc2eecaa29c400e911b0a554c15f45a5148a3e6c",
+      "created_at": "2026-07-03T17:43:22Z",
+      "updated_at": "2026-07-03T17:43:43Z",
+      "run_started_at": "2026-07-03T17:43:22Z",
+      "jobs": [
+        {
+          "name": "build / match",
+          "status": "success",
+          "started_at": "2026-07-03T17:43:24Z",
+          "completed_at": "2026-07-03T17:43:28Z",
+          "duration_sec": 4
+        },
+        {
+          "name": "build / check",
+          "status": "success",
+          "started_at": "2026-07-03T17:43:24Z",
+          "completed_at": "2026-07-03T17:43:32Z",
+          "duration_sec": 8
+        },
+        {
+          "name": "build / build",
+          "status": "success",
+          "started_at": "2026-07-03T17:43:35Z",
+          "completed_at": "2026-07-03T17:43:42Z",
+          "duration_sec": 7
+        },
+        {
+          "name": "build / vale",
+          "status": "skipped",
+          "started_at": "2026-07-03T17:43:33Z",
+          "completed_at": "2026-07-03T17:43:33Z",
+          "duration_sec": 0
+        }
+      ]
+    }
+  ],
+  "workflows": [
+    {
+      "filename": "gradle-wrapper-validation.yml",
+      "hash": "04526945275c07b7ec8481281931aa653deceed193cbbf514b23cd8d634fae78"
+    },
+    {
+      "filename": "docs-build.yml",
+      "hash": "6772ac2baa16f9669594b6ea59ebfc2a9e1a6b14f3550571e4faacaf2d397023"
+    }
+  ]
+}

@@ -1,0 +1,70 @@
+{
+  "pr_number": 38775,
+  "title": "Ensure policies only close the state after all other nodes that may mutate the state are complete",
+  "state": "closed",
+  "author": "dsa0x",
+  "created_at": "2026-06-24T13:31:03Z",
+  "updated_at": "2026-06-25T20:07:58Z",
+  "merged_at": "2026-06-25T20:07:55Z",
+  "head_sha": "46eee5cfbbdba5fa04b91c20d93110ce518f60b7",
+  "labels": [
+    "no-changelog-needed"
+  ],
+  "ci_runs": [
+    {
+      "run_id": 28180500457,
+      "workflow_id": 126957301,
+      "workflow_name": "equivalence-test-diff",
+      "status": "success",
+      "head_sha": "46eee5cfbbdba5fa04b91c20d93110ce518f60b7",
+      "created_at": "2026-06-25T15:15:42Z",
+      "updated_at": "2026-06-25T15:16:33Z",
+      "run_started_at": "2026-06-25T15:15:42Z",
+      "jobs": [
+        {
+          "name": "Equivalence Test Diff",
+          "status": "success",
+          "started_at": "2026-06-25T15:15:46Z",
+          "completed_at": "2026-06-25T15:16:33Z",
+          "duration_sec": 47
+        }
+      ]
+    },
+    {
+      "run_id": 28180500246,
+      "workflow_id": 278786541,
+      "workflow_name": "Changelog Validation",
+      "status": "success",
+      "head_sha": "46eee5cfbbdba5fa04b91c20d93110ce518f60b7",
+      "created_at": "2026-06-25T15:15:41Z",
+      "updated_at": "2026-06-25T15:15:51Z",
+      "run_started_at": "2026-06-25T15:15:41Z",
+      "jobs": []
+    },
+    {
+      "run_id": 28180500395,
+      "workflow_id": 23102955,
+      "workflow_name": "Quick Checks",
+      "status": "success",
+      "head_sha": "46eee5cfbbdba5fa04b91c20d93110ce518f60b7",
+      "created_at": "2026-06-25T15:15:41Z",
+      "updated_at": "2026-06-25T15:21:30Z",
+      "run_started_at": "2026-06-25T15:15:41Z",
+      "jobs": []
+    }
+  ],
+  "workflows": [
+    {
+      "filename": "issue-comment-created.yml",
+      "hash": "7b39410b950b1b04577cd7d04201e9ce01aaeca7e6daf5af2dbe7286e23ef08e"
+    },
+    {
+      "filename": "lock.yml",
+      "hash": "7606d6b818ae4ff47b39930380d804b9a904124f7dffe6d9bfbba7e715c2f183"
+    },
+    {
+      "filename": "build.yml",
+      "hash": "192267d1041a111b5fb0a96d698602ec33bd95faf16bffb870abd3b3593bfd6c"
+    }
+  ]
+}

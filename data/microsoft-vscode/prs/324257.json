@@ -1,0 +1,97 @@
+{
+  "pr_number": 324257,
+  "title": "sessions: single-pane detail-panel layout for the Agents window",
+  "state": "open",
+  "author": "sandy081",
+  "created_at": "2026-07-03T17:39:53Z",
+  "updated_at": "2026-07-04T00:26:37Z",
+  "merged_at": null,
+  "head_sha": "360944154ddb37d70d5aa7116c0da3edeff105ee",
+  "labels": [],
+  "ci_runs": [
+    {
+      "run_id": 28688703688,
+      "workflow_id": 211787236,
+      "workflow_name": "Prevent engineering system changes in PRs",
+      "status": "success",
+      "head_sha": "360944154ddb37d70d5aa7116c0da3edeff105ee",
+      "created_at": "2026-07-04T00:04:59Z",
+      "updated_at": "2026-07-04T00:05:10Z",
+      "run_started_at": "2026-07-04T00:04:59Z",
+      "jobs": [
+        {
+          "name": "Prevent engineering system changes in PRs",
+          "status": "success",
+          "started_at": "2026-07-04T00:05:05Z",
+          "completed_at": "2026-07-04T00:05:09Z",
+          "duration_sec": 4
+        }
+      ]
+    },
+    {
+      "run_id": 28688703690,
+      "workflow_id": 38332752,
+      "workflow_name": "Telemetry",
+      "status": "success",
+      "head_sha": "360944154ddb37d70d5aa7116c0da3edeff105ee",
+      "created_at": "2026-07-04T00:04:59Z",
+      "updated_at": "2026-07-04T00:05:38Z",
+      "run_started_at": "2026-07-04T00:04:59Z",
+      "jobs": []
+    },
+    {
+      "run_id": 28688703687,
+      "workflow_id": 258342321,
+      "workflow_name": "chat-lib tests",
+      "status": "success",
+      "head_sha": "360944154ddb37d70d5aa7116c0da3edeff105ee",
+      "created_at": "2026-07-04T00:04:59Z",
+      "updated_at": "2026-07-04T00:07:47Z",
+      "run_started_at": "2026-07-04T00:04:59Z",
+      "jobs": []
+    },
+    {
+      "run_id": 28688703699,
+      "workflow_id": 21497327,
+      "workflow_name": "Monaco Editor checks",
+      "status": "success",
+      "head_sha": "360944154ddb37d70d5aa7116c0da3edeff105ee",
+      "created_at": "2026-07-04T00:04:59Z",
+      "updated_at": "2026-07-04T00:09:13Z",
+      "run_started_at": "2026-07-04T00:04:59Z",
+      "jobs": []
+    },
+    {
+      "run_id": 28688703686,
+      "workflow_id": 273167221,
+      "workflow_name": "Component Fixtures",
+      "status": "failure",
+      "head_sha": "360944154ddb37d70d5aa7116c0da3edeff105ee",
+      "created_at": "2026-07-04T00:04:59Z",
+      "updated_at": "2026-07-04T00:10:31Z",
+      "run_started_at": "2026-07-04T00:04:59Z",
+      "jobs": []
+    },
+    {
+      "run_id": 28688703737,
+      "workflow_id": 4196599,
+      "workflow_name": "Code OSS",
+      "status": "success",
+      "head_sha": "360944154ddb37d70d5aa7116c0da3edeff105ee",
+      "created_at": "2026-07-04T00:04:59Z",
+      "updated_at": "2026-07-04T00:18:48Z",
+      "run_started_at": "2026-07-04T00:04:59Z",
+      "jobs": []
+    }
+  ],
+  "workflows": [
+    {
+      "filename": "pr.yml",
+      "hash": "0625dff11585a35e1ad0cf2b3cbea2cb72e521039dfd406eaa8de1ec75492115"
+    },
+    {
+      "filename": "monaco-editor.yml",
+      "hash": "02e5f951a8bc0193f3239d64b65c547aebcf6427849f35a8e7b9500b4eeb10f9"
+    }
+  ]
+}

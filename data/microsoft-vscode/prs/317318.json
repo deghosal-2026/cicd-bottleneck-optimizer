@@ -1,0 +1,97 @@
+{
+  "pr_number": 317318,
+  "title": "fix(chat): simplify descriptions for utility model configurations",
+  "state": "closed",
+  "author": "vritant24",
+  "created_at": "2026-05-19T15:18:10Z",
+  "updated_at": "2026-07-03T23:40:38Z",
+  "merged_at": "2026-05-19T15:49:51Z",
+  "head_sha": "5cdb46f953f34cf5757758bc635f5b8502555dda",
+  "labels": [],
+  "ci_runs": [
+    {
+      "run_id": 26106728438,
+      "workflow_id": 211787236,
+      "workflow_name": "Prevent engineering system changes in PRs",
+      "status": "success",
+      "head_sha": "5cdb46f953f34cf5757758bc635f5b8502555dda",
+      "created_at": "2026-05-19T15:18:16Z",
+      "updated_at": "2026-05-19T15:20:02Z",
+      "run_started_at": "2026-05-19T15:18:16Z",
+      "jobs": [
+        {
+          "name": "Prevent engineering system changes in PRs",
+          "status": "success",
+          "started_at": "2026-05-19T15:19:55Z",
+          "completed_at": "2026-05-19T15:20:01Z",
+          "duration_sec": 6
+        }
+      ]
+    },
+    {
+      "run_id": 26106728325,
+      "workflow_id": 38332752,
+      "workflow_name": "Telemetry",
+      "status": "success",
+      "head_sha": "5cdb46f953f34cf5757758bc635f5b8502555dda",
+      "created_at": "2026-05-19T15:18:16Z",
+      "updated_at": "2026-05-19T15:20:22Z",
+      "run_started_at": "2026-05-19T15:18:16Z",
+      "jobs": []
+    },
+    {
+      "run_id": 26106728419,
+      "workflow_id": 21497327,
+      "workflow_name": "Monaco Editor checks",
+      "status": "success",
+      "head_sha": "5cdb46f953f34cf5757758bc635f5b8502555dda",
+      "created_at": "2026-05-19T15:18:16Z",
+      "updated_at": "2026-05-19T15:24:11Z",
+      "run_started_at": "2026-05-19T15:18:16Z",
+      "jobs": []
+    },
+    {
+      "run_id": 26106728344,
+      "workflow_id": 273167221,
+      "workflow_name": "Component Fixtures",
+      "status": "success",
+      "head_sha": "5cdb46f953f34cf5757758bc635f5b8502555dda",
+      "created_at": "2026-05-19T15:18:16Z",
+      "updated_at": "2026-05-19T15:25:10Z",
+      "run_started_at": "2026-05-19T15:18:16Z",
+      "jobs": []
+    },
+    {
+      "run_id": 26106728130,
+      "workflow_id": 258342321,
+      "workflow_name": "chat-lib tests",
+      "status": "success",
+      "head_sha": "5cdb46f953f34cf5757758bc635f5b8502555dda",
+      "created_at": "2026-05-19T15:18:16Z",
+      "updated_at": "2026-05-19T15:25:15Z",
+      "run_started_at": "2026-05-19T15:18:16Z",
+      "jobs": []
+    },
+    {
+      "run_id": 26106728461,
+      "workflow_id": 4196599,
+      "workflow_name": "Code OSS",
+      "status": "success",
+      "head_sha": "5cdb46f953f34cf5757758bc635f5b8502555dda",
+      "created_at": "2026-05-19T15:18:16Z",
+      "updated_at": "2026-05-19T15:45:45Z",
+      "run_started_at": "2026-05-19T15:18:16Z",
+      "jobs": []
+    }
+  ],
+  "workflows": [
+    {
+      "filename": "pr.yml",
+      "hash": "0625dff11585a35e1ad0cf2b3cbea2cb72e521039dfd406eaa8de1ec75492115"
+    },
+    {
+      "filename": "monaco-editor.yml",
+      "hash": "02e5f951a8bc0193f3239d64b65c547aebcf6427849f35a8e7b9500b4eeb10f9"
+    }
+  ]
+}

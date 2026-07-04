@@ -1,0 +1,212 @@
+{
+  "pr_number": 52983,
+  "title": "d/libn/i/nftables: add fluent chain builder API",
+  "state": "closed",
+  "author": "corhere",
+  "created_at": "2026-06-29T22:55:25Z",
+  "updated_at": "2026-07-02T21:11:42Z",
+  "merged_at": "2026-07-02T18:24:16Z",
+  "head_sha": "de71462b9748458c1ea10ec379288590fe447d28",
+  "labels": [
+    "area/networking",
+    "area/daemon",
+    "area/networking/firewalling",
+    "kind/other"
+  ],
+  "ci_runs": [
+    {
+      "run_id": 28408104040,
+      "workflow_id": 86900533,
+      "workflow_name": "validate-pr",
+      "status": "success",
+      "head_sha": "de71462b9748458c1ea10ec379288590fe447d28",
+      "created_at": "2026-06-29T22:55:30Z",
+      "updated_at": "2026-06-29T22:55:55Z",
+      "run_started_at": "2026-06-29T22:55:30Z",
+      "jobs": [
+        {
+          "name": "check-pr-branch",
+          "status": "success",
+          "started_at": "2026-06-29T22:55:33Z",
+          "completed_at": "2026-06-29T22:55:36Z",
+          "duration_sec": 3
+        },
+        {
+          "name": "check-commit-references",
+          "status": "success",
+          "started_at": "2026-06-29T22:55:33Z",
+          "completed_at": "2026-06-29T22:55:54Z",
+          "duration_sec": 21
+        },
+        {
+          "name": "check-changelog",
+          "status": "success",
+          "started_at": "2026-06-29T22:55:34Z",
+          "completed_at": "2026-06-29T22:55:36Z",
+          "duration_sec": 2
+        },
+        {
+          "name": "check-labels",
+          "status": "success",
+          "started_at": "2026-06-29T22:55:34Z",
+          "completed_at": "2026-06-29T22:55:38Z",
+          "duration_sec": 4
+        }
+      ]
+    },
+    {
+      "run_id": 28408103683,
+      "workflow_id": 261203439,
+      "workflow_name": "zizmor",
+      "status": "success",
+      "head_sha": "de71462b9748458c1ea10ec379288590fe447d28",
+      "created_at": "2026-06-29T22:55:30Z",
+      "updated_at": "2026-06-29T22:56:11Z",
+      "run_started_at": "2026-06-29T22:55:30Z",
+      "jobs": []
+    },
+    {
+      "run_id": 28408103690,
+      "workflow_id": 44461128,
+      "workflow_name": "bin-image",
+      "status": "success",
+      "head_sha": "de71462b9748458c1ea10ec379288590fe447d28",
+      "created_at": "2026-06-29T22:55:30Z",
+      "updated_at": "2026-06-29T23:00:17Z",
+      "run_started_at": "2026-06-29T22:55:30Z",
+      "jobs": []
+    },
+    {
+      "run_id": 28408103472,
+      "workflow_id": 168088309,
+      "workflow_name": "windows-2025",
+      "status": "success",
+      "head_sha": "de71462b9748458c1ea10ec379288590fe447d28",
+      "created_at": "2026-06-29T22:55:29Z",
+      "updated_at": "2026-06-30T00:08:42Z",
+      "run_started_at": "2026-06-29T22:55:29Z",
+      "jobs": []
+    },
+    {
+      "run_id": 28408103506,
+      "workflow_id": 86900533,
+      "workflow_name": "validate-pr",
+      "status": "cancelled",
+      "head_sha": "de71462b9748458c1ea10ec379288590fe447d28",
+      "created_at": "2026-06-29T22:55:29Z",
+      "updated_at": "2026-06-29T22:55:31Z",
+      "run_started_at": "2026-06-29T22:55:29Z",
+      "jobs": []
+    },
+    {
+      "run_id": 28408103403,
+      "workflow_id": 86900533,
+      "workflow_name": "validate-pr",
+      "status": "cancelled",
+      "head_sha": "de71462b9748458c1ea10ec379288590fe447d28",
+      "created_at": "2026-06-29T22:55:29Z",
+      "updated_at": "2026-06-29T22:55:31Z",
+      "run_started_at": "2026-06-29T22:55:29Z",
+      "jobs": []
+    },
+    {
+      "run_id": 28408103319,
+      "workflow_id": 260262819,
+      "workflow_name": "validate-milestone",
+      "status": "cancelled",
+      "head_sha": "de71462b9748458c1ea10ec379288590fe447d28",
+      "created_at": "2026-06-29T22:55:29Z",
+      "updated_at": "2026-06-29T22:55:31Z",
+      "run_started_at": "2026-06-29T22:55:29Z",
+      "jobs": []
+    },
+    {
+      "run_id": 28408103396,
+      "workflow_id": 260262819,
+      "workflow_name": "validate-milestone",
+      "status": "success",
+      "head_sha": "de71462b9748458c1ea10ec379288590fe447d28",
+      "created_at": "2026-06-29T22:55:29Z",
+      "updated_at": "2026-06-29T22:55:38Z",
+      "run_started_at": "2026-06-29T22:55:29Z",
+      "jobs": []
+    },
+    {
+      "run_id": 28408103510,
+      "workflow_id": 26704268,
+      "workflow_name": "test",
+      "status": "failure",
+      "head_sha": "de71462b9748458c1ea10ec379288590fe447d28",
+      "created_at": "2026-06-29T22:55:29Z",
+      "updated_at": "2026-06-29T23:00:03Z",
+      "run_started_at": "2026-06-29T22:55:29Z",
+      "jobs": []
+    },
+    {
+      "run_id": 28408103526,
+      "workflow_id": 21805183,
+      "workflow_name": "ci",
+      "status": "success",
+      "head_sha": "de71462b9748458c1ea10ec379288590fe447d28",
+      "created_at": "2026-06-29T22:55:29Z",
+      "updated_at": "2026-06-29T23:00:39Z",
+      "run_started_at": "2026-06-29T22:55:29Z",
+      "jobs": []
+    },
+    {
+      "run_id": 28408103408,
+      "workflow_id": 81499888,
+      "workflow_name": "codeql",
+      "status": "success",
+      "head_sha": "de71462b9748458c1ea10ec379288590fe447d28",
+      "created_at": "2026-06-29T22:55:29Z",
+      "updated_at": "2026-06-29T23:01:34Z",
+      "run_started_at": "2026-06-29T22:55:29Z",
+      "jobs": []
+    },
+    {
+      "run_id": 28408103471,
+      "workflow_id": 187772110,
+      "workflow_name": "vm",
+      "status": "success",
+      "head_sha": "de71462b9748458c1ea10ec379288590fe447d28",
+      "created_at": "2026-06-29T22:55:29Z",
+      "updated_at": "2026-06-29T23:17:34Z",
+      "run_started_at": "2026-06-29T22:55:29Z",
+      "jobs": []
+    },
+    {
+      "run_id": 28408103466,
+      "workflow_id": 33573227,
+      "workflow_name": "buildkit",
+      "status": "failure",
+      "head_sha": "de71462b9748458c1ea10ec379288590fe447d28",
+      "created_at": "2026-06-29T22:55:29Z",
+      "updated_at": "2026-06-29T23:28:38Z",
+      "run_started_at": "2026-06-29T22:55:29Z",
+      "jobs": []
+    }
+  ],
+  "workflows": [
+    {
+      "filename": ".dco.yml",
+      "hash": "dea4b82ced9a768e825d38c022001e448d052703020b8345ce1752af0665f479"
+    },
+    {
+      "filename": ".test-unit.yml",
+      "hash": "64ea4ac26a2df4f48f55a6cfdef04ec69994f18e0dce69c1d98792ecbf66679b"
+    },
+    {
+      "filename": ".test.yml",
+      "hash": "698dd2de1d8e32af05925d489ceb376de42b9db0f6a9f271c0e2f1c83e849f57"
+    },
+    {
+      "filename": ".vm.yml",
+      "hash": "fa079150844d5674b2c95776f852977d6cb1a8faeb202fd94a8b63451445a5ed"
+    },
+    {
+      "filename": ".windows.yml",
+      "hash": "b3cb6d7e301a89297e6b10d87af74beee4996445f851b4fb2d44cdb54c8924f6"
+    }
+  ]
+}

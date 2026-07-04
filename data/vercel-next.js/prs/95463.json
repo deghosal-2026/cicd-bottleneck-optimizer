@@ -1,0 +1,304 @@
+{
+  "pr_number": 95463,
+  "title": "Abort superseded Server Components HMR requests on the client",
+  "state": "open",
+  "author": "unstubbable",
+  "created_at": "2026-07-03T16:58:41Z",
+  "updated_at": "2026-07-03T19:34:53Z",
+  "merged_at": null,
+  "head_sha": "51f86afcd8599dd210d86766a3d97138e2304197",
+  "labels": [],
+  "ci_runs": [
+    {
+      "run_id": 28675614383,
+      "workflow_id": 57419851,
+      "workflow_name": "build-and-test",
+      "status": "success",
+      "head_sha": "51f86afcd8599dd210d86766a3d97138e2304197",
+      "created_at": "2026-07-03T17:40:13Z",
+      "updated_at": "2026-07-03T18:05:04Z",
+      "run_started_at": "2026-07-03T17:40:13Z",
+      "jobs": [
+        {
+          "name": "Determine changes",
+          "status": "success",
+          "started_at": "2026-07-03T17:40:24Z",
+          "completed_at": "2026-07-03T17:40:38Z",
+          "duration_sec": 14
+        },
+        {
+          "name": "Upload PR CI metadata",
+          "status": "success",
+          "started_at": "2026-07-03T17:40:24Z",
+          "completed_at": "2026-07-03T17:40:29Z",
+          "duration_sec": 5
+        },
+        {
+          "name": "build-next / build",
+          "status": "success",
+          "started_at": "2026-07-03T17:40:25Z",
+          "completed_at": "2026-07-03T17:42:02Z",
+          "duration_sec": 97
+        },
+        {
+          "name": "validate-docs-links",
+          "status": "success",
+          "started_at": "2026-07-03T17:40:25Z",
+          "completed_at": "2026-07-03T17:40:47Z",
+          "duration_sec": 22
+        },
+        {
+          "name": "optimize-ci / PR Stack Optimizer",
+          "status": "success",
+          "started_at": "2026-07-03T17:40:25Z",
+          "completed_at": "2026-07-03T17:40:30Z",
+          "duration_sec": 5
+        },
+        {
+          "name": "fetch test timings",
+          "status": "success",
+          "started_at": "2026-07-03T17:40:40Z",
+          "completed_at": "2026-07-03T17:41:24Z",
+          "duration_sec": 44
+        },
+        {
+          "name": "build-native / build",
+          "status": "success",
+          "started_at": "2026-07-03T17:42:09Z",
+          "completed_at": "2026-07-03T17:43:18Z",
+          "duration_sec": 69
+        },
+        {
+          "name": "test devlow package / build",
+          "status": "success",
+          "started_at": "2026-07-03T17:42:09Z",
+          "completed_at": "2026-07-03T17:43:28Z",
+          "duration_sec": 79
+        },
+        {
+          "name": "build-native-x64 / build",
+          "status": "success",
+          "started_at": "2026-07-03T17:40:41Z",
+          "completed_at": "2026-07-03T17:41:45Z",
+          "duration_sec": 64
+        },
+        {
+          "name": "build-native-windows / build",
+          "status": "success",
+          "started_at": "2026-07-03T17:40:41Z",
+          "completed_at": "2026-07-03T17:42:36Z",
+          "duration_sec": 115
+        },
+        {
+          "name": "ast-grep lint",
+          "status": "success",
+          "started_at": "2026-07-03T17:42:04Z",
+          "completed_at": "2026-07-03T17:42:20Z",
+          "duration_sec": 16
+        },
+        {
+          "name": "test cargo benches / Test",
+          "status": "success",
+          "started_at": "2026-07-03T17:42:05Z",
+          "completed_at": "2026-07-03T17:50:35Z",
+          "duration_sec": 510
+        },
+        {
+          "name": "test cargo unit / build",
+          "status": "success",
+          "started_at": "2026-07-03T17:42:05Z",
+          "completed_at": "2026-07-03T17:53:34Z",
+          "duration_sec": 689
+        },
+        {
+          "name": "rustdoc check / build",
+          "status": "success",
+          "started_at": "2026-07-03T17:42:10Z",
+          "completed_at": "2026-07-03T17:44:51Z",
+          "duration_sec": 161
+        },
+        {
+          "name": "lint / build",
+          "status": "success",
+          "started_at": "2026-07-03T17:42:10Z",
+          "completed_at": "2026-07-03T17:46:29Z",
+          "duration_sec": 259
+        },
+        {
+          "name": "rust check / build",
+          "status": "success",
+          "started_at": "2026-07-03T17:43:15Z",
+          "completed_at": "2026-07-03T17:44:05Z",
+          "duration_sec": 50
+        },
+        {
+          "name": "test next-swc wasm / build",
+          "status": "success",
+          "started_at": "2026-07-03T17:42:20Z",
+          "completed_at": "2026-07-03T17:45:28Z",
+          "duration_sec": 188
+        },
+        {
+          "name": "test prod (1/10) / build",
+          "status": "success",
+          "started_at": "2026-07-03T17:42:05Z",
+          "completed_at": "2026-07-03T18:01:41Z",
+          "duration_sec": 1176
+        },
+        {
+          "name": "test prod (2/10) / build",
+          "status": "success",
+          "started_at": "2026-07-03T17:42:05Z",
+          "completed_at": "2026-07-03T18:00:14Z",
+          "duration_sec": 1089
+        },
+        {
+          "name": "test prod (4/10) / build",
+          "status": "success",
+          "started_at": "2026-07-03T17:42:05Z",
+          "completed_at": "2026-07-03T18:02:29Z",
+          "duration_sec": 1224
+        },
+        {
+          "name": "test prod (10/10) / build",
+          "status": "success",
+          "started_at": "2026-07-03T17:42:05Z",
+          "completed_at": "2026-07-03T18:00:53Z",
+          "duration_sec": 1128
+        },
+        {
+          "name": "test prod (3/10) / build",
+          "status": "success",
+          "started_at": "2026-07-03T17:42:05Z",
+          "completed_at": "2026-07-03T18:03:34Z",
+          "duration_sec": 1289
+        },
+        {
+          "name": "test prod (5/10) / build",
+          "status": "success",
+          "started_at": "2026-07-03T17:42:05Z",
+          "completed_at": "2026-07-03T17:57:38Z",
+          "duration_sec": 933
+        },
+        {
+          "name": "test prod (9/10) / build",
+          "status": "success",
+          "started_at": "2026-07-03T17:42:05Z",
+          "completed_at": "2026-07-03T18:00:06Z",
+          "duration_sec": 1081
+        },
+        {
+          "name": "test dev (2/10) / build",
+          "status": "success",
+          "started_at": "2026-07-03T17:42:05Z",
+          "completed_at": "2026-07-03T17:55:01Z",
+          "duration_sec": 776
+        },
+        {
+          "name": "test dev (10/10) / build",
+          "status": "success",
+          "started_at": "2026-07-03T17:42:05Z",
+          "completed_at": "2026-07-03T18:02:03Z",
+          "duration_sec": 1198
+        },
+        {
+          "name": "test dev (1/10) / build",
+          "status": "success",
+          "started_at": "2026-07-03T17:42:05Z",
+          "completed_at": "2026-07-03T17:54:43Z",
+          "duration_sec": 758
+        },
+        {
+          "name": "test prod (7/10) / build",
+          "status": "success",
+          "started_at": "2026-07-03T17:42:05Z",
+          "completed_at": "2026-07-03T18:03:30Z",
+          "duration_sec": 1285
+        },
+        {
+          "name": "test prod (8/10) / build",
+          "status": "success",
+          "started_at": "2026-07-03T17:42:05Z",
+          "completed_at": "2026-07-03T18:02:48Z",
+          "duration_sec": 1243
+        },
+        {
+          "name": "test dev (3/10) / build",
+          "status": "success",
+          "started_at": "2026-07-03T17:42:05Z",
+          "completed_at": "2026-07-03T17:56:56Z",
+          "duration_sec": 891
+        }
+      ]
+    },
+    {
+      "run_id": 28675614394,
+      "workflow_id": 444921,
+      "workflow_name": "Generate Stats",
+      "status": "cancelled",
+      "head_sha": "51f86afcd8599dd210d86766a3d97138e2304197",
+      "created_at": "2026-07-03T17:40:13Z",
+      "updated_at": "2026-07-03T18:08:40Z",
+      "run_started_at": "2026-07-03T17:40:13Z",
+      "jobs": []
+    },
+    {
+      "run_id": 28675614301,
+      "workflow_id": 444921,
+      "workflow_name": "Generate Stats",
+      "status": "cancelled",
+      "head_sha": "51f86afcd8599dd210d86766a3d97138e2304197",
+      "created_at": "2026-07-03T17:40:13Z",
+      "updated_at": "2026-07-03T17:40:15Z",
+      "run_started_at": "2026-07-03T17:40:13Z",
+      "jobs": []
+    },
+    {
+      "run_id": 28675614299,
+      "workflow_id": 57419851,
+      "workflow_name": "build-and-test",
+      "status": "cancelled",
+      "head_sha": "51f86afcd8599dd210d86766a3d97138e2304197",
+      "created_at": "2026-07-03T17:40:13Z",
+      "updated_at": "2026-07-03T17:40:23Z",
+      "run_started_at": "2026-07-03T17:40:13Z",
+      "jobs": []
+    },
+    {
+      "run_id": 28675614199,
+      "workflow_id": 58813578,
+      "workflow_name": "build-and-deploy",
+      "status": "cancelled",
+      "head_sha": "51f86afcd8599dd210d86766a3d97138e2304197",
+      "created_at": "2026-07-03T17:40:12Z",
+      "updated_at": "2026-07-03T17:40:14Z",
+      "run_started_at": "2026-07-03T17:40:12Z",
+      "jobs": []
+    },
+    {
+      "run_id": 28675614251,
+      "workflow_id": 58813578,
+      "workflow_name": "build-and-deploy",
+      "status": "skipped",
+      "head_sha": "51f86afcd8599dd210d86766a3d97138e2304197",
+      "created_at": "2026-07-03T17:40:12Z",
+      "updated_at": "2026-07-03T17:40:15Z",
+      "run_started_at": "2026-07-03T17:40:12Z",
+      "jobs": []
+    }
+  ],
+  "workflows": [
+    {
+      "filename": "pull_request_stats.yml",
+      "hash": "2cbf0f3f1b19b2213025cdbf6027bb260c81220bf5b101b04a524f4568d57cb4"
+    },
+    {
+      "filename": "issue_lock.yml",
+      "hash": "a697561851464408497a633bc3f52faa705e0d430b53ae08bd2cd34ffe1e2611"
+    },
+    {
+      "filename": "issue_stale.yml",
+      "hash": "fd4bb34b8cc108b67a44ea1ca74f418f789158c423e58c926f6ed72aa711d3b5"
+    }
+  ]
+}

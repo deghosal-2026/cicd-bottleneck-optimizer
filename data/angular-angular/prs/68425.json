@@ -1,0 +1,108 @@
+{
+  "pr_number": 68425,
+  "title": "docs: add signal forms dynamic forms with json guide",
+  "state": "open",
+  "author": "bencodezen",
+  "created_at": "2026-04-28T17:47:10Z",
+  "updated_at": "2026-07-03T18:55:55Z",
+  "merged_at": null,
+  "head_sha": "6094f3eb865c465760bb760314af9f4316f8b98b",
+  "labels": [
+    "action: review",
+    "target: patch",
+    "area: docs",
+    "adev: preview"
+  ],
+  "ci_runs": [
+    {
+      "run_id": 28674704661,
+      "workflow_id": 98951684,
+      "workflow_name": "Pull Request",
+      "status": "success",
+      "head_sha": "6094f3eb865c465760bb760314af9f4316f8b98b",
+      "created_at": "2026-07-03T17:17:57Z",
+      "updated_at": "2026-07-03T17:26:51Z",
+      "run_started_at": "2026-07-03T17:17:57Z",
+      "jobs": [
+        {
+          "name": "test",
+          "status": "success",
+          "started_at": "2026-07-03T17:18:01Z",
+          "completed_at": "2026-07-03T17:22:44Z",
+          "duration_sec": 283
+        },
+        {
+          "name": "zone-js",
+          "status": "success",
+          "started_at": "2026-07-03T17:18:01Z",
+          "completed_at": "2026-07-03T17:20:28Z",
+          "duration_sec": 147
+        },
+        {
+          "name": "vscode-ng-language-service",
+          "status": "success",
+          "started_at": "2026-07-03T17:18:00Z",
+          "completed_at": "2026-07-03T17:21:02Z",
+          "duration_sec": 182
+        },
+        {
+          "name": "adev",
+          "status": "success",
+          "started_at": "2026-07-03T17:18:00Z",
+          "completed_at": "2026-07-03T17:26:51Z",
+          "duration_sec": 531
+        },
+        {
+          "name": "lint",
+          "status": "success",
+          "started_at": "2026-07-03T17:18:00Z",
+          "completed_at": "2026-07-03T17:20:38Z",
+          "duration_sec": 158
+        },
+        {
+          "name": "devtools",
+          "status": "success",
+          "started_at": "2026-07-03T17:18:00Z",
+          "completed_at": "2026-07-03T17:23:09Z",
+          "duration_sec": 309
+        },
+        {
+          "name": "integration-tests",
+          "status": "success",
+          "started_at": "2026-07-03T17:18:01Z",
+          "completed_at": "2026-07-03T17:21:07Z",
+          "duration_sec": 186
+        }
+      ]
+    },
+    {
+      "run_id": 28674704680,
+      "workflow_id": 81905725,
+      "workflow_name": "Build adev for preview deployment",
+      "status": "success",
+      "head_sha": "6094f3eb865c465760bb760314af9f4316f8b98b",
+      "created_at": "2026-07-03T17:17:57Z",
+      "updated_at": "2026-07-03T17:27:34Z",
+      "run_started_at": "2026-07-03T17:17:57Z",
+      "jobs": []
+    }
+  ],
+  "workflows": [
+    {
+      "filename": "dev-infra.yml",
+      "hash": "0324771d031f8d4ca9a1c3b675ee31b460a5d25e756b8cbe712977c3d5173c0b"
+    },
+    {
+      "filename": "scorecard.yml",
+      "hash": "05d1e6029bf61cfeb3512feee84d44a15e8444be71aa06e7903f2c4a577a8911"
+    },
+    {
+      "filename": "google-internal-tests.yml",
+      "hash": "3a68e85f2e757c7b86ccc8adb0aa9a246cdf914829328a50896622a7ae4ef5d8"
+    },
+    {
+      "filename": "assistant-to-the-branch-manager.yml",
+      "hash": "1111a82e3a71313e17d32a3fd2e2bd3514e36ea9187c49976754dd6b3e587b2d"
+    }
+  ]
+}

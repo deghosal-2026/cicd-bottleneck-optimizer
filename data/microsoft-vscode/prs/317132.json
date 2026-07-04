@@ -1,0 +1,100 @@
+{
+  "pr_number": 317132,
+  "title": "Bump ws from 8.19.0 to 8.20.1 in /remote",
+  "state": "closed",
+  "author": "dependabot[bot]",
+  "created_at": "2026-05-18T19:36:13Z",
+  "updated_at": "2026-07-03T23:40:50Z",
+  "merged_at": null,
+  "head_sha": "256c937c8be136c2529241fb41c392cfe8ba82b3",
+  "labels": [
+    "javascript",
+    "dependencies"
+  ],
+  "ci_runs": [
+    {
+      "run_id": 26062539049,
+      "workflow_id": 211787236,
+      "workflow_name": "Prevent engineering system changes in PRs",
+      "status": "success",
+      "head_sha": "256c937c8be136c2529241fb41c392cfe8ba82b3",
+      "created_at": "2026-05-18T21:50:23Z",
+      "updated_at": "2026-05-18T21:50:51Z",
+      "run_started_at": "2026-05-18T21:50:23Z",
+      "jobs": [
+        {
+          "name": "Prevent engineering system changes in PRs",
+          "status": "success",
+          "started_at": "2026-05-18T21:50:47Z",
+          "completed_at": "2026-05-18T21:50:50Z",
+          "duration_sec": 3
+        }
+      ]
+    },
+    {
+      "run_id": 26062539059,
+      "workflow_id": 38332752,
+      "workflow_name": "Telemetry",
+      "status": "success",
+      "head_sha": "256c937c8be136c2529241fb41c392cfe8ba82b3",
+      "created_at": "2026-05-18T21:50:23Z",
+      "updated_at": "2026-05-18T21:51:11Z",
+      "run_started_at": "2026-05-18T21:50:23Z",
+      "jobs": []
+    },
+    {
+      "run_id": 26062539084,
+      "workflow_id": 258342321,
+      "workflow_name": "chat-lib tests",
+      "status": "success",
+      "head_sha": "256c937c8be136c2529241fb41c392cfe8ba82b3",
+      "created_at": "2026-05-18T21:50:23Z",
+      "updated_at": "2026-05-18T21:56:22Z",
+      "run_started_at": "2026-05-18T21:50:23Z",
+      "jobs": []
+    },
+    {
+      "run_id": 26062539074,
+      "workflow_id": 273167221,
+      "workflow_name": "Component Fixtures",
+      "status": "success",
+      "head_sha": "256c937c8be136c2529241fb41c392cfe8ba82b3",
+      "created_at": "2026-05-18T21:50:23Z",
+      "updated_at": "2026-05-18T21:57:53Z",
+      "run_started_at": "2026-05-18T21:50:23Z",
+      "jobs": []
+    },
+    {
+      "run_id": 26062539060,
+      "workflow_id": 21497327,
+      "workflow_name": "Monaco Editor checks",
+      "status": "success",
+      "head_sha": "256c937c8be136c2529241fb41c392cfe8ba82b3",
+      "created_at": "2026-05-18T21:50:23Z",
+      "updated_at": "2026-05-18T22:02:09Z",
+      "run_started_at": "2026-05-18T21:50:23Z",
+      "jobs": []
+    },
+    {
+      "run_id": 26062539096,
+      "workflow_id": 4196599,
+      "workflow_name": "Code OSS",
+      "status": "failure",
+      "head_sha": "256c937c8be136c2529241fb41c392cfe8ba82b3",
+      "created_at": "2026-05-18T21:50:23Z",
+      "updated_at": "2026-05-18T22:17:55Z",
+      "run_started_at": "2026-05-18T21:50:23Z",
+      "jobs": []
+    }
+  ],
+  "workflows": [
+    {
+      "filename": "pr.yml",
+      "hash": "0625dff11585a35e1ad0cf2b3cbea2cb72e521039dfd406eaa8de1ec75492115"
+    },
+    {
+      "filename": "monaco-editor.yml",
+      "hash": "02e5f951a8bc0193f3239d64b65c547aebcf6427849f35a8e7b9500b4eeb10f9"
+    }
+  ]
+}

@@ -1,0 +1,66 @@
+{
+  "pr_number": 57422,
+  "title": "Bump Electron to 43.0.0 (#57422)",
+  "state": "open",
+  "author": "huntie",
+  "created_at": "2026-07-02T17:59:50Z",
+  "updated_at": "2026-07-03T19:15:25Z",
+  "merged_at": null,
+  "head_sha": "17b475b3aa5f2161e0a44139564db2e3087c2e2e",
+  "labels": [
+    "CLA Signed",
+    "p: Facebook",
+    "Partner",
+    "meta-exported"
+  ],
+  "ci_runs": [
+    {
+      "run_id": 28679343490,
+      "workflow_id": 186496937,
+      "workflow_name": "Validate DotSlash Artifacts",
+      "status": "success",
+      "head_sha": "17b475b3aa5f2161e0a44139564db2e3087c2e2e",
+      "created_at": "2026-07-03T19:15:29Z",
+      "updated_at": "2026-07-03T21:08:27Z",
+      "run_started_at": "2026-07-03T19:15:29Z",
+      "jobs": [
+        {
+          "name": "validate-dotslash-artifacts",
+          "status": "success",
+          "started_at": "2026-07-03T21:05:56Z",
+          "completed_at": "2026-07-03T21:08:26Z",
+          "duration_sec": 150
+        }
+      ]
+    },
+    {
+      "run_id": 28679343599,
+      "workflow_id": 85394709,
+      "workflow_name": "Test All",
+      "status": "failure",
+      "head_sha": "17b475b3aa5f2161e0a44139564db2e3087c2e2e",
+      "created_at": "2026-07-03T19:15:29Z",
+      "updated_at": "2026-07-04T01:08:06Z",
+      "run_started_at": "2026-07-03T19:15:29Z",
+      "jobs": []
+    }
+  ],
+  "workflows": [
+    {
+      "filename": "needs-attention.yml",
+      "hash": "65a4a6cc5fcc5896e78ea357cfe209eec2845f173e8bd642ae2d343bfc66deba"
+    },
+    {
+      "filename": "on-issue-labeled.yml",
+      "hash": "7673645f1d0ba0da4c9c7d4f714f8376b8a20f1d6e553304c01769e627efc3d6"
+    },
+    {
+      "filename": "stale-bot.yml",
+      "hash": "1f4dfbb4734e1d14d7263a05e04d3b3c096e1210783c61bf98c57a5d86cd79f2"
+    },
+    {
+      "filename": "autorebase.yml",
+      "hash": "617b8a9799890a1d5010ff20bc08c4064fbffe3d3be0a1049ada31ccd0fc0a61"
+    }
+  ]
+}

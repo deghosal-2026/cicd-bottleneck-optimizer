@@ -1,0 +1,131 @@
+{
+  "pr_number": 94461,
+  "title": "fix(turbopack): allow `#/` prefixed subpath import specifiers",
+  "state": "closed",
+  "author": "sleitor",
+  "created_at": "2026-06-04T13:56:09Z",
+  "updated_at": "2026-07-03T15:04:53Z",
+  "merged_at": "2026-07-02T00:11:24Z",
+  "head_sha": "80ef2800f23848a71cc9ef462b588fe7df3082ea",
+  "labels": [],
+  "ci_runs": [
+    {
+      "run_id": 27839044099,
+      "workflow_id": 58813578,
+      "workflow_name": "build-and-deploy",
+      "status": "success",
+      "head_sha": "80ef2800f23848a71cc9ef462b588fe7df3082ea",
+      "created_at": "2026-06-19T17:08:40Z",
+      "updated_at": "2026-07-01T23:08:45Z",
+      "run_started_at": "2026-07-01T22:57:37Z",
+      "jobs": [
+        {
+          "name": "deploy-target",
+          "status": "success",
+          "started_at": "2026-07-01T22:57:42Z",
+          "completed_at": "2026-07-01T22:58:01Z",
+          "duration_sec": 19
+        },
+        {
+          "name": "build",
+          "status": "success",
+          "started_at": "2026-07-01T22:58:04Z",
+          "completed_at": "2026-07-01T23:01:26Z",
+          "duration_sec": 202
+        },
+        {
+          "name": "generate-native-matrix",
+          "status": "success",
+          "started_at": "2026-07-01T22:58:03Z",
+          "completed_at": "2026-07-01T22:58:07Z",
+          "duration_sec": 4
+        },
+        {
+          "name": "build-wasm (web)",
+          "status": "success",
+          "started_at": "2026-07-01T22:58:03Z",
+          "completed_at": "2026-07-01T23:00:48Z",
+          "duration_sec": 165
+        },
+        {
+          "name": "build-wasm (nodejs)",
+          "status": "success",
+          "started_at": "2026-07-01T22:58:03Z",
+          "completed_at": "2026-07-01T23:00:37Z",
+          "duration_sec": 154
+        },
+        {
+          "name": "stable - x86_64-unknown-linux-gnu - node@20",
+          "status": "success",
+          "started_at": "2026-07-01T22:58:10Z",
+          "completed_at": "2026-07-01T23:06:08Z",
+          "duration_sec": 478
+        },
+        {
+          "name": "thank you, build",
+          "status": "success",
+          "started_at": "2026-07-01T23:06:10Z",
+          "completed_at": "2026-07-01T23:06:13Z",
+          "duration_sec": 3
+        },
+        {
+          "name": "Prepare preview tarball",
+          "status": "success",
+          "started_at": "2026-07-01T23:06:10Z",
+          "completed_at": "2026-07-01T23:08:44Z",
+          "duration_sec": 154
+        },
+        {
+          "name": "Upload Turbopack Bytesize metrics to Datadog",
+          "status": "skipped",
+          "started_at": "2026-07-01T23:06:09Z",
+          "completed_at": "2026-07-01T23:06:08Z",
+          "duration_sec": -1
+        },
+        {
+          "name": "Potentially publish release",
+          "status": "skipped",
+          "started_at": "2026-07-01T23:06:09Z",
+          "completed_at": "2026-07-01T23:06:08Z",
+          "duration_sec": -1
+        }
+      ]
+    },
+    {
+      "run_id": 27839044141,
+      "workflow_id": 444921,
+      "workflow_name": "Generate Stats",
+      "status": "cancelled",
+      "head_sha": "80ef2800f23848a71cc9ef462b588fe7df3082ea",
+      "created_at": "2026-06-19T17:08:40Z",
+      "updated_at": "2026-07-01T23:29:50Z",
+      "run_started_at": "2026-07-01T22:57:37Z",
+      "jobs": []
+    },
+    {
+      "run_id": 27839044134,
+      "workflow_id": 57419851,
+      "workflow_name": "build-and-test",
+      "status": "success",
+      "head_sha": "80ef2800f23848a71cc9ef462b588fe7df3082ea",
+      "created_at": "2026-06-19T17:08:40Z",
+      "updated_at": "2026-07-01T23:31:33Z",
+      "run_started_at": "2026-07-01T22:57:37Z",
+      "jobs": []
+    }
+  ],
+  "workflows": [
+    {
+      "filename": "pull_request_stats.yml",
+      "hash": "2cbf0f3f1b19b2213025cdbf6027bb260c81220bf5b101b04a524f4568d57cb4"
+    },
+    {
+      "filename": "issue_lock.yml",
+      "hash": "a697561851464408497a633bc3f52faa705e0d430b53ae08bd2cd34ffe1e2611"
+    },
+    {
+      "filename": "issue_stale.yml",
+      "hash": "fd4bb34b8cc108b67a44ea1ca74f418f789158c423e58c926f6ed72aa711d3b5"
+    }
+  ]
+}

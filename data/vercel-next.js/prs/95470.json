@@ -1,0 +1,96 @@
+{
+  "pr_number": 95470,
+  "title": "Refresh outdated agent-rules blocks on next dev and codemod upgrade",
+  "state": "open",
+  "author": "gaojude",
+  "created_at": "2026-07-03T23:45:19Z",
+  "updated_at": "2026-07-04T00:17:57Z",
+  "merged_at": null,
+  "head_sha": "ff3cf429611a5b368561b5f2c5c97ea174c9dc7d",
+  "labels": [],
+  "ci_runs": [
+    {
+      "run_id": 28688201399,
+      "workflow_id": 444921,
+      "workflow_name": "Generate Stats",
+      "status": "failure",
+      "head_sha": "ff3cf429611a5b368561b5f2c5c97ea174c9dc7d",
+      "created_at": "2026-07-03T23:45:22Z",
+      "updated_at": "2026-07-03T23:51:49Z",
+      "run_started_at": "2026-07-03T23:45:22Z",
+      "jobs": [
+        {
+          "name": "Upload PR CI metadata",
+          "status": "success",
+          "started_at": "2026-07-03T23:45:24Z",
+          "completed_at": "2026-07-03T23:45:27Z",
+          "duration_sec": 3
+        },
+        {
+          "name": "build / build",
+          "status": "success",
+          "started_at": "2026-07-03T23:45:24Z",
+          "completed_at": "2026-07-03T23:47:43Z",
+          "duration_sec": 139
+        },
+        {
+          "name": "Stats (turbopack)",
+          "status": "failure",
+          "started_at": "2026-07-03T23:47:47Z",
+          "completed_at": "2026-07-03T23:50:28Z",
+          "duration_sec": 161
+        },
+        {
+          "name": "Stats (webpack)",
+          "status": "failure",
+          "started_at": "2026-07-03T23:48:00Z",
+          "completed_at": "2026-07-03T23:51:26Z",
+          "duration_sec": 206
+        },
+        {
+          "name": "Aggregate Stats",
+          "status": "failure",
+          "started_at": "2026-07-03T23:51:28Z",
+          "completed_at": "2026-07-03T23:51:49Z",
+          "duration_sec": 21
+        }
+      ]
+    },
+    {
+      "run_id": 28688201387,
+      "workflow_id": 57419851,
+      "workflow_name": "build-and-test",
+      "status": "failure",
+      "head_sha": "ff3cf429611a5b368561b5f2c5c97ea174c9dc7d",
+      "created_at": "2026-07-03T23:45:21Z",
+      "updated_at": "2026-07-04T00:17:36Z",
+      "run_started_at": "2026-07-03T23:45:21Z",
+      "jobs": []
+    },
+    {
+      "run_id": 28688201318,
+      "workflow_id": 58813578,
+      "workflow_name": "build-and-deploy",
+      "status": "skipped",
+      "head_sha": "ff3cf429611a5b368561b5f2c5c97ea174c9dc7d",
+      "created_at": "2026-07-03T23:45:21Z",
+      "updated_at": "2026-07-03T23:45:23Z",
+      "run_started_at": "2026-07-03T23:45:21Z",
+      "jobs": []
+    }
+  ],
+  "workflows": [
+    {
+      "filename": "pull_request_stats.yml",
+      "hash": "2cbf0f3f1b19b2213025cdbf6027bb260c81220bf5b101b04a524f4568d57cb4"
+    },
+    {
+      "filename": "issue_lock.yml",
+      "hash": "a697561851464408497a633bc3f52faa705e0d430b53ae08bd2cd34ffe1e2611"
+    },
+    {
+      "filename": "issue_stale.yml",
+      "hash": "fd4bb34b8cc108b67a44ea1ca74f418f789158c423e58c926f6ed72aa711d3b5"
+    }
+  ]
+}

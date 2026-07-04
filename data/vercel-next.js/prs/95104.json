@@ -1,0 +1,273 @@
+{
+  "pr_number": 95104,
+  "title": "Update font data",
+  "state": "closed",
+  "author": "vercel-release-bot",
+  "created_at": "2026-06-24T00:37:14Z",
+  "updated_at": "2026-07-03T14:53:27Z",
+  "merged_at": null,
+  "head_sha": "1fc3e9febf86ae2a8627e64128b9ae3f42a3eb70",
+  "labels": [
+    "run-react-18-tests"
+  ],
+  "ci_runs": [
+    {
+      "run_id": 28066881799,
+      "workflow_id": 57419851,
+      "workflow_name": "build-and-test",
+      "status": "success",
+      "head_sha": "1fc3e9febf86ae2a8627e64128b9ae3f42a3eb70",
+      "created_at": "2026-06-24T00:37:17Z",
+      "updated_at": "2026-06-24T01:04:06Z",
+      "run_started_at": "2026-06-24T00:37:17Z",
+      "jobs": [
+        {
+          "name": "Upload PR CI metadata",
+          "status": "success",
+          "started_at": "2026-06-24T00:37:21Z",
+          "completed_at": "2026-06-24T00:37:26Z",
+          "duration_sec": 5
+        },
+        {
+          "name": "validate-docs-links",
+          "status": "success",
+          "started_at": "2026-06-24T00:37:20Z",
+          "completed_at": "2026-06-24T00:37:39Z",
+          "duration_sec": 19
+        },
+        {
+          "name": "Determine changes",
+          "status": "success",
+          "started_at": "2026-06-24T00:37:21Z",
+          "completed_at": "2026-06-24T00:37:34Z",
+          "duration_sec": 13
+        },
+        {
+          "name": "optimize-ci / Graphite CI Optimizer",
+          "status": "success",
+          "started_at": "2026-06-24T00:37:20Z",
+          "completed_at": "2026-06-24T00:37:25Z",
+          "duration_sec": 5
+        },
+        {
+          "name": "build-next / build",
+          "status": "success",
+          "started_at": "2026-06-24T00:37:20Z",
+          "completed_at": "2026-06-24T00:39:01Z",
+          "duration_sec": 101
+        },
+        {
+          "name": "fetch test timings",
+          "status": "success",
+          "started_at": "2026-06-24T00:37:36Z",
+          "completed_at": "2026-06-24T00:38:23Z",
+          "duration_sec": 47
+        },
+        {
+          "name": "build-native / build",
+          "status": "success",
+          "started_at": "2026-06-24T00:37:36Z",
+          "completed_at": "2026-06-24T00:38:37Z",
+          "duration_sec": 61
+        },
+        {
+          "name": "test devlow package / build",
+          "status": "success",
+          "started_at": "2026-06-24T00:37:36Z",
+          "completed_at": "2026-06-24T00:39:17Z",
+          "duration_sec": 101
+        },
+        {
+          "name": "build-native-windows / build",
+          "status": "success",
+          "started_at": "2026-06-24T00:37:36Z",
+          "completed_at": "2026-06-24T00:38:55Z",
+          "duration_sec": 79
+        },
+        {
+          "name": "test cargo benches / Test",
+          "status": "success",
+          "started_at": "2026-06-24T00:39:04Z",
+          "completed_at": "2026-06-24T00:46:24Z",
+          "duration_sec": 440
+        },
+        {
+          "name": "ast-grep lint",
+          "status": "success",
+          "started_at": "2026-06-24T00:39:04Z",
+          "completed_at": "2026-06-24T00:39:19Z",
+          "duration_sec": 15
+        },
+        {
+          "name": "types and precompiled / build",
+          "status": "success",
+          "started_at": "2026-06-24T00:39:05Z",
+          "completed_at": "2026-06-24T00:41:22Z",
+          "duration_sec": 137
+        },
+        {
+          "name": "lint / build",
+          "status": "success",
+          "started_at": "2026-06-24T00:39:04Z",
+          "completed_at": "2026-06-24T00:43:56Z",
+          "duration_sec": 292
+        },
+        {
+          "name": "rust check / build",
+          "status": "success",
+          "started_at": "2026-06-24T00:39:04Z",
+          "completed_at": "2026-06-24T00:40:02Z",
+          "duration_sec": 58
+        },
+        {
+          "name": "test cargo unit / build",
+          "status": "success",
+          "started_at": "2026-06-24T00:40:28Z",
+          "completed_at": "2026-06-24T00:51:28Z",
+          "duration_sec": 660
+        },
+        {
+          "name": "rustdoc check / build",
+          "status": "success",
+          "started_at": "2026-06-24T00:39:05Z",
+          "completed_at": "2026-06-24T00:41:51Z",
+          "duration_sec": 166
+        },
+        {
+          "name": "Run devlow benchmarks",
+          "status": "skipped",
+          "started_at": "2026-06-24T00:39:02Z",
+          "completed_at": "2026-06-24T00:39:02Z",
+          "duration_sec": 0
+        },
+        {
+          "name": "test next-swc wasm / build",
+          "status": "success",
+          "started_at": "2026-06-24T00:39:04Z",
+          "completed_at": "2026-06-24T00:42:11Z",
+          "duration_sec": 187
+        },
+        {
+          "name": "test next-swc wasi",
+          "status": "skipped",
+          "started_at": "2026-06-24T00:39:02Z",
+          "completed_at": "2026-06-24T00:39:02Z",
+          "duration_sec": 0
+        },
+        {
+          "name": "test rspack dev",
+          "status": "skipped",
+          "started_at": "2026-06-24T00:39:02Z",
+          "completed_at": "2026-06-24T00:39:02Z",
+          "duration_sec": 0
+        },
+        {
+          "name": "test integration windows / build",
+          "status": "success",
+          "started_at": "2026-06-24T00:39:04Z",
+          "completed_at": "2026-06-24T00:54:12Z",
+          "duration_sec": 908
+        },
+        {
+          "name": "test dev windows / build",
+          "status": "success",
+          "started_at": "2026-06-24T00:39:04Z",
+          "completed_at": "2026-06-24T00:50:29Z",
+          "duration_sec": 685
+        },
+        {
+          "name": "test rspack production",
+          "status": "skipped",
+          "started_at": "2026-06-24T00:39:02Z",
+          "completed_at": "2026-06-24T00:39:02Z",
+          "duration_sec": 0
+        },
+        {
+          "name": "test prod windows / build",
+          "status": "success",
+          "started_at": "2026-06-24T00:39:04Z",
+          "completed_at": "2026-06-24T00:49:33Z",
+          "duration_sec": 629
+        },
+        {
+          "name": "test firefox and safari / build",
+          "status": "success",
+          "started_at": "2026-06-24T00:40:28Z",
+          "completed_at": "2026-06-24T00:46:20Z",
+          "duration_sec": 352
+        },
+        {
+          "name": "test next-config-ts-native-ts prod (24.15.0) / build",
+          "status": "success",
+          "started_at": "2026-06-24T00:40:28Z",
+          "completed_at": "2026-06-24T00:43:34Z",
+          "duration_sec": 186
+        },
+        {
+          "name": "test next-config-ts-native-ts prod (22) / build",
+          "status": "success",
+          "started_at": "2026-06-24T00:40:28Z",
+          "completed_at": "2026-06-24T00:43:43Z",
+          "duration_sec": 195
+        },
+        {
+          "name": "test unit windows (22) / build",
+          "status": "success",
+          "started_at": "2026-06-24T00:39:04Z",
+          "completed_at": "2026-06-24T00:48:54Z",
+          "duration_sec": 590
+        },
+        {
+          "name": "test turbopack dev (2/7, 18.3.1) / build",
+          "status": "success",
+          "started_at": "2026-06-24T00:39:04Z",
+          "completed_at": "2026-06-24T00:56:17Z",
+          "duration_sec": 1033
+        },
+        {
+          "name": "test turbopack dev (4/7, 18.3.1) / build",
+          "status": "success",
+          "started_at": "2026-06-24T00:39:04Z",
+          "completed_at": "2026-06-24T00:55:46Z",
+          "duration_sec": 1002
+        }
+      ]
+    },
+    {
+      "run_id": 28066881787,
+      "workflow_id": 444921,
+      "workflow_name": "Generate Stats",
+      "status": "cancelled",
+      "head_sha": "1fc3e9febf86ae2a8627e64128b9ae3f42a3eb70",
+      "created_at": "2026-06-24T00:37:17Z",
+      "updated_at": "2026-06-24T01:05:44Z",
+      "run_started_at": "2026-06-24T00:37:17Z",
+      "jobs": []
+    },
+    {
+      "run_id": 28066881705,
+      "workflow_id": 58813578,
+      "workflow_name": "build-and-deploy",
+      "status": "skipped",
+      "head_sha": "1fc3e9febf86ae2a8627e64128b9ae3f42a3eb70",
+      "created_at": "2026-06-24T00:37:17Z",
+      "updated_at": "2026-06-24T00:37:18Z",
+      "run_started_at": "2026-06-24T00:37:17Z",
+      "jobs": []
+    }
+  ],
+  "workflows": [
+    {
+      "filename": "pull_request_stats.yml",
+      "hash": "2cbf0f3f1b19b2213025cdbf6027bb260c81220bf5b101b04a524f4568d57cb4"
+    },
+    {
+      "filename": "issue_lock.yml",
+      "hash": "a697561851464408497a633bc3f52faa705e0d430b53ae08bd2cd34ffe1e2611"
+    },
+    {
+      "filename": "issue_stale.yml",
+      "hash": "fd4bb34b8cc108b67a44ea1ca74f418f789158c423e58c926f6ed72aa711d3b5"
+    }
+  ]
+}

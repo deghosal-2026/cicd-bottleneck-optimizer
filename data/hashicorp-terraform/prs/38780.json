@@ -1,0 +1,70 @@
+{
+  "pr_number": 38780,
+  "title": "refactor: Change parsing of `state_store_provider` blocks in .tfmigrate.hcl files to use `StateStoreProviderRequirement` structs",
+  "state": "closed",
+  "author": "SarahFrench",
+  "created_at": "2026-06-24T17:18:47Z",
+  "updated_at": "2026-06-25T10:03:56Z",
+  "merged_at": "2026-06-25T10:03:55Z",
+  "head_sha": "a6f7188674435ccf8d6dd15b37ff7a186961dc7f",
+  "labels": [
+    "no-changelog-needed"
+  ],
+  "ci_runs": [
+    {
+      "run_id": 28162166627,
+      "workflow_id": 126957301,
+      "workflow_name": "equivalence-test-diff",
+      "status": "success",
+      "head_sha": "a6f7188674435ccf8d6dd15b37ff7a186961dc7f",
+      "created_at": "2026-06-25T09:57:59Z",
+      "updated_at": "2026-06-25T10:00:18Z",
+      "run_started_at": "2026-06-25T09:57:59Z",
+      "jobs": [
+        {
+          "name": "Equivalence Test Diff",
+          "status": "success",
+          "started_at": "2026-06-25T09:58:03Z",
+          "completed_at": "2026-06-25T10:00:17Z",
+          "duration_sec": 134
+        }
+      ]
+    },
+    {
+      "run_id": 28162166652,
+      "workflow_id": 23102955,
+      "workflow_name": "Quick Checks",
+      "status": "success",
+      "head_sha": "a6f7188674435ccf8d6dd15b37ff7a186961dc7f",
+      "created_at": "2026-06-25T09:57:59Z",
+      "updated_at": "2026-06-25T10:03:52Z",
+      "run_started_at": "2026-06-25T09:57:59Z",
+      "jobs": []
+    },
+    {
+      "run_id": 28162166603,
+      "workflow_id": 278786541,
+      "workflow_name": "Changelog Validation",
+      "status": "success",
+      "head_sha": "a6f7188674435ccf8d6dd15b37ff7a186961dc7f",
+      "created_at": "2026-06-25T09:57:59Z",
+      "updated_at": "2026-06-25T09:58:10Z",
+      "run_started_at": "2026-06-25T09:57:59Z",
+      "jobs": []
+    }
+  ],
+  "workflows": [
+    {
+      "filename": "issue-comment-created.yml",
+      "hash": "7b39410b950b1b04577cd7d04201e9ce01aaeca7e6daf5af2dbe7286e23ef08e"
+    },
+    {
+      "filename": "lock.yml",
+      "hash": "7606d6b818ae4ff47b39930380d804b9a904124f7dffe6d9bfbba7e715c2f183"
+    },
+    {
+      "filename": "build.yml",
+      "hash": "192267d1041a111b5fb0a96d698602ec33bd95faf16bffb870abd3b3593bfd6c"
+    }
+  ]
+}

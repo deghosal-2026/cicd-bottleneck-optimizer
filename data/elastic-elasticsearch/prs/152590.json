@@ -1,0 +1,67 @@
+{
+  "pr_number": 152590,
+  "title": "[Release test PR]",
+  "state": "closed",
+  "author": "bpintea",
+  "created_at": "2026-06-30T21:22:15Z",
+  "updated_at": "2026-07-03T19:04:38Z",
+  "merged_at": null,
+  "head_sha": "047debdac88bb2041e7953ce8741b3c6d5f824c6",
+  "labels": [
+    "WIP",
+    "test-release",
+    "v9.5.0"
+  ],
+  "ci_runs": [
+    {
+      "run_id": 28584760599,
+      "workflow_id": 146525436,
+      "workflow_name": "docs-build",
+      "status": "success",
+      "head_sha": "047debdac88bb2041e7953ce8741b3c6d5f824c6",
+      "created_at": "2026-07-02T10:56:07Z",
+      "updated_at": "2026-07-02T10:56:27Z",
+      "run_started_at": "2026-07-02T10:56:07Z",
+      "jobs": [
+        {
+          "name": "build / check",
+          "status": "success",
+          "started_at": "2026-07-02T10:56:10Z",
+          "completed_at": "2026-07-02T10:56:16Z",
+          "duration_sec": 6
+        },
+        {
+          "name": "build / match",
+          "status": "success",
+          "started_at": "2026-07-02T10:56:10Z",
+          "completed_at": "2026-07-02T10:56:15Z",
+          "duration_sec": 5
+        },
+        {
+          "name": "build / build",
+          "status": "success",
+          "started_at": "2026-07-02T10:56:19Z",
+          "completed_at": "2026-07-02T10:56:26Z",
+          "duration_sec": 7
+        },
+        {
+          "name": "build / vale",
+          "status": "skipped",
+          "started_at": "2026-07-02T10:56:17Z",
+          "completed_at": "2026-07-02T10:56:16Z",
+          "duration_sec": -1
+        }
+      ]
+    }
+  ],
+  "workflows": [
+    {
+      "filename": "gradle-wrapper-validation.yml",
+      "hash": "04526945275c07b7ec8481281931aa653deceed193cbbf514b23cd8d634fae78"
+    },
+    {
+      "filename": "docs-build.yml",
+      "hash": "6772ac2baa16f9669594b6ea59ebfc2a9e1a6b14f3550571e4faacaf2d397023"
+    }
+  ]
+}

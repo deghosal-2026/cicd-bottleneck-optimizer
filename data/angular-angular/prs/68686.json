@@ -1,0 +1,76 @@
+{
+  "pr_number": 68686,
+  "title": "refactor(core): align namespaced attribute validation and security schema contexts",
+  "state": "closed",
+  "author": "alan-agius4",
+  "created_at": "2026-05-12T08:34:40Z",
+  "updated_at": "2026-07-04T00:31:57Z",
+  "merged_at": "2026-05-18T20:09:40Z",
+  "head_sha": "1e73927a89d03ee424e0c74b4b8bd3de2854dfdd",
+  "labels": [
+    "action: merge",
+    "area: core",
+    "target: patch"
+  ],
+  "ci_runs": [
+    {
+      "run_id": 26040899970,
+      "workflow_id": 81905725,
+      "workflow_name": "Build adev for preview deployment",
+      "status": "skipped",
+      "head_sha": "1e73927a89d03ee424e0c74b4b8bd3de2854dfdd",
+      "created_at": "2026-05-18T14:47:14Z",
+      "updated_at": "2026-05-18T14:47:15Z",
+      "run_started_at": "2026-05-18T14:47:14Z",
+      "jobs": [
+        {
+          "name": "adev-build",
+          "status": "skipped",
+          "started_at": "2026-05-18T14:47:15Z",
+          "completed_at": "2026-05-18T14:47:15Z",
+          "duration_sec": 0
+        }
+      ]
+    },
+    {
+      "run_id": 26023451034,
+      "workflow_id": 81905725,
+      "workflow_name": "Build adev for preview deployment",
+      "status": "skipped",
+      "head_sha": "1e73927a89d03ee424e0c74b4b8bd3de2854dfdd",
+      "created_at": "2026-05-18T08:54:23Z",
+      "updated_at": "2026-05-18T08:54:24Z",
+      "run_started_at": "2026-05-18T08:54:23Z",
+      "jobs": []
+    },
+    {
+      "run_id": 26023450862,
+      "workflow_id": 98951684,
+      "workflow_name": "Pull Request",
+      "status": "success",
+      "head_sha": "1e73927a89d03ee424e0c74b4b8bd3de2854dfdd",
+      "created_at": "2026-05-18T08:54:22Z",
+      "updated_at": "2026-05-18T09:04:38Z",
+      "run_started_at": "2026-05-18T08:54:22Z",
+      "jobs": []
+    }
+  ],
+  "workflows": [
+    {
+      "filename": "dev-infra.yml",
+      "hash": "0324771d031f8d4ca9a1c3b675ee31b460a5d25e756b8cbe712977c3d5173c0b"
+    },
+    {
+      "filename": "scorecard.yml",
+      "hash": "05d1e6029bf61cfeb3512feee84d44a15e8444be71aa06e7903f2c4a577a8911"
+    },
+    {
+      "filename": "google-internal-tests.yml",
+      "hash": "3a68e85f2e757c7b86ccc8adb0aa9a246cdf914829328a50896622a7ae4ef5d8"
+    },
+    {
+      "filename": "assistant-to-the-branch-manager.yml",
+      "hash": "1111a82e3a71313e17d32a3fd2e2bd3514e36ea9187c49976754dd6b3e587b2d"
+    }
+  ]
+}

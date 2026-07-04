@@ -1,0 +1,68 @@
+{
+  "pr_number": 152709,
+  "title": "ES|QL Fix assertion with Lookup Join",
+  "state": "open",
+  "author": "julian-elastic",
+  "created_at": "2026-07-02T02:51:13Z",
+  "updated_at": "2026-07-03T23:57:02Z",
+  "merged_at": null,
+  "head_sha": "ca82d664a14d4b485d29b699cf0ec995f4cbbab1",
+  "labels": [
+    ">bug",
+    "Team:Analytics",
+    ":Analytics/ES|QL",
+    "v9.5.0"
+  ],
+  "ci_runs": [
+    {
+      "run_id": 28688498602,
+      "workflow_id": 146525436,
+      "workflow_name": "docs-build",
+      "status": "success",
+      "head_sha": "ca82d664a14d4b485d29b699cf0ec995f4cbbab1",
+      "created_at": "2026-07-03T23:57:06Z",
+      "updated_at": "2026-07-03T23:57:25Z",
+      "run_started_at": "2026-07-03T23:57:06Z",
+      "jobs": [
+        {
+          "name": "build / match",
+          "status": "success",
+          "started_at": "2026-07-03T23:57:09Z",
+          "completed_at": "2026-07-03T23:57:14Z",
+          "duration_sec": 5
+        },
+        {
+          "name": "build / check",
+          "status": "success",
+          "started_at": "2026-07-03T23:57:09Z",
+          "completed_at": "2026-07-03T23:57:17Z",
+          "duration_sec": 8
+        },
+        {
+          "name": "build / build",
+          "status": "success",
+          "started_at": "2026-07-03T23:57:19Z",
+          "completed_at": "2026-07-03T23:57:25Z",
+          "duration_sec": 6
+        },
+        {
+          "name": "build / vale",
+          "status": "skipped",
+          "started_at": "2026-07-03T23:57:17Z",
+          "completed_at": "2026-07-03T23:57:17Z",
+          "duration_sec": 0
+        }
+      ]
+    }
+  ],
+  "workflows": [
+    {
+      "filename": "gradle-wrapper-validation.yml",
+      "hash": "04526945275c07b7ec8481281931aa653deceed193cbbf514b23cd8d634fae78"
+    },
+    {
+      "filename": "docs-build.yml",
+      "hash": "6772ac2baa16f9669594b6ea59ebfc2a9e1a6b14f3550571e4faacaf2d397023"
+    }
+  ]
+}

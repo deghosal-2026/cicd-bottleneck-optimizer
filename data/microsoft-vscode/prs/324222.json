@@ -1,0 +1,216 @@
+{
+  "pr_number": 324222,
+  "title": "sessions: add running-subagents status chip above the chat input",
+  "state": "closed",
+  "author": "sandy081",
+  "created_at": "2026-07-03T13:16:49Z",
+  "updated_at": "2026-07-03T20:09:20Z",
+  "merged_at": "2026-07-03T20:08:37Z",
+  "head_sha": "d4c7adc31271984dabb1694c2920b00fcac3ee16",
+  "labels": [],
+  "ci_runs": [
+    {
+      "run_id": 28680794951,
+      "workflow_id": 4196599,
+      "workflow_name": "Code OSS",
+      "status": "success",
+      "head_sha": "d4c7adc31271984dabb1694c2920b00fcac3ee16",
+      "created_at": "2026-07-03T19:54:21Z",
+      "updated_at": "2026-07-03T20:08:35Z",
+      "run_started_at": "2026-07-03T19:54:21Z",
+      "jobs": [
+        {
+          "name": "Compile & Hygiene",
+          "status": "success",
+          "started_at": "2026-07-03T19:54:43Z",
+          "completed_at": "2026-07-03T20:00:14Z",
+          "duration_sec": 331
+        },
+        {
+          "name": "Linux / Browser",
+          "status": "success",
+          "started_at": "2026-07-03T19:54:30Z",
+          "completed_at": "2026-07-03T20:02:34Z",
+          "duration_sec": 484
+        },
+        {
+          "name": "Linux / Electron",
+          "status": "success",
+          "started_at": "2026-07-03T19:54:31Z",
+          "completed_at": "2026-07-03T20:05:13Z",
+          "duration_sec": 642
+        },
+        {
+          "name": "macOS / Browser",
+          "status": "success",
+          "started_at": "2026-07-03T19:54:31Z",
+          "completed_at": "2026-07-03T20:01:23Z",
+          "duration_sec": 412
+        },
+        {
+          "name": "Linux / CLI",
+          "status": "success",
+          "started_at": "2026-07-03T19:54:45Z",
+          "completed_at": "2026-07-03T19:56:22Z",
+          "duration_sec": 97
+        },
+        {
+          "name": "macOS / Electron",
+          "status": "success",
+          "started_at": "2026-07-03T19:54:30Z",
+          "completed_at": "2026-07-03T20:00:59Z",
+          "duration_sec": 389
+        },
+        {
+          "name": "Linux / Remote",
+          "status": "success",
+          "started_at": "2026-07-03T19:54:30Z",
+          "completed_at": "2026-07-03T20:06:25Z",
+          "duration_sec": 715
+        },
+        {
+          "name": "macOS / Electron-Smoke",
+          "status": "success",
+          "started_at": "2026-07-03T19:54:30Z",
+          "completed_at": "2026-07-03T20:04:01Z",
+          "duration_sec": 571
+        },
+        {
+          "name": "Copilot - Check Test Cache",
+          "status": "success",
+          "started_at": "2026-07-03T19:54:47Z",
+          "completed_at": "2026-07-03T19:55:11Z",
+          "duration_sec": 24
+        },
+        {
+          "name": "Windows / Electron",
+          "status": "success",
+          "started_at": "2026-07-03T19:54:44Z",
+          "completed_at": "2026-07-03T20:05:51Z",
+          "duration_sec": 667
+        },
+        {
+          "name": "Copilot - Check Telemetry",
+          "status": "success",
+          "started_at": "2026-07-03T19:54:44Z",
+          "completed_at": "2026-07-03T19:55:00Z",
+          "duration_sec": 16
+        },
+        {
+          "name": "Windows / Remote",
+          "status": "success",
+          "started_at": "2026-07-03T19:54:42Z",
+          "completed_at": "2026-07-03T20:07:13Z",
+          "duration_sec": 751
+        },
+        {
+          "name": "Copilot - Test (Windows)",
+          "status": "success",
+          "started_at": "2026-07-03T19:54:45Z",
+          "completed_at": "2026-07-03T20:06:32Z",
+          "duration_sec": 707
+        },
+        {
+          "name": "macOS / Remote",
+          "status": "success",
+          "started_at": "2026-07-03T19:54:30Z",
+          "completed_at": "2026-07-03T20:02:01Z",
+          "duration_sec": 451
+        },
+        {
+          "name": "Windows / Browser",
+          "status": "success",
+          "started_at": "2026-07-03T19:54:45Z",
+          "completed_at": "2026-07-03T20:05:56Z",
+          "duration_sec": 671
+        },
+        {
+          "name": "Linux / Electron-Smoke",
+          "status": "success",
+          "started_at": "2026-07-03T19:54:31Z",
+          "completed_at": "2026-07-03T20:08:34Z",
+          "duration_sec": 843
+        },
+        {
+          "name": "Windows / Electron-Smoke",
+          "status": "success",
+          "started_at": "2026-07-03T19:54:43Z",
+          "completed_at": "2026-07-03T20:08:01Z",
+          "duration_sec": 798
+        },
+        {
+          "name": "Copilot - Test (Linux)",
+          "status": "success",
+          "started_at": "2026-07-03T19:54:45Z",
+          "completed_at": "2026-07-03T20:02:44Z",
+          "duration_sec": 479
+        }
+      ]
+    },
+    {
+      "run_id": 28680794893,
+      "workflow_id": 211787236,
+      "workflow_name": "Prevent engineering system changes in PRs",
+      "status": "success",
+      "head_sha": "d4c7adc31271984dabb1694c2920b00fcac3ee16",
+      "created_at": "2026-07-03T19:54:21Z",
+      "updated_at": "2026-07-03T19:54:35Z",
+      "run_started_at": "2026-07-03T19:54:21Z",
+      "jobs": []
+    },
+    {
+      "run_id": 28680794891,
+      "workflow_id": 38332752,
+      "workflow_name": "Telemetry",
+      "status": "success",
+      "head_sha": "d4c7adc31271984dabb1694c2920b00fcac3ee16",
+      "created_at": "2026-07-03T19:54:21Z",
+      "updated_at": "2026-07-03T19:54:53Z",
+      "run_started_at": "2026-07-03T19:54:21Z",
+      "jobs": []
+    },
+    {
+      "run_id": 28680794905,
+      "workflow_id": 258342321,
+      "workflow_name": "chat-lib tests",
+      "status": "success",
+      "head_sha": "d4c7adc31271984dabb1694c2920b00fcac3ee16",
+      "created_at": "2026-07-03T19:54:21Z",
+      "updated_at": "2026-07-03T19:57:11Z",
+      "run_started_at": "2026-07-03T19:54:21Z",
+      "jobs": []
+    },
+    {
+      "run_id": 28680794892,
+      "workflow_id": 21497327,
+      "workflow_name": "Monaco Editor checks",
+      "status": "success",
+      "head_sha": "d4c7adc31271984dabb1694c2920b00fcac3ee16",
+      "created_at": "2026-07-03T19:54:21Z",
+      "updated_at": "2026-07-03T19:59:06Z",
+      "run_started_at": "2026-07-03T19:54:21Z",
+      "jobs": []
+    },
+    {
+      "run_id": 28680794899,
+      "workflow_id": 273167221,
+      "workflow_name": "Component Fixtures",
+      "status": "success",
+      "head_sha": "d4c7adc31271984dabb1694c2920b00fcac3ee16",
+      "created_at": "2026-07-03T19:54:21Z",
+      "updated_at": "2026-07-03T20:00:12Z",
+      "run_started_at": "2026-07-03T19:54:21Z",
+      "jobs": []
+    }
+  ],
+  "workflows": [
+    {
+      "filename": "pr.yml",
+      "hash": "0625dff11585a35e1ad0cf2b3cbea2cb72e521039dfd406eaa8de1ec75492115"
+    },
+    {
+      "filename": "monaco-editor.yml",
+      "hash": "02e5f951a8bc0193f3239d64b65c547aebcf6427849f35a8e7b9500b4eeb10f9"
+    }
+  ]
+}

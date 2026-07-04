@@ -1,0 +1,69 @@
+{
+  "pr_number": 152361,
+  "title": "Added nullability doc_values mapping parameter",
+  "state": "closed",
+  "author": "Kubik42",
+  "created_at": "2026-06-26T23:39:54Z",
+  "updated_at": "2026-07-03T20:15:36Z",
+  "merged_at": "2026-07-03T20:15:36Z",
+  "head_sha": "43e17a4e23634585f35e0c7bb9b389c72aaae0df",
+  "labels": [
+    ">non-issue",
+    "test-release",
+    "Team:StorageEngine",
+    ":StorageEngine/Mapping",
+    "v9.5.0"
+  ],
+  "ci_runs": [
+    {
+      "run_id": 28676829710,
+      "workflow_id": 146525436,
+      "workflow_name": "docs-build",
+      "status": "success",
+      "head_sha": "43e17a4e23634585f35e0c7bb9b389c72aaae0df",
+      "created_at": "2026-07-03T18:10:46Z",
+      "updated_at": "2026-07-03T18:11:02Z",
+      "run_started_at": "2026-07-03T18:10:46Z",
+      "jobs": [
+        {
+          "name": "build / check",
+          "status": "success",
+          "started_at": "2026-07-03T18:10:49Z",
+          "completed_at": "2026-07-03T18:10:55Z",
+          "duration_sec": 6
+        },
+        {
+          "name": "build / match",
+          "status": "success",
+          "started_at": "2026-07-03T18:10:49Z",
+          "completed_at": "2026-07-03T18:10:54Z",
+          "duration_sec": 5
+        },
+        {
+          "name": "build / build",
+          "status": "success",
+          "started_at": "2026-07-03T18:10:57Z",
+          "completed_at": "2026-07-03T18:11:01Z",
+          "duration_sec": 4
+        },
+        {
+          "name": "build / vale",
+          "status": "skipped",
+          "started_at": "2026-07-03T18:10:55Z",
+          "completed_at": "2026-07-03T18:10:55Z",
+          "duration_sec": 0
+        }
+      ]
+    }
+  ],
+  "workflows": [
+    {
+      "filename": "gradle-wrapper-validation.yml",
+      "hash": "04526945275c07b7ec8481281931aa653deceed193cbbf514b23cd8d634fae78"
+    },
+    {
+      "filename": "docs-build.yml",
+      "hash": "6772ac2baa16f9669594b6ea59ebfc2a9e1a6b14f3550571e4faacaf2d397023"
+    }
+  ]
+}

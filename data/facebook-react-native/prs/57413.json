@@ -1,0 +1,64 @@
+{
+  "pr_number": 57413,
+  "title": "fix(ios): perf issues border masks",
+  "state": "open",
+  "author": "hannojg",
+  "created_at": "2026-07-02T12:42:05Z",
+  "updated_at": "2026-07-02T14:32:23Z",
+  "merged_at": null,
+  "head_sha": "1cde52e0f4676aaa1c8cde54d1ab8a51fc59a402",
+  "labels": [
+    "CLA Signed",
+    "Shared with Meta"
+  ],
+  "ci_runs": [
+    {
+      "run_id": 28598101228,
+      "workflow_id": 244203896,
+      "workflow_name": "Validate C++ API Snapshots",
+      "status": "success",
+      "head_sha": "1cde52e0f4676aaa1c8cde54d1ab8a51fc59a402",
+      "created_at": "2026-07-02T14:32:33Z",
+      "updated_at": "2026-07-02T14:35:16Z",
+      "run_started_at": "2026-07-02T14:32:33Z",
+      "jobs": [
+        {
+          "name": "validate_cxx_api_snapshots",
+          "status": "success",
+          "started_at": "2026-07-02T14:32:37Z",
+          "completed_at": "2026-07-02T14:35:10Z",
+          "duration_sec": 153
+        }
+      ]
+    },
+    {
+      "run_id": 28598101186,
+      "workflow_id": 85394709,
+      "workflow_name": "Test All",
+      "status": "failure",
+      "head_sha": "1cde52e0f4676aaa1c8cde54d1ab8a51fc59a402",
+      "created_at": "2026-07-02T14:32:33Z",
+      "updated_at": "2026-07-02T18:36:45Z",
+      "run_started_at": "2026-07-02T14:32:33Z",
+      "jobs": []
+    }
+  ],
+  "workflows": [
+    {
+      "filename": "needs-attention.yml",
+      "hash": "65a4a6cc5fcc5896e78ea357cfe209eec2845f173e8bd642ae2d343bfc66deba"
+    },
+    {
+      "filename": "on-issue-labeled.yml",
+      "hash": "7673645f1d0ba0da4c9c7d4f714f8376b8a20f1d6e553304c01769e627efc3d6"
+    },
+    {
+      "filename": "stale-bot.yml",
+      "hash": "1f4dfbb4734e1d14d7263a05e04d3b3c096e1210783c61bf98c57a5d86cd79f2"
+    },
+    {
+      "filename": "autorebase.yml",
+      "hash": "617b8a9799890a1d5010ff20bc08c4064fbffe3d3be0a1049ada31ccd0fc0a61"
+    }
+  ]
+}

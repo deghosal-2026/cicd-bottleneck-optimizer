@@ -1,0 +1,200 @@
+{
+  "pr_number": 53006,
+  "title": "Revert \"gha: Add Docker Agent PR reviewer workflow\" ",
+  "state": "closed",
+  "author": "vvoland",
+  "created_at": "2026-07-03T16:13:09Z",
+  "updated_at": "2026-07-03T18:17:09Z",
+  "merged_at": "2026-07-03T18:17:09Z",
+  "head_sha": "c6b46e0a3ca05ba5c69b2be7c6b207773bdf0dfa",
+  "labels": [
+    "area/ci",
+    "ci/validate-only"
+  ],
+  "ci_runs": [
+    {
+      "run_id": 28676378761,
+      "workflow_id": 260262819,
+      "workflow_name": "validate-milestone",
+      "status": "success",
+      "head_sha": "c6b46e0a3ca05ba5c69b2be7c6b207773bdf0dfa",
+      "created_at": "2026-07-03T17:59:31Z",
+      "updated_at": "2026-07-03T17:59:38Z",
+      "run_started_at": "2026-07-03T17:59:31Z",
+      "jobs": [
+        {
+          "name": "validate-milestone",
+          "status": "success",
+          "started_at": "2026-07-03T17:59:34Z",
+          "completed_at": "2026-07-03T17:59:37Z",
+          "duration_sec": 3
+        }
+      ]
+    },
+    {
+      "run_id": 28676378779,
+      "workflow_id": 86900533,
+      "workflow_name": "validate-pr",
+      "status": "success",
+      "head_sha": "c6b46e0a3ca05ba5c69b2be7c6b207773bdf0dfa",
+      "created_at": "2026-07-03T17:59:31Z",
+      "updated_at": "2026-07-03T18:00:00Z",
+      "run_started_at": "2026-07-03T17:59:31Z",
+      "jobs": []
+    },
+    {
+      "run_id": 28676335042,
+      "workflow_id": 260262819,
+      "workflow_name": "validate-milestone",
+      "status": "success",
+      "head_sha": "c6b46e0a3ca05ba5c69b2be7c6b207773bdf0dfa",
+      "created_at": "2026-07-03T17:58:21Z",
+      "updated_at": "2026-07-03T17:58:29Z",
+      "run_started_at": "2026-07-03T17:58:21Z",
+      "jobs": []
+    },
+    {
+      "run_id": 28676335062,
+      "workflow_id": 86900533,
+      "workflow_name": "validate-pr",
+      "status": "success",
+      "head_sha": "c6b46e0a3ca05ba5c69b2be7c6b207773bdf0dfa",
+      "created_at": "2026-07-03T17:58:21Z",
+      "updated_at": "2026-07-03T17:58:52Z",
+      "run_started_at": "2026-07-03T17:58:21Z",
+      "jobs": []
+    },
+    {
+      "run_id": 28676331367,
+      "workflow_id": 260262819,
+      "workflow_name": "validate-milestone",
+      "status": "cancelled",
+      "head_sha": "c6b46e0a3ca05ba5c69b2be7c6b207773bdf0dfa",
+      "created_at": "2026-07-03T17:58:15Z",
+      "updated_at": "2026-07-03T17:58:23Z",
+      "run_started_at": "2026-07-03T17:58:15Z",
+      "jobs": []
+    },
+    {
+      "run_id": 28676331360,
+      "workflow_id": 86900533,
+      "workflow_name": "validate-pr",
+      "status": "cancelled",
+      "head_sha": "c6b46e0a3ca05ba5c69b2be7c6b207773bdf0dfa",
+      "created_at": "2026-07-03T17:58:15Z",
+      "updated_at": "2026-07-03T17:58:24Z",
+      "run_started_at": "2026-07-03T17:58:15Z",
+      "jobs": []
+    },
+    {
+      "run_id": 28676331442,
+      "workflow_id": 187772110,
+      "workflow_name": "vm",
+      "status": "success",
+      "head_sha": "c6b46e0a3ca05ba5c69b2be7c6b207773bdf0dfa",
+      "created_at": "2026-07-03T17:58:15Z",
+      "updated_at": "2026-07-03T17:58:42Z",
+      "run_started_at": "2026-07-03T17:58:15Z",
+      "jobs": []
+    },
+    {
+      "run_id": 28676331552,
+      "workflow_id": 44461128,
+      "workflow_name": "bin-image",
+      "status": "success",
+      "head_sha": "c6b46e0a3ca05ba5c69b2be7c6b207773bdf0dfa",
+      "created_at": "2026-07-03T17:58:15Z",
+      "updated_at": "2026-07-03T17:58:47Z",
+      "run_started_at": "2026-07-03T17:58:15Z",
+      "jobs": []
+    },
+    {
+      "run_id": 28676331443,
+      "workflow_id": 33573227,
+      "workflow_name": "buildkit",
+      "status": "success",
+      "head_sha": "c6b46e0a3ca05ba5c69b2be7c6b207773bdf0dfa",
+      "created_at": "2026-07-03T17:58:15Z",
+      "updated_at": "2026-07-03T17:58:48Z",
+      "run_started_at": "2026-07-03T17:58:15Z",
+      "jobs": []
+    },
+    {
+      "run_id": 28676331468,
+      "workflow_id": 168088309,
+      "workflow_name": "windows-2025",
+      "status": "success",
+      "head_sha": "c6b46e0a3ca05ba5c69b2be7c6b207773bdf0dfa",
+      "created_at": "2026-07-03T17:58:15Z",
+      "updated_at": "2026-07-03T17:58:43Z",
+      "run_started_at": "2026-07-03T17:58:15Z",
+      "jobs": []
+    },
+    {
+      "run_id": 28676331596,
+      "workflow_id": 261203439,
+      "workflow_name": "zizmor",
+      "status": "success",
+      "head_sha": "c6b46e0a3ca05ba5c69b2be7c6b207773bdf0dfa",
+      "created_at": "2026-07-03T17:58:15Z",
+      "updated_at": "2026-07-03T17:58:45Z",
+      "run_started_at": "2026-07-03T17:58:15Z",
+      "jobs": []
+    },
+    {
+      "run_id": 28676331472,
+      "workflow_id": 21805183,
+      "workflow_name": "ci",
+      "status": "success",
+      "head_sha": "c6b46e0a3ca05ba5c69b2be7c6b207773bdf0dfa",
+      "created_at": "2026-07-03T17:58:15Z",
+      "updated_at": "2026-07-03T18:02:00Z",
+      "run_started_at": "2026-07-03T17:58:15Z",
+      "jobs": []
+    },
+    {
+      "run_id": 28676331351,
+      "workflow_id": 81499888,
+      "workflow_name": "codeql",
+      "status": "success",
+      "head_sha": "c6b46e0a3ca05ba5c69b2be7c6b207773bdf0dfa",
+      "created_at": "2026-07-03T17:58:15Z",
+      "updated_at": "2026-07-03T18:04:45Z",
+      "run_started_at": "2026-07-03T17:58:15Z",
+      "jobs": []
+    },
+    {
+      "run_id": 28676331465,
+      "workflow_id": 26704268,
+      "workflow_name": "test",
+      "status": "success",
+      "head_sha": "c6b46e0a3ca05ba5c69b2be7c6b207773bdf0dfa",
+      "created_at": "2026-07-03T17:58:15Z",
+      "updated_at": "2026-07-03T18:06:01Z",
+      "run_started_at": "2026-07-03T17:58:15Z",
+      "jobs": []
+    }
+  ],
+  "workflows": [
+    {
+      "filename": ".dco.yml",
+      "hash": "dea4b82ced9a768e825d38c022001e448d052703020b8345ce1752af0665f479"
+    },
+    {
+      "filename": ".test-unit.yml",
+      "hash": "64ea4ac26a2df4f48f55a6cfdef04ec69994f18e0dce69c1d98792ecbf66679b"
+    },
+    {
+      "filename": ".test.yml",
+      "hash": "698dd2de1d8e32af05925d489ceb376de42b9db0f6a9f271c0e2f1c83e849f57"
+    },
+    {
+      "filename": ".vm.yml",
+      "hash": "fa079150844d5674b2c95776f852977d6cb1a8faeb202fd94a8b63451445a5ed"
+    },
+    {
+      "filename": ".windows.yml",
+      "hash": "b3cb6d7e301a89297e6b10d87af74beee4996445f851b4fb2d44cdb54c8924f6"
+    }
+  ]
+}

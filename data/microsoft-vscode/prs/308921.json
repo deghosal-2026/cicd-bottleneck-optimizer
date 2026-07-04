@@ -1,0 +1,206 @@
+{
+  "pr_number": 308921,
+  "title": "Fix chat session rename from list not updating title",
+  "state": "closed",
+  "author": "Copilot",
+  "created_at": "2026-04-10T02:04:03Z",
+  "updated_at": "2026-07-04T03:52:38Z",
+  "merged_at": null,
+  "head_sha": "e2f1c08d0345da534bdedcf56166035df82358b4",
+  "labels": [],
+  "ci_runs": [
+    {
+      "run_id": 24223219266,
+      "workflow_id": 4196599,
+      "workflow_name": "Code OSS",
+      "status": "success",
+      "head_sha": "e2f1c08d0345da534bdedcf56166035df82358b4",
+      "created_at": "2026-04-10T02:24:41Z",
+      "updated_at": "2026-04-13T03:02:27Z",
+      "run_started_at": "2026-04-13T02:28:29Z",
+      "jobs": [
+        {
+          "name": "Copilot - Test (Windows)",
+          "status": "success",
+          "started_at": "2026-04-13T02:28:40Z",
+          "completed_at": "2026-04-13T02:49:35Z",
+          "duration_sec": 1255
+        },
+        {
+          "name": "Compile & Hygiene",
+          "status": "success",
+          "started_at": "2026-04-13T02:28:40Z",
+          "completed_at": "2026-04-13T02:44:47Z",
+          "duration_sec": 967
+        },
+        {
+          "name": "Copilot - Check Telemetry",
+          "status": "success",
+          "started_at": "2026-04-13T02:28:40Z",
+          "completed_at": "2026-04-13T02:29:05Z",
+          "duration_sec": 25
+        },
+        {
+          "name": "Copilot - Check Test Cache",
+          "status": "success",
+          "started_at": "2026-04-13T02:28:40Z",
+          "completed_at": "2026-04-13T02:31:13Z",
+          "duration_sec": 153
+        },
+        {
+          "name": "Copilot - Test (Linux)",
+          "status": "success",
+          "started_at": "2026-04-13T02:28:40Z",
+          "completed_at": "2026-04-13T02:42:45Z",
+          "duration_sec": 845
+        },
+        {
+          "name": "Linux / Electron",
+          "status": "success",
+          "started_at": "2026-04-13T02:28:40Z",
+          "completed_at": "2026-04-13T02:51:13Z",
+          "duration_sec": 1353
+        },
+        {
+          "name": "macOS / Electron",
+          "status": "success",
+          "started_at": "2026-04-13T02:28:40Z",
+          "completed_at": "2026-04-13T02:43:37Z",
+          "duration_sec": 897
+        },
+        {
+          "name": "Linux / Remote",
+          "status": "success",
+          "started_at": "2026-04-13T02:28:40Z",
+          "completed_at": "2026-04-13T02:50:38Z",
+          "duration_sec": 1318
+        },
+        {
+          "name": "Linux / CLI",
+          "status": "success",
+          "started_at": "2026-04-13T02:28:39Z",
+          "completed_at": "2026-04-13T02:30:53Z",
+          "duration_sec": 134
+        },
+        {
+          "name": "macOS / Remote",
+          "status": "success",
+          "started_at": "2026-04-13T02:28:40Z",
+          "completed_at": "2026-04-13T02:41:31Z",
+          "duration_sec": 771
+        },
+        {
+          "name": "macOS / Browser",
+          "status": "success",
+          "started_at": "2026-04-13T02:28:40Z",
+          "completed_at": "2026-04-13T02:39:15Z",
+          "duration_sec": 635
+        },
+        {
+          "name": "Windows / Remote",
+          "status": "success",
+          "started_at": "2026-04-13T02:28:41Z",
+          "completed_at": "2026-04-13T02:59:10Z",
+          "duration_sec": 1829
+        },
+        {
+          "name": "Windows / Browser",
+          "status": "success",
+          "started_at": "2026-04-13T02:28:40Z",
+          "completed_at": "2026-04-13T02:54:51Z",
+          "duration_sec": 1571
+        },
+        {
+          "name": "Linux / Browser",
+          "status": "success",
+          "started_at": "2026-04-13T02:28:39Z",
+          "completed_at": "2026-04-13T02:45:38Z",
+          "duration_sec": 1019
+        },
+        {
+          "name": "Windows / Electron",
+          "status": "success",
+          "started_at": "2026-04-13T02:28:40Z",
+          "completed_at": "2026-04-13T03:02:26Z",
+          "duration_sec": 2026
+        }
+      ]
+    },
+    {
+      "run_id": 24223219265,
+      "workflow_id": 211787236,
+      "workflow_name": "Prevent engineering system changes in PRs",
+      "status": "success",
+      "head_sha": "e2f1c08d0345da534bdedcf56166035df82358b4",
+      "created_at": "2026-04-10T02:24:41Z",
+      "updated_at": "2026-04-13T02:28:43Z",
+      "run_started_at": "2026-04-13T02:28:29Z",
+      "jobs": []
+    },
+    {
+      "run_id": 24223219281,
+      "workflow_id": 38332752,
+      "workflow_name": "Telemetry",
+      "status": "success",
+      "head_sha": "e2f1c08d0345da534bdedcf56166035df82358b4",
+      "created_at": "2026-04-10T02:24:41Z",
+      "updated_at": "2026-04-13T02:29:04Z",
+      "run_started_at": "2026-04-13T02:28:29Z",
+      "jobs": []
+    },
+    {
+      "run_id": 24223219259,
+      "workflow_id": 254760557,
+      "workflow_name": "Component Fixture Tests",
+      "status": "success",
+      "head_sha": "e2f1c08d0345da534bdedcf56166035df82358b4",
+      "created_at": "2026-04-10T02:24:41Z",
+      "updated_at": "2026-04-13T02:30:23Z",
+      "run_started_at": "2026-04-13T02:28:29Z",
+      "jobs": []
+    },
+    {
+      "run_id": 24223219274,
+      "workflow_id": 236649811,
+      "workflow_name": "Checking Component Screenshots",
+      "status": "success",
+      "head_sha": "e2f1c08d0345da534bdedcf56166035df82358b4",
+      "created_at": "2026-04-10T02:24:41Z",
+      "updated_at": "2026-04-13T02:31:22Z",
+      "run_started_at": "2026-04-13T02:28:29Z",
+      "jobs": []
+    },
+    {
+      "run_id": 24223219280,
+      "workflow_id": 258342321,
+      "workflow_name": "chat-lib tests",
+      "status": "success",
+      "head_sha": "e2f1c08d0345da534bdedcf56166035df82358b4",
+      "created_at": "2026-04-10T02:24:41Z",
+      "updated_at": "2026-04-13T02:33:30Z",
+      "run_started_at": "2026-04-13T02:28:29Z",
+      "jobs": []
+    },
+    {
+      "run_id": 24223219270,
+      "workflow_id": 21497327,
+      "workflow_name": "Monaco Editor checks",
+      "status": "success",
+      "head_sha": "e2f1c08d0345da534bdedcf56166035df82358b4",
+      "created_at": "2026-04-10T02:24:41Z",
+      "updated_at": "2026-04-13T02:39:57Z",
+      "run_started_at": "2026-04-13T02:28:29Z",
+      "jobs": []
+    }
+  ],
+  "workflows": [
+    {
+      "filename": "pr.yml",
+      "hash": "0625dff11585a35e1ad0cf2b3cbea2cb72e521039dfd406eaa8de1ec75492115"
+    },
+    {
+      "filename": "monaco-editor.yml",
+      "hash": "02e5f951a8bc0193f3239d64b65c547aebcf6427849f35a8e7b9500b4eeb10f9"
+    }
+  ]
+}

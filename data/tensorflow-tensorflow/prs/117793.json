@@ -1,0 +1,93 @@
+{
+  "pr_number": 117793,
+  "title": "[XLA] Add HloAsyncInstruction::AreOperandsAndOutputFullyBound.",
+  "state": "closed",
+  "author": "copybara-service[bot]",
+  "created_at": "2026-05-06T23:19:35Z",
+  "updated_at": "2026-07-04T02:14:49Z",
+  "merged_at": "2026-07-04T02:14:49Z",
+  "head_sha": "72881be6c69b39838d1d64ba87e8febbe85d6e34",
+  "labels": [],
+  "ci_runs": [
+    {
+      "run_id": 28691847479,
+      "workflow_id": 248743471,
+      "workflow_name": "CI",
+      "status": "success",
+      "head_sha": "72881be6c69b39838d1d64ba87e8febbe85d6e34",
+      "created_at": "2026-07-04T02:14:51Z",
+      "updated_at": "2026-07-04T02:28:04Z",
+      "run_started_at": "2026-07-04T02:14:51Z",
+      "jobs": [
+        {
+          "name": "build-linux-x86-cuda13 / build-and-test",
+          "status": "success",
+          "started_at": "2026-07-04T02:14:52Z",
+          "completed_at": "2026-07-04T02:23:24Z",
+          "duration_sec": 512
+        },
+        {
+          "name": "build-linux-x86-cpu / build-and-test",
+          "status": "success",
+          "started_at": "2026-07-04T02:14:52Z",
+          "completed_at": "2026-07-04T02:26:24Z",
+          "duration_sec": 692
+        },
+        {
+          "name": "build-linux-x86-cuda / build-and-test",
+          "status": "success",
+          "started_at": "2026-07-04T02:14:52Z",
+          "completed_at": "2026-07-04T02:22:54Z",
+          "duration_sec": 482
+        },
+        {
+          "name": "build-arm64 / build-only",
+          "status": "success",
+          "started_at": "2026-07-04T02:16:00Z",
+          "completed_at": "2026-07-04T02:28:03Z",
+          "duration_sec": 723
+        },
+        {
+          "name": "build-windows-x86 / build-and-test",
+          "status": "success",
+          "started_at": "2026-07-04T02:14:52Z",
+          "completed_at": "2026-07-04T02:23:56Z",
+          "duration_sec": 544
+        }
+      ]
+    },
+    {
+      "run_id": 28691847419,
+      "workflow_id": 287144969,
+      "workflow_name": "License Check",
+      "status": "success",
+      "head_sha": "72881be6c69b39838d1d64ba87e8febbe85d6e34",
+      "created_at": "2026-07-04T02:14:50Z",
+      "updated_at": "2026-07-04T02:15:23Z",
+      "run_started_at": "2026-07-04T02:14:50Z",
+      "jobs": []
+    }
+  ],
+  "workflows": [
+    {
+      "filename": "update-nightly.yml",
+      "hash": "05e2e1c09977e5fd7562b494032571695f02592e883ef959d2e7a72d14356529"
+    },
+    {
+      "filename": "pylint-presubmit.yml",
+      "hash": "138eee26e716354ce54596ce96004db1c5406aff3467a1389feb5dc51fc16abc"
+    },
+    {
+      "filename": "issue-on-pr-rollback.yml",
+      "hash": "5a33aa6ed9fa2234004803a5be33a4e9804ccbff8e031a442ff064af0d809584"
+    },
+    {
+      "filename": "scorecards-analysis.yml",
+      "hash": "ef2eb9d0011f9be06b1dc6334a1bf4e3bdc52fe799bd5f3166de2bc93b02e651"
+    },
+    {
+      "filename": "cffconvert.yml",
+      "hash": "f49386b15b0e8f242217fba21e4ba80c9f50e9d1cb97f60c30180e8710a8a0a7"
+    }
+  ]
+}

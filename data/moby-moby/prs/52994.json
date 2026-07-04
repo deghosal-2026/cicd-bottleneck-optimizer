@@ -1,0 +1,243 @@
+{
+  "pr_number": 52994,
+  "title": "test-integration-flaky: Bump stress multiplier to 10x10 (100 runs)",
+  "state": "closed",
+  "author": "vvoland",
+  "created_at": "2026-07-01T18:46:28Z",
+  "updated_at": "2026-07-03T07:33:12Z",
+  "merged_at": "2026-07-03T07:33:12Z",
+  "head_sha": "5a7c430720752281e8e74c9049a3a314320aa5b2",
+  "labels": [
+    "ci/validate-only"
+  ],
+  "ci_runs": [
+    {
+      "run_id": 28540823065,
+      "workflow_id": 260262819,
+      "workflow_name": "validate-milestone",
+      "status": "success",
+      "head_sha": "5a7c430720752281e8e74c9049a3a314320aa5b2",
+      "created_at": "2026-07-01T18:59:38Z",
+      "updated_at": "2026-07-01T18:59:45Z",
+      "run_started_at": "2026-07-01T18:59:38Z",
+      "jobs": [
+        {
+          "name": "validate-milestone",
+          "status": "success",
+          "started_at": "2026-07-01T18:59:41Z",
+          "completed_at": "2026-07-01T18:59:44Z",
+          "duration_sec": 3
+        }
+      ]
+    },
+    {
+      "run_id": 28540823010,
+      "workflow_id": 86900533,
+      "workflow_name": "validate-pr",
+      "status": "success",
+      "head_sha": "5a7c430720752281e8e74c9049a3a314320aa5b2",
+      "created_at": "2026-07-01T18:59:38Z",
+      "updated_at": "2026-07-01T19:00:07Z",
+      "run_started_at": "2026-07-01T18:59:38Z",
+      "jobs": []
+    },
+    {
+      "run_id": 28540800018,
+      "workflow_id": 86900533,
+      "workflow_name": "validate-pr",
+      "status": "cancelled",
+      "head_sha": "5a7c430720752281e8e74c9049a3a314320aa5b2",
+      "created_at": "2026-07-01T18:59:12Z",
+      "updated_at": "2026-07-01T18:59:41Z",
+      "run_started_at": "2026-07-01T18:59:12Z",
+      "jobs": []
+    },
+    {
+      "run_id": 28540800067,
+      "workflow_id": 260262819,
+      "workflow_name": "validate-milestone",
+      "status": "success",
+      "head_sha": "5a7c430720752281e8e74c9049a3a314320aa5b2",
+      "created_at": "2026-07-01T18:59:12Z",
+      "updated_at": "2026-07-01T18:59:19Z",
+      "run_started_at": "2026-07-01T18:59:12Z",
+      "jobs": []
+    },
+    {
+      "run_id": 28540123788,
+      "workflow_id": 260262819,
+      "workflow_name": "validate-milestone",
+      "status": "cancelled",
+      "head_sha": "5a7c430720752281e8e74c9049a3a314320aa5b2",
+      "created_at": "2026-07-01T18:47:06Z",
+      "updated_at": "2026-07-01T18:47:08Z",
+      "run_started_at": "2026-07-01T18:47:06Z",
+      "jobs": []
+    },
+    {
+      "run_id": 28540123935,
+      "workflow_id": 260262819,
+      "workflow_name": "validate-milestone",
+      "status": "success",
+      "head_sha": "5a7c430720752281e8e74c9049a3a314320aa5b2",
+      "created_at": "2026-07-01T18:47:06Z",
+      "updated_at": "2026-07-01T18:47:15Z",
+      "run_started_at": "2026-07-01T18:47:06Z",
+      "jobs": []
+    },
+    {
+      "run_id": 28540094376,
+      "workflow_id": 86900533,
+      "workflow_name": "validate-pr",
+      "status": "success",
+      "head_sha": "5a7c430720752281e8e74c9049a3a314320aa5b2",
+      "created_at": "2026-07-01T18:46:33Z",
+      "updated_at": "2026-07-01T18:46:59Z",
+      "run_started_at": "2026-07-01T18:46:33Z",
+      "jobs": []
+    },
+    {
+      "run_id": 28540094022,
+      "workflow_id": 44461128,
+      "workflow_name": "bin-image",
+      "status": "success",
+      "head_sha": "5a7c430720752281e8e74c9049a3a314320aa5b2",
+      "created_at": "2026-07-01T18:46:33Z",
+      "updated_at": "2026-07-01T18:47:00Z",
+      "run_started_at": "2026-07-01T18:46:33Z",
+      "jobs": []
+    },
+    {
+      "run_id": 28540093931,
+      "workflow_id": 261203439,
+      "workflow_name": "zizmor",
+      "status": "success",
+      "head_sha": "5a7c430720752281e8e74c9049a3a314320aa5b2",
+      "created_at": "2026-07-01T18:46:33Z",
+      "updated_at": "2026-07-01T18:47:03Z",
+      "run_started_at": "2026-07-01T18:46:33Z",
+      "jobs": []
+    },
+    {
+      "run_id": 28540093638,
+      "workflow_id": 81499888,
+      "workflow_name": "codeql",
+      "status": "success",
+      "head_sha": "5a7c430720752281e8e74c9049a3a314320aa5b2",
+      "created_at": "2026-07-01T18:46:32Z",
+      "updated_at": "2026-07-01T18:53:11Z",
+      "run_started_at": "2026-07-01T18:46:32Z",
+      "jobs": []
+    },
+    {
+      "run_id": 28540093780,
+      "workflow_id": 26704268,
+      "workflow_name": "test",
+      "status": "success",
+      "head_sha": "5a7c430720752281e8e74c9049a3a314320aa5b2",
+      "created_at": "2026-07-01T18:46:32Z",
+      "updated_at": "2026-07-01T18:54:10Z",
+      "run_started_at": "2026-07-01T18:46:32Z",
+      "jobs": []
+    },
+    {
+      "run_id": 28540093632,
+      "workflow_id": 260262819,
+      "workflow_name": "validate-milestone",
+      "status": "cancelled",
+      "head_sha": "5a7c430720752281e8e74c9049a3a314320aa5b2",
+      "created_at": "2026-07-01T18:46:32Z",
+      "updated_at": "2026-07-01T18:46:34Z",
+      "run_started_at": "2026-07-01T18:46:32Z",
+      "jobs": []
+    },
+    {
+      "run_id": 28540093579,
+      "workflow_id": 86900533,
+      "workflow_name": "validate-pr",
+      "status": "cancelled",
+      "head_sha": "5a7c430720752281e8e74c9049a3a314320aa5b2",
+      "created_at": "2026-07-01T18:46:32Z",
+      "updated_at": "2026-07-01T18:46:35Z",
+      "run_started_at": "2026-07-01T18:46:32Z",
+      "jobs": []
+    },
+    {
+      "run_id": 28540094029,
+      "workflow_id": 260262819,
+      "workflow_name": "validate-milestone",
+      "status": "failure",
+      "head_sha": "5a7c430720752281e8e74c9049a3a314320aa5b2",
+      "created_at": "2026-07-01T18:46:32Z",
+      "updated_at": "2026-07-01T18:46:41Z",
+      "run_started_at": "2026-07-01T18:46:32Z",
+      "jobs": []
+    },
+    {
+      "run_id": 28540093746,
+      "workflow_id": 33573227,
+      "workflow_name": "buildkit",
+      "status": "success",
+      "head_sha": "5a7c430720752281e8e74c9049a3a314320aa5b2",
+      "created_at": "2026-07-01T18:46:32Z",
+      "updated_at": "2026-07-01T18:47:04Z",
+      "run_started_at": "2026-07-01T18:46:32Z",
+      "jobs": []
+    },
+    {
+      "run_id": 28540093787,
+      "workflow_id": 187772110,
+      "workflow_name": "vm",
+      "status": "success",
+      "head_sha": "5a7c430720752281e8e74c9049a3a314320aa5b2",
+      "created_at": "2026-07-01T18:46:32Z",
+      "updated_at": "2026-07-01T18:47:01Z",
+      "run_started_at": "2026-07-01T18:46:32Z",
+      "jobs": []
+    },
+    {
+      "run_id": 28540093759,
+      "workflow_id": 168088309,
+      "workflow_name": "windows-2025",
+      "status": "success",
+      "head_sha": "5a7c430720752281e8e74c9049a3a314320aa5b2",
+      "created_at": "2026-07-01T18:46:32Z",
+      "updated_at": "2026-07-01T18:47:01Z",
+      "run_started_at": "2026-07-01T18:46:32Z",
+      "jobs": []
+    },
+    {
+      "run_id": 28540093778,
+      "workflow_id": 21805183,
+      "workflow_name": "ci",
+      "status": "success",
+      "head_sha": "5a7c430720752281e8e74c9049a3a314320aa5b2",
+      "created_at": "2026-07-01T18:46:32Z",
+      "updated_at": "2026-07-01T18:50:19Z",
+      "run_started_at": "2026-07-01T18:46:32Z",
+      "jobs": []
+    }
+  ],
+  "workflows": [
+    {
+      "filename": ".dco.yml",
+      "hash": "dea4b82ced9a768e825d38c022001e448d052703020b8345ce1752af0665f479"
+    },
+    {
+      "filename": ".test-unit.yml",
+      "hash": "64ea4ac26a2df4f48f55a6cfdef04ec69994f18e0dce69c1d98792ecbf66679b"
+    },
+    {
+      "filename": ".test.yml",
+      "hash": "698dd2de1d8e32af05925d489ceb376de42b9db0f6a9f271c0e2f1c83e849f57"
+    },
+    {
+      "filename": ".vm.yml",
+      "hash": "fa079150844d5674b2c95776f852977d6cb1a8faeb202fd94a8b63451445a5ed"
+    },
+    {
+      "filename": ".windows.yml",
+      "hash": "b3cb6d7e301a89297e6b10d87af74beee4996445f851b4fb2d44cdb54c8924f6"
+    }
+  ]
+}

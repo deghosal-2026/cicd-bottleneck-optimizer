@@ -1,0 +1,70 @@
+{
+  "pr_number": 152858,
+  "title": "ESQL:DS: Fix uint32/unin64 Parquet aggregate-stats sign-extension",
+  "state": "closed",
+  "author": "bpintea",
+  "created_at": "2026-07-03T10:46:20Z",
+  "updated_at": "2026-07-03T17:44:53Z",
+  "merged_at": "2026-07-03T17:44:52Z",
+  "head_sha": "5cea5f60f82ba28c2a24df7b692c68d26a431675",
+  "labels": [
+    ">bug",
+    ">non-issue",
+    "Team:Analytics",
+    ":Analytics/ES|QL",
+    "ES|QL|DS",
+    "v9.5.0"
+  ],
+  "ci_runs": [
+    {
+      "run_id": 28670004103,
+      "workflow_id": 146525436,
+      "workflow_name": "docs-build",
+      "status": "success",
+      "head_sha": "5cea5f60f82ba28c2a24df7b692c68d26a431675",
+      "created_at": "2026-07-03T15:31:14Z",
+      "updated_at": "2026-07-03T15:31:33Z",
+      "run_started_at": "2026-07-03T15:31:14Z",
+      "jobs": [
+        {
+          "name": "build / match",
+          "status": "success",
+          "started_at": "2026-07-03T15:31:16Z",
+          "completed_at": "2026-07-03T15:31:21Z",
+          "duration_sec": 5
+        },
+        {
+          "name": "build / check",
+          "status": "success",
+          "started_at": "2026-07-03T15:31:16Z",
+          "completed_at": "2026-07-03T15:31:21Z",
+          "duration_sec": 5
+        },
+        {
+          "name": "build / build",
+          "status": "success",
+          "started_at": "2026-07-03T15:31:25Z",
+          "completed_at": "2026-07-03T15:31:33Z",
+          "duration_sec": 8
+        },
+        {
+          "name": "build / vale",
+          "status": "skipped",
+          "started_at": "2026-07-03T15:31:22Z",
+          "completed_at": "2026-07-03T15:31:22Z",
+          "duration_sec": 0
+        }
+      ]
+    }
+  ],
+  "workflows": [
+    {
+      "filename": "gradle-wrapper-validation.yml",
+      "hash": "04526945275c07b7ec8481281931aa653deceed193cbbf514b23cd8d634fae78"
+    },
+    {
+      "filename": "docs-build.yml",
+      "hash": "6772ac2baa16f9669594b6ea59ebfc2a9e1a6b14f3550571e4faacaf2d397023"
+    }
+  ]
+}

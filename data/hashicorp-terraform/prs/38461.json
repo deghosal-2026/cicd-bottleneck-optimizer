@@ -1,0 +1,70 @@
+{
+  "pr_number": 38461,
+  "title": "PSS: Allow users of Terraform in automation to trust the state storage provider when initialising a state store for the first time",
+  "state": "closed",
+  "author": "SarahFrench",
+  "created_at": "2026-04-29T11:38:55Z",
+  "updated_at": "2026-06-27T02:43:51Z",
+  "merged_at": "2026-05-27T16:22:26Z",
+  "head_sha": "f261985c4f1856268bc85cdf4b3ec5da1c3eddc7",
+  "labels": [
+    "no-changelog-needed"
+  ],
+  "ci_runs": [
+    {
+      "run_id": 26520164092,
+      "workflow_id": 126957301,
+      "workflow_name": "equivalence-test-diff",
+      "status": "success",
+      "head_sha": "f261985c4f1856268bc85cdf4b3ec5da1c3eddc7",
+      "created_at": "2026-05-27T15:13:18Z",
+      "updated_at": "2026-05-27T15:15:25Z",
+      "run_started_at": "2026-05-27T15:13:18Z",
+      "jobs": [
+        {
+          "name": "Equivalence Test Diff",
+          "status": "success",
+          "started_at": "2026-05-27T15:13:24Z",
+          "completed_at": "2026-05-27T15:15:23Z",
+          "duration_sec": 119
+        }
+      ]
+    },
+    {
+      "run_id": 26520164108,
+      "workflow_id": 23102955,
+      "workflow_name": "Quick Checks",
+      "status": "success",
+      "head_sha": "f261985c4f1856268bc85cdf4b3ec5da1c3eddc7",
+      "created_at": "2026-05-27T15:13:18Z",
+      "updated_at": "2026-05-27T15:19:32Z",
+      "run_started_at": "2026-05-27T15:13:18Z",
+      "jobs": []
+    },
+    {
+      "run_id": 26520163522,
+      "workflow_id": 278786541,
+      "workflow_name": "Changelog Validation",
+      "status": "success",
+      "head_sha": "f261985c4f1856268bc85cdf4b3ec5da1c3eddc7",
+      "created_at": "2026-05-27T15:13:17Z",
+      "updated_at": "2026-05-27T15:13:33Z",
+      "run_started_at": "2026-05-27T15:13:17Z",
+      "jobs": []
+    }
+  ],
+  "workflows": [
+    {
+      "filename": "issue-comment-created.yml",
+      "hash": "7b39410b950b1b04577cd7d04201e9ce01aaeca7e6daf5af2dbe7286e23ef08e"
+    },
+    {
+      "filename": "lock.yml",
+      "hash": "7606d6b818ae4ff47b39930380d804b9a904124f7dffe6d9bfbba7e715c2f183"
+    },
+    {
+      "filename": "build.yml",
+      "hash": "192267d1041a111b5fb0a96d698602ec33bd95faf16bffb870abd3b3593bfd6c"
+    }
+  ]
+}

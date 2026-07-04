@@ -1,0 +1,97 @@
+{
+  "pr_number": 317396,
+  "title": "tools: add additional patterns to default edit restrictions",
+  "state": "closed",
+  "author": "connor4312",
+  "created_at": "2026-05-19T21:40:43Z",
+  "updated_at": "2026-07-03T23:40:38Z",
+  "merged_at": "2026-05-19T22:06:34Z",
+  "head_sha": "f07faf6d75f3a8ad8c2b0b09503e0c043944e56d",
+  "labels": [],
+  "ci_runs": [
+    {
+      "run_id": 26127008142,
+      "workflow_id": 38332752,
+      "workflow_name": "Telemetry",
+      "status": "success",
+      "head_sha": "f07faf6d75f3a8ad8c2b0b09503e0c043944e56d",
+      "created_at": "2026-05-19T21:40:47Z",
+      "updated_at": "2026-05-19T21:46:26Z",
+      "run_started_at": "2026-05-19T21:40:47Z",
+      "jobs": [
+        {
+          "name": "Check metadata",
+          "status": "success",
+          "started_at": "2026-05-19T21:45:58Z",
+          "completed_at": "2026-05-19T21:46:26Z",
+          "duration_sec": 28
+        }
+      ]
+    },
+    {
+      "run_id": 26127008133,
+      "workflow_id": 21497327,
+      "workflow_name": "Monaco Editor checks",
+      "status": "success",
+      "head_sha": "f07faf6d75f3a8ad8c2b0b09503e0c043944e56d",
+      "created_at": "2026-05-19T21:40:47Z",
+      "updated_at": "2026-05-19T21:50:32Z",
+      "run_started_at": "2026-05-19T21:40:47Z",
+      "jobs": []
+    },
+    {
+      "run_id": 26127008138,
+      "workflow_id": 211787236,
+      "workflow_name": "Prevent engineering system changes in PRs",
+      "status": "success",
+      "head_sha": "f07faf6d75f3a8ad8c2b0b09503e0c043944e56d",
+      "created_at": "2026-05-19T21:40:47Z",
+      "updated_at": "2026-05-19T21:53:00Z",
+      "run_started_at": "2026-05-19T21:40:47Z",
+      "jobs": []
+    },
+    {
+      "run_id": 26127008134,
+      "workflow_id": 273167221,
+      "workflow_name": "Component Fixtures",
+      "status": "success",
+      "head_sha": "f07faf6d75f3a8ad8c2b0b09503e0c043944e56d",
+      "created_at": "2026-05-19T21:40:47Z",
+      "updated_at": "2026-05-19T21:53:25Z",
+      "run_started_at": "2026-05-19T21:40:47Z",
+      "jobs": []
+    },
+    {
+      "run_id": 26127008135,
+      "workflow_id": 258342321,
+      "workflow_name": "chat-lib tests",
+      "status": "success",
+      "head_sha": "f07faf6d75f3a8ad8c2b0b09503e0c043944e56d",
+      "created_at": "2026-05-19T21:40:47Z",
+      "updated_at": "2026-05-19T21:55:39Z",
+      "run_started_at": "2026-05-19T21:40:47Z",
+      "jobs": []
+    },
+    {
+      "run_id": 26127008094,
+      "workflow_id": 4196599,
+      "workflow_name": "Code OSS",
+      "status": "success",
+      "head_sha": "f07faf6d75f3a8ad8c2b0b09503e0c043944e56d",
+      "created_at": "2026-05-19T21:40:47Z",
+      "updated_at": "2026-05-19T22:06:31Z",
+      "run_started_at": "2026-05-19T21:40:47Z",
+      "jobs": []
+    }
+  ],
+  "workflows": [
+    {
+      "filename": "pr.yml",
+      "hash": "0625dff11585a35e1ad0cf2b3cbea2cb72e521039dfd406eaa8de1ec75492115"
+    },
+    {
+      "filename": "monaco-editor.yml",
+      "hash": "02e5f951a8bc0193f3239d64b65c547aebcf6427849f35a8e7b9500b4eeb10f9"
+    }
+  ]
+}

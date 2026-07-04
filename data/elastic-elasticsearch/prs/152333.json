@@ -1,0 +1,74 @@
+{
+  "pr_number": 152333,
+  "title": "Update Gradle wrapper 9.6.x to v9.6.1 (main)",
+  "state": "open",
+  "author": "elastic-renovate-prod[bot]",
+  "created_at": "2026-06-26T17:22:17Z",
+  "updated_at": "2026-07-04T05:42:39Z",
+  "merged_at": null,
+  "head_sha": "ccc77306572c3bf6de89e11706ab026c49fd0214",
+  "labels": [
+    ">non-issue",
+    ":Delivery/Build",
+    "Team:Delivery",
+    "auto-merge-without-approval",
+    "auto-backport",
+    "serverless-linked",
+    "v9.5.0",
+    "v8.19.18",
+    "v9.4.4",
+    "v9.3.7"
+  ],
+  "ci_runs": [
+    {
+      "run_id": 28696609281,
+      "workflow_id": 146525436,
+      "workflow_name": "docs-build",
+      "status": "success",
+      "head_sha": "ccc77306572c3bf6de89e11706ab026c49fd0214",
+      "created_at": "2026-07-04T05:42:29Z",
+      "updated_at": "2026-07-04T05:42:51Z",
+      "run_started_at": "2026-07-04T05:42:29Z",
+      "jobs": [
+        {
+          "name": "build / check",
+          "status": "success",
+          "started_at": "2026-07-04T05:42:33Z",
+          "completed_at": "2026-07-04T05:42:40Z",
+          "duration_sec": 7
+        },
+        {
+          "name": "build / match",
+          "status": "success",
+          "started_at": "2026-07-04T05:42:31Z",
+          "completed_at": "2026-07-04T05:42:37Z",
+          "duration_sec": 6
+        },
+        {
+          "name": "build / build",
+          "status": "success",
+          "started_at": "2026-07-04T05:42:43Z",
+          "completed_at": "2026-07-04T05:42:50Z",
+          "duration_sec": 7
+        },
+        {
+          "name": "build / vale",
+          "status": "skipped",
+          "started_at": "2026-07-04T05:42:41Z",
+          "completed_at": "2026-07-04T05:42:41Z",
+          "duration_sec": 0
+        }
+      ]
+    }
+  ],
+  "workflows": [
+    {
+      "filename": "gradle-wrapper-validation.yml",
+      "hash": "04526945275c07b7ec8481281931aa653deceed193cbbf514b23cd8d634fae78"
+    },
+    {
+      "filename": "docs-build.yml",
+      "hash": "6772ac2baa16f9669594b6ea59ebfc2a9e1a6b14f3550571e4faacaf2d397023"
+    }
+  ]
+}

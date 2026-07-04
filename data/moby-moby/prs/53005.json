@@ -1,0 +1,189 @@
+{
+  "pr_number": 53005,
+  "title": "[chore] api/types/network: accept legacy CIDR-prefixed gateway addresses",
+  "state": "open",
+  "author": "vishalmore90",
+  "created_at": "2026-07-03T15:18:40Z",
+  "updated_at": "2026-07-03T15:22:31Z",
+  "merged_at": null,
+  "head_sha": "fb71fdc93ddf245d161916b778f19e0b3d16f1ef",
+  "labels": [
+    "area/networking",
+    "module/api"
+  ],
+  "ci_runs": [
+    {
+      "run_id": 28669581193,
+      "workflow_id": 260262819,
+      "workflow_name": "validate-milestone",
+      "status": "failure",
+      "head_sha": "fb71fdc93ddf245d161916b778f19e0b3d16f1ef",
+      "created_at": "2026-07-03T15:22:34Z",
+      "updated_at": "2026-07-03T15:49:44Z",
+      "run_started_at": "2026-07-03T15:49:35Z",
+      "jobs": [
+        {
+          "name": "validate-milestone",
+          "status": "failure",
+          "started_at": "2026-07-03T15:49:40Z",
+          "completed_at": "2026-07-03T15:49:43Z",
+          "duration_sec": 3
+        }
+      ]
+    },
+    {
+      "run_id": 28669581175,
+      "workflow_id": 86900533,
+      "workflow_name": "validate-pr",
+      "status": "failure",
+      "head_sha": "fb71fdc93ddf245d161916b778f19e0b3d16f1ef",
+      "created_at": "2026-07-03T15:22:34Z",
+      "updated_at": "2026-07-03T15:50:03Z",
+      "run_started_at": "2026-07-03T15:49:35Z",
+      "jobs": []
+    },
+    {
+      "run_id": 28669394190,
+      "workflow_id": 168088309,
+      "workflow_name": "windows-2025",
+      "status": "success",
+      "head_sha": "fb71fdc93ddf245d161916b778f19e0b3d16f1ef",
+      "created_at": "2026-07-03T15:18:45Z",
+      "updated_at": "2026-07-03T16:58:07Z",
+      "run_started_at": "2026-07-03T15:49:34Z",
+      "jobs": []
+    },
+    {
+      "run_id": 28669394157,
+      "workflow_id": 21805183,
+      "workflow_name": "ci",
+      "status": "success",
+      "head_sha": "fb71fdc93ddf245d161916b778f19e0b3d16f1ef",
+      "created_at": "2026-07-03T15:18:45Z",
+      "updated_at": "2026-07-03T15:53:52Z",
+      "run_started_at": "2026-07-03T15:49:34Z",
+      "jobs": []
+    },
+    {
+      "run_id": 28669394302,
+      "workflow_id": 44461128,
+      "workflow_name": "bin-image",
+      "status": "success",
+      "head_sha": "fb71fdc93ddf245d161916b778f19e0b3d16f1ef",
+      "created_at": "2026-07-03T15:18:45Z",
+      "updated_at": "2026-07-03T15:54:32Z",
+      "run_started_at": "2026-07-03T15:49:34Z",
+      "jobs": []
+    },
+    {
+      "run_id": 28669394126,
+      "workflow_id": 187772110,
+      "workflow_name": "vm",
+      "status": "success",
+      "head_sha": "fb71fdc93ddf245d161916b778f19e0b3d16f1ef",
+      "created_at": "2026-07-03T15:18:45Z",
+      "updated_at": "2026-07-03T16:11:48Z",
+      "run_started_at": "2026-07-03T15:49:34Z",
+      "jobs": []
+    },
+    {
+      "run_id": 28669394398,
+      "workflow_id": 261203439,
+      "workflow_name": "zizmor",
+      "status": "success",
+      "head_sha": "fb71fdc93ddf245d161916b778f19e0b3d16f1ef",
+      "created_at": "2026-07-03T15:18:45Z",
+      "updated_at": "2026-07-03T15:50:07Z",
+      "run_started_at": "2026-07-03T15:49:35Z",
+      "jobs": []
+    },
+    {
+      "run_id": 28669394170,
+      "workflow_id": 26704268,
+      "workflow_name": "test",
+      "status": "failure",
+      "head_sha": "fb71fdc93ddf245d161916b778f19e0b3d16f1ef",
+      "created_at": "2026-07-03T15:18:45Z",
+      "updated_at": "2026-07-03T16:25:03Z",
+      "run_started_at": "2026-07-03T15:49:34Z",
+      "jobs": []
+    },
+    {
+      "run_id": 28669394163,
+      "workflow_id": 33573227,
+      "workflow_name": "buildkit",
+      "status": "success",
+      "head_sha": "fb71fdc93ddf245d161916b778f19e0b3d16f1ef",
+      "created_at": "2026-07-03T15:18:45Z",
+      "updated_at": "2026-07-03T16:21:37Z",
+      "run_started_at": "2026-07-03T15:49:34Z",
+      "jobs": []
+    },
+    {
+      "run_id": 28669394049,
+      "workflow_id": 81499888,
+      "workflow_name": "codeql",
+      "status": "success",
+      "head_sha": "fb71fdc93ddf245d161916b778f19e0b3d16f1ef",
+      "created_at": "2026-07-03T15:18:44Z",
+      "updated_at": "2026-07-03T15:56:01Z",
+      "run_started_at": "2026-07-03T15:49:34Z",
+      "jobs": []
+    },
+    {
+      "run_id": 28669394027,
+      "workflow_id": 285600822,
+      "workflow_name": "PR Review - Trigger",
+      "status": "success",
+      "head_sha": "fb71fdc93ddf245d161916b778f19e0b3d16f1ef",
+      "created_at": "2026-07-03T15:18:44Z",
+      "updated_at": "2026-07-03T15:49:43Z",
+      "run_started_at": "2026-07-03T15:49:34Z",
+      "jobs": []
+    },
+    {
+      "run_id": 28669394045,
+      "workflow_id": 86900533,
+      "workflow_name": "validate-pr",
+      "status": "cancelled",
+      "head_sha": "fb71fdc93ddf245d161916b778f19e0b3d16f1ef",
+      "created_at": "2026-07-03T15:18:44Z",
+      "updated_at": "2026-07-03T15:49:38Z",
+      "run_started_at": "2026-07-03T15:49:34Z",
+      "jobs": []
+    },
+    {
+      "run_id": 28669394046,
+      "workflow_id": 260262819,
+      "workflow_name": "validate-milestone",
+      "status": "cancelled",
+      "head_sha": "fb71fdc93ddf245d161916b778f19e0b3d16f1ef",
+      "created_at": "2026-07-03T15:18:44Z",
+      "updated_at": "2026-07-03T15:49:38Z",
+      "run_started_at": "2026-07-03T15:49:34Z",
+      "jobs": []
+    }
+  ],
+  "workflows": [
+    {
+      "filename": ".dco.yml",
+      "hash": "dea4b82ced9a768e825d38c022001e448d052703020b8345ce1752af0665f479"
+    },
+    {
+      "filename": ".test-unit.yml",
+      "hash": "64ea4ac26a2df4f48f55a6cfdef04ec69994f18e0dce69c1d98792ecbf66679b"
+    },
+    {
+      "filename": ".test.yml",
+      "hash": "698dd2de1d8e32af05925d489ceb376de42b9db0f6a9f271c0e2f1c83e849f57"
+    },
+    {
+      "filename": ".vm.yml",
+      "hash": "fa079150844d5674b2c95776f852977d6cb1a8faeb202fd94a8b63451445a5ed"
+    },
+    {
+      "filename": ".windows.yml",
+      "hash": "b3cb6d7e301a89297e6b10d87af74beee4996445f851b4fb2d44cdb54c8924f6"
+    }
+  ]
+}

@@ -1,0 +1,70 @@
+{
+  "pr_number": 38769,
+  "title": "feat(search): add experimental -policies flag and initial policy evaluation support to terraform query",
+  "state": "closed",
+  "author": "mjyocca",
+  "created_at": "2026-06-24T03:24:17Z",
+  "updated_at": "2026-07-02T16:36:02Z",
+  "merged_at": "2026-07-02T16:35:59Z",
+  "head_sha": "1de5b0ed97709def70be0fbe7ff88285611705b1",
+  "labels": [
+    "no-changelog-needed"
+  ],
+  "ci_runs": [
+    {
+      "run_id": 28555727635,
+      "workflow_id": 278786541,
+      "workflow_name": "Changelog Validation",
+      "status": "success",
+      "head_sha": "1de5b0ed97709def70be0fbe7ff88285611705b1",
+      "created_at": "2026-07-01T23:57:20Z",
+      "updated_at": "2026-07-01T23:57:30Z",
+      "run_started_at": "2026-07-01T23:57:20Z",
+      "jobs": [
+        {
+          "name": "Validate Changelog",
+          "status": "success",
+          "started_at": "2026-07-01T23:57:23Z",
+          "completed_at": "2026-07-01T23:57:29Z",
+          "duration_sec": 6
+        }
+      ]
+    },
+    {
+      "run_id": 28555727612,
+      "workflow_id": 126957301,
+      "workflow_name": "equivalence-test-diff",
+      "status": "success",
+      "head_sha": "1de5b0ed97709def70be0fbe7ff88285611705b1",
+      "created_at": "2026-07-01T23:57:20Z",
+      "updated_at": "2026-07-01T23:59:28Z",
+      "run_started_at": "2026-07-01T23:57:20Z",
+      "jobs": []
+    },
+    {
+      "run_id": 28555727620,
+      "workflow_id": 23102955,
+      "workflow_name": "Quick Checks",
+      "status": "success",
+      "head_sha": "1de5b0ed97709def70be0fbe7ff88285611705b1",
+      "created_at": "2026-07-01T23:57:20Z",
+      "updated_at": "2026-07-02T00:03:42Z",
+      "run_started_at": "2026-07-01T23:57:20Z",
+      "jobs": []
+    }
+  ],
+  "workflows": [
+    {
+      "filename": "issue-comment-created.yml",
+      "hash": "7b39410b950b1b04577cd7d04201e9ce01aaeca7e6daf5af2dbe7286e23ef08e"
+    },
+    {
+      "filename": "lock.yml",
+      "hash": "7606d6b818ae4ff47b39930380d804b9a904124f7dffe6d9bfbba7e715c2f183"
+    },
+    {
+      "filename": "build.yml",
+      "hash": "192267d1041a111b5fb0a96d698602ec33bd95faf16bffb870abd3b3593bfd6c"
+    }
+  ]
+}

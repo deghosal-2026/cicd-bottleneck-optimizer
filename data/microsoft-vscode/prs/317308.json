@@ -1,0 +1,97 @@
+{
+  "pr_number": 317308,
+  "title": "Re-introduce model visibility control for chat window model picker",
+  "state": "closed",
+  "author": "vritant24",
+  "created_at": "2026-05-19T14:07:40Z",
+  "updated_at": "2026-07-03T23:40:39Z",
+  "merged_at": "2026-05-19T18:54:25Z",
+  "head_sha": "6c21d376fcf5bef91305c38e4a254fd88eb47b26",
+  "labels": [],
+  "ci_runs": [
+    {
+      "run_id": 26115958289,
+      "workflow_id": 211787236,
+      "workflow_name": "Prevent engineering system changes in PRs",
+      "status": "success",
+      "head_sha": "6c21d376fcf5bef91305c38e4a254fd88eb47b26",
+      "created_at": "2026-05-19T18:07:19Z",
+      "updated_at": "2026-05-19T18:09:44Z",
+      "run_started_at": "2026-05-19T18:07:19Z",
+      "jobs": [
+        {
+          "name": "Prevent engineering system changes in PRs",
+          "status": "success",
+          "started_at": "2026-05-19T18:09:38Z",
+          "completed_at": "2026-05-19T18:09:43Z",
+          "duration_sec": 5
+        }
+      ]
+    },
+    {
+      "run_id": 26115958113,
+      "workflow_id": 38332752,
+      "workflow_name": "Telemetry",
+      "status": "success",
+      "head_sha": "6c21d376fcf5bef91305c38e4a254fd88eb47b26",
+      "created_at": "2026-05-19T18:07:19Z",
+      "updated_at": "2026-05-19T18:10:07Z",
+      "run_started_at": "2026-05-19T18:07:19Z",
+      "jobs": []
+    },
+    {
+      "run_id": 26115958285,
+      "workflow_id": 258342321,
+      "workflow_name": "chat-lib tests",
+      "status": "success",
+      "head_sha": "6c21d376fcf5bef91305c38e4a254fd88eb47b26",
+      "created_at": "2026-05-19T18:07:19Z",
+      "updated_at": "2026-05-19T18:13:09Z",
+      "run_started_at": "2026-05-19T18:07:19Z",
+      "jobs": []
+    },
+    {
+      "run_id": 26115958290,
+      "workflow_id": 21497327,
+      "workflow_name": "Monaco Editor checks",
+      "status": "success",
+      "head_sha": "6c21d376fcf5bef91305c38e4a254fd88eb47b26",
+      "created_at": "2026-05-19T18:07:19Z",
+      "updated_at": "2026-05-19T18:14:00Z",
+      "run_started_at": "2026-05-19T18:07:19Z",
+      "jobs": []
+    },
+    {
+      "run_id": 26115958280,
+      "workflow_id": 273167221,
+      "workflow_name": "Component Fixtures",
+      "status": "success",
+      "head_sha": "6c21d376fcf5bef91305c38e4a254fd88eb47b26",
+      "created_at": "2026-05-19T18:07:19Z",
+      "updated_at": "2026-05-19T18:14:36Z",
+      "run_started_at": "2026-05-19T18:07:19Z",
+      "jobs": []
+    },
+    {
+      "run_id": 26115958286,
+      "workflow_id": 4196599,
+      "workflow_name": "Code OSS",
+      "status": "success",
+      "head_sha": "6c21d376fcf5bef91305c38e4a254fd88eb47b26",
+      "created_at": "2026-05-19T18:07:19Z",
+      "updated_at": "2026-05-19T18:24:51Z",
+      "run_started_at": "2026-05-19T18:07:19Z",
+      "jobs": []
+    }
+  ],
+  "workflows": [
+    {
+      "filename": "pr.yml",
+      "hash": "0625dff11585a35e1ad0cf2b3cbea2cb72e521039dfd406eaa8de1ec75492115"
+    },
+    {
+      "filename": "monaco-editor.yml",
+      "hash": "02e5f951a8bc0193f3239d64b65c547aebcf6427849f35a8e7b9500b4eeb10f9"
+    }
+  ]
+}

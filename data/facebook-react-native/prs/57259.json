@@ -1,0 +1,68 @@
+{
+  "pr_number": 57259,
+  "title": "Allow to disable shouldDelayChildPressedState on scrollable Android containers (#57259)",
+  "state": "closed",
+  "author": "j-piasecki",
+  "created_at": "2026-06-18T09:22:43Z",
+  "updated_at": "2026-07-03T15:39:46Z",
+  "merged_at": null,
+  "head_sha": "d0e7a59e5aab86c835a87d0094fcb7392160fde1",
+  "labels": [
+    "CLA Signed",
+    "Merged",
+    "p: Facebook",
+    "Partner",
+    "p: Software Mansion",
+    "meta-exported"
+  ],
+  "ci_runs": [
+    {
+      "run_id": 28650835612,
+      "workflow_id": 244203896,
+      "workflow_name": "Validate C++ API Snapshots",
+      "status": "success",
+      "head_sha": "d0e7a59e5aab86c835a87d0094fcb7392160fde1",
+      "created_at": "2026-07-03T09:14:37Z",
+      "updated_at": "2026-07-03T09:17:37Z",
+      "run_started_at": "2026-07-03T09:14:37Z",
+      "jobs": [
+        {
+          "name": "validate_cxx_api_snapshots",
+          "status": "success",
+          "started_at": "2026-07-03T09:14:44Z",
+          "completed_at": "2026-07-03T09:17:36Z",
+          "duration_sec": 172
+        }
+      ]
+    },
+    {
+      "run_id": 28650835788,
+      "workflow_id": 85394709,
+      "workflow_name": "Test All",
+      "status": "success",
+      "head_sha": "d0e7a59e5aab86c835a87d0094fcb7392160fde1",
+      "created_at": "2026-07-03T09:14:37Z",
+      "updated_at": "2026-07-03T09:38:19Z",
+      "run_started_at": "2026-07-03T09:14:37Z",
+      "jobs": []
+    }
+  ],
+  "workflows": [
+    {
+      "filename": "needs-attention.yml",
+      "hash": "65a4a6cc5fcc5896e78ea357cfe209eec2845f173e8bd642ae2d343bfc66deba"
+    },
+    {
+      "filename": "on-issue-labeled.yml",
+      "hash": "7673645f1d0ba0da4c9c7d4f714f8376b8a20f1d6e553304c01769e627efc3d6"
+    },
+    {
+      "filename": "stale-bot.yml",
+      "hash": "1f4dfbb4734e1d14d7263a05e04d3b3c096e1210783c61bf98c57a5d86cd79f2"
+    },
+    {
+      "filename": "autorebase.yml",
+      "hash": "617b8a9799890a1d5010ff20bc08c4064fbffe3d3be0a1049ada31ccd0fc0a61"
+    }
+  ]
+}

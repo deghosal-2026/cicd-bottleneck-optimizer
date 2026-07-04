@@ -1,0 +1,68 @@
+{
+  "pr_number": 38715,
+  "title": "cloud: render Terraform policy evaluation outcomes for plan and apply",
+  "state": "closed",
+  "author": "viveksinghgit95",
+  "created_at": "2026-06-12T07:15:45Z",
+  "updated_at": "2026-06-25T14:21:47Z",
+  "merged_at": "2026-06-25T14:21:47Z",
+  "head_sha": "88235698e193b643882039c09335dd9fac7fd3aa",
+  "labels": [],
+  "ci_runs": [
+    {
+      "run_id": 28176630114,
+      "workflow_id": 278786541,
+      "workflow_name": "Changelog Validation",
+      "status": "success",
+      "head_sha": "88235698e193b643882039c09335dd9fac7fd3aa",
+      "created_at": "2026-06-25T14:15:50Z",
+      "updated_at": "2026-06-25T14:16:00Z",
+      "run_started_at": "2026-06-25T14:15:50Z",
+      "jobs": [
+        {
+          "name": "Validate Changelog",
+          "status": "success",
+          "started_at": "2026-06-25T14:15:54Z",
+          "completed_at": "2026-06-25T14:15:59Z",
+          "duration_sec": 5
+        }
+      ]
+    },
+    {
+      "run_id": 28176630100,
+      "workflow_id": 126957301,
+      "workflow_name": "equivalence-test-diff",
+      "status": "success",
+      "head_sha": "88235698e193b643882039c09335dd9fac7fd3aa",
+      "created_at": "2026-06-25T14:15:50Z",
+      "updated_at": "2026-06-25T14:18:00Z",
+      "run_started_at": "2026-06-25T14:15:50Z",
+      "jobs": []
+    },
+    {
+      "run_id": 28176630570,
+      "workflow_id": 23102955,
+      "workflow_name": "Quick Checks",
+      "status": "success",
+      "head_sha": "88235698e193b643882039c09335dd9fac7fd3aa",
+      "created_at": "2026-06-25T14:15:50Z",
+      "updated_at": "2026-06-25T14:21:41Z",
+      "run_started_at": "2026-06-25T14:15:50Z",
+      "jobs": []
+    }
+  ],
+  "workflows": [
+    {
+      "filename": "issue-comment-created.yml",
+      "hash": "7b39410b950b1b04577cd7d04201e9ce01aaeca7e6daf5af2dbe7286e23ef08e"
+    },
+    {
+      "filename": "lock.yml",
+      "hash": "7606d6b818ae4ff47b39930380d804b9a904124f7dffe6d9bfbba7e715c2f183"
+    },
+    {
+      "filename": "build.yml",
+      "hash": "192267d1041a111b5fb0a96d698602ec33bd95faf16bffb870abd3b3593bfd6c"
+    }
+  ]
+}

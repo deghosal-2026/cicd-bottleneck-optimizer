@@ -1,0 +1,76 @@
+{
+  "pr_number": 69081,
+  "title": "[21.2.x] fix(core): harden TransferState restoration against DOM clobbering",
+  "state": "closed",
+  "author": "JeanMeche",
+  "created_at": "2026-06-02T11:52:27Z",
+  "updated_at": "2026-07-04T00:32:23Z",
+  "merged_at": "2026-06-03T19:25:38Z",
+  "head_sha": "13ef820e5518b9e25b7a489b04ee0d3fb83d60c0",
+  "labels": [
+    "action: merge",
+    "area: core",
+    "target: lts"
+  ],
+  "ci_runs": [
+    {
+      "run_id": 26907282005,
+      "workflow_id": 81905725,
+      "workflow_name": "Build adev for preview deployment",
+      "status": "skipped",
+      "head_sha": "13ef820e5518b9e25b7a489b04ee0d3fb83d60c0",
+      "created_at": "2026-06-03T19:15:14Z",
+      "updated_at": "2026-06-03T19:15:15Z",
+      "run_started_at": "2026-06-03T19:15:14Z",
+      "jobs": [
+        {
+          "name": "adev-build",
+          "status": "skipped",
+          "started_at": "2026-06-03T19:15:15Z",
+          "completed_at": "2026-06-03T19:15:14Z",
+          "duration_sec": -1
+        }
+      ]
+    },
+    {
+      "run_id": 26818503624,
+      "workflow_id": 81905725,
+      "workflow_name": "Build adev for preview deployment",
+      "status": "skipped",
+      "head_sha": "13ef820e5518b9e25b7a489b04ee0d3fb83d60c0",
+      "created_at": "2026-06-02T12:04:27Z",
+      "updated_at": "2026-06-02T12:04:29Z",
+      "run_started_at": "2026-06-02T12:04:27Z",
+      "jobs": []
+    },
+    {
+      "run_id": 26818503597,
+      "workflow_id": 98951684,
+      "workflow_name": "Pull Request",
+      "status": "success",
+      "head_sha": "13ef820e5518b9e25b7a489b04ee0d3fb83d60c0",
+      "created_at": "2026-06-02T12:04:27Z",
+      "updated_at": "2026-06-02T12:11:00Z",
+      "run_started_at": "2026-06-02T12:04:27Z",
+      "jobs": []
+    }
+  ],
+  "workflows": [
+    {
+      "filename": "dev-infra.yml",
+      "hash": "0324771d031f8d4ca9a1c3b675ee31b460a5d25e756b8cbe712977c3d5173c0b"
+    },
+    {
+      "filename": "scorecard.yml",
+      "hash": "05d1e6029bf61cfeb3512feee84d44a15e8444be71aa06e7903f2c4a577a8911"
+    },
+    {
+      "filename": "google-internal-tests.yml",
+      "hash": "3a68e85f2e757c7b86ccc8adb0aa9a246cdf914829328a50896622a7ae4ef5d8"
+    },
+    {
+      "filename": "assistant-to-the-branch-manager.yml",
+      "hash": "1111a82e3a71313e17d32a3fd2e2bd3514e36ea9187c49976754dd6b3e587b2d"
+    }
+  ]
+}

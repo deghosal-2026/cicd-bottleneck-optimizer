@@ -1,0 +1,68 @@
+{
+  "pr_number": 152245,
+  "title": "Incremental bulk: return 429 on request cancellation, add timeout ITs",
+  "state": "open",
+  "author": "mhl-b",
+  "created_at": "2026-06-26T04:42:04Z",
+  "updated_at": "2026-07-03T18:33:06Z",
+  "merged_at": null,
+  "head_sha": "378deddf706d583d3f19ce1216cecdf677e6da2a",
+  "labels": [
+    ">non-issue",
+    ":Distributed/CRUD",
+    "Team:Distributed",
+    "v9.5.0"
+  ],
+  "ci_runs": [
+    {
+      "run_id": 28677711533,
+      "workflow_id": 146525436,
+      "workflow_name": "docs-build",
+      "status": "success",
+      "head_sha": "378deddf706d583d3f19ce1216cecdf677e6da2a",
+      "created_at": "2026-07-03T18:33:10Z",
+      "updated_at": "2026-07-03T18:33:30Z",
+      "run_started_at": "2026-07-03T18:33:10Z",
+      "jobs": [
+        {
+          "name": "build / match",
+          "status": "success",
+          "started_at": "2026-07-03T18:33:13Z",
+          "completed_at": "2026-07-03T18:33:20Z",
+          "duration_sec": 7
+        },
+        {
+          "name": "build / check",
+          "status": "success",
+          "started_at": "2026-07-03T18:33:13Z",
+          "completed_at": "2026-07-03T18:33:21Z",
+          "duration_sec": 8
+        },
+        {
+          "name": "build / build",
+          "status": "success",
+          "started_at": "2026-07-03T18:33:23Z",
+          "completed_at": "2026-07-03T18:33:29Z",
+          "duration_sec": 6
+        },
+        {
+          "name": "build / vale",
+          "status": "skipped",
+          "started_at": "2026-07-03T18:33:22Z",
+          "completed_at": "2026-07-03T18:33:21Z",
+          "duration_sec": -1
+        }
+      ]
+    }
+  ],
+  "workflows": [
+    {
+      "filename": "gradle-wrapper-validation.yml",
+      "hash": "04526945275c07b7ec8481281931aa653deceed193cbbf514b23cd8d634fae78"
+    },
+    {
+      "filename": "docs-build.yml",
+      "hash": "6772ac2baa16f9669594b6ea59ebfc2a9e1a6b14f3550571e4faacaf2d397023"
+    }
+  ]
+}

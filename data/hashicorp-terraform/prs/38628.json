@@ -1,0 +1,70 @@
+{
+  "pr_number": 38628,
+  "title": "Check for configuration errors before installing modules",
+  "state": "closed",
+  "author": "dbanck",
+  "created_at": "2026-05-20T16:36:09Z",
+  "updated_at": "2026-06-26T02:44:25Z",
+  "merged_at": "2026-05-26T13:14:45Z",
+  "head_sha": "79c57a2b68cc4eb8c2e28d53116ac274e64a4298",
+  "labels": [
+    "1.15-backport"
+  ],
+  "ci_runs": [
+    {
+      "run_id": 26227940319,
+      "workflow_id": 278786541,
+      "workflow_name": "Changelog Validation",
+      "status": "success",
+      "head_sha": "79c57a2b68cc4eb8c2e28d53116ac274e64a4298",
+      "created_at": "2026-05-21T13:08:48Z",
+      "updated_at": "2026-05-21T13:08:59Z",
+      "run_started_at": "2026-05-21T13:08:48Z",
+      "jobs": [
+        {
+          "name": "Validate Changelog",
+          "status": "success",
+          "started_at": "2026-05-21T13:08:53Z",
+          "completed_at": "2026-05-21T13:08:58Z",
+          "duration_sec": 5
+        }
+      ]
+    },
+    {
+      "run_id": 26227940152,
+      "workflow_id": 126957301,
+      "workflow_name": "equivalence-test-diff",
+      "status": "success",
+      "head_sha": "79c57a2b68cc4eb8c2e28d53116ac274e64a4298",
+      "created_at": "2026-05-21T13:08:48Z",
+      "updated_at": "2026-05-21T13:11:00Z",
+      "run_started_at": "2026-05-21T13:08:48Z",
+      "jobs": []
+    },
+    {
+      "run_id": 26227940148,
+      "workflow_id": 23102955,
+      "workflow_name": "Quick Checks",
+      "status": "success",
+      "head_sha": "79c57a2b68cc4eb8c2e28d53116ac274e64a4298",
+      "created_at": "2026-05-21T13:08:48Z",
+      "updated_at": "2026-05-21T13:14:51Z",
+      "run_started_at": "2026-05-21T13:08:48Z",
+      "jobs": []
+    }
+  ],
+  "workflows": [
+    {
+      "filename": "issue-comment-created.yml",
+      "hash": "7b39410b950b1b04577cd7d04201e9ce01aaeca7e6daf5af2dbe7286e23ef08e"
+    },
+    {
+      "filename": "lock.yml",
+      "hash": "7606d6b818ae4ff47b39930380d804b9a904124f7dffe6d9bfbba7e715c2f183"
+    },
+    {
+      "filename": "build.yml",
+      "hash": "192267d1041a111b5fb0a96d698602ec33bd95faf16bffb870abd3b3593bfd6c"
+    }
+  ]
+}

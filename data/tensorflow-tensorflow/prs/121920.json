@@ -1,0 +1,82 @@
+{
+  "pr_number": 121920,
+  "title": "Automated Code Change",
+  "state": "closed",
+  "author": "copybara-service[bot]",
+  "created_at": "2026-06-24T06:55:56Z",
+  "updated_at": "2026-07-04T04:39:55Z",
+  "merged_at": null,
+  "head_sha": "3f8b7379f81128b72d2fb588135910d2a255676d",
+  "labels": [],
+  "ci_runs": [
+    {
+      "run_id": 28080956093,
+      "workflow_id": 248743471,
+      "workflow_name": "CI",
+      "status": "success",
+      "head_sha": "3f8b7379f81128b72d2fb588135910d2a255676d",
+      "created_at": "2026-06-24T06:56:00Z",
+      "updated_at": "2026-06-24T07:14:43Z",
+      "run_started_at": "2026-06-24T06:56:00Z",
+      "jobs": [
+        {
+          "name": "build-windows-x86 / build-and-test",
+          "status": "success",
+          "started_at": "2026-06-24T06:56:01Z",
+          "completed_at": "2026-06-24T07:05:05Z",
+          "duration_sec": 544
+        },
+        {
+          "name": "build-linux-x86-cpu / build-and-test",
+          "status": "success",
+          "started_at": "2026-06-24T06:56:11Z",
+          "completed_at": "2026-06-24T07:07:04Z",
+          "duration_sec": 653
+        },
+        {
+          "name": "build-arm64 / build-only",
+          "status": "success",
+          "started_at": "2026-06-24T06:56:13Z",
+          "completed_at": "2026-06-24T07:07:31Z",
+          "duration_sec": 678
+        },
+        {
+          "name": "build-linux-x86-cuda13 / build-and-test",
+          "status": "success",
+          "started_at": "2026-06-24T06:56:12Z",
+          "completed_at": "2026-06-24T07:14:42Z",
+          "duration_sec": 1110
+        },
+        {
+          "name": "build-linux-x86-cuda / build-and-test",
+          "status": "success",
+          "started_at": "2026-06-24T06:56:13Z",
+          "completed_at": "2026-06-24T07:11:00Z",
+          "duration_sec": 887
+        }
+      ]
+    }
+  ],
+  "workflows": [
+    {
+      "filename": "update-nightly.yml",
+      "hash": "05e2e1c09977e5fd7562b494032571695f02592e883ef959d2e7a72d14356529"
+    },
+    {
+      "filename": "pylint-presubmit.yml",
+      "hash": "138eee26e716354ce54596ce96004db1c5406aff3467a1389feb5dc51fc16abc"
+    },
+    {
+      "filename": "issue-on-pr-rollback.yml",
+      "hash": "5a33aa6ed9fa2234004803a5be33a4e9804ccbff8e031a442ff064af0d809584"
+    },
+    {
+      "filename": "scorecards-analysis.yml",
+      "hash": "ef2eb9d0011f9be06b1dc6334a1bf4e3bdc52fe799bd5f3166de2bc93b02e651"
+    },
+    {
+      "filename": "cffconvert.yml",
+      "hash": "f49386b15b0e8f242217fba21e4ba80c9f50e9d1cb97f60c30180e8710a8a0a7"
+    }
+  ]
+}

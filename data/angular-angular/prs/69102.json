@@ -1,0 +1,87 @@
+{
+  "pr_number": 69102,
+  "title": "refactor(devtools): Harden props navigation",
+  "state": "closed",
+  "author": "JeanMeche",
+  "created_at": "2026-06-02T21:07:49Z",
+  "updated_at": "2026-07-04T00:32:15Z",
+  "merged_at": "2026-06-03T16:55:01Z",
+  "head_sha": "7d88a12603712a7d0ca2ef511383a9cdd151b9a4",
+  "labels": [
+    "action: merge",
+    "target: patch",
+    "area: devtools"
+  ],
+  "ci_runs": [
+    {
+      "run_id": 26879031507,
+      "workflow_id": 81905725,
+      "workflow_name": "Build adev for preview deployment",
+      "status": "skipped",
+      "head_sha": "7d88a12603712a7d0ca2ef511383a9cdd151b9a4",
+      "created_at": "2026-06-03T10:30:42Z",
+      "updated_at": "2026-06-03T10:30:44Z",
+      "run_started_at": "2026-06-03T10:30:42Z",
+      "jobs": [
+        {
+          "name": "adev-build",
+          "status": "skipped",
+          "started_at": "2026-06-03T10:30:43Z",
+          "completed_at": "2026-06-03T10:30:43Z",
+          "duration_sec": 0
+        }
+      ]
+    },
+    {
+      "run_id": 26879030438,
+      "workflow_id": 81905725,
+      "workflow_name": "Build adev for preview deployment",
+      "status": "skipped",
+      "head_sha": "7d88a12603712a7d0ca2ef511383a9cdd151b9a4",
+      "created_at": "2026-06-03T10:30:41Z",
+      "updated_at": "2026-06-03T10:30:43Z",
+      "run_started_at": "2026-06-03T10:30:41Z",
+      "jobs": []
+    },
+    {
+      "run_id": 26848140439,
+      "workflow_id": 81905725,
+      "workflow_name": "Build adev for preview deployment",
+      "status": "skipped",
+      "head_sha": "7d88a12603712a7d0ca2ef511383a9cdd151b9a4",
+      "created_at": "2026-06-02T21:08:14Z",
+      "updated_at": "2026-06-02T21:08:15Z",
+      "run_started_at": "2026-06-02T21:08:14Z",
+      "jobs": []
+    },
+    {
+      "run_id": 26848125706,
+      "workflow_id": 98951684,
+      "workflow_name": "Pull Request",
+      "status": "success",
+      "head_sha": "7d88a12603712a7d0ca2ef511383a9cdd151b9a4",
+      "created_at": "2026-06-02T21:07:56Z",
+      "updated_at": "2026-06-02T21:18:08Z",
+      "run_started_at": "2026-06-02T21:07:56Z",
+      "jobs": []
+    }
+  ],
+  "workflows": [
+    {
+      "filename": "dev-infra.yml",
+      "hash": "0324771d031f8d4ca9a1c3b675ee31b460a5d25e756b8cbe712977c3d5173c0b"
+    },
+    {
+      "filename": "scorecard.yml",
+      "hash": "05d1e6029bf61cfeb3512feee84d44a15e8444be71aa06e7903f2c4a577a8911"
+    },
+    {
+      "filename": "google-internal-tests.yml",
+      "hash": "3a68e85f2e757c7b86ccc8adb0aa9a246cdf914829328a50896622a7ae4ef5d8"
+    },
+    {
+      "filename": "assistant-to-the-branch-manager.yml",
+      "hash": "1111a82e3a71313e17d32a3fd2e2bd3514e36ea9187c49976754dd6b3e587b2d"
+    }
+  ]
+}

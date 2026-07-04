@@ -1,0 +1,65 @@
+{
+  "pr_number": 56196,
+  "title": "Do not synchronize on java.lang.Boolean.",
+  "state": "closed",
+  "author": "Yqwed",
+  "created_at": "2026-03-23T17:36:05Z",
+  "updated_at": "2026-07-02T15:23:33Z",
+  "merged_at": null,
+  "head_sha": "a32327a94660f687dbf39557c089d6e01ef236a5",
+  "labels": [
+    "CLA Signed",
+    "Merged",
+    "Shared with Meta"
+  ],
+  "ci_runs": [
+    {
+      "run_id": 28433628551,
+      "workflow_id": 244203896,
+      "workflow_name": "Validate C++ API Snapshots",
+      "status": "success",
+      "head_sha": "a32327a94660f687dbf39557c089d6e01ef236a5",
+      "created_at": "2026-06-30T09:16:01Z",
+      "updated_at": "2026-06-30T15:21:34Z",
+      "run_started_at": "2026-06-30T15:18:38Z",
+      "jobs": [
+        {
+          "name": "validate_cxx_api_snapshots",
+          "status": "success",
+          "started_at": "2026-06-30T15:18:43Z",
+          "completed_at": "2026-06-30T15:21:33Z",
+          "duration_sec": 170
+        }
+      ]
+    },
+    {
+      "run_id": 28433628821,
+      "workflow_id": 85394709,
+      "workflow_name": "Test All",
+      "status": "success",
+      "head_sha": "a32327a94660f687dbf39557c089d6e01ef236a5",
+      "created_at": "2026-06-30T09:16:01Z",
+      "updated_at": "2026-06-30T16:17:21Z",
+      "run_started_at": "2026-06-30T15:18:38Z",
+      "jobs": []
+    }
+  ],
+  "workflows": [
+    {
+      "filename": "needs-attention.yml",
+      "hash": "65a4a6cc5fcc5896e78ea357cfe209eec2845f173e8bd642ae2d343bfc66deba"
+    },
+    {
+      "filename": "on-issue-labeled.yml",
+      "hash": "7673645f1d0ba0da4c9c7d4f714f8376b8a20f1d6e553304c01769e627efc3d6"
+    },
+    {
+      "filename": "stale-bot.yml",
+      "hash": "1f4dfbb4734e1d14d7263a05e04d3b3c096e1210783c61bf98c57a5d86cd79f2"
+    },
+    {
+      "filename": "autorebase.yml",
+      "hash": "617b8a9799890a1d5010ff20bc08c4064fbffe3d3be0a1049ada31ccd0fc0a61"
+    }
+  ]
+}

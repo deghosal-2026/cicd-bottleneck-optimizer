@@ -1,0 +1,111 @@
+{
+  "pr_number": 324260,
+  "title": "Fix chat progressive rendering after hidden updates",
+  "state": "closed",
+  "author": "roblourens",
+  "created_at": "2026-07-03T18:32:48Z",
+  "updated_at": "2026-07-03T20:11:41Z",
+  "merged_at": "2026-07-03T20:10:58Z",
+  "head_sha": "16a918a8da1727931d15a170d9f56dffb7ebcc5a",
+  "labels": [],
+  "ci_runs": [
+    {
+      "run_id": 28677698268,
+      "workflow_id": 258342321,
+      "workflow_name": "chat-lib tests",
+      "status": "success",
+      "head_sha": "16a918a8da1727931d15a170d9f56dffb7ebcc5a",
+      "created_at": "2026-07-03T18:32:51Z",
+      "updated_at": "2026-07-03T18:36:05Z",
+      "run_started_at": "2026-07-03T18:32:51Z",
+      "jobs": [
+        {
+          "name": "chat-lib tests (macos-latest)",
+          "status": "success",
+          "started_at": "2026-07-03T18:33:09Z",
+          "completed_at": "2026-07-03T18:34:28Z",
+          "duration_sec": 79
+        },
+        {
+          "name": "chat-lib tests (ubuntu-latest)",
+          "status": "success",
+          "started_at": "2026-07-03T18:33:08Z",
+          "completed_at": "2026-07-03T18:34:37Z",
+          "duration_sec": 89
+        },
+        {
+          "name": "chat-lib tests (windows-latest)",
+          "status": "success",
+          "started_at": "2026-07-03T18:33:09Z",
+          "completed_at": "2026-07-03T18:36:04Z",
+          "duration_sec": 175
+        }
+      ]
+    },
+    {
+      "run_id": 28677698229,
+      "workflow_id": 21497327,
+      "workflow_name": "Monaco Editor checks",
+      "status": "success",
+      "head_sha": "16a918a8da1727931d15a170d9f56dffb7ebcc5a",
+      "created_at": "2026-07-03T18:32:51Z",
+      "updated_at": "2026-07-03T18:37:25Z",
+      "run_started_at": "2026-07-03T18:32:51Z",
+      "jobs": []
+    },
+    {
+      "run_id": 28677698275,
+      "workflow_id": 273167221,
+      "workflow_name": "Component Fixtures",
+      "status": "success",
+      "head_sha": "16a918a8da1727931d15a170d9f56dffb7ebcc5a",
+      "created_at": "2026-07-03T18:32:51Z",
+      "updated_at": "2026-07-03T18:38:47Z",
+      "run_started_at": "2026-07-03T18:32:51Z",
+      "jobs": []
+    },
+    {
+      "run_id": 28677698375,
+      "workflow_id": 4196599,
+      "workflow_name": "Code OSS",
+      "status": "success",
+      "head_sha": "16a918a8da1727931d15a170d9f56dffb7ebcc5a",
+      "created_at": "2026-07-03T18:32:51Z",
+      "updated_at": "2026-07-03T18:46:41Z",
+      "run_started_at": "2026-07-03T18:32:51Z",
+      "jobs": []
+    },
+    {
+      "run_id": 28677698287,
+      "workflow_id": 211787236,
+      "workflow_name": "Prevent engineering system changes in PRs",
+      "status": "success",
+      "head_sha": "16a918a8da1727931d15a170d9f56dffb7ebcc5a",
+      "created_at": "2026-07-03T18:32:51Z",
+      "updated_at": "2026-07-03T18:33:11Z",
+      "run_started_at": "2026-07-03T18:32:51Z",
+      "jobs": []
+    },
+    {
+      "run_id": 28677698249,
+      "workflow_id": 38332752,
+      "workflow_name": "Telemetry",
+      "status": "success",
+      "head_sha": "16a918a8da1727931d15a170d9f56dffb7ebcc5a",
+      "created_at": "2026-07-03T18:32:51Z",
+      "updated_at": "2026-07-03T18:33:34Z",
+      "run_started_at": "2026-07-03T18:32:51Z",
+      "jobs": []
+    }
+  ],
+  "workflows": [
+    {
+      "filename": "pr.yml",
+      "hash": "0625dff11585a35e1ad0cf2b3cbea2cb72e521039dfd406eaa8de1ec75492115"
+    },
+    {
+      "filename": "monaco-editor.yml",
+      "hash": "02e5f951a8bc0193f3239d64b65c547aebcf6427849f35a8e7b9500b4eeb10f9"
+    }
+  ]
+}

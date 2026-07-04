@@ -1,0 +1,89 @@
+{
+  "pr_number": 324285,
+  "title": "Use modifier properties on mouse event instead of tracking keydown/keyup",
+  "state": "open",
+  "author": "arham766",
+  "created_at": "2026-07-04T04:53:53Z",
+  "updated_at": "2026-07-04T04:55:27Z",
+  "merged_at": null,
+  "head_sha": "ef1cd81ec9c149cc3cf6feef374c63d00b8e0da1",
+  "labels": [],
+  "ci_runs": [
+    {
+      "run_id": 28695474007,
+      "workflow_id": 21497327,
+      "workflow_name": "Monaco Editor checks",
+      "status": "action_required",
+      "head_sha": "ef1cd81ec9c149cc3cf6feef374c63d00b8e0da1",
+      "created_at": "2026-07-04T04:53:56Z",
+      "updated_at": "2026-07-04T04:53:56Z",
+      "run_started_at": "2026-07-04T04:53:56Z",
+      "jobs": []
+    },
+    {
+      "run_id": 28695474015,
+      "workflow_id": 38332752,
+      "workflow_name": "Telemetry",
+      "status": "action_required",
+      "head_sha": "ef1cd81ec9c149cc3cf6feef374c63d00b8e0da1",
+      "created_at": "2026-07-04T04:53:56Z",
+      "updated_at": "2026-07-04T04:53:56Z",
+      "run_started_at": "2026-07-04T04:53:56Z",
+      "jobs": []
+    },
+    {
+      "run_id": 28695474010,
+      "workflow_id": 273167221,
+      "workflow_name": "Component Fixtures",
+      "status": "action_required",
+      "head_sha": "ef1cd81ec9c149cc3cf6feef374c63d00b8e0da1",
+      "created_at": "2026-07-04T04:53:56Z",
+      "updated_at": "2026-07-04T04:53:56Z",
+      "run_started_at": "2026-07-04T04:53:56Z",
+      "jobs": []
+    },
+    {
+      "run_id": 28695474013,
+      "workflow_id": 211787236,
+      "workflow_name": "Prevent engineering system changes in PRs",
+      "status": "action_required",
+      "head_sha": "ef1cd81ec9c149cc3cf6feef374c63d00b8e0da1",
+      "created_at": "2026-07-04T04:53:56Z",
+      "updated_at": "2026-07-04T04:53:56Z",
+      "run_started_at": "2026-07-04T04:53:56Z",
+      "jobs": []
+    },
+    {
+      "run_id": 28695474024,
+      "workflow_id": 258342321,
+      "workflow_name": "chat-lib tests",
+      "status": "action_required",
+      "head_sha": "ef1cd81ec9c149cc3cf6feef374c63d00b8e0da1",
+      "created_at": "2026-07-04T04:53:56Z",
+      "updated_at": "2026-07-04T04:53:56Z",
+      "run_started_at": "2026-07-04T04:53:56Z",
+      "jobs": []
+    },
+    {
+      "run_id": 28695474087,
+      "workflow_id": 4196599,
+      "workflow_name": "Code OSS",
+      "status": "action_required",
+      "head_sha": "ef1cd81ec9c149cc3cf6feef374c63d00b8e0da1",
+      "created_at": "2026-07-04T04:53:56Z",
+      "updated_at": "2026-07-04T04:53:56Z",
+      "run_started_at": "2026-07-04T04:53:56Z",
+      "jobs": []
+    }
+  ],
+  "workflows": [
+    {
+      "filename": "pr.yml",
+      "hash": "0625dff11585a35e1ad0cf2b3cbea2cb72e521039dfd406eaa8de1ec75492115"
+    },
+    {
+      "filename": "monaco-editor.yml",
+      "hash": "02e5f951a8bc0193f3239d64b65c547aebcf6427849f35a8e7b9500b4eeb10f9"
+    }
+  ]
+}

@@ -1,0 +1,96 @@
+{
+  "pr_number": 95457,
+  "title": "fix: work around SWC compress bug",
+  "state": "closed",
+  "author": "lubieowoce",
+  "created_at": "2026-07-03T15:07:23Z",
+  "updated_at": "2026-07-03T16:03:56Z",
+  "merged_at": "2026-07-03T16:03:39Z",
+  "head_sha": "6e9c200a3358334e9070528f38d082cb3a2a9243",
+  "labels": [],
+  "ci_runs": [
+    {
+      "run_id": 28668833097,
+      "workflow_id": 444921,
+      "workflow_name": "Generate Stats",
+      "status": "cancelled",
+      "head_sha": "6e9c200a3358334e9070528f38d082cb3a2a9243",
+      "created_at": "2026-07-03T15:07:28Z",
+      "updated_at": "2026-07-03T15:36:14Z",
+      "run_started_at": "2026-07-03T15:07:28Z",
+      "jobs": [
+        {
+          "name": "build / build",
+          "status": "success",
+          "started_at": "2026-07-03T15:07:30Z",
+          "completed_at": "2026-07-03T15:09:24Z",
+          "duration_sec": 114
+        },
+        {
+          "name": "Upload PR CI metadata",
+          "status": "success",
+          "started_at": "2026-07-03T15:07:30Z",
+          "completed_at": "2026-07-03T15:07:34Z",
+          "duration_sec": 4
+        },
+        {
+          "name": "Stats (turbopack)",
+          "status": "success",
+          "started_at": "2026-07-03T15:11:04Z",
+          "completed_at": "2026-07-03T15:21:10Z",
+          "duration_sec": 606
+        },
+        {
+          "name": "Stats (webpack)",
+          "status": "cancelled",
+          "started_at": "2026-07-03T15:11:00Z",
+          "completed_at": "2026-07-03T15:36:13Z",
+          "duration_sec": 1513
+        },
+        {
+          "name": "Aggregate Stats",
+          "status": "skipped",
+          "started_at": "2026-07-03T15:36:13Z",
+          "completed_at": "2026-07-03T15:36:13Z",
+          "duration_sec": 0
+        }
+      ]
+    },
+    {
+      "run_id": 28668833066,
+      "workflow_id": 57419851,
+      "workflow_name": "build-and-test",
+      "status": "success",
+      "head_sha": "6e9c200a3358334e9070528f38d082cb3a2a9243",
+      "created_at": "2026-07-03T15:07:28Z",
+      "updated_at": "2026-07-03T16:03:36Z",
+      "run_started_at": "2026-07-03T16:01:02Z",
+      "jobs": []
+    },
+    {
+      "run_id": 28668832960,
+      "workflow_id": 58813578,
+      "workflow_name": "build-and-deploy",
+      "status": "skipped",
+      "head_sha": "6e9c200a3358334e9070528f38d082cb3a2a9243",
+      "created_at": "2026-07-03T15:07:27Z",
+      "updated_at": "2026-07-03T15:07:29Z",
+      "run_started_at": "2026-07-03T15:07:27Z",
+      "jobs": []
+    }
+  ],
+  "workflows": [
+    {
+      "filename": "pull_request_stats.yml",
+      "hash": "2cbf0f3f1b19b2213025cdbf6027bb260c81220bf5b101b04a524f4568d57cb4"
+    },
+    {
+      "filename": "issue_lock.yml",
+      "hash": "a697561851464408497a633bc3f52faa705e0d430b53ae08bd2cd34ffe1e2611"
+    },
+    {
+      "filename": "issue_stale.yml",
+      "hash": "fd4bb34b8cc108b67a44ea1ca74f418f789158c423e58c926f6ed72aa711d3b5"
+    }
+  ]
+}

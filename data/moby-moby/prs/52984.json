@@ -1,0 +1,221 @@
+{
+  "pr_number": 52984,
+  "title": "libnetwork/internal/nftables: preparations for Swarm support",
+  "state": "open",
+  "author": "corhere",
+  "created_at": "2026-06-29T23:05:29Z",
+  "updated_at": "2026-07-02T22:50:18Z",
+  "merged_at": null,
+  "head_sha": "09001de68576da47860bc3e99c887773f9724ee7",
+  "labels": [
+    "area/networking",
+    "area/daemon",
+    "area/networking/firewalling",
+    "kind/other"
+  ],
+  "ci_runs": [
+    {
+      "run_id": 28626248895,
+      "workflow_id": 44461128,
+      "workflow_name": "bin-image",
+      "status": "success",
+      "head_sha": "09001de68576da47860bc3e99c887773f9724ee7",
+      "created_at": "2026-07-02T22:43:56Z",
+      "updated_at": "2026-07-02T22:48:48Z",
+      "run_started_at": "2026-07-02T22:43:56Z",
+      "jobs": [
+        {
+          "name": "validate-dco / run",
+          "status": "success",
+          "started_at": "2026-07-02T22:44:02Z",
+          "completed_at": "2026-07-02T22:44:29Z",
+          "duration_sec": 27
+        },
+        {
+          "name": "build / prepare",
+          "status": "success",
+          "started_at": "2026-07-02T22:44:32Z",
+          "completed_at": "2026-07-02T22:45:03Z",
+          "duration_sec": 31
+        },
+        {
+          "name": "build / build (2, linux/arm/v7, ubuntu-24.04-arm)",
+          "status": "success",
+          "started_at": "2026-07-02T22:45:10Z",
+          "completed_at": "2026-07-02T22:48:09Z",
+          "duration_sec": 179
+        },
+        {
+          "name": "build / build (1, linux/arm/v6, ubuntu-24.04-arm)",
+          "status": "success",
+          "started_at": "2026-07-02T22:45:10Z",
+          "completed_at": "2026-07-02T22:48:16Z",
+          "duration_sec": 186
+        },
+        {
+          "name": "build / build (6, windows/amd64, ubuntu-24.04)",
+          "status": "success",
+          "started_at": "2026-07-02T22:45:07Z",
+          "completed_at": "2026-07-02T22:48:22Z",
+          "duration_sec": 195
+        },
+        {
+          "name": "build / build (3, linux/arm64, ubuntu-24.04-arm)",
+          "status": "success",
+          "started_at": "2026-07-02T22:45:10Z",
+          "completed_at": "2026-07-02T22:48:14Z",
+          "duration_sec": 184
+        },
+        {
+          "name": "build / build (4, linux/ppc64le, ubuntu-24.04)",
+          "status": "success",
+          "started_at": "2026-07-02T22:45:06Z",
+          "completed_at": "2026-07-02T22:48:13Z",
+          "duration_sec": 187
+        },
+        {
+          "name": "build / build (5, linux/s390x, ubuntu-24.04)",
+          "status": "success",
+          "started_at": "2026-07-02T22:45:07Z",
+          "completed_at": "2026-07-02T22:48:33Z",
+          "duration_sec": 206
+        },
+        {
+          "name": "build / build (0, linux/amd64, ubuntu-24.04)",
+          "status": "success",
+          "started_at": "2026-07-02T22:45:07Z",
+          "completed_at": "2026-07-02T22:48:20Z",
+          "duration_sec": 193
+        },
+        {
+          "name": "build / finalize",
+          "status": "success",
+          "started_at": "2026-07-02T22:48:36Z",
+          "completed_at": "2026-07-02T22:48:47Z",
+          "duration_sec": 11
+        }
+      ]
+    },
+    {
+      "run_id": 28626248976,
+      "workflow_id": 261203439,
+      "workflow_name": "zizmor",
+      "status": "success",
+      "head_sha": "09001de68576da47860bc3e99c887773f9724ee7",
+      "created_at": "2026-07-02T22:43:56Z",
+      "updated_at": "2026-07-02T22:44:19Z",
+      "run_started_at": "2026-07-02T22:43:56Z",
+      "jobs": []
+    },
+    {
+      "run_id": 28626248733,
+      "workflow_id": 21805183,
+      "workflow_name": "ci",
+      "status": "success",
+      "head_sha": "09001de68576da47860bc3e99c887773f9724ee7",
+      "created_at": "2026-07-02T22:43:55Z",
+      "updated_at": "2026-07-02T22:49:32Z",
+      "run_started_at": "2026-07-02T22:43:55Z",
+      "jobs": []
+    },
+    {
+      "run_id": 28626248651,
+      "workflow_id": 81499888,
+      "workflow_name": "codeql",
+      "status": "success",
+      "head_sha": "09001de68576da47860bc3e99c887773f9724ee7",
+      "created_at": "2026-07-02T22:43:55Z",
+      "updated_at": "2026-07-02T22:50:27Z",
+      "run_started_at": "2026-07-02T22:43:55Z",
+      "jobs": []
+    },
+    {
+      "run_id": 28626248745,
+      "workflow_id": 168088309,
+      "workflow_name": "windows-2025",
+      "status": "failure",
+      "head_sha": "09001de68576da47860bc3e99c887773f9724ee7",
+      "created_at": "2026-07-02T22:43:55Z",
+      "updated_at": "2026-07-02T23:58:00Z",
+      "run_started_at": "2026-07-02T22:43:55Z",
+      "jobs": []
+    },
+    {
+      "run_id": 28626248608,
+      "workflow_id": 86900533,
+      "workflow_name": "validate-pr",
+      "status": "success",
+      "head_sha": "09001de68576da47860bc3e99c887773f9724ee7",
+      "created_at": "2026-07-02T22:43:55Z",
+      "updated_at": "2026-07-02T22:44:20Z",
+      "run_started_at": "2026-07-02T22:43:55Z",
+      "jobs": []
+    },
+    {
+      "run_id": 28626248689,
+      "workflow_id": 260262819,
+      "workflow_name": "validate-milestone",
+      "status": "success",
+      "head_sha": "09001de68576da47860bc3e99c887773f9724ee7",
+      "created_at": "2026-07-02T22:43:55Z",
+      "updated_at": "2026-07-02T22:44:04Z",
+      "run_started_at": "2026-07-02T22:43:55Z",
+      "jobs": []
+    },
+    {
+      "run_id": 28626248723,
+      "workflow_id": 187772110,
+      "workflow_name": "vm",
+      "status": "success",
+      "head_sha": "09001de68576da47860bc3e99c887773f9724ee7",
+      "created_at": "2026-07-02T22:43:55Z",
+      "updated_at": "2026-07-02T23:06:20Z",
+      "run_started_at": "2026-07-02T22:43:55Z",
+      "jobs": []
+    },
+    {
+      "run_id": 28626248744,
+      "workflow_id": 26704268,
+      "workflow_name": "test",
+      "status": "success",
+      "head_sha": "09001de68576da47860bc3e99c887773f9724ee7",
+      "created_at": "2026-07-02T22:43:55Z",
+      "updated_at": "2026-07-02T23:19:08Z",
+      "run_started_at": "2026-07-02T22:43:55Z",
+      "jobs": []
+    },
+    {
+      "run_id": 28626248735,
+      "workflow_id": 33573227,
+      "workflow_name": "buildkit",
+      "status": "failure",
+      "head_sha": "09001de68576da47860bc3e99c887773f9724ee7",
+      "created_at": "2026-07-02T22:43:55Z",
+      "updated_at": "2026-07-02T23:36:52Z",
+      "run_started_at": "2026-07-02T22:43:55Z",
+      "jobs": []
+    }
+  ],
+  "workflows": [
+    {
+      "filename": ".dco.yml",
+      "hash": "dea4b82ced9a768e825d38c022001e448d052703020b8345ce1752af0665f479"
+    },
+    {
+      "filename": ".test-unit.yml",
+      "hash": "64ea4ac26a2df4f48f55a6cfdef04ec69994f18e0dce69c1d98792ecbf66679b"
+    },
+    {
+      "filename": ".test.yml",
+      "hash": "698dd2de1d8e32af05925d489ceb376de42b9db0f6a9f271c0e2f1c83e849f57"
+    },
+    {
+      "filename": ".vm.yml",
+      "hash": "fa079150844d5674b2c95776f852977d6cb1a8faeb202fd94a8b63451445a5ed"
+    },
+    {
+      "filename": ".windows.yml",
+      "hash": "b3cb6d7e301a89297e6b10d87af74beee4996445f851b4fb2d44cdb54c8924f6"
+    }
+  ]
+}

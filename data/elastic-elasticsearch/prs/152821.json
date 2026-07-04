@@ -1,0 +1,68 @@
+{
+  "pr_number": 152821,
+  "title": "[Security] Grant built-in viewer/editor read access to Entity Store v2 and Entity Analytics indices",
+  "state": "open",
+  "author": "opauloh",
+  "created_at": "2026-07-03T02:29:10Z",
+  "updated_at": "2026-07-03T20:21:48Z",
+  "merged_at": null,
+  "head_sha": "00b7d5a583b08efd70f81ba6558cb308684be1ff",
+  "labels": [
+    ">enhancement",
+    ":Security/Authorization",
+    "Team:Security",
+    "v9.5.0"
+  ],
+  "ci_runs": [
+    {
+      "run_id": 28676922853,
+      "workflow_id": 146525436,
+      "workflow_name": "docs-build",
+      "status": "success",
+      "head_sha": "00b7d5a583b08efd70f81ba6558cb308684be1ff",
+      "created_at": "2026-07-03T18:13:03Z",
+      "updated_at": "2026-07-03T18:13:25Z",
+      "run_started_at": "2026-07-03T18:13:03Z",
+      "jobs": [
+        {
+          "name": "build / check",
+          "status": "success",
+          "started_at": "2026-07-03T18:13:05Z",
+          "completed_at": "2026-07-03T18:13:11Z",
+          "duration_sec": 6
+        },
+        {
+          "name": "build / match",
+          "status": "success",
+          "started_at": "2026-07-03T18:13:06Z",
+          "completed_at": "2026-07-03T18:13:14Z",
+          "duration_sec": 8
+        },
+        {
+          "name": "build / vale",
+          "status": "skipped",
+          "started_at": "2026-07-03T18:13:11Z",
+          "completed_at": "2026-07-03T18:13:11Z",
+          "duration_sec": 0
+        },
+        {
+          "name": "build / build",
+          "status": "success",
+          "started_at": "2026-07-03T18:13:16Z",
+          "completed_at": "2026-07-03T18:13:24Z",
+          "duration_sec": 8
+        }
+      ]
+    }
+  ],
+  "workflows": [
+    {
+      "filename": "gradle-wrapper-validation.yml",
+      "hash": "04526945275c07b7ec8481281931aa653deceed193cbbf514b23cd8d634fae78"
+    },
+    {
+      "filename": "docs-build.yml",
+      "hash": "6772ac2baa16f9669594b6ea59ebfc2a9e1a6b14f3550571e4faacaf2d397023"
+    }
+  ]
+}

@@ -1,0 +1,97 @@
+{
+  "pr_number": 317317,
+  "title": "Agents - refresh repository state after git operation (ex: commit, sync)",
+  "state": "closed",
+  "author": "lszomoru",
+  "created_at": "2026-05-19T15:17:55Z",
+  "updated_at": "2026-07-03T23:40:38Z",
+  "merged_at": "2026-05-19T15:48:41Z",
+  "head_sha": "09362261095d071f46ab43a90c38b8bbd1ba5b27",
+  "labels": [],
+  "ci_runs": [
+    {
+      "run_id": 26106713362,
+      "workflow_id": 211787236,
+      "workflow_name": "Prevent engineering system changes in PRs",
+      "status": "success",
+      "head_sha": "09362261095d071f46ab43a90c38b8bbd1ba5b27",
+      "created_at": "2026-05-19T15:18:01Z",
+      "updated_at": "2026-05-19T15:18:22Z",
+      "run_started_at": "2026-05-19T15:18:01Z",
+      "jobs": [
+        {
+          "name": "Prevent engineering system changes in PRs",
+          "status": "success",
+          "started_at": "2026-05-19T15:18:17Z",
+          "completed_at": "2026-05-19T15:18:21Z",
+          "duration_sec": 4
+        }
+      ]
+    },
+    {
+      "run_id": 26106713191,
+      "workflow_id": 38332752,
+      "workflow_name": "Telemetry",
+      "status": "success",
+      "head_sha": "09362261095d071f46ab43a90c38b8bbd1ba5b27",
+      "created_at": "2026-05-19T15:18:01Z",
+      "updated_at": "2026-05-19T15:18:42Z",
+      "run_started_at": "2026-05-19T15:18:01Z",
+      "jobs": []
+    },
+    {
+      "run_id": 26106713188,
+      "workflow_id": 21497327,
+      "workflow_name": "Monaco Editor checks",
+      "status": "success",
+      "head_sha": "09362261095d071f46ab43a90c38b8bbd1ba5b27",
+      "created_at": "2026-05-19T15:18:01Z",
+      "updated_at": "2026-05-19T15:22:53Z",
+      "run_started_at": "2026-05-19T15:18:01Z",
+      "jobs": []
+    },
+    {
+      "run_id": 26106713117,
+      "workflow_id": 258342321,
+      "workflow_name": "chat-lib tests",
+      "status": "success",
+      "head_sha": "09362261095d071f46ab43a90c38b8bbd1ba5b27",
+      "created_at": "2026-05-19T15:18:01Z",
+      "updated_at": "2026-05-19T15:23:15Z",
+      "run_started_at": "2026-05-19T15:18:01Z",
+      "jobs": []
+    },
+    {
+      "run_id": 26106713192,
+      "workflow_id": 273167221,
+      "workflow_name": "Component Fixtures",
+      "status": "success",
+      "head_sha": "09362261095d071f46ab43a90c38b8bbd1ba5b27",
+      "created_at": "2026-05-19T15:18:01Z",
+      "updated_at": "2026-05-19T15:23:33Z",
+      "run_started_at": "2026-05-19T15:18:01Z",
+      "jobs": []
+    },
+    {
+      "run_id": 26106713107,
+      "workflow_id": 4196599,
+      "workflow_name": "Code OSS",
+      "status": "success",
+      "head_sha": "09362261095d071f46ab43a90c38b8bbd1ba5b27",
+      "created_at": "2026-05-19T15:18:01Z",
+      "updated_at": "2026-05-19T15:48:38Z",
+      "run_started_at": "2026-05-19T15:18:01Z",
+      "jobs": []
+    }
+  ],
+  "workflows": [
+    {
+      "filename": "pr.yml",
+      "hash": "0625dff11585a35e1ad0cf2b3cbea2cb72e521039dfd406eaa8de1ec75492115"
+    },
+    {
+      "filename": "monaco-editor.yml",
+      "hash": "02e5f951a8bc0193f3239d64b65c547aebcf6427849f35a8e7b9500b4eeb10f9"
+    }
+  ]
+}

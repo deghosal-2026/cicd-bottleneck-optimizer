@@ -1,0 +1,66 @@
+{
+  "pr_number": 57421,
+  "title": "Integrate app menu with DevTools features, add icons",
+  "state": "open",
+  "author": "huntie",
+  "created_at": "2026-07-02T17:59:22Z",
+  "updated_at": "2026-07-02T18:21:38Z",
+  "merged_at": null,
+  "head_sha": "7d1cc93fbdb1c559f8436195338615ff09a62dc5",
+  "labels": [
+    "CLA Signed",
+    "p: Facebook",
+    "Partner",
+    "meta-exported"
+  ],
+  "ci_runs": [
+    {
+      "run_id": 28611033266,
+      "workflow_id": 186496937,
+      "workflow_name": "Validate DotSlash Artifacts",
+      "status": "success",
+      "head_sha": "7d1cc93fbdb1c559f8436195338615ff09a62dc5",
+      "created_at": "2026-07-02T17:59:26Z",
+      "updated_at": "2026-07-02T18:14:43Z",
+      "run_started_at": "2026-07-02T17:59:26Z",
+      "jobs": [
+        {
+          "name": "validate-dotslash-artifacts",
+          "status": "success",
+          "started_at": "2026-07-02T18:12:20Z",
+          "completed_at": "2026-07-02T18:14:42Z",
+          "duration_sec": 142
+        }
+      ]
+    },
+    {
+      "run_id": 28611033384,
+      "workflow_id": 85394709,
+      "workflow_name": "Test All",
+      "status": "failure",
+      "head_sha": "7d1cc93fbdb1c559f8436195338615ff09a62dc5",
+      "created_at": "2026-07-02T17:59:26Z",
+      "updated_at": "2026-07-03T12:12:53Z",
+      "run_started_at": "2026-07-03T12:12:32Z",
+      "jobs": []
+    }
+  ],
+  "workflows": [
+    {
+      "filename": "needs-attention.yml",
+      "hash": "65a4a6cc5fcc5896e78ea357cfe209eec2845f173e8bd642ae2d343bfc66deba"
+    },
+    {
+      "filename": "on-issue-labeled.yml",
+      "hash": "7673645f1d0ba0da4c9c7d4f714f8376b8a20f1d6e553304c01769e627efc3d6"
+    },
+    {
+      "filename": "stale-bot.yml",
+      "hash": "1f4dfbb4734e1d14d7263a05e04d3b3c096e1210783c61bf98c57a5d86cd79f2"
+    },
+    {
+      "filename": "autorebase.yml",
+      "hash": "617b8a9799890a1d5010ff20bc08c4064fbffe3d3be0a1049ada31ccd0fc0a61"
+    }
+  ]
+}

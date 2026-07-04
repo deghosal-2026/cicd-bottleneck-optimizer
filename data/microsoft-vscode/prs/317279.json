@@ -1,0 +1,99 @@
+{
+  "pr_number": 317279,
+  "title": "[cherry-pick] Have the fork action ask the SessionsManagementService to reveal the newly forked session instead of the SessionManagementService reacting to it",
+  "state": "closed",
+  "author": "vs-code-engineering[bot]",
+  "created_at": "2026-05-19T09:04:09Z",
+  "updated_at": "2026-07-03T23:40:39Z",
+  "merged_at": "2026-05-19T12:12:33Z",
+  "head_sha": "f8ec44f24821545cc88dd14e30fbbf98aa8f2cfb",
+  "labels": [
+    "cherry-pick-artifact"
+  ],
+  "ci_runs": [
+    {
+      "run_id": 26087361759,
+      "workflow_id": 211787236,
+      "workflow_name": "Prevent engineering system changes in PRs",
+      "status": "success",
+      "head_sha": "f8ec44f24821545cc88dd14e30fbbf98aa8f2cfb",
+      "created_at": "2026-05-19T09:04:15Z",
+      "updated_at": "2026-05-19T09:05:24Z",
+      "run_started_at": "2026-05-19T09:04:15Z",
+      "jobs": [
+        {
+          "name": "Prevent engineering system changes in PRs",
+          "status": "success",
+          "started_at": "2026-05-19T09:05:20Z",
+          "completed_at": "2026-05-19T09:05:23Z",
+          "duration_sec": 3
+        }
+      ]
+    },
+    {
+      "run_id": 26087361802,
+      "workflow_id": 38332752,
+      "workflow_name": "Telemetry",
+      "status": "success",
+      "head_sha": "f8ec44f24821545cc88dd14e30fbbf98aa8f2cfb",
+      "created_at": "2026-05-19T09:04:15Z",
+      "updated_at": "2026-05-19T09:05:51Z",
+      "run_started_at": "2026-05-19T09:04:15Z",
+      "jobs": []
+    },
+    {
+      "run_id": 26087361782,
+      "workflow_id": 258342321,
+      "workflow_name": "chat-lib tests",
+      "status": "success",
+      "head_sha": "f8ec44f24821545cc88dd14e30fbbf98aa8f2cfb",
+      "created_at": "2026-05-19T09:04:15Z",
+      "updated_at": "2026-05-19T09:09:24Z",
+      "run_started_at": "2026-05-19T09:04:15Z",
+      "jobs": []
+    },
+    {
+      "run_id": 26087361774,
+      "workflow_id": 21497327,
+      "workflow_name": "Monaco Editor checks",
+      "status": "success",
+      "head_sha": "f8ec44f24821545cc88dd14e30fbbf98aa8f2cfb",
+      "created_at": "2026-05-19T09:04:15Z",
+      "updated_at": "2026-05-19T09:10:00Z",
+      "run_started_at": "2026-05-19T09:04:15Z",
+      "jobs": []
+    },
+    {
+      "run_id": 26087361783,
+      "workflow_id": 273167221,
+      "workflow_name": "Component Fixtures",
+      "status": "success",
+      "head_sha": "f8ec44f24821545cc88dd14e30fbbf98aa8f2cfb",
+      "created_at": "2026-05-19T09:04:15Z",
+      "updated_at": "2026-05-19T09:12:19Z",
+      "run_started_at": "2026-05-19T09:04:15Z",
+      "jobs": []
+    },
+    {
+      "run_id": 26087361789,
+      "workflow_id": 4196599,
+      "workflow_name": "Code OSS",
+      "status": "success",
+      "head_sha": "f8ec44f24821545cc88dd14e30fbbf98aa8f2cfb",
+      "created_at": "2026-05-19T09:04:15Z",
+      "updated_at": "2026-05-19T09:31:27Z",
+      "run_started_at": "2026-05-19T09:04:15Z",
+      "jobs": []
+    }
+  ],
+  "workflows": [
+    {
+      "filename": "pr.yml",
+      "hash": "0625dff11585a35e1ad0cf2b3cbea2cb72e521039dfd406eaa8de1ec75492115"
+    },
+    {
+      "filename": "monaco-editor.yml",
+      "hash": "02e5f951a8bc0193f3239d64b65c547aebcf6427849f35a8e7b9500b4eeb10f9"
+    }
+  ]
+}

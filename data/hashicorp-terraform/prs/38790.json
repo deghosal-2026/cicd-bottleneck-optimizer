@@ -1,0 +1,103 @@
+{
+  "pr_number": 38790,
+  "title": "PSS: Make lock handling in the context of PSS in `init` flatter",
+  "state": "closed",
+  "author": "SarahFrench",
+  "created_at": "2026-06-26T14:19:24Z",
+  "updated_at": "2026-06-30T15:06:21Z",
+  "merged_at": "2026-06-30T15:06:17Z",
+  "head_sha": "ff0b62a7c1886c8a5d006ac4a1e95943426c2ff5",
+  "labels": [
+    "no-changelog-needed"
+  ],
+  "ci_runs": [
+    {
+      "run_id": 28388534411,
+      "workflow_id": 278786541,
+      "workflow_name": "Changelog Validation",
+      "status": "success",
+      "head_sha": "ff0b62a7c1886c8a5d006ac4a1e95943426c2ff5",
+      "created_at": "2026-06-29T16:51:45Z",
+      "updated_at": "2026-06-29T16:51:57Z",
+      "run_started_at": "2026-06-29T16:51:45Z",
+      "jobs": [
+        {
+          "name": "Validate Changelog",
+          "status": "success",
+          "started_at": "2026-06-29T16:51:49Z",
+          "completed_at": "2026-06-29T16:51:56Z",
+          "duration_sec": 7
+        }
+      ]
+    },
+    {
+      "run_id": 28388534367,
+      "workflow_id": 126957301,
+      "workflow_name": "equivalence-test-diff",
+      "status": "success",
+      "head_sha": "ff0b62a7c1886c8a5d006ac4a1e95943426c2ff5",
+      "created_at": "2026-06-29T16:51:45Z",
+      "updated_at": "2026-06-29T16:53:53Z",
+      "run_started_at": "2026-06-29T16:51:45Z",
+      "jobs": []
+    },
+    {
+      "run_id": 28388534358,
+      "workflow_id": 23102955,
+      "workflow_name": "Quick Checks",
+      "status": "success",
+      "head_sha": "ff0b62a7c1886c8a5d006ac4a1e95943426c2ff5",
+      "created_at": "2026-06-29T16:51:45Z",
+      "updated_at": "2026-06-29T16:57:21Z",
+      "run_started_at": "2026-06-29T16:51:45Z",
+      "jobs": []
+    },
+    {
+      "run_id": 28388422959,
+      "workflow_id": 278786541,
+      "workflow_name": "Changelog Validation",
+      "status": "success",
+      "head_sha": "ff0b62a7c1886c8a5d006ac4a1e95943426c2ff5",
+      "created_at": "2026-06-29T16:49:51Z",
+      "updated_at": "2026-06-29T16:50:00Z",
+      "run_started_at": "2026-06-29T16:49:51Z",
+      "jobs": []
+    },
+    {
+      "run_id": 28388423002,
+      "workflow_id": 126957301,
+      "workflow_name": "equivalence-test-diff",
+      "status": "success",
+      "head_sha": "ff0b62a7c1886c8a5d006ac4a1e95943426c2ff5",
+      "created_at": "2026-06-29T16:49:51Z",
+      "updated_at": "2026-06-29T16:52:01Z",
+      "run_started_at": "2026-06-29T16:49:51Z",
+      "jobs": []
+    },
+    {
+      "run_id": 28388422995,
+      "workflow_id": 23102955,
+      "workflow_name": "Quick Checks",
+      "status": "success",
+      "head_sha": "ff0b62a7c1886c8a5d006ac4a1e95943426c2ff5",
+      "created_at": "2026-06-29T16:49:51Z",
+      "updated_at": "2026-06-29T16:55:48Z",
+      "run_started_at": "2026-06-29T16:49:51Z",
+      "jobs": []
+    }
+  ],
+  "workflows": [
+    {
+      "filename": "issue-comment-created.yml",
+      "hash": "7b39410b950b1b04577cd7d04201e9ce01aaeca7e6daf5af2dbe7286e23ef08e"
+    },
+    {
+      "filename": "lock.yml",
+      "hash": "7606d6b818ae4ff47b39930380d804b9a904124f7dffe6d9bfbba7e715c2f183"
+    },
+    {
+      "filename": "build.yml",
+      "hash": "192267d1041a111b5fb0a96d698602ec33bd95faf16bffb870abd3b3593bfd6c"
+    }
+  ]
+}

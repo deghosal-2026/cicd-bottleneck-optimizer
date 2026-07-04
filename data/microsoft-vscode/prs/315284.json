@@ -1,0 +1,100 @@
+{
+  "pr_number": 315284,
+  "title": "fix: guard setDimensions against disposed ptyProcessReady (fixes #315282)",
+  "state": "closed",
+  "author": "vs-code-engineering[bot]",
+  "created_at": "2026-05-08T15:16:04Z",
+  "updated_at": "2026-07-03T23:40:50Z",
+  "merged_at": "2026-05-19T06:01:49Z",
+  "head_sha": "e68035385804ba7e458cfb90fdd19337ba946c72",
+  "labels": [
+    "errors-fix",
+    "*error-fix-driving"
+  ],
+  "ci_runs": [
+    {
+      "run_id": 26071481314,
+      "workflow_id": 211787236,
+      "workflow_name": "Prevent engineering system changes in PRs",
+      "status": "success",
+      "head_sha": "e68035385804ba7e458cfb90fdd19337ba946c72",
+      "created_at": "2026-05-19T01:56:47Z",
+      "updated_at": "2026-05-19T01:57:49Z",
+      "run_started_at": "2026-05-19T01:56:47Z",
+      "jobs": [
+        {
+          "name": "Prevent engineering system changes in PRs",
+          "status": "success",
+          "started_at": "2026-05-19T01:57:42Z",
+          "completed_at": "2026-05-19T01:57:48Z",
+          "duration_sec": 6
+        }
+      ]
+    },
+    {
+      "run_id": 26071481310,
+      "workflow_id": 38332752,
+      "workflow_name": "Telemetry",
+      "status": "success",
+      "head_sha": "e68035385804ba7e458cfb90fdd19337ba946c72",
+      "created_at": "2026-05-19T01:56:47Z",
+      "updated_at": "2026-05-19T01:58:11Z",
+      "run_started_at": "2026-05-19T01:56:47Z",
+      "jobs": []
+    },
+    {
+      "run_id": 26071481298,
+      "workflow_id": 21497327,
+      "workflow_name": "Monaco Editor checks",
+      "status": "success",
+      "head_sha": "e68035385804ba7e458cfb90fdd19337ba946c72",
+      "created_at": "2026-05-19T01:56:47Z",
+      "updated_at": "2026-05-19T02:02:10Z",
+      "run_started_at": "2026-05-19T01:56:47Z",
+      "jobs": []
+    },
+    {
+      "run_id": 26071481293,
+      "workflow_id": 258342321,
+      "workflow_name": "chat-lib tests",
+      "status": "success",
+      "head_sha": "e68035385804ba7e458cfb90fdd19337ba946c72",
+      "created_at": "2026-05-19T01:56:47Z",
+      "updated_at": "2026-05-19T02:02:27Z",
+      "run_started_at": "2026-05-19T01:56:47Z",
+      "jobs": []
+    },
+    {
+      "run_id": 26071481288,
+      "workflow_id": 273167221,
+      "workflow_name": "Component Fixtures",
+      "status": "success",
+      "head_sha": "e68035385804ba7e458cfb90fdd19337ba946c72",
+      "created_at": "2026-05-19T01:56:47Z",
+      "updated_at": "2026-05-19T02:02:52Z",
+      "run_started_at": "2026-05-19T01:56:47Z",
+      "jobs": []
+    },
+    {
+      "run_id": 26071481289,
+      "workflow_id": 4196599,
+      "workflow_name": "Code OSS",
+      "status": "success",
+      "head_sha": "e68035385804ba7e458cfb90fdd19337ba946c72",
+      "created_at": "2026-05-19T01:56:47Z",
+      "updated_at": "2026-05-19T02:14:24Z",
+      "run_started_at": "2026-05-19T01:56:47Z",
+      "jobs": []
+    }
+  ],
+  "workflows": [
+    {
+      "filename": "pr.yml",
+      "hash": "0625dff11585a35e1ad0cf2b3cbea2cb72e521039dfd406eaa8de1ec75492115"
+    },
+    {
+      "filename": "monaco-editor.yml",
+      "hash": "02e5f951a8bc0193f3239d64b65c547aebcf6427849f35a8e7b9500b4eeb10f9"
+    }
+  ]
+}

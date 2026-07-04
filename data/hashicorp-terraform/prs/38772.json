@@ -1,0 +1,103 @@
+{
+  "pr_number": 38772,
+  "title": "PSS: Test coverage for `init` detecting changes in how a state store is configured.",
+  "state": "closed",
+  "author": "SarahFrench",
+  "created_at": "2026-06-24T10:11:19Z",
+  "updated_at": "2026-06-25T15:00:33Z",
+  "merged_at": "2026-06-25T15:00:31Z",
+  "head_sha": "7a198b883ee83bda563ef53f515add14b0ab5742",
+  "labels": [
+    "no-changelog-needed"
+  ],
+  "ci_runs": [
+    {
+      "run_id": 28094466680,
+      "workflow_id": 126957301,
+      "workflow_name": "equivalence-test-diff",
+      "status": "success",
+      "head_sha": "7a198b883ee83bda563ef53f515add14b0ab5742",
+      "created_at": "2026-06-24T11:13:47Z",
+      "updated_at": "2026-06-24T11:15:58Z",
+      "run_started_at": "2026-06-24T11:13:47Z",
+      "jobs": [
+        {
+          "name": "Equivalence Test Diff",
+          "status": "success",
+          "started_at": "2026-06-24T11:13:51Z",
+          "completed_at": "2026-06-24T11:15:57Z",
+          "duration_sec": 126
+        }
+      ]
+    },
+    {
+      "run_id": 28094466684,
+      "workflow_id": 23102955,
+      "workflow_name": "Quick Checks",
+      "status": "success",
+      "head_sha": "7a198b883ee83bda563ef53f515add14b0ab5742",
+      "created_at": "2026-06-24T11:13:47Z",
+      "updated_at": "2026-06-24T11:19:24Z",
+      "run_started_at": "2026-06-24T11:13:47Z",
+      "jobs": []
+    },
+    {
+      "run_id": 28094466701,
+      "workflow_id": 278786541,
+      "workflow_name": "Changelog Validation",
+      "status": "success",
+      "head_sha": "7a198b883ee83bda563ef53f515add14b0ab5742",
+      "created_at": "2026-06-24T11:13:47Z",
+      "updated_at": "2026-06-24T11:13:56Z",
+      "run_started_at": "2026-06-24T11:13:47Z",
+      "jobs": []
+    },
+    {
+      "run_id": 28094086696,
+      "workflow_id": 278786541,
+      "workflow_name": "Changelog Validation",
+      "status": "success",
+      "head_sha": "7a198b883ee83bda563ef53f515add14b0ab5742",
+      "created_at": "2026-06-24T11:06:21Z",
+      "updated_at": "2026-06-24T11:06:30Z",
+      "run_started_at": "2026-06-24T11:06:21Z",
+      "jobs": []
+    },
+    {
+      "run_id": 28094086662,
+      "workflow_id": 126957301,
+      "workflow_name": "equivalence-test-diff",
+      "status": "success",
+      "head_sha": "7a198b883ee83bda563ef53f515add14b0ab5742",
+      "created_at": "2026-06-24T11:06:21Z",
+      "updated_at": "2026-06-24T11:08:49Z",
+      "run_started_at": "2026-06-24T11:06:21Z",
+      "jobs": []
+    },
+    {
+      "run_id": 28094086665,
+      "workflow_id": 23102955,
+      "workflow_name": "Quick Checks",
+      "status": "success",
+      "head_sha": "7a198b883ee83bda563ef53f515add14b0ab5742",
+      "created_at": "2026-06-24T11:06:21Z",
+      "updated_at": "2026-06-24T11:12:25Z",
+      "run_started_at": "2026-06-24T11:06:21Z",
+      "jobs": []
+    }
+  ],
+  "workflows": [
+    {
+      "filename": "issue-comment-created.yml",
+      "hash": "7b39410b950b1b04577cd7d04201e9ce01aaeca7e6daf5af2dbe7286e23ef08e"
+    },
+    {
+      "filename": "lock.yml",
+      "hash": "7606d6b818ae4ff47b39930380d804b9a904124f7dffe6d9bfbba7e715c2f183"
+    },
+    {
+      "filename": "build.yml",
+      "hash": "192267d1041a111b5fb0a96d698602ec33bd95faf16bffb870abd3b3593bfd6c"
+    }
+  ]
+}

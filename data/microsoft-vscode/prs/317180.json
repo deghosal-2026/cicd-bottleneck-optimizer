@@ -1,0 +1,97 @@
+{
+  "pr_number": 317180,
+  "title": "Add languageModelToolInvoked telemetry from Copilot agent host session",
+  "state": "closed",
+  "author": "amunger",
+  "created_at": "2026-05-18T21:40:56Z",
+  "updated_at": "2026-07-03T23:40:39Z",
+  "merged_at": "2026-05-19T15:34:21Z",
+  "head_sha": "735f2856bec1253620fb8b32acd7cbe5139d3809",
+  "labels": [],
+  "ci_runs": [
+    {
+      "run_id": 26063089659,
+      "workflow_id": 211787236,
+      "workflow_name": "Prevent engineering system changes in PRs",
+      "status": "success",
+      "head_sha": "735f2856bec1253620fb8b32acd7cbe5139d3809",
+      "created_at": "2026-05-18T22:02:45Z",
+      "updated_at": "2026-05-18T22:03:54Z",
+      "run_started_at": "2026-05-18T22:02:45Z",
+      "jobs": [
+        {
+          "name": "Prevent engineering system changes in PRs",
+          "status": "success",
+          "started_at": "2026-05-18T22:03:50Z",
+          "completed_at": "2026-05-18T22:03:54Z",
+          "duration_sec": 4
+        }
+      ]
+    },
+    {
+      "run_id": 26063089728,
+      "workflow_id": 38332752,
+      "workflow_name": "Telemetry",
+      "status": "success",
+      "head_sha": "735f2856bec1253620fb8b32acd7cbe5139d3809",
+      "created_at": "2026-05-18T22:02:45Z",
+      "updated_at": "2026-05-18T22:04:17Z",
+      "run_started_at": "2026-05-18T22:02:45Z",
+      "jobs": []
+    },
+    {
+      "run_id": 26063089674,
+      "workflow_id": 258342321,
+      "workflow_name": "chat-lib tests",
+      "status": "success",
+      "head_sha": "735f2856bec1253620fb8b32acd7cbe5139d3809",
+      "created_at": "2026-05-18T22:02:45Z",
+      "updated_at": "2026-05-18T22:08:31Z",
+      "run_started_at": "2026-05-18T22:02:45Z",
+      "jobs": []
+    },
+    {
+      "run_id": 26063089662,
+      "workflow_id": 21497327,
+      "workflow_name": "Monaco Editor checks",
+      "status": "success",
+      "head_sha": "735f2856bec1253620fb8b32acd7cbe5139d3809",
+      "created_at": "2026-05-18T22:02:45Z",
+      "updated_at": "2026-05-18T22:08:22Z",
+      "run_started_at": "2026-05-18T22:02:45Z",
+      "jobs": []
+    },
+    {
+      "run_id": 26063089681,
+      "workflow_id": 273167221,
+      "workflow_name": "Component Fixtures",
+      "status": "success",
+      "head_sha": "735f2856bec1253620fb8b32acd7cbe5139d3809",
+      "created_at": "2026-05-18T22:02:45Z",
+      "updated_at": "2026-05-18T22:09:08Z",
+      "run_started_at": "2026-05-18T22:02:45Z",
+      "jobs": []
+    },
+    {
+      "run_id": 26063089676,
+      "workflow_id": 4196599,
+      "workflow_name": "Code OSS",
+      "status": "success",
+      "head_sha": "735f2856bec1253620fb8b32acd7cbe5139d3809",
+      "created_at": "2026-05-18T22:02:45Z",
+      "updated_at": "2026-05-18T22:27:47Z",
+      "run_started_at": "2026-05-18T22:02:45Z",
+      "jobs": []
+    }
+  ],
+  "workflows": [
+    {
+      "filename": "pr.yml",
+      "hash": "0625dff11585a35e1ad0cf2b3cbea2cb72e521039dfd406eaa8de1ec75492115"
+    },
+    {
+      "filename": "monaco-editor.yml",
+      "hash": "02e5f951a8bc0193f3239d64b65c547aebcf6427849f35a8e7b9500b4eeb10f9"
+    }
+  ]
+}

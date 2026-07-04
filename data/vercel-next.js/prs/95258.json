@@ -1,0 +1,126 @@
+{
+  "pr_number": 95258,
+  "title": "Update font data",
+  "state": "closed",
+  "author": "vercel-release-bot",
+  "created_at": "2026-06-29T00:43:00Z",
+  "updated_at": "2026-07-03T14:53:29Z",
+  "merged_at": null,
+  "head_sha": "550f346cc9f37ed326338ad3bb1dbba5574c8d36",
+  "labels": [
+    "run-react-18-tests"
+  ],
+  "ci_runs": [
+    {
+      "run_id": 28341682145,
+      "workflow_id": 58813578,
+      "workflow_name": "build-and-deploy",
+      "status": "skipped",
+      "head_sha": "550f346cc9f37ed326338ad3bb1dbba5574c8d36",
+      "created_at": "2026-06-29T00:43:04Z",
+      "updated_at": "2026-06-29T00:43:05Z",
+      "run_started_at": "2026-06-29T00:43:04Z",
+      "jobs": [
+        {
+          "name": "deploy-target",
+          "status": "skipped",
+          "started_at": "2026-06-29T00:43:04Z",
+          "completed_at": "2026-06-29T00:43:04Z",
+          "duration_sec": 0
+        },
+        {
+          "name": "build-wasm",
+          "status": "skipped",
+          "started_at": "2026-06-29T00:43:05Z",
+          "completed_at": "2026-06-29T00:43:04Z",
+          "duration_sec": -1
+        },
+        {
+          "name": "build",
+          "status": "skipped",
+          "started_at": "2026-06-29T00:43:05Z",
+          "completed_at": "2026-06-29T00:43:04Z",
+          "duration_sec": -1
+        },
+        {
+          "name": "generate-native-matrix",
+          "status": "skipped",
+          "started_at": "2026-06-29T00:43:05Z",
+          "completed_at": "2026-06-29T00:43:04Z",
+          "duration_sec": -1
+        },
+        {
+          "name": "stable - ${{ matrix.target }} - node@20",
+          "status": "skipped",
+          "started_at": "2026-06-29T00:43:05Z",
+          "completed_at": "2026-06-29T00:43:04Z",
+          "duration_sec": -1
+        },
+        {
+          "name": "Prepare preview tarball",
+          "status": "skipped",
+          "started_at": "2026-06-29T00:43:05Z",
+          "completed_at": "2026-06-29T00:43:04Z",
+          "duration_sec": -1
+        },
+        {
+          "name": "Potentially publish release",
+          "status": "skipped",
+          "started_at": "2026-06-29T00:43:05Z",
+          "completed_at": "2026-06-29T00:43:04Z",
+          "duration_sec": -1
+        },
+        {
+          "name": "thank you, build",
+          "status": "skipped",
+          "started_at": "2026-06-29T00:43:05Z",
+          "completed_at": "2026-06-29T00:43:04Z",
+          "duration_sec": -1
+        },
+        {
+          "name": "Upload Turbopack Bytesize metrics to Datadog",
+          "status": "skipped",
+          "started_at": "2026-06-29T00:43:05Z",
+          "completed_at": "2026-06-29T00:43:04Z",
+          "duration_sec": -1
+        }
+      ]
+    },
+    {
+      "run_id": 28341682232,
+      "workflow_id": 57419851,
+      "workflow_name": "build-and-test",
+      "status": "failure",
+      "head_sha": "550f346cc9f37ed326338ad3bb1dbba5574c8d36",
+      "created_at": "2026-06-29T00:43:04Z",
+      "updated_at": "2026-06-29T01:11:05Z",
+      "run_started_at": "2026-06-29T00:43:04Z",
+      "jobs": []
+    },
+    {
+      "run_id": 28341682219,
+      "workflow_id": 444921,
+      "workflow_name": "Generate Stats",
+      "status": "cancelled",
+      "head_sha": "550f346cc9f37ed326338ad3bb1dbba5574c8d36",
+      "created_at": "2026-06-29T00:43:04Z",
+      "updated_at": "2026-06-29T01:11:20Z",
+      "run_started_at": "2026-06-29T00:43:04Z",
+      "jobs": []
+    }
+  ],
+  "workflows": [
+    {
+      "filename": "pull_request_stats.yml",
+      "hash": "2cbf0f3f1b19b2213025cdbf6027bb260c81220bf5b101b04a524f4568d57cb4"
+    },
+    {
+      "filename": "issue_lock.yml",
+      "hash": "a697561851464408497a633bc3f52faa705e0d430b53ae08bd2cd34ffe1e2611"
+    },
+    {
+      "filename": "issue_stale.yml",
+      "hash": "fd4bb34b8cc108b67a44ea1ca74f418f789158c423e58c926f6ed72aa711d3b5"
+    }
+  ]
+}

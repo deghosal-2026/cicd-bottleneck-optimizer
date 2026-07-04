@@ -1,0 +1,61 @@
+{
+  "pr_number": 122386,
+  "title": "guard against detected-box count overflow in detection_postprocess",
+  "state": "open",
+  "author": "dxbjavid",
+  "created_at": "2026-06-30T14:03:21Z",
+  "updated_at": "2026-07-03T17:48:39Z",
+  "merged_at": null,
+  "head_sha": "cc2a7d93fd28598adeaf18dec03a7d72b9c9f5a8",
+  "labels": [
+    "awaiting review",
+    "comp:lite",
+    "size:M"
+  ],
+  "ci_runs": [
+    {
+      "run_id": 28675955134,
+      "workflow_id": 248743471,
+      "workflow_name": "CI",
+      "status": "action_required",
+      "head_sha": "cc2a7d93fd28598adeaf18dec03a7d72b9c9f5a8",
+      "created_at": "2026-07-03T17:48:39Z",
+      "updated_at": "2026-07-03T17:48:39Z",
+      "run_started_at": "2026-07-03T17:48:39Z",
+      "jobs": []
+    },
+    {
+      "run_id": 28675955033,
+      "workflow_id": 287144969,
+      "workflow_name": "License Check",
+      "status": "action_required",
+      "head_sha": "cc2a7d93fd28598adeaf18dec03a7d72b9c9f5a8",
+      "created_at": "2026-07-03T17:48:38Z",
+      "updated_at": "2026-07-03T17:48:38Z",
+      "run_started_at": "2026-07-03T17:48:38Z",
+      "jobs": []
+    }
+  ],
+  "workflows": [
+    {
+      "filename": "update-nightly.yml",
+      "hash": "05e2e1c09977e5fd7562b494032571695f02592e883ef959d2e7a72d14356529"
+    },
+    {
+      "filename": "pylint-presubmit.yml",
+      "hash": "138eee26e716354ce54596ce96004db1c5406aff3467a1389feb5dc51fc16abc"
+    },
+    {
+      "filename": "issue-on-pr-rollback.yml",
+      "hash": "5a33aa6ed9fa2234004803a5be33a4e9804ccbff8e031a442ff064af0d809584"
+    },
+    {
+      "filename": "scorecards-analysis.yml",
+      "hash": "ef2eb9d0011f9be06b1dc6334a1bf4e3bdc52fe799bd5f3166de2bc93b02e651"
+    },
+    {
+      "filename": "cffconvert.yml",
+      "hash": "f49386b15b0e8f242217fba21e4ba80c9f50e9d1cb97f60c30180e8710a8a0a7"
+    }
+  ]
+}

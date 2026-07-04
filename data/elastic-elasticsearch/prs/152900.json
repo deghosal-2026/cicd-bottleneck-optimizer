@@ -1,0 +1,70 @@
+{
+  "pr_number": 152900,
+  "title": "ESQL: Solves NoSuchElementException in ViewUnionAll analyzer retries",
+  "state": "closed",
+  "author": "ncordon",
+  "created_at": "2026-07-03T17:16:01Z",
+  "updated_at": "2026-07-03T17:55:46Z",
+  "merged_at": "2026-07-03T17:55:17Z",
+  "head_sha": "e9624e222ded415c0a1ccb32363abb4cc08824ee",
+  "labels": [
+    ">bug",
+    "backport",
+    "Team:Analytics",
+    "auto-merge-without-approval",
+    ":Analytics/ES|QL",
+    "v9.4.4"
+  ],
+  "ci_runs": [
+    {
+      "run_id": 28674634466,
+      "workflow_id": 146525436,
+      "workflow_name": "docs-build",
+      "status": "success",
+      "head_sha": "e9624e222ded415c0a1ccb32363abb4cc08824ee",
+      "created_at": "2026-07-03T17:16:08Z",
+      "updated_at": "2026-07-03T17:16:31Z",
+      "run_started_at": "2026-07-03T17:16:08Z",
+      "jobs": [
+        {
+          "name": "build / match",
+          "status": "success",
+          "started_at": "2026-07-03T17:16:10Z",
+          "completed_at": "2026-07-03T17:16:18Z",
+          "duration_sec": 8
+        },
+        {
+          "name": "build / check",
+          "status": "success",
+          "started_at": "2026-07-03T17:16:10Z",
+          "completed_at": "2026-07-03T17:16:16Z",
+          "duration_sec": 6
+        },
+        {
+          "name": "build / vale",
+          "status": "skipped",
+          "started_at": "2026-07-03T17:16:17Z",
+          "completed_at": "2026-07-03T17:16:16Z",
+          "duration_sec": -1
+        },
+        {
+          "name": "build / build",
+          "status": "success",
+          "started_at": "2026-07-03T17:16:20Z",
+          "completed_at": "2026-07-03T17:16:30Z",
+          "duration_sec": 10
+        }
+      ]
+    }
+  ],
+  "workflows": [
+    {
+      "filename": "gradle-wrapper-validation.yml",
+      "hash": "04526945275c07b7ec8481281931aa653deceed193cbbf514b23cd8d634fae78"
+    },
+    {
+      "filename": "docs-build.yml",
+      "hash": "6772ac2baa16f9669594b6ea59ebfc2a9e1a6b14f3550571e4faacaf2d397023"
+    }
+  ]
+}

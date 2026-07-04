@@ -1,0 +1,93 @@
+{
+  "pr_number": 122596,
+  "title": "Automated Code Change",
+  "state": "open",
+  "author": "copybara-service[bot]",
+  "created_at": "2026-07-04T02:24:49Z",
+  "updated_at": "2026-07-04T02:24:49Z",
+  "merged_at": null,
+  "head_sha": "8259508810680af2f9dd87591308027df7fe2f18",
+  "labels": [],
+  "ci_runs": [
+    {
+      "run_id": 28692076489,
+      "workflow_id": 248743471,
+      "workflow_name": "CI",
+      "status": "failure",
+      "head_sha": "8259508810680af2f9dd87591308027df7fe2f18",
+      "created_at": "2026-07-04T02:24:52Z",
+      "updated_at": "2026-07-04T02:39:59Z",
+      "run_started_at": "2026-07-04T02:24:52Z",
+      "jobs": [
+        {
+          "name": "build-linux-x86-cpu / build-and-test",
+          "status": "failure",
+          "started_at": "2026-07-04T02:24:54Z",
+          "completed_at": "2026-07-04T02:38:24Z",
+          "duration_sec": 810
+        },
+        {
+          "name": "build-linux-x86-cuda13 / build-and-test",
+          "status": "success",
+          "started_at": "2026-07-04T02:24:54Z",
+          "completed_at": "2026-07-04T02:33:43Z",
+          "duration_sec": 529
+        },
+        {
+          "name": "build-linux-x86-cuda / build-and-test",
+          "status": "success",
+          "started_at": "2026-07-04T02:24:54Z",
+          "completed_at": "2026-07-04T02:32:55Z",
+          "duration_sec": 481
+        },
+        {
+          "name": "build-windows-x86 / build-and-test",
+          "status": "failure",
+          "started_at": "2026-07-04T02:31:56Z",
+          "completed_at": "2026-07-04T02:39:58Z",
+          "duration_sec": 482
+        },
+        {
+          "name": "build-arm64 / build-only",
+          "status": "failure",
+          "started_at": "2026-07-04T02:24:54Z",
+          "completed_at": "2026-07-04T02:26:04Z",
+          "duration_sec": 70
+        }
+      ]
+    },
+    {
+      "run_id": 28692076408,
+      "workflow_id": 287144969,
+      "workflow_name": "License Check",
+      "status": "success",
+      "head_sha": "8259508810680af2f9dd87591308027df7fe2f18",
+      "created_at": "2026-07-04T02:24:52Z",
+      "updated_at": "2026-07-04T02:25:25Z",
+      "run_started_at": "2026-07-04T02:24:52Z",
+      "jobs": []
+    }
+  ],
+  "workflows": [
+    {
+      "filename": "update-nightly.yml",
+      "hash": "05e2e1c09977e5fd7562b494032571695f02592e883ef959d2e7a72d14356529"
+    },
+    {
+      "filename": "pylint-presubmit.yml",
+      "hash": "138eee26e716354ce54596ce96004db1c5406aff3467a1389feb5dc51fc16abc"
+    },
+    {
+      "filename": "issue-on-pr-rollback.yml",
+      "hash": "5a33aa6ed9fa2234004803a5be33a4e9804ccbff8e031a442ff064af0d809584"
+    },
+    {
+      "filename": "scorecards-analysis.yml",
+      "hash": "ef2eb9d0011f9be06b1dc6334a1bf4e3bdc52fe799bd5f3166de2bc93b02e651"
+    },
+    {
+      "filename": "cffconvert.yml",
+      "hash": "f49386b15b0e8f242217fba21e4ba80c9f50e9d1cb97f60c30180e8710a8a0a7"
+    }
+  ]
+}

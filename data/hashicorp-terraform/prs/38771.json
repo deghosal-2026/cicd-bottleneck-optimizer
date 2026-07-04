@@ -1,0 +1,153 @@
+{
+  "pr_number": 38771,
+  "title": "Enable re-use of provider installation logic by introducing the `views.ProviderInstaller` interface",
+  "state": "closed",
+  "author": "SarahFrench",
+  "created_at": "2026-06-24T09:47:08Z",
+  "updated_at": "2026-06-25T08:39:24Z",
+  "merged_at": "2026-06-25T08:39:21Z",
+  "head_sha": "fa67818a7fc16e26ef21255840ca65b7afa633e4",
+  "labels": [
+    "no-changelog-needed"
+  ],
+  "ci_runs": [
+    {
+      "run_id": 28090041226,
+      "workflow_id": 23102955,
+      "workflow_name": "Quick Checks",
+      "status": "success",
+      "head_sha": "fa67818a7fc16e26ef21255840ca65b7afa633e4",
+      "created_at": "2026-06-24T09:49:36Z",
+      "updated_at": "2026-06-24T09:55:18Z",
+      "run_started_at": "2026-06-24T09:49:36Z",
+      "jobs": [
+        {
+          "name": "Unit Tests",
+          "status": "success",
+          "started_at": "2026-06-24T09:49:40Z",
+          "completed_at": "2026-06-24T09:54:24Z",
+          "duration_sec": 284
+        },
+        {
+          "name": "Automated defect checks",
+          "status": "success",
+          "started_at": "2026-06-24T09:49:40Z",
+          "completed_at": "2026-06-24T09:52:00Z",
+          "duration_sec": 140
+        },
+        {
+          "name": "End-to-end Tests",
+          "status": "success",
+          "started_at": "2026-06-24T09:49:40Z",
+          "completed_at": "2026-06-24T09:51:30Z",
+          "duration_sec": 110
+        },
+        {
+          "name": "Race Tests",
+          "status": "success",
+          "started_at": "2026-06-24T09:49:40Z",
+          "completed_at": "2026-06-24T09:55:17Z",
+          "duration_sec": 337
+        },
+        {
+          "name": "Code Consistency Checks",
+          "status": "success",
+          "started_at": "2026-06-24T09:49:40Z",
+          "completed_at": "2026-06-24T09:53:29Z",
+          "duration_sec": 229
+        }
+      ]
+    },
+    {
+      "run_id": 28090041180,
+      "workflow_id": 278786541,
+      "workflow_name": "Changelog Validation",
+      "status": "success",
+      "head_sha": "fa67818a7fc16e26ef21255840ca65b7afa633e4",
+      "created_at": "2026-06-24T09:49:36Z",
+      "updated_at": "2026-06-24T09:49:46Z",
+      "run_started_at": "2026-06-24T09:49:36Z",
+      "jobs": []
+    },
+    {
+      "run_id": 28090041164,
+      "workflow_id": 126957301,
+      "workflow_name": "equivalence-test-diff",
+      "status": "success",
+      "head_sha": "fa67818a7fc16e26ef21255840ca65b7afa633e4",
+      "created_at": "2026-06-24T09:49:36Z",
+      "updated_at": "2026-06-24T09:51:44Z",
+      "run_started_at": "2026-06-24T09:49:36Z",
+      "jobs": []
+    },
+    {
+      "run_id": 28089935076,
+      "workflow_id": 278786541,
+      "workflow_name": "Changelog Validation",
+      "status": "success",
+      "head_sha": "fa67818a7fc16e26ef21255840ca65b7afa633e4",
+      "created_at": "2026-06-24T09:47:36Z",
+      "updated_at": "2026-06-24T09:47:46Z",
+      "run_started_at": "2026-06-24T09:47:36Z",
+      "jobs": []
+    },
+    {
+      "run_id": 28089935081,
+      "workflow_id": 179246365,
+      "workflow_name": "Backport Assistant Runner",
+      "status": "success",
+      "head_sha": "fa67818a7fc16e26ef21255840ca65b7afa633e4",
+      "created_at": "2026-06-24T09:47:36Z",
+      "updated_at": "2026-06-24T09:47:47Z",
+      "run_started_at": "2026-06-24T09:47:36Z",
+      "jobs": []
+    },
+    {
+      "run_id": 28089915423,
+      "workflow_id": 278786541,
+      "workflow_name": "Changelog Validation",
+      "status": "success",
+      "head_sha": "fa67818a7fc16e26ef21255840ca65b7afa633e4",
+      "created_at": "2026-06-24T09:47:14Z",
+      "updated_at": "2026-06-24T09:47:24Z",
+      "run_started_at": "2026-06-24T09:47:14Z",
+      "jobs": []
+    },
+    {
+      "run_id": 28089915435,
+      "workflow_id": 126957301,
+      "workflow_name": "equivalence-test-diff",
+      "status": "success",
+      "head_sha": "fa67818a7fc16e26ef21255840ca65b7afa633e4",
+      "created_at": "2026-06-24T09:47:14Z",
+      "updated_at": "2026-06-24T09:49:21Z",
+      "run_started_at": "2026-06-24T09:47:14Z",
+      "jobs": []
+    },
+    {
+      "run_id": 28089915362,
+      "workflow_id": 23102955,
+      "workflow_name": "Quick Checks",
+      "status": "success",
+      "head_sha": "fa67818a7fc16e26ef21255840ca65b7afa633e4",
+      "created_at": "2026-06-24T09:47:13Z",
+      "updated_at": "2026-06-24T09:52:56Z",
+      "run_started_at": "2026-06-24T09:47:13Z",
+      "jobs": []
+    }
+  ],
+  "workflows": [
+    {
+      "filename": "issue-comment-created.yml",
+      "hash": "7b39410b950b1b04577cd7d04201e9ce01aaeca7e6daf5af2dbe7286e23ef08e"
+    },
+    {
+      "filename": "lock.yml",
+      "hash": "7606d6b818ae4ff47b39930380d804b9a904124f7dffe6d9bfbba7e715c2f183"
+    },
+    {
+      "filename": "build.yml",
+      "hash": "192267d1041a111b5fb0a96d698602ec33bd95faf16bffb870abd3b3593bfd6c"
+    }
+  ]
+}

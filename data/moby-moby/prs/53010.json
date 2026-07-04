@@ -1,0 +1,404 @@
+{
+  "pr_number": 53010,
+  "title": "client: ServiceInspect, ContainerCommit: omit optional query args if not set",
+  "state": "open",
+  "author": "thaJeztah",
+  "created_at": "2026-07-03T18:23:29Z",
+  "updated_at": "2026-07-03T18:41:03Z",
+  "merged_at": null,
+  "head_sha": "dff7c6b9ba0b18ab7709b7d6083ba3645362f543",
+  "labels": [
+    "status/2-code-review",
+    "kind/refactor",
+    "module/client"
+  ],
+  "ci_runs": [
+    {
+      "run_id": 28677335634,
+      "workflow_id": 33573227,
+      "workflow_name": "buildkit",
+      "status": "success",
+      "head_sha": "dff7c6b9ba0b18ab7709b7d6083ba3645362f543",
+      "created_at": "2026-07-03T18:23:33Z",
+      "updated_at": "2026-07-03T18:56:09Z",
+      "run_started_at": "2026-07-03T18:23:33Z",
+      "jobs": [
+        {
+          "name": "validate-dco / run",
+          "status": "success",
+          "started_at": "2026-07-03T18:23:37Z",
+          "completed_at": "2026-07-03T18:24:03Z",
+          "duration_sec": 26
+        },
+        {
+          "name": "build-windows",
+          "status": "success",
+          "started_at": "2026-07-03T18:24:07Z",
+          "completed_at": "2026-07-03T18:35:18Z",
+          "duration_sec": 671
+        },
+        {
+          "name": "build-linux",
+          "status": "success",
+          "started_at": "2026-07-03T18:24:07Z",
+          "completed_at": "2026-07-03T18:27:20Z",
+          "duration_sec": 193
+        },
+        {
+          "name": "test-linux (dockerd, solver, integration)",
+          "status": "success",
+          "started_at": "2026-07-03T18:27:23Z",
+          "completed_at": "2026-07-03T18:37:43Z",
+          "duration_sec": 620
+        },
+        {
+          "name": "test-linux (dockerd-containerd, client, integration)",
+          "status": "success",
+          "started_at": "2026-07-03T18:27:24Z",
+          "completed_at": "2026-07-03T18:50:14Z",
+          "duration_sec": 1370
+        },
+        {
+          "name": "test-linux (dockerd, cmd/buildctl, integration)",
+          "status": "success",
+          "started_at": "2026-07-03T18:27:23Z",
+          "completed_at": "2026-07-03T18:37:49Z",
+          "duration_sec": 626
+        },
+        {
+          "name": "test-linux (dockerd, frontend, integration)",
+          "status": "success",
+          "started_at": "2026-07-03T18:27:24Z",
+          "completed_at": "2026-07-03T18:38:20Z",
+          "duration_sec": 656
+        },
+        {
+          "name": "test-linux (dockerd-containerd, frontend, integration)",
+          "status": "success",
+          "started_at": "2026-07-03T18:27:24Z",
+          "completed_at": "2026-07-03T18:38:16Z",
+          "duration_sec": 652
+        },
+        {
+          "name": "test-linux (dockerd-containerd, cmd/buildctl, integration)",
+          "status": "success",
+          "started_at": "2026-07-03T18:27:24Z",
+          "completed_at": "2026-07-03T18:38:12Z",
+          "duration_sec": 648
+        },
+        {
+          "name": "test-linux (dockerd-containerd, solver, integration)",
+          "status": "success",
+          "started_at": "2026-07-03T18:27:23Z",
+          "completed_at": "2026-07-03T18:37:59Z",
+          "duration_sec": 636
+        },
+        {
+          "name": "test-linux (dockerd, client, integration)",
+          "status": "success",
+          "started_at": "2026-07-03T18:27:24Z",
+          "completed_at": "2026-07-03T18:47:29Z",
+          "duration_sec": 1205
+        },
+        {
+          "name": "test-linux (dockerd, frontend/dockerfile, integration)",
+          "status": "success",
+          "started_at": "2026-07-03T18:27:25Z",
+          "completed_at": "2026-07-03T18:54:10Z",
+          "duration_sec": 1605
+        },
+        {
+          "name": "test-linux (dockerd-containerd, frontend/dockerfile, integration)",
+          "status": "success",
+          "started_at": "2026-07-03T18:27:35Z",
+          "completed_at": "2026-07-03T18:56:08Z",
+          "duration_sec": 1713
+        },
+        {
+          "name": "test-windows (dockerd-containerd, ./client#3-4)",
+          "status": "success",
+          "started_at": "2026-07-03T18:35:22Z",
+          "completed_at": "2026-07-03T18:47:59Z",
+          "duration_sec": 757
+        },
+        {
+          "name": "test-windows (dockerd-containerd, ./frontend)",
+          "status": "success",
+          "started_at": "2026-07-03T18:35:22Z",
+          "completed_at": "2026-07-03T18:37:01Z",
+          "duration_sec": 99
+        },
+        {
+          "name": "test-windows (dockerd-containerd, ./frontend/dockerfile#2-12)",
+          "status": "success",
+          "started_at": "2026-07-03T18:35:22Z",
+          "completed_at": "2026-07-03T18:52:52Z",
+          "duration_sec": 1050
+        },
+        {
+          "name": "test-windows (dockerd-containerd, ./client#1-4)",
+          "status": "success",
+          "started_at": "2026-07-03T18:35:22Z",
+          "completed_at": "2026-07-03T18:46:36Z",
+          "duration_sec": 674
+        },
+        {
+          "name": "test-windows (dockerd-containerd, ./cmd/buildctl)",
+          "status": "success",
+          "started_at": "2026-07-03T18:35:22Z",
+          "completed_at": "2026-07-03T18:37:10Z",
+          "duration_sec": 108
+        },
+        {
+          "name": "test-windows (dockerd-containerd, ./client#4-4)",
+          "status": "success",
+          "started_at": "2026-07-03T18:35:22Z",
+          "completed_at": "2026-07-03T18:40:55Z",
+          "duration_sec": 333
+        },
+        {
+          "name": "test-windows (dockerd-containerd, ./frontend/dockerfile#4-12)",
+          "status": "success",
+          "started_at": "2026-07-03T18:35:22Z",
+          "completed_at": "2026-07-03T18:55:48Z",
+          "duration_sec": 1226
+        },
+        {
+          "name": "test-windows (dockerd-containerd, ./client#2-4)",
+          "status": "success",
+          "started_at": "2026-07-03T18:35:23Z",
+          "completed_at": "2026-07-03T18:54:01Z",
+          "duration_sec": 1118
+        },
+        {
+          "name": "test-windows (dockerd-containerd, ./frontend/dockerfile#1-12)",
+          "status": "success",
+          "started_at": "2026-07-03T18:35:22Z",
+          "completed_at": "2026-07-03T18:45:12Z",
+          "duration_sec": 590
+        },
+        {
+          "name": "test-windows (dockerd-containerd, ./frontend/dockerfile#6-12)",
+          "status": "success",
+          "started_at": "2026-07-03T18:35:22Z",
+          "completed_at": "2026-07-03T18:48:22Z",
+          "duration_sec": 780
+        },
+        {
+          "name": "test-windows (dockerd-containerd, ./frontend/dockerfile#8-12)",
+          "status": "success",
+          "started_at": "2026-07-03T18:35:22Z",
+          "completed_at": "2026-07-03T18:45:46Z",
+          "duration_sec": 624
+        },
+        {
+          "name": "test-windows (dockerd-containerd, ./frontend/dockerfile#5-12)",
+          "status": "success",
+          "started_at": "2026-07-03T18:35:22Z",
+          "completed_at": "2026-07-03T18:47:40Z",
+          "duration_sec": 738
+        },
+        {
+          "name": "test-windows (dockerd-containerd, ./frontend/dockerfile#3-12)",
+          "status": "success",
+          "started_at": "2026-07-03T18:35:21Z",
+          "completed_at": "2026-07-03T18:50:30Z",
+          "duration_sec": 909
+        },
+        {
+          "name": "test-windows (dockerd-containerd, ./frontend/dockerfile#12-12)",
+          "status": "success",
+          "started_at": "2026-07-03T18:35:22Z",
+          "completed_at": "2026-07-03T18:42:25Z",
+          "duration_sec": 423
+        },
+        {
+          "name": "test-windows (dockerd-containerd, ./frontend/dockerfile#7-12)",
+          "status": "success",
+          "started_at": "2026-07-03T18:35:22Z",
+          "completed_at": "2026-07-03T18:51:12Z",
+          "duration_sec": 950
+        },
+        {
+          "name": "test-windows (dockerd-containerd, ./frontend/dockerfile#9-12)",
+          "status": "success",
+          "started_at": "2026-07-03T18:35:22Z",
+          "completed_at": "2026-07-03T18:45:38Z",
+          "duration_sec": 616
+        },
+        {
+          "name": "test-windows (dockerd-containerd, ./frontend/dockerfile#11-12)",
+          "status": "success",
+          "started_at": "2026-07-03T18:35:22Z",
+          "completed_at": "2026-07-03T18:42:39Z",
+          "duration_sec": 437
+        }
+      ]
+    },
+    {
+      "run_id": 28677335675,
+      "workflow_id": 26704268,
+      "workflow_name": "test",
+      "status": "success",
+      "head_sha": "dff7c6b9ba0b18ab7709b7d6083ba3645362f543",
+      "created_at": "2026-07-03T18:23:33Z",
+      "updated_at": "2026-07-03T18:57:21Z",
+      "run_started_at": "2026-07-03T18:23:33Z",
+      "jobs": []
+    },
+    {
+      "run_id": 28677335798,
+      "workflow_id": 44461128,
+      "workflow_name": "bin-image",
+      "status": "success",
+      "head_sha": "dff7c6b9ba0b18ab7709b7d6083ba3645362f543",
+      "created_at": "2026-07-03T18:23:33Z",
+      "updated_at": "2026-07-03T18:28:38Z",
+      "run_started_at": "2026-07-03T18:23:33Z",
+      "jobs": []
+    },
+    {
+      "run_id": 28677335639,
+      "workflow_id": 21805183,
+      "workflow_name": "ci",
+      "status": "success",
+      "head_sha": "dff7c6b9ba0b18ab7709b7d6083ba3645362f543",
+      "created_at": "2026-07-03T18:23:33Z",
+      "updated_at": "2026-07-03T18:28:56Z",
+      "run_started_at": "2026-07-03T18:23:33Z",
+      "jobs": []
+    },
+    {
+      "run_id": 28677335570,
+      "workflow_id": 81499888,
+      "workflow_name": "codeql",
+      "status": "success",
+      "head_sha": "dff7c6b9ba0b18ab7709b7d6083ba3645362f543",
+      "created_at": "2026-07-03T18:23:33Z",
+      "updated_at": "2026-07-03T18:29:48Z",
+      "run_started_at": "2026-07-03T18:23:33Z",
+      "jobs": []
+    },
+    {
+      "run_id": 28677335248,
+      "workflow_id": 86900533,
+      "workflow_name": "validate-pr",
+      "status": "cancelled",
+      "head_sha": "dff7c6b9ba0b18ab7709b7d6083ba3645362f543",
+      "created_at": "2026-07-03T18:23:33Z",
+      "updated_at": "2026-07-03T18:23:34Z",
+      "run_started_at": "2026-07-03T18:23:33Z",
+      "jobs": []
+    },
+    {
+      "run_id": 28677335556,
+      "workflow_id": 260262819,
+      "workflow_name": "validate-milestone",
+      "status": "success",
+      "head_sha": "dff7c6b9ba0b18ab7709b7d6083ba3645362f543",
+      "created_at": "2026-07-03T18:23:33Z",
+      "updated_at": "2026-07-03T18:23:43Z",
+      "run_started_at": "2026-07-03T18:23:33Z",
+      "jobs": []
+    },
+    {
+      "run_id": 28677335348,
+      "workflow_id": 86900533,
+      "workflow_name": "validate-pr",
+      "status": "cancelled",
+      "head_sha": "dff7c6b9ba0b18ab7709b7d6083ba3645362f543",
+      "created_at": "2026-07-03T18:23:33Z",
+      "updated_at": "2026-07-03T18:23:34Z",
+      "run_started_at": "2026-07-03T18:23:33Z",
+      "jobs": []
+    },
+    {
+      "run_id": 28677335541,
+      "workflow_id": 260262819,
+      "workflow_name": "validate-milestone",
+      "status": "cancelled",
+      "head_sha": "dff7c6b9ba0b18ab7709b7d6083ba3645362f543",
+      "created_at": "2026-07-03T18:23:33Z",
+      "updated_at": "2026-07-03T18:23:35Z",
+      "run_started_at": "2026-07-03T18:23:33Z",
+      "jobs": []
+    },
+    {
+      "run_id": 28677335787,
+      "workflow_id": 261203439,
+      "workflow_name": "zizmor",
+      "status": "success",
+      "head_sha": "dff7c6b9ba0b18ab7709b7d6083ba3645362f543",
+      "created_at": "2026-07-03T18:23:33Z",
+      "updated_at": "2026-07-03T18:23:57Z",
+      "run_started_at": "2026-07-03T18:23:33Z",
+      "jobs": []
+    },
+    {
+      "run_id": 28677335560,
+      "workflow_id": 86900533,
+      "workflow_name": "validate-pr",
+      "status": "success",
+      "head_sha": "dff7c6b9ba0b18ab7709b7d6083ba3645362f543",
+      "created_at": "2026-07-03T18:23:33Z",
+      "updated_at": "2026-07-03T18:23:58Z",
+      "run_started_at": "2026-07-03T18:23:33Z",
+      "jobs": []
+    },
+    {
+      "run_id": 28677335631,
+      "workflow_id": 187772110,
+      "workflow_name": "vm",
+      "status": "success",
+      "head_sha": "dff7c6b9ba0b18ab7709b7d6083ba3645362f543",
+      "created_at": "2026-07-03T18:23:33Z",
+      "updated_at": "2026-07-03T18:46:09Z",
+      "run_started_at": "2026-07-03T18:23:33Z",
+      "jobs": []
+    },
+    {
+      "run_id": 28677335644,
+      "workflow_id": 168088309,
+      "workflow_name": "windows-2025",
+      "status": "success",
+      "head_sha": "dff7c6b9ba0b18ab7709b7d6083ba3645362f543",
+      "created_at": "2026-07-03T18:23:33Z",
+      "updated_at": "2026-07-03T19:22:35Z",
+      "run_started_at": "2026-07-03T18:23:33Z",
+      "jobs": []
+    },
+    {
+      "run_id": 28677335167,
+      "workflow_id": 86900533,
+      "workflow_name": "validate-pr",
+      "status": "cancelled",
+      "head_sha": "dff7c6b9ba0b18ab7709b7d6083ba3645362f543",
+      "created_at": "2026-07-03T18:23:32Z",
+      "updated_at": "2026-07-03T18:23:34Z",
+      "run_started_at": "2026-07-03T18:23:32Z",
+      "jobs": []
+    }
+  ],
+  "workflows": [
+    {
+      "filename": ".dco.yml",
+      "hash": "dea4b82ced9a768e825d38c022001e448d052703020b8345ce1752af0665f479"
+    },
+    {
+      "filename": ".test-unit.yml",
+      "hash": "64ea4ac26a2df4f48f55a6cfdef04ec69994f18e0dce69c1d98792ecbf66679b"
+    },
+    {
+      "filename": ".test.yml",
+      "hash": "698dd2de1d8e32af05925d489ceb376de42b9db0f6a9f271c0e2f1c83e849f57"
+    },
+    {
+      "filename": ".vm.yml",
+      "hash": "fa079150844d5674b2c95776f852977d6cb1a8faeb202fd94a8b63451445a5ed"
+    },
+    {
+      "filename": ".windows.yml",
+      "hash": "b3cb6d7e301a89297e6b10d87af74beee4996445f851b4fb2d44cdb54c8924f6"
+    }
+  ]
+}
