@@ -5,7 +5,7 @@ from nodes.fetch import fetch_workflows_node, fetch_runs_node, fetch_prs_node, f
 from nodes.profile import profile_jobs_node
 from nodes.classify import classify_bottlenecks_node
 from nodes.optimize import propose_optimizations_node, simulate_savings_node
-from nodes.pr import interrupt_node
+from nodes.pr import interrupt_node, open_pr_node
 from nodes.generate import generate_yaml_node, validate_syntax_node
 from llm.client import LLMClient
 from tools.github import GitHubClient
@@ -50,7 +50,7 @@ def build_graph(config_path: str | None = None):
     graph.add_node("interrupt_for_approval", interrupt_node)
     graph.add_node("generate_yaml", generate_yaml_node)
     graph.add_node("validate_syntax", validate_syntax_node)
-    graph.add_node("open_pr", lambda s: {**s, "pr_url": "https://github.com/fake/pr"})
+    graph.add_node("open_pr", with_gh(open_pr_node))
 
     graph.set_conditional_entry_point(route_by_mode, {
         "fetch_workflows": "fetch_workflows",
