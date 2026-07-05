@@ -3,10 +3,9 @@
 from lib.optimizer import propose, simulate
 
 
-def propose_optimizations_node(state: dict) -> dict:
+def propose_optimizations_node(state: dict, llm_client=None) -> dict:
     bottlenecks = state.get("bottlenecks", [])
     profiles = state.get("profiles", [])
-    llm_client = state.get("llm_client")
 
     optimizations = propose(bottlenecks, profiles, llm_client=llm_client)
 

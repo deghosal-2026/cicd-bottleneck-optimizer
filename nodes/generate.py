@@ -5,17 +5,15 @@ from lib.validator import validate
 from llm.client import LLMClient
 
 
-def generate_yaml_node(state: dict) -> dict:
+def generate_yaml_node(state: dict, llm_client=None) -> dict:
     workflows = state.get("workflows", [])
     selected_ids = state.get("selected_optimizations", [])
     optimizations = state.get("optimizations", [])
 
     rewritten = rewrite(workflows, selected_ids, optimizations)
 
-    if not rewritten:
-        llm_client = state.get("llm_client")
-        if llm_client:
-            rewritten = _generate_with_llm(llm_client, workflows, optimizations, selected_ids)
+    if not rewritten and llm_client:
+        rewritten = _generate_with_llm(llm_client, workflows, optimizations, selected_ids)
 
     return {
         "rewritten_yaml": rewritten,

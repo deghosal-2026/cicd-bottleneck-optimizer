@@ -142,13 +142,13 @@ class TestLLMClassification:
         result = classify(self._profiles, self._workflows, llm_client=mock_llm_client)
         assert result == []
 
-    def test_llm_not_called_when_rules_find_bottlenecks(self, mock_llm_client):
-        """When rules produce bottlenecks, LLM is never invoked."""
+    def test_llm_always_called_when_client_provided(self, mock_llm_client):
+        """LLM is always invoked alongside rules (not just as fallback)."""
         jobs = [{"name": "build", "steps": [{"run": "npm install"}]}]
         profiles = [{"job_name": "build", "median_sec": 300}]
         workflows = [{"filename": "ci.yml", "content": "", "jobs": jobs}]
         classify(profiles, workflows, llm_client=mock_llm_client)
-        mock_llm_client.call_local.assert_not_called()
+        mock_llm_client.call_local.assert_called_once()
 
     def test_llm_called_when_rules_find_nothing(self, mock_llm_client):
         """When rules produce no bottlenecks, LLM is invoked as fallback."""

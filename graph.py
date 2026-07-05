@@ -23,13 +23,15 @@ def route_by_mode(state: AgentState) -> str:
     return "fetch_workflows"
 
 
-def build_graph(config_path: str | None = None):
-    c = cfg.load_config(config_path)
-    token = c["github"]["token"]
-    gh_client = GitHubClient(token)
-
-    llm_cfg = c.get("llm", {})
-    llm_client = LLMClient(c) if llm_cfg and llm_cfg.get("local") else None
+def build_graph(config_path: str | None = None, gh_client=None, llm_client=None, checkpointer=None):
+    if gh_client is None or llm_client is None:
+        c = cfg.load_config(config_path)
+        if gh_client is None:
+            token = c["github"]["token"]
+            gh_client = GitHubClient(token)
+        if llm_client is None:
+            llm_cfg = c.get("llm", {})
+            llm_client = LLMClient(c) if llm_cfg and llm_cfg.get("local") else None
 
     graph = StateGraph(AgentState)
 
@@ -52,7 +54,7 @@ def build_graph(config_path: str | None = None):
     graph.add_node("propose_optimizations", with_llm(propose_optimizations_node))
     graph.add_node("simulate_savings", simulate_savings_node)
     graph.add_node("interrupt_for_approval", interrupt_node)
-    graph.add_node("generate_yaml", generate_yaml_node)
+    graph.add_node("generate_yaml", with_llm(generate_yaml_node))
     graph.add_node("validate_syntax", validate_syntax_node)
     graph.add_node("open_pr", with_gh(open_pr_node))
 
@@ -77,18 +79,27 @@ def build_graph(config_path: str | None = None):
 
     graph.add_edge("generate_yaml", "validate_syntax")
 
-    graph.add_conditional_edges("validate_syntax", lambda s: "open_pr" if s.get("validation_attempts", 0) < 3 else END, {
+    def route_after_validate(state):
+        if state.get("rewritten_yaml", ""):
+            return "open_pr"
+        if state.get("validation_attempts", 0) >= 3:
+            return END
+        return "generate_yaml"
+
+    graph.add_conditional_edges("validate_syntax", route_after_validate, {
         "open_pr": "open_pr",
+        "generate_yaml": "generate_yaml",
         END: END,
     })
 
     graph.add_edge("open_pr", END)
 
-    import sqlite3
+    if checkpointer is None:
+        import sqlite3
 
-    os.makedirs(os.path.dirname(CHECKPOINT_DB), exist_ok=True)
-    conn = sqlite3.connect(CHECKPOINT_DB, check_same_thread=False)
-    checkpointer = SqliteSaver(conn)
-    checkpointer.setup()
+        os.makedirs(os.path.dirname(CHECKPOINT_DB), exist_ok=True)
+        conn = sqlite3.connect(CHECKPOINT_DB, check_same_thread=False)
+        checkpointer = SqliteSaver(conn)
+        checkpointer.setup()
 
     return graph.compile(checkpointer=checkpointer)
