@@ -218,19 +218,19 @@
 - [x] 0 optimizations → simulate = 0 min
 - [x] Optimization IDs are unique (uuid-based)
 
-### M2.4: Classifier + optimizer tests (1 day) — [#12](https://github.com/deghosal-2026/cicd-bottleneck-optimizer/issues/12)
+### M2.4: Classifier + optimizer tests (1 day) — [#12](https://github.com/deghosal-2026/cicd-bottleneck-optimizer/issues/12) ✅ CLOSED
 
-- [ ] `tests/unit/test_classifier.py` — all rule-based + LLM scenarios
-- [ ] `tests/unit/test_optimizer.py` — cost, risk, simulate scenarios
-- [ ] Mocked LLM responses for LLM-dependent tests
-- [ ] Edge cases: empty inputs, single bottleneck, all bottleneck types
+- [x] `tests/unit/test_classifier.py` — all rule-based + LLM scenarios
+- [x] `tests/unit/test_optimizer.py` — cost, risk, simulate scenarios
+- [x] Mocked LLM responses for LLM-dependent tests
+- [x] Edge cases: empty inputs, single bottleneck, all bottleneck types
 
 **Success criteria:**
-- [ ] `pytest tests/unit/test_classifier.py` passes
-- [ ] `pytest tests/unit/test_optimizer.py` passes
-- [ ] All 5 bottleneck types have a test case
-- [ ] Cost calculation tests match hardcoded rates exactly
-- [ ] Mocked LLM returns structured output → parsed correctly
+- [x] `pytest tests/unit/test_classifier.py` passes (28 tests)
+- [x] `pytest tests/unit/test_optimizer.py` passes (24 tests)
+- [x] All 5 bottleneck types have a test case (missing_cache, serial_parallel, redundant_matrix, redundant_rebuild, oversized_context)
+- [x] Cost calculation tests match hardcoded rates exactly (runner: $0.008/min, cache: $0.007/GB-month)
+- [x] Mocked LLM returns structured output → parsed correctly
 
 ---
 
@@ -272,10 +272,10 @@
 ### M3.3: YAML generation + validation (1 day) — [#11](https://github.com/deghosal-2026/cicd-bottleneck-optimizer/issues/11) ✅ CLOSED
 
 - [x] `lib/generator.py` — `rewrite(workflows, selected, optimizations)` → YAML string
-- [ ] Cloud LLM (Claude/gpt-4o-mini) for generation *(deferred — rule-based descriptions are specific)*
-- [ ] No cloud keys → prompt "Use OMLX local? (y/n)" *(deferred)*
+- [ ] Cloud LLM (Claude/gpt-4o-mini) for generation
+- [ ] No cloud keys → prompt "Use OMLX local? (y/n)"
 - [x] `lib/validator.py` — `validate(yaml)` → (bool, error_msg)
-- [ ] Primary: `act --list` dry-run *(deferred)*
+- [ ] Primary: `act --list` dry-run
 - [x] Fallback: PyYAML + custom schema (on, jobs, steps)
 - [x] `nodes/generate.py` — generate_yaml + validate_syntax nodes
 - [x] Validation retry: invalid → loop back to generate (max 3)
@@ -283,7 +283,7 @@
 
 **Success criteria:**
 - [x] Generated YAML is syntactically valid (PyYAML parses it)
-- [ ] `act --list` passes on valid generated workflow *(deferred)*
+- [ ] `act --list` passes on valid generated workflow
 - [x] Invalid YAML → validate returns (False, error_msg)
 - [x] Retry counter increments on each failure
 - [x] 3 failures → graph stops, error logged

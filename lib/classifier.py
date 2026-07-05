@@ -23,6 +23,7 @@ def classify(profiles: list[dict], workflows: list[dict], llm_client=None) -> li
         return []
 
     bottlenecks: list[dict] = []
+    cached_jobs: set[str] = set()
 
     for wf in workflows:
         jobs = wf.get("jobs", [])
@@ -30,9 +31,13 @@ def classify(profiles: list[dict], workflows: list[dict], llm_client=None) -> li
             bottlenecks.extend(_check_missing_cache(jobs, profiles))
             bottlenecks.extend(_check_serial_parallel(jobs, profiles))
             bottlenecks.extend(_check_redundant_matrix(jobs, profiles))
+            for job in jobs:
+                steps = job.get("steps", [])
+                if any(isinstance(s, dict) and "cache" in str(s.get("uses", "")).lower() for s in steps):
+                    cached_jobs.add(job["name"])
 
     if not bottlenecks:
-        bottlenecks.extend(_check_profiles_only(profiles))
+        bottlenecks.extend(_check_profiles_only(profiles, cached_jobs))
 
     if llm_client is not None and not bottlenecks:
         llm_bottlenecks = _classify_with_llm(llm_client, workflows, profiles)
@@ -41,26 +46,31 @@ def classify(profiles: list[dict], workflows: list[dict], llm_client=None) -> li
     return bottlenecks
 
 
-def _check_profiles_only(profiles: list[dict]) -> list[dict]:
+def _check_profiles_only(profiles: list[dict], cached_jobs: set[str] | None = None) -> list[dict]:
+    if cached_jobs is None:
+        cached_jobs = set()
     bottlenecks = []
     BUILD_KEYWORDS = ("build", "test", "lint", "deploy", "compile", "bundle", "package")
     seen = set()
 
     for p in profiles:
-        name = p["job_name"].lower()
+        name = p["job_name"]
+        if name in cached_jobs:
+            continue
+        lower = name.lower()
         median = p.get("median_sec", 0)
 
         if median < 30:
             continue
 
-        if any(kw in name for kw in BUILD_KEYWORDS):
-            key = ("missing_cache", p["job_name"])
+        if any(kw in lower for kw in BUILD_KEYWORDS):
+            key = ("missing_cache", name)
             if key not in seen:
                 seen.add(key)
                 bottlenecks.append({
                     "type": "missing_cache",
-                    "job_name": p["job_name"],
-                    "evidence": f"Job '{p['job_name']}' ({median}s median) builds dependencies but has no cache directive.",
+                    "job_name": name,
+                    "evidence": f"Job '{name}' ({median}s median) builds dependencies but has no cache directive.",
                     "severity": _assign_severity(median),
                 })
 
