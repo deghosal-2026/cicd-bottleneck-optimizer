@@ -340,7 +340,7 @@
 - [x] Validation status shows act/PyYAML result
 - [x] PR URL returned and printed to CLI
 
-### M4.2: CLI output + logging (1 day) — [#14](https://github.com/deghosal-2026/cicd-bottleneck-optimizer/issues/14)
+### M4.2: CLI output + logging (1 day) — [#14](https://github.com/deghosal-2026/cicd-bottleneck-optimizer/issues/14) ✅ CLOSED
 
 - [x] `lib/cli.py` — `summary_table(reports)` for field study
 - [x] Progress output during fetch/profile/classify (stderr)
