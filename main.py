@@ -1,4 +1,9 @@
 import argparse
+import uuid
+import sys
+import config
+from graph import build_graph
+from state import AgentState
 
 
 def parse_args():
@@ -6,14 +11,12 @@ def parse_args():
         description="CI/CD Bottleneck Optimizer — profile, classify, and optimize GitHub Actions workflows.",
     )
 
-    # Target
     parser.add_argument(
         "--repo",
         type=str,
         help="Target repository in owner/repo format",
     )
 
-    # Modes (mutually exclusive group)
     mode_group = parser.add_mutually_exclusive_group()
     mode_group.add_argument(
         "--optimize",
@@ -32,7 +35,6 @@ def parse_args():
         help="Field study mode: analyze PRs across multiple repos, save local reports",
     )
 
-    # Field study options
     parser.add_argument(
         "--repos",
         type=str,
@@ -55,16 +57,12 @@ def parse_args():
         action="store_true",
         help="In field study mode, show trade-off table interactively before saving reports",
     )
-
-    # Workflow limit
     parser.add_argument(
         "--workflow-limit",
         type=int,
         default=5,
         help="Maximum number of workflows to analyze (default: 5)",
     )
-
-    # Resume
     parser.add_argument(
         "--resume",
         type=str,
@@ -84,28 +82,91 @@ def main():
         print("       python main.py --field-study --repos owner1/repo1,owner2/repo2")
         return 1
 
-    print(f"CI/CD Bottleneck Optimizer")
-    print(f"  Mode: {'field-study' if args.field_study else 'audit' if args.audit else 'optimize'}")
+    c = config.load_config()
+    mode = "field_study" if args.field_study else "audit" if args.audit else "optimize"
+    config.check_omlx_reachable(c)
+    config.check_act_installed()
+    config.check_token_scope(c, mode)
+
+    print("CI/CD Bottleneck Optimizer")
+    print(f"  Mode: {mode}")
 
     if args.field_study:
         print(f"  Repos: {args.repos}")
         print(f"  PR limit: {args.pr_limit}")
         print(f"  Since: {args.since} days")
         if args.review:
-            print(f"  Review: enabled")
+            print("  Review: enabled")
     else:
         print(f"  Repo: {args.repo}")
         print(f"  Workflow limit: {args.workflow_limit}")
 
+    repos = args.repos.split(",") if args.repos else []
+    thread_id = args.resume or str(uuid.uuid4())
+
     if args.resume:
-        print(f"  Resuming session: {args.resume}")
+        print(f"  Resuming session: {thread_id}")
 
     print()
-    print("Starting analysis...")
 
-    # TODO: Load config
-    # TODO: Run LangGraph agent
+    initial_state: AgentState = {
+        "repo_url": args.repo or "",
+        "mode": mode,
+        "field_study_repos": repos,
+        "pr_limit": args.pr_limit,
+        "since_days": args.since,
+        "workflow_limit": args.workflow_limit,
+        "workflows": [],
+        "runs": [],
+        "prs": [],
+        "pr_runs": {},
+        "profiles": [],
+        "bottlenecks": [],
+        "optimizations": [],
+        "simulated_total_saved_min": 0,
+        "selected_optimizations": [],
+        "human_approved": False,
+        "rewritten_yaml": "",
+        "rewritten_yaml_path": "",
+        "pr_url": None,
+        "report_path": None,
+        "validation_attempts": 0,
+        "token_usage": {},
+        "errors": [],
+        "llm_client": None,
+        "github_client": None,
+    }
 
+    graph = build_graph()
+    thread_config = {"configurable": {"thread_id": thread_id}}
+
+    if args.resume:
+        print("Resuming from checkpoint...")
+        snapshot = graph.get_state(thread_config)  # type: ignore[arg-type]
+        if not snapshot.values:
+            print(f"Error: No checkpoint found for session {thread_id}", file=sys.stderr)
+            return 1
+        print(f"  Resumed at node: {snapshot.next[0] if snapshot.next else 'end'}")
+        result = graph.invoke(None, thread_config)  # type: ignore[arg-type]
+    else:
+        result = graph.invoke(initial_state, thread_config)  # type: ignore[arg-type]
+
+    print()
+
+    if result.get("pr_url"):
+        print(f"PR opened: {result['pr_url']}")
+    if result.get("rewritten_yaml_path"):
+        print(f"YAML saved: {result['rewritten_yaml_path']}")
+    if result.get("prs"):
+        print(f"PRs analyzed: {len(result['prs'])}")
+    if result.get("errors"):
+        errors = result["errors"]
+        print(f"Errors ({len(errors)}):")
+        for e in errors[-10:]:
+            print(f"  - {e}")
+
+    print(f"\nSession ID: {thread_id}")
+    print("Done.")
     return 0
 
 

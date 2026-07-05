@@ -1,0 +1,10 @@
+{
+  "repo": "react/react",
+  "pr": 36923,
+  "title": "[compiler] Optimistically type non-mutating builtin methods on unknown receivers",
+  "target_date": "2026-07-03",
+  "profiles": [],
+  "bottlenecks": [],
+  "optimizations": [],
+  "total_saved_min": 0
+}

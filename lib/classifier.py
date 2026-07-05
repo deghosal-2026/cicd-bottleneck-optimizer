@@ -39,7 +39,7 @@ def classify(profiles: list[dict], workflows: list[dict], llm_client=None) -> li
     if not bottlenecks:
         bottlenecks.extend(_check_profiles_only(profiles, cached_jobs))
 
-    if llm_client is not None and not bottlenecks:
+    if llm_client is not None:
         llm_bottlenecks = _classify_with_llm(llm_client, workflows, profiles)
         bottlenecks = _merge_bottlenecks(bottlenecks, llm_bottlenecks)
 
@@ -239,10 +239,15 @@ def _classify_with_llm(llm_client, workflows: list[dict], profiles: list[dict]) 
         "",
     ]
 
+    MAX_WORKFLOWS = 2
+    wf_count = 0
     for wf in workflows:
         content = wf.get("content", "")
         if not content:
             continue
+        wf_count += 1
+        if wf_count > MAX_WORKFLOWS:
+            break
         jobs = wf.get("jobs", [])
         job_timings = []
         for job in jobs:
@@ -276,17 +281,8 @@ def _classify_with_llm(llm_client, workflows: list[dict], profiles: list[dict]) 
     try:
         raw = llm_client.call_local("\n".join(prompt_parts))
     except ConnectionError:
-        print("OMLX down. Use cloud? (y/n): ", end="")
-        choice = input().strip().lower()
-        if choice == "y":
-            try:
-                raw = llm_client.call_openai("\n".join(prompt_parts))
-            except ConnectionError:
-                print("Cloud LLM also unavailable. Skipping LLM classification.")
-                return []
-        else:
-            print("LLM classification skipped.")
-            return []
+        print("    → OMLX not reachable. Skipping LLM classification.", flush=True)
+        return []
 
     bottlenecks = _parse_llm_bottlenecks(raw)
     if cache_key:

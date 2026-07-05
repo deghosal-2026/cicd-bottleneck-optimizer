@@ -1,0 +1,765 @@
+{
+  "repo": "huggingface/transformers",
+  "pr": 46447,
+  "title": "Add MOSS-TTS-v1.5 (delay) and MOSS-Audio-Tokenizer",
+  "window_days": 7,
+  "profiles": [
+    {
+      "job_name": "pr-ci / Test preparation (fetcher)",
+      "median_sec": 0,
+      "p90_sec": 0,
+      "p99_sec": 0,
+      "failure_rate": 0.0,
+      "cache_hit_ratio": null
+    },
+    {
+      "job_name": "pr-ci / Check repository consistency",
+      "median_sec": 0,
+      "p90_sec": 0,
+      "p99_sec": 0,
+      "failure_rate": 1.0,
+      "cache_hit_ratio": null
+    },
+    {
+      "job_name": "pr-ci / Check code quality",
+      "median_sec": 0,
+      "p90_sec": 0,
+      "p99_sec": 0,
+      "failure_rate": 0.0,
+      "cache_hit_ratio": null
+    },
+    {
+      "job_name": "pr-ci / tests_processors / Setup \u2014 generate shard matrix (tests_processors)",
+      "median_sec": 0,
+      "p90_sec": 0,
+      "p99_sec": 0,
+      "failure_rate": 0.0,
+      "cache_hit_ratio": null
+    },
+    {
+      "job_name": "pr-ci / tests_tokenization / Setup \u2014 generate shard matrix (tests_tokenization)",
+      "median_sec": 0,
+      "p90_sec": 0,
+      "p99_sec": 0,
+      "failure_rate": 0.0,
+      "cache_hit_ratio": null
+    },
+    {
+      "job_name": "pr-ci / tests_generate / Setup \u2014 generate shard matrix (tests_generate)",
+      "median_sec": 0,
+      "p90_sec": 0,
+      "p99_sec": 0,
+      "failure_rate": 0.0,
+      "cache_hit_ratio": null
+    },
+    {
+      "job_name": "pr-ci / tests_torch / Setup \u2014 generate shard matrix (tests_torch)",
+      "median_sec": 0,
+      "p90_sec": 0,
+      "p99_sec": 0,
+      "failure_rate": 0.0,
+      "cache_hit_ratio": null
+    },
+    {
+      "job_name": "pr-ci / tests_custom_tokenizers / Setup \u2014 generate shard matrix (tests_custom_tokenizers)",
+      "median_sec": 0,
+      "p90_sec": 0,
+      "p99_sec": 0,
+      "failure_rate": 0.0,
+      "cache_hit_ratio": null
+    },
+    {
+      "job_name": "pr-ci / pipelines_torch / Setup \u2014 generate shard matrix (pipelines_torch)",
+      "median_sec": 0,
+      "p90_sec": 0,
+      "p99_sec": 0,
+      "failure_rate": 0.0,
+      "cache_hit_ratio": null
+    },
+    {
+      "job_name": "pr-ci / tests_exotic_models / Setup \u2014 generate shard matrix (tests_exotic_models)",
+      "median_sec": 0,
+      "p90_sec": 0,
+      "p99_sec": 0,
+      "failure_rate": 0.0,
+      "cache_hit_ratio": null
+    },
+    {
+      "job_name": "pr-ci / examples_torch / Setup \u2014 generate shard matrix (examples_torch)",
+      "median_sec": 0,
+      "p90_sec": 0,
+      "p99_sec": 0,
+      "failure_rate": 0.0,
+      "cache_hit_ratio": null
+    },
+    {
+      "job_name": "pr-ci / tests_tensor_parallel_ci / Setup \u2014 generate shard matrix (tests_tensor_parallel_ci)",
+      "median_sec": 0,
+      "p90_sec": 0,
+      "p99_sec": 0,
+      "failure_rate": 0.0,
+      "cache_hit_ratio": null
+    },
+    {
+      "job_name": "pr-ci / tests_non_model / Setup \u2014 generate shard matrix (tests_non_model)",
+      "median_sec": 0,
+      "p90_sec": 0,
+      "p99_sec": 0,
+      "failure_rate": 0.0,
+      "cache_hit_ratio": null
+    },
+    {
+      "job_name": "pr-ci / tests_repo_utils / Setup \u2014 generate shard matrix (tests_repo_utils)",
+      "median_sec": 0,
+      "p90_sec": 0,
+      "p99_sec": 0,
+      "failure_rate": 0.0,
+      "cache_hit_ratio": null
+    },
+    {
+      "job_name": "pr-ci / tests_training_ci / Setup \u2014 generate shard matrix (tests_training_ci)",
+      "median_sec": 0,
+      "p90_sec": 0,
+      "p99_sec": 0,
+      "failure_rate": 0.0,
+      "cache_hit_ratio": null
+    },
+    {
+      "job_name": "pr-ci / tests_peft_integration / Setup \u2014 generate shard matrix (tests_peft_integration)",
+      "median_sec": 0,
+      "p90_sec": 0,
+      "p99_sec": 0,
+      "failure_rate": 0.0,
+      "cache_hit_ratio": null
+    },
+    {
+      "job_name": "pr-ci / tests_fsdp_ci",
+      "median_sec": 0,
+      "p90_sec": 0,
+      "p99_sec": 0,
+      "failure_rate": 0.0,
+      "cache_hit_ratio": null
+    },
+    {
+      "job_name": "pr-ci / tests_tensor_parallel_ci / tests_tensor_parallel_ci [shard 6/8]",
+      "median_sec": 0,
+      "p90_sec": 0,
+      "p99_sec": 0,
+      "failure_rate": 0.0,
+      "cache_hit_ratio": null
+    },
+    {
+      "job_name": "pr-ci / tests_tensor_parallel_ci / tests_tensor_parallel_ci [shard 0/8]",
+      "median_sec": 0,
+      "p90_sec": 0,
+      "p99_sec": 0,
+      "failure_rate": 0.0,
+      "cache_hit_ratio": null
+    },
+    {
+      "job_name": "pr-ci / tests_tensor_parallel_ci / tests_tensor_parallel_ci [shard 3/8]",
+      "median_sec": 0,
+      "p90_sec": 0,
+      "p99_sec": 0,
+      "failure_rate": 0.0,
+      "cache_hit_ratio": null
+    },
+    {
+      "job_name": "pr-ci / tests_tensor_parallel_ci / tests_tensor_parallel_ci [shard 4/8]",
+      "median_sec": 0,
+      "p90_sec": 0,
+      "p99_sec": 0,
+      "failure_rate": 0.0,
+      "cache_hit_ratio": null
+    },
+    {
+      "job_name": "pr-ci / tests_tensor_parallel_ci / tests_tensor_parallel_ci [shard 2/8]",
+      "median_sec": 0,
+      "p90_sec": 0,
+      "p99_sec": 0,
+      "failure_rate": 0.0,
+      "cache_hit_ratio": null
+    },
+    {
+      "job_name": "pr-ci / tests_tensor_parallel_ci / tests_tensor_parallel_ci [shard 7/8]",
+      "median_sec": 0,
+      "p90_sec": 0,
+      "p99_sec": 0,
+      "failure_rate": 0.0,
+      "cache_hit_ratio": null
+    },
+    {
+      "job_name": "pr-ci / tests_tensor_parallel_ci / tests_tensor_parallel_ci [shard 5/8]",
+      "median_sec": 0,
+      "p90_sec": 0,
+      "p99_sec": 0,
+      "failure_rate": 0.0,
+      "cache_hit_ratio": null
+    },
+    {
+      "job_name": "pr-ci / tests_tensor_parallel_ci / tests_tensor_parallel_ci [shard 1/8]",
+      "median_sec": 0,
+      "p90_sec": 0,
+      "p99_sec": 0,
+      "failure_rate": 0.0,
+      "cache_hit_ratio": null
+    },
+    {
+      "job_name": "pr-ci / tests_processors / tests_processors [shard 0/8]",
+      "median_sec": 0,
+      "p90_sec": 0,
+      "p99_sec": 0,
+      "failure_rate": 0.0,
+      "cache_hit_ratio": null
+    },
+    {
+      "job_name": "pr-ci / tests_processors / tests_processors [shard 4/8]",
+      "median_sec": 0,
+      "p90_sec": 0,
+      "p99_sec": 0,
+      "failure_rate": 0.0,
+      "cache_hit_ratio": null
+    },
+    {
+      "job_name": "pr-ci / tests_processors / tests_processors [shard 1/8]",
+      "median_sec": 0,
+      "p90_sec": 0,
+      "p99_sec": 0,
+      "failure_rate": 0.0,
+      "cache_hit_ratio": null
+    },
+    {
+      "job_name": "pr-ci / tests_processors / tests_processors [shard 3/8]",
+      "median_sec": 0,
+      "p90_sec": 0,
+      "p99_sec": 0,
+      "failure_rate": 0.0,
+      "cache_hit_ratio": null
+    },
+    {
+      "job_name": "pr-ci / tests_processors / tests_processors [shard 5/8]",
+      "median_sec": 0,
+      "p90_sec": 0,
+      "p99_sec": 0,
+      "failure_rate": 0.0,
+      "cache_hit_ratio": null
+    }
+  ],
+  "bottlenecks": [
+    {
+      "type": "missing_cache",
+      "job_name": "setup",
+      "evidence": "No `cache:` directive found in job 'setup'. Median time: 0s. Adding cache would reduce dependency download time.",
+      "severity": "low"
+    },
+    {
+      "type": "missing_cache",
+      "job_name": "run_pipelines_torch_gpu",
+      "evidence": "No `cache:` directive found in job 'run_pipelines_torch_gpu'. Median time: 0s. Adding cache would reduce dependency download time.",
+      "severity": "low"
+    },
+    {
+      "type": "missing_cache",
+      "job_name": "run_examples_gpu",
+      "evidence": "No `cache:` directive found in job 'run_examples_gpu'. Median time: 0s. Adding cache would reduce dependency download time.",
+      "severity": "low"
+    },
+    {
+      "type": "missing_cache",
+      "job_name": "run_torch_cuda_extensions_gpu",
+      "evidence": "No `cache:` directive found in job 'run_torch_cuda_extensions_gpu'. Median time: 0s. Adding cache would reduce dependency download time.",
+      "severity": "low"
+    },
+    {
+      "type": "missing_cache",
+      "job_name": "run_quantization_torch_gpu",
+      "evidence": "No `cache:` directive found in job 'run_quantization_torch_gpu'. Median time: 0s. Adding cache would reduce dependency download time.",
+      "severity": "low"
+    },
+    {
+      "type": "missing_cache",
+      "job_name": "run_kernels_gpu",
+      "evidence": "No `cache:` directive found in job 'run_kernels_gpu'. Median time: 0s. Adding cache would reduce dependency download time.",
+      "severity": "low"
+    },
+    {
+      "type": "missing_cache",
+      "job_name": "run_extract_warnings",
+      "evidence": "No `cache:` directive found in job 'run_extract_warnings'. Median time: 0s. Adding cache would reduce dependency download time.",
+      "severity": "low"
+    },
+    {
+      "type": "serial_parallel",
+      "job_name": "run_quantization_torch_gpu",
+      "evidence": "Job 'run_quantization_torch_gpu' depends on ['setup'] via `needs:` and waits for them to complete. Median time: 0s. If this job doesn't use their outputs, removing `needs:` would let it run in parallel.",
+      "severity": "low"
+    },
+    {
+      "type": "serial_parallel",
+      "job_name": "run_extract_warnings",
+      "evidence": "Job 'run_extract_warnings' depends on ['setup', 'run_models_gpu'] via `needs:` and waits for them to complete. Median time: 0s. If this job doesn't use their outputs, removing `needs:` would let it run in parallel.",
+      "severity": "low"
+    },
+    {
+      "type": "redundant_matrix",
+      "job_name": "run_trainer_and_fsdp_gpu",
+      "evidence": "Job 'run_trainer_and_fsdp_gpu' uses 2 matrix dimensions (machine_type=['aws-g5-4xlarge-cache', 'aws-g5-12xlarge-cache'], slice_id=[0, 1, 2]) producing 6 combinations. Median time: 0s. Reducing dimensions would cut runner time linearly.",
+      "severity": "low"
+    },
+    {
+      "type": "missing_cache",
+      "job_name": "build_and_package",
+      "evidence": "No `cache:` directive found in job 'build_and_package'. Median time: 0s. Adding cache would reduce dependency download time.",
+      "severity": "low"
+    },
+    {
+      "type": "missing_cache",
+      "job_name": "close_stale_issues",
+      "evidence": "No `cache:` directive found in job 'close_stale_issues'. Median time: 0s. Adding cache would reduce dependency download time.",
+      "severity": "low"
+    },
+    {
+      "type": "missing_cache",
+      "job_name": "send_results",
+      "evidence": "No `cache:` directive found in job 'send_results'. Median time: 0s. Adding cache would reduce dependency download time.",
+      "severity": "low"
+    },
+    {
+      "type": "serial_parallel",
+      "job_name": "send_results",
+      "evidence": "Job 'send_results' depends on ['call_doctest_job'] via `needs:` and waits for them to complete. Median time: 0s. If this job doesn't use their outputs, removing `needs:` would let it run in parallel.",
+      "severity": "low"
+    },
+    {
+      "type": "missing_cache",
+      "job_name": "skip_merge_queue",
+      "evidence": "No `cache:` directive found in job 'skip_merge_queue'. Median time: 0s. Adding cache would reduce dependency download time.",
+      "severity": "low"
+    },
+    {
+      "type": "missing_cache",
+      "job_name": "doc_build_status_check",
+      "evidence": "No `cache:` directive found in job 'doc_build_status_check'. Median time: 0s. Adding cache would reduce dependency download time.",
+      "severity": "low"
+    },
+    {
+      "type": "serial_parallel",
+      "job_name": "doc_build_status_check",
+      "evidence": "Job 'doc_build_status_check' depends on ['build', 'skip_merge_queue'] via `needs:` and waits for them to complete. Median time: 0s. If this job doesn't use their outputs, removing `needs:` would let it run in parallel.",
+      "severity": "low"
+    },
+    {
+      "type": "missing_cache",
+      "job_name": "check_tiny_models",
+      "evidence": "No `cache:` directive found in job 'check_tiny_models'. Median time: 0s. Adding cache would reduce dependency download time.",
+      "severity": "low"
+    },
+    {
+      "type": "missing_cache",
+      "job_name": "run_models_gpu",
+      "evidence": "No `cache:` directive found in job 'run_models_gpu'. Median time: 0s. Adding cache would reduce dependency download time.",
+      "severity": "low"
+    },
+    {
+      "type": "missing_cache",
+      "job_name": "build",
+      "evidence": "No `cache:` directive found in job 'build'. Median time: 0s. Adding cache would reduce dependency download time.",
+      "severity": "low"
+    },
+    {
+      "type": "missing_cache",
+      "job_name": "run_doctests",
+      "evidence": "No `cache:` directive found in job 'run_doctests'. Median time: 0s. Adding cache would reduce dependency download time.",
+      "severity": "low"
+    },
+    {
+      "type": "missing_cache",
+      "job_name": "ssh_runner",
+      "evidence": "No `cache:` directive found in job 'ssh_runner'. Median time: 0s. Adding cache would reduce dependency download time.",
+      "severity": "low"
+    },
+    {
+      "type": "serial_parallel",
+      "job_name": "ssh_runner",
+      "evidence": "Job 'ssh_runner' depends on ['get_runner'] via `needs:` and waits for them to complete. Median time: 0s. If this job doesn't use their outputs, removing `needs:` would let it run in parallel.",
+      "severity": "low"
+    },
+    {
+      "type": "missing_cache",
+      "job_name": "benchmark",
+      "evidence": "No `cache:` directive found in job 'benchmark'. Median time: 0s. Adding cache would reduce dependency download time.",
+      "severity": "low"
+    },
+    {
+      "type": "missing_cache",
+      "job_name": "get-tests",
+      "evidence": "No `cache:` directive found in job 'get-tests'. Median time: 0s. Adding cache would reduce dependency download time.",
+      "severity": "low"
+    },
+    {
+      "type": "serial_parallel",
+      "job_name": "get-tests",
+      "evidence": "Job 'get-tests' depends on ['get-pr-number', 'check-timestamps'] via `needs:` and waits for them to complete. Median time: 0s. If this job doesn't use their outputs, removing `needs:` would let it run in parallel.",
+      "severity": "low"
+    },
+    {
+      "type": "serial_parallel",
+      "job_name": "create_run",
+      "evidence": "Job 'create_run' depends on ['check-timestamps', 'reply_to_comment'] via `needs:` and waits for them to complete. Median time: 0s. If this job doesn't use their outputs, removing `needs:` would let it run in parallel.",
+      "severity": "low"
+    },
+    {
+      "type": "serial_parallel",
+      "job_name": "report",
+      "evidence": "Job 'report' depends on ['get-pr-number', 'get-pr-info', 'check-timestamps', 'create_run', 'model-ci', 'quantization-ci'] via `needs:` and waits for them to complete. Median time: 0s. If this job doesn't use their outputs, removing `needs:` would let it run in parallel.",
+      "severity": "low"
+    },
+    {
+      "type": "missing_cache",
+      "job_name": "assign_reviewers",
+      "evidence": "No `cache:` directive found in job 'assign_reviewers'. Median time: 0s. Adding cache would reduce dependency download time.",
+      "severity": "low"
+    },
+    {
+      "type": "redundant_rebuild",
+      "job_name": "build_and_package",
+      "evidence": "The `build_and_package` job builds a conda package.  The `run_extract_warnings` job runs `python setup.py --version` and uses a similar process to build a conda package, but it is not part of a conda package.  The use of `conda-build` here suggests the creation of a conda package.  This will require building this package again, avoiding an existing one, which saves time.",
+      "severity": "high"
+    },
+    {
+      "type": "redundant_rebuild",
+      "job_name": "run_extract_warnings",
+      "evidence": "This job runs `python setup.py --version` which is part of the conda package build and sharing the conda package artifact could avoid re-running this process, potentially saving time on the CI/CD pipeline.",
+      "severity": "medium"
+    },
+    {
+      "type": "oversized_context",
+      "job_name": "build_and_package",
+      "evidence": "The `build_and_package` job fetches the entire repository history with `actions/checkout@de0fac2e4500dabe0009e67214ff5f5447ce83dd`, which fetches a huge amount of data and will be slow.  It would benefit from a smaller context size.",
+      "severity": "medium"
+    }
+  ],
+  "optimizations": [
+    {
+      "id": "missing_cache-setup-05c57b",
+      "bottleneck_type": "missing_cache",
+      "job_name": "setup",
+      "description": "Add actions/cache to 'setup' to cache dependencies and avoid re-downloading every run",
+      "estimated_time_saved_min": 1,
+      "estimated_cost_per_run": 0.07,
+      "risk_level": "low",
+      "yaml_diff_hint": "Add `- uses: actions/cache@v4` step before dependency install in 'setup'"
+    },
+    {
+      "id": "missing_cache-run_pipelines_torch_-2a1067",
+      "bottleneck_type": "missing_cache",
+      "job_name": "run_pipelines_torch_gpu",
+      "description": "Add actions/cache to 'run_pipelines_torch_gpu' to cache dependencies and avoid re-downloading every run",
+      "estimated_time_saved_min": 1,
+      "estimated_cost_per_run": 0.07,
+      "risk_level": "low",
+      "yaml_diff_hint": "Add `- uses: actions/cache@v4` step before dependency install in 'run_pipelines_torch_gpu'"
+    },
+    {
+      "id": "missing_cache-run_examples_gpu-4c9153",
+      "bottleneck_type": "missing_cache",
+      "job_name": "run_examples_gpu",
+      "description": "Add actions/cache to 'run_examples_gpu' to cache dependencies and avoid re-downloading every run",
+      "estimated_time_saved_min": 1,
+      "estimated_cost_per_run": 0.07,
+      "risk_level": "low",
+      "yaml_diff_hint": "Add `- uses: actions/cache@v4` step before dependency install in 'run_examples_gpu'"
+    },
+    {
+      "id": "missing_cache-run_torch_cuda_exten-0850e2",
+      "bottleneck_type": "missing_cache",
+      "job_name": "run_torch_cuda_extensions_gpu",
+      "description": "Add actions/cache to 'run_torch_cuda_extensions_gpu' to cache dependencies and avoid re-downloading every run",
+      "estimated_time_saved_min": 1,
+      "estimated_cost_per_run": 0.07,
+      "risk_level": "low",
+      "yaml_diff_hint": "Add `- uses: actions/cache@v4` step before dependency install in 'run_torch_cuda_extensions_gpu'"
+    },
+    {
+      "id": "missing_cache-run_quantization_tor-2700b4",
+      "bottleneck_type": "missing_cache",
+      "job_name": "run_quantization_torch_gpu",
+      "description": "Add actions/cache to 'run_quantization_torch_gpu' to cache dependencies and avoid re-downloading every run",
+      "estimated_time_saved_min": 1,
+      "estimated_cost_per_run": 0.07,
+      "risk_level": "low",
+      "yaml_diff_hint": "Add `- uses: actions/cache@v4` step before dependency install in 'run_quantization_torch_gpu'"
+    },
+    {
+      "id": "missing_cache-run_kernels_gpu-6238f6",
+      "bottleneck_type": "missing_cache",
+      "job_name": "run_kernels_gpu",
+      "description": "Add actions/cache to 'run_kernels_gpu' to cache dependencies and avoid re-downloading every run",
+      "estimated_time_saved_min": 1,
+      "estimated_cost_per_run": 0.07,
+      "risk_level": "low",
+      "yaml_diff_hint": "Add `- uses: actions/cache@v4` step before dependency install in 'run_kernels_gpu'"
+    },
+    {
+      "id": "missing_cache-run_extract_warnings-946626",
+      "bottleneck_type": "missing_cache",
+      "job_name": "run_extract_warnings",
+      "description": "Add actions/cache to 'run_extract_warnings' to cache dependencies and avoid re-downloading every run",
+      "estimated_time_saved_min": 1,
+      "estimated_cost_per_run": 0.07,
+      "risk_level": "low",
+      "yaml_diff_hint": "Add `- uses: actions/cache@v4` step before dependency install in 'run_extract_warnings'"
+    },
+    {
+      "id": "serial_parallel-run_quantization_tor-be7d37",
+      "bottleneck_type": "serial_parallel",
+      "job_name": "run_quantization_torch_gpu",
+      "description": "Remove 'needs:' from 'run_quantization_torch_gpu' so it runs in parallel with other independent jobs",
+      "estimated_time_saved_min": 1,
+      "estimated_cost_per_run": 0.0,
+      "risk_level": "medium",
+      "yaml_diff_hint": "Ensure 'run_quantization_torch_gpu' has no `needs:` blocking parallel execution"
+    },
+    {
+      "id": "serial_parallel-run_extract_warnings-0b6f43",
+      "bottleneck_type": "serial_parallel",
+      "job_name": "run_extract_warnings",
+      "description": "Remove 'needs:' from 'run_extract_warnings' so it runs in parallel with other independent jobs",
+      "estimated_time_saved_min": 1,
+      "estimated_cost_per_run": 0.0,
+      "risk_level": "medium",
+      "yaml_diff_hint": "Ensure 'run_extract_warnings' has no `needs:` blocking parallel execution"
+    },
+    {
+      "id": "redundant_matrix-run_trainer_and_fsdp-c2d35d",
+      "bottleneck_type": "redundant_matrix",
+      "job_name": "run_trainer_and_fsdp_gpu",
+      "description": "Reduce matrix dimensions in 'run_trainer_and_fsdp_gpu' to eliminate redundant OS/language combinations",
+      "estimated_time_saved_min": 1,
+      "estimated_cost_per_run": 0.01,
+      "risk_level": "high",
+      "yaml_diff_hint": "Reduce `strategy.matrix` dimensions in 'run_trainer_and_fsdp_gpu' to remove overlap"
+    },
+    {
+      "id": "missing_cache-build_and_package-c396ab",
+      "bottleneck_type": "missing_cache",
+      "job_name": "build_and_package",
+      "description": "Add actions/cache to 'build_and_package' to cache dependencies and avoid re-downloading every run",
+      "estimated_time_saved_min": 1,
+      "estimated_cost_per_run": 0.07,
+      "risk_level": "low",
+      "yaml_diff_hint": "Add `- uses: actions/cache@v4` step before dependency install in 'build_and_package'"
+    },
+    {
+      "id": "missing_cache-close_stale_issues-efeacb",
+      "bottleneck_type": "missing_cache",
+      "job_name": "close_stale_issues",
+      "description": "Add actions/cache to 'close_stale_issues' to cache dependencies and avoid re-downloading every run",
+      "estimated_time_saved_min": 1,
+      "estimated_cost_per_run": 0.07,
+      "risk_level": "low",
+      "yaml_diff_hint": "Add `- uses: actions/cache@v4` step before dependency install in 'close_stale_issues'"
+    },
+    {
+      "id": "missing_cache-send_results-86e17f",
+      "bottleneck_type": "missing_cache",
+      "job_name": "send_results",
+      "description": "Add actions/cache to 'send_results' to cache dependencies and avoid re-downloading every run",
+      "estimated_time_saved_min": 1,
+      "estimated_cost_per_run": 0.07,
+      "risk_level": "low",
+      "yaml_diff_hint": "Add `- uses: actions/cache@v4` step before dependency install in 'send_results'"
+    },
+    {
+      "id": "serial_parallel-send_results-169f68",
+      "bottleneck_type": "serial_parallel",
+      "job_name": "send_results",
+      "description": "Remove 'needs:' from 'send_results' so it runs in parallel with other independent jobs",
+      "estimated_time_saved_min": 1,
+      "estimated_cost_per_run": 0.0,
+      "risk_level": "medium",
+      "yaml_diff_hint": "Ensure 'send_results' has no `needs:` blocking parallel execution"
+    },
+    {
+      "id": "missing_cache-skip_merge_queue-96c7a8",
+      "bottleneck_type": "missing_cache",
+      "job_name": "skip_merge_queue",
+      "description": "Add actions/cache to 'skip_merge_queue' to cache dependencies and avoid re-downloading every run",
+      "estimated_time_saved_min": 1,
+      "estimated_cost_per_run": 0.07,
+      "risk_level": "low",
+      "yaml_diff_hint": "Add `- uses: actions/cache@v4` step before dependency install in 'skip_merge_queue'"
+    },
+    {
+      "id": "missing_cache-doc_build_status_che-b0a744",
+      "bottleneck_type": "missing_cache",
+      "job_name": "doc_build_status_check",
+      "description": "Add actions/cache to 'doc_build_status_check' to cache dependencies and avoid re-downloading every run",
+      "estimated_time_saved_min": 1,
+      "estimated_cost_per_run": 0.07,
+      "risk_level": "low",
+      "yaml_diff_hint": "Add `- uses: actions/cache@v4` step before dependency install in 'doc_build_status_check'"
+    },
+    {
+      "id": "serial_parallel-doc_build_status_che-bb5eb6",
+      "bottleneck_type": "serial_parallel",
+      "job_name": "doc_build_status_check",
+      "description": "Remove 'needs:' from 'doc_build_status_check' so it runs in parallel with other independent jobs",
+      "estimated_time_saved_min": 1,
+      "estimated_cost_per_run": 0.0,
+      "risk_level": "medium",
+      "yaml_diff_hint": "Ensure 'doc_build_status_check' has no `needs:` blocking parallel execution"
+    },
+    {
+      "id": "missing_cache-check_tiny_models-29a864",
+      "bottleneck_type": "missing_cache",
+      "job_name": "check_tiny_models",
+      "description": "Add actions/cache to 'check_tiny_models' to cache dependencies and avoid re-downloading every run",
+      "estimated_time_saved_min": 1,
+      "estimated_cost_per_run": 0.07,
+      "risk_level": "low",
+      "yaml_diff_hint": "Add `- uses: actions/cache@v4` step before dependency install in 'check_tiny_models'"
+    },
+    {
+      "id": "missing_cache-run_models_gpu-b391b5",
+      "bottleneck_type": "missing_cache",
+      "job_name": "run_models_gpu",
+      "description": "Add actions/cache to 'run_models_gpu' to cache dependencies and avoid re-downloading every run",
+      "estimated_time_saved_min": 1,
+      "estimated_cost_per_run": 0.07,
+      "risk_level": "low",
+      "yaml_diff_hint": "Add `- uses: actions/cache@v4` step before dependency install in 'run_models_gpu'"
+    },
+    {
+      "id": "missing_cache-build-dda4f1",
+      "bottleneck_type": "missing_cache",
+      "job_name": "build",
+      "description": "Add actions/cache to 'build' to cache dependencies and avoid re-downloading every run",
+      "estimated_time_saved_min": 1,
+      "estimated_cost_per_run": 0.07,
+      "risk_level": "low",
+      "yaml_diff_hint": "Add `- uses: actions/cache@v4` step before dependency install in 'build'"
+    },
+    {
+      "id": "missing_cache-run_doctests-eb0ea5",
+      "bottleneck_type": "missing_cache",
+      "job_name": "run_doctests",
+      "description": "Add actions/cache to 'run_doctests' to cache dependencies and avoid re-downloading every run",
+      "estimated_time_saved_min": 1,
+      "estimated_cost_per_run": 0.07,
+      "risk_level": "low",
+      "yaml_diff_hint": "Add `- uses: actions/cache@v4` step before dependency install in 'run_doctests'"
+    },
+    {
+      "id": "missing_cache-ssh_runner-a5112e",
+      "bottleneck_type": "missing_cache",
+      "job_name": "ssh_runner",
+      "description": "Add actions/cache to 'ssh_runner' to cache dependencies and avoid re-downloading every run",
+      "estimated_time_saved_min": 1,
+      "estimated_cost_per_run": 0.07,
+      "risk_level": "low",
+      "yaml_diff_hint": "Add `- uses: actions/cache@v4` step before dependency install in 'ssh_runner'"
+    },
+    {
+      "id": "serial_parallel-ssh_runner-56cf22",
+      "bottleneck_type": "serial_parallel",
+      "job_name": "ssh_runner",
+      "description": "Remove 'needs:' from 'ssh_runner' so it runs in parallel with other independent jobs",
+      "estimated_time_saved_min": 1,
+      "estimated_cost_per_run": 0.0,
+      "risk_level": "medium",
+      "yaml_diff_hint": "Ensure 'ssh_runner' has no `needs:` blocking parallel execution"
+    },
+    {
+      "id": "missing_cache-benchmark-1d63c2",
+      "bottleneck_type": "missing_cache",
+      "job_name": "benchmark",
+      "description": "Add actions/cache to 'benchmark' to cache dependencies and avoid re-downloading every run",
+      "estimated_time_saved_min": 1,
+      "estimated_cost_per_run": 0.07,
+      "risk_level": "low",
+      "yaml_diff_hint": "Add `- uses: actions/cache@v4` step before dependency install in 'benchmark'"
+    },
+    {
+      "id": "missing_cache-get-tests-322166",
+      "bottleneck_type": "missing_cache",
+      "job_name": "get-tests",
+      "description": "Add actions/cache to 'get-tests' to cache dependencies and avoid re-downloading every run",
+      "estimated_time_saved_min": 1,
+      "estimated_cost_per_run": 0.07,
+      "risk_level": "low",
+      "yaml_diff_hint": "Add `- uses: actions/cache@v4` step before dependency install in 'get-tests'"
+    },
+    {
+      "id": "serial_parallel-get-tests-75e489",
+      "bottleneck_type": "serial_parallel",
+      "job_name": "get-tests",
+      "description": "Remove 'needs:' from 'get-tests' so it runs in parallel with other independent jobs",
+      "estimated_time_saved_min": 1,
+      "estimated_cost_per_run": 0.0,
+      "risk_level": "medium",
+      "yaml_diff_hint": "Ensure 'get-tests' has no `needs:` blocking parallel execution"
+    },
+    {
+      "id": "serial_parallel-create_run-76a6f1",
+      "bottleneck_type": "serial_parallel",
+      "job_name": "create_run",
+      "description": "Remove 'needs:' from 'create_run' so it runs in parallel with other independent jobs",
+      "estimated_time_saved_min": 1,
+      "estimated_cost_per_run": 0.0,
+      "risk_level": "medium",
+      "yaml_diff_hint": "Ensure 'create_run' has no `needs:` blocking parallel execution"
+    },
+    {
+      "id": "serial_parallel-report-c8e603",
+      "bottleneck_type": "serial_parallel",
+      "job_name": "report",
+      "description": "Remove 'needs:' from 'report' so it runs in parallel with other independent jobs",
+      "estimated_time_saved_min": 1,
+      "estimated_cost_per_run": 0.0,
+      "risk_level": "medium",
+      "yaml_diff_hint": "Ensure 'report' has no `needs:` blocking parallel execution"
+    },
+    {
+      "id": "missing_cache-assign_reviewers-aa4b15",
+      "bottleneck_type": "missing_cache",
+      "job_name": "assign_reviewers",
+      "description": "Add actions/cache to 'assign_reviewers' to cache dependencies and avoid re-downloading every run",
+      "estimated_time_saved_min": 1,
+      "estimated_cost_per_run": 0.07,
+      "risk_level": "low",
+      "yaml_diff_hint": "Add `- uses: actions/cache@v4` step before dependency install in 'assign_reviewers'"
+    },
+    {
+      "id": "redundant_rebuild-build_and_package-8ec504",
+      "bottleneck_type": "redundant_rebuild",
+      "job_name": "build_and_package",
+      "description": "Use actions/upload-artifact and actions/download-artifact in 'build_and_package' to reuse build outputs",
+      "estimated_time_saved_min": 1,
+      "estimated_cost_per_run": 0.01,
+      "risk_level": "medium",
+      "yaml_diff_hint": "Add `actions/upload-artifact` to build job and `actions/download-artifact` to 'build_and_package'"
+    },
+    {
+      "id": "redundant_rebuild-run_extract_warnings-777fef",
+      "bottleneck_type": "redundant_rebuild",
+      "job_name": "run_extract_warnings",
+      "description": "Use actions/upload-artifact and actions/download-artifact in 'run_extract_warnings' to reuse build outputs",
+      "estimated_time_saved_min": 1,
+      "estimated_cost_per_run": 0.01,
+      "risk_level": "medium",
+      "yaml_diff_hint": "Add `actions/upload-artifact` to build job and `actions/download-artifact` to 'run_extract_warnings'"
+    },
+    {
+      "id": "oversized_context-build_and_package-d3afba",
+      "bottleneck_type": "oversized_context",
+      "job_name": "build_and_package",
+      "description": "Add .dockerignore to 'build_and_package' to exclude node_modules, .git, and build artifacts from Docker context",
+      "estimated_time_saved_min": 1,
+      "estimated_cost_per_run": 0.0,
+      "risk_level": "low",
+      "yaml_diff_hint": "Create `.dockerignore` excluding node_modules, .git, and other build artifacts"
+    }
+  ],
+  "total_saved_min": 32
+}

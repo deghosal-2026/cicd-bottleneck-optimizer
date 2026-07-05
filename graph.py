@@ -1,5 +1,7 @@
+import os
+
 from langgraph.graph import StateGraph, END
-from langgraph.checkpoint.memory import MemorySaver
+from langgraph.checkpoint.sqlite import SqliteSaver
 from state import AgentState
 from nodes.fetch import fetch_workflows_node, fetch_runs_node, fetch_prs_node, fetch_pr_runs_node
 from nodes.profile import profile_jobs_node
@@ -10,6 +12,8 @@ from nodes.generate import generate_yaml_node, validate_syntax_node
 from llm.client import LLMClient
 from tools.github import GitHubClient
 import config as cfg
+
+CHECKPOINT_DB = os.environ.get("CICD_CHECKPOINT_DB", "checkpoints/checkpoints.db")
 
 
 def route_by_mode(state: AgentState) -> str:
@@ -80,6 +84,11 @@ def build_graph(config_path: str | None = None):
 
     graph.add_edge("open_pr", END)
 
-    checkpointer = MemorySaver()
+    import sqlite3
+
+    os.makedirs(os.path.dirname(CHECKPOINT_DB), exist_ok=True)
+    conn = sqlite3.connect(CHECKPOINT_DB, check_same_thread=False)
+    checkpointer = SqliteSaver(conn)
+    checkpointer.setup()
 
     return graph.compile(checkpointer=checkpointer)

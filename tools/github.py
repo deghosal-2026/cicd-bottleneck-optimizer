@@ -148,10 +148,13 @@ class GitHubClient:
         head_sha = pr.get("head", {}).get("sha", "")
         if not head_sha:
             return []
-        data = self._request("GET", f"/repos/{repo}/actions/runs?event=pull_request&head_sha={head_sha}")
-        if not data:
-            return []
-        return data.get("workflow_runs", [])
+        for event in ("pull_request", "push"):
+            data = self._request("GET", f"/repos/{repo}/actions/runs?event={event}&head_sha={head_sha}")
+            if data:
+                runs = data.get("workflow_runs", [])
+                if runs:
+                    return runs
+        return []
 
     def detect_ci_system(self, repo: str) -> str:
         data = self._request("GET", f"/repos/{repo}/actions/workflows?per_page=1")

@@ -1,0 +1,10 @@
+{
+  "repo": "react/react",
+  "pr": 36927,
+  "title": "reconciler docs: fix stale host config method signatures",
+  "window_days": 7,
+  "profiles": [],
+  "bottlenecks": [],
+  "optimizations": [],
+  "total_saved_min": 0
+}

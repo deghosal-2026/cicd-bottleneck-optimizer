@@ -1,0 +1,773 @@
+{
+  "repo": "nodejs/node",
+  "pr": 64303,
+  "title": "quic: fix stall datagrams, if no pending streams",
+  "window_days": 7,
+  "profiles": [
+    {
+      "job_name": "coverage-windows",
+      "median_sec": 0,
+      "p90_sec": 0,
+      "p99_sec": 0,
+      "failure_rate": 0.0,
+      "cache_hit_ratio": null
+    },
+    {
+      "job_name": "test-macOS",
+      "median_sec": 0,
+      "p90_sec": 0,
+      "p99_sec": 0,
+      "failure_rate": 0.0,
+      "cache_hit_ratio": null
+    },
+    {
+      "job_name": "test-linux (ubuntu-24.04-arm)",
+      "median_sec": 0,
+      "p90_sec": 0,
+      "p99_sec": 0,
+      "failure_rate": 0.0,
+      "cache_hit_ratio": null
+    },
+    {
+      "job_name": "test-linux (ubuntu-24.04)",
+      "median_sec": 0,
+      "p90_sec": 0,
+      "p99_sec": 0,
+      "failure_rate": 0.0,
+      "cache_hit_ratio": null
+    },
+    {
+      "job_name": "lint-commit-message",
+      "median_sec": 0,
+      "p90_sec": 0,
+      "p99_sec": 0,
+      "failure_rate": 0.0,
+      "cache_hit_ratio": null
+    },
+    {
+      "job_name": "build-docs",
+      "median_sec": 0,
+      "p90_sec": 0,
+      "p99_sec": 0,
+      "failure_rate": 0.0,
+      "cache_hit_ratio": null
+    },
+    {
+      "job_name": "build-tarball",
+      "median_sec": 0,
+      "p90_sec": 0,
+      "p99_sec": 0,
+      "failure_rate": 0.0,
+      "cache_hit_ratio": null
+    },
+    {
+      "job_name": "test-tarball-linux",
+      "median_sec": 0,
+      "p90_sec": 0,
+      "p99_sec": 0,
+      "failure_rate": 0.0,
+      "cache_hit_ratio": null
+    },
+    {
+      "job_name": "format-cpp",
+      "median_sec": 0,
+      "p90_sec": 0,
+      "p99_sec": 0,
+      "failure_rate": 0.0,
+      "cache_hit_ratio": null
+    },
+    {
+      "job_name": "lint-cpp",
+      "median_sec": 0,
+      "p90_sec": 0,
+      "p99_sec": 0,
+      "failure_rate": 0.0,
+      "cache_hit_ratio": null
+    },
+    {
+      "job_name": "lint-js-and-md",
+      "median_sec": 0,
+      "p90_sec": 0,
+      "p99_sec": 0,
+      "failure_rate": 0.0,
+      "cache_hit_ratio": null
+    },
+    {
+      "job_name": "lint-addon-docs",
+      "median_sec": 0,
+      "p90_sec": 0,
+      "p99_sec": 0,
+      "failure_rate": 0.0,
+      "cache_hit_ratio": null
+    },
+    {
+      "job_name": "lint-sh",
+      "median_sec": 0,
+      "p90_sec": 0,
+      "p99_sec": 0,
+      "failure_rate": 0.0,
+      "cache_hit_ratio": null
+    },
+    {
+      "job_name": "lint-py",
+      "median_sec": 0,
+      "p90_sec": 0,
+      "p99_sec": 0,
+      "failure_rate": 0.0,
+      "cache_hit_ratio": null
+    },
+    {
+      "job_name": "lint-pr-url",
+      "median_sec": 0,
+      "p90_sec": 0,
+      "p99_sec": 0,
+      "failure_rate": 0.0,
+      "cache_hit_ratio": null
+    },
+    {
+      "job_name": "lint-yaml",
+      "median_sec": 0,
+      "p90_sec": 0,
+      "p99_sec": 0,
+      "failure_rate": 0.0,
+      "cache_hit_ratio": null
+    },
+    {
+      "job_name": "lint-codeowners",
+      "median_sec": 0,
+      "p90_sec": 0,
+      "p99_sec": 0,
+      "failure_rate": 0.0,
+      "cache_hit_ratio": null
+    },
+    {
+      "job_name": "lint-nix",
+      "median_sec": 0,
+      "p90_sec": 0,
+      "p99_sec": 0,
+      "failure_rate": 0.0,
+      "cache_hit_ratio": null
+    },
+    {
+      "job_name": "lint-readme",
+      "median_sec": 0,
+      "p90_sec": 0,
+      "p99_sec": 0,
+      "failure_rate": 0.0,
+      "cache_hit_ratio": null
+    },
+    {
+      "job_name": "test-quic",
+      "median_sec": 0,
+      "p90_sec": 0,
+      "p99_sec": 0,
+      "failure_rate": 0.0,
+      "cache_hit_ratio": null
+    },
+    {
+      "job_name": "Build slim tarball",
+      "median_sec": 0,
+      "p90_sec": 0,
+      "p99_sec": 0,
+      "failure_rate": 0.0,
+      "cache_hit_ratio": null
+    },
+    {
+      "job_name": "aarch64-linux: Cache V8 build",
+      "median_sec": 0,
+      "p90_sec": 0,
+      "p99_sec": 0,
+      "failure_rate": 0.0,
+      "cache_hit_ratio": null
+    },
+    {
+      "job_name": "x86_64-darwin: with shared libraries / build",
+      "median_sec": 0,
+      "p90_sec": 0,
+      "p99_sec": 0,
+      "failure_rate": 0.0,
+      "cache_hit_ratio": null
+    },
+    {
+      "job_name": "aarch64-darwin: with shared libraries / build",
+      "median_sec": 0,
+      "p90_sec": 0,
+      "p99_sec": 0,
+      "failure_rate": 0.0,
+      "cache_hit_ratio": null
+    },
+    {
+      "job_name": "x86_64-linux: with shared libraries / build",
+      "median_sec": 0,
+      "p90_sec": 0,
+      "p99_sec": 0,
+      "failure_rate": 0.0,
+      "cache_hit_ratio": null
+    },
+    {
+      "job_name": "aarch64-linux: with shared openssl-3.0.21 / build",
+      "median_sec": 0,
+      "p90_sec": 0,
+      "p99_sec": 0,
+      "failure_rate": 0.0,
+      "cache_hit_ratio": null
+    },
+    {
+      "job_name": "aarch64-linux: with shared openssl-1.1.1w / build",
+      "median_sec": 0,
+      "p90_sec": 0,
+      "p99_sec": 0,
+      "failure_rate": 0.0,
+      "cache_hit_ratio": null
+    },
+    {
+      "job_name": "aarch64-linux: with shared boringssl-0.20260526.0 / build",
+      "median_sec": 0,
+      "p90_sec": 0,
+      "p99_sec": 0,
+      "failure_rate": 0.0,
+      "cache_hit_ratio": null
+    },
+    {
+      "job_name": "aarch64-linux: with shared openssl-3.5.7 / build",
+      "median_sec": 0,
+      "p90_sec": 0,
+      "p99_sec": 0,
+      "failure_rate": 0.0,
+      "cache_hit_ratio": null
+    },
+    {
+      "job_name": "aarch64-linux: with shared openssl-4.0.1 / build",
+      "median_sec": 0,
+      "p90_sec": 0,
+      "p99_sec": 0,
+      "failure_rate": 0.0,
+      "cache_hit_ratio": null
+    },
+    {
+      "job_name": "aarch64-linux: with shared openssl-3.6.2 / build",
+      "median_sec": 0,
+      "p90_sec": 0,
+      "p99_sec": 0,
+      "failure_rate": 0.0,
+      "cache_hit_ratio": null
+    }
+  ],
+  "bottlenecks": [
+    {
+      "type": "missing_cache",
+      "job_name": "lint-addon-docs",
+      "evidence": "No `cache:` directive found in job 'lint-addon-docs'. Median time: 0s. Adding cache would reduce dependency download time.",
+      "severity": "low"
+    },
+    {
+      "type": "missing_cache",
+      "job_name": "lint-cpp",
+      "evidence": "No `cache:` directive found in job 'lint-cpp'. Median time: 0s. Adding cache would reduce dependency download time.",
+      "severity": "low"
+    },
+    {
+      "type": "missing_cache",
+      "job_name": "format-cpp",
+      "evidence": "No `cache:` directive found in job 'format-cpp'. Median time: 0s. Adding cache would reduce dependency download time.",
+      "severity": "low"
+    },
+    {
+      "type": "missing_cache",
+      "job_name": "lint-js-and-md",
+      "evidence": "No `cache:` directive found in job 'lint-js-and-md'. Median time: 0s. Adding cache would reduce dependency download time.",
+      "severity": "low"
+    },
+    {
+      "type": "missing_cache",
+      "job_name": "lint-py",
+      "evidence": "No `cache:` directive found in job 'lint-py'. Median time: 0s. Adding cache would reduce dependency download time.",
+      "severity": "low"
+    },
+    {
+      "type": "missing_cache",
+      "job_name": "lint-yaml",
+      "evidence": "No `cache:` directive found in job 'lint-yaml'. Median time: 0s. Adding cache would reduce dependency download time.",
+      "severity": "low"
+    },
+    {
+      "type": "missing_cache",
+      "job_name": "build-tarball",
+      "evidence": "No `cache:` directive found in job 'build-tarball'. Median time: 0s. Adding cache would reduce dependency download time.",
+      "severity": "low"
+    },
+    {
+      "type": "serial_parallel",
+      "job_name": "test-tarball-linux",
+      "evidence": "Job 'test-tarball-linux' depends on ['build-tarball'] via `needs:` and waits for them to complete. Median time: 0s. If this job doesn't use their outputs, removing `needs:` would let it run in parallel.",
+      "severity": "low"
+    },
+    {
+      "type": "missing_cache",
+      "job_name": "start-ci",
+      "evidence": "No `cache:` directive found in job 'start-ci'. Median time: 0s. Adding cache would reduce dependency download time.",
+      "severity": "low"
+    },
+    {
+      "type": "serial_parallel",
+      "job_name": "start-ci",
+      "evidence": "Job 'start-ci' depends on ['get-prs-for-ci'] via `needs:` and waits for them to complete. Median time: 0s. If this job doesn't use their outputs, removing `needs:` would let it run in parallel.",
+      "severity": "low"
+    },
+    {
+      "type": "missing_cache",
+      "job_name": "commitQueue",
+      "evidence": "No `cache:` directive found in job 'commitQueue'. Median time: 0s. Adding cache would reduce dependency download time.",
+      "severity": "low"
+    },
+    {
+      "type": "serial_parallel",
+      "job_name": "commitQueue",
+      "evidence": "Job 'commitQueue' depends on ['get_mergeable_prs'] via `needs:` and waits for them to complete. Median time: 0s. If this job doesn't use their outputs, removing `needs:` would let it run in parallel.",
+      "severity": "low"
+    },
+    {
+      "type": "missing_cache",
+      "job_name": "coverage-windows",
+      "evidence": "No `cache:` directive found in job 'coverage-windows'. Median time: 0s. Adding cache would reduce dependency download time.",
+      "severity": "low"
+    },
+    {
+      "type": "missing_cache",
+      "job_name": "update_license",
+      "evidence": "No `cache:` directive found in job 'update_license'. Median time: 0s. Adding cache would reduce dependency download time.",
+      "severity": "low"
+    },
+    {
+      "type": "missing_cache",
+      "job_name": "build-lto",
+      "evidence": "No `cache:` directive found in job 'build-lto'. Median time: 0s. Adding cache would reduce dependency download time.",
+      "severity": "low"
+    },
+    {
+      "type": "missing_cache",
+      "job_name": "build-docs",
+      "evidence": "No `cache:` directive found in job 'build-docs'. Median time: 0s. Adding cache would reduce dependency download time.",
+      "severity": "low"
+    },
+    {
+      "type": "missing_cache",
+      "job_name": "report",
+      "evidence": "No `cache:` directive found in job 'report'. Median time: 0s. Adding cache would reduce dependency download time.",
+      "severity": "low"
+    },
+    {
+      "type": "serial_parallel",
+      "job_name": "report",
+      "evidence": "Job 'report' depends on ['collect-versions'] via `needs:` and waits for them to complete. Median time: 0s. If this job doesn't use their outputs, removing `needs:` would let it run in parallel.",
+      "severity": "low"
+    },
+    {
+      "type": "missing_cache",
+      "job_name": "openssl-update",
+      "evidence": "No `cache:` directive found in job 'openssl-update'. Median time: 0s. Adding cache would reduce dependency download time.",
+      "severity": "low"
+    },
+    {
+      "type": "redundant_rebuild",
+      "job_name": "lint-addon-docs",
+      "evidence": "Uses Node.js ${{ env.NODE_VERSION }} action multiple times (build, lint-py, etc.).  Each one rebuilds the entire Node.js environment.",
+      "severity": "high"
+    },
+    {
+      "type": "redundant_rebuild",
+      "job_name": "lint-cpp",
+      "evidence": "Uses Node.js ${{ env.NODE_VERSION }} action multiple times (build, lint-py).  Each one rebuilds the entire Node.js environment.",
+      "severity": "high"
+    },
+    {
+      "type": "redundant_rebuild",
+      "job_name": "format-cpp",
+      "evidence": "Uses Node.js ${{ env.NODE_VERSION }} action multiple times (build, lint-py).  Each one rebuilds the entire Node.js environment.",
+      "severity": "high"
+    },
+    {
+      "type": "redundant_rebuild",
+      "job_name": "lint-js-and-md",
+      "evidence": "Uses Node.js ${{ env.NODE_VERSION }} action multiple times (build, lint-py).  Each one rebuilds the entire Node.js environment.",
+      "severity": "high"
+    },
+    {
+      "type": "redundant_rebuild",
+      "job_name": "lint-nix",
+      "evidence": "Uses Nix and a Nix shell.  There's no standard way to easily share artifacts across jobs.  The Nix build is fully isolated.",
+      "severity": "medium"
+    },
+    {
+      "type": "redundant_rebuild",
+      "job_name": "lint-py",
+      "evidence": "Uses Python ${{ env.PYTHON_VERSION }} action.  There's no standard way to easily share artifacts across jobs.  The Python build is fully isolated.",
+      "severity": "medium"
+    },
+    {
+      "type": "redundant_rebuild",
+      "job_name": "lint-yaml",
+      "evidence": "Uses Python ${{ env.PYTHON_VERSION }} action.  There's no standard way to easily share artifacts across jobs.  The Python build is fully isolated.",
+      "severity": "medium"
+    },
+    {
+      "type": "redundant_rebuild",
+      "job_name": "lint-sh",
+      "evidence": "Uses Shell interpreter to run linter. There is no standard way to easily share artifacts across jobs.",
+      "severity": "medium"
+    },
+    {
+      "type": "redundant_rebuild",
+      "job_name": "lint-codeowners",
+      "evidence": "Uses external API calls to Github; use of external actions; there is no standard way to easily share artifacts across jobs.",
+      "severity": "medium"
+    },
+    {
+      "type": "redundant_rebuild",
+      "job_name": "lint-pr-url",
+      "evidence": "Uses Github API call, use of external actions; there is no standard way to easily share artifacts across jobs.",
+      "severity": "medium"
+    },
+    {
+      "type": "redundant_rebuild",
+      "job_name": "lint-readme",
+      "evidence": "Uses shell commands that directly rely on filesystem; use of external actions; there is no standard way to easily share artifacts across jobs.",
+      "severity": "medium"
+    },
+    {
+      "type": "oversized_context",
+      "job_name": "all",
+      "evidence": "Checkout fetches entire repo history, resulting in a large context being passed to jobs.  Sparse checkout not consistently applied across all jobs.",
+      "severity": "high"
+    },
+    {
+      "type": "missing_cache",
+      "job_name": "all",
+      "evidence": "No `actions/cache` directives used.  A lot of jobs (e.g., build jobs) are long-running and would benefit from caching dependencies.",
+      "severity": "medium"
+    }
+  ],
+  "optimizations": [
+    {
+      "id": "missing_cache-lint-addon-docs-819fd0",
+      "bottleneck_type": "missing_cache",
+      "job_name": "lint-addon-docs",
+      "description": "Add actions/cache to 'lint-addon-docs' to cache dependencies and avoid re-downloading every run",
+      "estimated_time_saved_min": 1,
+      "estimated_cost_per_run": 0.07,
+      "risk_level": "low",
+      "yaml_diff_hint": "Add `- uses: actions/cache@v4` step before dependency install in 'lint-addon-docs'"
+    },
+    {
+      "id": "missing_cache-lint-cpp-555061",
+      "bottleneck_type": "missing_cache",
+      "job_name": "lint-cpp",
+      "description": "Add actions/cache to 'lint-cpp' to cache dependencies and avoid re-downloading every run",
+      "estimated_time_saved_min": 1,
+      "estimated_cost_per_run": 0.07,
+      "risk_level": "low",
+      "yaml_diff_hint": "Add `- uses: actions/cache@v4` step before dependency install in 'lint-cpp'"
+    },
+    {
+      "id": "missing_cache-format-cpp-0f7fe5",
+      "bottleneck_type": "missing_cache",
+      "job_name": "format-cpp",
+      "description": "Add actions/cache to 'format-cpp' to cache dependencies and avoid re-downloading every run",
+      "estimated_time_saved_min": 1,
+      "estimated_cost_per_run": 0.07,
+      "risk_level": "low",
+      "yaml_diff_hint": "Add `- uses: actions/cache@v4` step before dependency install in 'format-cpp'"
+    },
+    {
+      "id": "missing_cache-lint-js-and-md-cc2dc3",
+      "bottleneck_type": "missing_cache",
+      "job_name": "lint-js-and-md",
+      "description": "Add actions/cache to 'lint-js-and-md' to cache dependencies and avoid re-downloading every run",
+      "estimated_time_saved_min": 1,
+      "estimated_cost_per_run": 0.07,
+      "risk_level": "low",
+      "yaml_diff_hint": "Add `- uses: actions/cache@v4` step before dependency install in 'lint-js-and-md'"
+    },
+    {
+      "id": "missing_cache-lint-py-f987a2",
+      "bottleneck_type": "missing_cache",
+      "job_name": "lint-py",
+      "description": "Add actions/cache to 'lint-py' to cache dependencies and avoid re-downloading every run",
+      "estimated_time_saved_min": 1,
+      "estimated_cost_per_run": 0.07,
+      "risk_level": "low",
+      "yaml_diff_hint": "Add `- uses: actions/cache@v4` step before dependency install in 'lint-py'"
+    },
+    {
+      "id": "missing_cache-lint-yaml-59a40b",
+      "bottleneck_type": "missing_cache",
+      "job_name": "lint-yaml",
+      "description": "Add actions/cache to 'lint-yaml' to cache dependencies and avoid re-downloading every run",
+      "estimated_time_saved_min": 1,
+      "estimated_cost_per_run": 0.07,
+      "risk_level": "low",
+      "yaml_diff_hint": "Add `- uses: actions/cache@v4` step before dependency install in 'lint-yaml'"
+    },
+    {
+      "id": "missing_cache-build-tarball-59f61b",
+      "bottleneck_type": "missing_cache",
+      "job_name": "build-tarball",
+      "description": "Add actions/cache to 'build-tarball' to cache dependencies and avoid re-downloading every run",
+      "estimated_time_saved_min": 1,
+      "estimated_cost_per_run": 0.07,
+      "risk_level": "low",
+      "yaml_diff_hint": "Add `- uses: actions/cache@v4` step before dependency install in 'build-tarball'"
+    },
+    {
+      "id": "serial_parallel-test-tarball-linux-688ca0",
+      "bottleneck_type": "serial_parallel",
+      "job_name": "test-tarball-linux",
+      "description": "Remove 'needs:' from 'test-tarball-linux' so it runs in parallel with other independent jobs",
+      "estimated_time_saved_min": 1,
+      "estimated_cost_per_run": 0.0,
+      "risk_level": "medium",
+      "yaml_diff_hint": "Ensure 'test-tarball-linux' has no `needs:` blocking parallel execution"
+    },
+    {
+      "id": "missing_cache-start-ci-3588cd",
+      "bottleneck_type": "missing_cache",
+      "job_name": "start-ci",
+      "description": "Add actions/cache to 'start-ci' to cache dependencies and avoid re-downloading every run",
+      "estimated_time_saved_min": 1,
+      "estimated_cost_per_run": 0.07,
+      "risk_level": "low",
+      "yaml_diff_hint": "Add `- uses: actions/cache@v4` step before dependency install in 'start-ci'"
+    },
+    {
+      "id": "serial_parallel-start-ci-a0fce6",
+      "bottleneck_type": "serial_parallel",
+      "job_name": "start-ci",
+      "description": "Remove 'needs:' from 'start-ci' so it runs in parallel with other independent jobs",
+      "estimated_time_saved_min": 1,
+      "estimated_cost_per_run": 0.0,
+      "risk_level": "medium",
+      "yaml_diff_hint": "Ensure 'start-ci' has no `needs:` blocking parallel execution"
+    },
+    {
+      "id": "missing_cache-commitqueue-9b3eb4",
+      "bottleneck_type": "missing_cache",
+      "job_name": "commitQueue",
+      "description": "Add actions/cache to 'commitQueue' to cache dependencies and avoid re-downloading every run",
+      "estimated_time_saved_min": 1,
+      "estimated_cost_per_run": 0.07,
+      "risk_level": "low",
+      "yaml_diff_hint": "Add `- uses: actions/cache@v4` step before dependency install in 'commitQueue'"
+    },
+    {
+      "id": "serial_parallel-commitqueue-9940ef",
+      "bottleneck_type": "serial_parallel",
+      "job_name": "commitQueue",
+      "description": "Remove 'needs:' from 'commitQueue' so it runs in parallel with other independent jobs",
+      "estimated_time_saved_min": 1,
+      "estimated_cost_per_run": 0.0,
+      "risk_level": "medium",
+      "yaml_diff_hint": "Ensure 'commitQueue' has no `needs:` blocking parallel execution"
+    },
+    {
+      "id": "missing_cache-coverage-windows-c00fde",
+      "bottleneck_type": "missing_cache",
+      "job_name": "coverage-windows",
+      "description": "Add actions/cache to 'coverage-windows' to cache dependencies and avoid re-downloading every run",
+      "estimated_time_saved_min": 1,
+      "estimated_cost_per_run": 0.07,
+      "risk_level": "low",
+      "yaml_diff_hint": "Add `- uses: actions/cache@v4` step before dependency install in 'coverage-windows'"
+    },
+    {
+      "id": "missing_cache-update_license-c52af8",
+      "bottleneck_type": "missing_cache",
+      "job_name": "update_license",
+      "description": "Add actions/cache to 'update_license' to cache dependencies and avoid re-downloading every run",
+      "estimated_time_saved_min": 1,
+      "estimated_cost_per_run": 0.07,
+      "risk_level": "low",
+      "yaml_diff_hint": "Add `- uses: actions/cache@v4` step before dependency install in 'update_license'"
+    },
+    {
+      "id": "missing_cache-build-lto-e237d1",
+      "bottleneck_type": "missing_cache",
+      "job_name": "build-lto",
+      "description": "Add actions/cache to 'build-lto' to cache dependencies and avoid re-downloading every run",
+      "estimated_time_saved_min": 1,
+      "estimated_cost_per_run": 0.07,
+      "risk_level": "low",
+      "yaml_diff_hint": "Add `- uses: actions/cache@v4` step before dependency install in 'build-lto'"
+    },
+    {
+      "id": "missing_cache-build-docs-153b01",
+      "bottleneck_type": "missing_cache",
+      "job_name": "build-docs",
+      "description": "Add actions/cache to 'build-docs' to cache dependencies and avoid re-downloading every run",
+      "estimated_time_saved_min": 1,
+      "estimated_cost_per_run": 0.07,
+      "risk_level": "low",
+      "yaml_diff_hint": "Add `- uses: actions/cache@v4` step before dependency install in 'build-docs'"
+    },
+    {
+      "id": "missing_cache-report-f5a81b",
+      "bottleneck_type": "missing_cache",
+      "job_name": "report",
+      "description": "Add actions/cache to 'report' to cache dependencies and avoid re-downloading every run",
+      "estimated_time_saved_min": 1,
+      "estimated_cost_per_run": 0.07,
+      "risk_level": "low",
+      "yaml_diff_hint": "Add `- uses: actions/cache@v4` step before dependency install in 'report'"
+    },
+    {
+      "id": "serial_parallel-report-08e0a3",
+      "bottleneck_type": "serial_parallel",
+      "job_name": "report",
+      "description": "Remove 'needs:' from 'report' so it runs in parallel with other independent jobs",
+      "estimated_time_saved_min": 1,
+      "estimated_cost_per_run": 0.0,
+      "risk_level": "medium",
+      "yaml_diff_hint": "Ensure 'report' has no `needs:` blocking parallel execution"
+    },
+    {
+      "id": "missing_cache-openssl-update-ae998a",
+      "bottleneck_type": "missing_cache",
+      "job_name": "openssl-update",
+      "description": "Add actions/cache to 'openssl-update' to cache dependencies and avoid re-downloading every run",
+      "estimated_time_saved_min": 1,
+      "estimated_cost_per_run": 0.07,
+      "risk_level": "low",
+      "yaml_diff_hint": "Add `- uses: actions/cache@v4` step before dependency install in 'openssl-update'"
+    },
+    {
+      "id": "redundant_rebuild-lint-addon-docs-fe4cd1",
+      "bottleneck_type": "redundant_rebuild",
+      "job_name": "lint-addon-docs",
+      "description": "Use actions/upload-artifact and actions/download-artifact in 'lint-addon-docs' to reuse build outputs",
+      "estimated_time_saved_min": 1,
+      "estimated_cost_per_run": 0.01,
+      "risk_level": "medium",
+      "yaml_diff_hint": "Add `actions/upload-artifact` to build job and `actions/download-artifact` to 'lint-addon-docs'"
+    },
+    {
+      "id": "redundant_rebuild-lint-cpp-450d6d",
+      "bottleneck_type": "redundant_rebuild",
+      "job_name": "lint-cpp",
+      "description": "Use actions/upload-artifact and actions/download-artifact in 'lint-cpp' to reuse build outputs",
+      "estimated_time_saved_min": 1,
+      "estimated_cost_per_run": 0.01,
+      "risk_level": "medium",
+      "yaml_diff_hint": "Add `actions/upload-artifact` to build job and `actions/download-artifact` to 'lint-cpp'"
+    },
+    {
+      "id": "redundant_rebuild-format-cpp-736fec",
+      "bottleneck_type": "redundant_rebuild",
+      "job_name": "format-cpp",
+      "description": "Use actions/upload-artifact and actions/download-artifact in 'format-cpp' to reuse build outputs",
+      "estimated_time_saved_min": 1,
+      "estimated_cost_per_run": 0.01,
+      "risk_level": "medium",
+      "yaml_diff_hint": "Add `actions/upload-artifact` to build job and `actions/download-artifact` to 'format-cpp'"
+    },
+    {
+      "id": "redundant_rebuild-lint-js-and-md-b475d3",
+      "bottleneck_type": "redundant_rebuild",
+      "job_name": "lint-js-and-md",
+      "description": "Use actions/upload-artifact and actions/download-artifact in 'lint-js-and-md' to reuse build outputs",
+      "estimated_time_saved_min": 1,
+      "estimated_cost_per_run": 0.01,
+      "risk_level": "medium",
+      "yaml_diff_hint": "Add `actions/upload-artifact` to build job and `actions/download-artifact` to 'lint-js-and-md'"
+    },
+    {
+      "id": "redundant_rebuild-lint-nix-eb2d70",
+      "bottleneck_type": "redundant_rebuild",
+      "job_name": "lint-nix",
+      "description": "Use actions/upload-artifact and actions/download-artifact in 'lint-nix' to reuse build outputs",
+      "estimated_time_saved_min": 1,
+      "estimated_cost_per_run": 0.01,
+      "risk_level": "medium",
+      "yaml_diff_hint": "Add `actions/upload-artifact` to build job and `actions/download-artifact` to 'lint-nix'"
+    },
+    {
+      "id": "redundant_rebuild-lint-py-f80297",
+      "bottleneck_type": "redundant_rebuild",
+      "job_name": "lint-py",
+      "description": "Use actions/upload-artifact and actions/download-artifact in 'lint-py' to reuse build outputs",
+      "estimated_time_saved_min": 1,
+      "estimated_cost_per_run": 0.01,
+      "risk_level": "medium",
+      "yaml_diff_hint": "Add `actions/upload-artifact` to build job and `actions/download-artifact` to 'lint-py'"
+    },
+    {
+      "id": "redundant_rebuild-lint-yaml-b9353f",
+      "bottleneck_type": "redundant_rebuild",
+      "job_name": "lint-yaml",
+      "description": "Use actions/upload-artifact and actions/download-artifact in 'lint-yaml' to reuse build outputs",
+      "estimated_time_saved_min": 1,
+      "estimated_cost_per_run": 0.01,
+      "risk_level": "medium",
+      "yaml_diff_hint": "Add `actions/upload-artifact` to build job and `actions/download-artifact` to 'lint-yaml'"
+    },
+    {
+      "id": "redundant_rebuild-lint-sh-17d196",
+      "bottleneck_type": "redundant_rebuild",
+      "job_name": "lint-sh",
+      "description": "Use actions/upload-artifact and actions/download-artifact in 'lint-sh' to reuse build outputs",
+      "estimated_time_saved_min": 1,
+      "estimated_cost_per_run": 0.01,
+      "risk_level": "medium",
+      "yaml_diff_hint": "Add `actions/upload-artifact` to build job and `actions/download-artifact` to 'lint-sh'"
+    },
+    {
+      "id": "redundant_rebuild-lint-codeowners-622198",
+      "bottleneck_type": "redundant_rebuild",
+      "job_name": "lint-codeowners",
+      "description": "Use actions/upload-artifact and actions/download-artifact in 'lint-codeowners' to reuse build outputs",
+      "estimated_time_saved_min": 1,
+      "estimated_cost_per_run": 0.01,
+      "risk_level": "medium",
+      "yaml_diff_hint": "Add `actions/upload-artifact` to build job and `actions/download-artifact` to 'lint-codeowners'"
+    },
+    {
+      "id": "redundant_rebuild-lint-pr-url-827445",
+      "bottleneck_type": "redundant_rebuild",
+      "job_name": "lint-pr-url",
+      "description": "Use actions/upload-artifact and actions/download-artifact in 'lint-pr-url' to reuse build outputs",
+      "estimated_time_saved_min": 1,
+      "estimated_cost_per_run": 0.01,
+      "risk_level": "medium",
+      "yaml_diff_hint": "Add `actions/upload-artifact` to build job and `actions/download-artifact` to 'lint-pr-url'"
+    },
+    {
+      "id": "redundant_rebuild-lint-readme-22e3c2",
+      "bottleneck_type": "redundant_rebuild",
+      "job_name": "lint-readme",
+      "description": "Use actions/upload-artifact and actions/download-artifact in 'lint-readme' to reuse build outputs",
+      "estimated_time_saved_min": 1,
+      "estimated_cost_per_run": 0.01,
+      "risk_level": "medium",
+      "yaml_diff_hint": "Add `actions/upload-artifact` to build job and `actions/download-artifact` to 'lint-readme'"
+    },
+    {
+      "id": "oversized_context-all-1ae611",
+      "bottleneck_type": "oversized_context",
+      "job_name": "all",
+      "description": "Add .dockerignore to 'all' to exclude node_modules, .git, and build artifacts from Docker context",
+      "estimated_time_saved_min": 1,
+      "estimated_cost_per_run": 0.0,
+      "risk_level": "low",
+      "yaml_diff_hint": "Create `.dockerignore` excluding node_modules, .git, and other build artifacts"
+    },
+    {
+      "id": "missing_cache-all-b177cc",
+      "bottleneck_type": "missing_cache",
+      "job_name": "all",
+      "description": "Add actions/cache to 'all' to cache dependencies and avoid re-downloading every run",
+      "estimated_time_saved_min": 1,
+      "estimated_cost_per_run": 0.07,
+      "risk_level": "low",
+      "yaml_diff_hint": "Add `- uses: actions/cache@v4` step before dependency install in 'all'"
+    }
+  ],
+  "total_saved_min": 32
+}

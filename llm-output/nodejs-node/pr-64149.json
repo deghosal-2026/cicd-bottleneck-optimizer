@@ -1,0 +1,10 @@
+{
+  "repo": "nodejs/node",
+  "pr": 64149,
+  "title": "vfs: prevent stack overflow in recursive readdir on circular symlinks",
+  "window_days": 7,
+  "profiles": [],
+  "bottlenecks": [],
+  "optimizations": [],
+  "total_saved_min": 0
+}

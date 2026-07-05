@@ -1,0 +1,1285 @@
+{
+  "repo": "grafana/grafana",
+  "pr": 125875,
+  "title": "Zanzana: Translate datasource RBAC permissions to tuples",
+  "window_days": 7,
+  "profiles": [
+    {
+      "job_name": "TruffleHog Secret Scan / trufflehog-scan",
+      "median_sec": 0,
+      "p90_sec": 0,
+      "p99_sec": 0,
+      "failure_rate": 0.0,
+      "cache_hit_ratio": null
+    },
+    {
+      "job_name": "TruffleHog Secret Scan / Send TruffleHog metrics to Prometheus via Grafana Bench",
+      "median_sec": 0,
+      "p90_sec": 0,
+      "p99_sec": 0,
+      "failure_rate": 0.0,
+      "cache_hit_ratio": null
+    },
+    {
+      "job_name": "Check whether there are things to scan",
+      "median_sec": 0,
+      "p90_sec": 0,
+      "p99_sec": 0,
+      "failure_rate": 0.0,
+      "cache_hit_ratio": null
+    },
+    {
+      "job_name": "Run zizmor / job-workflow-ref",
+      "median_sec": 0,
+      "p90_sec": 0,
+      "p99_sec": 0,
+      "failure_rate": 0.0,
+      "cache_hit_ratio": null
+    },
+    {
+      "job_name": "Run zizmor / Generate and upload zizmor results \ud83c\udf08",
+      "median_sec": 0,
+      "p90_sec": 0,
+      "p99_sec": 0,
+      "failure_rate": 0.0,
+      "cache_hit_ratio": null
+    },
+    {
+      "job_name": "Run zizmor / Send zizmor metrics to Prometheus via Grafana Bench",
+      "median_sec": 0,
+      "p90_sec": 0,
+      "p99_sec": 0,
+      "failure_rate": 0.0,
+      "cache_hit_ratio": null
+    },
+    {
+      "job_name": "Run zizmor / Delete branch with dangerous-trigger vulnerability",
+      "median_sec": 0,
+      "p90_sec": 0,
+      "p99_sec": 0,
+      "failure_rate": 0.0,
+      "cache_hit_ratio": null
+    },
+    {
+      "job_name": "verify-i18n / verify-i18n",
+      "median_sec": 0,
+      "p90_sec": 0,
+      "p99_sec": 0,
+      "failure_rate": 0.0,
+      "cache_hit_ratio": null
+    },
+    {
+      "job_name": "update",
+      "median_sec": 0,
+      "p90_sec": 0,
+      "p99_sec": 0,
+      "failure_rate": 0.0,
+      "cache_hit_ratio": null
+    },
+    {
+      "job_name": "main",
+      "median_sec": 0,
+      "p90_sec": 0,
+      "p99_sec": 0,
+      "failure_rate": 0.0,
+      "cache_hit_ratio": null
+    },
+    {
+      "job_name": "reject-gh-secrets",
+      "median_sec": 0,
+      "p90_sec": 0,
+      "p99_sec": 0,
+      "failure_rate": 0.0,
+      "cache_hit_ratio": null
+    },
+    {
+      "job_name": "Shellcheck scripts",
+      "median_sec": 0,
+      "p90_sec": 0,
+      "p99_sec": 0,
+      "failure_rate": 0.0,
+      "cache_hit_ratio": null
+    },
+    {
+      "job_name": "Run Trufflehog",
+      "median_sec": 0,
+      "p90_sec": 0,
+      "p99_sec": 0,
+      "failure_rate": 0.0,
+      "cache_hit_ratio": null
+    },
+    {
+      "job_name": "codeowners-validator",
+      "median_sec": 0,
+      "p90_sec": 0,
+      "p99_sec": 0,
+      "failure_rate": 0.0,
+      "cache_hit_ratio": null
+    },
+    {
+      "job_name": "check-separation",
+      "median_sec": 0,
+      "p90_sec": 0,
+      "p99_sec": 0,
+      "failure_rate": 0.0,
+      "cache_hit_ratio": null
+    },
+    {
+      "job_name": "detect-changes",
+      "median_sec": 0,
+      "p90_sec": 0,
+      "p99_sec": 0,
+      "failure_rate": 0.0,
+      "cache_hit_ratio": null
+    },
+    {
+      "job_name": "endpoint-toggle-result",
+      "median_sec": 0,
+      "p90_sec": 0,
+      "p99_sec": 0,
+      "failure_rate": 0.0,
+      "cache_hit_ratio": null
+    },
+    {
+      "job_name": "check-endpoint-migration",
+      "median_sec": 0,
+      "p90_sec": 0,
+      "p99_sec": 0,
+      "failure_rate": 0.0,
+      "cache_hit_ratio": null
+    },
+    {
+      "job_name": "Detect whether code changed",
+      "median_sec": 0,
+      "p90_sec": 0,
+      "p99_sec": 0,
+      "failure_rate": 0.0,
+      "cache_hit_ratio": null
+    },
+    {
+      "job_name": "Generate golden files",
+      "median_sec": 0,
+      "p90_sec": 0,
+      "p99_sec": 0,
+      "failure_rate": 0.0,
+      "cache_hit_ratio": null
+    },
+    {
+      "job_name": "All frontend unit tests complete",
+      "median_sec": 0,
+      "p90_sec": 0,
+      "p99_sec": 0,
+      "failure_rate": 0.0,
+      "cache_hit_ratio": null
+    },
+    {
+      "job_name": "Decoupled plugin tests",
+      "median_sec": 0,
+      "p90_sec": 0,
+      "p99_sec": 0,
+      "failure_rate": 0.0,
+      "cache_hit_ratio": null
+    },
+    {
+      "job_name": "Unit tests (${{ matrix.shard }} / ${{ matrix.total }})",
+      "median_sec": 0,
+      "p90_sec": 0,
+      "p99_sec": 0,
+      "failure_rate": 0.0,
+      "cache_hit_ratio": null
+    },
+    {
+      "job_name": "Devenv frontend-service build",
+      "median_sec": 0,
+      "p90_sec": 0,
+      "p99_sec": 0,
+      "failure_rate": 0.0,
+      "cache_hit_ratio": null
+    },
+    {
+      "job_name": "Packages unit tests",
+      "median_sec": 0,
+      "p90_sec": 0,
+      "p99_sec": 0,
+      "failure_rate": 0.0,
+      "cache_hit_ratio": null
+    },
+    {
+      "job_name": "Run Storybook a11y tests (${{ matrix.STORYBOOK_THEME }} theme)",
+      "median_sec": 0,
+      "p90_sec": 0,
+      "p99_sec": 0,
+      "failure_rate": 0.0,
+      "cache_hit_ratio": null
+    },
+    {
+      "job_name": "Storybook a11y tests",
+      "median_sec": 0,
+      "p90_sec": 0,
+      "p99_sec": 0,
+      "failure_rate": 0.0,
+      "cache_hit_ratio": null
+    },
+    {
+      "job_name": "dashboard-schema-v2-e2e",
+      "median_sec": 0,
+      "p90_sec": 0,
+      "p99_sec": 0,
+      "failure_rate": 0.0,
+      "cache_hit_ratio": null
+    },
+    {
+      "job_name": "Grafana Enterprise (4/8)",
+      "median_sec": 0,
+      "p90_sec": 0,
+      "p99_sec": 0,
+      "failure_rate": 0.0,
+      "cache_hit_ratio": null
+    },
+    {
+      "job_name": "Grafana Enterprise (5/8)",
+      "median_sec": 0,
+      "p90_sec": 0,
+      "p99_sec": 0,
+      "failure_rate": 0.0,
+      "cache_hit_ratio": null
+    },
+    {
+      "job_name": "Grafana Enterprise (3/8)",
+      "median_sec": 0,
+      "p90_sec": 0,
+      "p99_sec": 0,
+      "failure_rate": 0.0,
+      "cache_hit_ratio": null
+    },
+    {
+      "job_name": "Grafana Enterprise (1/8)",
+      "median_sec": 0,
+      "p90_sec": 0,
+      "p99_sec": 0,
+      "failure_rate": 0.0,
+      "cache_hit_ratio": null
+    },
+    {
+      "job_name": "Grafana Enterprise (8/8)",
+      "median_sec": 0,
+      "p90_sec": 0,
+      "p99_sec": 0,
+      "failure_rate": 0.0,
+      "cache_hit_ratio": null
+    },
+    {
+      "job_name": "Grafana Enterprise (6/8)",
+      "median_sec": 0,
+      "p90_sec": 0,
+      "p99_sec": 0,
+      "failure_rate": 0.0,
+      "cache_hit_ratio": null
+    },
+    {
+      "job_name": "Grafana Enterprise (7/8)",
+      "median_sec": 0,
+      "p90_sec": 0,
+      "p99_sec": 0,
+      "failure_rate": 0.0,
+      "cache_hit_ratio": null
+    },
+    {
+      "job_name": "Grafana Enterprise (2/8)",
+      "median_sec": 0,
+      "p90_sec": 0,
+      "p99_sec": 0,
+      "failure_rate": 0.0,
+      "cache_hit_ratio": null
+    },
+    {
+      "job_name": "Grafana (${{ matrix.shard }})",
+      "median_sec": 0,
+      "p90_sec": 0,
+      "p99_sec": 0,
+      "failure_rate": 0.0,
+      "cache_hit_ratio": null
+    },
+    {
+      "job_name": "All backend unit tests complete",
+      "median_sec": 0,
+      "p90_sec": 0,
+      "p99_sec": 0,
+      "failure_rate": 0.0,
+      "cache_hit_ratio": null
+    },
+    {
+      "job_name": "Validate Backend Configs",
+      "median_sec": 0,
+      "p90_sec": 0,
+      "p99_sec": 0,
+      "failure_rate": 0.0,
+      "cache_hit_ratio": null
+    },
+    {
+      "job_name": "Publish metrics",
+      "median_sec": 0,
+      "p90_sec": 0,
+      "p99_sec": 0,
+      "failure_rate": 0.0,
+      "cache_hit_ratio": null
+    },
+    {
+      "job_name": "Build backend",
+      "median_sec": 0,
+      "p90_sec": 0,
+      "p99_sec": 0,
+      "failure_rate": 0.0,
+      "cache_hit_ratio": null
+    },
+    {
+      "job_name": "Verify Storybook (Playwright)",
+      "median_sec": 0,
+      "p90_sec": 0,
+      "p99_sec": 0,
+      "failure_rate": 0.0,
+      "cache_hit_ratio": null
+    },
+    {
+      "job_name": "Build frontend",
+      "median_sec": 0,
+      "p90_sec": 0,
+      "p99_sec": 0,
+      "failure_rate": 0.0,
+      "cache_hit_ratio": null
+    },
+    {
+      "job_name": "Playwright E2E tests (3/8)",
+      "median_sec": 0,
+      "p90_sec": 0,
+      "p99_sec": 0,
+      "failure_rate": 0.0,
+      "cache_hit_ratio": null
+    },
+    {
+      "job_name": "Playwright E2E tests (8/8)",
+      "median_sec": 0,
+      "p90_sec": 0,
+      "p99_sec": 0,
+      "failure_rate": 0.0,
+      "cache_hit_ratio": null
+    },
+    {
+      "job_name": "Playwright E2E tests (2/8)",
+      "median_sec": 0,
+      "p90_sec": 0,
+      "p99_sec": 0,
+      "failure_rate": 0.0,
+      "cache_hit_ratio": null
+    },
+    {
+      "job_name": "Playwright E2E tests (6/8)",
+      "median_sec": 0,
+      "p90_sec": 0,
+      "p99_sec": 0,
+      "failure_rate": 0.0,
+      "cache_hit_ratio": null
+    },
+    {
+      "job_name": "Playwright E2E tests (4/8)",
+      "median_sec": 0,
+      "p90_sec": 0,
+      "p99_sec": 0,
+      "failure_rate": 0.0,
+      "cache_hit_ratio": null
+    },
+    {
+      "job_name": "Playwright E2E tests (7/8)",
+      "median_sec": 0,
+      "p90_sec": 0,
+      "p99_sec": 0,
+      "failure_rate": 1.0,
+      "cache_hit_ratio": null
+    },
+    {
+      "job_name": "Playwright E2E tests (5/8)",
+      "median_sec": 0,
+      "p90_sec": 0,
+      "p99_sec": 0,
+      "failure_rate": 0.0,
+      "cache_hit_ratio": null
+    },
+    {
+      "job_name": "Playwright E2E tests (1/8)",
+      "median_sec": 0,
+      "p90_sec": 0,
+      "p99_sec": 0,
+      "failure_rate": 0.0,
+      "cache_hit_ratio": null
+    },
+    {
+      "job_name": "All E2E tests complete",
+      "median_sec": 0,
+      "p90_sec": 0,
+      "p99_sec": 0,
+      "failure_rate": 0.0,
+      "cache_hit_ratio": null
+    },
+    {
+      "job_name": "All Playwright tests complete",
+      "median_sec": 0,
+      "p90_sec": 0,
+      "p99_sec": 0,
+      "failure_rate": 1.0,
+      "cache_hit_ratio": null
+    },
+    {
+      "job_name": "Report Playwright benchmarks",
+      "median_sec": 0,
+      "p90_sec": 0,
+      "p99_sec": 0,
+      "failure_rate": 0.0,
+      "cache_hit_ratio": null
+    },
+    {
+      "job_name": "setup",
+      "median_sec": 0,
+      "p90_sec": 0,
+      "p99_sec": 0,
+      "failure_rate": 0.0,
+      "cache_hit_ratio": null
+    },
+    {
+      "job_name": "build frontend",
+      "median_sec": 0,
+      "p90_sec": 0,
+      "p99_sec": 0,
+      "failure_rate": 0.0,
+      "cache_hit_ratio": null
+    },
+    {
+      "job_name": "build backend",
+      "median_sec": 0,
+      "p90_sec": 0,
+      "p99_sec": 0,
+      "failure_rate": 0.0,
+      "cache_hit_ratio": null
+    },
+    {
+      "job_name": "build targz",
+      "median_sec": 0,
+      "p90_sec": 0,
+      "p99_sec": 0,
+      "failure_rate": 0.0,
+      "cache_hit_ratio": null
+    },
+    {
+      "job_name": "build docker",
+      "median_sec": 0,
+      "p90_sec": 0,
+      "p99_sec": 0,
+      "failure_rate": 0.0,
+      "cache_hit_ratio": null
+    },
+    {
+      "job_name": "Push PR Docker image",
+      "median_sec": 0,
+      "p90_sec": 0,
+      "p99_sec": 0,
+      "failure_rate": 0.0,
+      "cache_hit_ratio": null
+    },
+    {
+      "job_name": "Run Meticulous tests",
+      "median_sec": 0,
+      "p90_sec": 0,
+      "p99_sec": 0,
+      "failure_rate": 0.0,
+      "cache_hit_ratio": null
+    },
+    {
+      "job_name": "dispatch-job",
+      "median_sec": 0,
+      "p90_sec": 0,
+      "p99_sec": 0,
+      "failure_rate": 0.0,
+      "cache_hit_ratio": null
+    },
+    {
+      "job_name": "dispatch-job-fork",
+      "median_sec": 0,
+      "p90_sec": 0,
+      "p99_sec": 0,
+      "failure_rate": 0.0,
+      "cache_hit_ratio": null
+    },
+    {
+      "job_name": "govulncheck",
+      "median_sec": 0,
+      "p90_sec": 0,
+      "p99_sec": 0,
+      "failure_rate": 0.0,
+      "cache_hit_ratio": null
+    },
+    {
+      "job_name": "Check Wire Changes",
+      "median_sec": 0,
+      "p90_sec": 0,
+      "p99_sec": 0,
+      "failure_rate": 0.0,
+      "cache_hit_ratio": null
+    },
+    {
+      "job_name": "Go Workspace Check",
+      "median_sec": 0,
+      "p90_sec": 0,
+      "p99_sec": 0,
+      "failure_rate": 0.0,
+      "cache_hit_ratio": null
+    },
+    {
+      "job_name": "All Go Workspace Checks complete",
+      "median_sec": 0,
+      "p90_sec": 0,
+      "p99_sec": 0,
+      "failure_rate": 0.0,
+      "cache_hit_ratio": null
+    },
+    {
+      "job_name": "Feature toggles documentation is in sync with source",
+      "median_sec": 0,
+      "p90_sec": 0,
+      "p99_sec": 0,
+      "failure_rate": 0.0,
+      "cache_hit_ratio": null
+    },
+    {
+      "job_name": "Verify committed API specs match",
+      "median_sec": 0,
+      "p90_sec": 0,
+      "p99_sec": 0,
+      "failure_rate": 0.0,
+      "cache_hit_ratio": null
+    },
+    {
+      "job_name": "lint-go",
+      "median_sec": 0,
+      "p90_sec": 0,
+      "p99_sec": 0,
+      "failure_rate": 0.0,
+      "cache_hit_ratio": null
+    },
+    {
+      "job_name": "go-fmt",
+      "median_sec": 0,
+      "p90_sec": 0,
+      "p99_sec": 0,
+      "failure_rate": 0.0,
+      "cache_hit_ratio": null
+    },
+    {
+      "job_name": "verify rpm stig (linux/amd64)",
+      "median_sec": 0,
+      "p90_sec": 0,
+      "p99_sec": 0,
+      "failure_rate": 0.0,
+      "cache_hit_ratio": null
+    },
+    {
+      "job_name": "linux/armv6 (enterprise)",
+      "median_sec": 0,
+      "p90_sec": 0,
+      "p99_sec": 0,
+      "failure_rate": 0.0,
+      "cache_hit_ratio": null
+    },
+    {
+      "job_name": "darwin/arm64 (enterprise)",
+      "median_sec": 0,
+      "p90_sec": 0,
+      "p99_sec": 0,
+      "failure_rate": 0.0,
+      "cache_hit_ratio": null
+    },
+    {
+      "job_name": "linux/amd64 (enterprise)",
+      "median_sec": 0,
+      "p90_sec": 0,
+      "p99_sec": 0,
+      "failure_rate": 0.0,
+      "cache_hit_ratio": null
+    },
+    {
+      "job_name": "linux/arm64 (enterprise)",
+      "median_sec": 0,
+      "p90_sec": 0,
+      "p99_sec": 0,
+      "failure_rate": 0.0,
+      "cache_hit_ratio": null
+    },
+    {
+      "job_name": "windows/arm64 (enterprise)",
+      "median_sec": 0,
+      "p90_sec": 0,
+      "p99_sec": 0,
+      "failure_rate": 0.0,
+      "cache_hit_ratio": null
+    },
+    {
+      "job_name": "linux/s390x (enterprise)",
+      "median_sec": 0,
+      "p90_sec": 0,
+      "p99_sec": 0,
+      "failure_rate": 0.0,
+      "cache_hit_ratio": null
+    },
+    {
+      "job_name": "linux/armv7",
+      "median_sec": 0,
+      "p90_sec": 0,
+      "p99_sec": 0,
+      "failure_rate": 0.0,
+      "cache_hit_ratio": null
+    },
+    {
+      "job_name": "darwin/amd64",
+      "median_sec": 0,
+      "p90_sec": 0,
+      "p99_sec": 0,
+      "failure_rate": 0.0,
+      "cache_hit_ratio": null
+    },
+    {
+      "job_name": "linux/armv6",
+      "median_sec": 0,
+      "p90_sec": 0,
+      "p99_sec": 0,
+      "failure_rate": 0.0,
+      "cache_hit_ratio": null
+    },
+    {
+      "job_name": "linux/s390x",
+      "median_sec": 0,
+      "p90_sec": 0,
+      "p99_sec": 0,
+      "failure_rate": 0.0,
+      "cache_hit_ratio": null
+    },
+    {
+      "job_name": "darwin/arm64",
+      "median_sec": 0,
+      "p90_sec": 0,
+      "p99_sec": 0,
+      "failure_rate": 0.0,
+      "cache_hit_ratio": null
+    },
+    {
+      "job_name": "darwin/amd64 (enterprise)",
+      "median_sec": 0,
+      "p90_sec": 0,
+      "p99_sec": 0,
+      "failure_rate": 0.0,
+      "cache_hit_ratio": null
+    },
+    {
+      "job_name": "linux/amd64",
+      "median_sec": 0,
+      "p90_sec": 0,
+      "p99_sec": 0,
+      "failure_rate": 0.0,
+      "cache_hit_ratio": null
+    },
+    {
+      "job_name": "linux/armv7 (enterprise)",
+      "median_sec": 0,
+      "p90_sec": 0,
+      "p99_sec": 0,
+      "failure_rate": 0.0,
+      "cache_hit_ratio": null
+    },
+    {
+      "job_name": "windows/arm64",
+      "median_sec": 0,
+      "p90_sec": 0,
+      "p99_sec": 0,
+      "failure_rate": 0.0,
+      "cache_hit_ratio": null
+    },
+    {
+      "job_name": "linux/arm64",
+      "median_sec": 0,
+      "p90_sec": 0,
+      "p99_sec": 0,
+      "failure_rate": 0.0,
+      "cache_hit_ratio": null
+    },
+    {
+      "job_name": "Verify API clients (enterprise)",
+      "median_sec": 0,
+      "p90_sec": 0,
+      "p99_sec": 0,
+      "failure_rate": 0.0,
+      "cache_hit_ratio": null
+    },
+    {
+      "job_name": "Verify OpenAPI specs",
+      "median_sec": 0,
+      "p90_sec": 0,
+      "p99_sec": 0,
+      "failure_rate": 0.0,
+      "cache_hit_ratio": null
+    },
+    {
+      "job_name": "Verify API clients",
+      "median_sec": 0,
+      "p90_sec": 0,
+      "p99_sec": 0,
+      "failure_rate": 0.0,
+      "cache_hit_ratio": null
+    },
+    {
+      "job_name": "Typecheck",
+      "median_sec": 0,
+      "p90_sec": 0,
+      "p99_sec": 0,
+      "failure_rate": 0.0,
+      "cache_hit_ratio": null
+    },
+    {
+      "job_name": "Typecheck (TSGO/TS7)",
+      "median_sec": 0,
+      "p90_sec": 0,
+      "p99_sec": 0,
+      "failure_rate": 0.0,
+      "cache_hit_ratio": null
+    },
+    {
+      "job_name": "Lint",
+      "median_sec": 0,
+      "p90_sec": 0,
+      "p99_sec": 0,
+      "failure_rate": 0.0,
+      "cache_hit_ratio": null
+    },
+    {
+      "job_name": "Check circular dependencies",
+      "median_sec": 0,
+      "p90_sec": 0,
+      "p99_sec": 0,
+      "failure_rate": 0.0,
+      "cache_hit_ratio": null
+    },
+    {
+      "job_name": "Verify packed frontend packages",
+      "median_sec": 0,
+      "p90_sec": 0,
+      "p99_sec": 0,
+      "failure_rate": 0.0,
+      "cache_hit_ratio": null
+    },
+    {
+      "job_name": "Validate yarn install",
+      "median_sec": 0,
+      "p90_sec": 0,
+      "p99_sec": 0,
+      "failure_rate": 0.0,
+      "cache_hit_ratio": null
+    },
+    {
+      "job_name": "lint-knip",
+      "median_sec": 0,
+      "p90_sec": 0,
+      "p99_sec": 0,
+      "failure_rate": 0.0,
+      "cache_hit_ratio": null
+    },
+    {
+      "job_name": "Postgres Enterprise (2/16)",
+      "median_sec": 0,
+      "p90_sec": 0,
+      "p99_sec": 0,
+      "failure_rate": 0.0,
+      "cache_hit_ratio": null
+    },
+    {
+      "job_name": "Postgres Enterprise (4/16)",
+      "median_sec": 0,
+      "p90_sec": 0,
+      "p99_sec": 0,
+      "failure_rate": 0.0,
+      "cache_hit_ratio": null
+    },
+    {
+      "job_name": "Postgres Enterprise (6/16)",
+      "median_sec": 0,
+      "p90_sec": 0,
+      "p99_sec": 0,
+      "failure_rate": 0.0,
+      "cache_hit_ratio": null
+    },
+    {
+      "job_name": "Postgres Enterprise (1/16)",
+      "median_sec": 0,
+      "p90_sec": 0,
+      "p99_sec": 0,
+      "failure_rate": 0.0,
+      "cache_hit_ratio": null
+    },
+    {
+      "job_name": "Postgres Enterprise (3/16)",
+      "median_sec": 0,
+      "p90_sec": 0,
+      "p99_sec": 0,
+      "failure_rate": 0.0,
+      "cache_hit_ratio": null
+    },
+    {
+      "job_name": "Postgres Enterprise (11/16)",
+      "median_sec": 0,
+      "p90_sec": 0,
+      "p99_sec": 0,
+      "failure_rate": 0.0,
+      "cache_hit_ratio": null
+    },
+    {
+      "job_name": "MySQL Enterprise (1/16)",
+      "median_sec": 0,
+      "p90_sec": 0,
+      "p99_sec": 0,
+      "failure_rate": 0.0,
+      "cache_hit_ratio": null
+    },
+    {
+      "job_name": "Postgres Enterprise (5/16)",
+      "median_sec": 0,
+      "p90_sec": 0,
+      "p99_sec": 0,
+      "failure_rate": 0.0,
+      "cache_hit_ratio": null
+    },
+    {
+      "job_name": "Postgres Enterprise (7/16)",
+      "median_sec": 0,
+      "p90_sec": 0,
+      "p99_sec": 0,
+      "failure_rate": 0.0,
+      "cache_hit_ratio": null
+    },
+    {
+      "job_name": "Postgres Enterprise (12/16)",
+      "median_sec": 0,
+      "p90_sec": 0,
+      "p99_sec": 0,
+      "failure_rate": 0.0,
+      "cache_hit_ratio": null
+    },
+    {
+      "job_name": "MySQL Enterprise (2/16)",
+      "median_sec": 0,
+      "p90_sec": 0,
+      "p99_sec": 0,
+      "failure_rate": 0.0,
+      "cache_hit_ratio": null
+    },
+    {
+      "job_name": "Postgres Enterprise (15/16)",
+      "median_sec": 0,
+      "p90_sec": 0,
+      "p99_sec": 0,
+      "failure_rate": 0.0,
+      "cache_hit_ratio": null
+    },
+    {
+      "job_name": "MySQL Enterprise (8/16)",
+      "median_sec": 0,
+      "p90_sec": 0,
+      "p99_sec": 0,
+      "failure_rate": 0.0,
+      "cache_hit_ratio": null
+    },
+    {
+      "job_name": "Postgres Enterprise (16/16)",
+      "median_sec": 0,
+      "p90_sec": 0,
+      "p99_sec": 0,
+      "failure_rate": 0.0,
+      "cache_hit_ratio": null
+    },
+    {
+      "job_name": "Postgres Enterprise (9/16)",
+      "median_sec": 0,
+      "p90_sec": 0,
+      "p99_sec": 0,
+      "failure_rate": 0.0,
+      "cache_hit_ratio": null
+    },
+    {
+      "job_name": "Postgres Enterprise (13/16)",
+      "median_sec": 0,
+      "p90_sec": 0,
+      "p99_sec": 0,
+      "failure_rate": 0.0,
+      "cache_hit_ratio": null
+    },
+    {
+      "job_name": "MySQL Enterprise (5/16)",
+      "median_sec": 0,
+      "p90_sec": 0,
+      "p99_sec": 0,
+      "failure_rate": 0.0,
+      "cache_hit_ratio": null
+    },
+    {
+      "job_name": "MySQL Enterprise (3/16)",
+      "median_sec": 0,
+      "p90_sec": 0,
+      "p99_sec": 0,
+      "failure_rate": 0.0,
+      "cache_hit_ratio": null
+    },
+    {
+      "job_name": "Postgres Enterprise (14/16)",
+      "median_sec": 0,
+      "p90_sec": 0,
+      "p99_sec": 0,
+      "failure_rate": 0.0,
+      "cache_hit_ratio": null
+    },
+    {
+      "job_name": "MySQL Enterprise (11/16)",
+      "median_sec": 0,
+      "p90_sec": 0,
+      "p99_sec": 0,
+      "failure_rate": 0.0,
+      "cache_hit_ratio": null
+    },
+    {
+      "job_name": "MySQL Enterprise (7/16)",
+      "median_sec": 0,
+      "p90_sec": 0,
+      "p99_sec": 0,
+      "failure_rate": 0.0,
+      "cache_hit_ratio": null
+    },
+    {
+      "job_name": "MySQL Enterprise (9/16)",
+      "median_sec": 0,
+      "p90_sec": 0,
+      "p99_sec": 0,
+      "failure_rate": 0.0,
+      "cache_hit_ratio": null
+    },
+    {
+      "job_name": "MySQL Enterprise (4/16)",
+      "median_sec": 0,
+      "p90_sec": 0,
+      "p99_sec": 0,
+      "failure_rate": 0.0,
+      "cache_hit_ratio": null
+    },
+    {
+      "job_name": "MySQL Enterprise (10/16)",
+      "median_sec": 0,
+      "p90_sec": 0,
+      "p99_sec": 0,
+      "failure_rate": 0.0,
+      "cache_hit_ratio": null
+    },
+    {
+      "job_name": "Postgres Enterprise (8/16)",
+      "median_sec": 0,
+      "p90_sec": 0,
+      "p99_sec": 0,
+      "failure_rate": 0.0,
+      "cache_hit_ratio": null
+    },
+    {
+      "job_name": "MySQL Enterprise (14/16)",
+      "median_sec": 0,
+      "p90_sec": 0,
+      "p99_sec": 0,
+      "failure_rate": 1.0,
+      "cache_hit_ratio": null
+    },
+    {
+      "job_name": "Postgres Enterprise (10/16)",
+      "median_sec": 0,
+      "p90_sec": 0,
+      "p99_sec": 0,
+      "failure_rate": 0.0,
+      "cache_hit_ratio": null
+    },
+    {
+      "job_name": "MySQL Enterprise (15/16)",
+      "median_sec": 0,
+      "p90_sec": 0,
+      "p99_sec": 0,
+      "failure_rate": 0.0,
+      "cache_hit_ratio": null
+    },
+    {
+      "job_name": "MySQL Enterprise (6/16)",
+      "median_sec": 0,
+      "p90_sec": 0,
+      "p99_sec": 0,
+      "failure_rate": 0.0,
+      "cache_hit_ratio": null
+    }
+  ],
+  "bottlenecks": [
+    {
+      "type": "missing_cache",
+      "job_name": "gen-swagger",
+      "evidence": "No `cache:` directive found in job 'gen-swagger'. Median time: 0s. Adding cache would reduce dependency download time.",
+      "severity": "low"
+    },
+    {
+      "type": "missing_cache",
+      "job_name": "buildPR",
+      "evidence": "No `cache:` directive found in job 'buildPR'. Median time: 0s. Adding cache would reduce dependency download time.",
+      "severity": "low"
+    },
+    {
+      "type": "missing_cache",
+      "job_name": "buildBase",
+      "evidence": "No `cache:` directive found in job 'buildBase'. Median time: 0s. Adding cache would reduce dependency download time.",
+      "severity": "low"
+    },
+    {
+      "type": "missing_cache",
+      "job_name": "check-workspace",
+      "evidence": "No `cache:` directive found in job 'check-workspace'. Median time: 0s. Adding cache would reduce dependency download time.",
+      "severity": "low"
+    },
+    {
+      "type": "missing_cache",
+      "job_name": "check-wire",
+      "evidence": "No `cache:` directive found in job 'check-wire'. Median time: 0s. Adding cache would reduce dependency download time.",
+      "severity": "low"
+    },
+    {
+      "type": "serial_parallel",
+      "job_name": "check-workspace",
+      "evidence": "Job 'check-workspace' depends on ['detect-changes'] via `needs:` and waits for them to complete. Median time: 0s. If this job doesn't use their outputs, removing `needs:` would let it run in parallel.",
+      "severity": "low"
+    },
+    {
+      "type": "serial_parallel",
+      "job_name": "check-wire",
+      "evidence": "Job 'check-wire' depends on ['detect-changes'] via `needs:` and waits for them to complete. Median time: 0s. If this job doesn't use their outputs, removing `needs:` would let it run in parallel.",
+      "severity": "low"
+    },
+    {
+      "type": "missing_cache",
+      "job_name": "create-prs",
+      "evidence": "No `cache:` directive found in job 'create-prs'. Median time: 0s. Adding cache would reduce dependency download time.",
+      "severity": "low"
+    },
+    {
+      "type": "missing_cache",
+      "job_name": "attach_release_packages",
+      "evidence": "No `cache:` directive found in job 'attach_release_packages'. Median time: 0s. Adding cache would reduce dependency download time.",
+      "severity": "low"
+    },
+    {
+      "type": "serial_parallel",
+      "job_name": "attach_release_packages",
+      "evidence": "Job 'attach_release_packages' depends on ['setup', 'create_github_release'] via `needs:` and waits for them to complete. Median time: 0s. If this job doesn't use their outputs, removing `needs:` would let it run in parallel.",
+      "severity": "low"
+    },
+    {
+      "type": "redundant_rebuild",
+      "job_name": "build",
+      "evidence": "npm install runs in both build (420s) and test (360s) jobs independently. Sharing artifacts would save 360s.",
+      "severity": "high"
+    },
+    {
+      "type": "redundant_rebuild",
+      "job_name": "test",
+      "evidence": "npm install runs in both build (420s) and test (360s) jobs independently. Sharing artifacts would save 360s.",
+      "severity": "high"
+    },
+    {
+      "type": "oversized_context",
+      "job_name": "test",
+      "evidence": "checkout fetching entire repo history.",
+      "severity": "medium"
+    },
+    {
+      "type": "oversized_context",
+      "job_name": "build",
+      "evidence": "checkout fetching entire repo history.",
+      "severity": "medium"
+    },
+    {
+      "type": "missing_cache",
+      "job_name": "test",
+      "evidence": "No actions/cache directive used, but the job runs for 360s. Caching npm modules would improve performance.",
+      "severity": "medium"
+    },
+    {
+      "type": "missing_cache",
+      "job_name": "build",
+      "evidence": "No actions/cache directive used, but the job runs for 420s. Caching npm modules would improve performance.",
+      "severity": "medium"
+    }
+  ],
+  "optimizations": [
+    {
+      "id": "missing_cache-gen-swagger-d5d89e",
+      "bottleneck_type": "missing_cache",
+      "job_name": "gen-swagger",
+      "description": "Add actions/cache to 'gen-swagger' to cache dependencies and avoid re-downloading every run",
+      "estimated_time_saved_min": 1,
+      "estimated_cost_per_run": 0.07,
+      "risk_level": "low",
+      "yaml_diff_hint": "Add `- uses: actions/cache@v4` step before dependency install in 'gen-swagger'"
+    },
+    {
+      "id": "missing_cache-buildpr-82e50a",
+      "bottleneck_type": "missing_cache",
+      "job_name": "buildPR",
+      "description": "Add actions/cache to 'buildPR' to cache dependencies and avoid re-downloading every run",
+      "estimated_time_saved_min": 1,
+      "estimated_cost_per_run": 0.07,
+      "risk_level": "low",
+      "yaml_diff_hint": "Add `- uses: actions/cache@v4` step before dependency install in 'buildPR'"
+    },
+    {
+      "id": "missing_cache-buildbase-298bc2",
+      "bottleneck_type": "missing_cache",
+      "job_name": "buildBase",
+      "description": "Add actions/cache to 'buildBase' to cache dependencies and avoid re-downloading every run",
+      "estimated_time_saved_min": 1,
+      "estimated_cost_per_run": 0.07,
+      "risk_level": "low",
+      "yaml_diff_hint": "Add `- uses: actions/cache@v4` step before dependency install in 'buildBase'"
+    },
+    {
+      "id": "missing_cache-check-workspace-9294e7",
+      "bottleneck_type": "missing_cache",
+      "job_name": "check-workspace",
+      "description": "Add actions/cache to 'check-workspace' to cache dependencies and avoid re-downloading every run",
+      "estimated_time_saved_min": 1,
+      "estimated_cost_per_run": 0.07,
+      "risk_level": "low",
+      "yaml_diff_hint": "Add `- uses: actions/cache@v4` step before dependency install in 'check-workspace'"
+    },
+    {
+      "id": "missing_cache-check-wire-738505",
+      "bottleneck_type": "missing_cache",
+      "job_name": "check-wire",
+      "description": "Add actions/cache to 'check-wire' to cache dependencies and avoid re-downloading every run",
+      "estimated_time_saved_min": 1,
+      "estimated_cost_per_run": 0.07,
+      "risk_level": "low",
+      "yaml_diff_hint": "Add `- uses: actions/cache@v4` step before dependency install in 'check-wire'"
+    },
+    {
+      "id": "serial_parallel-check-workspace-705b42",
+      "bottleneck_type": "serial_parallel",
+      "job_name": "check-workspace",
+      "description": "Remove 'needs:' from 'check-workspace' so it runs in parallel with other independent jobs",
+      "estimated_time_saved_min": 1,
+      "estimated_cost_per_run": 0.0,
+      "risk_level": "medium",
+      "yaml_diff_hint": "Ensure 'check-workspace' has no `needs:` blocking parallel execution"
+    },
+    {
+      "id": "serial_parallel-check-wire-981461",
+      "bottleneck_type": "serial_parallel",
+      "job_name": "check-wire",
+      "description": "Remove 'needs:' from 'check-wire' so it runs in parallel with other independent jobs",
+      "estimated_time_saved_min": 1,
+      "estimated_cost_per_run": 0.0,
+      "risk_level": "medium",
+      "yaml_diff_hint": "Ensure 'check-wire' has no `needs:` blocking parallel execution"
+    },
+    {
+      "id": "missing_cache-create-prs-89066a",
+      "bottleneck_type": "missing_cache",
+      "job_name": "create-prs",
+      "description": "Add actions/cache to 'create-prs' to cache dependencies and avoid re-downloading every run",
+      "estimated_time_saved_min": 1,
+      "estimated_cost_per_run": 0.07,
+      "risk_level": "low",
+      "yaml_diff_hint": "Add `- uses: actions/cache@v4` step before dependency install in 'create-prs'"
+    },
+    {
+      "id": "missing_cache-attach_release_packa-3a7d3d",
+      "bottleneck_type": "missing_cache",
+      "job_name": "attach_release_packages",
+      "description": "Add actions/cache to 'attach_release_packages' to cache dependencies and avoid re-downloading every run",
+      "estimated_time_saved_min": 1,
+      "estimated_cost_per_run": 0.07,
+      "risk_level": "low",
+      "yaml_diff_hint": "Add `- uses: actions/cache@v4` step before dependency install in 'attach_release_packages'"
+    },
+    {
+      "id": "serial_parallel-attach_release_packa-ee5eb7",
+      "bottleneck_type": "serial_parallel",
+      "job_name": "attach_release_packages",
+      "description": "Remove 'needs:' from 'attach_release_packages' so it runs in parallel with other independent jobs",
+      "estimated_time_saved_min": 1,
+      "estimated_cost_per_run": 0.0,
+      "risk_level": "medium",
+      "yaml_diff_hint": "Ensure 'attach_release_packages' has no `needs:` blocking parallel execution"
+    },
+    {
+      "id": "redundant_rebuild-build-b43e52",
+      "bottleneck_type": "redundant_rebuild",
+      "job_name": "build",
+      "description": "Use actions/upload-artifact and actions/download-artifact in 'build' to reuse build outputs",
+      "estimated_time_saved_min": 1,
+      "estimated_cost_per_run": 0.01,
+      "risk_level": "medium",
+      "yaml_diff_hint": "Add `actions/upload-artifact` to build job and `actions/download-artifact` to 'build'"
+    },
+    {
+      "id": "redundant_rebuild-test-0bd9ee",
+      "bottleneck_type": "redundant_rebuild",
+      "job_name": "test",
+      "description": "Use actions/upload-artifact and actions/download-artifact in 'test' to reuse build outputs",
+      "estimated_time_saved_min": 1,
+      "estimated_cost_per_run": 0.01,
+      "risk_level": "medium",
+      "yaml_diff_hint": "Add `actions/upload-artifact` to build job and `actions/download-artifact` to 'test'"
+    },
+    {
+      "id": "oversized_context-test-cec341",
+      "bottleneck_type": "oversized_context",
+      "job_name": "test",
+      "description": "Add .dockerignore to 'test' to exclude node_modules, .git, and build artifacts from Docker context",
+      "estimated_time_saved_min": 1,
+      "estimated_cost_per_run": 0.0,
+      "risk_level": "low",
+      "yaml_diff_hint": "Create `.dockerignore` excluding node_modules, .git, and other build artifacts"
+    },
+    {
+      "id": "oversized_context-build-9c5e42",
+      "bottleneck_type": "oversized_context",
+      "job_name": "build",
+      "description": "Add .dockerignore to 'build' to exclude node_modules, .git, and build artifacts from Docker context",
+      "estimated_time_saved_min": 1,
+      "estimated_cost_per_run": 0.0,
+      "risk_level": "low",
+      "yaml_diff_hint": "Create `.dockerignore` excluding node_modules, .git, and other build artifacts"
+    },
+    {
+      "id": "missing_cache-test-504f7d",
+      "bottleneck_type": "missing_cache",
+      "job_name": "test",
+      "description": "Add actions/cache to 'test' to cache dependencies and avoid re-downloading every run",
+      "estimated_time_saved_min": 1,
+      "estimated_cost_per_run": 0.07,
+      "risk_level": "low",
+      "yaml_diff_hint": "Add `- uses: actions/cache@v4` step before dependency install in 'test'"
+    },
+    {
+      "id": "missing_cache-build-119ce9",
+      "bottleneck_type": "missing_cache",
+      "job_name": "build",
+      "description": "Add actions/cache to 'build' to cache dependencies and avoid re-downloading every run",
+      "estimated_time_saved_min": 1,
+      "estimated_cost_per_run": 0.07,
+      "risk_level": "low",
+      "yaml_diff_hint": "Add `- uses: actions/cache@v4` step before dependency install in 'build'"
+    }
+  ],
+  "total_saved_min": 16
+}

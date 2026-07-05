@@ -1,0 +1,45 @@
+{
+  "repo": "flutter/flutter",
+  "pr": 188978,
+  "title": "Roll Dart SDK from 1f9a08ce0638 to ce7a2567eb59 (2 revisions)",
+  "window_days": 7,
+  "profiles": [
+    {
+      "job_name": "reject-main-prs",
+      "median_sec": 0,
+      "p90_sec": 0,
+      "p99_sec": 0,
+      "failure_rate": 0.0,
+      "cache_hit_ratio": null
+    },
+    {
+      "job_name": "Tree_analyze",
+      "median_sec": 0,
+      "p90_sec": 0,
+      "p99_sec": 0,
+      "failure_rate": 0.0,
+      "cache_hit_ratio": null
+    }
+  ],
+  "bottlenecks": [
+    {
+      "type": "redundant_rebuild",
+      "job_name": "noResponse",
+      "evidence": "The `actions/github-script` job uses a script `./.github/scripts/no-response.js` which likely involves fetching data from the repository (potentially the entire history) - this could result in a significant rebuild and thus a long execution time.",
+      "severity": "medium"
+    }
+  ],
+  "optimizations": [
+    {
+      "id": "redundant_rebuild-noresponse-43bcf3",
+      "bottleneck_type": "redundant_rebuild",
+      "job_name": "noResponse",
+      "description": "Use actions/upload-artifact and actions/download-artifact in 'noResponse' to reuse build outputs",
+      "estimated_time_saved_min": 1,
+      "estimated_cost_per_run": 0.01,
+      "risk_level": "medium",
+      "yaml_diff_hint": "Add `actions/upload-artifact` to build job and `actions/download-artifact` to 'noResponse'"
+    }
+  ],
+  "total_saved_min": 1
+}

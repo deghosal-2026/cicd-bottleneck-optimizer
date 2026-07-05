@@ -1,0 +1,333 @@
+{
+  "repo": "apache/kafka",
+  "pr": 22758,
+  "title": "KIP-1320 (PoC): deprecation approach for internal classes exposed in public pack",
+  "window_days": 7,
+  "profiles": [
+    {
+      "job_name": "Save PR Number",
+      "median_sec": 0,
+      "p90_sec": 0,
+      "p99_sec": 0,
+      "failure_rate": 0.0,
+      "cache_hit_ratio": null
+    },
+    {
+      "job_name": "build / Configure Workflow",
+      "median_sec": 0,
+      "p90_sec": 0,
+      "p99_sec": 0,
+      "failure_rate": 0.0,
+      "cache_hit_ratio": null
+    },
+    {
+      "job_name": "build / Load Test Catalog",
+      "median_sec": 0,
+      "p90_sec": 0,
+      "p99_sec": 0,
+      "failure_rate": 0.0,
+      "cache_hit_ratio": null
+    },
+    {
+      "job_name": "build / Compile and Check (Merge Ref)",
+      "median_sec": 0,
+      "p90_sec": 0,
+      "p99_sec": 0,
+      "failure_rate": 1.0,
+      "cache_hit_ratio": null
+    },
+    {
+      "job_name": "build / CI checks completed",
+      "median_sec": 0,
+      "p90_sec": 0,
+      "p99_sec": 0,
+      "failure_rate": 1.0,
+      "cache_hit_ratio": null
+    },
+    {
+      "job_name": "build / JUnit tests Java ${{ matrix.java }}${{ (((matrix.run-flaky == true) && ' (flaky)') || '') }}${{ (((matrix.run-new == true) && ' (new)') || '') }}",
+      "median_sec": 0,
+      "p90_sec": 0,
+      "p99_sec": 0,
+      "failure_rate": 0.0,
+      "cache_hit_ratio": null
+    },
+    {
+      "job_name": "build / Update Test Catalog",
+      "median_sec": 0,
+      "p90_sec": 0,
+      "p99_sec": 0,
+      "failure_rate": 0.0,
+      "cache_hit_ratio": null
+    },
+    {
+      "job_name": "build / Collate Test Catalog",
+      "median_sec": 0,
+      "p90_sec": 0,
+      "p99_sec": 0,
+      "failure_rate": 0.0,
+      "cache_hit_ratio": null
+    }
+  ],
+  "bottlenecks": [
+    {
+      "type": "missing_cache",
+      "job_name": "validate",
+      "evidence": "No `cache:` directive found in job 'validate'. Median time: 0s. Adding cache would reduce dependency download time.",
+      "severity": "low"
+    },
+    {
+      "type": "missing_cache",
+      "job_name": "test",
+      "evidence": "No `cache:` directive found in job 'test'. Median time: 0s. Adding cache would reduce dependency download time.",
+      "severity": "low"
+    },
+    {
+      "type": "serial_parallel",
+      "job_name": "load-catalog",
+      "evidence": "Job 'load-catalog' depends on ['configure'] via `needs:` and waits for them to complete. Median time: 0s. If this job doesn't use their outputs, removing `needs:` would let it run in parallel.",
+      "severity": "low"
+    },
+    {
+      "type": "serial_parallel",
+      "job_name": "validate",
+      "evidence": "Job 'validate' depends on ['configure'] via `needs:` and waits for them to complete. Median time: 0s. If this job doesn't use their outputs, removing `needs:` would let it run in parallel.",
+      "severity": "low"
+    },
+    {
+      "type": "serial_parallel",
+      "job_name": "test",
+      "evidence": "Job 'test' depends on ['configure', 'validate', 'load-catalog'] via `needs:` and waits for them to complete. Median time: 0s. If this job doesn't use their outputs, removing `needs:` would let it run in parallel.",
+      "severity": "low"
+    },
+    {
+      "type": "serial_parallel",
+      "job_name": "collate-test-catalog",
+      "evidence": "Job 'collate-test-catalog' depends on ['test'] via `needs:` and waits for them to complete. Median time: 0s. If this job doesn't use their outputs, removing `needs:` would let it run in parallel.",
+      "severity": "low"
+    },
+    {
+      "type": "serial_parallel",
+      "job_name": "update-test-catalog",
+      "evidence": "Job 'update-test-catalog' depends on ['collate-test-catalog'] via `needs:` and waits for them to complete. Median time: 0s. If this job doesn't use their outputs, removing `needs:` would let it run in parallel.",
+      "severity": "low"
+    },
+    {
+      "type": "serial_parallel",
+      "job_name": "checks-complete",
+      "evidence": "Job 'checks-complete' depends on ['configure', 'validate', 'test'] via `needs:` and waits for them to complete. Median time: 0s. If this job doesn't use their outputs, removing `needs:` would let it run in parallel.",
+      "severity": "low"
+    },
+    {
+      "type": "redundant_matrix",
+      "job_name": "test",
+      "evidence": "Job 'test' uses 4 matrix dimensions (java=[25, 17], run-flaky=[True, False], run-new=[True, False], exclude=[{'run-flaky': True, 'run-new': True}]) producing 8 combinations. Median time: 0s. Reducing dimensions would cut runner time linearly.",
+      "severity": "low"
+    },
+    {
+      "type": "missing_cache",
+      "job_name": "get-build-scan-names",
+      "evidence": "No `cache:` directive found in job 'get-build-scan-names'. Median time: 0s. Adding cache would reduce dependency download time.",
+      "severity": "low"
+    },
+    {
+      "type": "missing_cache",
+      "job_name": "upload-build-scan",
+      "evidence": "No `cache:` directive found in job 'upload-build-scan'. Median time: 0s. Adding cache would reduce dependency download time.",
+      "severity": "low"
+    },
+    {
+      "type": "serial_parallel",
+      "job_name": "upload-build-scan",
+      "evidence": "Job 'upload-build-scan' depends on ['get-build-scan-names'] via `needs:` and waits for them to complete. Median time: 0s. If this job doesn't use their outputs, removing `needs:` would let it run in parallel.",
+      "severity": "low"
+    },
+    {
+      "type": "missing_cache",
+      "job_name": "deflake",
+      "evidence": "No `cache:` directive found in job 'deflake'. Median time: 0s. Adding cache would reduce dependency download time.",
+      "severity": "low"
+    },
+    {
+      "type": "missing_cache",
+      "job_name": "build",
+      "evidence": "No `cache:` directive found in job 'build'. Median time: 0s. Adding cache would reduce dependency download time.",
+      "severity": "low"
+    },
+    {
+      "type": "missing_cache",
+      "job_name": "promote",
+      "evidence": "No `cache:` directive found in job 'promote'. Median time: 0s. Adding cache would reduce dependency download time.",
+      "severity": "low"
+    },
+    {
+      "type": "missing_cache",
+      "job_name": "release",
+      "evidence": "No `cache:` directive found in job 'release'. Median time: 0s. Adding cache would reduce dependency download time.",
+      "severity": "low"
+    }
+  ],
+  "optimizations": [
+    {
+      "id": "missing_cache-validate-a4e595",
+      "bottleneck_type": "missing_cache",
+      "job_name": "validate",
+      "description": "Add actions/cache to 'validate' to cache dependencies and avoid re-downloading every run",
+      "estimated_time_saved_min": 1,
+      "estimated_cost_per_run": 0.07,
+      "risk_level": "low",
+      "yaml_diff_hint": "Add `- uses: actions/cache@v4` step before dependency install in 'validate'"
+    },
+    {
+      "id": "missing_cache-test-3b26d0",
+      "bottleneck_type": "missing_cache",
+      "job_name": "test",
+      "description": "Add actions/cache to 'test' to cache dependencies and avoid re-downloading every run",
+      "estimated_time_saved_min": 1,
+      "estimated_cost_per_run": 0.07,
+      "risk_level": "low",
+      "yaml_diff_hint": "Add `- uses: actions/cache@v4` step before dependency install in 'test'"
+    },
+    {
+      "id": "serial_parallel-load-catalog-c6e821",
+      "bottleneck_type": "serial_parallel",
+      "job_name": "load-catalog",
+      "description": "Remove 'needs:' from 'load-catalog' so it runs in parallel with other independent jobs",
+      "estimated_time_saved_min": 1,
+      "estimated_cost_per_run": 0.0,
+      "risk_level": "medium",
+      "yaml_diff_hint": "Ensure 'load-catalog' has no `needs:` blocking parallel execution"
+    },
+    {
+      "id": "serial_parallel-validate-f1e574",
+      "bottleneck_type": "serial_parallel",
+      "job_name": "validate",
+      "description": "Remove 'needs:' from 'validate' so it runs in parallel with other independent jobs",
+      "estimated_time_saved_min": 1,
+      "estimated_cost_per_run": 0.0,
+      "risk_level": "medium",
+      "yaml_diff_hint": "Ensure 'validate' has no `needs:` blocking parallel execution"
+    },
+    {
+      "id": "serial_parallel-test-6a0975",
+      "bottleneck_type": "serial_parallel",
+      "job_name": "test",
+      "description": "Remove 'needs:' from 'test' so it runs in parallel with other independent jobs",
+      "estimated_time_saved_min": 1,
+      "estimated_cost_per_run": 0.0,
+      "risk_level": "medium",
+      "yaml_diff_hint": "Ensure 'test' has no `needs:` blocking parallel execution"
+    },
+    {
+      "id": "serial_parallel-collate-test-catalog-ff05c7",
+      "bottleneck_type": "serial_parallel",
+      "job_name": "collate-test-catalog",
+      "description": "Remove 'needs:' from 'collate-test-catalog' so it runs in parallel with other independent jobs",
+      "estimated_time_saved_min": 1,
+      "estimated_cost_per_run": 0.0,
+      "risk_level": "medium",
+      "yaml_diff_hint": "Ensure 'collate-test-catalog' has no `needs:` blocking parallel execution"
+    },
+    {
+      "id": "serial_parallel-update-test-catalog-8987f4",
+      "bottleneck_type": "serial_parallel",
+      "job_name": "update-test-catalog",
+      "description": "Remove 'needs:' from 'update-test-catalog' so it runs in parallel with other independent jobs",
+      "estimated_time_saved_min": 1,
+      "estimated_cost_per_run": 0.0,
+      "risk_level": "medium",
+      "yaml_diff_hint": "Ensure 'update-test-catalog' has no `needs:` blocking parallel execution"
+    },
+    {
+      "id": "serial_parallel-checks-complete-701a6b",
+      "bottleneck_type": "serial_parallel",
+      "job_name": "checks-complete",
+      "description": "Remove 'needs:' from 'checks-complete' so it runs in parallel with other independent jobs",
+      "estimated_time_saved_min": 1,
+      "estimated_cost_per_run": 0.0,
+      "risk_level": "medium",
+      "yaml_diff_hint": "Ensure 'checks-complete' has no `needs:` blocking parallel execution"
+    },
+    {
+      "id": "redundant_matrix-test-7695df",
+      "bottleneck_type": "redundant_matrix",
+      "job_name": "test",
+      "description": "Reduce matrix dimensions in 'test' to eliminate redundant OS/language combinations",
+      "estimated_time_saved_min": 1,
+      "estimated_cost_per_run": 0.01,
+      "risk_level": "high",
+      "yaml_diff_hint": "Reduce `strategy.matrix` dimensions in 'test' to remove overlap"
+    },
+    {
+      "id": "missing_cache-get-build-scan-names-000530",
+      "bottleneck_type": "missing_cache",
+      "job_name": "get-build-scan-names",
+      "description": "Add actions/cache to 'get-build-scan-names' to cache dependencies and avoid re-downloading every run",
+      "estimated_time_saved_min": 1,
+      "estimated_cost_per_run": 0.07,
+      "risk_level": "low",
+      "yaml_diff_hint": "Add `- uses: actions/cache@v4` step before dependency install in 'get-build-scan-names'"
+    },
+    {
+      "id": "missing_cache-upload-build-scan-6719aa",
+      "bottleneck_type": "missing_cache",
+      "job_name": "upload-build-scan",
+      "description": "Add actions/cache to 'upload-build-scan' to cache dependencies and avoid re-downloading every run",
+      "estimated_time_saved_min": 1,
+      "estimated_cost_per_run": 0.07,
+      "risk_level": "low",
+      "yaml_diff_hint": "Add `- uses: actions/cache@v4` step before dependency install in 'upload-build-scan'"
+    },
+    {
+      "id": "serial_parallel-upload-build-scan-9c496f",
+      "bottleneck_type": "serial_parallel",
+      "job_name": "upload-build-scan",
+      "description": "Remove 'needs:' from 'upload-build-scan' so it runs in parallel with other independent jobs",
+      "estimated_time_saved_min": 1,
+      "estimated_cost_per_run": 0.0,
+      "risk_level": "medium",
+      "yaml_diff_hint": "Ensure 'upload-build-scan' has no `needs:` blocking parallel execution"
+    },
+    {
+      "id": "missing_cache-deflake-b856dd",
+      "bottleneck_type": "missing_cache",
+      "job_name": "deflake",
+      "description": "Add actions/cache to 'deflake' to cache dependencies and avoid re-downloading every run",
+      "estimated_time_saved_min": 1,
+      "estimated_cost_per_run": 0.07,
+      "risk_level": "low",
+      "yaml_diff_hint": "Add `- uses: actions/cache@v4` step before dependency install in 'deflake'"
+    },
+    {
+      "id": "missing_cache-build-ac7ebd",
+      "bottleneck_type": "missing_cache",
+      "job_name": "build",
+      "description": "Add actions/cache to 'build' to cache dependencies and avoid re-downloading every run",
+      "estimated_time_saved_min": 1,
+      "estimated_cost_per_run": 0.07,
+      "risk_level": "low",
+      "yaml_diff_hint": "Add `- uses: actions/cache@v4` step before dependency install in 'build'"
+    },
+    {
+      "id": "missing_cache-promote-66228b",
+      "bottleneck_type": "missing_cache",
+      "job_name": "promote",
+      "description": "Add actions/cache to 'promote' to cache dependencies and avoid re-downloading every run",
+      "estimated_time_saved_min": 1,
+      "estimated_cost_per_run": 0.07,
+      "risk_level": "low",
+      "yaml_diff_hint": "Add `- uses: actions/cache@v4` step before dependency install in 'promote'"
+    },
+    {
+      "id": "missing_cache-release-8fad50",
+      "bottleneck_type": "missing_cache",
+      "job_name": "release",
+      "description": "Add actions/cache to 'release' to cache dependencies and avoid re-downloading every run",
+      "estimated_time_saved_min": 1,
+      "estimated_cost_per_run": 0.07,
+      "risk_level": "low",
+      "yaml_diff_hint": "Add `- uses: actions/cache@v4` step before dependency install in 'release'"
+    }
+  ],
+  "total_saved_min": 16
+}

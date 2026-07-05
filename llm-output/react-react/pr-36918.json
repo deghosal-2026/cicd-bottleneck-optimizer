@@ -1,0 +1,10 @@
+{
+  "repo": "react/react",
+  "pr": 36918,
+  "title": "Add unref to MessageChannel port so it does not prevent node from exiting",
+  "target_date": "2026-07-02",
+  "profiles": [],
+  "bottlenecks": [],
+  "optimizations": [],
+  "total_saved_min": 0
+}

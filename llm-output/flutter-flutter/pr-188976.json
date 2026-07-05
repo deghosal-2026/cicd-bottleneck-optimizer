@@ -1,0 +1,10 @@
+{
+  "repo": "flutter/flutter",
+  "pr": 188976,
+  "title": "[flutter_tools] Don't crash on non-UTF-8 plugin pubspec.yaml",
+  "window_days": 7,
+  "profiles": [],
+  "bottlenecks": [],
+  "optimizations": [],
+  "total_saved_min": 0
+}

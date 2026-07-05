@@ -1,0 +1,869 @@
+{
+  "repo": "react/react",
+  "pr": 36917,
+  "title": "[Fizz] Support nested enter/exit ViewTransition animations",
+  "target_date": "2026-07-02",
+  "profiles": [
+    {
+      "job_name": "Check license",
+      "median_sec": 0,
+      "p90_sec": 0,
+      "p99_sec": 0,
+      "failure_rate": 0.0,
+      "cache_hit_ratio": null
+    },
+    {
+      "job_name": "Run prettier",
+      "median_sec": 0,
+      "p90_sec": 0,
+      "p99_sec": 0,
+      "failure_rate": 0.0,
+      "cache_hit_ratio": null
+    },
+    {
+      "job_name": "Test print warnings",
+      "median_sec": 0,
+      "p90_sec": 0,
+      "p99_sec": 0,
+      "failure_rate": 0.0,
+      "cache_hit_ratio": null
+    },
+    {
+      "job_name": "Run eslint",
+      "median_sec": 0,
+      "p90_sec": 0,
+      "p99_sec": 0,
+      "failure_rate": 0.0,
+      "cache_hit_ratio": null
+    },
+    {
+      "job_name": "ESLint v7",
+      "median_sec": 0,
+      "p90_sec": 0,
+      "p99_sec": 0,
+      "failure_rate": 0.0,
+      "cache_hit_ratio": null
+    },
+    {
+      "job_name": "ESLint v6",
+      "median_sec": 0,
+      "p90_sec": 0,
+      "p99_sec": 0,
+      "failure_rate": 0.0,
+      "cache_hit_ratio": null
+    },
+    {
+      "job_name": "ESLint v8",
+      "median_sec": 0,
+      "p90_sec": 0,
+      "p99_sec": 0,
+      "failure_rate": 0.0,
+      "cache_hit_ratio": null
+    },
+    {
+      "job_name": "ESLint v10",
+      "median_sec": 0,
+      "p90_sec": 0,
+      "p99_sec": 0,
+      "failure_rate": 0.0,
+      "cache_hit_ratio": null
+    },
+    {
+      "job_name": "ESLint v9",
+      "median_sec": 0,
+      "p90_sec": 0,
+      "p99_sec": 0,
+      "failure_rate": 0.0,
+      "cache_hit_ratio": null
+    },
+    {
+      "job_name": "Cache Runtime, Compiler node_modules",
+      "median_sec": 0,
+      "p90_sec": 0,
+      "p99_sec": 0,
+      "failure_rate": 0.0,
+      "cache_hit_ratio": null
+    },
+    {
+      "job_name": "yarn build and lint (0, stable)",
+      "median_sec": 0,
+      "p90_sec": 0,
+      "p99_sec": 0,
+      "failure_rate": 0.0,
+      "cache_hit_ratio": null
+    },
+    {
+      "job_name": "yarn build and lint (0, experimental)",
+      "median_sec": 0,
+      "p90_sec": 0,
+      "p99_sec": 0,
+      "failure_rate": 0.0,
+      "cache_hit_ratio": null
+    },
+    {
+      "job_name": "yarn test -r=stable --env=development (Shard 1/5)",
+      "median_sec": 0,
+      "p90_sec": 0,
+      "p99_sec": 0,
+      "failure_rate": 0.0,
+      "cache_hit_ratio": null
+    },
+    {
+      "job_name": "yarn test -r=stable --env=development (Shard 3/5)",
+      "median_sec": 0,
+      "p90_sec": 0,
+      "p99_sec": 0,
+      "failure_rate": 0.0,
+      "cache_hit_ratio": null
+    },
+    {
+      "job_name": "yarn test -r=stable --env=development (Shard 2/5)",
+      "median_sec": 0,
+      "p90_sec": 0,
+      "p99_sec": 0,
+      "failure_rate": 0.0,
+      "cache_hit_ratio": null
+    },
+    {
+      "job_name": "yarn test -r=stable --env=production (Shard 2/5)",
+      "median_sec": 0,
+      "p90_sec": 0,
+      "p99_sec": 0,
+      "failure_rate": 0.0,
+      "cache_hit_ratio": null
+    },
+    {
+      "job_name": "Check flags",
+      "median_sec": 0,
+      "p90_sec": 0,
+      "p99_sec": 0,
+      "failure_rate": 0.0,
+      "cache_hit_ratio": null
+    },
+    {
+      "job_name": "Test eslint-plugin-react-hooks",
+      "median_sec": 0,
+      "p90_sec": 0,
+      "p99_sec": 0,
+      "failure_rate": 0.0,
+      "cache_hit_ratio": null
+    },
+    {
+      "job_name": "Confirm generated inline Fizz runtime is up to date",
+      "median_sec": 0,
+      "p90_sec": 0,
+      "p99_sec": 0,
+      "failure_rate": 0.0,
+      "cache_hit_ratio": null
+    },
+    {
+      "job_name": "Flow check dom-node",
+      "median_sec": 0,
+      "p90_sec": 0,
+      "p99_sec": 0,
+      "failure_rate": 0.0,
+      "cache_hit_ratio": null
+    },
+    {
+      "job_name": "Cache Runtime Playwright Chromium",
+      "median_sec": 0,
+      "p90_sec": 0,
+      "p99_sec": 0,
+      "failure_rate": 0.0,
+      "cache_hit_ratio": null
+    },
+    {
+      "job_name": "Flow check dom-browser",
+      "median_sec": 0,
+      "p90_sec": 0,
+      "p99_sec": 0,
+      "failure_rate": 0.0,
+      "cache_hit_ratio": null
+    },
+    {
+      "job_name": "yarn build and lint (2, stable)",
+      "median_sec": 0,
+      "p90_sec": 0,
+      "p99_sec": 0,
+      "failure_rate": 0.0,
+      "cache_hit_ratio": null
+    },
+    {
+      "job_name": "yarn build and lint (1, stable)",
+      "median_sec": 0,
+      "p90_sec": 0,
+      "p99_sec": 0,
+      "failure_rate": 0.0,
+      "cache_hit_ratio": null
+    },
+    {
+      "job_name": "Flow check dom-node-webpack",
+      "median_sec": 0,
+      "p90_sec": 0,
+      "p99_sec": 0,
+      "failure_rate": 0.0,
+      "cache_hit_ratio": null
+    },
+    {
+      "job_name": "yarn test -r=stable --env=production (Shard 3/5)",
+      "median_sec": 0,
+      "p90_sec": 0,
+      "p99_sec": 0,
+      "failure_rate": 0.0,
+      "cache_hit_ratio": null
+    },
+    {
+      "job_name": "yarn test -r=stable --env=development (Shard 4/5)",
+      "median_sec": 0,
+      "p90_sec": 0,
+      "p99_sec": 0,
+      "failure_rate": 0.0,
+      "cache_hit_ratio": null
+    },
+    {
+      "job_name": "Flow check dom-node-unbundled",
+      "median_sec": 0,
+      "p90_sec": 0,
+      "p99_sec": 0,
+      "failure_rate": 0.0,
+      "cache_hit_ratio": null
+    },
+    {
+      "job_name": "Flow check dom-node-parcel",
+      "median_sec": 0,
+      "p90_sec": 0,
+      "p99_sec": 0,
+      "failure_rate": 0.0,
+      "cache_hit_ratio": null
+    },
+    {
+      "job_name": "Flow check dom-node-turbopack",
+      "median_sec": 0,
+      "p90_sec": 0,
+      "p99_sec": 0,
+      "failure_rate": 0.0,
+      "cache_hit_ratio": null
+    },
+    {
+      "job_name": "yarn test -r=stable --env=development (Shard 5/5)",
+      "median_sec": 0,
+      "p90_sec": 0,
+      "p99_sec": 0,
+      "failure_rate": 0.0,
+      "cache_hit_ratio": null
+    },
+    {
+      "job_name": "yarn build and lint (3, stable)",
+      "median_sec": 0,
+      "p90_sec": 0,
+      "p99_sec": 0,
+      "failure_rate": 0.0,
+      "cache_hit_ratio": null
+    },
+    {
+      "job_name": "yarn build and lint (1, experimental)",
+      "median_sec": 0,
+      "p90_sec": 0,
+      "p99_sec": 0,
+      "failure_rate": 0.0,
+      "cache_hit_ratio": null
+    },
+    {
+      "job_name": "yarn build and lint (2, experimental)",
+      "median_sec": 0,
+      "p90_sec": 0,
+      "p99_sec": 0,
+      "failure_rate": 0.0,
+      "cache_hit_ratio": null
+    },
+    {
+      "job_name": "Flow check dom-browser-fb",
+      "median_sec": 0,
+      "p90_sec": 0,
+      "p99_sec": 0,
+      "failure_rate": 0.0,
+      "cache_hit_ratio": null
+    },
+    {
+      "job_name": "yarn test -r=stable --env=production (Shard 5/5)",
+      "median_sec": 0,
+      "p90_sec": 0,
+      "p99_sec": 0,
+      "failure_rate": 0.0,
+      "cache_hit_ratio": null
+    },
+    {
+      "job_name": "yarn test -r=stable --env=production (Shard 1/5)",
+      "median_sec": 0,
+      "p90_sec": 0,
+      "p99_sec": 0,
+      "failure_rate": 0.0,
+      "cache_hit_ratio": null
+    },
+    {
+      "job_name": "Flow check dom-edge-webpack",
+      "median_sec": 0,
+      "p90_sec": 0,
+      "p99_sec": 0,
+      "failure_rate": 0.0,
+      "cache_hit_ratio": null
+    },
+    {
+      "job_name": "yarn build and lint (3, experimental)",
+      "median_sec": 0,
+      "p90_sec": 0,
+      "p99_sec": 0,
+      "failure_rate": 0.0,
+      "cache_hit_ratio": null
+    }
+  ],
+  "bottlenecks": [
+    {
+      "type": "serial_parallel",
+      "job_name": "build_devtools_and_process_artifacts",
+      "evidence": "Job 'build_devtools_and_process_artifacts' depends on ['download_build'] via `needs:` and waits for them to complete. Median time: 0s. If this job doesn't use their outputs, removing `needs:` would let it run in parallel.",
+      "severity": "low"
+    },
+    {
+      "type": "serial_parallel",
+      "job_name": "run_devtools_tests_for_versions",
+      "evidence": "Job 'run_devtools_tests_for_versions' depends on ['build_devtools_and_process_artifacts'] via `needs:` and waits for them to complete. Median time: 0s. If this job doesn't use their outputs, removing `needs:` would let it run in parallel.",
+      "severity": "low"
+    },
+    {
+      "type": "serial_parallel",
+      "job_name": "run_devtools_e2e_tests_for_versions",
+      "evidence": "Job 'run_devtools_e2e_tests_for_versions' depends on ['build_devtools_and_process_artifacts'] via `needs:` and waits for them to complete. Median time: 0s. If this job doesn't use their outputs, removing `needs:` would let it run in parallel.",
+      "severity": "low"
+    },
+    {
+      "type": "serial_parallel",
+      "job_name": "test",
+      "evidence": "Job 'test' depends on ['discover_yarn_workspaces'] via `needs:` and waits for them to complete. Median time: 0s. If this job doesn't use their outputs, removing `needs:` would let it run in parallel.",
+      "severity": "low"
+    },
+    {
+      "type": "missing_cache",
+      "job_name": "process_artifacts",
+      "evidence": "No `cache:` directive found in job 'process_artifacts'. Median time: 0s. Adding cache would reduce dependency download time.",
+      "severity": "low"
+    },
+    {
+      "type": "missing_cache",
+      "job_name": "commit_www_artifacts",
+      "evidence": "No `cache:` directive found in job 'commit_www_artifacts'. Median time: 0s. Adding cache would reduce dependency download time.",
+      "severity": "low"
+    },
+    {
+      "type": "missing_cache",
+      "job_name": "commit_fbsource_artifacts",
+      "evidence": "No `cache:` directive found in job 'commit_fbsource_artifacts'. Median time: 0s. Adding cache would reduce dependency download time.",
+      "severity": "low"
+    },
+    {
+      "type": "serial_parallel",
+      "job_name": "process_artifacts",
+      "evidence": "Job 'process_artifacts' depends on ['download_artifacts'] via `needs:` and waits for them to complete. Median time: 0s. If this job doesn't use their outputs, removing `needs:` would let it run in parallel.",
+      "severity": "low"
+    },
+    {
+      "type": "serial_parallel",
+      "job_name": "commit_www_artifacts",
+      "evidence": "Job 'commit_www_artifacts' depends on ['download_artifacts', 'process_artifacts'] via `needs:` and waits for them to complete. Median time: 0s. If this job doesn't use their outputs, removing `needs:` would let it run in parallel.",
+      "severity": "low"
+    },
+    {
+      "type": "serial_parallel",
+      "job_name": "commit_fbsource_artifacts",
+      "evidence": "Job 'commit_fbsource_artifacts' depends on ['download_artifacts', 'process_artifacts'] via `needs:` and waits for them to complete. Median time: 0s. If this job doesn't use their outputs, removing `needs:` would let it run in parallel.",
+      "severity": "low"
+    },
+    {
+      "type": "missing_cache",
+      "job_name": "test_fuzz",
+      "evidence": "No `cache:` directive found in job 'test_fuzz'. Median time: 0s. Adding cache would reduce dependency download time.",
+      "severity": "low"
+    },
+    {
+      "type": "serial_parallel",
+      "job_name": "flow",
+      "evidence": "Job 'flow' depends on ['discover_flow_inline_configs', 'runtime_node_modules_cache'] via `needs:` and waits for them to complete. Median time: 0s. If this job doesn't use their outputs, removing `needs:` would let it run in parallel.",
+      "severity": "low"
+    },
+    {
+      "type": "serial_parallel",
+      "job_name": "check_generated_fizz_runtime",
+      "evidence": "Job 'check_generated_fizz_runtime' depends on ['runtime_node_modules_cache'] via `needs:` and waits for them to complete. Median time: 0s. If this job doesn't use their outputs, removing `needs:` would let it run in parallel.",
+      "severity": "low"
+    },
+    {
+      "type": "serial_parallel",
+      "job_name": "flags",
+      "evidence": "Job 'flags' depends on ['runtime_node_modules_cache'] via `needs:` and waits for them to complete. Median time: 0s. If this job doesn't use their outputs, removing `needs:` would let it run in parallel.",
+      "severity": "low"
+    },
+    {
+      "type": "serial_parallel",
+      "job_name": "test-linter",
+      "evidence": "Job 'test-linter' depends on ['runtime_compiler_node_modules_cache'] via `needs:` and waits for them to complete. Median time: 0s. If this job doesn't use their outputs, removing `needs:` would let it run in parallel.",
+      "severity": "low"
+    },
+    {
+      "type": "serial_parallel",
+      "job_name": "build_and_lint",
+      "evidence": "Job 'build_and_lint' depends on ['runtime_compiler_node_modules_cache'] via `needs:` and waits for them to complete. Median time: 0s. If this job doesn't use their outputs, removing `needs:` would let it run in parallel.",
+      "severity": "low"
+    },
+    {
+      "type": "serial_parallel",
+      "job_name": "test_build",
+      "evidence": "Job 'test_build' depends on ['build_and_lint', 'runtime_compiler_node_modules_cache'] via `needs:` and waits for them to complete. Median time: 0s. If this job doesn't use their outputs, removing `needs:` would let it run in parallel.",
+      "severity": "low"
+    },
+    {
+      "type": "serial_parallel",
+      "job_name": "test_build_devtools",
+      "evidence": "Job 'test_build_devtools' depends on ['build_and_lint', 'runtime_node_modules_cache'] via `needs:` and waits for them to complete. Median time: 0s. If this job doesn't use their outputs, removing `needs:` would let it run in parallel.",
+      "severity": "low"
+    },
+    {
+      "type": "serial_parallel",
+      "job_name": "process_artifacts_combined",
+      "evidence": "Job 'process_artifacts_combined' depends on ['build_and_lint', 'runtime_node_modules_cache'] via `needs:` and waits for them to complete. Median time: 0s. If this job doesn't use their outputs, removing `needs:` would let it run in parallel.",
+      "severity": "low"
+    },
+    {
+      "type": "serial_parallel",
+      "job_name": "check_error_codes",
+      "evidence": "Job 'check_error_codes' depends on ['build_and_lint', 'runtime_node_modules_cache'] via `needs:` and waits for them to complete. Median time: 0s. If this job doesn't use their outputs, removing `needs:` would let it run in parallel.",
+      "severity": "low"
+    },
+    {
+      "type": "serial_parallel",
+      "job_name": "check_release_dependencies",
+      "evidence": "Job 'check_release_dependencies' depends on ['build_and_lint', 'runtime_node_modules_cache'] via `needs:` and waits for them to complete. Median time: 0s. If this job doesn't use their outputs, removing `needs:` would let it run in parallel.",
+      "severity": "low"
+    },
+    {
+      "type": "serial_parallel",
+      "job_name": "RELEASE_CHANNEL_stable_yarn_test_dom_fixtures",
+      "evidence": "Job 'RELEASE_CHANNEL_stable_yarn_test_dom_fixtures' depends on ['build_and_lint'] via `needs:` and waits for them to complete. Median time: 0s. If this job doesn't use their outputs, removing `needs:` would let it run in parallel.",
+      "severity": "low"
+    },
+    {
+      "type": "serial_parallel",
+      "job_name": "run_fixtures_flight_tests",
+      "evidence": "Job 'run_fixtures_flight_tests' depends on ['build_and_lint'] via `needs:` and waits for them to complete. Median time: 0s. If this job doesn't use their outputs, removing `needs:` would let it run in parallel.",
+      "severity": "low"
+    },
+    {
+      "type": "serial_parallel",
+      "job_name": "runtime_playwright_chromium_cache",
+      "evidence": "Job 'runtime_playwright_chromium_cache' depends on ['runtime_node_modules_cache'] via `needs:` and waits for them to complete. Median time: 0s. If this job doesn't use their outputs, removing `needs:` would let it run in parallel.",
+      "severity": "low"
+    },
+    {
+      "type": "serial_parallel",
+      "job_name": "run_devtools_e2e_tests",
+      "evidence": "Job 'run_devtools_e2e_tests' depends on ['build_and_lint', 'runtime_playwright_chromium_cache'] via `needs:` and waits for them to complete. Median time: 0s. If this job doesn't use their outputs, removing `needs:` would let it run in parallel.",
+      "severity": "low"
+    },
+    {
+      "type": "serial_parallel",
+      "job_name": "run_react_devtools_cdt_mcp_e2e_tests",
+      "evidence": "Job 'run_react_devtools_cdt_mcp_e2e_tests' depends on ['build_and_lint', 'runtime_playwright_chromium_cache'] via `needs:` and waits for them to complete. Median time: 0s. If this job doesn't use their outputs, removing `needs:` would let it run in parallel.",
+      "severity": "low"
+    },
+    {
+      "type": "serial_parallel",
+      "job_name": "sizebot",
+      "evidence": "Job 'sizebot' depends on ['build_and_lint'] via `needs:` and waits for them to complete. Median time: 0s. If this job doesn't use their outputs, removing `needs:` would let it run in parallel.",
+      "severity": "low"
+    },
+    {
+      "type": "redundant_matrix",
+      "job_name": "test",
+      "evidence": "Job 'test' uses 2 matrix dimensions (params=['-r=stable --env=development', '-r=stable --env=production', '-r=experimental --env=development', '-r=experimental --env=production', '-r=www-classic --env=development --variant=false', '-r=www-classic --env=production --variant=false', '-r=www-classic --env=development --variant=true', '-r=www-classic --env=production --variant=true', '-r=www-modern --env=development --variant=false', '-r=www-modern --env=production --variant=false', '-r=www-modern --env=development --variant=true', '-r=www-modern --env=production --variant=true', '-r=xplat --env=development --variant=false', '-r=xplat --env=development --variant=true', '-r=xplat --env=production --variant=false', '-r=xplat --env=production --variant=true', '-r=stable --env=development --persistent', '-r=experimental --env=development --persistent'], shard=['1/5', '2/5', '3/5', '4/5', '5/5']) producing 90 combinations. Median time: 0s. Reducing dimensions would cut runner time linearly.",
+      "severity": "low"
+    },
+    {
+      "type": "redundant_matrix",
+      "job_name": "build_and_lint",
+      "evidence": "Job 'build_and_lint' uses 2 matrix dimensions (worker_id=[0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19, 20, 21, 22, 23, 24], release_channel=['stable', 'experimental']) producing 50 combinations. Median time: 0s. Reducing dimensions would cut runner time linearly.",
+      "severity": "low"
+    },
+    {
+      "type": "redundant_matrix",
+      "job_name": "test_build",
+      "evidence": "Job 'test_build' uses 2 matrix dimensions (test_params=['-r=stable --env=development', '-r=stable --env=production', '-r=experimental --env=development', '-r=experimental --env=production'], shard=['1/10', '2/10', '3/10', '4/10', '5/10', '6/10', '7/10', '8/10', '9/10', '10/10']) producing 40 combinations. Median time: 0s. Reducing dimensions would cut runner time linearly.",
+      "severity": "low"
+    },
+    {
+      "type": "serial_parallel",
+      "job_name": "publish",
+      "evidence": "Job 'publish' depends on ['resolve'] via `needs:` and waits for them to complete. Median time: 0s. If this job doesn't use their outputs, removing `needs:` would let it run in parallel.",
+      "severity": "low"
+    },
+    {
+      "type": "redundant_rebuild",
+      "job_name": "discover_yarn_workspaces",
+      "evidence": "The `discover_yarn_workspaces` job uses `find packages` which could be slow.  Fetching the entire list of packages might not be necessary. Consider if a more targeted approach is possible.",
+      "severity": "medium"
+    },
+    {
+      "type": "oversized_context",
+      "job_name": "test",
+      "evidence": "The `test` jobs uses `xvfb-run` which makes the image size larger. If possible, explore alternatives to `xvfb-run` that might be lighter-weight, or consider environment specific solutions where possible.",
+      "severity": "low"
+    },
+    {
+      "type": "missing_cache",
+      "job_name": "test",
+      "evidence": "The `test` jobs don't explicitly use the actions/cache action.  Consider caching dependencies to speed up these tests.",
+      "severity": "medium"
+    }
+  ],
+  "optimizations": [
+    {
+      "id": "serial_parallel-build_devtools_and_p-bb0bc0",
+      "bottleneck_type": "serial_parallel",
+      "job_name": "build_devtools_and_process_artifacts",
+      "description": "Remove 'needs:' from 'build_devtools_and_process_artifacts' so it runs in parallel with other independent jobs",
+      "estimated_time_saved_min": 1,
+      "estimated_cost_per_run": 0.0,
+      "risk_level": "medium",
+      "yaml_diff_hint": "Ensure 'build_devtools_and_process_artifacts' has no `needs:` blocking parallel execution"
+    },
+    {
+      "id": "serial_parallel-run_devtools_tests_f-495e10",
+      "bottleneck_type": "serial_parallel",
+      "job_name": "run_devtools_tests_for_versions",
+      "description": "Remove 'needs:' from 'run_devtools_tests_for_versions' so it runs in parallel with other independent jobs",
+      "estimated_time_saved_min": 1,
+      "estimated_cost_per_run": 0.0,
+      "risk_level": "medium",
+      "yaml_diff_hint": "Ensure 'run_devtools_tests_for_versions' has no `needs:` blocking parallel execution"
+    },
+    {
+      "id": "serial_parallel-run_devtools_e2e_tes-0b16e0",
+      "bottleneck_type": "serial_parallel",
+      "job_name": "run_devtools_e2e_tests_for_versions",
+      "description": "Remove 'needs:' from 'run_devtools_e2e_tests_for_versions' so it runs in parallel with other independent jobs",
+      "estimated_time_saved_min": 1,
+      "estimated_cost_per_run": 0.0,
+      "risk_level": "medium",
+      "yaml_diff_hint": "Ensure 'run_devtools_e2e_tests_for_versions' has no `needs:` blocking parallel execution"
+    },
+    {
+      "id": "serial_parallel-test-1a2b9e",
+      "bottleneck_type": "serial_parallel",
+      "job_name": "test",
+      "description": "Remove 'needs:' from 'test' so it runs in parallel with other independent jobs",
+      "estimated_time_saved_min": 1,
+      "estimated_cost_per_run": 0.0,
+      "risk_level": "medium",
+      "yaml_diff_hint": "Ensure 'test' has no `needs:` blocking parallel execution"
+    },
+    {
+      "id": "missing_cache-process_artifacts-9e966e",
+      "bottleneck_type": "missing_cache",
+      "job_name": "process_artifacts",
+      "description": "Add actions/cache to 'process_artifacts' to cache dependencies and avoid re-downloading every run",
+      "estimated_time_saved_min": 1,
+      "estimated_cost_per_run": 0.07,
+      "risk_level": "low",
+      "yaml_diff_hint": "Add `- uses: actions/cache@v4` step before dependency install in 'process_artifacts'"
+    },
+    {
+      "id": "missing_cache-commit_www_artifacts-a16dbd",
+      "bottleneck_type": "missing_cache",
+      "job_name": "commit_www_artifacts",
+      "description": "Add actions/cache to 'commit_www_artifacts' to cache dependencies and avoid re-downloading every run",
+      "estimated_time_saved_min": 1,
+      "estimated_cost_per_run": 0.07,
+      "risk_level": "low",
+      "yaml_diff_hint": "Add `- uses: actions/cache@v4` step before dependency install in 'commit_www_artifacts'"
+    },
+    {
+      "id": "missing_cache-commit_fbsource_arti-c47cb2",
+      "bottleneck_type": "missing_cache",
+      "job_name": "commit_fbsource_artifacts",
+      "description": "Add actions/cache to 'commit_fbsource_artifacts' to cache dependencies and avoid re-downloading every run",
+      "estimated_time_saved_min": 1,
+      "estimated_cost_per_run": 0.07,
+      "risk_level": "low",
+      "yaml_diff_hint": "Add `- uses: actions/cache@v4` step before dependency install in 'commit_fbsource_artifacts'"
+    },
+    {
+      "id": "serial_parallel-process_artifacts-32b00e",
+      "bottleneck_type": "serial_parallel",
+      "job_name": "process_artifacts",
+      "description": "Remove 'needs:' from 'process_artifacts' so it runs in parallel with other independent jobs",
+      "estimated_time_saved_min": 1,
+      "estimated_cost_per_run": 0.0,
+      "risk_level": "medium",
+      "yaml_diff_hint": "Ensure 'process_artifacts' has no `needs:` blocking parallel execution"
+    },
+    {
+      "id": "serial_parallel-commit_www_artifacts-d83537",
+      "bottleneck_type": "serial_parallel",
+      "job_name": "commit_www_artifacts",
+      "description": "Remove 'needs:' from 'commit_www_artifacts' so it runs in parallel with other independent jobs",
+      "estimated_time_saved_min": 1,
+      "estimated_cost_per_run": 0.0,
+      "risk_level": "medium",
+      "yaml_diff_hint": "Ensure 'commit_www_artifacts' has no `needs:` blocking parallel execution"
+    },
+    {
+      "id": "serial_parallel-commit_fbsource_arti-102813",
+      "bottleneck_type": "serial_parallel",
+      "job_name": "commit_fbsource_artifacts",
+      "description": "Remove 'needs:' from 'commit_fbsource_artifacts' so it runs in parallel with other independent jobs",
+      "estimated_time_saved_min": 1,
+      "estimated_cost_per_run": 0.0,
+      "risk_level": "medium",
+      "yaml_diff_hint": "Ensure 'commit_fbsource_artifacts' has no `needs:` blocking parallel execution"
+    },
+    {
+      "id": "missing_cache-test_fuzz-7e3e34",
+      "bottleneck_type": "missing_cache",
+      "job_name": "test_fuzz",
+      "description": "Add actions/cache to 'test_fuzz' to cache dependencies and avoid re-downloading every run",
+      "estimated_time_saved_min": 1,
+      "estimated_cost_per_run": 0.07,
+      "risk_level": "low",
+      "yaml_diff_hint": "Add `- uses: actions/cache@v4` step before dependency install in 'test_fuzz'"
+    },
+    {
+      "id": "serial_parallel-flow-9046e0",
+      "bottleneck_type": "serial_parallel",
+      "job_name": "flow",
+      "description": "Remove 'needs:' from 'flow' so it runs in parallel with other independent jobs",
+      "estimated_time_saved_min": 1,
+      "estimated_cost_per_run": 0.0,
+      "risk_level": "medium",
+      "yaml_diff_hint": "Ensure 'flow' has no `needs:` blocking parallel execution"
+    },
+    {
+      "id": "serial_parallel-check_generated_fizz-62e3df",
+      "bottleneck_type": "serial_parallel",
+      "job_name": "check_generated_fizz_runtime",
+      "description": "Remove 'needs:' from 'check_generated_fizz_runtime' so it runs in parallel with other independent jobs",
+      "estimated_time_saved_min": 1,
+      "estimated_cost_per_run": 0.0,
+      "risk_level": "medium",
+      "yaml_diff_hint": "Ensure 'check_generated_fizz_runtime' has no `needs:` blocking parallel execution"
+    },
+    {
+      "id": "serial_parallel-flags-579a32",
+      "bottleneck_type": "serial_parallel",
+      "job_name": "flags",
+      "description": "Remove 'needs:' from 'flags' so it runs in parallel with other independent jobs",
+      "estimated_time_saved_min": 1,
+      "estimated_cost_per_run": 0.0,
+      "risk_level": "medium",
+      "yaml_diff_hint": "Ensure 'flags' has no `needs:` blocking parallel execution"
+    },
+    {
+      "id": "serial_parallel-test-linter-d6ef67",
+      "bottleneck_type": "serial_parallel",
+      "job_name": "test-linter",
+      "description": "Remove 'needs:' from 'test-linter' so it runs in parallel with other independent jobs",
+      "estimated_time_saved_min": 1,
+      "estimated_cost_per_run": 0.0,
+      "risk_level": "medium",
+      "yaml_diff_hint": "Ensure 'test-linter' has no `needs:` blocking parallel execution"
+    },
+    {
+      "id": "serial_parallel-build_and_lint-0a9531",
+      "bottleneck_type": "serial_parallel",
+      "job_name": "build_and_lint",
+      "description": "Remove 'needs:' from 'build_and_lint' so it runs in parallel with other independent jobs",
+      "estimated_time_saved_min": 1,
+      "estimated_cost_per_run": 0.0,
+      "risk_level": "medium",
+      "yaml_diff_hint": "Ensure 'build_and_lint' has no `needs:` blocking parallel execution"
+    },
+    {
+      "id": "serial_parallel-test_build-baa723",
+      "bottleneck_type": "serial_parallel",
+      "job_name": "test_build",
+      "description": "Remove 'needs:' from 'test_build' so it runs in parallel with other independent jobs",
+      "estimated_time_saved_min": 1,
+      "estimated_cost_per_run": 0.0,
+      "risk_level": "medium",
+      "yaml_diff_hint": "Ensure 'test_build' has no `needs:` blocking parallel execution"
+    },
+    {
+      "id": "serial_parallel-test_build_devtools-463264",
+      "bottleneck_type": "serial_parallel",
+      "job_name": "test_build_devtools",
+      "description": "Remove 'needs:' from 'test_build_devtools' so it runs in parallel with other independent jobs",
+      "estimated_time_saved_min": 1,
+      "estimated_cost_per_run": 0.0,
+      "risk_level": "medium",
+      "yaml_diff_hint": "Ensure 'test_build_devtools' has no `needs:` blocking parallel execution"
+    },
+    {
+      "id": "serial_parallel-process_artifacts_co-e523e8",
+      "bottleneck_type": "serial_parallel",
+      "job_name": "process_artifacts_combined",
+      "description": "Remove 'needs:' from 'process_artifacts_combined' so it runs in parallel with other independent jobs",
+      "estimated_time_saved_min": 1,
+      "estimated_cost_per_run": 0.0,
+      "risk_level": "medium",
+      "yaml_diff_hint": "Ensure 'process_artifacts_combined' has no `needs:` blocking parallel execution"
+    },
+    {
+      "id": "serial_parallel-check_error_codes-d82fb4",
+      "bottleneck_type": "serial_parallel",
+      "job_name": "check_error_codes",
+      "description": "Remove 'needs:' from 'check_error_codes' so it runs in parallel with other independent jobs",
+      "estimated_time_saved_min": 1,
+      "estimated_cost_per_run": 0.0,
+      "risk_level": "medium",
+      "yaml_diff_hint": "Ensure 'check_error_codes' has no `needs:` blocking parallel execution"
+    },
+    {
+      "id": "serial_parallel-check_release_depend-f72a96",
+      "bottleneck_type": "serial_parallel",
+      "job_name": "check_release_dependencies",
+      "description": "Remove 'needs:' from 'check_release_dependencies' so it runs in parallel with other independent jobs",
+      "estimated_time_saved_min": 1,
+      "estimated_cost_per_run": 0.0,
+      "risk_level": "medium",
+      "yaml_diff_hint": "Ensure 'check_release_dependencies' has no `needs:` blocking parallel execution"
+    },
+    {
+      "id": "serial_parallel-release_channel_stab-5c3085",
+      "bottleneck_type": "serial_parallel",
+      "job_name": "RELEASE_CHANNEL_stable_yarn_test_dom_fixtures",
+      "description": "Remove 'needs:' from 'RELEASE_CHANNEL_stable_yarn_test_dom_fixtures' so it runs in parallel with other independent jobs",
+      "estimated_time_saved_min": 1,
+      "estimated_cost_per_run": 0.0,
+      "risk_level": "medium",
+      "yaml_diff_hint": "Ensure 'RELEASE_CHANNEL_stable_yarn_test_dom_fixtures' has no `needs:` blocking parallel execution"
+    },
+    {
+      "id": "serial_parallel-run_fixtures_flight_-8c205d",
+      "bottleneck_type": "serial_parallel",
+      "job_name": "run_fixtures_flight_tests",
+      "description": "Remove 'needs:' from 'run_fixtures_flight_tests' so it runs in parallel with other independent jobs",
+      "estimated_time_saved_min": 1,
+      "estimated_cost_per_run": 0.0,
+      "risk_level": "medium",
+      "yaml_diff_hint": "Ensure 'run_fixtures_flight_tests' has no `needs:` blocking parallel execution"
+    },
+    {
+      "id": "serial_parallel-runtime_playwright_c-edd418",
+      "bottleneck_type": "serial_parallel",
+      "job_name": "runtime_playwright_chromium_cache",
+      "description": "Remove 'needs:' from 'runtime_playwright_chromium_cache' so it runs in parallel with other independent jobs",
+      "estimated_time_saved_min": 1,
+      "estimated_cost_per_run": 0.0,
+      "risk_level": "medium",
+      "yaml_diff_hint": "Ensure 'runtime_playwright_chromium_cache' has no `needs:` blocking parallel execution"
+    },
+    {
+      "id": "serial_parallel-run_devtools_e2e_tes-aef128",
+      "bottleneck_type": "serial_parallel",
+      "job_name": "run_devtools_e2e_tests",
+      "description": "Remove 'needs:' from 'run_devtools_e2e_tests' so it runs in parallel with other independent jobs",
+      "estimated_time_saved_min": 1,
+      "estimated_cost_per_run": 0.0,
+      "risk_level": "medium",
+      "yaml_diff_hint": "Ensure 'run_devtools_e2e_tests' has no `needs:` blocking parallel execution"
+    },
+    {
+      "id": "serial_parallel-run_react_devtools_c-c84ac5",
+      "bottleneck_type": "serial_parallel",
+      "job_name": "run_react_devtools_cdt_mcp_e2e_tests",
+      "description": "Remove 'needs:' from 'run_react_devtools_cdt_mcp_e2e_tests' so it runs in parallel with other independent jobs",
+      "estimated_time_saved_min": 1,
+      "estimated_cost_per_run": 0.0,
+      "risk_level": "medium",
+      "yaml_diff_hint": "Ensure 'run_react_devtools_cdt_mcp_e2e_tests' has no `needs:` blocking parallel execution"
+    },
+    {
+      "id": "serial_parallel-sizebot-066121",
+      "bottleneck_type": "serial_parallel",
+      "job_name": "sizebot",
+      "description": "Remove 'needs:' from 'sizebot' so it runs in parallel with other independent jobs",
+      "estimated_time_saved_min": 1,
+      "estimated_cost_per_run": 0.0,
+      "risk_level": "medium",
+      "yaml_diff_hint": "Ensure 'sizebot' has no `needs:` blocking parallel execution"
+    },
+    {
+      "id": "redundant_matrix-test-623fb5",
+      "bottleneck_type": "redundant_matrix",
+      "job_name": "test",
+      "description": "Reduce matrix dimensions in 'test' to eliminate redundant OS/language combinations",
+      "estimated_time_saved_min": 1,
+      "estimated_cost_per_run": 0.01,
+      "risk_level": "high",
+      "yaml_diff_hint": "Reduce `strategy.matrix` dimensions in 'test' to remove overlap"
+    },
+    {
+      "id": "redundant_matrix-build_and_lint-ffe6fb",
+      "bottleneck_type": "redundant_matrix",
+      "job_name": "build_and_lint",
+      "description": "Reduce matrix dimensions in 'build_and_lint' to eliminate redundant OS/language combinations",
+      "estimated_time_saved_min": 1,
+      "estimated_cost_per_run": 0.01,
+      "risk_level": "high",
+      "yaml_diff_hint": "Reduce `strategy.matrix` dimensions in 'build_and_lint' to remove overlap"
+    },
+    {
+      "id": "redundant_matrix-test_build-14ab21",
+      "bottleneck_type": "redundant_matrix",
+      "job_name": "test_build",
+      "description": "Reduce matrix dimensions in 'test_build' to eliminate redundant OS/language combinations",
+      "estimated_time_saved_min": 1,
+      "estimated_cost_per_run": 0.01,
+      "risk_level": "high",
+      "yaml_diff_hint": "Reduce `strategy.matrix` dimensions in 'test_build' to remove overlap"
+    },
+    {
+      "id": "serial_parallel-publish-8101cf",
+      "bottleneck_type": "serial_parallel",
+      "job_name": "publish",
+      "description": "Remove 'needs:' from 'publish' so it runs in parallel with other independent jobs",
+      "estimated_time_saved_min": 1,
+      "estimated_cost_per_run": 0.0,
+      "risk_level": "medium",
+      "yaml_diff_hint": "Ensure 'publish' has no `needs:` blocking parallel execution"
+    },
+    {
+      "id": "redundant_rebuild-discover_yarn_worksp-63ce7e",
+      "bottleneck_type": "redundant_rebuild",
+      "job_name": "discover_yarn_workspaces",
+      "description": "Use actions/upload-artifact and actions/download-artifact in 'discover_yarn_workspaces' to reuse build outputs",
+      "estimated_time_saved_min": 1,
+      "estimated_cost_per_run": 0.01,
+      "risk_level": "medium",
+      "yaml_diff_hint": "Add `actions/upload-artifact` to build job and `actions/download-artifact` to 'discover_yarn_workspaces'"
+    },
+    {
+      "id": "oversized_context-test-c86407",
+      "bottleneck_type": "oversized_context",
+      "job_name": "test",
+      "description": "Add .dockerignore to 'test' to exclude node_modules, .git, and build artifacts from Docker context",
+      "estimated_time_saved_min": 1,
+      "estimated_cost_per_run": 0.0,
+      "risk_level": "low",
+      "yaml_diff_hint": "Create `.dockerignore` excluding node_modules, .git, and other build artifacts"
+    },
+    {
+      "id": "missing_cache-test-dc2b62",
+      "bottleneck_type": "missing_cache",
+      "job_name": "test",
+      "description": "Add actions/cache to 'test' to cache dependencies and avoid re-downloading every run",
+      "estimated_time_saved_min": 1,
+      "estimated_cost_per_run": 0.07,
+      "risk_level": "low",
+      "yaml_diff_hint": "Add `- uses: actions/cache@v4` step before dependency install in 'test'"
+    }
+  ],
+  "total_saved_min": 34
+}

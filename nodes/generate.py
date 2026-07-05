@@ -66,4 +66,5 @@ Return ONLY the complete rewritten YAML. No explanations, no markdown.
         result = llm_client.call_local(prompt)
         return result.strip()
     except ConnectionError:
+        print("  → YAML generation: OMLX local LLM not available. Skipping.")
         return ""

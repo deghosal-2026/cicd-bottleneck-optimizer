@@ -1,0 +1,477 @@
+{
+  "repo": "django/django",
+  "pr": 21580,
+  "title": "Fixed #37180 -- Fixed flaky admin selectbox height tests.",
+  "window_days": 7,
+  "profiles": [
+    {
+      "job_name": "check-commit-suffix",
+      "median_sec": 0,
+      "p90_sec": 0,
+      "p99_sec": 0,
+      "failure_rate": 0.5,
+      "cache_hit_ratio": null
+    },
+    {
+      "job_name": "check-commit-prefix",
+      "median_sec": 0,
+      "p90_sec": 0,
+      "p99_sec": 0,
+      "failure_rate": 0.0,
+      "cache_hit_ratio": null
+    },
+    {
+      "job_name": "Run_benchmarks",
+      "median_sec": 0,
+      "p90_sec": 0,
+      "p99_sec": 0,
+      "failure_rate": 0.0,
+      "cache_hit_ratio": null
+    },
+    {
+      "job_name": "SQLite",
+      "median_sec": 0,
+      "p90_sec": 0,
+      "p99_sec": 0,
+      "failure_rate": 0.0,
+      "cache_hit_ratio": null
+    },
+    {
+      "job_name": "PostgreSQL",
+      "median_sec": 0,
+      "p90_sec": 0,
+      "p99_sec": 0,
+      "failure_rate": 0.0,
+      "cache_hit_ratio": null
+    },
+    {
+      "job_name": "PostgreSQL ${{ matrix.pg_major }}",
+      "median_sec": 0,
+      "p90_sec": 0,
+      "p99_sec": 0,
+      "failure_rate": 0.0,
+      "cache_hit_ratio": null
+    },
+    {
+      "job_name": "Coverage Tests (PostgreSQL)",
+      "median_sec": 0,
+      "p90_sec": 0,
+      "p99_sec": 0,
+      "failure_rate": 0.0,
+      "cache_hit_ratio": null
+    },
+    {
+      "job_name": "Screenshots",
+      "median_sec": 0,
+      "p90_sec": 0,
+      "p99_sec": 0,
+      "failure_rate": 0.0,
+      "cache_hit_ratio": null
+    },
+    {
+      "job_name": "define-matrix",
+      "median_sec": 0,
+      "p90_sec": 0,
+      "p99_sec": 0,
+      "failure_rate": 0.0,
+      "cache_hit_ratio": null
+    },
+    {
+      "job_name": "python",
+      "median_sec": 0,
+      "p90_sec": 0,
+      "p99_sec": 0,
+      "failure_rate": 0.0,
+      "cache_hit_ratio": null
+    },
+    {
+      "job_name": "black",
+      "median_sec": 0,
+      "p90_sec": 0,
+      "p99_sec": 0,
+      "failure_rate": 0.0,
+      "cache_hit_ratio": null
+    },
+    {
+      "job_name": "biome",
+      "median_sec": 0,
+      "p90_sec": 0,
+      "p99_sec": 0,
+      "failure_rate": 0.0,
+      "cache_hit_ratio": null
+    },
+    {
+      "job_name": "isort",
+      "median_sec": 0,
+      "p90_sec": 0,
+      "p99_sec": 0,
+      "failure_rate": 0.0,
+      "cache_hit_ratio": null
+    },
+    {
+      "job_name": "zizmor",
+      "median_sec": 0,
+      "p90_sec": 0,
+      "p99_sec": 0,
+      "failure_rate": 0.0,
+      "cache_hit_ratio": null
+    },
+    {
+      "job_name": "flake8",
+      "median_sec": 0,
+      "p90_sec": 0,
+      "p99_sec": 0,
+      "failure_rate": 0.0,
+      "cache_hit_ratio": null
+    },
+    {
+      "job_name": "JavaScript tests",
+      "median_sec": 0,
+      "p90_sec": 0,
+      "p99_sec": 0,
+      "failure_rate": 0.0,
+      "cache_hit_ratio": null
+    },
+    {
+      "job_name": "Scripts tests",
+      "median_sec": 0,
+      "p90_sec": 0,
+      "p99_sec": 0,
+      "failure_rate": 0.0,
+      "cache_hit_ratio": null
+    },
+    {
+      "job_name": "Windows, SQLite, Python 3.14",
+      "median_sec": 0,
+      "p90_sec": 0,
+      "p99_sec": 0,
+      "failure_rate": 0.0,
+      "cache_hit_ratio": null
+    }
+  ],
+  "bottlenecks": [
+    {
+      "type": "missing_cache",
+      "job_name": "windows",
+      "evidence": "No `cache:` directive found in job 'windows'. Median time: 0s. Adding cache would reduce dependency download time.",
+      "severity": "low"
+    },
+    {
+      "type": "missing_cache",
+      "job_name": "javascript-tests",
+      "evidence": "No `cache:` directive found in job 'javascript-tests'. Median time: 0s. Adding cache would reduce dependency download time.",
+      "severity": "low"
+    },
+    {
+      "type": "missing_cache",
+      "job_name": "flake8",
+      "evidence": "No `cache:` directive found in job 'flake8'. Median time: 0s. Adding cache would reduce dependency download time.",
+      "severity": "low"
+    },
+    {
+      "type": "missing_cache",
+      "job_name": "isort",
+      "evidence": "No `cache:` directive found in job 'isort'. Median time: 0s. Adding cache would reduce dependency download time.",
+      "severity": "low"
+    },
+    {
+      "type": "missing_cache",
+      "job_name": "biome",
+      "evidence": "No `cache:` directive found in job 'biome'. Median time: 0s. Adding cache would reduce dependency download time.",
+      "severity": "low"
+    },
+    {
+      "type": "missing_cache",
+      "job_name": "docs",
+      "evidence": "No `cache:` directive found in job 'docs'. Median time: 0s. Adding cache would reduce dependency download time.",
+      "severity": "low"
+    },
+    {
+      "type": "missing_cache",
+      "job_name": "pyc-only",
+      "evidence": "No `cache:` directive found in job 'pyc-only'. Median time: 0s. Adding cache would reduce dependency download time.",
+      "severity": "low"
+    },
+    {
+      "type": "missing_cache",
+      "job_name": "selenium-sqlite",
+      "evidence": "No `cache:` directive found in job 'selenium-sqlite'. Median time: 0s. Adding cache would reduce dependency download time.",
+      "severity": "low"
+    },
+    {
+      "type": "missing_cache",
+      "job_name": "selenium-postgresql",
+      "evidence": "No `cache:` directive found in job 'selenium-postgresql'. Median time: 0s. Adding cache would reduce dependency download time.",
+      "severity": "low"
+    },
+    {
+      "type": "missing_cache",
+      "job_name": "postgresql",
+      "evidence": "No `cache:` directive found in job 'postgresql'. Median time: 0s. Adding cache would reduce dependency download time.",
+      "severity": "low"
+    },
+    {
+      "type": "redundant_matrix",
+      "job_name": "postgresql",
+      "evidence": "Job 'postgresql' uses 2 matrix dimensions (version=[16, 17, 18], server_side_bindings=[0, 1]) producing 6 combinations. Median time: 0s. Reducing dimensions would cut runner time linearly.",
+      "severity": "low"
+    },
+    {
+      "type": "missing_cache",
+      "job_name": "python",
+      "evidence": "No `cache:` directive found in job 'python'. Median time: 0s. Adding cache would reduce dependency download time.",
+      "severity": "low"
+    },
+    {
+      "type": "serial_parallel",
+      "job_name": "python",
+      "evidence": "Job 'python' depends on ['define-matrix'] via `needs:` and waits for them to complete. Median time: 0s. If this job doesn't use their outputs, removing `needs:` would let it run in parallel.",
+      "severity": "low"
+    },
+    {
+      "type": "missing_cache",
+      "job_name": "postgis",
+      "evidence": "No `cache:` directive found in job 'postgis'. Median time: 0s. Adding cache would reduce dependency download time.",
+      "severity": "low"
+    },
+    {
+      "type": "missing_cache",
+      "job_name": "coverage",
+      "evidence": "No `cache:` directive found in job 'coverage'. Median time: 0s. Adding cache would reduce dependency download time.",
+      "severity": "low"
+    },
+    {
+      "type": "missing_cache",
+      "job_name": "check-migrations",
+      "evidence": "No `cache:` directive found in job 'check-migrations'. Median time: 0s. Adding cache would reduce dependency download time.",
+      "severity": "low"
+    },
+    {
+      "type": "redundant_rebuild",
+      "job_name": "tests",
+      "evidence": "The 'tests' workflow has three jobs: 'windows', 'javascript-tests', and 'scripts-tests'.  Each of these jobs runs npm install and python -m pip install -r tests/requirements/py3.txt, which are built from scratch.  Sharing a dependency cache would save significant time.",
+      "severity": "high"
+    },
+    {
+      "type": "redundant_rebuild",
+      "job_name": "linters",
+      "evidence": "The 'linters' workflow contains several jobs: 'flake8', 'isort', 'black', 'zizmor', and 'biome'. All of these jobs run npm install and python -m pip install commands, independently building dependencies.",
+      "severity": "high"
+    },
+    {
+      "type": "missing_cache",
+      "job_name": "tests",
+      "evidence": "The 'tests' workflow runs npm install and pip install within the 'javascript-tests' and 'scripts-tests' jobs.  These commands download and install dependencies, which could be cached to prevent re-downloading.",
+      "severity": "medium"
+    },
+    {
+      "type": "missing_cache",
+      "job_name": "linters",
+      "evidence": "The 'linters' workflow runs npm install within jobs such as 'biome'. Using a cache for npm modules would speed up subsequent runs.",
+      "severity": "medium"
+    }
+  ],
+  "optimizations": [
+    {
+      "id": "missing_cache-windows-cd6d74",
+      "bottleneck_type": "missing_cache",
+      "job_name": "windows",
+      "description": "Add actions/cache to 'windows' to cache dependencies and avoid re-downloading every run",
+      "estimated_time_saved_min": 1,
+      "estimated_cost_per_run": 0.07,
+      "risk_level": "low",
+      "yaml_diff_hint": "Add `- uses: actions/cache@v4` step before dependency install in 'windows'"
+    },
+    {
+      "id": "missing_cache-javascript-tests-c68ca6",
+      "bottleneck_type": "missing_cache",
+      "job_name": "javascript-tests",
+      "description": "Add actions/cache to 'javascript-tests' to cache dependencies and avoid re-downloading every run",
+      "estimated_time_saved_min": 1,
+      "estimated_cost_per_run": 0.07,
+      "risk_level": "low",
+      "yaml_diff_hint": "Add `- uses: actions/cache@v4` step before dependency install in 'javascript-tests'"
+    },
+    {
+      "id": "missing_cache-flake8-1d6338",
+      "bottleneck_type": "missing_cache",
+      "job_name": "flake8",
+      "description": "Add actions/cache to 'flake8' to cache dependencies and avoid re-downloading every run",
+      "estimated_time_saved_min": 1,
+      "estimated_cost_per_run": 0.07,
+      "risk_level": "low",
+      "yaml_diff_hint": "Add `- uses: actions/cache@v4` step before dependency install in 'flake8'"
+    },
+    {
+      "id": "missing_cache-isort-efc08f",
+      "bottleneck_type": "missing_cache",
+      "job_name": "isort",
+      "description": "Add actions/cache to 'isort' to cache dependencies and avoid re-downloading every run",
+      "estimated_time_saved_min": 1,
+      "estimated_cost_per_run": 0.07,
+      "risk_level": "low",
+      "yaml_diff_hint": "Add `- uses: actions/cache@v4` step before dependency install in 'isort'"
+    },
+    {
+      "id": "missing_cache-biome-2895de",
+      "bottleneck_type": "missing_cache",
+      "job_name": "biome",
+      "description": "Add actions/cache to 'biome' to cache dependencies and avoid re-downloading every run",
+      "estimated_time_saved_min": 1,
+      "estimated_cost_per_run": 0.07,
+      "risk_level": "low",
+      "yaml_diff_hint": "Add `- uses: actions/cache@v4` step before dependency install in 'biome'"
+    },
+    {
+      "id": "missing_cache-docs-864d59",
+      "bottleneck_type": "missing_cache",
+      "job_name": "docs",
+      "description": "Add actions/cache to 'docs' to cache dependencies and avoid re-downloading every run",
+      "estimated_time_saved_min": 1,
+      "estimated_cost_per_run": 0.07,
+      "risk_level": "low",
+      "yaml_diff_hint": "Add `- uses: actions/cache@v4` step before dependency install in 'docs'"
+    },
+    {
+      "id": "missing_cache-pyc-only-fcf2a2",
+      "bottleneck_type": "missing_cache",
+      "job_name": "pyc-only",
+      "description": "Add actions/cache to 'pyc-only' to cache dependencies and avoid re-downloading every run",
+      "estimated_time_saved_min": 1,
+      "estimated_cost_per_run": 0.07,
+      "risk_level": "low",
+      "yaml_diff_hint": "Add `- uses: actions/cache@v4` step before dependency install in 'pyc-only'"
+    },
+    {
+      "id": "missing_cache-selenium-sqlite-fbea76",
+      "bottleneck_type": "missing_cache",
+      "job_name": "selenium-sqlite",
+      "description": "Add actions/cache to 'selenium-sqlite' to cache dependencies and avoid re-downloading every run",
+      "estimated_time_saved_min": 1,
+      "estimated_cost_per_run": 0.07,
+      "risk_level": "low",
+      "yaml_diff_hint": "Add `- uses: actions/cache@v4` step before dependency install in 'selenium-sqlite'"
+    },
+    {
+      "id": "missing_cache-selenium-postgresql-31dc9c",
+      "bottleneck_type": "missing_cache",
+      "job_name": "selenium-postgresql",
+      "description": "Add actions/cache to 'selenium-postgresql' to cache dependencies and avoid re-downloading every run",
+      "estimated_time_saved_min": 1,
+      "estimated_cost_per_run": 0.07,
+      "risk_level": "low",
+      "yaml_diff_hint": "Add `- uses: actions/cache@v4` step before dependency install in 'selenium-postgresql'"
+    },
+    {
+      "id": "missing_cache-postgresql-cba19d",
+      "bottleneck_type": "missing_cache",
+      "job_name": "postgresql",
+      "description": "Add actions/cache to 'postgresql' to cache dependencies and avoid re-downloading every run",
+      "estimated_time_saved_min": 1,
+      "estimated_cost_per_run": 0.07,
+      "risk_level": "low",
+      "yaml_diff_hint": "Add `- uses: actions/cache@v4` step before dependency install in 'postgresql'"
+    },
+    {
+      "id": "redundant_matrix-postgresql-856bb0",
+      "bottleneck_type": "redundant_matrix",
+      "job_name": "postgresql",
+      "description": "Reduce matrix dimensions in 'postgresql' to eliminate redundant OS/language combinations",
+      "estimated_time_saved_min": 1,
+      "estimated_cost_per_run": 0.01,
+      "risk_level": "high",
+      "yaml_diff_hint": "Reduce `strategy.matrix` dimensions in 'postgresql' to remove overlap"
+    },
+    {
+      "id": "missing_cache-python-4513af",
+      "bottleneck_type": "missing_cache",
+      "job_name": "python",
+      "description": "Add actions/cache to 'python' to cache dependencies and avoid re-downloading every run",
+      "estimated_time_saved_min": 1,
+      "estimated_cost_per_run": 0.07,
+      "risk_level": "low",
+      "yaml_diff_hint": "Add `- uses: actions/cache@v4` step before dependency install in 'python'"
+    },
+    {
+      "id": "serial_parallel-python-173103",
+      "bottleneck_type": "serial_parallel",
+      "job_name": "python",
+      "description": "Remove 'needs:' from 'python' so it runs in parallel with other independent jobs",
+      "estimated_time_saved_min": 1,
+      "estimated_cost_per_run": 0.0,
+      "risk_level": "medium",
+      "yaml_diff_hint": "Ensure 'python' has no `needs:` blocking parallel execution"
+    },
+    {
+      "id": "missing_cache-postgis-785688",
+      "bottleneck_type": "missing_cache",
+      "job_name": "postgis",
+      "description": "Add actions/cache to 'postgis' to cache dependencies and avoid re-downloading every run",
+      "estimated_time_saved_min": 1,
+      "estimated_cost_per_run": 0.07,
+      "risk_level": "low",
+      "yaml_diff_hint": "Add `- uses: actions/cache@v4` step before dependency install in 'postgis'"
+    },
+    {
+      "id": "missing_cache-coverage-fa3e77",
+      "bottleneck_type": "missing_cache",
+      "job_name": "coverage",
+      "description": "Add actions/cache to 'coverage' to cache dependencies and avoid re-downloading every run",
+      "estimated_time_saved_min": 1,
+      "estimated_cost_per_run": 0.07,
+      "risk_level": "low",
+      "yaml_diff_hint": "Add `- uses: actions/cache@v4` step before dependency install in 'coverage'"
+    },
+    {
+      "id": "missing_cache-check-migrations-24f500",
+      "bottleneck_type": "missing_cache",
+      "job_name": "check-migrations",
+      "description": "Add actions/cache to 'check-migrations' to cache dependencies and avoid re-downloading every run",
+      "estimated_time_saved_min": 1,
+      "estimated_cost_per_run": 0.07,
+      "risk_level": "low",
+      "yaml_diff_hint": "Add `- uses: actions/cache@v4` step before dependency install in 'check-migrations'"
+    },
+    {
+      "id": "redundant_rebuild-tests-8b6ec1",
+      "bottleneck_type": "redundant_rebuild",
+      "job_name": "tests",
+      "description": "Use actions/upload-artifact and actions/download-artifact in 'tests' to reuse build outputs",
+      "estimated_time_saved_min": 1,
+      "estimated_cost_per_run": 0.01,
+      "risk_level": "medium",
+      "yaml_diff_hint": "Add `actions/upload-artifact` to build job and `actions/download-artifact` to 'tests'"
+    },
+    {
+      "id": "redundant_rebuild-linters-ad0ddc",
+      "bottleneck_type": "redundant_rebuild",
+      "job_name": "linters",
+      "description": "Use actions/upload-artifact and actions/download-artifact in 'linters' to reuse build outputs",
+      "estimated_time_saved_min": 1,
+      "estimated_cost_per_run": 0.01,
+      "risk_level": "medium",
+      "yaml_diff_hint": "Add `actions/upload-artifact` to build job and `actions/download-artifact` to 'linters'"
+    },
+    {
+      "id": "missing_cache-tests-25671e",
+      "bottleneck_type": "missing_cache",
+      "job_name": "tests",
+      "description": "Add actions/cache to 'tests' to cache dependencies and avoid re-downloading every run",
+      "estimated_time_saved_min": 1,
+      "estimated_cost_per_run": 0.07,
+      "risk_level": "low",
+      "yaml_diff_hint": "Add `- uses: actions/cache@v4` step before dependency install in 'tests'"
+    },
+    {
+      "id": "missing_cache-linters-59db3e",
+      "bottleneck_type": "missing_cache",
+      "job_name": "linters",
+      "description": "Add actions/cache to 'linters' to cache dependencies and avoid re-downloading every run",
+      "estimated_time_saved_min": 1,
+      "estimated_cost_per_run": 0.07,
+      "risk_level": "low",
+      "yaml_diff_hint": "Add `- uses: actions/cache@v4` step before dependency install in 'linters'"
+    }
+  ],
+  "total_saved_min": 20
+}

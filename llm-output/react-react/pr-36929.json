@@ -1,0 +1,10 @@
+{
+  "repo": "react/react",
+  "pr": 36929,
+  "title": "[react-devtools] substitute %i and %f in console format strings",
+  "window_days": 7,
+  "profiles": [],
+  "bottlenecks": [],
+  "optimizations": [],
+  "total_saved_min": 0
+}

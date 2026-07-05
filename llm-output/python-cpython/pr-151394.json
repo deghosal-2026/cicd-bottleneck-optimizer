@@ -1,0 +1,1077 @@
+{
+  "repo": "python/cpython",
+  "pr": 151394,
+  "title": "gh-151377: Fix races updating type slots and subclasses in free-threa\u2026",
+  "target_date": "2026-07-03",
+  "profiles": [
+    {
+      "job_name": "Unresolved review",
+      "median_sec": 0,
+      "p90_sec": 0,
+      "p99_sec": 0,
+      "failure_rate": 0.0,
+      "cache_hit_ratio": null
+    },
+    {
+      "job_name": "DO-NOT-MERGE",
+      "median_sec": 0,
+      "p90_sec": 0,
+      "p99_sec": 0,
+      "failure_rate": 0.0,
+      "cache_hit_ratio": null
+    },
+    {
+      "job_name": "lint",
+      "median_sec": 0,
+      "p90_sec": 0,
+      "p99_sec": 0,
+      "failure_rate": 0.0,
+      "cache_hit_ratio": null
+    },
+    {
+      "job_name": "Change detection / Create context from changed files",
+      "median_sec": 0,
+      "p90_sec": 0,
+      "p99_sec": 0,
+      "failure_rate": 0.0,
+      "cache_hit_ratio": null
+    },
+    {
+      "job_name": "Check if generated files are up to date",
+      "median_sec": 0,
+      "p90_sec": 0,
+      "p99_sec": 0,
+      "failure_rate": 0.0,
+      "cache_hit_ratio": null
+    },
+    {
+      "job_name": "Check if Autoconf files are up to date",
+      "median_sec": 0,
+      "p90_sec": 0,
+      "p99_sec": 0,
+      "failure_rate": 0.0,
+      "cache_hit_ratio": null
+    },
+    {
+      "job_name": "Cross build Linux",
+      "median_sec": 0,
+      "p90_sec": 0,
+      "p99_sec": 0,
+      "failure_rate": 0.0,
+      "cache_hit_ratio": null
+    },
+    {
+      "job_name": "Address sanitizer (ubuntu-24.04)",
+      "median_sec": 0,
+      "p90_sec": 0,
+      "p99_sec": 0,
+      "failure_rate": 0.0,
+      "cache_hit_ratio": null
+    },
+    {
+      "job_name": "Hypothesis tests on Ubuntu",
+      "median_sec": 0,
+      "p90_sec": 0,
+      "p99_sec": 0,
+      "failure_rate": 0.0,
+      "cache_hit_ratio": null
+    },
+    {
+      "job_name": "Android (aarch64)",
+      "median_sec": 0,
+      "p90_sec": 0,
+      "p99_sec": 0,
+      "failure_rate": 0.0,
+      "cache_hit_ratio": null
+    },
+    {
+      "job_name": "Android (x86_64)",
+      "median_sec": 0,
+      "p90_sec": 0,
+      "p99_sec": 0,
+      "failure_rate": 0.0,
+      "cache_hit_ratio": null
+    },
+    {
+      "job_name": "C API Docs / Check if all C APIs are documented",
+      "median_sec": 0,
+      "p90_sec": 0,
+      "p99_sec": 0,
+      "failure_rate": 0.0,
+      "cache_hit_ratio": null
+    },
+    {
+      "job_name": "Ubuntu SSL tests (ubuntu-24.04, openssl, 3.0.21)",
+      "median_sec": 0,
+      "p90_sec": 0,
+      "p99_sec": 0,
+      "failure_rate": 0.0,
+      "cache_hit_ratio": null
+    },
+    {
+      "job_name": "Ubuntu SSL tests (ubuntu-24.04, openssl, 3.6.3)",
+      "median_sec": 0,
+      "p90_sec": 0,
+      "p99_sec": 0,
+      "failure_rate": 0.0,
+      "cache_hit_ratio": null
+    },
+    {
+      "job_name": "iOS",
+      "median_sec": 0,
+      "p90_sec": 0,
+      "p99_sec": 0,
+      "failure_rate": 0.0,
+      "cache_hit_ratio": null
+    },
+    {
+      "job_name": "Ubuntu SSL tests (ubuntu-24.04, openssl, 1.1.1w)",
+      "median_sec": 0,
+      "p90_sec": 0,
+      "p99_sec": 0,
+      "failure_rate": 0.0,
+      "cache_hit_ratio": null
+    },
+    {
+      "job_name": "Ubuntu SSL tests (ubuntu-24.04, openssl, 4.0.1)",
+      "median_sec": 0,
+      "p90_sec": 0,
+      "p99_sec": 0,
+      "failure_rate": 0.0,
+      "cache_hit_ratio": null
+    },
+    {
+      "job_name": "Ubuntu SSL tests (ubuntu-24.04, openssl, 3.5.7)",
+      "median_sec": 0,
+      "p90_sec": 0,
+      "p99_sec": 0,
+      "failure_rate": 0.0,
+      "cache_hit_ratio": null
+    },
+    {
+      "job_name": "Ubuntu SSL tests (ubuntu-24.04, aws-lc, 5.0.0)",
+      "median_sec": 0,
+      "p90_sec": 0,
+      "p99_sec": 0,
+      "failure_rate": 0.0,
+      "cache_hit_ratio": null
+    },
+    {
+      "job_name": "Ubuntu SSL tests (ubuntu-24.04, openssl, 3.4.6)",
+      "median_sec": 0,
+      "p90_sec": 0,
+      "p99_sec": 0,
+      "failure_rate": 0.0,
+      "cache_hit_ratio": null
+    },
+    {
+      "job_name": "Emscripten / build and test",
+      "median_sec": 0,
+      "p90_sec": 0,
+      "p99_sec": 0,
+      "failure_rate": 0.0,
+      "cache_hit_ratio": null
+    },
+    {
+      "job_name": "WASI / build and test",
+      "median_sec": 0,
+      "p90_sec": 0,
+      "p99_sec": 0,
+      "failure_rate": 0.0,
+      "cache_hit_ratio": null
+    },
+    {
+      "job_name": "macOS / build and test (macos-26-intel)",
+      "median_sec": 0,
+      "p90_sec": 0,
+      "p99_sec": 0,
+      "failure_rate": 0.0,
+      "cache_hit_ratio": null
+    },
+    {
+      "job_name": "macOS / build and test (macos-26)",
+      "median_sec": 0,
+      "p90_sec": 0,
+      "p99_sec": 0,
+      "failure_rate": 0.0,
+      "cache_hit_ratio": null
+    },
+    {
+      "job_name": "Windows (free-threading) / Build and test (x64, switch-case)",
+      "median_sec": 0,
+      "p90_sec": 0,
+      "p99_sec": 0,
+      "failure_rate": 0.0,
+      "cache_hit_ratio": null
+    },
+    {
+      "job_name": "macOS (free-threading) / build and test (macos-26)",
+      "median_sec": 0,
+      "p90_sec": 0,
+      "p99_sec": 0,
+      "failure_rate": 0.0,
+      "cache_hit_ratio": null
+    },
+    {
+      "job_name": "Windows (free-threading) / Build and test (arm64, switch-case)",
+      "median_sec": 0,
+      "p90_sec": 0,
+      "p99_sec": 0,
+      "failure_rate": 0.0,
+      "cache_hit_ratio": null
+    },
+    {
+      "job_name": "Windows / Build and test (Win32, switch-case)",
+      "median_sec": 0,
+      "p90_sec": 0,
+      "p99_sec": 0,
+      "failure_rate": 0.0,
+      "cache_hit_ratio": null
+    },
+    {
+      "job_name": "Windows / Build and test (x64, switch-case)",
+      "median_sec": 0,
+      "p90_sec": 0,
+      "p99_sec": 0,
+      "failure_rate": 0.0,
+      "cache_hit_ratio": null
+    },
+    {
+      "job_name": "CIFuzz / cpython3 (memory)",
+      "median_sec": 0,
+      "p90_sec": 0,
+      "p99_sec": 0,
+      "failure_rate": 0.0,
+      "cache_hit_ratio": null
+    },
+    {
+      "job_name": "Windows (free-threading) / Build and test (x64, tail-call)",
+      "median_sec": 0,
+      "p90_sec": 0,
+      "p99_sec": 0,
+      "failure_rate": 0.0,
+      "cache_hit_ratio": null
+    },
+    {
+      "job_name": "Windows / Build and test (x64, tail-call)",
+      "median_sec": 0,
+      "p90_sec": 0,
+      "p99_sec": 0,
+      "failure_rate": 0.0,
+      "cache_hit_ratio": null
+    },
+    {
+      "job_name": "Windows / Build and test (arm64, switch-case)",
+      "median_sec": 0,
+      "p90_sec": 0,
+      "p99_sec": 0,
+      "failure_rate": 0.0,
+      "cache_hit_ratio": null
+    }
+  ],
+  "bottlenecks": [
+    {
+      "type": "missing_cache",
+      "job_name": "check-autoconf-regen",
+      "evidence": "No `cache:` directive found in job 'check-autoconf-regen'. Median time: 0s. Adding cache would reduce dependency download time.",
+      "severity": "low"
+    },
+    {
+      "type": "missing_cache",
+      "job_name": "check-generated-files",
+      "evidence": "No `cache:` directive found in job 'check-generated-files'. Median time: 0s. Adding cache would reduce dependency download time.",
+      "severity": "low"
+    },
+    {
+      "type": "missing_cache",
+      "job_name": "cross-build-linux",
+      "evidence": "No `cache:` directive found in job 'cross-build-linux'. Median time: 0s. Adding cache would reduce dependency download time.",
+      "severity": "low"
+    },
+    {
+      "type": "serial_parallel",
+      "job_name": "check-autoconf-regen",
+      "evidence": "Job 'check-autoconf-regen' depends on ['build-context'] via `needs:` and waits for them to complete. Median time: 0s. If this job doesn't use their outputs, removing `needs:` would let it run in parallel.",
+      "severity": "low"
+    },
+    {
+      "type": "serial_parallel",
+      "job_name": "check-generated-files",
+      "evidence": "Job 'check-generated-files' depends on ['build-context'] via `needs:` and waits for them to complete. Median time: 0s. If this job doesn't use their outputs, removing `needs:` would let it run in parallel.",
+      "severity": "low"
+    },
+    {
+      "type": "serial_parallel",
+      "job_name": "build-ubuntu-ssltests",
+      "evidence": "Job 'build-ubuntu-ssltests' depends on ['build-context'] via `needs:` and waits for them to complete. Median time: 0s. If this job doesn't use their outputs, removing `needs:` would let it run in parallel.",
+      "severity": "low"
+    },
+    {
+      "type": "serial_parallel",
+      "job_name": "test-hypothesis",
+      "evidence": "Job 'test-hypothesis' depends on ['build-context'] via `needs:` and waits for them to complete. Median time: 0s. If this job doesn't use their outputs, removing `needs:` would let it run in parallel.",
+      "severity": "low"
+    },
+    {
+      "type": "serial_parallel",
+      "job_name": "build-asan",
+      "evidence": "Job 'build-asan' depends on ['build-context'] via `needs:` and waits for them to complete. Median time: 0s. If this job doesn't use their outputs, removing `needs:` would let it run in parallel.",
+      "severity": "low"
+    },
+    {
+      "type": "serial_parallel",
+      "job_name": "cross-build-linux",
+      "evidence": "Job 'cross-build-linux' depends on ['build-context'] via `needs:` and waits for them to complete. Median time: 0s. If this job doesn't use their outputs, removing `needs:` would let it run in parallel.",
+      "severity": "low"
+    },
+    {
+      "type": "redundant_matrix",
+      "job_name": "build-windows",
+      "evidence": "Job 'build-windows' uses 5 matrix dimensions (arch=['x64', 'Win32', 'arm64'], free-threading=[False, True], interpreter=['switch-case'], exclude=[{'arch': 'Win32', 'free-threading': True}], include=[{'arch': 'x64', 'free-threading': False, 'interpreter': 'tail-call'}, {'arch': 'x64', 'free-threading': True, 'interpreter': 'tail-call'}]) producing 12 combinations. Median time: 0s. Reducing dimensions would cut runner time linearly.",
+      "severity": "low"
+    },
+    {
+      "type": "redundant_matrix",
+      "job_name": "build-macos",
+      "evidence": "Job 'build-macos' uses 3 matrix dimensions (os=['macos-26', 'macos-26-intel'], free-threading=[False, True], exclude=[{'os': 'macos-26-intel', 'free-threading': True}]) producing 4 combinations. Median time: 0s. Reducing dimensions would cut runner time linearly.",
+      "severity": "low"
+    },
+    {
+      "type": "redundant_matrix",
+      "job_name": "build-ubuntu",
+      "evidence": "Job 'build-ubuntu' uses 5 matrix dimensions (bolt=[False, True], free-threading=[False, True], os=['ubuntu-24.04', 'ubuntu-24.04-arm'], exclude=[{'bolt': True, 'free-threading': True}, {'os': 'ubuntu-24.04-arm', 'bolt': True}], include=[{'os': 'ubuntu-24.04-arm', 'bolt': False, 'free-threading': False, 'test-opts': '-u cpu'}]) producing 16 combinations. Median time: 0s. Reducing dimensions would cut runner time linearly.",
+      "severity": "low"
+    },
+    {
+      "type": "redundant_matrix",
+      "job_name": "build-ubuntu-ssltests",
+      "evidence": "Job 'build-ubuntu-ssltests' uses 2 matrix dimensions (os=['ubuntu-24.04'], ssllib=[{'name': 'openssl', 'version': '1.1.1w'}, {'name': 'openssl', 'version': '3.0.21'}, {'name': 'openssl', 'version': '3.4.6'}, {'name': 'openssl', 'version': '3.5.7'}, {'name': 'openssl', 'version': '3.6.3'}, {'name': 'openssl', 'version': '4.0.1'}, {'name': 'aws-lc', 'version': '5.0.0'}]) producing 7 combinations. Median time: 0s. Reducing dimensions would cut runner time linearly.",
+      "severity": "low"
+    },
+    {
+      "type": "redundant_matrix",
+      "job_name": "build-san",
+      "evidence": "Job 'build-san' uses 4 matrix dimensions (check-name=['Thread'], free-threading=[False, True], sanitizer=['TSan'], include=[{'check-name': 'Undefined behavior', 'sanitizer': 'UBSan', 'free-threading': False}]) producing 2 combinations. Median time: 0s. Reducing dimensions would cut runner time linearly.",
+      "severity": "low"
+    },
+    {
+      "type": "redundant_matrix",
+      "job_name": "cifuzz",
+      "evidence": "Job 'cifuzz' uses 4 matrix dimensions (sanitizer=['address'], oss-fuzz-project-name=['cpython3', 'python3-libraries'], include=[{'sanitizer': 'undefined', 'oss-fuzz-project-name': 'cpython3'}, {'sanitizer': 'memory', 'oss-fuzz-project-name': 'cpython3'}], exclude=[{'oss-fuzz-project-name': \"${{\\n  needs.build-context.outputs.run-ci-fuzz == 'true'\\n  && 'no-exclude'\\n  || 'cpython3'\\n}}\"}, {'oss-fuzz-project-name': \"${{\\n  needs.build-context.outputs.run-ci-fuzz-stdlib == 'true'\\n  && 'no-exclude'\\n  || 'python3-libraries'\\n}}\"}]) producing 8 combinations. Median time: 0s. Reducing dimensions would cut runner time linearly.",
+      "severity": "low"
+    },
+    {
+      "type": "missing_cache",
+      "job_name": "notify-new-bugs-announce",
+      "evidence": "No `cache:` directive found in job 'notify-new-bugs-announce'. Median time: 0s. Adding cache would reduce dependency download time.",
+      "severity": "low"
+    },
+    {
+      "type": "missing_cache",
+      "job_name": "verify",
+      "evidence": "No `cache:` directive found in job 'verify'. Median time: 0s. Adding cache would reduce dependency download time.",
+      "severity": "low"
+    },
+    {
+      "type": "missing_cache",
+      "job_name": "mypy",
+      "evidence": "No `cache:` directive found in job 'mypy'. Median time: 0s. Adding cache would reduce dependency download time.",
+      "severity": "low"
+    },
+    {
+      "type": "missing_cache",
+      "job_name": "interpreter",
+      "evidence": "No `cache:` directive found in job 'interpreter'. Median time: 0s. Adding cache would reduce dependency download time.",
+      "severity": "low"
+    },
+    {
+      "type": "missing_cache",
+      "job_name": "windows",
+      "evidence": "No `cache:` directive found in job 'windows'. Median time: 0s. Adding cache would reduce dependency download time.",
+      "severity": "low"
+    },
+    {
+      "type": "missing_cache",
+      "job_name": "macos",
+      "evidence": "No `cache:` directive found in job 'macos'. Median time: 0s. Adding cache would reduce dependency download time.",
+      "severity": "low"
+    },
+    {
+      "type": "missing_cache",
+      "job_name": "linux",
+      "evidence": "No `cache:` directive found in job 'linux'. Median time: 0s. Adding cache would reduce dependency download time.",
+      "severity": "low"
+    },
+    {
+      "type": "missing_cache",
+      "job_name": "linux-extras",
+      "evidence": "No `cache:` directive found in job 'linux-extras'. Median time: 0s. Adding cache would reduce dependency download time.",
+      "severity": "low"
+    },
+    {
+      "type": "redundant_matrix",
+      "job_name": "windows",
+      "evidence": "Job 'windows' uses 3 matrix dimensions (target=['i686-pc-windows-msvc/msvc', 'x86_64-pc-windows-msvc/msvc', 'aarch64-pc-windows-msvc/msvc'], debug=[True, False], include=[{'target': 'i686-pc-windows-msvc/msvc', 'architecture': 'Win32', 'runner': 'windows-2025'}, {'target': 'x86_64-pc-windows-msvc/msvc', 'architecture': 'x64', 'runner': 'windows-2025'}, {'target': 'aarch64-pc-windows-msvc/msvc', 'architecture': 'ARM64', 'runner': 'windows-11-arm'}]) producing 18 combinations. Median time: 0s. Reducing dimensions would cut runner time linearly.",
+      "severity": "low"
+    },
+    {
+      "type": "redundant_matrix",
+      "job_name": "macos",
+      "evidence": "Job 'macos' uses 3 matrix dimensions (target=['x86_64-apple-darwin/clang', 'aarch64-apple-darwin/clang'], debug=[True, False], include=[{'target': 'x86_64-apple-darwin/clang', 'runner': 'macos-15-intel'}, {'target': 'aarch64-apple-darwin/clang', 'runner': 'macos-15'}]) producing 8 combinations. Median time: 0s. Reducing dimensions would cut runner time linearly.",
+      "severity": "low"
+    },
+    {
+      "type": "redundant_matrix",
+      "job_name": "linux",
+      "evidence": "Job 'linux' uses 3 matrix dimensions (target=['x86_64-unknown-linux-gnu/gcc', 'aarch64-unknown-linux-gnu/gcc'], debug=[True, False], include=[{'target': 'x86_64-unknown-linux-gnu/gcc', 'runner': 'ubuntu-24.04'}, {'target': 'aarch64-unknown-linux-gnu/gcc', 'runner': 'ubuntu-24.04-arm'}]) producing 8 combinations. Median time: 0s. Reducing dimensions would cut runner time linearly.",
+      "severity": "low"
+    },
+    {
+      "type": "missing_cache",
+      "job_name": "compute-changes",
+      "evidence": "No `cache:` directive found in job 'compute-changes'. Median time: 0s. Adding cache would reduce dependency download time.",
+      "severity": "low"
+    },
+    {
+      "type": "missing_cache",
+      "job_name": "build-san-reusable",
+      "evidence": "No `cache:` directive found in job 'build-san-reusable'. Median time: 0s. Adding cache would reduce dependency download time.",
+      "severity": "low"
+    },
+    {
+      "type": "missing_cache",
+      "job_name": "check-html-ids",
+      "evidence": "No `cache:` directive found in job 'check-html-ids'. Median time: 0s. Adding cache would reduce dependency download time.",
+      "severity": "low"
+    },
+    {
+      "type": "missing_cache",
+      "job_name": "build-doc",
+      "evidence": "No `cache:` directive found in job 'build-doc'. Median time: 0s. Adding cache would reduce dependency download time.",
+      "severity": "low"
+    },
+    {
+      "type": "missing_cache",
+      "job_name": "check-epub",
+      "evidence": "No `cache:` directive found in job 'check-epub'. Median time: 0s. Adding cache would reduce dependency download time.",
+      "severity": "low"
+    },
+    {
+      "type": "missing_cache",
+      "job_name": "build-macos",
+      "evidence": "No `cache:` directive found in job 'build-macos'. Median time: 0s. Adding cache would reduce dependency download time.",
+      "severity": "low"
+    },
+    {
+      "type": "redundant_rebuild",
+      "job_name": "build-context",
+      "evidence": "The build-context job uses ./.github/workflows/reusable-context.yml, which then uses a python environment.  Since this project uses a complex, machine-specific dependency graph, building the same set of dependencies repeatedly could be a significant bottleneck.",
+      "severity": "high"
+    },
+    {
+      "type": "redundant_rebuild",
+      "job_name": "check-docs",
+      "evidence": "The check-docs job uses ./.github/workflows/reusable-docs.yml.  Since this workflow shares dependencies with build-context, it could be repeatedly building these. This represents at least 100s in execution time.",
+      "severity": "medium"
+    },
+    {
+      "type": "redundant_rebuild",
+      "job_name": "check-autoconf-regen",
+      "evidence": "The check-autoconf-regen job builds a custom autoconf environment with a submodule.  This relies heavily on the source of the code so it must be rebuilt for new git commits.",
+      "severity": "medium"
+    },
+    {
+      "type": "redundant_rebuild",
+      "job_name": "check-generated-files",
+      "evidence": "The check-generated-files job rebuilds CPython files from scratch.  This represents another build artifact generation, that shares a dependency graph with the main build.",
+      "severity": "medium"
+    },
+    {
+      "type": "redundant_rebuild",
+      "job_name": "check-c-api-docs",
+      "evidence": "The check-c-api-docs workflow contains an external build that generates C API documentation from source code; while this creates a separate set of artifacts, it may benefit from sharing dependencies with `build-windows`.",
+      "severity": "medium"
+    },
+    {
+      "type": "redundant_rebuild",
+      "job_name": "build-windows",
+      "evidence": "The build-windows jobs uses a separate setup for Windows.  This process will rebuild everything from scratch.",
+      "severity": "medium"
+    },
+    {
+      "type": "redundant_rebuild",
+      "job_name": "build-windows-msi",
+      "evidence": "The build-windows-msi jobs builds an MSI package.  This process will rebuild everything from scratch",
+      "severity": "medium"
+    },
+    {
+      "type": "redundant_rebuild",
+      "job_name": "build-macos",
+      "evidence": "The build-macos jobs use a separate setup for MacOS.  This process will rebuild everything from scratch",
+      "severity": "medium"
+    },
+    {
+      "type": "redundant_rebuild",
+      "job_name": "build-ubuntu",
+      "evidence": "The build-ubuntu jobs use a separate setup for Ubuntu.  This process will rebuild everything from scratch",
+      "severity": "medium"
+    },
+    {
+      "type": "redundant_rebuild",
+      "job_name": "build-ubuntu-ssltests",
+      "evidence": "The build-ubuntu-ssltests jobs includes running a custom SSL test suite.  It rebuilds everything from scratch for tests.",
+      "severity": "medium"
+    },
+    {
+      "type": "redundant_rebuild",
+      "job_name": "build-ios",
+      "evidence": "The build-ios jobs is using macOS and builds iOS packages.",
+      "severity": "medium"
+    },
+    {
+      "type": "redundant_rebuild",
+      "job_name": "build-emscripten",
+      "evidence": "The build-emscripten jobs builds an Emscripten build from source.",
+      "severity": "medium"
+    },
+    {
+      "type": "redundant_rebuild",
+      "job_name": "build-wasi",
+      "evidence": "The build-wasi jobs builds a WASI build from source.",
+      "severity": "medium"
+    },
+    {
+      "type": "redundant_rebuild",
+      "job_name": "test-hypothesis",
+      "evidence": "The test-hypothesis job runs hypothesis tests, and each run is separate, while it may benefit from caching.",
+      "severity": "medium"
+    },
+    {
+      "type": "redundant_rebuild",
+      "job_name": "build-asan",
+      "evidence": "The build-asan job builds a build with AddressSanitizer enabled from source.",
+      "severity": "medium"
+    },
+    {
+      "type": "redundant_rebuild",
+      "job_name": "build-san",
+      "evidence": "The build-san job builds a build with Sanitizers enabled from source.",
+      "severity": "medium"
+    },
+    {
+      "type": "redundant_rebuild",
+      "job_name": "cross-build-linux",
+      "evidence": "The cross-build-linux jobs builds a cross-compiled target, builds everything from scratch.",
+      "severity": "medium"
+    },
+    {
+      "type": "redundant_rebuild",
+      "job_name": "cifuzz",
+      "evidence": "The cifuzz jobs performs fuzzing builds from source; it should leverage caching for new source.",
+      "severity": "medium"
+    }
+  ],
+  "optimizations": [
+    {
+      "id": "missing_cache-check-autoconf-regen-bd4fc9",
+      "bottleneck_type": "missing_cache",
+      "job_name": "check-autoconf-regen",
+      "description": "Add actions/cache to 'check-autoconf-regen' to cache dependencies and avoid re-downloading every run",
+      "estimated_time_saved_min": 1,
+      "estimated_cost_per_run": 0.07,
+      "risk_level": "low",
+      "yaml_diff_hint": "Add `- uses: actions/cache@v4` step before dependency install in 'check-autoconf-regen'"
+    },
+    {
+      "id": "missing_cache-check-generated-file-83c04e",
+      "bottleneck_type": "missing_cache",
+      "job_name": "check-generated-files",
+      "description": "Add actions/cache to 'check-generated-files' to cache dependencies and avoid re-downloading every run",
+      "estimated_time_saved_min": 1,
+      "estimated_cost_per_run": 0.07,
+      "risk_level": "low",
+      "yaml_diff_hint": "Add `- uses: actions/cache@v4` step before dependency install in 'check-generated-files'"
+    },
+    {
+      "id": "missing_cache-cross-build-linux-6ac3b5",
+      "bottleneck_type": "missing_cache",
+      "job_name": "cross-build-linux",
+      "description": "Add actions/cache to 'cross-build-linux' to cache dependencies and avoid re-downloading every run",
+      "estimated_time_saved_min": 1,
+      "estimated_cost_per_run": 0.07,
+      "risk_level": "low",
+      "yaml_diff_hint": "Add `- uses: actions/cache@v4` step before dependency install in 'cross-build-linux'"
+    },
+    {
+      "id": "serial_parallel-check-autoconf-regen-2c0d38",
+      "bottleneck_type": "serial_parallel",
+      "job_name": "check-autoconf-regen",
+      "description": "Remove 'needs:' from 'check-autoconf-regen' so it runs in parallel with other independent jobs",
+      "estimated_time_saved_min": 1,
+      "estimated_cost_per_run": 0.0,
+      "risk_level": "medium",
+      "yaml_diff_hint": "Ensure 'check-autoconf-regen' has no `needs:` blocking parallel execution"
+    },
+    {
+      "id": "serial_parallel-check-generated-file-a72a78",
+      "bottleneck_type": "serial_parallel",
+      "job_name": "check-generated-files",
+      "description": "Remove 'needs:' from 'check-generated-files' so it runs in parallel with other independent jobs",
+      "estimated_time_saved_min": 1,
+      "estimated_cost_per_run": 0.0,
+      "risk_level": "medium",
+      "yaml_diff_hint": "Ensure 'check-generated-files' has no `needs:` blocking parallel execution"
+    },
+    {
+      "id": "serial_parallel-build-ubuntu-ssltest-597ee3",
+      "bottleneck_type": "serial_parallel",
+      "job_name": "build-ubuntu-ssltests",
+      "description": "Remove 'needs:' from 'build-ubuntu-ssltests' so it runs in parallel with other independent jobs",
+      "estimated_time_saved_min": 1,
+      "estimated_cost_per_run": 0.0,
+      "risk_level": "medium",
+      "yaml_diff_hint": "Ensure 'build-ubuntu-ssltests' has no `needs:` blocking parallel execution"
+    },
+    {
+      "id": "serial_parallel-test-hypothesis-bfd01f",
+      "bottleneck_type": "serial_parallel",
+      "job_name": "test-hypothesis",
+      "description": "Remove 'needs:' from 'test-hypothesis' so it runs in parallel with other independent jobs",
+      "estimated_time_saved_min": 1,
+      "estimated_cost_per_run": 0.0,
+      "risk_level": "medium",
+      "yaml_diff_hint": "Ensure 'test-hypothesis' has no `needs:` blocking parallel execution"
+    },
+    {
+      "id": "serial_parallel-build-asan-de5ff0",
+      "bottleneck_type": "serial_parallel",
+      "job_name": "build-asan",
+      "description": "Remove 'needs:' from 'build-asan' so it runs in parallel with other independent jobs",
+      "estimated_time_saved_min": 1,
+      "estimated_cost_per_run": 0.0,
+      "risk_level": "medium",
+      "yaml_diff_hint": "Ensure 'build-asan' has no `needs:` blocking parallel execution"
+    },
+    {
+      "id": "serial_parallel-cross-build-linux-1755b2",
+      "bottleneck_type": "serial_parallel",
+      "job_name": "cross-build-linux",
+      "description": "Remove 'needs:' from 'cross-build-linux' so it runs in parallel with other independent jobs",
+      "estimated_time_saved_min": 1,
+      "estimated_cost_per_run": 0.0,
+      "risk_level": "medium",
+      "yaml_diff_hint": "Ensure 'cross-build-linux' has no `needs:` blocking parallel execution"
+    },
+    {
+      "id": "redundant_matrix-build-windows-bb9f68",
+      "bottleneck_type": "redundant_matrix",
+      "job_name": "build-windows",
+      "description": "Reduce matrix dimensions in 'build-windows' to eliminate redundant OS/language combinations",
+      "estimated_time_saved_min": 1,
+      "estimated_cost_per_run": 0.01,
+      "risk_level": "high",
+      "yaml_diff_hint": "Reduce `strategy.matrix` dimensions in 'build-windows' to remove overlap"
+    },
+    {
+      "id": "redundant_matrix-build-macos-3bdb74",
+      "bottleneck_type": "redundant_matrix",
+      "job_name": "build-macos",
+      "description": "Reduce matrix dimensions in 'build-macos' to eliminate redundant OS/language combinations",
+      "estimated_time_saved_min": 1,
+      "estimated_cost_per_run": 0.01,
+      "risk_level": "high",
+      "yaml_diff_hint": "Reduce `strategy.matrix` dimensions in 'build-macos' to remove overlap"
+    },
+    {
+      "id": "redundant_matrix-build-ubuntu-10f8ac",
+      "bottleneck_type": "redundant_matrix",
+      "job_name": "build-ubuntu",
+      "description": "Reduce matrix dimensions in 'build-ubuntu' to eliminate redundant OS/language combinations",
+      "estimated_time_saved_min": 1,
+      "estimated_cost_per_run": 0.01,
+      "risk_level": "high",
+      "yaml_diff_hint": "Reduce `strategy.matrix` dimensions in 'build-ubuntu' to remove overlap"
+    },
+    {
+      "id": "redundant_matrix-build-ubuntu-ssltest-6302fa",
+      "bottleneck_type": "redundant_matrix",
+      "job_name": "build-ubuntu-ssltests",
+      "description": "Reduce matrix dimensions in 'build-ubuntu-ssltests' to eliminate redundant OS/language combinations",
+      "estimated_time_saved_min": 1,
+      "estimated_cost_per_run": 0.01,
+      "risk_level": "high",
+      "yaml_diff_hint": "Reduce `strategy.matrix` dimensions in 'build-ubuntu-ssltests' to remove overlap"
+    },
+    {
+      "id": "redundant_matrix-build-san-b354f5",
+      "bottleneck_type": "redundant_matrix",
+      "job_name": "build-san",
+      "description": "Reduce matrix dimensions in 'build-san' to eliminate redundant OS/language combinations",
+      "estimated_time_saved_min": 1,
+      "estimated_cost_per_run": 0.01,
+      "risk_level": "high",
+      "yaml_diff_hint": "Reduce `strategy.matrix` dimensions in 'build-san' to remove overlap"
+    },
+    {
+      "id": "redundant_matrix-cifuzz-e2567f",
+      "bottleneck_type": "redundant_matrix",
+      "job_name": "cifuzz",
+      "description": "Reduce matrix dimensions in 'cifuzz' to eliminate redundant OS/language combinations",
+      "estimated_time_saved_min": 1,
+      "estimated_cost_per_run": 0.01,
+      "risk_level": "high",
+      "yaml_diff_hint": "Reduce `strategy.matrix` dimensions in 'cifuzz' to remove overlap"
+    },
+    {
+      "id": "missing_cache-notify-new-bugs-anno-ebca34",
+      "bottleneck_type": "missing_cache",
+      "job_name": "notify-new-bugs-announce",
+      "description": "Add actions/cache to 'notify-new-bugs-announce' to cache dependencies and avoid re-downloading every run",
+      "estimated_time_saved_min": 1,
+      "estimated_cost_per_run": 0.07,
+      "risk_level": "low",
+      "yaml_diff_hint": "Add `- uses: actions/cache@v4` step before dependency install in 'notify-new-bugs-announce'"
+    },
+    {
+      "id": "missing_cache-verify-3e7117",
+      "bottleneck_type": "missing_cache",
+      "job_name": "verify",
+      "description": "Add actions/cache to 'verify' to cache dependencies and avoid re-downloading every run",
+      "estimated_time_saved_min": 1,
+      "estimated_cost_per_run": 0.07,
+      "risk_level": "low",
+      "yaml_diff_hint": "Add `- uses: actions/cache@v4` step before dependency install in 'verify'"
+    },
+    {
+      "id": "missing_cache-mypy-a75f48",
+      "bottleneck_type": "missing_cache",
+      "job_name": "mypy",
+      "description": "Add actions/cache to 'mypy' to cache dependencies and avoid re-downloading every run",
+      "estimated_time_saved_min": 1,
+      "estimated_cost_per_run": 0.07,
+      "risk_level": "low",
+      "yaml_diff_hint": "Add `- uses: actions/cache@v4` step before dependency install in 'mypy'"
+    },
+    {
+      "id": "missing_cache-interpreter-8249da",
+      "bottleneck_type": "missing_cache",
+      "job_name": "interpreter",
+      "description": "Add actions/cache to 'interpreter' to cache dependencies and avoid re-downloading every run",
+      "estimated_time_saved_min": 1,
+      "estimated_cost_per_run": 0.07,
+      "risk_level": "low",
+      "yaml_diff_hint": "Add `- uses: actions/cache@v4` step before dependency install in 'interpreter'"
+    },
+    {
+      "id": "missing_cache-windows-8227f2",
+      "bottleneck_type": "missing_cache",
+      "job_name": "windows",
+      "description": "Add actions/cache to 'windows' to cache dependencies and avoid re-downloading every run",
+      "estimated_time_saved_min": 1,
+      "estimated_cost_per_run": 0.07,
+      "risk_level": "low",
+      "yaml_diff_hint": "Add `- uses: actions/cache@v4` step before dependency install in 'windows'"
+    },
+    {
+      "id": "missing_cache-macos-ebc72b",
+      "bottleneck_type": "missing_cache",
+      "job_name": "macos",
+      "description": "Add actions/cache to 'macos' to cache dependencies and avoid re-downloading every run",
+      "estimated_time_saved_min": 1,
+      "estimated_cost_per_run": 0.07,
+      "risk_level": "low",
+      "yaml_diff_hint": "Add `- uses: actions/cache@v4` step before dependency install in 'macos'"
+    },
+    {
+      "id": "missing_cache-linux-cd2938",
+      "bottleneck_type": "missing_cache",
+      "job_name": "linux",
+      "description": "Add actions/cache to 'linux' to cache dependencies and avoid re-downloading every run",
+      "estimated_time_saved_min": 1,
+      "estimated_cost_per_run": 0.07,
+      "risk_level": "low",
+      "yaml_diff_hint": "Add `- uses: actions/cache@v4` step before dependency install in 'linux'"
+    },
+    {
+      "id": "missing_cache-linux-extras-bc8397",
+      "bottleneck_type": "missing_cache",
+      "job_name": "linux-extras",
+      "description": "Add actions/cache to 'linux-extras' to cache dependencies and avoid re-downloading every run",
+      "estimated_time_saved_min": 1,
+      "estimated_cost_per_run": 0.07,
+      "risk_level": "low",
+      "yaml_diff_hint": "Add `- uses: actions/cache@v4` step before dependency install in 'linux-extras'"
+    },
+    {
+      "id": "redundant_matrix-windows-a20a53",
+      "bottleneck_type": "redundant_matrix",
+      "job_name": "windows",
+      "description": "Reduce matrix dimensions in 'windows' to eliminate redundant OS/language combinations",
+      "estimated_time_saved_min": 1,
+      "estimated_cost_per_run": 0.01,
+      "risk_level": "high",
+      "yaml_diff_hint": "Reduce `strategy.matrix` dimensions in 'windows' to remove overlap"
+    },
+    {
+      "id": "redundant_matrix-macos-ca85b8",
+      "bottleneck_type": "redundant_matrix",
+      "job_name": "macos",
+      "description": "Reduce matrix dimensions in 'macos' to eliminate redundant OS/language combinations",
+      "estimated_time_saved_min": 1,
+      "estimated_cost_per_run": 0.01,
+      "risk_level": "high",
+      "yaml_diff_hint": "Reduce `strategy.matrix` dimensions in 'macos' to remove overlap"
+    },
+    {
+      "id": "redundant_matrix-linux-34f7a8",
+      "bottleneck_type": "redundant_matrix",
+      "job_name": "linux",
+      "description": "Reduce matrix dimensions in 'linux' to eliminate redundant OS/language combinations",
+      "estimated_time_saved_min": 1,
+      "estimated_cost_per_run": 0.01,
+      "risk_level": "high",
+      "yaml_diff_hint": "Reduce `strategy.matrix` dimensions in 'linux' to remove overlap"
+    },
+    {
+      "id": "missing_cache-compute-changes-c214c3",
+      "bottleneck_type": "missing_cache",
+      "job_name": "compute-changes",
+      "description": "Add actions/cache to 'compute-changes' to cache dependencies and avoid re-downloading every run",
+      "estimated_time_saved_min": 1,
+      "estimated_cost_per_run": 0.07,
+      "risk_level": "low",
+      "yaml_diff_hint": "Add `- uses: actions/cache@v4` step before dependency install in 'compute-changes'"
+    },
+    {
+      "id": "missing_cache-build-san-reusable-37876f",
+      "bottleneck_type": "missing_cache",
+      "job_name": "build-san-reusable",
+      "description": "Add actions/cache to 'build-san-reusable' to cache dependencies and avoid re-downloading every run",
+      "estimated_time_saved_min": 1,
+      "estimated_cost_per_run": 0.07,
+      "risk_level": "low",
+      "yaml_diff_hint": "Add `- uses: actions/cache@v4` step before dependency install in 'build-san-reusable'"
+    },
+    {
+      "id": "missing_cache-check-html-ids-65637a",
+      "bottleneck_type": "missing_cache",
+      "job_name": "check-html-ids",
+      "description": "Add actions/cache to 'check-html-ids' to cache dependencies and avoid re-downloading every run",
+      "estimated_time_saved_min": 1,
+      "estimated_cost_per_run": 0.07,
+      "risk_level": "low",
+      "yaml_diff_hint": "Add `- uses: actions/cache@v4` step before dependency install in 'check-html-ids'"
+    },
+    {
+      "id": "missing_cache-build-doc-a940cf",
+      "bottleneck_type": "missing_cache",
+      "job_name": "build-doc",
+      "description": "Add actions/cache to 'build-doc' to cache dependencies and avoid re-downloading every run",
+      "estimated_time_saved_min": 1,
+      "estimated_cost_per_run": 0.07,
+      "risk_level": "low",
+      "yaml_diff_hint": "Add `- uses: actions/cache@v4` step before dependency install in 'build-doc'"
+    },
+    {
+      "id": "missing_cache-check-epub-8f7c45",
+      "bottleneck_type": "missing_cache",
+      "job_name": "check-epub",
+      "description": "Add actions/cache to 'check-epub' to cache dependencies and avoid re-downloading every run",
+      "estimated_time_saved_min": 1,
+      "estimated_cost_per_run": 0.07,
+      "risk_level": "low",
+      "yaml_diff_hint": "Add `- uses: actions/cache@v4` step before dependency install in 'check-epub'"
+    },
+    {
+      "id": "missing_cache-build-macos-85d863",
+      "bottleneck_type": "missing_cache",
+      "job_name": "build-macos",
+      "description": "Add actions/cache to 'build-macos' to cache dependencies and avoid re-downloading every run",
+      "estimated_time_saved_min": 1,
+      "estimated_cost_per_run": 0.07,
+      "risk_level": "low",
+      "yaml_diff_hint": "Add `- uses: actions/cache@v4` step before dependency install in 'build-macos'"
+    },
+    {
+      "id": "redundant_rebuild-build-context-f4ac61",
+      "bottleneck_type": "redundant_rebuild",
+      "job_name": "build-context",
+      "description": "Use actions/upload-artifact and actions/download-artifact in 'build-context' to reuse build outputs",
+      "estimated_time_saved_min": 1,
+      "estimated_cost_per_run": 0.01,
+      "risk_level": "medium",
+      "yaml_diff_hint": "Add `actions/upload-artifact` to build job and `actions/download-artifact` to 'build-context'"
+    },
+    {
+      "id": "redundant_rebuild-check-docs-3359d5",
+      "bottleneck_type": "redundant_rebuild",
+      "job_name": "check-docs",
+      "description": "Use actions/upload-artifact and actions/download-artifact in 'check-docs' to reuse build outputs",
+      "estimated_time_saved_min": 1,
+      "estimated_cost_per_run": 0.01,
+      "risk_level": "medium",
+      "yaml_diff_hint": "Add `actions/upload-artifact` to build job and `actions/download-artifact` to 'check-docs'"
+    },
+    {
+      "id": "redundant_rebuild-check-autoconf-regen-563699",
+      "bottleneck_type": "redundant_rebuild",
+      "job_name": "check-autoconf-regen",
+      "description": "Use actions/upload-artifact and actions/download-artifact in 'check-autoconf-regen' to reuse build outputs",
+      "estimated_time_saved_min": 1,
+      "estimated_cost_per_run": 0.01,
+      "risk_level": "medium",
+      "yaml_diff_hint": "Add `actions/upload-artifact` to build job and `actions/download-artifact` to 'check-autoconf-regen'"
+    },
+    {
+      "id": "redundant_rebuild-check-generated-file-cbec02",
+      "bottleneck_type": "redundant_rebuild",
+      "job_name": "check-generated-files",
+      "description": "Use actions/upload-artifact and actions/download-artifact in 'check-generated-files' to reuse build outputs",
+      "estimated_time_saved_min": 1,
+      "estimated_cost_per_run": 0.01,
+      "risk_level": "medium",
+      "yaml_diff_hint": "Add `actions/upload-artifact` to build job and `actions/download-artifact` to 'check-generated-files'"
+    },
+    {
+      "id": "redundant_rebuild-check-c-api-docs-a56010",
+      "bottleneck_type": "redundant_rebuild",
+      "job_name": "check-c-api-docs",
+      "description": "Use actions/upload-artifact and actions/download-artifact in 'check-c-api-docs' to reuse build outputs",
+      "estimated_time_saved_min": 1,
+      "estimated_cost_per_run": 0.01,
+      "risk_level": "medium",
+      "yaml_diff_hint": "Add `actions/upload-artifact` to build job and `actions/download-artifact` to 'check-c-api-docs'"
+    },
+    {
+      "id": "redundant_rebuild-build-windows-06a793",
+      "bottleneck_type": "redundant_rebuild",
+      "job_name": "build-windows",
+      "description": "Use actions/upload-artifact and actions/download-artifact in 'build-windows' to reuse build outputs",
+      "estimated_time_saved_min": 1,
+      "estimated_cost_per_run": 0.01,
+      "risk_level": "medium",
+      "yaml_diff_hint": "Add `actions/upload-artifact` to build job and `actions/download-artifact` to 'build-windows'"
+    },
+    {
+      "id": "redundant_rebuild-build-windows-msi-a4e224",
+      "bottleneck_type": "redundant_rebuild",
+      "job_name": "build-windows-msi",
+      "description": "Use actions/upload-artifact and actions/download-artifact in 'build-windows-msi' to reuse build outputs",
+      "estimated_time_saved_min": 1,
+      "estimated_cost_per_run": 0.01,
+      "risk_level": "medium",
+      "yaml_diff_hint": "Add `actions/upload-artifact` to build job and `actions/download-artifact` to 'build-windows-msi'"
+    },
+    {
+      "id": "redundant_rebuild-build-macos-7c32d0",
+      "bottleneck_type": "redundant_rebuild",
+      "job_name": "build-macos",
+      "description": "Use actions/upload-artifact and actions/download-artifact in 'build-macos' to reuse build outputs",
+      "estimated_time_saved_min": 1,
+      "estimated_cost_per_run": 0.01,
+      "risk_level": "medium",
+      "yaml_diff_hint": "Add `actions/upload-artifact` to build job and `actions/download-artifact` to 'build-macos'"
+    },
+    {
+      "id": "redundant_rebuild-build-ubuntu-3c1817",
+      "bottleneck_type": "redundant_rebuild",
+      "job_name": "build-ubuntu",
+      "description": "Use actions/upload-artifact and actions/download-artifact in 'build-ubuntu' to reuse build outputs",
+      "estimated_time_saved_min": 1,
+      "estimated_cost_per_run": 0.01,
+      "risk_level": "medium",
+      "yaml_diff_hint": "Add `actions/upload-artifact` to build job and `actions/download-artifact` to 'build-ubuntu'"
+    },
+    {
+      "id": "redundant_rebuild-build-ubuntu-ssltest-4ce39a",
+      "bottleneck_type": "redundant_rebuild",
+      "job_name": "build-ubuntu-ssltests",
+      "description": "Use actions/upload-artifact and actions/download-artifact in 'build-ubuntu-ssltests' to reuse build outputs",
+      "estimated_time_saved_min": 1,
+      "estimated_cost_per_run": 0.01,
+      "risk_level": "medium",
+      "yaml_diff_hint": "Add `actions/upload-artifact` to build job and `actions/download-artifact` to 'build-ubuntu-ssltests'"
+    },
+    {
+      "id": "redundant_rebuild-build-ios-f06b7c",
+      "bottleneck_type": "redundant_rebuild",
+      "job_name": "build-ios",
+      "description": "Use actions/upload-artifact and actions/download-artifact in 'build-ios' to reuse build outputs",
+      "estimated_time_saved_min": 1,
+      "estimated_cost_per_run": 0.01,
+      "risk_level": "medium",
+      "yaml_diff_hint": "Add `actions/upload-artifact` to build job and `actions/download-artifact` to 'build-ios'"
+    },
+    {
+      "id": "redundant_rebuild-build-emscripten-6e5733",
+      "bottleneck_type": "redundant_rebuild",
+      "job_name": "build-emscripten",
+      "description": "Use actions/upload-artifact and actions/download-artifact in 'build-emscripten' to reuse build outputs",
+      "estimated_time_saved_min": 1,
+      "estimated_cost_per_run": 0.01,
+      "risk_level": "medium",
+      "yaml_diff_hint": "Add `actions/upload-artifact` to build job and `actions/download-artifact` to 'build-emscripten'"
+    },
+    {
+      "id": "redundant_rebuild-build-wasi-230c10",
+      "bottleneck_type": "redundant_rebuild",
+      "job_name": "build-wasi",
+      "description": "Use actions/upload-artifact and actions/download-artifact in 'build-wasi' to reuse build outputs",
+      "estimated_time_saved_min": 1,
+      "estimated_cost_per_run": 0.01,
+      "risk_level": "medium",
+      "yaml_diff_hint": "Add `actions/upload-artifact` to build job and `actions/download-artifact` to 'build-wasi'"
+    },
+    {
+      "id": "redundant_rebuild-test-hypothesis-a3f2a4",
+      "bottleneck_type": "redundant_rebuild",
+      "job_name": "test-hypothesis",
+      "description": "Use actions/upload-artifact and actions/download-artifact in 'test-hypothesis' to reuse build outputs",
+      "estimated_time_saved_min": 1,
+      "estimated_cost_per_run": 0.01,
+      "risk_level": "medium",
+      "yaml_diff_hint": "Add `actions/upload-artifact` to build job and `actions/download-artifact` to 'test-hypothesis'"
+    },
+    {
+      "id": "redundant_rebuild-build-asan-bf3273",
+      "bottleneck_type": "redundant_rebuild",
+      "job_name": "build-asan",
+      "description": "Use actions/upload-artifact and actions/download-artifact in 'build-asan' to reuse build outputs",
+      "estimated_time_saved_min": 1,
+      "estimated_cost_per_run": 0.01,
+      "risk_level": "medium",
+      "yaml_diff_hint": "Add `actions/upload-artifact` to build job and `actions/download-artifact` to 'build-asan'"
+    },
+    {
+      "id": "redundant_rebuild-build-san-7341bb",
+      "bottleneck_type": "redundant_rebuild",
+      "job_name": "build-san",
+      "description": "Use actions/upload-artifact and actions/download-artifact in 'build-san' to reuse build outputs",
+      "estimated_time_saved_min": 1,
+      "estimated_cost_per_run": 0.01,
+      "risk_level": "medium",
+      "yaml_diff_hint": "Add `actions/upload-artifact` to build job and `actions/download-artifact` to 'build-san'"
+    },
+    {
+      "id": "redundant_rebuild-cross-build-linux-076e04",
+      "bottleneck_type": "redundant_rebuild",
+      "job_name": "cross-build-linux",
+      "description": "Use actions/upload-artifact and actions/download-artifact in 'cross-build-linux' to reuse build outputs",
+      "estimated_time_saved_min": 1,
+      "estimated_cost_per_run": 0.01,
+      "risk_level": "medium",
+      "yaml_diff_hint": "Add `actions/upload-artifact` to build job and `actions/download-artifact` to 'cross-build-linux'"
+    },
+    {
+      "id": "redundant_rebuild-cifuzz-5e194a",
+      "bottleneck_type": "redundant_rebuild",
+      "job_name": "cifuzz",
+      "description": "Use actions/upload-artifact and actions/download-artifact in 'cifuzz' to reuse build outputs",
+      "estimated_time_saved_min": 1,
+      "estimated_cost_per_run": 0.01,
+      "risk_level": "medium",
+      "yaml_diff_hint": "Add `actions/upload-artifact` to build job and `actions/download-artifact` to 'cifuzz'"
+    }
+  ],
+  "total_saved_min": 50
+}
